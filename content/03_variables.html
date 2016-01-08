@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>03 - variables</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+		<h1>Use variables so you don't have to keep repeating yourself</h1>
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+		
+		<div class="section">
+			<h2>Create a variable</h2>
+
+			<p>In JavaScript a variable lets you store information.</p>
+
+			<p>Try typing the following example:</p>
+
+			<pre><code>
+				var greeting = 'Hello, my name is Bowser.';
+				console.log(greeting);
+			</code></pre>
+
+			<p>This code says we're creating a variable called <code>greeting</code> and we're storing some text in it.  Then we're showing the text in the console.</p>
+
+			<p>The word <b>var</b> tells the browser that you're creating a variable.</p>
+
+			<div class="special_section terminology">
+				<h3>Talk the talk</h3>
+				<p>When someone talks about <b>declaring a variable</b>, that just means <b>creating a variable</b>.</p>
+			</div>
+		</div>
+
+
+
+
+		<div class="section">
+			<h2>Change a variable</h2>
+
+			<p>Can you change a variable after it's already set?</p>
+
+			<p>Yes!</p>
+
+			<p>If you want to change the variable after you've declared it, you don't need the <b>var</b> keyword anymore because you've already created the variable.</p>
+
+			<p>Here's how to change a variable (type it and see what happens):</p>
+
+			<pre><code>
+				var greeting = 'original greeting';
+				console.log(greeting);
+
+				greeting = 'changed greeting';
+				console.log(greeting);
+			</code></pre>
+
+		</div>
+
+
+
+
+		<div class="section">
+			<h2>Naming your variables</h2>
+
+			<p>What can you call your variables?</p>
+
+			<p>You can call a variable whatever you want, as long as it fits the following rules:</p>
+
+			<ul>
+				<li><strong>YES</strong>, the variable's name can have <b>letters</b>, <b>numbers</b>, <b>underscores</b>, or <b>dollar signs</b></li>
+				<li><strong>NO</strong>, the variable's name CAN'T start with a number</li>
+				<li><strong>NO</strong>, the name can't be a word that JavaScript already uses to mean something else (examples you've already seen include "var" or "document")</li>
+				<li>Remember that JavaScript is <b>case-sensitive</b>, so "hellothere" counts as a different variable than "helloThere".</li>
+			</ul>
+
+		</div>
+
+
+
+
+		<div class="section">
+			<h2>What can a variable actually store?</h2>
+
+			<p>A variable can store a bunch of stuff, but we'll start with <b>strings</b> and <b>numbers</b>.</p>
+
+			<h3>Strings</h3>
+			<p>A <b>string</b> is just a piece of text enclosed in single or double quotes (either option is fine).</p>
+
+			<h3>Numbers</h3>
+			<p>A <b>number</b> is... well... a number like <b>2</b> or <b>126</b> or <b>-55</b>.  Notice that it doesn't get wrapped in quotes.</p>
+
+			<p>Examples of strings and numbers: (Type the following code in your document, and then use console.log to show each variable.)</p>
+
+			<pre><code>
+				var string1 = 'hello there';
+				var string2 = "hi there";
+				var a = 1;
+				var b = 2;
+				var c = a + b;
+			</code></pre>
+
+		</div>
+
+
+
+
+		
+		<div class="section">
+			<h2>Dealing with quotes and apostrophes</h2>
+		
+			<p>What if you want to have a string that contains quotes or apostrophes?</p>
+
+			<p>Great question.</p>
+
+			<p>As long as the type of quote on the outside doesn't match the type on the inside, you don't have to do anything.</p>
+			<p>For example, these are fine:</p>
+
+			<pre><code>
+				var greeting = "My name's Bowser.";
+				var quote = 'I said, "Hi," and they screamed.';
+			</code></pre>
+
+			<p>But if you end up using the same type of quote on the inside and the outside, you'll need to do this:</p>
+			var greeting = 'My name\'s Bowser.';
+
+			<p>The backslash tells the browser this character is still part of the text string and not part of the code.  This technique is called escaping.</p>
+
+			<div class="special_section tip"></div>
+
+		</div>
+
+
+
+
+
+
+
+		<div class="section">
+			<h2>Putting strings together</h2>
+
+			<p>You can put strings together with a plus sign.  That's called concatenating.  Here's an example:</p>
+
+			<pre><code>
+				var name = 'Bowser';
+				var greeting = 'My name is ' + name;
+				var longGreeting = 'Hi there.  My name is ' + name + '. Welcome to my castle.';
+			</code></pre>
+
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Plus means something different for numbers than for strings</h2>
+
+			<p>Plus adds numbers, but it connects two strings.  When you add a number and a string, you get a string.  Try out these examples to get a feel for how it all works:</p>
+
+			<pre><code>
+				var a = 2;
+				var b = 3;
+				console.log(a+b);
+
+				var word = 'hi';
+				console.log(word + a);
+
+				var c = '3';
+				var d = '4';
+				console.log(c+d);
+			</code></pre>
+
+		</div>
+
+
+
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+			- Set a variable to a string or a number and show it in a div on the page (once you're comfortable, repeat 10 times without looking)
+			- Escape quotes and apostrophes and show the result on screen (try 5 times)
+			- Concatenate two strings and show the result on the page (repeat 5 times)
+			- Concatenate a string and a variable and show the result on the page (repeat 5 times)
+			- Use the plus sign to do addition or concatenation on various combinations of strings and numbers.  Do at least the following combinations: string + string, string + variable, string + number, number + number.  Feel free to play around more.
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+		<h1>How to avoid getting stuck: Comments, the console, and alerts</h1>
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+		
+		
+		<div class="section">
+			<h2>Comments: Make your code easier to read and debug</h2>
+
+			<p><b>Comments</b> are just notes you can put in your JavaScript to remind yourself what's going on.  They don't do anything on your page, but they make your code much easier to read later.</p>
+
+			<p>Examples of comments:</p>
+
+			<pre><code>
+				// This is a single-line comment.
+
+				/* This is a multi-line comment.
+				Put as many lines as you want.
+				This is still part of the comment. */
+			</code></pre>
+
+			<div class="special_section tip">
+				<h2>Tip: Commenting is a good habit</h2>
+				<p>When you start to write complex code, it's especially important to comment first.</p>
+				<p>That way, you won't get stuck as easily because you can do your thinking without being tangled in code.</p>
+			</div>
+
+		</div>
+
+
+
+		<div class="section">
+			<h2>The console: It can save your life when you have errors</h2>
+
+
+			<p>The <b>console</b> is a part of your browser that helps you do three important things (among others):</p>
+
+			<ul>
+				<li>See errors</li>
+				<li>Try out a JavaScript code snippet by typing it there directly</li>
+				<li>Display messages (useful for when you want to test output without showing it on the page)</li>
+			</ul>
+
+			<p><strong>A quick Google search should show you how to open the console</strong> in whatever browser and operating system you're using.  (I don't want to waste space here with every combination of browser and operating system.)  I recommend memorizing the keyboard shortcut.</p>
+
+			<p>To see how the console handles errors, try typing some random nonsense in your script.  Open the page in your browser, open the console, and see what happens.</p>
+
+		</div>
+
+
+		
+		<div class="section">
+			<h2>Showing a message in the console</h2>
+
+
+			<p>To show a message in the console, put this in your script:</p>
+
+			<pre><code>
+				console.log('this will show up in the console');
+			</code></pre>
+
+			<p>Just remember to remove console logs from production websites once they're published so the world won't see your debugging notes.</p>
+
+			<p>You can also type JavaScript directly into the console in your browser window.</p>
+
+		</div>
+
+
+
+		<div class="section">
+			<h2>Alerts: The most basic popups</h2>
+
+			<p>A JavaScript <b>alert</b> is a small popup with a message. The code looks like this:</p>
+
+			<pre><code>
+				alert('this is an alert');
+			</code></pre>
+
+			<p>Try it out and know what it does, but it's not as important as comments and the console.</p>
+
+			<p>The only reason I'm including it here is because it's basic and I don't want you to be embarrassed if anyone asks about it.</p>
+
+		</div>
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+
+			<ol>
+				<li>
+					Write the following code, and then repeat it 3 times without looking:
+					<pre><code>
+						alert('hi');
+					</code></pre>
+				</li>
+				<li>
+					Write a single-line JavaScript comment.  Repeat it 5 times without looking.
+					<pre><code>
+						// here is a single-line comment
+					</code></pre>
+				</li>
+				<li>
+					Write a multi-line JavaScript comment.  Repeat it 5 times without looking.
+					<pre><code>
+						/*
+						here is a
+						multi-line comment
+						*/
+					</code></pre>
+				</li>
+				<li>
+					Once you're comfortable, write the following code 10 times without looking:
+					<pre><code>
+						console.log('hi');
+					</code></pre>
+				</li>
+				<li>
+					Try entering some JavaScript code into your browser's console just to see what it does.
+				</li>
+				<li>
+					Use JavaScript to show some text in a div.  Add a JavaScript comment of your choice to explain what is happening.
+				</li>
+			</ol>
+		</div>
+
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
