@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Angle Bracket Remover</title>
+<style>
+textarea{
+	width: 100%;
+	height: 250px;
+	vertical-align: middle;
+}
+button{
+	font-size: 50px;
+	padding: 25px 50px;
+	display: inline-block;
+	border: none;
+	background: #397;
+	vertical-align: middle;
+	cursor: pointer;
+}
+button:hover{
+	background: #4a8;
+}
+
+.half{
+	width: 45%;
+	display: inline-block;
+	vertical-align: top;
+}
+</style>
+</head>
+<body>
+
+
+
+
+<div class="half">
+	<h2>Input:</h2>
+	<textarea id="input"></textarea>
+</div>
+<div class="half">
+	<h2>Output:</h2>
+	<textarea id="output"></textarea>
+</div>
+
+<br><br><br>
+<button id="format">Format</button>
+
+<script>
+var output = document.getElementById('output');
+var input = document.getElementById('input');
+document.getElementById('format').onclick = function(){
+	output.value = input.value.replace(/<|>/g,function(v){return v=='<'?'&lt;':'&gt;'});
+};
+</script>
+</body>
+</html>

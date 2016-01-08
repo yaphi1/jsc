@@ -1,0 +1,297 @@
+/************************************************************
+GENERAL STYLES
+*************************************************************/
+
+@font-face {
+	font-family: 'Nunito';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Nunito-Light'), url(http://fonts.gstatic.com/s/nunito/v7/1TiHc9yag0wq3lDO9cw0vpBw1xU1rKptJj_0jans920.woff2) format('woff2'), url(http://fonts.gstatic.com/s/nunito/v7/1TiHc9yag0wq3lDO9cw0vrO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+body{
+	margin: 0px;
+	font-size: 22px;
+	font-family: 'Nunito', sans-serif;
+	/*font-family: sans-serif;*/
+	color: #333;
+
+	/*background: #4ad;*/
+}
+
+h1{
+	margin: 0px;
+	padding: 30px 0px;
+	font-size: 45px;
+	font-weight: bold;
+}
+
+
+h2{
+	margin: 20px 0px;
+	padding: 40px 20px;
+	font-size: 36px;
+	font-weight: bold;
+	background: #fafafa;
+}
+
+h3{
+	font-size: 30px;
+	margin: 0px;
+	font-weight: bold;
+}
+
+p{
+	line-height: 1.5;
+	margin: 20px;
+}
+
+pre{
+	background: #333;
+	color: #eee;
+}
+
+li{
+	margin-top: 40px;
+}
+
+b{
+	font-weight: bold;
+	background: #333;
+	color: #eee;
+	padding: 3px 6px;
+	border-radius: 4px;
+}
+
+
+
+
+
+/************************************************************
+TOP MENU
+*************************************************************/
+
+#menubar{
+	padding: 30px;
+	margin-bottom: 20px;
+	font-size: 23px;
+	background: #fafafa;
+	/*background: #6ED19C;
+	color: #fff;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************************************
+LAYOUT STRUCTURE
+*************************************************************/
+
+#content{
+	text-align: center;
+}
+
+#maincol{
+	vertical-align: top;
+	text-align: left;
+	margin: 0px 5px;
+	display: inline-block;
+	width: 800px;
+	max-width: 90%;
+
+	/*background: white;
+	padding: 20px;*/
+}
+
+#sidebar{
+	vertical-align: top;
+	text-align: left;
+	margin: 0px 5px;
+	display: inline-block;
+	width: 300px;
+	max-width: 90%;
+	/*background: #ddd;*/
+	border: 5px solid #ddd;
+	border-right: none;
+	border-left: none;
+
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+#sidebar a{
+	display: block;
+	padding: 10px 0px;
+	color: #777;
+	text-decoration: none;
+	padding: 20px;
+}
+
+#sidebar a:hover{
+	background: #777;
+	color: #fff;
+}
+
+#footer{
+	text-align: center;
+	background: #eee;
+	padding: 50px;
+	margin-top: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************************************
+TABLE OF CONTENTS
+*************************************************************/
+
+
+.step{
+	margin-bottom: 40px;
+}
+
+.step_title{
+	padding: 50px 40px;
+	background: #eee;
+	cursor: pointer;
+	font-size: 35px;
+	border-radius: 5px;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.step_title:hover{
+	background: #f6f6f6;
+}
+
+.step_subtitle{
+	font-size: 22px;
+	padding-top: 20px;
+	display: none;
+}
+
+.step_content{
+	border: 1px solid #eee;
+	border-top: 0px;
+	display: none;
+}
+
+.unit{
+	padding: 0px;
+	border-bottom: 1px solid #eee;
+	font-size: 0px;
+}
+
+.unit_title, .unit_description{
+	vertical-align: top;
+	display: inline-block;
+	padding: 20px 20px;
+	box-sizing: border-box;
+	font-size: 20px;
+}
+
+.unit_title{
+	width: 110px;
+	text-align: center;
+}
+
+.unit_description{
+	width: 80%;
+	width: calc(100% - 110px);
+	text-decoration: none;
+	/*color: #4ad;*/
+	color: #777;
+	border-left: 1px solid #eee;
+}
+
+.unit_description:hover{
+	/*background: #5be;*/
+	background: #aaa;
+	color: #fff;
+}
+
+
+.step_content .unit:last-of-type{
+	border: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/************************************************************
+COURSE COMPONENTS
+*************************************************************/
+
+.section{
+	margin-top: 150px;
+}
+
+.special_section{
+	padding: 30px;
+	background: #eee;
+}
+.special_section h2{
+	margin-top: 0px;
+	/*background: #ddd;*/
+	background: rgba(33,33,33,0.05);
+}
+.special_section h3{
+	padding: 10px 20px;
+	background: rgba(33,33,33,0.05);
+}
+
+.before_you_begin{
+	background: #eda;
+}
+
+.getting_started{
+	background: #dea;
+}
+
+.warning{
+	background: #faa;
+}
+
+.formatting_note{
+	background: #cef;
+}
+
+.terminology{
+	background: #fa5;
+}
+
+
+
+
+
+/*first breakpoint*/
+@media (min-width:600px) {
+}

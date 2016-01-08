@@ -1,0 +1,430 @@
+/*
+Theme Name: Simple Steps Javascript
+Theme URI: http://wordpress.org/themes/blankslate
+Author: Yaphi (based from TidyThemes BlankSlate)
+Author URI: http://tidythemes.com/
+Description: Course theme.
+Version: 4.0.3
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+Tags: black, blue, white, light, one-column, fluid-layout, responsive-layout, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+Text Domain: blankslate
+
+BlankSlate WordPress Theme © 2011-2015 TidyThemes
+BlankSlate is distributed under the terms of the GNU GPL
+*/
+
+
+
+
+
+
+
+/************************************************************
+GENERAL STYLES
+*************************************************************/
+
+@font-face {
+	font-family: 'Nunito';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Nunito-Light'), url(http://fonts.gstatic.com/s/nunito/v7/1TiHc9yag0wq3lDO9cw0vpBw1xU1rKptJj_0jans920.woff2) format('woff2'), url(http://fonts.gstatic.com/s/nunito/v7/1TiHc9yag0wq3lDO9cw0vrO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+body{
+	margin: 0px;
+	font-size: 22px;
+	font-family: 'Nunito', sans-serif;
+	/*font-family: sans-serif;*/
+	color: #333;
+	background: #FCFFFD;
+
+	line-height: 1.5;
+
+	/*background: #4ad;*/
+}
+
+h1{
+	margin: 0px;
+	padding: 30px 0px;
+	font-size: 45px;
+	font-weight: bold;
+}
+
+
+h2{
+	margin: 20px 0px;
+	padding: 40px 20px;
+	font-size: 36px;
+	font-weight: bold;
+	background: #6ED19C;
+	color: #fff;
+}
+
+h3{
+	font-size: 30px;
+	margin: 0px;
+	font-weight: bold;
+	padding: 10px 20px;
+}
+
+p{
+	margin: 20px;
+}
+
+pre{
+	background: #333;
+	color: #eee;
+	font-size: 19px;
+}
+
+
+b{
+	font-weight: bold;
+	background: #333;
+	color: #eee;
+	padding: 3px 6px;
+	border-radius: 4px;
+}
+
+strong{
+	font-weight: 700;
+	font-family: sans-serif;
+}
+
+a{
+	color: #389B66;
+}
+
+
+
+
+ol{
+	counter-reset: my_counter;
+	margin: 0px;
+	padding: 0px 20px 0px 70px;
+}
+
+ol > li{
+	margin-top: 60px;
+	position: relative;
+	list-style: none;
+	padding-left: 20px;
+	border-left: 5px solid #6ED19C;
+}
+
+ol > li:before{
+	content: counter(my_counter);
+	counter-increment: my_counter;
+	position: absolute;
+	top: -0.3em;
+	left: -1em;
+	font-weight: 700;
+
+	color: #6ED19C;
+	font-size: 50px;
+}
+
+li p{
+	margin: 20px 0px;
+}
+
+
+
+
+ul{
+	padding: 0px 20px 0px 60px;
+}
+
+ul > li{
+	padding-bottom: 15px;
+	padding-left: 10px;
+}
+
+li > h3 {
+	padding: 0px 20px 10px;
+}
+
+
+
+
+input{
+	padding: 15px;
+	font-size: 24px;
+	font-family: Nunito, sans-serif;
+	width: 400px;
+	max-width: 90%;
+	box-sizing: border-box;
+	border-radius: 3px;
+	border: 1px solid #ddd;
+}
+
+input[type=checkbox]{
+	width: auto;
+}
+
+input[type=submit]{
+	background: #6ED19C;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+}
+
+input[type=submit]:hover{
+	background: #7ea;
+}
+
+
+
+
+/************************************************************
+TOP MENU
+*************************************************************/
+
+#menubar{
+	padding: 30px;
+	margin-bottom: 20px;
+	font-size: 23px;
+	/*background: #fafafa;*/
+	background: #6ED19C;
+	color: #fff;
+}
+
+#logo{
+	text-decoration: none;
+	color: #fff;
+	font-size: 23px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/************************************************************
+LAYOUT STRUCTURE
+*************************************************************/
+
+#content{
+	text-align: center;
+}
+
+#maincol{
+	vertical-align: top;
+	text-align: left;
+	margin: 0px 5px;
+	display: inline-block;
+	width: 700px;
+	max-width: 90%;
+
+	/*background: white;
+	padding: 20px;*/
+}
+
+#sidebar{
+	vertical-align: top;
+	text-align: left;
+	margin: 20px 5px 0px;
+	display: inline-block;
+	width: 300px;
+	max-width: 90%;
+	/*background: #ddd;*/
+	border: 5px solid #6ED19C;
+	border-right: none;
+	border-left: none;
+
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+#sidebar a{
+	display: block;
+	padding: 10px 0px;
+	/*color: #777;*/
+	text-decoration: none;
+	padding: 20px;
+}
+
+#sidebar a:hover{
+	/*background: #777;*/
+	background: #56B984;
+	color: #fff;
+}
+
+#footer{
+	text-align: center;
+	padding: 50px;
+	margin-top: 100px;
+	background: #444;
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************************************
+TABLE OF CONTENTS
+*************************************************************/
+
+
+.step{
+	margin-bottom: 40px;
+}
+
+.step_title{
+	padding: 45px 40px 50px;
+	background: #eee;
+	cursor: pointer;
+	font-size: 30px;
+	border-radius: 5px;
+
+	border-top: 5px solid #6ED19C;
+	background: #fff;
+	box-shadow: 0px 2px 9px -5px rgba(33, 33, 33, 0.5);
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    position: relative;
+}
+
+.step_title:hover{
+	/*background: #f6f6f6;*/
+
+	background: #6ED19C;
+	color: #fff;
+}
+
+.step_subtitle{
+	font-size: 22px;
+	padding-top: 20px;
+	display: none;
+}
+
+.step_content{
+	border: 1px solid #eee;
+	border-top: 0px;
+	display: none;
+	background: #fff;
+}
+
+.unit{
+	padding: 0px;
+	border-bottom: 1px solid #eee;
+	font-size: 0px;
+}
+
+.unit_title, .unit_description{
+	vertical-align: top;
+	display: inline-block;
+	padding: 30px 20px;
+	box-sizing: border-box;
+	font-size: 20px;
+}
+
+.unit_title{
+	width: 110px;
+	text-align: center;
+}
+
+.unit_description{
+	width: 80%;
+	width: calc(100% - 110px);
+	text-decoration: none;
+	/*color: #4ad;*/
+	/*color: #777;*/
+	border-left: 1px solid #eee;
+}
+
+.unit_description:hover{
+	/*background: #5be;*/
+	/*background: #aaa;*/
+	background: #56B984;
+	color: #fff;
+}
+
+
+.step_content .unit:last-of-type{
+	border: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/************************************************************
+COURSE COMPONENTS
+*************************************************************/
+
+.section{
+	margin-top: 150px;
+}
+
+.special_section{
+	padding: 30px;
+	background: #eee;
+}
+.special_section h2{
+	margin-top: 0px;
+	/*background: #ddd;*/
+	background: rgba(33,33,33,0.05);
+	color: #333;
+}
+.special_section h3{
+	padding: 10px 20px;
+	background: rgba(33,33,33,0.05);
+}
+
+.before_you_begin{
+	background: #eda;
+}
+
+.getting_started{
+	background: #dea;
+}
+
+.warning{
+	background: #faa;
+}
+
+.formatting_note{
+	background: #cef;
+}
+
+.terminology{
+	background: #fa5;
+}
+
+.tip{
+	background: #ffa;
+}
+
+
+
+
+
+/*first breakpoint*/
+@media (min-width:600px) {
+}

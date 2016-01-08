@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Format Test</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="./code_formatting/prism.css">
+<!-- <link rel="stylesheet" href="./code_formatting/highlight/styles/monokai-sublime.css"> -->
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+
+
+		<h1>
+			Arrays: Convenient lists that will make your code easier to write
+		</h1>
+
+
+
+		<div class="special_section before_you_begin">
+			<h2>Before you begin</h2>
+			<p>
+				Make sure you're very comfortable with <b>for loops</b>.
+			</p>
+			<p>
+				If you can successfully type a <b>for loop</b> right now without looking at any examples, you're ready to go.  If not, you'll want to practice some more.
+			</p>
+		</div>
+
+		<p>Ready? Let's do this.</p>
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p>Remember to put all scripts between the script tags.</p>
+		</div>
+
+
+
+		
+
+
+		<div class="section">
+			<h2>What is an array and why should you care?</h2>
+
+			<p>An <b>array</b> is a list of things.</p>
+
+			<p>Those things can be <b>strings</b>, <b>numbers</b>, <b>variables</b>, <b>functions</b>, or even other <b>arrays</b>.</p>
+
+			<p>An array is formatted like this:</p>
+			
+			<pre><code>['thing 1', 'thing 2', 'thing 3']</code></pre>
+
+			<p>Arrays are cool because they make lists much easier to keep track of.</p>
+		</div>
+
+
+		
+
+
+		<div class="section">
+			<h2>Basic array: Conveniently store a list of names</h2>
+
+			<p>
+				Let's say you have a list of names.
+			</p>
+			<p>
+				Instead of creating a variable for each name and then having to keep track of all of those variables, you could make one array and store the whole list.
+			</p>
+
+			<p>Type the following example to see how it works:</p>
+
+			<pre><code>
+				var names = ['Bowser','Ganon','Shmebulock'];
+				console.log(names[0]);
+			</code></pre>
+
+			<p>You'll notice that <code>names[0]</code> will give you 'Bowser'.</p>
+
+			<p>Try replacing the 0 with a 1 or a 2.  What happens?</p>
+
+
+			<div class="special_section formatting_note">
+				<h3>Formatting note: Spacing in arrays</h3>
+
+				<p>Spaces and line breaks between array elements don't matter.</p>
+
+				<p>The following code works just fine:</p>
+
+				<pre><code>
+					var names = [ 'item a' ,   'item b','item c',
+								'item d',
+								'item e',
+								'item f', 'item g'
+								];
+					console.log(names[0]);
+				</code></pre>
+			</div>
+		</div>
+
+
+
+
+		
+		<div class="section">
+			<h2>Array index: An item's position in an array</h2>
+
+			<p>When you see something like <code>names[2]</code>, the number is called the index, and it gives you the position of an item in the array.</p>
+
+			
+
+			<div class="special_section warning">
+				<h3>Warning: Array index starts at zero</h3>
+
+				<p>The array index starts counting at 0.</p>
+
+				<p>Many errors happen because people forget that the first item in the array is 0.</p>
+
+			</div>
+
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Array length</h2>
+
+			<p>Here's how you would get the length of a list (type it in):</p>
+
+			<pre><code>
+				var names = ['Bowser','Ganon','Shmebulock'];
+				console.log(names.length);
+			</code></pre>
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Change a value in an array</h2>
+
+			<p>To change a value in an array, all you need to do is set it to something else like this (type it in):</p>
+
+			<pre><code>
+				var names = ['Bowser','Ganon','Shmebulock'];
+				names[1] = 'Link';
+				console.log(names[1]);
+			</code></pre>
+		</div>
+
+
+		
+		<div class="section">
+			<h2>Examples of stuff you can put in an array</h2>
+
+			<p>You can put strings, numbers, arrays, variables, and other stuff inside an array.  Type the following example to try it out:</p>
+
+			<pre><code>
+				var x = 'this is x';
+				var stuff = [
+						'strings work',
+						12,
+						x,
+						['inner array item 1', 'inner array item 2'], 
+						'last item'
+				];
+
+				console.log( stuff[0] ); // string
+				console.log( stuff[1] ); // number
+				console.log( stuff[2] ); // variable
+				console.log( stuff[3] ); // array
+				console.log( stuff[3][0] ); // string inside array
+				console.log( stuff[3][1] ); // other string inside array
+				console.log( stuff[4] ); // string
+			</code></pre>
+
+			<p>If you want to a function inside an array, you can do that too!  Try the following example:</p>
+
+			<pre><code>
+				var stuff = ['first item',
+							function(){ alert('hi'); },
+							'last item'];
+
+				console.log( stuff[0] ); // string
+				console.log( stuff[1] ); // function
+
+				stuff[1](); // actually run the function
+			</code></pre>
+		</div>
+
+
+
+
+		<div class="section">
+			<h2>How to loop through an array</h2>
+
+			<p>When you want to do something with each value of an array, but you don't want to write the code over and over, you can use a loop.</p>
+
+			<p>Try the following example to see how it works:</p>
+
+			<pre><code>
+				var names = ['Bowser','Ganon','Shmebulock'];
+
+				for(var i=0; i&lt;names.length; i++){
+					console.log('Hello there' + names[i]);
+				}
+			</code></pre>
+
+			<p>This code will go through each name and show a greeting to that name inside the console.</p>
+		</div>
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+
+			<ol>
+				<li>Type the following array 3 times.  Once you're comfortable, type it again 5 times without looking at an example.</li>
+				<pre><code>var items = ['a','b','c'];</code></pre>
+
+				<li>Create an array of any three items and display the first one in a div.  Try displaying the second one and the third.</li>
+
+				<li>Create an array of two items and display the array's length in a span.</li>
+
+				<li>Create an array, change the value of one of the items, and show the new value on screen (can be a div or a span or any HTML element).</li>
+
+				<li>Create an array of at least three names and use a loop to show a greeting to each one in a div.  Repeat this exercise until you can loop through an array without looking at an example.</li>
+			</ol>
+		</div>
+		
+
+
+
+		<!--
+		<hr>
+		<h2>Content Samples</h2>
+
+		<h1>Chapter Title</h1>
+
+		<h2>Major Section</h2>
+
+		<h3>Minor Section</h3>
+
+
+		<p>Paragraph</p>
+
+		<p>Boilerplate HTML</p>
+
+		<p>Code samples</p>
+		
+		
+		<pre><code class="language-markup">
+			&lt;textarea id="input"&gt;&lt;/textarea&gt;
+			&lt;button id="format"&gt;Format&lt;/button&gt;
+
+			&lt;textarea id="output"&gt;&lt;/textarea&gt;
+
+
+			&lt;script&gt;
+			var output = document.getElementById('output');
+			var input = document.getElementById('input');
+			document.getElementById('format').onclick = function(){
+				output.value = input.value.replace(/&lt;|&gt;/g,function(v){return v=='&lt;'?'&lt;':'&gt;'});
+			};
+			&lt;/script&gt;
+		</code></pre>
+
+
+
+		<p>Bulleted Lists</p>
+		<ul>
+			<li>Point 1</li>
+			<li>Point 2</li>
+			<li>Point 3</li>
+		</ul>
+
+		<p>Numbered Lists</p>
+		<ol>
+			<li>Point 1</li>
+			<li>Point 2</li>
+			<li>Point 3</li>
+		</ol>
+
+		<p>Warnings - red</p>
+
+		<p>Bold words</p>
+
+		<p>Before you begin - yellow/gold/tan</p>
+
+		<p>Standard starting html - green</p>
+
+		<p>Formatting note - light blue (slight green)</p>
+
+		<p>Terminology highlights - orange</p>
+
+		<p>Important notes (try to categorize first; use this as a last resort)</p>
+
+		<p>Exercises</p>
+		-->
+
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+</script>
+<script src="./code_formatting/prism.js"></script>
+</body>
+</html>
