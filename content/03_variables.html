@@ -63,12 +63,16 @@
 
 			<p>Try typing the following example:</p>
 
-			<pre><code>
+			<pre><code class="language-markup">
+				&lt;div id="mycontent"&gt;&lt;/div&gt;
+
+				&lt;script&gt;
 				var greeting = 'Hello, my name is Bowser.';
-				console.log(greeting);
+				document.getElementById('mycontent').innerHTML = greeting;
+				&lt;/script&gt;
 			</code></pre>
 
-			<p>This code says we're creating a variable called <code>greeting</code> and we're storing some text in it.  Then we're showing the text in the console.</p>
+			<p>This code says we're creating a variable called <code>greeting</code> and we're storing some text in it.  Then we're showing the text in a div.</p>
 
 			<p>The word <b>var</b> tells the browser that you're creating a variable.</p>
 
@@ -167,11 +171,17 @@
 			</code></pre>
 
 			<p>But if you end up using the same type of quote on the inside and the outside, you'll need to do this:</p>
-			var greeting = 'My name\'s Bowser.';
+			
+			<pre><code>
+				var greeting = 'My name\'s Bowser.';
+			</code></pre>
 
-			<p>The backslash tells the browser this character is still part of the text string and not part of the code.  This technique is called escaping.</p>
+			<p>The backslash tells the browser this character is still part of the text string and not part of the code.  This technique is called <b>escaping</b>.</p>
 
-			<div class="special_section tip"></div>
+			<div class="special_section terminology">
+				<h3>Talk the talk: Escaping a character</h3>
+				<p>When someone mentions <b>escaping a character</b>, all that means is <strong>putting a backslash in front of the character</strong> so that your browser knows the character is not part of the code.</p>
+			</div>
 
 		</div>
 
@@ -184,12 +194,17 @@
 		<div class="section">
 			<h2>Putting strings together</h2>
 
-			<p>You can put strings together with a plus sign.  That's called concatenating.  Here's an example:</p>
+			<p>You can put strings together with a plus sign.  That's called <b>concatenating</b>.</p>
+
+			<p>Here's an example for you to type out:</p>
 
 			<pre><code>
 				var name = 'Bowser';
 				var greeting = 'My name is ' + name;
 				var longGreeting = 'Hi there.  My name is ' + name + '. Welcome to my castle.';
+
+				console.log(greeting);
+				console.log(longGreeting);
 			</code></pre>
 
 		</div>
@@ -201,7 +216,9 @@
 		<div class="section">
 			<h2>Plus means something different for numbers than for strings</h2>
 
-			<p>Plus adds numbers, but it connects two strings.  When you add a number and a string, you get a string.  Try out these examples to get a feel for how it all works:</p>
+			<p>Plus adds numbers, but it connects two strings.</p>
+			<p>When you add a number and a string, you get a string.</p>
+			<p>Try out these examples to get a feel for how it all works:</p>
 
 			<pre><code>
 				var a = 2;
@@ -226,181 +243,35 @@
 
 		<div class="section">
 			<h2>Exercises:</h2>
-			- Set a variable to a string or a number and show it in a div on the page (once you're comfortable, repeat 10 times without looking)
-			- Escape quotes and apostrophes and show the result on screen (try 5 times)
-			- Concatenate two strings and show the result on the page (repeat 5 times)
-			- Concatenate a string and a variable and show the result on the page (repeat 5 times)
-			- Use the plus sign to do addition or concatenation on various combinations of strings and numbers.  Do at least the following combinations: string + string, string + variable, string + number, number + number.  Feel free to play around more.
-
-		</div>
-
-
-
-
-
-
-
-
-
-
-
-
-		<h1>How to avoid getting stuck: Comments, the console, and alerts</h1>
-
-
-
-		<div class="special_section getting_started">
-			<h2>Getting Started</h2>
-			<p>
-				Copy and paste the following code into a new HTML document:
-			</p>
-			<pre><code class="language-markup">
-				&lt;!DOCTYPE html&gt;
-				&lt;html&gt;
-				&lt;head&gt;
-					&lt;title&gt;&lt;/title&gt;
-					&lt;meta charset="UTF-8"&gt;
-				&lt;/head&gt;
-				&lt;body&gt;
-
-
-				&lt;script&gt;
-
-				&lt;/script&gt;
-				&lt;/body&gt;
-				&lt;/html&gt;
-			</code></pre>
-
-			<p>
-				For convenience, you can start with this HTML document to type the code from the lesson.
-			</p>
-			<p><b>Remember to put all scripts between the script tags.</b></p>
-		</div>
-
-
-		
-		
-		<div class="section">
-			<h2>Comments: Make your code easier to read and debug</h2>
-
-			<p><b>Comments</b> are just notes you can put in your JavaScript to remind yourself what's going on.  They don't do anything on your page, but they make your code much easier to read later.</p>
-
-			<p>Examples of comments:</p>
-
-			<pre><code>
-				// This is a single-line comment.
-
-				/* This is a multi-line comment.
-				Put as many lines as you want.
-				This is still part of the comment. */
-			</code></pre>
-
-			<div class="special_section tip">
-				<h2>Tip: Commenting is a good habit</h2>
-				<p>When you start to write complex code, it's especially important to comment first.</p>
-				<p>That way, you won't get stuck as easily because you can do your thinking without being tangled in code.</p>
-			</div>
-
-		</div>
-
-
-
-		<div class="section">
-			<h2>The console: It can save your life when you have errors</h2>
-
-
-			<p>The <b>console</b> is a part of your browser that helps you do three important things (among others):</p>
-
-			<ul>
-				<li>See errors</li>
-				<li>Try out a JavaScript code snippet by typing it there directly</li>
-				<li>Display messages (useful for when you want to test output without showing it on the page)</li>
-			</ul>
-
-			<p><strong>A quick Google search should show you how to open the console</strong> in whatever browser and operating system you're using.  (I don't want to waste space here with every combination of browser and operating system.)  I recommend memorizing the keyboard shortcut.</p>
-
-			<p>To see how the console handles errors, try typing some random nonsense in your script.  Open the page in your browser, open the console, and see what happens.</p>
-
-		</div>
-
-
-		
-		<div class="section">
-			<h2>Showing a message in the console</h2>
-
-
-			<p>To show a message in the console, put this in your script:</p>
-
-			<pre><code>
-				console.log('this will show up in the console');
-			</code></pre>
-
-			<p>Just remember to remove console logs from production websites once they're published so the world won't see your debugging notes.</p>
-
-			<p>You can also type JavaScript directly into the console in your browser window.</p>
-
-		</div>
-
-
-
-		<div class="section">
-			<h2>Alerts: The most basic popups</h2>
-
-			<p>A JavaScript <b>alert</b> is a small popup with a message. The code looks like this:</p>
-
-			<pre><code>
-				alert('this is an alert');
-			</code></pre>
-
-			<p>Try it out and know what it does, but it's not as important as comments and the console.</p>
-
-			<p>The only reason I'm including it here is because it's basic and I don't want you to be embarrassed if anyone asks about it.</p>
-
-		</div>
-
-
-
-
-		<div class="section">
-			<h2>Exercises:</h2>
-
 			<ol>
 				<li>
-					Write the following code, and then repeat it 3 times without looking:
-					<pre><code>
-						alert('hi');
-					</code></pre>
+					<p>Set a variable to a string or a number and show it in a div on the page.</p>
+					<p>Once you're comfortable, repeat the script part 10 times without looking at an example (no need to retype the HTML).</p>
 				</li>
 				<li>
-					Write a single-line JavaScript comment.  Repeat it 5 times without looking.
-					<pre><code>
-						// here is a single-line comment
-					</code></pre>
+					<p>Write a sentence that has quotes and apostrophes.  Store your sentence in a variable and show it in a div. Try this 5 times with different examples.</p>
+					<p>Hint: Remember to escape certain characters when necessary.</p>
 				</li>
+				<li>Concatenate two strings and show the result on the page. Repeat 5 times.</li>
+				<li>Concatenate a string and a variable and show the result on the page. Repeat 5 times.</li>
 				<li>
-					Write a multi-line JavaScript comment.  Repeat it 5 times without looking.
-					<pre><code>
-						/*
-						here is a
-						multi-line comment
-						*/
-					</code></pre>
-				</li>
-				<li>
-					Once you're comfortable, write the following code 10 times without looking:
-					<pre><code>
-						console.log('hi');
-					</code></pre>
-				</li>
-				<li>
-					Try entering some JavaScript code into your browser's console just to see what it does.
-				</li>
-				<li>
-					Use JavaScript to show some text in a div.  Add a JavaScript comment of your choice to explain what is happening.
+					<p>Use the plus sign to do addition or concatenation on various combinations of strings and numbers.</p>
+					<p>Do at least the following combinations:</p>
+					<ul>
+						<li>string + string</li>
+						<li>string + variable</li>
+						<li>string + number</li>
+						<li>number + number</li>
+					</ul>
+					<p>Feel free to play around more.</p>
 				</li>
 			</ol>
 		</div>
 
+
+		<div class="section">
+			<p>Congrats! You now know about variables, strings, and numbers.</p>
+		</div>
 
 	</div>
 
