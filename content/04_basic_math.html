@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>04 - math</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+		<h1>Make JavaScript do your math for you</h1>
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+
+		<div class="section">
+			<h2>Basic arithmetic</h2>
+
+			<p>In JavaScript, you can use plus <b>+</b>, minus <b>-</b>, times <b>*</b>, divided by <b>/</b>, and parentheses<b>( )</b> just like regular math.</p>
+
+			<p>Type each of the following examples once and show the results in an HTML div.</p>
+
+			<pre><code>
+				var x = 5 + 3;
+				var y = x - 1;
+				var m = x * y;
+				var d = m / x;
+				var whatever = ( (d+1) / 5 ) * 3;
+			</code></pre>
+
+		</div>
+
+
+
+
+		<div class="section">
+			<h2>Modular math - Useful for clocks and remainders and stuff</h2>
+
+			<p>The <b>modulus</b> operator, <b>%</b>, divides two numbers and gives the remainder.  For example, 10%7 would give you the remainder of 10/7, which is 3.</p>
+
+			<p>Type the following example and change the numbers a couple of times to see the results.</p>
+
+			<pre><code>
+				var x = 5 % 3;
+				console.log(x);
+			</code></pre>
+
+			<div class="special_section practical">
+				<h3>Practical examples of modular math</h3>
+
+				<p>If you split 10 sandwiches among 3 people, how many will be left over?  Try this example to find out.</p>
+				<pre><code>
+					var leftoverSandwiches = 10 % 3; // get remainder of 10/3
+				</code></pre>
+
+				<p>If it's 2:00am now, what time will it be 79 hours from now?</p>
+				<pre><code>
+					var time = (2+79) % 24;
+				</code></pre>
+			</div>
+
+		</div>
+
+
+
+
+		<div class="section">
+			<h2>Increments and decrements - Useful for keeping count of stuff</h2>
+
+			<p>Let's say you have a variable, <b>x</b>, that equals <b>5</b>, and you want to increase it by <b>1</b>.</p>
+			<p>Here are three ways to do that:</p>
+			<ol>
+				<li>
+					<p>Set <b>x</b> equal to <b>x+1</b>.</p>
+					<pre><code>
+						x = x+1;
+					</code></pre>
+					<p>If x is 5, this code will change x to 6.</p>
+					<p>If x is 6, this code will change x to 7.</p>
+				</li>
+				<li>
+					<p>This is a short way to increase x by 1.</p>
+					<pre><code>
+						x += 1;
+					</code></pre>
+				</li>
+				<li>
+					<p>This is a very short way to increase x by 1.</p>
+					<pre><code>
+						x++;
+					</code></pre>
+					<p>This is convenient, so remember it.</p>
+				</li>
+			</ol>
+
+			<p>Now that you've seen how increments work, here's a more convenient summary of them:</p>
+
+			<pre><code>
+				var x = 5;
+
+				// these expressions all do the same thing: they add 1
+				x = x+1;
+				x += 1;
+				x++;
+
+				// these expressions all subtract 1
+				x = x-1;
+				x-=1;
+				x--;
+
+				// these expressions both add 5
+				x = x + 5;
+				x += 5;
+			</code></pre>
+
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Assignment operators: Assign values to variables.</h2>
+
+			<p>An <b>assignment operator</b> assigns a value to a variable.  You've already seen one of them, <b>=</b>, but there are others.</p>
+
+			<p>Some of them can make your code shorter.</p>
+
+			<p>Type each of the following examples once so you're aware they exist.</p>
+
+			<p>(You've already seen some of these in the increments section.)</p>
+
+
+			<pre><code>
+				var x = 2;
+				x += 4; // same as x = x+4;
+				x -= 3; // same as x = x-3;
+				x *= 10; // same as x = x*10;
+				x /= 5; // same as x = x/5;
+				x %= 3; // same as x = x%3;
+			</code></pre>
+
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+
+			<ol>
+				<li>
+					Set two variables equal to 5 and 3.  Show their sum in a div.
+				</li>
+
+				<li>
+					Set a variable equal to 5.  Increase it by 1 in three different ways.  If you have trouble remembering any of the ways, type them five times.
+				</li>
+
+				<li>
+					<p>You have 11 pizza slices and 3 friends.</p>
+					<p>How many slices will each friend get?</p>
+					<p>How many slices will be left over?</p>
+					<p>Display the results on a page in a format like this:</p>
+					<pre><code class="language-markup">
+						Slices for each friend: ___
+						Leftover slices: ___
+					</code></pre>
+				</li>
+
+				<li>
+					<p>You're at a restaurant and your bill is $10.  You want to give a 20% tip.</p>
+					<p>Show the bill amount, the tip, and the total payment (bill and tip together).</p>
+					<p>Display your results something like this:</p>
+					<pre><code class="language-markup">
+						Bill: $__
+						Tip: $__
+						Total: $__
+					</code></pre>
+				</li>
+			</ol>
+
+		</div>
+
+
+		<div class="section">
+			<p>Nice work! Now you can make JavaScript do math for you.</p>
+		</div>
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
