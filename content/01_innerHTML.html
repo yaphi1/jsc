@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>01_innerHTML</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+		<h1>Write some practical JavaScript</h1>
+
+		<p>Get excited.</p>
+
+		<p>We're going to jump right in and display some text on a page.</p>
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this template when typing the code from the lesson.
+			</p>
+		</div>
+
+		
+
+
+		<div class="section">
+			<h2>Show text on a page</h2>
+		
+
+			<p>Type the following code in the body of your HTML document and save it:</p>
+
+			<pre><code class="language-markup">
+				&lt;div id="whatever"&gt;&lt;/div&gt;
+
+				&lt;script&gt;
+				document.getElementById('whatever').innerHTML = 'Yes! I win.';
+				&lt;/script&gt;
+			</code></pre>
+
+			<p>Open your HTML document in your browser and, you should see the phrase "Yes! I win." appear on the screen.</p>
+
+			<p>Let's break down what's happening here.</p>
+
+			<ol>
+				<li>
+					First, you've created a <b>div</b> where you want your output to appear, and you've given it an <b>id</b> so you have a way to reference it in your JavaScript.
+				</li>
+
+				<li>
+					Next you've written this <b>script</b> to make the text appear in your div:
+
+					<pre><code>
+						document.getElementById('whatever').innerHTML = 'Yes! I win.';
+					</code></pre>
+
+					<p>Here's what that line of script does:</p>
+
+					<ul>
+						<li>In the document, find the element with the id "whatever".</li>
+						<li>Now set the HTML inside that element to show the phrase "Yes! I win."</li>
+						<li>The semicolon indicates the end of the statement.</li>
+					</ul>
+				</li>
+			</ol>
+
+		</div>
+
+
+
+
+		<div class="section">
+			<h2>Show more than just text on a page</h2>
+
+			<p><b>innerHTML</b> can have any HTML in it, so it doesn't need to be text only.</p>
+
+			<p>Type the following example to see this in action:</p>
+
+			<pre><code>
+				document.getElementById('whatever').innerHTML = '&lt;div style="color:green; background:gold;"&gt;Yes! I win.&lt;/div&gt;';
+			</code></pre>
+		</div>
+
+
+		<div class="section">
+			<h2>Where should you put scripts?</h2>
+
+			<p><strong>The <b>end of the body</b> is usually the best place to put a script.</strong></p>
+
+			<p>Script tags can go anywhere in the head or the body of your page, but if you have a choice, it's usually best to put them as close as possible to the end of the body (just before the closing <code>&lt;/body&gt;</code> tag).</p>
+
+			<p>That way the rest of the document is loaded so you can reference it, and your page loads faster because scripts aren't blocking the earlier parts.</p>
+
+			<p>You can write your JavaScript code directly between the <code>&lt;script&gt;</code> and <code>&lt;/script&gt;</code> tags, or you can put your JavaScript in a separate file and call it on your page like this:</p>
+			
+			<pre><code class="language-markup">
+				&lt;script src="something.js"&gt;&lt;/script&gt;
+			</code></pre>
+
+			<p>For convenience in these tutorials, we're just going to write our code directly between <code>&lt;script&gt;</code> and <code>&lt;/script&gt;</code> so it's all in one place.</p>
+
+			<div class="special_section warning">
+				<h2>Warning: Putting scripts too early</h2>
+				<p>Let's say you want your script to show text in a div.</p>
+				<p>If you put the script earlier than the div in your document, then you'll get an error.</p>
+				<p>That's because the script will look for a div that hasn't been created yet.</p>
+			</div>
+		</div>
+
+
+
+		<div class="section special_section warning">
+			<h2>Warning: Case matters!</h2>
+
+			<p><b>JavaScript is case-sensitive.</b></p>
+			<p>That means JavaScript treats "hello" and "Hello" as <i>two different words</i>.</p>
+			<p>If you see me type something like <code>getElementById</code>, you need to keep the same capitalization.</p>
+
+		</div>
+
+		
+
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+
+			<ol>
+				<li>
+					<p>Play around with the following code and get comfortable with it:</p>
+
+					<pre><code class="language-markup">
+						&lt;div id="whatever"&gt;&lt;/div&gt;
+
+						&lt;script&gt;
+						document.getElementById('whatever').innerHTML = 'hi';
+						&lt;/script&gt;
+					</code></pre>
+					
+					<p>Try changing the id or the text.</p>
+					<p>Next, try creating two different divs (each with a unique id) and putting different text in each.</p>
+				</li>
+				<li>
+					<p>Type the following piece of code 5 times.</p>
+					<pre><code>
+						document.getElementById('whatever').innerHTML = 'hi';
+					</code></pre>
+					<p>Feel free to look at it, and pay close attention to getting everything right including quotes, capitalization, parentheses, periods, and the semicolon.</p>
+				</li>
+				<li>
+					<p>Try typing the following code 20 times without looking at any examples.</p>
+					<pre><code>
+						document.getElementById('whatever').innerHTML = 'hi';
+					</code></pre>
+					<p><strong>Even if you feel like you understand this, don't skip it.</strong></p>
+					<p>Put on some music if you need to, but take the few extra minutes now to type this out and you'll thank yourself later when everything starts to feel natural.</p>
+				</li>
+				<li>
+					<p>Set the <code>innerHTML</code> of a div to have any HTML you want (not just plain text).</p>
+				</li>
+			</ol>
+		</div>
+
+
+
+		<div class="section">
+			<p>Done?  Congrats!  You now know how to put stuff on a page with JavaScript.</p>
+		</div>
+
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
