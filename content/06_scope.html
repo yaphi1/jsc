@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>06 - scope</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+		<h1>How to avoid messing up your functions: Know about scope and hoisting</h1>
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+
+		<div class="section">
+			<h2>Common avoidable problems</h2>
+			<p>"Why won't my variable show up?"</p>
+
+			<p>"Why is my function not working?"</p>
+
+			<p>"What happened to that string I was working with earlier?"</p>
+
+
+			<p><strong>You can avoid many of these questions by understanding <b>scope</b> and <b>hoisting</b>.</strong></p>
+		</div>
+
+		
+
+		<div class="section">
+			<h2>Scope</h2>
+
+			<p><b>Scope</b> tells you where you can or can't access a function or variable.</p>
+
+			<p>You'll see what that means soon.</p>
+
+			<h3>Global Scope</h3>
+			<p>Normally, when you create a variable or a function, you can access it anywhere in your script.</p>
+			<p>In that situation, that variable or function is said to be in <b>global scope</b>.</p>
+
+			<h3>Local Scope</h3>
+			<p>If you create a variable or a function <i>inside a function</i>, then you can only access it inside that function.</p>
+			<p>That's called <b>local scope</b> because the variable or function is only available locally inside the function where it was created.</p>
+
+			<h3>Everything clear?</h3>
+			<p><strong>Global scope:</strong> Access anywhere</p>
+			<p><strong>Local scope:</strong> Access only inside function</p>
+
+
+			
+		</div>
+
+		<div class="section">
+			<h2>Example of global scope vs. local scope</h2>
+
+			<p>
+				Type the following example to get a feel for both types of scope:
+			</p>
+
+			<pre><code>
+				var globalExample = 'This is global.';
+
+				console.log(globalExample); // this WILL work
+
+				function sayStuff(){
+					console.log(globalExample); // this WILL work
+
+					var localExample = 'This is local.';
+					console.log(localExample); // this WILL work
+				}
+				sayStuff();
+
+				console.log(localExample); // this will NOT work
+			</code></pre>
+
+			<p>Feel free to experiment with changing the code to see what happens.</p>
+		</div>
+
+
+
+
+		<div class="section special_section warning">
+			<h2>Don't forget <b>var</b> when declaring a variable</h2>
+
+			<p>If you declare a variable inside a function, but you forget to use the <b>var</b> keyword, the variable automatically becomes <b>global</b>.</p>
+
+			<p><strong>Don't do this:</strong></p>
+			<pre><code>
+				function test(){
+					x = 5; // becomes global because you forgot "var"
+				}
+				test();
+				console.log(x); // this WILL show 5
+			</code></pre>
+
+			<p>Now that you know, don't get tripped up by this!  Use <b>var</b> when you're first declaring a variable.</p>
+		</div>
+
+
+
+
+		<div class="section special_section tip">
+			<h2>Why you need to understand scope:</h2>
+
+			<ul>
+			<li>If you use <b>local scope</b>, you don't have to worry about having variables overwritten the way you would with global scope.</li>
+
+			<li>If you use <b>global scope</b>, you can access your variables and functions anywhere.  (If you have a choice, local scope is safer because it's not as likely to be overwritten.)</li>
+
+			<li>If you understand scope, you won't try to call a function or variable where it's not available.</li>
+
+			<li>If you're working on a team and you understand scope, you won't be as likely to overwrite other people's variables.</li>
+			</ul>
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>Hoisting</h2>
+
+			<h3>Functions get hoisted</h3>
+
+			<p>If you declare a function, that function gets lifted (hoisted) to the beginning of whatever scope it's in.</p>
+
+			<p>That means you can call the function from anywhere in the scope where you first created it.</p>
+
+			<p>Try this example:</p>
+
+			<pre><code>
+				greet(); // this WILL work
+
+				function greet(){
+					console.log('hello');
+				}
+
+				greet(); // this WILL work too
+			</code></pre>
+
+
+			<br>
+			<h3>Variable values do NOT get hoisted</h3>
+
+			<p>If you assign a value to a variable, that value will only apply afterwards.</p>
+
+			<p>Try this example:</p>
+
+			<pre><code>
+				console.log(greeting); // this will say "undefined"
+
+				var greeting = 'Hello';
+				console.log(greeting); // this will say "Hello"
+			</code></pre>
+
+
+			<div class="special_section tip">
+				<h3>Main benefit of understanding hoisting:</h3>
+
+				<p>You'll know where you can access variables and functions, so you'll avoid a lot of mistakes.</p>
+			</div>
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+
+			<ol>
+				<li>Type each of the examples in this chapter, and play around with them until it's clear how they work.</li>
+
+				<li>Create a variable in local scope and show its value in an HTML div.</li>
+
+				<li>Create a variable in global scope and show its value in an HTML span.</li>
+			</ol>
+		</div>
+
+
+
+		<div class="section">
+			<p>Good job getting to the end of this unit!</p>
+			<p>Now that you know about <b>scope</b> and <b>hoisting</b>, you can avoid the errors that a lot of people make.</p>
+		</div>
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>07 - logic</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+		<h1>Make your code smart by building in logic!</h1>
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+
+		<div class="section">
+			<h2>JavaScript Logic</h2>
+
+
+			<p>Logic is one of the most fun parts of JavaScript because it lets your code make decisions.</p>
+
+			<p>The main building blocks of JavaScript logic are <b>if</b> statements and <b>else</b> statements.</p>
+
+			<div class="special_section terminology">
+				<h3>Talk the talk: Conditional statements</h3>
+				<p>In case anyone asks, <b>if</b> and <b>else</b> statements are also called <b>conditional</b> statements.  Now you won't be confused when you hear the word "conditional."</p>
+			</div>
+
+			<p>To see how conditional statements work, let's look at some examples.</p>
+		</div>
+
+
+
+		<div class="section">
+			<h2>If statement</h2>
+
+			<p>Type the following code into an HTML document and open it in your browser to see what it does.</p>
+
+			<pre><code>
+				var rating = 8;
+
+				if( rating &gt; 5 ){
+					console.log('good rating');
+				}
+			</code></pre>
+
+			<p>The <b>if</b> statement here says:</p>
+			<ul>
+				<li>if <code>rating</code> is greater than 5...</li>
+				<li>then write "good rating" in the console</li>
+			</ul>
+
+			<p>Since <code>rating</code> is 8, you should see the message.</p>
+
+			<p>Try changing rating to 2.  The message should disappear.</p>
+		</div>
+
+
+
+
+		<div class="section">
+			<h2>Else statement</h2>
+
+			<p>An else statement tells your code what to do when the <b>if</b> statement is false.</p>
+
+			<p>Type and run the following code.  Then change rating to 2 and see what happens.</p>
+
+			
+			<pre><code>
+				var rating = 8;
+
+				if( rating &gt; 5 ){
+					console.log('good rating');
+				}
+				else{
+					console.log('bad rating');
+				}
+			</code></pre>
+
+			<p>If you've done it correctly, a rating above 5 should show "good rating" and a rating of 5 or below should show "bad rating".</p>
+
+		</div>
+
+
+
+
+		<div class="section">
+			<h2>Else if statement</h2>
+
+			<p>What happens if you want to check many conditions?</p>
+
+			<p>You could do this (but <strong>do NOT type this one</strong>).  Try to guess what will happen here.</p>
+
+			<pre><code>
+				var rating = 8;
+
+				// this is true
+				if( rating &gt; 7 ){
+					console.log('great rating');
+				}
+
+				// this is also true
+				if( rating &gt; 5 ){
+					console.log('good rating');
+				}
+
+				else{
+					console.log('bad rating');
+				}
+			</code></pre>
+
+			<p>This code will print "great rating" and "good rating" because both if statements are true.  What if we want to exclude one of them?</p>
+
+			<p>That's where we use <b>else if</b>.</p>
+
+			<p>"Else if" is not some sort of special command.  It's just an else statement followed immediately by another if statement.</p>
+
+			<p>Type the following example and see what happens.  Change rating to 6 and then 4 and see what happens.</p>
+
+			<pre><code>
+				var rating = 8;
+
+				if( rating &gt; 7 ){
+					console.log('great rating');
+				}
+				else if( rating &gt; 5 ){
+					console.log('good rating');
+				}
+				else{
+					console.log('bad rating');
+				}
+			</code></pre>
+
+			<p>Here's what the code does:</p>
+
+			<ul>
+				<li>If the rating is above 7, show "great rating" in the console.</li>
+
+				<li>If it's not greater than 7, but it's greater than 5, then show "good rating".</li>
+
+				<li>If none of the previous conditions are true, show "bad rating".</li>
+			</ul>
+
+		</div>
+
+
+		<div class="section special_section terminology">
+			<h2>Talk the talk: Control flow</h2>
+			
+			<p><b>Control flow</b> is just a fancy term for things like <b>if</b> statements or <b>else</b> statements that control the logical flow of your program.</p>
+
+			<p>If someone asks if you know about control flow, you can say yes.</p>
+		</div>
+
+
+		<div class="section">
+			<h2>Comparison operators</h2>
+
+			<p>You'll need some way to compare values besides "greater than."  Here's a list of the comparisons you can use in JavaScript:</p>
+
+			<pre><code>
+				x&gt;5 // greater than
+				x&gt;=5 // greater than or equal to
+				x&lt;5 // less than
+				x&lt;=5 // less than or equal to
+
+				x==5 // equal to
+				x===5 // exactly equal to
+				x!=5 // not equal to
+				x!==5 // not exactly equal to
+			</code></pre>
+
+
+			<p>What's the difference between <b>equal</b> and <b>exactly equal</b>?</p>
+
+			<p><b>Equal</b> means the values match.</p>
+
+			<p><b>Exactly equal</b> means that the value and the type both match.</p>
+
+			<p>For example '5' equals 5.  However '5' is not exactly equal to 5 because the first one is a string and the second one is a number.</p>
+
+			<pre><code>
+				// equal
+				5==5 // true
+				'5'==5 // true
+
+				// exactly equal
+				5===5 // true
+				'5'===5 // FALSE
+			</code></pre>
+
+		</div>
+
+
+
+		<div class="section special_section warning">
+			<h2>Remember: Always use <b>more than one equals sign</b> for comparisons</h2>
+
+			<p>Remember to use more than one equals sign when comparing for equality.</p>
+
+			<p>Forgetting this causes so many errors!</p>
+
+			<p>As you have seen in this course, the single equals sign is used to assign a variable.  Two or more equals signs are used to check for equality.</p>
+
+			<p>I'm going to say it again.  Forgetting this causes so... many... errors!  Please remember it.</p>
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>Exercises</h2>
+
+			<ol>
+				<li>
+					<p>Type the following code, and make sure it works.  Retype it twice or so to get comfortable.  Once you can type it without looking at an example, retype it 3 times.</p>
+
+					<pre><code>
+						var x=6;
+						if(x&gt;7){
+							console.log('large');
+						}
+						else if(x&gt;=4){
+							console.log('medium');
+						}
+						else{
+							console.log('small');
+						}
+					</code></pre>
+
+				</li>
+
+
+
+				<li>
+					<p>Type the following code.</p>
+
+					<pre><code>
+						var x=5;
+						if(x==5){
+							console.log('the condition is true');
+						}
+						else{
+							console.log('the condition is false');
+						}
+					</code></pre>
+
+					<p>Then replace the <b>==</b> operator with each of the other comparison operators from this chapter (less than, greater than, not equal, etc).</p>
+					<p>Play around with them until you feel comfortable.  If there are any comparison operators you think you might forget, type them a couple of times without looking.</p>
+
+				</li>
+
+
+
+				<li>
+					<p>Write a function that takes in someone's age and says whether they're old enough to ride a rollercoaster.  (If the person's age is above 10, they can ride.)</p>
+
+					<p>Show the resulting message in an HTML div.</p>
+
+					<p>Examples of how the function should work:</p>
+
+					<pre><code>
+						checkAge(5); // should show "No rollercoaster for you."
+						checkAge(12); // should show "You can go on the rollercoaster."
+					</code></pre>
+
+					<p>If you find yourself having trouble with this question, go back to the chapter on functions and practice some more.</p>
+
+				</li>
+			</ol>
+
+		</div>
+
+
+
+
+		<div class="section">
+			<p>Congrats!</p>
+			<p>Now that you know about JavaScript logic, you can do a lot more with your pages.</p>
+		</div>
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>05 - functions</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+		<h1>Make your life easier with functions</h1>
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+
+		<div class="section">
+			<h2>Basic functions: Super important in JavaScript</h2>
+
+			<p>In JavaScript, a <b>function</b> is a piece of code that you can <strong>write once</strong> and <strong>run it as many times as you want</strong> in other places.</p>
+
+			<p>Type the following code into your script and open it in your browser:</p>
+
+			<pre><code>
+				// first you define the function
+				function sayStuff(){
+
+					// all the code in here will run whenever you call your function
+					console.log('hi');
+					console.log('this is neat');
+				}
+
+				// now you can run the function whenever you want
+				sayStuff();
+
+				// run the function again just for fun
+				sayStuff();
+			</code></pre>
+
+			<p>Play around with the code to get comfortable with how it works.</p>
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>Return statements: Good for flexibility</h2>
+
+
+			<p>A <b>return</b> statement stops a function and spits out a value.</p>
+
+			<p>This concept is easier to see with an example (which you should type out and try once):</p>
+
+			<pre><code>
+				function add(){
+					var sum = 1 + 5;
+					return sum;
+				}
+
+				console.log( add() );
+
+				console.log( 'The sum is: ' + add() );
+			</code></pre>
+
+			<p>In the above example, you can call add() and it will give you the sum of 1 and 5.  You can use this value anywhere you want.</p>
+
+			<p>For example, you can log it to the console, or you can display it on your page.</p>
+
+			<p>Another bonus feature of return statements is that anything after them inside a function won't run.  This is useful if you ever want to stop a function early.</p>
+
+		</div>
+
+
+
+
+
+
+
+		<div class="section">
+			<h2>Parameters: Make your functions more powerful and convenient</h2>
+
+			<p>A <b>parameter</b> is a value you can plug into a function.</p>
+
+			<p>For example, you could write a function that takes in a name and outputs a greeting.</p>
+
+			<p>Type the following example and run it in your browser to see how it works:</p>
+
+			<pre><code>
+				function greet(name){
+					console.log( 'Hi ' + name );
+				}
+
+				greet('Mr. Meow');
+				greet('Godzilla');
+			</code></pre>
+
+			<p>Feel free to play around with this code and get comfortable using a parameter.</p>
+
+		</div>
+
+
+
+		<div class="section">
+			<h2>You can use more than one parameter</h2>
+		
+			<p>Functions can take any number of parameters.</p>
+			
+			<p>Type this example that adds two numbers:</p>
+
+			<pre><code>
+				function sum(a,b){
+					return a+b;
+				}
+
+				console.log( sum(2,3) );
+				console.log('The sum is ' + sum(5,4) );
+			</code></pre>
+
+			<p>As usual, feel free to play around and write your own functions until you feel comfortable using more than one parameter.</p>
+
+
+
+			<div class="special_section practical">
+				<h3>Practical example: Restaurant bill</h3>
+				
+				<p>Try this example that takes a restaurant bill, calculates the tip, and shows it on the page:</p>
+
+				<pre><code class="language-markup">
+					&lt;div id="output"&gt;&lt;/div&gt;
+					&lt;script&gt;
+					function tip(bill, percent){
+						var result = bill * (percent/100);
+						return result;
+					}
+
+					var myBill = 25;
+					var tipPercent = 20;
+
+					var message = "The bill is $" + myBill
+						+ " and the tip is $" + tip(myBill, tipPercent);
+
+					document.getElementById('output').innerHTML = message;
+					&lt;/script&gt;
+				</code></pre>
+			</div>
+
+
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+
+			<ol>
+
+				<li>
+					<p>Type the following basic function and call it.  Check it in your browser to make sure it works.  Type it at least two more times to get comfortable.  Once you're comfortable, type it 15 more times without looking at an example.</p>
+
+					<pre><code>
+						function greet(){
+							console.log('hi');
+						}
+
+						greet();
+					</code></pre>
+
+					<p>I know that's a lot of times to retype it, but this is super important, so if you do this now, everything else will be easier.</p>
+				</li>
+
+
+				<li>
+					Write a function that shows a greeting in an HTML div.
+				</li>
+
+
+
+				<li>
+					<p>Type the following function and call it with different parameters.  Check it in your browser to make sure it works.  Type it at least two more times to get comfortable.  Once you're comfortable, type it 6 more times without looking at an example.</p>
+
+					<pre><code>
+						function greet(name){
+							console.log( 'Hi ' + name );
+						}
+
+						greet('Mario');
+						greet('Luigi');
+					</code></pre>
+				</li>
+
+
+
+				<li>
+					<p>Write a function, <b>showColor</b>, that takes in a color parameter and shows this message in a div:</p>
+					<pre><code>
+						"Your shirt color is [insert color here]."
+					</code></pre>
+					
+					<p>For example, calling <b>showColor('blue')</b> might put this on your page:</p>
+					<pre><code>
+						"Your shirt color is blue."
+					</code></pre>
+				</li>
+
+
+
+				<li>
+					<p>Type the following code, try it in the browser, retype it twice or until comfortable.  Retype it four more times without looking at an example.</p>
+
+					<pre><code>
+						function sum(a,b){
+							return a+b;
+						}
+
+						console.log( "The sum is " + sum(4,6) );
+					</code></pre>
+				</li>
+
+
+
+				<li>
+					<p>Write a function that multiplies three numbers and returns the result.  Display the result in an HTML span.</p>
+				</li>
+
+			</ol>
+		</div>
+
+
+
+		<div class="section">
+			<p>That was a tough section.  If you've made it this far, great work.</p>
+
+			<p>I know this section was a lot to take in, so I don't expect you to retain all of it on the first try.  If you need to review it, feel free to go back and play around with the examples some more.</p>
+			<p>Write your own functions.  Try something different or creative.  Have fun with it.</p>
+			<p>Whatever you do, make sure you're comfortable with this section before moving on.</p>
+			<p>Functions are one of the most important concepts in JavaScript, so a little bit of extra time to practice now will save you a lot of time and confusion later.</p>
+		</div>
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
