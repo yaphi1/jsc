@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>09 - styles</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+		
+		<h1>Manipulate styles with JavaScript</h1>
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+		
+		<div class="section">
+			<h2>Time to get stylish</h2>
+
+
+			<br>
+			<p>Fun stuff! Get excited!</p>
+
+			<br>
+			<p><strong>Today we're going to manipulate styles through JavaScript. This will allow you to:</strong></p>
+			<ul>
+				<li>change colors</li>
+				<li>change sizes</li>
+				<li>show and hide things on a page</li>
+				<li>dynamically change any CSS properties you want</li>
+			</ul>
+
+
+
+			<br>
+			<p><strong>There are two ways to change the style of an element:</strong></p>
+			<ul>
+				<li>Change the style directly</li>
+				<li>Change the class name</li>
+			</ul>
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Style an element directly</h2>
+
+			<p>Type out the following example and open it in your browser to see how it works:</p>
+
+			<pre><code class="language-markup">
+				&lt;div id="mydiv"&gt;Example&lt;/div&gt;
+
+				&lt;script&gt;
+				document.getElementById('mydiv').style.color = '#ff0000';
+				document.getElementById('mydiv').style.backgroundColor = 'blue';
+				&lt;/script&gt;
+			</code></pre>
+
+			<p>Horrible color scheme aside, you can start to see a pattern here:</p>
+			<p>It's basically <code>[element]</code> dot <code>[style]</code> dot <code>[css property]</code> equals <code>[value]</code>.</p>
+
+			<br>
+			<h3>How to hide and show HTML elements with JavaScript</h3>
+			<p>Hide and show elements by changing the CSS <code>display</code> property to <code>"none"</code> or <code>"block"</code> (or <code>"inline-block"</code> if needed).</p>
+
+			<p>Here's an example that hides a div. (Type it to see it in action.)</p>
+			<pre><code class="language-markup">
+				&lt;div id="mydiv"&gt;You can't see me.&lt;/div&gt;
+
+				&lt;script&gt;
+				document.getElementById('mydiv').style.display = 'none';
+				&lt;/script&gt;
+			</code></pre>
+
+
+
+			<br>
+			<div class="special_section warning">
+				<h3>Warning about CSS property names</h3>
+
+				<p>For normal CSS properties like <b>color</b> or <b>padding</b>, it's all lowercase, but for hyphenated CSS properties like background-color or padding-top, you need to write them like this in JavaScript: <b>backgroundColor</b> or <b>paddingTop</b>.</p>
+
+				<p>That's because JavaScript thinks the hyphen is a minus sign (unless it's inside a string) and the browser would get really confused really fast.</p>
+			</div>
+
+
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>Change an element's class name</h2>
+
+			<p>Type out the following example and open it in your browser to see how it works:</p>
+
+			<pre><code class="language-markup">
+				&lt;style&gt;
+				.highlighted{
+					background-color: yellow;
+				}
+				&lt;/style&gt;
+
+				&lt;span id="mytext"&gt;Here's some text.&lt;/span&gt;
+
+				&lt;script&gt;
+				document.getElementById('mytext').className = 'highlighted';
+				&lt;/script&gt;
+			</code></pre>
+
+
+			<br>
+			<div class="special_section warning">
+				<h3>Warning about CSS class names in JavaScript</h3>
+
+				<p>Remember to use <b>className</b> if you want to change an element's class through JavaScript.</p>
+
+				<p>className className className className className className.</p>
+
+				<p>Remember it.</p>
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+
+			<ol>
+				<li>
+					<p>Type the following code and make sure it works.</p>
+				
+					<pre><code class="language-markup">
+						&lt;div id="mydiv"&gt;Styled directly&lt;/div&gt;
+
+						&lt;script&gt;
+						document.getElementById('mydiv').style.color = 'green';
+						document.getElementById('mydiv').style.backgroundColor = 'gold';
+						&lt;/script&gt;
+					</code></pre>
+
+					<p>Repeat the JavaScript parts until you can type them without looking at an example.</p>
+					
+					<p>Then try styling any five CSS properties of your choice.  Examples might include fontSize, opacity, or display.</p>
+				</li>
+
+
+
+
+				<li>
+					<p>Type the following code and make sure it works.</p>
+
+					<pre><code class="language-markup">
+						&lt;style&gt;
+						.highlighted{
+							background-color: yellow;
+						}
+						&lt;/style&gt;
+
+						&lt;span id="mytext"&gt;Here's some text.&lt;/span&gt;
+
+						&lt;script&gt;
+						document.getElementById('mytext').className = 'highlighted';
+						&lt;/script&gt;
+					</code></pre>
+
+					<p>Repeat the JavaScript part until you can type it without looking at an example.</p>
+					<p>Then type the JavaScript part 3 more times.</p>
+				</li>
+
+
+
+				<li>
+					<p>Create an HTML div with whatever id you want.</p>
+					<p>Then create a function called <b>checkSpeed</b> that takes in a parameter called <b>speed</b>.</p>
+					<ul>
+						<li>If speed is greater than 100, turn the div's background red and make the innerHTML say "Too fast."</li>
+						<li>Otherwise, make the div's background green and make it say "Good speed."</li>
+					</ul>
+
+					<p>Run your checkSpeed function with different speeds to make sure your code works.  For example: <b>checkSpeed(40)</b> or maybe <b>checkSpeed(500)</b></p>
+
+				</li>
+
+
+				<li>
+					<p>Create an HTML div with the word "Congratulations" inside.  Then create a variable called <b>winner</b>.</p>
+					<ul>
+						<li>If winner has a value of true, show the div.</li>
+						<li>Otherwise, hide it.</li>
+					</ul>
+
+					<p>Hint: If you can't remember the short way of checking if a boolean is true or false, refer to the previous unit.</p>
+				</li>
+			</ol>
+
+		</div>
+
+
+
+
+		<div class="section">
+			<p>Success!</p>
+			<p>Now you know how to change styles through JavaScript.  That will allow you to do a lot of useful things.</p>
+		</div>
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
