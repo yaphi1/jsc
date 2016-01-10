@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>08 - logic part 2</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+		
+
+
+
+		<h1>Supercharge your code's logic with logical operators, parentheses, and booleans</h1>
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+		
+		<div class="section">
+			<h2>Logical operators - <b>and</b>, <b>or</b>, and <b>not</b></h2>
+
+			<p>
+				To make your logic more powerful, you can use the following <strong>logical operators</strong>:
+			</p>
+			<ul>
+				<li><b>&amp;&amp;</b> (which means "and")</li>
+				<li><b>||</b> (which means "or")</li>
+				<li><b>!</b> (this means "not")</li>
+			</ul>
+
+			<p>Type the following examples, and see what they do.</p>
+
+			<pre><code>
+				// example of "and"
+				var age = 12;
+				var height = 58;
+				if( age>=10 &amp;&amp; height>=42 ){
+					console.log('You can go on the rollercoaster.');
+				}
+
+				// example of "or"
+				var name = 'Bowser';
+				if( name=='The Emperor' || name=='Bowser' ){
+					console.log('You get the VIP table.');
+				}
+
+				// example of "not"
+				if( name != 'Gerbil' ){
+					console.log('Your name is not Gerbil.');
+				}
+			</code></pre>
+
+			<p>Note: Remember <b>!=</b> means "not equal", and <b>!==</b> means "not exactly equal".</p>
+
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>Parentheses</h2>
+
+			<p>You can use <b>parentheses</b> in your logic too.  They work just like in math where they group pieces of the logic together.</p>
+
+			<p>Play with the following example to get a feel for how it works.</p>
+
+			<pre><code>
+				var money = 1000000000000;
+				var fame = 9001;
+				var name = 'Bowser';
+				if( (money>999999999 &amp;&amp; fame>9000)  || name=='Bowser' ){
+					console.log('You can ride the VIP rollercoaster.');
+				}
+			</code></pre>
+
+			<p>The code above says:</p>
+			<p>If <b>(</b> you're super rich <b>and</b> famous <b>)</b> <b>or</b> your name is Bowser, you can ride the VIP rollercoaster.</p>
+
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>Booleans</h2>
+
+			<p>We've talked about numbers and strings, but now it's time to talk about <b>booleans</b>.</p>
+
+			<p>Booleans are just <b>true</b> or <b>false</b>.  That's it.</p>
+
+			<p>Here's an example.  Please type it in once and feel free to play around with it.</p>
+
+			<pre><code>
+				var correctFingerprint = true;
+
+				if( correctFingerprint==true ){
+					console.log('correct');
+				}
+
+				// this does the same thing as the previous if statement
+				// but this is more concise, so do it this way
+				if( correctFingerprint ){
+					console.log('correct');
+				}
+			</code></pre>
+
+			<p>Whoa! Why does that last example work?</p>
+
+			<p>Here's why:</p>
+
+			<div class="special_section tip">
+				<h3><b>If</b> statements only check for <b>booleans</b></h3>
+
+				<p>Think about it.  Every time you've seen an if statement, it always checked if something was <b>true</b> or <b>false</b>.</p>
+
+				<p>Here are some arbitrary examples:</p>
+				<ul>
+					<li>X is greater than 5? <b>true</b></li>
+					<li>X is less than 2? <b>false</b></li>
+					<li>X is greater than 5 and name equals "Bowser"? <b>true</b></li>
+				</ul>
+
+				<p>That's right.  An <b>if</b> statement can only understand <b>true</b> or <b>false</b>.</p>
+
+				<p>An <b>if</b> statement says: "if (thing in parentheses) equals true, then do {the thing in the brackets.}"</p>
+
+				<pre><code>
+					if( ...stuff goes here... ){ // if stuff is true
+						// then do this
+					}
+				</code></pre>
+
+			</div>
+
+			
+
+
+			<br>
+			<h3>Shortcut for checking if something is false</h3>
+
+			<p>Type this out once:</p>
+
+			<pre><code>
+				var youAreBowser = false;
+				if( !youAreBowser ){
+					console.log("You're not Bowser");
+				}
+			</code></pre>
+
+			<p>Remember that the exclamation mark means "not".  In this case, if you're not Bowser, this code will tell you that.</p>
+
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+
+			<ol>
+				<li>
+					<p>Create two variables: <b>skill</b> and <b>name</b>.</p>
+					<ul>
+						<li>If skill is greater than 90 and name equals "Cena", show "Cena wins!" in an HTML div.</li>
+						<li>Otherwise, show "Who are you?" in that div.</li>
+					</ul>
+					<p>Try setting the variables to different values to make sure your code is working the way you expect.</p>
+				</li>
+
+				<li>
+					<p>Create two variables: <b>score</b> and <b>timeLeft</b>.</p>
+					<p>If score equals 5 or timeLeft equals zero, show "Game Over" in an HTML paragraph.</p>
+					<p>Change the values of score and timeLeft to test your code.</p>
+				</li>
+
+				<li>
+					<p>Create a variable called <b>didPractice</b>.</p>
+					<p>If didPractice is true, show the phrase "You practiced" in an HTML div.</p>
+					<p>Remember to write the condition the concise way!  If you can't remember what that is, refer back to the boolean section in this chapter.</p>
+				</li>
+
+				<li>
+					<p>Create a variable called <b>didPractice</b>.</p>
+					<p>If didPractice is false, show the phrase "You did not practice" in an HTML div.</p>
+					<p>Write the condition the concise way!  As before, if you can't remember what that is, refer back to the boolean section in this chapter.</p>
+				</li>
+
+				<li>
+					<strong>The problem:</strong>
+					<p>You are trying to get into a fancy event.</p>
+					<p>You need to be a celebrity and have a valid ticket, or you need to give the guards a bribe of over 9000 units of money.</p>
+					
+					<strong>Your mission:</strong>
+					<p>Create the following variables: <b>isCelebrity</b>, <b>validTicket</b>, and <b>bribe</b>.</p>
+					<ul>
+						<li>If <b>isCelebrity</b> is true and <b>validTicket</b> is true... or if <b>bribe</b> is greater than 9000, show "Welcome to the concert" in an HTML div.</li>
+						<li>Otherwise, show "No concert for you" in the div.</li>
+					</ul>
+					<p>Hint: You'll have to use parentheses and booleans.</p>
+				</li>
+			</ol>
+
+		</div>
+
+
+
+
+
+		<div class="section">
+			<p>Nice work!</p>
+			<p>Your JavaScript power is increasing.  Next time we're going to play with styles, so get excited.</p>
+		</div>
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
