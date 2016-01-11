@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>10 - clicks</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+		
+
+
+		<h1>Make your pages do cool things when your users click</h1>
+
+
+		<p>Today you're going to add interactivity to your pages!</p>
+
+		<p>Before you start, make sure you're comfortable with functions.</p>
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+
+
+
+
+
+		<div class="section">
+			<h2>The onclick event</h2>
+
+			<p>The onclick event lets you define what happens when a user clicks something on your page.</p>
+
+			<p>Type the following code (don't copy and paste), and check it out in your browser.  If you've done it correctly, the div's text color should change when you click it.</p>
+
+			<pre><code class="language-markup">
+				&lt;div id="mydiv"&gt;Click here&lt;/div&gt;
+
+				&lt;script&gt;
+				function changeColor(){
+					document.getElementById('mydiv').style.color = 'red';
+				}
+
+				document.getElementById('mydiv').onclick = changeColor;
+				&lt;/script&gt;
+			</code></pre>
+
+
+			<p>Pay attention to this line in particular:</p>
+
+			<pre><code>
+				document.getElementById('mydiv').onclick = changeColor;
+			</code></pre>
+
+			<p>Here's what that code is doing in plain language:</p>
+			<p>[ Get this element from the document ] [ and when you click it ] = [ change the color ];</p>
+
+			<p>You'll notice the function name is written with NO parentheses at the end.</p>
+
+			<p>Here's why:</p>
+
+			<p>Onclick just wants to know the desired function's name, and then it will wait until a click happens to run that function.  It does not want you to jump in and run that function right away.</p>
+
+
+			<p>But what happens if you want to use parameters?</p>
+
+			<p>For example, when the user clicks, what if you want to run addNumbers(2,3).  The parentheses would force the function to run immediately without waiting for a click, so you'd be stuck.</p>
+
+			<p>Fortunately, there's a solution.</p>
+
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Handling an onclick event with an anonymous function</h2>
+
+			<p>An anonymous function is a function without a name.  It's useful when you want to define a function without actually running it.</p>
+
+			<p>This is perfect for the onclick event because it lets you define which function should run without prematurely running the function.</p>
+
+			<p>An anonymous function looks like this (no need to type it):</p>
+
+			<pre><code>
+				function (){
+					//code goes here
+				}
+			</code></pre>
+
+			<p>It's exactly the same as a regular function definition except the name is deleted. (Spaces don't matter because there's no name here, so feel free to remove the space.)</p>
+
+
+
+			<p>Here's a more practical example of an anonymous function. (Type this in and try it in your browser.)</p>
+
+			<pre><code class="language-markup">
+				&lt;div id="mydiv"&gt;Click here&lt;/div&gt;
+
+				&lt;script&gt;
+				document.getElementById('mydiv').onclick = function(){
+					// put any code you want to run when the div is clicked
+					document.getElementById('mydiv').style.color = 'red';
+				};
+				&lt;/script&gt;
+			</code></pre>
+
+			<p>If you've done it correctly, clicking on the div should turn the text red.</p>
+
+			<p>The key part to remember is this (type it out):</p>
+
+			<pre><code>
+				document.getElementById('mydiv').onclick = function(){
+					// put any code you want to run when the div is clicked
+				};
+			</code></pre>
+
+			<p>When you want a flexible onclick event, use an anonymous function.  It lets you run any code you want.</p>
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+
+
+			<ol>
+
+				<li>
+					<p>Type the following example and try it in your browser:</p>
+
+					<pre><code class="language-markup">
+						&lt;div id="mydiv"&gt;Click here&lt;/div&gt;
+
+						&lt;script&gt;
+						function changeText(){
+							document.getElementById('mydiv').innerHTML = 'new text';
+						}
+
+						document.getElementById('mydiv').onclick = changeText;
+						&lt;/script&gt;
+					</code></pre>
+				</li>
+
+				
+
+				<li>
+					<p>Type the following line 5 times:</p>
+
+					<pre><code>
+						document.getElementById('mydiv').onclick = changeText;
+					</code></pre>
+				</li>
+
+
+
+
+				<li>
+					<p>Type this once:</p>
+
+					<pre><code>
+						document.getElementById('mydiv').onclick = function(){
+							// do whatever you want here
+						};
+					</code></pre>
+				</li>
+
+
+
+				<li>
+					<p>Type this until you don't need the example, then type it 10 more times without looking at a reference (note that the stuff inside the function has been omitted because there's no need to keep typing that now that you know how it works):</p>
+
+					<pre><code>
+						document.getElementById('mydiv').onclick = function(){};
+					</code></pre>
+				</li>
+
+
+
+
+
+				<li>
+					Create a button that turns a div's background blue when clicked.
+				</li>
+
+				<li>
+					Write a function that takes in two numbers as parameters and shows their sum in a span.  Create a button that will run the function when clicked.
+				</li>
+
+				<li>
+					Create a button that shows or hides a div depending on whether it is currently showing. (You'll have to use if statements and CSS styles in this one.)
+				</li>
+
+
+				<li>
+					Create a button and a div.  The div should have the number 0 displayed inside it.  Every time the user clicks the button, the number inside the div should increase by 1.  If the number is 5 or greater, the div should instead say "Game over."
+				</li>
+
+			</ol>
+
+		</div>
+
+
+
+		<div class="section">
+			<p>Nice work getting through this unit!</p>
+			<p>I know there was a lot of new stuff this time, so feel free to go back and play with the material if you'd like.</p>
+			<p>Handling clicks is one of the most useful things you can learn in JavaScript, so you'll want to get comfortable with this.</p>
+		</div>
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
