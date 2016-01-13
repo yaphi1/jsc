@@ -24,16 +24,12 @@
 	<div id="maincol">
 
 		
+		<h1>Let your users input text!</h1>
 
 
-		<h1>Make your pages do cool things when your users click</h1>
 
 
-		<p>Today you're going to add interactivity to your pages!</p>
-
-		<p>Before you start, make sure you're comfortable with functions.  Feel free to go back to the earlier sections if you need to practice.</p>
-
-		<p>Ready?</p>
+		<p>Today, you get to take people's input from a text box and use it.</p>
 
 
 
@@ -67,116 +63,71 @@
 
 
 
-
-
-
-
 		<div class="section">
-			<h2>The onclick event</h2>
+			<h2>The basics of text input</h2>
 
-			<p>The <b>onclick</b> event lets you define what happens when a user clicks something on your page.</p>
+			<p>To access the text inside an HTML text <b>input</b> box, all you need to do is get the element and put <b>.value</b> on the end.</p>
 
-			<p>Type the following code (don't copy and paste), and check it out in your browser.  If you've done it correctly, the div's text color should change when you click it.</p>
+			<p>That's it.</p>
 
-			<pre><code class="language-markup">
-				&lt;div id="mydiv"&gt;Click here&lt;/div&gt;
-
-				&lt;script&gt;
-				function changeColor(){
-					document.getElementById('mydiv').style.color = 'red';
-				}
-
-				document.getElementById('mydiv').onclick = changeColor;
-				&lt;/script&gt;
-			</code></pre>
-
-
-			<p>Pay attention to this line in particular:</p>
-
-			<pre><code>
-				document.getElementById('mydiv').onclick = changeColor;
-			</code></pre>
-
-			<p>Here's what that code is doing in plain language:</p>
-			<p><b>[ Get this element from the document ]</b> <b>[ and when you click it ]</b> = <b>[ change the color ]</b>;</p>
-
-			<p>You'll notice the function name is written with NO parentheses at the end.  That's because <b>onclick</b> needs to to know the name of the function to run.  You're just telling it the name, not running it immediately. That's why you don't use parentheses there.</p>
-
-			<h3>But what happens if you want to use parameters?</h3>
-
-			<p>For example, when the user clicks, what if you want to run addNumbers(2,3).  The parentheses would force the function to run immediately without waiting for a click, so you'd be stuck.</p>
-
-			<p>Fortunately, there's a solution.</p>
-
-		</div>
-
-
-
-
-
-		<div class="section">
-			<h2>Handling an onclick event with an anonymous function</h2>
-
-			<p>An <b>anonymous function</b> is a function without a name.</p>
-
-			<p>It's useful when you want to define a function without actually running it.</p>
-
-			<p>This is perfect for the onclick event because it lets you define which function should run without prematurely running the function.</p>
-
-			<p>An anonymous function looks like this (no need to type it):</p>
-
-			<pre><code>
-				function (){
-					//code goes here
-				}
-			</code></pre>
-
-			<p>It's exactly the same as a regular function definition except the name is deleted. (Spaces don't matter because there's no name here, so feel free to remove the space.)</p>
-
-
-
-			<p>Here's a more practical example of an anonymous function. (Type this in and try it in your browser.)</p>
+			<p>Type the following code to see how it works:</p>
 
 			<pre><code class="language-markup">
-				&lt;div id="mydiv"&gt;Click here&lt;/div&gt;
-
-				&lt;script&gt;
-				document.getElementById('mydiv').onclick = function(){
-					// put any code you want to run when the div is clicked
-					document.getElementById('mydiv').style.color = 'red';
-				};
-				&lt;/script&gt;
-			</code></pre>
-
-			<p>If you've done it correctly, clicking on the div should turn the text red.</p>
-
-			<p>The key part to remember is this (type it out):</p>
-
-			<pre><code>
-				document.getElementById('mydiv').onclick = function(){
-					// put any code you want to run when the div is clicked
-				};
-			</code></pre>
-
-			<p>When you want a flexible onclick event, use an anonymous function.  It lets you run any code you want.</p>
-
-			<p>Here's another example for you to type.  Before you type it, read it and determine what it will do.</p>
-
-			<pre><code class="language-markup">
-				&lt;button id="mybutton"&gt;Show sum&lt;/button&gt;
+				&lt;input id="mytext" type="text"&gt;
+				&lt;button id="mybutton"&gt;Click me&lt;/button&gt;
 				&lt;div id="output"&gt;&lt;/div&gt;
 
 				&lt;script&gt;
-				function showSum(a,b){
-					var sum = a+b;
-					document.getElementById('output').innerHTML = 'Sum: '+sum;
-				}
 				document.getElementById('mybutton').onclick = function(){
-					showSum(3,5);
+					var text = document.getElementById('mytext').value;
+					document.getElementById('output').innerHTML = text;
 				};
 				&lt;/script&gt;
 			</code></pre>
+
+			<p>If you've done it correctly, you should get a page with a textbox and a button.</p>
+
+			<p>If you type in the textbox and click the button, you should see your text displayed on the page.  Try typing different things and clicking the button.</p>
+
+			<p>Most of that code is stuff you've seen before except for this line:</p>
+
+			<pre><code>
+				var text = document.getElementById('mytext').value;
+			</code></pre>
+
+			<p>All it's doing is getting whatever text value is inside the text box and storing it in a variable.</p>
+
 		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>A practical example of text input</h2>
+
+			<p>Type this code that converts miles to kilometers:</p>
+
+			<pre><code class="language-markup">
+				&lt;input id="miles" type="text"&gt; miles
+				&lt;br&gt;&lt;button id="convert"&gt;Convert to km&lt;/button&gt;
+				&lt;div id="output"&gt;&lt;/div&gt;
+
+				&lt;script&gt;
+				document.getElementById('convert').onclick = function(){
+					var mi = document.getElementById('miles').value;
+					var km = mi * 1.609344;
+					document.getElementById('output').innerHTML = km + ' km';
+				};
+				&lt;/script&gt;
+			</code></pre>
+
+		</div>
+
+		<p>Now that you have access to text input, you can make your pages much more interactive.</p>
+
+		<p>Now it's time to practice.</p>
 
 
 
@@ -185,91 +136,39 @@
 		<div class="section">
 			<h2>Exercises:</h2>
 
-
 			<ol>
-
 				<li>
-					<p>Type the following example and try it in your browser:</p>
-
-					<pre><code class="language-markup">
-						&lt;div id="mydiv"&gt;Click here&lt;/div&gt;
-
-						&lt;script&gt;
-						function changeText(){
-							document.getElementById('mydiv').innerHTML = 'new text';
-						}
-
-						document.getElementById('mydiv').onclick = changeText;
-						&lt;/script&gt;
-					</code></pre>
-				</li>
-
-				
-
-				<li>
-					<p>Type the following line 5 times:</p>
-
+					<p>Get comfortable with getting the value from a text box.  Type the following (until you think you can do it without looking), and then type it again 5 more times without looking at an example.</p>
 					<pre><code>
-						document.getElementById('mydiv').onclick = changeText;
+						var text = document.getElementById('textbox').value;
 					</code></pre>
 				</li>
 
-
-
-
 				<li>
-					<p>Type this once:</p>
-
-					<pre><code>
-						document.getElementById('mydiv').onclick = function(){
-							// do whatever you want here
-						};
-					</code></pre>
-				</li>
-
-
-
-				<li>
-					<p>Type this until you don't need the example, then type it 10 more times without looking at a reference (note that the stuff inside the function has been omitted because there's no need to keep typing that now that you know how it works):</p>
-
-					<pre><code>
-						document.getElementById('mydiv').onclick = function(){};
-					</code></pre>
-				</li>
-
-
-
-
-				<li>
-					Create a button that, when clicked, turns a div's background blue.
-				</li>
-
-				<li>
-					<p>Write a function that takes in two numbers as parameters and shows their sum in a span.</p>
-					<p>Create a button that will run the function when clicked.</p>
-				</li>
-
-				<li>
-					Create a button that shows or hides a div depending on whether it is currently showing. (You'll have to use if statements and CSS styles in this one.)
+					Create a text box where the user can type their name, click a button, and see a greeting in a div with the format:
+					<br>"Hello [name goes here]."
 				</li>
 
 
 				<li>
-					<p>Create a button and a div.  The div should have the number 0 displayed inside it.</p>
-					<p>Every time the user clicks the button, the number inside the div should increase by 1.</p>
-					<p>If the number is 5 or greater, the div should instead say "Game over."</p>
+					<p>Imagine you're creating a wholesale digital shopping cart where people can buy t-shirts in bulk.</p>
+					<ul>
+						<li>Create a text input box where the user can enter the number of $2 t-shirts they want to buy.</li>
+						<li>When the user clicks a button, the total price should appear in an HTML div or span.</li>
+					</ul>
 				</li>
-
 			</ol>
 
 		</div>
 
 
 
+
+
+
 		<div class="section">
-			<p>Nice work getting through this unit!</p>
-			<p>I know there was a lot of new stuff this time, so feel free to go back and play with the material if you'd like.</p>
-			<p>Handling clicks is one of the most useful things you can learn in JavaScript, so you'll want to get comfortable with this.</p>
+			<p>Done?</p>
+			<p>Nice.  Now that you can use text input, you've opened up a whole world of possibilities for your pages.</p>
 		</div>
 
 	</div>
