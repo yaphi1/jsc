@@ -111,7 +111,7 @@
 		<div class="section">
 			<h2>For loop: Repeat a block of code a certain number of times</h2>
 
-			<p>A <b>for</b> loop works like a while loop except that it's shorter and more convenient.</p>
+			<p>A <b>for</b> loop lets you run some code a certain number of times.</p>
 
 			<h3>How a for loop is structured</h3>
 
@@ -145,7 +145,7 @@
 			<p><b>B:</b> Keep repeating the loop as long as x is less than 20.</p>
 			<p><b>C:</b> Each time the loop runs, increase x by 2.</p>
 
-			<p>Try changing the conditions of the for loop to get a better understanding for how they work.</p>
+			<p>Try changing the conditions of the for loop to get a better understanding of how it works.</p>
 
 
 
@@ -220,21 +220,43 @@
 
 			<p>That variable will store the HTML content you want to put in the output div.</p>
 
-			<p>Then the for loop happens like this:</p>
+			<p>Then the <b>for</b> loop happens like this:</p>
 			
-			i=0
-			Into the content, add a div that says "This is post 0"
-			Increase i by 1
+			<ul>
+				<li>
+					<strong>Before the loop starts:</strong>
+					<br>Create a variable called <b>i</b> and set it equal to 0
+				</li>
 
-			i=1
-			Into the content, add a div that says "This is post 1"
-			Increase i by 1
+				<li>
+					<strong>When the loop starts:</strong>
+					<br>Keep repeating it while i is less than 10
+				</li>
 
-			i=2
-			Into the content, add a div that says "This is post 2"
-			Increase i by 1
+					<ul>
+					<li>
+						<strong>When <b>i=0</b>:</strong>
+						<br>In the content, add a div that says "This is post 0"
+						<br>Increase i by 1
+					</li>
 
-			... and on and on (the last one is i=9)
+					<li>
+						<strong>When <b>i=1</b>:</strong>
+						<br>In the content, add a div that says "This is post 1"
+						<br>Increase i by 1
+					</li>
+
+					<li>
+						<strong>When <b>i=2</b>:</strong>
+						<br>In the content, add a div that says "This is post 2"
+						<br>Increase i by 1
+					</li>
+
+					<li>
+						... and on and on (the last one is <b>i=9</b>)
+					</li>
+				</ul>
+			</ul>
 
 			<p>Then we take our newly built content and put it inside our output div.</p>
 
@@ -245,32 +267,42 @@
 
 
 
-
 		<div class="section">
 			<h2>Exercises:</h2>
 
-			1. Type the following while loop and test it in your browser.  Then see if you can type it again 3 times without looking at an example.
+			<ol>
+				<li>
+					<p>Type the following <b>while</b> loop and test it in your browser.  Then see if you can type it again 3 times without looking at an example.</p>
 
-			<pre><code>
-				var x=0;
-				while(x&lt;10){
-					x++;
-					console.log(x);
-				}
-			</code></pre>
-
-
-			2. Type the following for loop and test it in your browser.  Retype the for loop until you can do it without looking at an example (omit the console.log when retyping because that will just take up extra time).  Once you're comfortable, type the for loop 10 times without looking at an example (omit the console.log to save time).
-
-			<pre><code>
-				for(var i=0; i&lt;10; i++){
-					console.log(i);
-				}
-			</code></pre>
+					<pre><code>
+						var x=0;
+						while(x&lt;10){
+							x++;
+							console.log(x);
+						}
+					</code></pre>
+				</li>
 
 
-			3. Using a for loop, show all numbers from 1 to 100 inside a div.
+				<li>
+					<p>Type the following <b>for</b> loop and test it in your browser.</p>
 
+					<pre><code>
+						for(var i=0; i&lt;10; i++){
+							console.log(i);
+						}
+					</code></pre>
+
+					<p>Retype the for loop until you can do it without looking at an example (omit the console.log when retyping because that will just take up extra time).</p>
+					<p>Once you're comfortable, type the for loop 10 times without looking at an example (again, omit the console.log to save time).</p>
+				</li>
+
+
+				<li>
+					<p>Using a <b>for</b> loop, show all numbers from 1 to 100 inside a div.</p>
+				</li>
+
+			</ol>
 		</div>
 
 
@@ -279,7 +311,9 @@
 
 
 		<div class="section">
-			<p>Something about for loops</p>
+			<p>Nice job getting this far.</p>
+			<p>A lot of people have trouble with for loops, so feel free to take a little more time on this unit if you want.</p>
+			<p>For loops are important, so you'll save a lot of time by getting comfortable with them now.</p>
 		</div>
 
 	</div>
