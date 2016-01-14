@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>13 - loops</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+		
+
+		<h1>Loops: accomplish a lot with little code</h1>
+
+
+
+		<p>A <b>loop</b> lets you run some code repeatedly without having to write it more than once.</p>
+
+		<p>We'll cover two kinds of loops here:</p>
+		<ul>
+		<li><b>while</b> loops</li>
+		<li><b>for</b> loops</li>
+		</ul>
+
+
+
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+
+
+		<div class="section">
+			<h2>While loop: Repeat a block of code while a certain condition is true</h2>
+
+			<p>A <b>while</b> loop lets you run some code over and over again <strong>while a certain condition is true</strong>.</p>
+
+			<p>For example, the following script keeps increasing a number by 1 and writing that number in the console while it is less than 10.</p>
+
+			<p>Type the following script and run it in your browser to see how it works.</p>
+
+			<pre><code>
+				var x=0;
+				while(x&lt;10){
+					x++;
+					console.log(x);
+				}
+			</code></pre>
+		</div>
+
+
+		<div class="section special_section warning">
+			<h2>BEWARE INFINITE LOOPS</h2>
+
+			<p>An <b>infinite loop</b> happens when a loop never ends.</p>
+
+			<p>For example, if you make a loop that counts up from zero and keeps going as long as x is greater than negative five, then it will go on forever.</p>
+
+			<p>An infinite loop will crash your browser.  Avoid that.</p>
+
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>For loop: Repeat a block of code a certain number of times</h2>
+
+			<p>A <b>for</b> loop works like a while loop except that it's shorter and more convenient.</p>
+
+			<h3>How a for loop is structured</h3>
+
+			<p>Here's how a for loop is structured (do NOT type this):</p>
+
+			<pre><code>
+				for(A; B; C){
+					// code block you want to repeat
+				}
+			</code></pre>
+
+			<p><b>A:</b> Run this statement before the loop starts.</p>
+			<p><b>B:</b> Keep repeating the code block while this is true.</p>
+			<p><b>C:</b> Run this statement after every time the code block runs.</p>
+
+
+			<br>
+			<h3>A real example of a for loop</h3>
+
+			<p>Type this out:</p>
+
+			<pre><code>
+				for(var x=3; x&lt;20; x=x+2){
+					console.log(x);
+				}
+			</code></pre>
+
+			<p>In this example, the loop says:</p>
+
+			<p><b>A:</b> First create a variable called x and set it to 3. Because we've created it here, x is available only inside this loop.</p>
+			<p><b>B:</b> Keep repeating the loop as long as x is less than 20.</p>
+			<p><b>C:</b> Each time the loop runs, increase x by 2.</p>
+
+			<p>Try changing the conditions of the for loop to get a better understanding for how they work.</p>
+
+
+
+			<br>
+			<h3>A common example of a for loop</h3>
+
+			<p>Type this example and try it in your browser.  It should show numbers from 0 to 9.</p>
+
+			<pre><code>
+				for(var i=0; i&lt;10; i++){
+					console.log(i);
+				}
+			</code></pre>
+
+			
+
+
+
+			<br><br>
+			<div class="special_section warning">
+				<h3>Common errors to avoid when using for loops:</h3>
+
+				<ul>
+					<li>Infinite loops</li>
+					<li>Forgetting that the for loop conditions need to be separated by semicolons</li>
+					<li>Forgetting that x&lt;10 doesn't include 10</li>
+				</ul>
+			</div>
+
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>Practical example of a for loop:<br>Display social media posts</h2>
+
+			<p>Pretend you're coding the front-end of a social media site.  You need to display a list of posts.</p>
+
+			<p>For now, you don't need to worry about the content.</p>
+
+			<p>Here's how that might look (type this example out and try it in your browser):</p>
+
+			<pre><code class="language-markup">
+				&lt;style&gt;
+				.post{
+					padding: 20px;
+					margin: 20px;
+					max-width: 800px;
+					background: #eee;
+				}
+				&lt;/style&gt;
+
+				&lt;div id="output"&gt;&lt;/div&gt;
+
+				&lt;script&gt;
+				var content = '';
+
+				for(var i=0; i&lt;10; i++){
+					content += '&lt;div class="post"&gt;This is post '+i+'&lt;/div&gt;';
+				}
+
+				document.getElementById('output').innerHTML = content;
+				&lt;/script&gt;
+			</code></pre>
+
+			<h3>Explanation:</h3>
+
+			<p>First this code sets a variable called content.</p>
+
+			<p>That variable will store the HTML content you want to put in the output div.</p>
+
+			<p>Then the for loop happens like this:</p>
+			
+			i=0
+			Into the content, add a div that says "This is post 0"
+			Increase i by 1
+
+			i=1
+			Into the content, add a div that says "This is post 1"
+			Increase i by 1
+
+			i=2
+			Into the content, add a div that says "This is post 2"
+			Increase i by 1
+
+			... and on and on (the last one is i=9)
+
+			<p>Then we take our newly built content and put it inside our output div.</p>
+
+			<p>You can generate any number of posts this way without having to write repetitive code!</p>
+
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+
+			1. Type the following while loop and test it in your browser.  Then see if you can type it again 3 times without looking at an example.
+
+			<pre><code>
+				var x=0;
+				while(x&lt;10){
+					x++;
+					console.log(x);
+				}
+			</code></pre>
+
+
+			2. Type the following for loop and test it in your browser.  Retype the for loop until you can do it without looking at an example (omit the console.log when retyping because that will just take up extra time).  Once you're comfortable, type the for loop 10 times without looking at an example (omit the console.log to save time).
+
+			<pre><code>
+				for(var i=0; i&lt;10; i++){
+					console.log(i);
+				}
+			</code></pre>
+
+
+			3. Using a for loop, show all numbers from 1 to 100 inside a div.
+
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<p>Something about for loops</p>
+		</div>
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
