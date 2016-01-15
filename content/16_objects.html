@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>16 - objects</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+		<h1>Objects: Handle data neatly and conveniently</h1>
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+		<div class="section">
+			<h2>What is a JavaScript object?</h2>
+
+			<p>In real life, an object is something like a shirt, for example.  That object can have properties.  For example the shirt could be red in color and medium in size.</p>
+
+			<p>Similarly, a JavaScript object is a thing that can have properties.</p>
+
+			<p>More formally, a JavaScript object is a list of name : value pairs separated by commas and enclosed in curly braces.</p>
+
+			<p>Type the following example to see how it works:</p>
+
+			var shirt = {size: 'medium', color: 'red', sleeveLength: 6};
+
+			console.log( shirt.size );
+			console.log( shirt['size'] );
+
+
+			<p>The code example above first creates an object called shirt.  Then then it shows the size property in the console.</p>
+
+			<p>If you notice, there are two ways to get the property of an object:</p>
+			1. object.property
+			2. object['property']
+
+			<p>Most of the time, you'll want to use the first way of getting a property, but you'll want to use the second way if you need to use a variable as the property name.</p>
+
+			<p>Type this example to see how it works:</p>
+
+			var propertyWeWant = 'color';
+			var shirt = {color: 'red', size: 'medium'};
+
+			console.log( shirt[propertyWeWant] );
+
+		</div>
+
+
+
+
+
+
+
+		<div class="section">
+			<h2>Benefits of objects</h2>
+
+
+			1. Objects are a clear and organized way to store information.
+
+			2. Objects allow you to take up fewer variable names.
+
+			<p>With an object: Only one variable gets used.</p>
+
+			var settings = {size: 'big', color: 'orange', version:2, etc: 'whatever'};
+
+			<p>Without an object: Four variables get used.</p>
+
+			var size = 'big';
+			var color = 'orange';
+			var version = 2;
+			var etc = 'whatever';
+
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>Methods: You can have functions in your objects</h2>
+
+			<p>A function inside an object is called a method.</p>
+
+			<p>Type out the following example to see a method in action:</p>
+
+			var bird = {
+				color: 'blue',
+				face: 'so majestic',
+				fly: function(){
+					console.log("I'm flying!");
+				}
+			};
+
+			bird.fly();
+
+
+			<p>Try this example to get some more practice with methods:</p>
+
+			var person = {
+				name: 'Luigi',
+				greet: function(otherperson){
+					console.log('Hello ' + otherperson);
+				},
+				favoriteColor: 'green'
+			};
+
+			person.greet('Bowser');
+
+
+
+			Warning:
+
+			<p>Don't forget the commas in an object.</p>
+
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>The Document Object Model (DOM) and a pleasant surprise</h2>
+
+			<p>Surprise! You've actually been using objects all along!</p>
+
+			<p>Every time you typed document.getElementById('whatever'), it turns out that the document is an object, and getElementById is a method.</p>
+
+			<p>When people refer to an HTML document as the DOM or the Document Object Model, that's because your browser treats the document as an object.</p>
+
+			<p>That's right! The document is an object!</p>
+
+			<p>In the next chapter, we'll see more of how to use of the document object.</p>
+
+		</div>
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+
+			1. Creating an object:
+			Type the following 3 times.  Then type it again until you don't need to look at an example.
+			var hat = {size: 3, color: 'green'};
+
+
+			2. Getting an object property in two different ways:
+			Type the following 3 times.  Then type it again until you don't need to look at an example.
+
+			hat.size
+			hat['size']
+
+
+			3. Create an object called car with three properties: color, size, and engine.  Show the car's color in a div.
+
+
+			4. Create an object called car with two properties and a method.  The properties can be color and size, but the method should be called drive.  The method should show the message, "I'm driving!" inside a span.
+
+			Repeat this one more time without peeking at an example.  If you need to peek, that's okay, but when you're done, restart the example until you can do it without peeking.
+
+
+			5. Create an object called person with a property called favoriteColor and a method called greet.  The greet method should take in a parameter called name, and it should show a greeting inside a div.  The greeting should be something like, "Hello [name]!"
+
+			Once you're comfortable with this code, try it again until you can do it without peeking at an example.
+
+		</div>
+
+
+
+
+		<div class="section">
+			<p>Something about objects</p>
+		</div>
+		
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
