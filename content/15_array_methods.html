@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>15 - array methods</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+
+
+		<h1>Array methods: Do useful things with lists of data</h1>
+
+
+
+		<p>In this unit, you're going to do useful stuff with your arrays.</p>
+
+		<p>By the end, you'll be able to add stuff, remove stuff, and do other things.</p>
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+
+		<div class="section">
+			<h2>Push and pop: Add and remove items at the end of an array</h2>
+
+			<p>The <b>push</b> method adds an item to the end of an array.</p>
+			<p>The <b>pop</b> method removes an item from the end of an array.</p>
+			<p>Type the following example to see how push and pop work:</p>
+
+			<pre><code>
+				var names = ['Optimus','Buzz','Elmo'];
+				console.log('names before the push: '+names);
+
+				names.push('Kermit');
+				console.log('names after the push: '+names);
+
+				names.pop();
+				console.log('names after the pop: '+names);
+			</code></pre>
+
+			<p>How to remember the difference between <b>push</b> and <b>pop</b>:</p>
+			<p><strong>The longer word makes the array longer.</strong></p>
+			
+
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>Unshift and shift: Add and remove items at the beginning of an array</h2>
+
+			<p>The <b>unshift</b> method adds an item to the beginning of an array.</p>
+			<p>The <b>shift</b> method removes an item from the beginning of an array.</p>
+			<p>Type the following example to see how unshift and shift work:</p>
+
+			<pre><code>
+				var names = ['Optimus','Buzz','Elmo'];
+				console.log('names before the push: '+names);
+
+				names.unshift('Kermit');
+				console.log('names after the unshift: '+names);
+
+				names.shift();
+				console.log('names after the shift: '+names);
+			</code></pre>
+
+			<p>How to remember the difference between <b>shift</b> and <b>unshift</b>:</p>
+			<p><strong>Once again, the longer word makes the array longer.</strong></p>
+
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Other array methods:</h2>
+
+			<p>You have more than enough to remember for now, so all you need to know is that other methods exist for working with arrays.</p>
+
+			<p><strong>No need to memorize these immediately.</strong></p>
+
+			<p>Here are some examples of other array methods:</p>
+
+			<ul>
+				<li><b>splice</b> - Add or remove items from anywhere in an array</li>
+				<li><b>join</b> or <b>split</b> - Join the elements of an array into a string or split up a string into an array</li>
+				<li><b>slice</b> - Grab a section of an array</li>
+			</ul>
+
+			<p>Here's a good reference in case you want to do something with an array but you're not sure how:</p>
+			<p><a href="http://www.w3schools.com/jsref/jsref_obj_array.asp" target="_blank">
+					JavaScript Array Reference
+			</a></p>
+
+			<p>Feel free to try out some of the examples if you're curious.</p>
+
+		</div>
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+
+			<ol>
+				<li>
+					<p>Create an array with whatever you want to put in it.</p>
+					<p>Using <b>push</b> and <b>pop</b>, add and remove things from the end of that array, and show the resulting array on screen.</p>
+					<p>Try push and pop each 3 times.</p>
+				</li>
+
+				<li>
+					<p>Create an array with whatever you want to put in it.</p>
+					<p>Using <b>unshift</b> and <b>shift</b>, add and remove things from the beginning of that array, and show the resulting array on screen.</p>
+					<p>Try unshift and shift each 3 times.</p>
+				</li>
+
+				<li>
+					<p>Using any references you'd like, figure out how to <b>reverse</b> the order of the things in an array.</p>
+					<p>Create an array, reverse it, and show it in a div or span.</p>
+				</li>
+			</ol>
+
+		</div>
+
+
+
+
+
+		<div class="section">
+			<p>The hardest part about array methods is remembering them.</p>
+
+			<p>My recommendation is not to learn too many at once.  Focus on a few at a time and get comfortable with them the way you did in this lesson.</p>
+		</div>
+		
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
