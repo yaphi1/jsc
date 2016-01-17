@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>19 - string methods</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+
+
+		<h1>String methods: Get better control of your text</h1>
+
+
+		<p>JavaScript allows you to do many things with your text, but here are the two we're going to look at in this section:</p>
+
+		<ul>
+			<li>String <b>slice</b>: Get a portion of text from a string</li>
+			<li>String <b>replace</b>: Replace some text</li>
+		</ul>
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+		<div class="section">
+			<h2>String slice:<br>Get a portion of text from a string</h2>
+
+			<p>The string <b>slice</b> method lets you grab a slice of text from a string.</p>
+
+			<p>Try the following example to see how it works:</p>
+
+			<pre><code>
+				var str = "Here is some text.";
+				var result = str.slice(1,7);
+
+				console.log(result);
+			</code></pre>
+
+			<p>The result should say "ere is".</p>
+
+			<p>(Remember, 0 is the first character position, so 1 is the second.)</p>
+
+			<br>
+			<h3>Choosing the start and end position of a string slice</h3>
+			<p>The general format of slice is:</p>
+			<pre><code>
+				slice(startPosition, endPosition)
+			</code></pre>
+
+			<p>But the end is optional.</p>
+
+			<p>If you want, you can just use <code>slice(start)</code> and it will give you everything from the starting position until the end of the whole string.  Try the example:</p>
+
+			<pre><code>
+				var str = "Here is some text.";
+				var result = str.slice(1);
+
+				// result should say "ere is some text."
+				console.log(result);
+			</code></pre>
+
+
+			<br>
+			<h3>Want to get the last few characters of a string?</h3>
+
+			<p>Use a negative number.</p>
+
+			<p><code>slice(-3)</code> would get the last 3 characters.</p>
+
+			<p>Try the following example to see how it works:</p>
+
+			<pre><code>
+				var str = "Here is some text.";
+
+				// last 5 characters
+				var result = str.slice(-5);
+
+				console.log(result);
+			</code></pre>
+
+			<p>In that example, we used a negative number as the start position.  In other words, we told our script to start at the fifth-to-last character.</p>
+			
+			<p><strong>You can use a negative number as the end position too.</strong></p>
+
+			<p>Let's say we want to get all but the first two and last two characters of a string.  Try this example to see how that would work.</p>
+
+			<pre><code>
+				var str = "xxHere is some text.xx";
+				var result = str.slice(2,-2);
+
+				console.log(result);
+			</code></pre>
+
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>String replace: Replace parts of your text.</h2>
+
+			<p>Try the following example.  If you've done it correctly, it will find the first instance of "some" and replace it with "more".</p>
+
+			<pre><code>
+				var str = "Here is some text.";
+				var result = str.replace('some', 'more');
+
+				console.log(result);
+			</code></pre>
+
+			<p>The result should say "Here is more text."</p>
+
+
+			<p>What if you want a more advanced version of replace?  What if you want to replace multiple things at once?  What if you want to replace things that follow a general pattern?</p>
+
+			<p>The answers will require something called a "regular expression", which we'll get to in the next unit.</p>
+
+		</div>
+
+
+
+
+		<div class="section">
+			<h2>String methods reference</h2>
+
+			<p>There are other methods for working with strings besides slice and replace.</p>
+			<p>You don't need to memorize them, so I've included a reference here in case you're curious.</p>
+			<p>One example method would be <b>toUpperCase</b>, which changes all letters in a string to upper case.</p>
+
+			<p>Here's the reference:</p>
+
+			<p>
+				<a href="http://www.w3schools.com/jsref/jsref_obj_string.asp" target="_blank">String Methods Reference</a>
+			</p>
+
+		</div>
+
+
+
+		<div class="section">
+			<h2>Quick recap of slice and replace</h2>
+			
+			<p><b>slice</b> grabs a slice of text like so:</p>
+			<pre><code>myString.slice(start, end)</code></pre>
+			
+			<p><b>replace</b> replaces text like so:</p>
+			<pre><code>myString.replace('old text', 'new text')</code></pre>
+		</div>
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+
+			<ol>
+				<li>
+					<p>Use <b>slice</b> to get the first four characters of a string.</p>
+					<p>Then change your code to get the last two characters.</p>
+					<p>Then change it again to get three characters from somewhere in the middle.</p>
+					<p>Show all results in a div.</p>
+				</li>
+
+				<li>
+					<p>Use the <b>replace</b> method to replace a word in a string.</p>
+					<p>Show the old string and the new string in a div.</p>
+				</li>
+
+				<li>
+					<p>Create a div with some text in it.</p>
+					<p>Create a button.</p>
+					<p>When the user clicks the button, one of the words in the div should be replaced with a different word.</p>
+				</li>
+			</ol>
+		</div>
+
+
+
+
+		<div class="section">
+			<p>Good job with this section.</p>
+
+			<p>If you don't remember all of it immediately, that's okay.  String methods are easy to look up now that you understand how they work.</p>
+		</div>
+		
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
