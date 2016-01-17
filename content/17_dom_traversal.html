@@ -305,6 +305,33 @@
 
 
 
+		<div class="section">
+			<h2>Other types of DOM traversal</h2>
+
+			<p>There are other ways to get elements from the document besides what's been covered here.</p>
+
+			<p>For example, <b>parentElement</b> tells you which element contains the current element you're looking at.</p>
+
+			<p>Feel free to try this example out, but there's no need to remember it.</p>
+
+			<pre><code class="language-markup">
+				&lt;div&gt;
+					Parent Element
+					&lt;span class="test"&gt;Child Element&lt;/span&gt;
+				&lt;/div&gt;
+				&lt;script&gt;
+				var p = document.querySelector('.test').parentElement;
+				console.log(p);
+				&lt;/script&gt;
+			</code></pre>
+
+			<p>I'll repeat: you do NOT have to remember this.  Just know that there are other ways to traverse the DOM, but they are easy to find on the internet as needed.</p>
+
+			<p>I'd rather have you remember <b>getElementById</b>, <b>querySelector</b>, and <b>querySelectorAll</b> because those will do the most for you.</p>
+		</div>
+
+
+
 
 		<div class="section">
 			<h2>Exercises:</h2>
