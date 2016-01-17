@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>20 - regex</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+
+
+
+		<h1>Regular Expressions:<br>Match patterns in text, validate user input, and perform a more powerful find/replace</h1>
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+		<div class="section">
+			<h2>What is a regular expression?</h2>
+
+
+			<p>A <b>regular expression</b> lets you find patterns in text.</p>
+
+			<p>This is useful for searching through text, validating user input, and replacing text.</p>
+
+			<div class="special_section terminology">
+				<h3>Nicknames for regular expressions</h3>
+				<p>Regular expressions are also caled <b>regex</b>, <b>regexp</b>, and <b>regexes</b>, so don't get confused if you hear someone using those words.</p>
+			</div>
+
+			<p>I love regular expressions because they can make your code so much cleaner.</p>
+
+			<p>Here's what a regular expression looks like (don't type anything yet):</p>
+			
+			<pre><code>
+				/hello/gi
+			</code></pre>
+
+			<p>This pattern will match all instances of "hello" regardless of uppercase or lowercase.  Read on to see the detailed explanation...</p>
+
+
+			<p><strong>General format of a regular expression:</strong></p>
+
+			<pre><code>
+				/pattern/modifiers
+			</code></pre>
+
+			<p>The <b>pattern</b> is the text you want to match.  The <b>modifiers</b> are things you can add on to modify how the matches happen.</p>
+
+			<p>These examples will explain modifiers better:</p>
+
+			<ul>
+				<li><b>/hello/g</b> - The <b>g</b> modifier means <b>global</b>, so it will match all instances of "hello" in a string (and not just the first one)</li>
+				<li><b>/hello/</b> - There is no modifier, so it will just match the first instance of "hello"</li>
+				<li><b>/hello/i</b> - The <b>i</b> modifier means <b>case-insensitive</b>, so it will match any "hello" regardless of case (Hello, HeLLo, hellO, etc)</li>
+				<li><b>/hello/ig</b> - There are two modifiers, so both of them will be applied: case-insensitive and global</li>
+			</ul>
+
+			<p>Note:<br>The order of modifiers does NOT matter. That means <b>/hello/ig</b> is the same as <b>/hello/gi</b></p>
+
+
+			<p>Let's jump in and use some regular expressions.</p>
+
+		</div>
+
+
+
+		<div class="section">
+			<h2><b>match</b> - Find all parts of a string that match a pattern</h2>
+
+			<p>Let's say you want to find all instances of the word "hi" (upper or lowercase) in a string. Here's how:</p>
+
+			<ul>
+				<li>Create a <b>regular expression</b> that says what the pattern is.</li>
+				<li>Use <b>match</b> to find all matches of your pattern.</li>
+			</ul>
+
+
+			<p>Type the following code and run it in your browser to see how it works:</p>
+
+			<pre><code>
+				var str = "Hi, here's some text. Hi again. Also, hi.";
+				var pattern = /hi/ig;
+
+				var result = str.match(pattern);
+
+				console.log(result);
+			</code></pre>
+
+			<p>Notice that <b>match</b> gives you an <b>array</b> containing all the matches.</p>
+
+
+
+			<h3>Making match a bit shorter</h3>
+			
+			<p>If you want, you can shorten your code by putting the regular expression directly inside <b>match</b>.</p>
+
+			<p>Copy and paste the other parts, but type out the line with <b>match</b> just to get practice.</p>
+
+			<pre><code>
+				var str = "Hi, here's some text. Hi again. Also, hi.";
+				var result = str.match(/hi/ig);
+
+				console.log(result);
+			</code></pre>
+
+		</div>
+
+
+
+
+
+
+
+
+
+		<div class="section">
+			<h2><b>replace</b> - Find and replace all parts of a string that match a given pattern</h2>
+
+
+			<p>You've seen <b>replace</b> before.</p>
+
+			<p>Now you can make it more powerful by using <b>regular expressions</b>.</p>
+
+
+			<p>Type this example to see how it works:</p>
+
+			<pre><code>
+				var str = "Hi, here's some text. Hi again. Also, hi.";
+				var result = str.replace(/hi/gi, 'BYE');
+
+				console.log(result);
+			</code></pre>
+
+			<p>If you've done this correctly, the result should replace all instances of "hi" with "BYE".</p>
+
+
+
+
+
+
+			<br>
+			<br>
+			<h3>Make <b>replace</b> even more powerful with functions</h3>
+
+			<p>Let's say you want a more complex replacement.</p>
+
+			<p>For example, maybe you want to replace each instance of "hi" with something different depending on whether it is uppercase or lowercase.</p>
+
+			<p>Good news!</p>
+
+			<p>Replace lets you run a function on each value that matches the pattern.  Type this in to see how it works:</p>
+
+			<pre><code>
+				var str = "Hi, here's some text. Hi again. Also, hi.";
+
+				var result = str.replace(/hi/gi, function(currentValue){
+				    if(currentValue==='Hi'){ return 'Bye'; }
+				    else{ return 'bye'; }
+				});
+
+				console.log(result);
+			</code></pre>
+
+			<p>Here's what should happen:</p>
+			<ul>
+				<li>The <b>replace</b> will look for each instance of <code>"hi"</code>.</li>
+				<li>If it says <code>"Hi"</code> (first letter uppercase), replace it with <code>"Bye"</code> (first letter uppercase).</li>
+				<li>Otherwise, keep the letters lowercase.</li>
+			</ul>
+
+
+		</div>
+
+
+
+
+
+
+
+
+
+		<div class="section">
+			<h2>Other regular expression patterns you can use</h2>
+
+			<p>There are many more regular expression patterns you can use.  For example, the following code finds all words that have 5 or more letters.</p>
+
+			<p>There's no need to type this one.</p>
+
+			<pre><code>
+				var str = "Hi, here's some text. Hi again. Also, hi.";
+				var result = str.match(/\w{5,}/ig);
+
+				console.log(result);
+			</code></pre>
+
+
+
+			<p>There are plenty of regular expression patterns, and I don't expect you to memorize them.</p>
+
+
+			
+			<br>
+			<p><strong>For reference:</strong></p>
+			<p>As long as you understand how regular expressions work, here's a reference where you can look up different patterns:</p>
+
+			<p>
+				<a href="http://www.w3schools.com/jsref/jsref_obj_regexp.asp" target="_blank">
+					Regular Expression Reference
+				</a>
+			</p>
+
+
+
+			<br>
+			<p><strong>For testing:</strong></p>
+			<p>And if you want to test a regular expression, you can do it here:</p>
+
+			<p>
+				<a href="https://regex101.com/#javascript" target="_blank">
+					Regular Expression Testing Tool
+				</a>
+			</p>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+
+			<ol>
+				<li>
+					<p><strong>match:</strong></p>
+					<p>Type the following code once and make sure it works.</p>
+
+					<pre><code>
+						var str = "Hi, here's some text. Hi again. Also, hi.";
+						var result = str.match(/hi/ig);
+
+						console.log(result);
+					</code></pre>
+
+					<p>See the line with <b>match</b> in it?  Type that line a few times until you can do it without an example.</p>
+					<p>Then type that line again 5 times without looking at an example.</p>
+				</li>
+
+
+				<li>
+					<p><strong>replace:</strong></p>
+					<p>Type the following code once and make sure it works.</p>
+
+					<pre><code>
+						var str = "Hi, here's some text. Hi again. Also, hi.";
+						var result = str.replace(/hi/gi, 'BYE');
+
+						console.log(result);
+					</code></pre>
+
+					<p>See the line with <b>replace</b> in it?  Type that line a few times until you can do it without an example.</p>
+					<p>Then type that line again 5 times without looking at an example.</p>
+				</li>
+
+
+				<li>
+					<p><strong>replace with a function:</strong></p>
+					<p>Using the example from question 2, replace each <code>"hi"</code> with <code>"bye"</code>, but if the current value is <code>"Hi"</code> (first letter uppercase), then replace it with <code>"Bye"</code> (first letter uppercase).</p>
+				</li>
+
+				<li>
+					<p><strong>Autocorrect:</strong></p>
+					<p>Create a function called autocorrect that replaces all instances of <code>"taht"</code> with <code>"that"</code> and returns the result.</p>
+				</li>
+
+
+				<li>
+					<p><strong>Very basic email validation:</strong></p>
+					<p>Create an HTML input text box and a button.  When the user enters an email address and clicks the button, your code should do the following:</p>
+					<ul>
+						<li>Store the email address in a variable</li>
+						<li>Using that variable and the match method, check if there is an @ symbol</li>
+						<li>If there is an @ symbol, show the message "Valid email" in a div.</li>
+						<li>If there is not an @ symbol, show the message "Invalid email" in a div.</li>
+					</ul>
+
+					<p>
+						<strong>Bonus:</strong>
+						<br>If you want to play around, try making the email validator more effective.  Check for letters or numbers before the @ symbol followed by other stuff afterwards.  Feel free to make it as accurate as you want.
+					</p>
+				</li>
+			</ol>
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<p>Regular expressions can be a lot to remember.</p>
+
+			<p>Don't worry about remembering everything now.  As long as you understand how to use regular expressions, you can look up whatever patterns you want to look for.</p>
+		</div>
+		
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
