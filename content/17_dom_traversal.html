@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>17 - dom traversal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+
+		<h1>DOM Traversal: Get elements by more than just their ids</h1>
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+		
+
+		<div class="section special_section terminology">
+			<h2>Traversing the DOM</h2>
+
+			<p>You'll hear people talk about <b>DOM traversal</b>.  That just means going through (or traversing) the document and getting elements.</p>
+
+			<p>You've already done DOM traversal with <code>getElementById</code>, but now we're going to look at some more powerful ways of getting elements.</p>
+
+		</div>
+
+
+
+		<div class="section">
+			<h2>querySelector</h2>
+
+			<p><b>querySelector</b> lets you get the first element in your document that matches a CSS selector of your choice.</p>
+
+			<p>Try the following example to see how it works:</p>
+
+			<pre><code class="language-markup">
+				&lt;div class="whatever"&gt;Div 0&lt;/div&gt;
+				&lt;div class="whatever"&gt;Div 1&lt;/div&gt;
+
+				&lt;script&gt;
+				document.querySelector('.whatever').style.color = 'red';
+				&lt;/script&gt;
+			</code></pre>
+
+			<p>If you've done this correctly, the first element whose class is "whatever" should have red text.</p>
+
+			<div class="special_section warning">
+				<h3>Warning: querySelector uses the same format as CSS</h3>
+
+				<p>Notice that there is a dot at the beginning of ".whatever".</p>
+
+				<p>That's because querySelector uses the same format as CSS selectors (the way you'd format them in a stylesheet).</p>
+
+				<ul>
+					<li>
+						Getting a <b>class</b>:
+						<pre><code>document.querySelector('.whatever')</code></pre>
+					</li>
+					<li>
+						Getting an <b>id</b>:
+						<pre><code>document.querySelector('#whatever')</code></pre>
+					</li>
+					<li>
+						Getting a <b>tag</b>:
+						<pre><code>document.querySelector('div')</code></pre>
+					</li>
+				</ul>
+
+				<p>
+					<b>This format is different from getElementById</b>, where you just have to put the name of the id with no dots or hashes.</p>
+				</p>
+
+				<p>Example:</p>
+
+				<pre><code>document.getElementById('whatever')</code></pre>
+			</div>
+		</div>
+
+
+		<div class="section">
+			<h2>Other examples of selectors</h2>
+
+			<p>Here's an example with another CSS selector.  Type it out to see how it works (at least type out the script, but feel free to copy and paste the HTML).</p>
+
+			<pre><code class="language-markup">
+				&lt;div class="whatever"&gt;
+					Text
+					&lt;span&gt;Link 0&lt;/span&gt;
+					&lt;span&gt;Link 1&lt;/span&gt;
+				&lt;/div&gt;
+
+				&lt;script&gt;
+				document.querySelector('.whatever span').style.color = 'red';
+				&lt;/script&gt;
+			</code></pre>
+
+			<p>If you've done it correctly, your script should find the first <b>span</b> inside an element whose class is <b>whatever</b>.</p>
+
+
+
+
+			<p>That's great for selecting one element, but what happens if you want to select multiple elements on a page?</p>
+
+			<p>That's where <b>querySelectorAll</b> comes in.</p>
+
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>querySelectorAll</h2>
+
+			<p><b>querySelectorAll</b> gives you a list of all elements in your document that match a CSS selector of your choice.</p>
+
+			<p><strong>Here's how it works:</strong></p>
+			<ol>
+				<li style="margin-top:40px;"><b>querySelectorAll</b> spits out a list of everything that matches the CSS selector you decided on.</li>
+				<li>You can access the items in that list the way you would with an array.</li>
+			</ol>
+
+			<p>Try the following example to see how it works:</p>
+
+			<pre><code class="language-markup">
+				&lt;div class="whatever"&gt;Div 0&lt;/div&gt;
+				&lt;div class="whatever"&gt;Div 1&lt;/div&gt;
+
+				&lt;script&gt;
+				document.querySelectorAll('.whatever')[0].style.color = 'red';
+				document.querySelectorAll('.whatever')[1].style.color = 'green';
+				&lt;/script&gt;
+			</code></pre>
+
+		</div>
+
+
+
+		<div class="section">
+			<h2>Looping with querySelectorAll</h2>
+
+			<p>Let's say you want to make everything with a certain class turn red.</p>
+
+			<p>Try the following example to see how it works (copy the HTML, but actually type out the JavaScript):</p>
+
+			<pre><code class="language-markup">
+				&lt;div class="whatever"&gt;Div 0&lt;/div&gt;
+				&lt;div class="whatever"&gt;Div 1&lt;/div&gt;
+				&lt;div class="whatever"&gt;Div 2&lt;/div&gt;
+				&lt;div class="whatever"&gt;Div 3&lt;/div&gt;
+
+				&lt;script&gt;
+				var myDivs = document.querySelectorAll('.whatever');
+
+				for(var i=0; i&lt;myDivs.length; i++){
+					myDivs[i].style.color = 'red';
+				}
+				&lt;/script&gt;
+			</code></pre>
+
+			<p>In this example, we're getting all the elements with the class <code>whatever</code> and storing them in a variable for easy access.</p>
+
+			<p>Then we're running a loop to go through each element in our list and turn it red.</p>
+
+		</div>
+
+
+
+
+		<div class="section">
+			<h2>Making your DOM traversal as fast as possible</h2>
+
+			<p>So far you know how to get elements with getElementById, querySelector, and querySelectorAll.</p>
+
+			<p>Which one is the fastest?</p>
+
+			<p>Here's the ranking:</p>
+
+			<ol>
+				<li><b>getElementById</b> - This is the fastest because it's looking for an id only.</li>
+				<li><b>querySelector</b> - This is a little bit slower than getElementById because it has to look for other selectors besides ids.</li>
+				<li><b>querySelectorAll</b> - This is the slowest because it has to search the whole document for all occurrences of a selector. It's still fast though.</li>
+			</ol>
+
+
+
+			<br><br>
+			<h3>For faster-running code, don't repeat the same DOM traversal needlessly</h3>
+
+			<p>After doing a certain DOM traversal once, you can <strong>store your result in a variable</strong>.  That way, the browser doesn't have to go searching for those elements over and over again.</p>
+
+			<br>
+			<p style="margin-bottom:0px;"><strong>BAD: (This forces the browser to search for the same element over and over again.)</strong></p>
+
+			<pre style="border: 3px solid red;"><code>
+				document.querySelector('.whatever').style.color = 'orange';
+				document.querySelector('.whatever').style.background = 'blue';
+				document.querySelector('.whatever').style.fontSize = '30px';
+			</code></pre>
+
+			<br>
+			<p style="margin-bottom:0px;"><strong>GOOD: (The browser only searches for the element once and then stores it for quick access.)</strong></p>
+
+			<pre><code>
+				var mydiv = document.querySelector('.whatever');
+
+				mydiv.style.color = 'orange';
+				mydiv.style.background = 'blue';
+				mydiv.style.fontSize = '30px';
+			</code></pre>
+
+
+			
+			<br><br>
+			<h3>Make querySelector and querySelectorAll faster by narrowing down the search</h3>
+
+			<p>You don't always have to search through the whole document with querySelector and querySelectorAll.</p>
+
+			<p>You can narrow the search down.  For example, if you want to get the spans inside a certain div, then you could do the following:</p>
+			<ul>
+				<li>Step 1: Get the div by its id</li>
+				<li>Step 2: Select the spans inside that div using querySelectorAll</li>
+			</ul>
+
+			<p>This way, querySelectorAll only searches inside that div, and not through the whole document.</p>
+
+			<p>Here's how that would look:</p>
+
+			<pre><code class="language-markup">
+				&lt;div id="mydiv"&gt;
+					&lt;span&gt;Span 0&lt;/span&gt;
+					&lt;span&gt;Span 1&lt;/span&gt;
+				&lt;/div&gt;
+
+				&lt;script&gt;
+				var myspans = document.getElementById('mydiv').querySelectorAll('span');
+				&lt;/script&gt;
+			</code></pre>
+
+			<p>It is good to narrow down your searches like this.</p>
+			<p>Your pages would be slow if you were doing things like looking for all the spans in the entire document.</p>
+
+
+
+
+
+
+			<br><br>
+			<h3>How much does DOM traversal affect page performance?</h3>
+
+			<p>It depends.</p>
+
+			<p>In many cases you won't have to worry too much because DOM traversal happens very fast.</p>
+
+			<p>However, if you have a long loop or a lot of elements, then you'll want to make sure your code is efficient.</p>
+
+			<p>Either way, it's a good habit to keep your code as efficient as possible because inefficiencies can pile up over time and cause a slow page.</p>
+
+
+		</div>
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+
+			<ol>
+				<li>
+					<p>Type the following code snippet (no need to run it).</p>
+					<pre><code>
+						document.querySelector('.myclass')
+					</code></pre>
+					<p>Once you can repeat it without looking at an example, type it again three times.</p>
+				</li>
+
+				<li>
+					<p>Create three divs with the class "myclass".</p>
+					<p>Use <b>querySelector</b> to change the color of the text in the first div with the class "myclass".</p>
+				</li>
+
+				<li>
+					<p>Type the following code snippet (no need to run it).</p>
+					<pre><code>
+						document.querySelectorAll('.myclass')
+					</code></pre>
+					<p>Once you can repeat it without looking at an example, type it again three times.</p>
+				</li>
+
+				<li>
+					<p>Create three divs with the class "myclass".</p>
+					<p>Use <b>querySelectorAll</b> to change the text color of the second div in the list.</p>
+				</li>
+
+				<li>
+					<p>Create three divs with the class "myclass".</p>
+					<p>Use <b>querySelectorAll</b> and a loop to change the text color of the all of the divs in the list.</p>
+					<p>Remember to keep the loop efficient. (Don't repeat the same DOM traversal over and over.)</p>
+				</li>
+
+				<li>
+					<p>Create three divs with the class "myclass".</p>
+					<p>Create two buttons, one that says Show All and one that says Hide All.</p>
+					<p>One of those buttons should show all of the divs with the class "myclass".  The other button should hide them.</p>
+				</li>
+			</ol>
+		</div>
+
+
+
+
+
+
+
+		<div class="section">
+			<p>If you've gotten to this point, that means you can get elements by more than just their ids.</p>
+
+			<p>Satisfying, isn't it?  Keep up the good work.</p>
+		</div>
+		
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
