@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>18 - attributes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+
+
+
+		<h1>Change HTML attributes dynamically</h1>
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+
+		<div class="section">
+			<h2>Change an attribute</h2>
+
+			<p>JavaScript lets you change HTML attributes.</p>
+
+			<p>Why is this useful?</p>
+
+			<p>One example would be that maybe you want to change a link's destination depending on a user's preferences.  Another example would be if you want to style an element directly without class names.</p>
+
+			<p>Try changing a link's destination and style as in the example below:</p>
+
+			<pre><code class="language-markup">
+				&lt;a id="mylink" href="old.html"&gt;My Link&lt;/a&gt;
+
+				&lt;script&gt;
+				document.getElementById('mylink').href = 'new.html';
+
+				document.getElementById('mylink').style = 'color:red; background:black;';
+				&lt;/script&gt;
+			</code></pre>
+
+
+
+			<br>
+			<div class="special_section warning">
+				<h3>Remember: Use <b>className</b> to change class</h3>
+
+				<p>To change the class attribute with JavaScript, you need to use <b>className</b> (because "class" is already reserved for something else in JavaScript).</p>
+
+				<p>Example:</p>
+				<pre><code>
+					document.getElementById('mydiv').className = 'whatever';
+				</code></pre>
+				
+				<p>It's so easy to forget this, but please remember <b>className</b>.</p>
+			</div>
+		</div>
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+
+			<ol>
+				<li>
+					<p>Type each of the following lines twice:</p>
+
+					<pre><code>
+						document.getElementById('mylink').href = 'new.html';
+						document.getElementById('mylink').style = 'color:red; background:black;';
+					</code></pre>
+				</li>
+
+				<li>
+					<p>Create a link that says "Buy Tickets" and has a <b>href</b> attribute of "tickets.html".</p>
+					<p>Create a button that says "Upgrade".</p>
+					<p>When the user clicks "Upgrade", the "Buy Tickets" link url should change from "tickets.html" to "fancy_tickets.html".</p>
+				</li>
+			</ol>
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<p>Another section down.</p>
+
+			<p>Keep going! You're doing great.</p>
+		</div>
+		
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
