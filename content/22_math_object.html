@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>22 - math object</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+
+
+
+
+
+		<h1>Get better control of your numbers - Math and randomness</h1>
+
+
+
+		<p>Let's say you want to do things like exponents, rounding, randomness, and other types of math.</p>
+
+		<p>The JavaScript <b>Math</b> object lets you do that.</p>
+
+
+
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>The Math object - Do more than just basic arithmetic</h2>
+
+			<p>The <b>Math</b> object is a collection of methods that let you do various math operations besides arithmetic.</p>
+
+			<p>Type the following example once to see how it works.  There's no need to memorize this; just understand how it works.</p>
+
+			<pre><code>
+				var power = Math.pow(5,2); // 5 to the power of 2
+				var roundDown = Math.floor(6.52);
+				var roundUp = Math.ceil(2.1);
+				var roundToNearest = Math.round(2.4);
+				var findLargest = Math.max(2,3,10,5);
+				var findSmallest = Math.min(2,3,10,5);
+
+				console.log(power); // try the other values too
+			</code></pre>
+
+			<p>Change what's in the console log so you can try different values.</p>
+
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>Math object reference</h2>
+
+			<p>For a more complete list of what the Math object has available, feel free to refer here:</p>
+
+			<p>
+				<a href="http://www.w3schools.com/jsref/jsref_obj_math.asp" target="_blank">Math Object Reference</a>
+			</p>
+
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>Random numbers</h2>
+
+			<p><b>Math.random()</b> gives you a random number between 0 and 1 (including 0, but NOT including 1).</p>
+
+			<p>Try the following code a few times to see how it gives different results each time:</p>
+
+			
+			<pre><code>
+				var rand = Math.random();
+				console.log(rand);
+			</code></pre>
+
+
+			<p>Now that you have access to randomness, you can manipulate it however you want.</p>
+
+
+
+			<h3>Get a random whole number between 1 and 10</h3>
+
+			<p>Here are the steps to get a random whole number between 1 and 10:</p>
+
+			<ol>
+				<li>
+					<p>First, generate a number from 0 to 10 (including zero but NOT including 10).</p>
+
+					<pre><code>
+						10*Math.random()
+					</code></pre>
+
+					<p>This code will give you anything from 0 to 9.999999999 etc.</p>
+				</li>
+
+				<li>
+					<p>Next, round down to get integers.</p>
+
+					<pre><code>
+						Math.floor( 10*Math.random() )
+					</code></pre>
+
+					<p>This code will give you an integer from 0 to 9 (including 9).</p>
+				</li>
+
+				<li>
+					<p>Finally, add 1, so you'll get numbers from 1 to 10 instead of 0 to 9.</p>
+
+					<pre><code>
+						Math.floor( 10*Math.random() ) + 1
+					</code></pre>
+				</li>
+			</ol>
+
+			<p>Now you have a random whole number between 1 and 10.  Type the following to see it in action:</p>
+
+			<pre><code>
+				var rand =  Math.floor(10*Math.random()) + 1;
+				console.log(rand);
+			</code></pre>
+
+		</div>
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+
+			<ol>
+
+				<li>
+					<p><strong>Rounding:</strong></p>
+					<p>Use the <b>Math</b> object to round 5.7 down to 5. (Feel free to look at the examples.)</p>
+				</li>
+
+				<li>
+					<p><strong>Exponents:</strong></p>
+					<p>Raise 4 to the power of 3 using the <b>Math</b> object.</p>
+				</li>
+
+				<li>
+					<p><strong>Pick a random number:</strong></p>
+					<p>Generate a random integer from 0 through 9.</p>
+					<p>Then try 1 through 10.</p>
+					<p>Next, try a random integer from 3 through 8.</p>
+					<p>After that, try typing it again (feel free to use different numbers) until you are comfortable doing it without looking at an example.</p>
+				</li>
+
+				<li>
+					<p><strong>Pick a random name:</strong></p>
+					<p>Create an <b>array</b> of people's names.</p>
+					<p>Create a button and a div.</p>
+					<p>When the button is clicked, a random name from the array should appear in the div.</p>
+					<p>(Hint: Remember that arrays start counting at zero.)</p>
+				</li>
+
+				<li>
+					<p><strong>Pick a random image:</strong></p>
+					<p>Create an array of image urls (use any images from the internet).</p>
+					<p>Create a button and a div.</p>
+					<p>When the button is clicked, a random image from the array should appear in the div.</p>
+				</li>
+
+			</ol>
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<p>That's enough randomness for now.</p>
+
+			<p>Rest up, and get ready for the next section.</p>
+		</div>
+		
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
