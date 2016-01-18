@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>25 - next steps</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+
+
+		<h1>Next Steps</h1>
+
+
+		<p>Congrats!</p>
+
+		<p>You've completed the course.  If you've made it this far, you should feel proud of yourself.</p>
+
+
+		<br>
+		<div>
+			<h2>Start creating a portfolio</h2>
+
+			<p>There are two huge benefits of creating a portfolio:</p>
+			<ul>
+				<li>You get to practice your new skills on practical projects.</li>
+				<li>You'll have stuff to show potential employers or clients.</li>
+			</ul>
+
+
+			<p>There's more than one way to create a portfolio, and here are two good choices:</p>
+			<ul>
+				<li>Show off your mini projects on a site like codepen.</li>
+				<li>Create a full site and show your projects there.</li>
+			</ul>
+		</div>
+
+
+
+
+		<div class="section">
+			<h2>Portfolio project ideas:</h2>
+
+			<p>Feel free to use as few or as many of these suggestions as you want.</p>
+
+			<ul>
+				<li>Basic form validation</li>
+				<li>A useful popup (settings, a sign-up form, more info, etc)</li>
+				<li>Some sort of calculation helper (maybe a tip calculator, a tax calculator, a fitness/nutrition calculator, etc)</li>
+				<li>A quiz game</li>
+				<li>Rock, paper, scissors</li>
+				<li>A navigation menu that expands when you click</li>
+				<li>An interactive pizza menu where you can add toppings, sides, beverages, etc, and get the final price and order summary</li>
+			</ul>
+
+			<p>As an added bonus, try making something related to the industry you're interested in.  Examples:</p>
+			
+			<ul>
+				<li>Interested in gaming? Make a small game.</li>
+				<li>Finance? Make an investment calculator.</li>
+				<li>Restaurants? Make an interactive menu (build your own burger or catering order for example).</li>
+				<li>Cars? Make a car customization page where people can pick out features and get a total price.</li>
+				<li>Fashion? Make a pick-your-own-outfit page.</li>
+				<li>Website creation? Create a project estimation calculator where people can pick features they want on their websites and get a price quote.</li>
+			</ul>
+		</div>
+
+
+		<div class="section">
+			<p>If you ever get stuck, you can refer back to any part of this course.</p>
+
+			<p>Best of luck!</p>
+		</div>
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>

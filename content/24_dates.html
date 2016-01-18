@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>24 - dates and times</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+
+
+
+		<h1>JavaScript dates and times</h1>
+
+		<p>If you're trying to use dates and times, you've come to the right place.</p>
+
+		<p>You won't need to memorize this stuff right away.  Just be aware it exists and have an idea of how to use it.</p>
+		<p>You can always look up the details as long as you understand the concepts.</p>
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>The Date object</h2>
+
+			<p>The JavaScript <b>Date</b> object lets you get and set dates and times.</p>
+
+
+			<p>Type the following to see how it works:</p>
+
+			<pre><code>
+				var d = new Date();
+				console.log(d);
+			</code></pre>
+
+			<p>In this example, you'll notice that <code>new Date()</code> is used to construct a new <b>Date</b> object.</p>
+
+			<p>In JavaScript, a <b>Date</b> object contains a year, a month, a date, a day of the week, an hour, a minute, a second, and a millisecond.</p>
+
+			<p>By default <code>new Date()</code> gives you the current date, but you can change it if you want.  Here's one way to do that (type this example):</p>
+
+			<pre><code>
+				var d = new Date('march 15 2015');
+				console.log(d);
+			</code></pre>
+
+
+			<p>The Date object also contains functions that help you work with dates.  You'll see some examples soon.</p>
+
+		</div>
+
+
+
+
+		<div class="section">
+			<h2>Get the current date and its parts</h2>
+
+			<p>The Date object comes built in with some functions that let you get different parts of the date, such as the month or the day.</p>
+
+			<p>Type the following code to see how it works:</p>
+
+			<pre><code>
+				var d = new Date();
+				console.log( d.getDay() ); // 0 to 6 (0 is Sunday)
+				console.log( d.getDate() ); // 1 to 31
+				console.log( d.getMonth() ); // 0 to 11 (0 is January)
+				console.log( d.getFullYear() );
+			</code></pre>
+
+			<div class="special_section warning">
+				<h3>Warning: getDate starts at 1 but other values start at 0</h3>
+
+				<p>First I thought that was weird, but it actually makes sense.</p>
+
+				<p>It's good that <code>getDay()</code> starts with <code>0</code> because that makes it easier to use with an array <code>['Sunday', 'Monday', 'etc']</code>.  Similar story with <code>getMonth()</code> for <code>['January', 'February', 'etc']</code>.</p>
+
+				<p>However <code>getDate()</code> starts with <code>1</code> because that way you don't have to add 1 every time you want to say what date it is.</p>
+			</div>
+
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Set the date to 90 days from now</h2>
+
+			<p>The <b>setDate()</b> function lets you set a date.</p>
+			<p>You can set the date directly to something like "3" and that will give you the third day of the month.</p>
+
+			<p>However, the more useful thing to do is to set the date to X number of days from now.  Type the following example to see how it works:</p>
+
+			<pre><code>
+				var d = new Date();
+				d.setDate(d.getDate() + 90);
+				console.log(d);
+			</code></pre>
+
+			<p>There's no need to memorize the above.  Just be aware it exists.</p>
+		</div>
+
+
+
+
+		<div class="section">
+			<h2>Make date math easier</h2>
+
+			<p>It can be weird to compare dates because you always have to worry about whether you're getting the correct number of days in a given month, whether it's a leap year, what time it is, whether it's morning or evening, what timezone it is, etc, etc, pain, etc, suffering, etc.</p>
+
+			<p>Luckily, you can skip all this headache.</p>
+
+			<p>JavaScript has a <b>getTime()</b> function that gives you the total amount of time in milliseconds between the current date and January 1, 1970.</p>
+
+			<p>Why that date?</p>
+
+			<p>It had to do with the limitations of early computers and the size of numbers they could deal with, and now that's the standard zero date.</p>
+
+			<p>Anyway, the important part is that <b>getTime()</b> turns a date from a weird object into a convenient number.</p>
+
+			<p>Type the following to see how it works:</p>
+
+			<pre><code>
+				var d = new Date();
+				console.log( d.getTime() );
+			</code></pre>
+
+			<p>If you ever want to do math with dates, getTime() is your friend.</p>
+		</div>
+
+
+
+		<div class="section">
+			<h2>For reference</h2>
+			
+			<p>For further references on dates and times feel free to look here:</p>
+			
+			<p>
+				<a href="http://www.w3schools.com/jsref/jsref_obj_date.asp" target="_blank">JavaScript Date Reference</a>
+			</p>
+		</div>
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+
+			<ol>
+				<li>
+					Show the current date in a div (no special formatting is required).
+				</li>
+
+				<li>
+					Get the current year, month (from 0 to 11), and date (from 1 to 31), and show them in a div.
+				</li>
+
+				<li>
+					<p>Days of the week:</p>
+					<ul>
+						<li>Create an array containing the names of the days of the week.</li>
+						<li>Get the current day as a number from 0 to 6.</li>
+						<li>Based on that number, get the correct day name from the array.</li>
+						<li>Show the correct day name in a div.</li>
+					</ul>
+				</li>
+			</ol>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+		<div class="section">
+			<p>Now you have an idea of how JavaScript dates and times work.</p>
+
+			<p>You don't need to memorize this material right now, and as long as you understand the concepts, you can look up whatever you need.</p>
+		</div>
+		
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
