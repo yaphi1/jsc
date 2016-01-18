@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>23 - timing</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+
+
+
+		<h1>Learn to control timing</h1>
+
+
+		<p>When you can control timing, you can create slideshows, countdowns, and other timed events.</p>
+
+		<p>Two major methods for controlling timing are <b>setTimeout</b> and <b>setInterval</b>, and this section will show you how to use them.</p>
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>setTimeout() - Run some code after a delay</h2>
+
+
+			<p>The <b>setTimeout()</b> method runs a function after a certain number of milliseconds.</p>
+
+			<p>The general format looks like this (do NOT type it):</p>
+			<pre><code>setTimeout( functionToRun, delayInMilliseconds );</code></pre>
+
+			<p>Type the following code to see a real example:</p>
+
+			<pre><code>
+				setTimeout( function(){ console.log('hi'); }, 5000);
+			</code></pre>
+
+			<p>If you've done it correctly, the console should say "hi" after 5 seconds (5000 milliseconds).</p>
+
+			<div class="special_section warning">
+				<h3>Quick warning: Don't forget the syntax</h3>
+				<p>When using <b>setTimeout</b>, don't lose track of the parentheses, commas, semicolons and brackets.</p>
+
+				<p>To keep things simple, I usually start a setTimeout with this kind of template:</p>
+				<pre><code>
+					setTimeout( function(){ }, 1000);
+				</code></pre>
+
+				<p>That way, when the function gets longer, the main pieces will already be in place.</p>
+				<pre><code>
+					setTimeout( function(){
+						// do whatever you want
+						console.log('this code works');
+					}, 1000);
+				</code></pre>
+			</div>
+
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>setInterval() - Run some code repeatedly at timed intervals</h2>
+
+			<p>The <b>setInterval()</b> method runs a function over and over again with a certain delay in milliseconds each time.</p>
+
+			<p>Type the following code to see how it works:</p>
+
+			<pre><code>
+				setInterval( function(){ console.log('hi'); }, 2000);
+			</code></pre>
+
+			<p>If you've done it correctly, the console should keep saying "hi" every 2 seconds.</p>
+
+			<p>What happens if you want to stop it?</p>
+
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>clearInterval() - Stop a setInterval() from running</h2>
+
+			<p>In order to stop an interval easily, you'll first need to give it a name.  You can do this by storing the interval in a variable.</p>
+
+			<p>Once the interval has a name, you can just run <b>clearInterval()</b> on that name.  You can see this concept in action by typing the following code:</p>
+
+			<pre><code>
+				var count = 0;
+				var sayHi = setInterval(function(){
+					console.log('Current number: '+ count);
+					count++;
+					if(count&gt;9){
+						clearInterval(sayHi);
+					}
+				},1000);
+			</code></pre>
+
+			<p>The code in that example shows the current number in the console every second, but it stops after the count reaches 9.</p>
+
+		</div>
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+
+			<ol>
+				<li>
+					<p>Type the following code a few times until you can do it without looking.  (To make it faster, you can omit the console log the next times you type it.)</p>
+
+					<pre><code>
+						setTimeout( function(){ console.log('hi'); }, 5000);
+					</code></pre>
+
+					<p>Once you're ready, type it 5 more times without looking at an example.</p>
+				</li>
+
+
+				<li>
+					<p>Type the following code a few times until you can do it without looking.  (To make it faster, you can omit the console log the next times you type it.)</p>
+
+					<pre><code>
+						setInterval( function(){ console.log('hi'); }, 2000);
+					</code></pre>
+
+					<p>Once you're ready, type it 5 more times without looking at an example.</p>
+				</li>
+
+
+				<li>
+					<p>Create an invisible div (CSS <code>display:none</code>).</p>
+					<p>After 5 seconds, show the div (CSS <code>display:block</code>).</p>
+				</li>
+
+				<li>
+					<p>Create an array of valid HTML colors (for example: <code>['red', 'orange', '#ff0']</code>).</p>
+					<p>Using setInterval, make a div's background cycle through the colors listed in the array.</p>
+					<p>The background color should change every 2 seconds.</p>
+				</li>
+
+				<li>
+					<p>Create a countdown that goes from 10 to 0 with one second in between.</p>
+					<p>Show the current number in a div.</p>
+					<p>You'll need to use <b>setInterval</b> and <b>clearInterval</b> to make this countdown work.</p>
+				</li>
+			</ol>
+
+		</div>
+
+
+
+
+
+
+
+		<div class="section">
+			<p>Good job picking up timing.</p>
+
+			<p>It's tough to remember at first, so feel free to play around with the concepts and maybe even build something cool while you're at it.</p>
+		</div>
+		
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
