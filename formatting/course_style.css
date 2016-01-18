@@ -228,6 +228,13 @@ LAYOUT STRUCTURE
 	padding: 20px;*/
 }
 
+
+
+
+/*
+sidebar
+----------------------------------
+*/
 #sidebar{
 	vertical-align: top;
 	text-align: left;
@@ -258,6 +265,15 @@ LAYOUT STRUCTURE
 	color: #fff;
 }
 
+
+
+
+
+/*
+footer and bottom nav
+----------------------------------
+*/
+
 #footer{
 	text-align: center;
 	padding: 50px;
@@ -265,6 +281,31 @@ LAYOUT STRUCTURE
 	background: #444;
 	color: #fff;
 }
+
+#nav-below{
+	text-align: center;
+	margin-top: 70px;
+}
+.prev-next{
+	display: inline-block;
+}
+.prev-next a{
+	padding: 20px 0px;
+	width: 240px;
+	background: #56B984;
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 4px;
+	margin: 0px 15px;
+	font-size: 25px;
+}
+.prev-next a:hover{
+	background: #6d9;
+}
+
+.nav-next a{ background: #2ad; }
+.nav-next a:hover{ background: #2cf; }
 
 
 
