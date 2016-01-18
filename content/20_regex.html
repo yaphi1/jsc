@@ -147,6 +147,28 @@
 				console.log(result);
 			</code></pre>
 
+
+			<div class="special_section tip">
+				<h3>Tip:<br>Is there a match? Get a yes or no answer!</h3>
+				
+				<p>Let's say you don't need a full list of matches, but you just want to know if a certain word or pattern is in a string.</p>
+
+				<p><b>match</b> can do that too!</p>
+
+				<p>In this example, the code checks if <code>"hi"</code> exists anywhere in the string (regardless of case).  Try it out.</p>
+
+				<pre><code>
+					var str = "Hi, here's some text. Hi again. Also, hi.";
+					
+					if(str.match(/hi/i)){
+						console.log('We found it.');
+					}
+					else{
+						console.log('We did not find it.');
+					}
+				</code></pre>
+			</div>
+
 		</div>
 
 
