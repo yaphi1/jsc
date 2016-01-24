@@ -1,0 +1,117 @@
+
+I have a personal confession.
+
+I struggled to learn JavaScript.
+
+Was JavaScript really hard or was something wrong with me?
+
+It turned out the answers were no and no.
+
+I just took the worst approach.
+
+First I started by trying to use little snippets of JavaScript for small tasks like hiding and showing some text.  Because I hadn't taken the time to understand JavaScript, these tasks involved hours of searching when they should have involved about two minutes of coding.
+
+Eventually, I decided I'd stop depending on script snippets and actually learn some JavaScript.
+
+I tried some random tutorials and books, but I ran into several problems.
+
+1. No Direction: I didn't even know what I didn't know, so I had no idea how to direct my learning.
+2. No Time: Some of the tutorials and courses seemed so huge and time-consuming that I thought I'd never find the time.
+3. Bad Pacing: A lot of tutorials skipped crucial steps while spending way too long on topics that didn't require that much detail.
+4. Little Retention: In many cases, I could do the examples at the time, but I couldn't remember them afterwards.  That turned out to happen because the tutorials were more concerned with covering all the concepts than actually making sure I remembered them.
+5. Information Overload: A lot of resources gave too much info at one time, so even if I followed it, I'd never remember it afterwards.  That was when I realized it's better to learn one thing at a time and remember it than learn ten things at a time and forget all of them.
+6. Not Enough Practical Usefulness: Many tutorials, books, and courses took forever to get to anything practical.  I cringe as I remember the amount of theory I had to slog through before I could even show any results of my JavaScript on a page.  I remember thinking "Where is this going?"
+
+To solve the problem of practical usefulness, I took an approach that made things even worse:
+
+I did projects.
+
+On the surface, project-based learning sounds like a good idea, and at a certain point it is.  However, I was not ready for projects yet.  I didn't know how to judge what I should learn.
+
+"I'll make a simple slide show!"
+
+That's what I told myself, and that's what I've heard from many people starting JavaScript.  The problem is that a slideshow involves functions, arrays, loops, animation, timing, and browser compatibility.
+
+I didn't know what was involved, so I tried the project.
+
+After a lot of unnecessary struggle, I was able to cobble something together.  Because the project involved so many concepts at once, I forgot everything immediately after.
+
+All my work was for nothing.
+
+Discouraged, I took a break, and I forgot even more.
+
+With my terrible approach, I eventually learned JavaScript, but I had to learn it at least 5 times.
+
+When I finally got it, I realized it didn't need to be that difficult.
+
+As I watched other people struggle, I realized I could help them.  When friends wanted to learn JavaScript, I was able to guide them in such a way that they learned more in one or two afternoons than they had in the entire past year.
+
+I started to see patterns in what worked and what didn't.  I decided to distill the main points into a method that actually works.
+
+In order to protect you from struggling like I did, I've created a JavaScript course that will help you avoid what happened to me.
+
+
+
+Simple Steps JavaScript
+
+what benefits you'll get (maybe at the beginning)
+
+
+The Simple Steps Method
+
+- cover small pieces at a time
+	- this solves time, retention, interest
+
+- explain just enough to be crystal clear, but get to the point
+
+- focus on practical usefulness
+
+- practice in real conditions
+
+
+
+
+
+
+
+
+
+notes:
+
+
+
+Random tutorials (i'd keep forgetting stuff; some of them would skip steps or crucial info while going too long on other stuff; info overload)
+	- problem: I didn't know what I didn't know, so I didn't know how to direct my learning
+	- some of them were so huge and time-consuming that I thought I couldn't find the time
+	- many took forever to get practical
+Projects (too many concepts at once, forget everything immediately after)
+
+
+
+
+
+
+
+
+
+
+
+
+original notes:
+
+1. describe problem vividly
+- maybe begin with confession about difficulty learning js (and problems with various resources)
+- include quotes from user research
+- include reasons js is needed (possibly start about why they would want to learn javascript)
+
+
+What direction to go in
+How to know if you're learning the right stuff
+You can follow examples, but when you try to do it on your own, you feel lost
+
+
+2. show them what benefits they get and how
+
+
+3. tell price and get users to take action now
+- contrast value (huge salary boost; lifetime career path improvement) with price (a few lunches)
