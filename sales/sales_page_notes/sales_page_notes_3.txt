@@ -1,0 +1,262 @@
+
+Confession: I struggled to learn JavaScript
+
+
+
+
+I learned JavaScript the worst way possible.
+
+With random tutorials and projects, I had no direction, lots of confusion, incomplete understanding, lots of forgetting, and feelings of hopelessness.
+
+I struggled so much that I had to relearn JavaScript about five times.  That was frustrating.
+
+When I finally got it, I realized I didn't have to struggle the way i did.  There were certain key ingredients that could have helped me learn much faster, but I didn't discover them until it was too late.
+
+To test my theories about learning, I tried helping my friends who were struggling with JavaScript.
+
+With my help, they learned more in the first two afternoons than they had in the past year.
+
+At that point, I realized I could help a lot of people get similar results.
+
+I put together a JavaScript course, so that no one would have to waste time the way I did.
+
+
+
+
+
+Before I tell you about the course, here are three ways learning JavaScript can improve your life:
+
+1. You'll have more freedom to create what you want.
+2. More jobs will be open to you (and better quality ones too).
+3. Knowing JavaScript can add an extra $10,000 to $70,000 onto your salary.  (My personal experience was towards the upper range of this.)
+
+Now for the course.
+
+
+
+
+
+Simple Steps JavaScript
+
+Simple Steps JavaScript is a course designed to help you learn JavaScript while avoiding all the mistakes I and so many others have made.
+
+
+Benefits you'll get from this course:
+
+- Stop struggling to find time
+This course's short sections will help you find time, stay motivated, remember stuff better, and have more fun.
+
+- Clear explanations
+I know your struggles because I went through them too, so I can explain stuff from the perspective of an actual learner rather than an out-of-touch "expert".
+
+- Practical usefulness
+You'll see the results of your work right away.  No more waiting until chapter 15 to show stuff on the screen.
+
+- You'll actually remember this stuff
+The course is built to make the basics feel automatic, so you won't have trouble later on.  That's because I actually care about getting you to remember, not just dumping the info and letting you forget it.  The key is that I'd rather tell you one thing at a time and have you remember it than ten things and have you forget all of them.  In contrast, lots of other courses race through a ton of material so they can say they covered it.
+
+- You'll be ready to apply this in real life
+The practice in this course is designed to match real life conditions, so you won't freeze when you need to use this stuff for real.
+
+- You can stop feeling overwhelmed about what direction to go in
+This course will give you a direct learning path so you won't feel scattered and lost.  This path is designed be the shortest distance to doing practical things.
+
+- The right projects at the right time
+You'll get mini practice projects and exercises when you're ready for them.  No more trying a project that sounded simple but turned out to be discouragingly hard.  Also, the projects are small enough that you can focus on the underlying concepts instead of getting bogged down in the details of a random project.
+
+- You'll be able to talk the talk
+It's frustrating when you understand a concept but everyone thinks you don't because you don't know what it's called.  I won't let that happen to you.  You'll get the key terms you need in a way that avoids confusion.
+
+
+
+
+What's in the course?
+
+- 25 chapters of written content available exclusively online
+- Code examples, clear explanations, practice drills, portfolio projects, and tips about common mistakes to avoid
+
+Some of the things you'll be able to do by the end:
+    Showing and hiding things when users click
+    Validating forms
+    Changing styles dynamically
+    Responding to user actions
+    Interactive games
+    Countdown clocks
+    Calculation helpers
+    Much more stuff than I can list
+
+Course outline
+
+The basics: Get strong fundamentals and make everything else easier
+You'll show stuff on a page, learn to avoid getting stuck, and manipulate words and numbers.
+
+Make your code smart with functions and logic
+Functions will let you write code once and use it whenever.  Logic will let your code make intelligent decisions.  You'll learn the details of both.
+
+Make magic happen with styles and interactivity
+You'll learn to respond to user actions and change stuff on your page dynamically.
+
+Get efficient and powerful with data
+You'll learn about loops, arrays, objects, and manipulation of all three.
+
+Gain better control of your pages
+Do more with your pages by learning about DOM traversal, attributes, string methods, regex, input validation, and urls.
+
+Number wizardry: math, timing, and dates
+JavaScript has some useful tools to work with math, timing, and dates, and you'll get to use their power.
+
+Next steps:
+You'll get suggestions for what to do after completing the course, and you'll get a list of portfolio project ideas.
+
+
+
+
+
+What does the course cost?
+
+Because you can make an extra $10,000 to $70,000 per year by knowing JavaScript, this course is easily worth at least $10,000 per year.
+
+You can get Simple Steps JavaScript for $49.
+
+[Get the course]
+
+It also comes with a 60-day money-back guarantee.  If the course isn't right for you, send me one line of code you wrote, and I'll refund you in full, no questions asked.
+
+
+
+
+
+
+
+Questions you might have:
+
+
+- How do I know this course will work?
+
+Simple Steps JavaScript is built around the same concepts that helped my friends learn more JavaScript in a few afternoons than they had in the entire past year.
+
+There are three steps to this learning approach.
+
+Step 1: Understand a bite-sized concept.
+Step 2: Practice until it's easy and automatic.
+Step 3: Apply it on your own.
+
+Most books and courses stop at step 1 (basic understanding).  Some of them skip to step 3 (applying the concept) and that can easily make you feel lost.  Step 2 (practice until it's automatic) is crucial.
+
+Other courses gloss over the practice phase because it's not glamorous.  Then they move onto the next thing because they want to go fast.  The irony is that rushing actually makes you go slower because you'll have to keep backtracking to the stuff you forgot.
+
+If you understand a concept and move on, you'll forget it.
+If you try to skip directly from understanding to applying, you'll get confused because you still have to think about the basic details instead of how to apply the concept.
+If you practice a concept until it feels automatic, then you're free to think about how to apply it instead of worrying about whether you typed it correctly.
+
+Simple Steps JavaScript has the right kind of practice built in, and that's what makes its method effective.
+
+
+
+
+
+
+- What if I'm not happy with the course?
+
+There's a 60-day money-back guarantee.  If you're not 100% satisfied with the course, send one line of your code to show me you at least tried, and you'll get a full refund, no questions asked.
+
+
+
+
+- Why is this better than other types of courses?
+
+Other courses in general:
+In their quest for completeness they introduce too much at a time. Sometimes crucial steps are skipped or sped over while non-critical stuff gets dwelt on too long.
+
+Courses where you code directly on their site:
+Because the practice conditions don't match reality, people end up saying they can't apply what they learned in real life.
+
+Videos:
+There's too much pausing, rewinding, waiting, and fast-forwarding.  Also, the code can be hard to see.
+
+Traditional education:
+Huge price (debt for years), inadequate offerings, and often outdated material.  I had a friend whose programming professor said, "I can't believe I have to teach this old book."
+
+Books:
+Too much fluff before you get to the good stuff. Too much info at once. Marathon examples that span multiple chapters (so unless you remember that rocketship example from chapter 3, then chapter 7 makes no sense). If an error is in there, it's permanent (this happens frequently).  Sometimes the book is obsolete by the time it reaches shelves.
+
+Online references:
+Good for reference, but not so great for direction. You'll end up spending a lot of your time doing research, piecing stuff together, struggling, missing key concepts, etc.
+
+
+
+
+
+- Can't I learn this stuff for free?
+
+Yes you can!  All of the information is available for free on the internet.
+
+Just be prepared to spend a year struggling to cobble together an incomplete understanding.
+
+
+
+
+
+- Is this course right for me?
+
+Simple Steps JavaScript is right for you if:
+	You know HTML and CSS well enough to style a div or a span.
+	You want to learn JavaScript.
+
+This course is NOT right for you if:
+	You've never seen any HTML or CSS.
+	You already know how to do everything you saw in the course outline.
+	You're not willing to take action and actually do the coding exercises.
+
+
+
+
+
+- What if I can't find the time?
+
+The material is broken up into small bits that will fit into your schedule.  If you've read this far, you have way more than enough time for this course.
+
+Psychologically, the hardest part of finding time is getting started.  Don't worry about setting aside a big block of time.  Just tell yourself you'll peek at the next lesson for two minutes.  It'll be much easier to find time.
+
+
+
+
+
+
+
+
+
+
+Get Simple Steps JavaScript before the course closes
+
+
+Two paths stretch before you.
+
+One, you can take this course.
+- You'll learn JavaScript in a short time instead of struggling for years like I did.
+- You'll gain a skill that's worth an extra $10,000 to $70,000 every year.
+- You'll have more job options, more creative freedom, and more fun.
+
+Or you can decide NOT to take this course.
+- You can continue to struggle on your own, wasting time you'll never get back.
+- You can miss out on heart-breaking amounts of money.
+- You'll watch your career stay stuck, like I did for too long.
+
+If you're ready to learn JavaScript, click the button below.
+
+Value: Over $10,000 per year
+
+Price: $49
+
+[Yes! I want to learn JavaScript]
+
+[Get Simple Steps JavaScript for $49]
+
+Simple Steps JavaScript is backed by a 60-day money-back guarantee.  If you're not 100% satisfied with the course, send one line of your code to show me you at least tried, and you'll get a full refund, no questions asked.
+
+
+
+
+
+
+
