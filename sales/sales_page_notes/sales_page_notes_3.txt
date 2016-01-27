@@ -10,7 +10,7 @@ With random tutorials and projects, I had no direction, lots of confusion, incom
 
 I struggled so much that I had to relearn JavaScript about five times.  That was frustrating.
 
-When I finally got it, I realized I didn't have to struggle the way i did.  There were certain key ingredients that could have helped me learn much faster, but I didn't discover them until it was too late.
+When I finally got it, I realized I didn't have to struggle the way I did.  There were certain key ingredients that could have helped me learn much faster, but I didn't discover them until it was too late.
 
 To test my theories about learning, I tried helping my friends who were struggling with JavaScript.
 
