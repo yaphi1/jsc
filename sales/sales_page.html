@@ -185,6 +185,13 @@ ol > li {
 	font-size: 25px;
 	cursor: pointer;
 	border-radius: 4px;
+	font-family: Nunito, sans-serif;
+}
+
+@media (min-width: 500px){
+	.sales_cta_button{
+		font-size: 40px;
+	}
 }
 
 .sales_cta_button:hover{
@@ -199,7 +206,7 @@ ol > li {
 
 .final_cta_container{
 	margin-top: 60px;
-	padding: 0px 0px 60px;
+	padding: 1px 0px 60px;
 	background: #eee;
 }
 
@@ -207,6 +214,26 @@ ol > li {
 	margin-top: 0px;
 }
 
+.cta_ribbon{
+	/*background: #6ED19C;
+	color: #fff;*/
+	padding: 20px 10px;
+	background: #ddd;
+}
+
+.cta_ribbon h3:first-of-type{
+	margin-top: 0px;
+}
+
+
+.big_down_arrow{
+	/*width: 30px;
+	height: 18px;*/
+	height: 120px;
+	display: block;
+	margin: auto;
+	stroke: #6ED19C;
+}
 
 </style>
 
@@ -214,6 +241,22 @@ ol > li {
 
 <div id="content">
 	<!-- <div id="maincol"> -->
+
+	
+	<!--*********************************************************
+	SVG DEFINITIONS
+	**********************************************************-->
+
+
+	<svg style="display:none;">
+		
+		<!-- down arrow -->
+		<symbol id="down_arrow_svg" viewBox="0 0 10 4" xmlns="http://www.w3.org/2000/svg">
+			<polyline points="1,1 5,3 9,1" style="stroke-width:0.3; stroke-linejoin:round; stroke-linecap:round; fill:none;"></polyline>
+		</symbol>
+
+	</svg>
+
 
 	<div class="content_width">
 
@@ -240,6 +283,11 @@ ol > li {
 		<p>I struggled so much that I had to relearn JavaScript about five times.</p>
 		<p>That was frustrating.</p>
 
+		
+		<svg class="big_down_arrow">
+			<use xlink:href="#down_arrow_svg"></use>
+		</svg>
+
 	
 		<h3>My annoying discovery</h3>
 		
@@ -256,6 +304,10 @@ ol > li {
 		<p>I put together a JavaScript course, so that no one would have to waste time the way I did.</p>
 
 
+		<svg class="big_down_arrow">
+			<use xlink:href="#down_arrow_svg"></use>
+		</svg>
+
 		<h3>But first, why would you care about learning JavaScript?</h3>
 
 		<ol>
@@ -268,6 +320,11 @@ ol > li {
 
 
 	</div>
+
+
+	<svg class="big_down_arrow">
+		<use xlink:href="#down_arrow_svg"></use>
+	</svg>
 
 
 	<div class="course_intro">
@@ -420,7 +477,7 @@ ol > li {
 
 
 	<div class="cost">
-		<h3>Get the Course</h3>
+		<h3>Get Access to Simple Steps JavaScript</h3>
 
 		<div class="content_width">
 			<p>Because you can make an extra $10,000 to $70,000 per year by knowing JavaScript, this course is easily worth thousands of dollars.</p>
@@ -435,7 +492,7 @@ ol > li {
 
 			<p>[guarantee badge]</p>
 
-			<p>It also comes with a 60-day money-back guarantee.  If the course isn't right for you, send me one line of code you wrote, and I'll refund you in full, no questions asked.</p>
+			<p>Simple Steps JavaScript comes with a 60-day money-back guarantee.  If the course isn't right for you, email me one line of code you wrote, and I'll refund you in full, no questions asked.</p>
 		</div>
 
 	</div>
@@ -464,11 +521,7 @@ ol > li {
 					<li>Step 2: Practice until it's easy and automatic.</li>
 					<li>Step 3: Apply it on your own.</li>
 				</ul>
-
-				<p>Most books and courses stop at step 1 (basic understanding).  Some of them skip to step 3 (applying the concept) and that can easily make you feel lost.</p>
-
-				<p>The crucial missing piece is Step 2 (practice until it's automatic)</p>
-
+				
 				<p>Other courses gloss over the practice phase because they want to go fast.  The irony is that rushing actually makes you go slower because you'll have to keep backtracking to the stuff you forgot.</p>
 
 				<p>If you practice a concept until it feels automatic, then you're free to think about how to apply it instead of worrying about whether you typed it correctly.</p>
@@ -484,7 +537,7 @@ ol > li {
 			<li>
 				<h4>What if I'm not happy with the course?</h4>
 
-				<p>There's a 60-day money-back guarantee.  If you're not 100% satisfied with the course, send one line of your code to show me you at least tried, and you'll get a full refund, no questions asked.</p>
+				<p>There's a 60-day money-back guarantee.  If you're not 100% satisfied with the course, email me one line of your code to show me you at least tried, and you'll get a full refund, no questions asked.</p>
 			</li>
 
 
@@ -568,7 +621,9 @@ ol > li {
 
 				<p>The material is broken up into small bits that will fit into your schedule.  If you've read this far, you have way more than enough time for this course.</p>
 
-				<p>Psychologically, the hardest part of finding time is getting started.  Don't worry about setting aside a big block of time.  Just tell yourself you'll peek at the next lesson for two minutes.  It'll be much easier to find time.</p>
+				<p><strong>The hardest part of finding time is getting started.</strong></p>
+
+				<p>Don't worry about setting aside a big block of time.  Just tell yourself you'll peek at the next lesson for two minutes.  It'll be much easier to find time.</p>
 			</li>
 
 
@@ -583,10 +638,10 @@ ol > li {
 
 	<div class="final_cta_container">
 
-		<h2>Get Simple Steps JavaScript before the course closes</h2>
+		<!-- <h2>Get Simple Steps JavaScript before the course closes</h2> -->
 
 
-		<p>Two paths stretch before you...</p>
+		<h3>Two paths stretch before you...</h3>
 
 		<div class="content_width">
 			<p>One, you can take this course.</p>
@@ -604,17 +659,24 @@ ol > li {
 			</ul>
 		</div>
 
-		<p>If you're ready to learn JavaScript, click the button below.</p>
+		<p>If you're ready to learn JavaScript, here's the next step:</p>
 
-		Value: Over $10,000 per year
+		<div class="cta_ribbon">
+			<h3>Get Simple Steps JavaScript for $49</h3>
+			<!-- <p>Value: Over $10,000 per year | Price: $49</p> -->
+		
+			<button class="sales_cta_button go-regform">
+				Get the Course
+			</button>
+		</div>
 
-		Price: $49
+		<!-- [Yes! I want to learn JavaScript]
 
-		[Yes! I want to learn JavaScript]
+		[Get Simple Steps JavaScript for $49] -->
 
-		[Get Simple Steps JavaScript for $49]
-
-		<p>Simple Steps JavaScript is backed by a 60-day money-back guarantee.  If you're not 100% satisfied with the course, send one line of your code to show me you at least tried, and you'll get a full refund, no questions asked.</p>
+		<div class="content_width">
+			<p>Simple Steps JavaScript is backed by a 60-day money-back guarantee.  If you're not 100% satisfied with the course, email me one line of your code to show me you at least tried, and you'll get a full refund, no questions asked.</p>
+		</div>
 
 	</div>
 
