@@ -1,24 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>sales page</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
-
-
-<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
-
-</head>
-<body class="language-javascript">
-
-
-<div id="menubar">
-	Simple Steps JavaScript
-</div>
-
-
 <style>
 #logo{
 	cursor: default;
@@ -253,12 +232,10 @@ ol > li {
 
 
 
-<div id="content">
-	<!-- <div id="maincol"> -->
 
-	<div class="content_width">
 
-		<h1>Confession:</h1>
+<div class="content_width">
+
 		<h2 class="h1_subtitle">I struggled to learn JavaScript</h2>
 
 
@@ -472,10 +449,10 @@ ol > li {
 				Get the Course
 			</button>
 			<p>
-				<img class="" src="../img/creditcards.png">
+				<img class="" src="/img/creditcards.png">
 			</p>
 
-			<img class="guarantee_badge" src="../img/guarantee.png">
+			<img class="guarantee_badge" src="/img/guarantee.png">
 			<div class="guarantee_small">
 				<p>
 					<strong>60-day money-back guarantee.</strong>
@@ -661,9 +638,9 @@ ol > li {
 			</button>
 
 			<p>
-				<img class="" src="../img/creditcards.png">
+				<img class="" src="/img/creditcards.png">
 			</p>
-			<img class="guarantee_badge" src="../img/guarantee.png">
+			<img class="guarantee_badge" src="/img/guarantee.png">
 			<div class="guarantee_small">
 				60-Day Money Back Guarantee
 			</div>
@@ -702,7 +679,7 @@ ol > li {
 			
 		<!-- <div class="content_width">
 			<div class="guarantee_small">
-				<img class="guarantee_badge" src="../img/guarantee.png">
+				<img class="guarantee_badge" src="/img/guarantee.png">
 				<p>
 					60-day money-back guarantee:
 					<br>If you're not 100% satisfied with the course, email me one line of your code to show me you at least tried, and you'll get a full refund, no questions asked.
@@ -711,64 +688,3 @@ ol > li {
 		</div> -->
 
 	</div>
-
-
-	<!-- </div> -->
-
-
-
-
-	<div id="sidebar">
-		<a href="#">Course Map</a>
-		<a href="#">Contact</a>
-		<a href="#">Log out</a>
-	</div>
-</div>
-
-
-
-<div id="footer">
-	&copy; Simple Steps Code
-</div>
-
-
-
-
-<script>
-//**********************************************************
-//
-// ALLOW NORMAL INDENTING IN CODE SAMPLES
-//
-//**********************************************************
-(function(){
-	var pres = document.getElementsByTagName('pre');
-	for(var i=0; i<pres.length; i++){
-		
-		// get code elements from pre tags (ignore standalone code elements)
-		var code = pres[i].getElementsByTagName('code')[0];
-		var output = code.innerHTML;
-
-		// remove extra tabs (so you can indent normally in code samples)
-		var tabs = output.match(/^\n*(\t+)/);
-		if(tabs){
-
-			// count beginning tabs (to get base level of indentation)
-			var n = tabs[1].length;
-			
-			// remove that number of beginning tabs from each line
-			var reg = RegExp('^\t{'+n+'}','gm');
-			output = output.replace(reg,'');
-		}
-
-		// trim beginning and end of code sample
-		output = output.replace(/^\n+|\s+$/g,'');
-
-		// show clean output in code samples
-		code.innerHTML = output;
-	};
-})();
-
-</script>
-<script src="../formatting/code_formatting/prism.js"></script>
-</body>
-</html>

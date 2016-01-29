@@ -326,13 +326,18 @@
 <script>
 
 // expand and contract steps on clicks
-var steps = document.getElementById('maincol').querySelectorAll('.step_title');
-for(var i=0; i<steps.length; i++){
-	steps[i].onclick = function(){
-		var content = this.parentElement.querySelector('.step_content');
-		content.style.display = content.style.display=='block' ? 'none' : 'block';
-	};
-}
+(function(){
+	var mc = document.getElementById('maincol');
+	if(mc){
+		var steps = mc.querySelectorAll('.step_title');
+		for(var i=0; i<steps.length; i++){
+			steps[i].onclick = function(){
+				var content = this.parentElement.querySelector('.step_content');
+				content.style.display = content.style.display=='block' ? 'none' : 'block';
+			};
+		}
+	}
+})();
 
 
 
