@@ -1,0 +1,40 @@
+Email 1
+
+Subject:
+A huge reason people struggle to learn JavaScript
+
+
+Have you ever seen those movies where someone will be running away from a monster and frantically trying to open a locked door?
+
+What happens in that situation?
+
+In a rush, they'll fumble around with their keys, desperately stabbing at the door, and it will take maybe ten tries to actually get the key in.
+
+If they had slowed down, they would have gotten the key in on the first try.  That leads to the weird but undeniable conclusion that they could have gotten in faster by going slower.
+
+Of course, that's easier said than done when a monster is chasing you, but that's not the point.
+
+The point is that JavaScript works the same way.  If you rush, you'll often progress slower.
+
+It's unbelievable how often this happens to people who try to learn JavaScript.  Here's the cycle so many people (myself included) have fallen into.  I call it the Spiral of Impatience:
+
+- You see and understand a concept.
+- You move on without taking time to practice it.
+- You understand the next concept.
+- You move on again.
+- You try to understand the next concept, but you can't because it builds on a previous concept you've forgotten by now.
+- You backtrack and relearn one of the previous concepts, still not practicing enough to remember it.
+- You continue on, but now a lot of the concepts are so related to previous ones that you have to backtrack through almost everything.
+- You get overwhelmed and take a little break.
+- That break turns into never learning JavaScript.
+
+Yikes.  Just writing that gave me horrible flashbacks.
+
+Now there's good news.  In order to avoid the Spiral of Impatience, all you need is a little bit of... well... patience.  When you understand something, that's the time NOT to move on.  Take a little bit of extra time and practice the small piece you just learned until it feels automatic.  Doing this might feel slower at first, and you'll be tempted to move onto the next thing, but if you relax and take the time to absorb the material, you'll find yourself flying through the later sections because you can perform the fundamentals automatically.
+
+Even better news: This doesn't just apply to JavaScript.  You can apply this concept to just about any skill you want to learn.
+
+I hope this has been helpful, and next time I'm going to go over another trap people fall into when trying to learn JavaScript.
+
+
+
