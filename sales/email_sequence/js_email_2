@@ -9,4 +9,36 @@ The dangers of JavaScript projects
 
 These six words have marked the beginning of so much frustration among people learning JavaScript.
 
+The source of the problems is that making a slideshow sounds simpler than it actually is.  This illusion of simplicity tricks a lot of new learners into attempting it too early.  What they don't realize is that making a slideshow requires an understanding of functions, variables, arrays, loops, timing, and the document object model.  While each of these concepts can be learned individually, attempting to learn them all at once is difficult to do and nearly impossible to retain afterwards.
+
+The slideshow attempt usually ends in one of two ways:
+1) The learner fails and gets discouraged.
+2) The learner succeeds in making the slideshow but doesn't really understand any of the concepts and forgets everything immediately because there were too many different concepts at once.
+
+Why does the slideshow example matter?  It matters because it shows how JavaScript learners can fall into the trap of attempting the wrong projects at the wrong time.  The danger of this trap is that it can discourage people who could have been really good.  They'll go from "This project sounds easy and fun, so I'll try it," to "JavaScript is too hard.  Maybe I'll learn it later," and then "later" becomes "never."
+
+To prevent you from falling into the JavaScript project trap, I've put together an outline showing what order to learn concepts in so that you get to do practical things as soon as possible.
+
+Here's a quick outline of what to learn:
+
+1. Use getElementById and innerHTML to show stuff on a page.
+2. Learn about comments and "console.log" in order to make things easier on yourself.
+3. Learn to use variables, strings, and numbers.
+4. Learn how to use functions.
+5. Get comfortable with logical statements involving "if" and "else".
+6. Use JavaScript to change the style of an HTML element dynamically.
+7. Learn to respond to user actions such as clicks and key presses.
+8. Learn about loops, arrays, and objects.
+9. Get more control of your pages by learning about querySelector and querySelectorAll, getAttribute, and setAttribute.
+10. Get better control of your text with string methods.
+11. Learn regular expressions in order to do pattern matching and text input validation.
+12. Learn to work with URLs in JavaScript.
+13. Learn about the Math object, JavaScript timing, and dates.
+
+As you learn these topics, you'll start to understand what sorts of projects you are prepared for, so you won't fall into the trap of trying the wrong project at the wrong time.  This is not to say that you shouldn't stretch your abilities with an ambitious project, but you don't want to start with something overwhelming and inefficient.
+
+This way of thinking can apply to a lot of things you might want to learn.  Instead of jumping into a huge project, learn small pieces at a time and you'll soon be able to build big things.
+
+I hope this helps!
+
 
