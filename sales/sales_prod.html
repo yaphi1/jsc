@@ -1,6 +1,9 @@
+
+
 <style>
-#logo{
+a#logo{
 	cursor: default;
+	color: #455;
 }
 #sidebar{
 	display: none;
@@ -11,14 +14,43 @@ body{
 }
 
 h1{
-	padding: 80px 15px 0px;
+	padding: 0px;
 	line-height: 1.3;
-	color: #566;
 	font-size: 50px;
 
-	max-width: 700px;
+	max-width: 900px;
 	margin: auto;
-	text-align: left;
+	text-align: center;
+}
+
+#menubar{
+	margin-bottom: 0px;
+	background: #fff;
+}
+
+.sales_masthead{
+	padding: 80px 15px;
+	/*
+	background: #eee;
+	color: #566;
+	*/
+	background: #455;
+	color: #fff;
+	/*background-image: radial-gradient(ellipse at 50% bottom , #62dCfB, #229CCB);*/
+
+
+
+	/*background-color: #3B2F63;*/
+	
+	/*background-image: radial-gradient(circle at 50% top , rgba(84, 90, 182, 0.6) 0%, rgba(84, 90, 182, 0) 75%), radial-gradient(circle at right top , #794AA2 0%, rgba(121, 74, 162, 0) 57%);*/
+
+	/*background-color: #6ED19C;
+	background-image: radial-gradient(circle at 50% top , rgba(84, 182, 90, 0.6) 0%, rgba(84, 182, 90, 0) 75%), radial-gradient(circle at right top , #4AA279 0%, rgba(74, 162, 121, 0) 57%);
+	color: #fff;*/
+}
+.sales_masthead_subtitle{
+	text-align: center;
+	margin-bottom: 0px;
 }
 
 .h1_subtitle{
@@ -26,7 +58,8 @@ h1{
 	color: #566;
 	padding: 0px;
 	margin: 0px;
-	font-size: 50px;
+	margin-top: 50px;
+	font-size: 40px;
 	padding-bottom: 30px;
 }
 
@@ -239,14 +272,166 @@ ol > li {
 	height: 150px;
 }
 
+
+
+
+
+
+
+
+
+/*********************************************************
+CLOCK STYLES
+**********************************************************/
+
+
+
+#clock-wrap{
+	background: #222;
+	color: #fff;
+	text-align: center;
+	font-size: 0px;
+	padding: 10px;
+	display: none;
+}
+
+#clock{
+	position: relative;
+	background: #444 none repeat scroll 0% 0%;
+	font-size: 0px;
+	display: inline-block;
+	border-radius: 4px;
+	border: 1px solid #000;
+	border-bottom: 1px solid #222;
+	overflow: hidden;
+	vertical-align: middle;
+
+	box-shadow: 0px -35px 25px -15px rgba(22, 22, 22, 0.5) inset;
+}
+
+#clock:after{
+	content: '';
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 50%;
+	background: rgba(33, 33, 33, 0.3) none repeat scroll 0% 0%;
+}
+
+#clock > div{
+	display: inline-block;
+	vertical-align: middle;
+
+	border-left: 1px solid #333;
+	border-right: 1px solid #555;
+}
+
+#clock > div:last-of-type{
+	border-right: none;
+}
+
+.sale-ends{
+	text-align: left;
+	width: 51px;
+	font-size: 12px;
+	line-height: 1.2;
+	padding-top: 3px;
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 0px;
+}
+
+.time{
+	font-size: 25px;
+	color: #eee;
+	display: inline-block;
+	width: 40px;
+	text-align: right;
+}
+
+.smalltext{
+	font-size: 12px;
+	padding-right: 10px;
+	padding-left: 2px;
+	color: #fff;
+}
+
+@media (min-width:750px) {
+	#clock-wrap{
+		background: transparent;
+		color: #333;
+		position: absolute;
+		top: 15px;
+		right: 15px;
+	}
+
+	.sale-ends{
+		width: 61px;
+		font-size: 15px;
+		padding-top: 2px;
+		/*font-family: gothambold;*/
+	}
+
+	.time{
+		font-size: 30px;
+		width: 50px;
+	}
+}
+
 </style>
 
 
 
 
-<div class="content_width">
 
-		<h2 class="h1_subtitle">I struggled to learn JavaScript</h2>
+
+	<!-- *********************************************************
+	CLOCK
+	********************************************************** -->
+
+	<div id="clock-wrap">
+		<div class="sale-ends">Course closes:</div>
+		<div id="clock">
+			
+			<div>
+				<span class="time days"></span>
+				<span class="smalltext">days</span>
+			</div>
+			<div>
+				<span class="time hours"></span>
+				<span class="smalltext">hrs</span>
+			</div>
+			<div>
+				<span class="time minutes"></span>
+				<span class="smalltext">min</span>
+			</div>
+			<div>
+				<span class="time seconds"></span>
+				<span class="smalltext">sec</span>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="sales_masthead">
+		<h1>
+			Learn JavaScript.<br>Actually remember it.<br>Be able to use it in real life.
+		</h1>
+		<p class="sales_masthead_subtitle">
+			Possible side effects:
+			<br>Better jobs, bigger salaries, and more freedom to create what you want.
+		</p>
+	</div>
+
+	<!-- <div id="maincol"> -->
+
+	<div class="content_width">
+
+		<h2 class="h1_subtitle">
+			Confession:
+			<br>I struggled to learn JavaScript
+		</h2>
 
 
 
@@ -726,3 +911,7 @@ ol > li {
 		</div> -->
 
 	</div>
+
+
+	<!-- </div> -->
+

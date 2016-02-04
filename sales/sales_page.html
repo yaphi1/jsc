@@ -15,13 +15,22 @@
 
 
 <div id="menubar">
-	Simple Steps JavaScript
+	<a id="logo" href="#">Simple Steps JavaScript</a>
 </div>
 
 
+
+<div id="content">
+
+
+
+
+
+
 <style>
-#logo{
+a#logo{
 	cursor: default;
+	color: #455;
 }
 #sidebar{
 	display: none;
@@ -44,7 +53,6 @@ h1{
 #menubar{
 	margin-bottom: 0px;
 	background: #fff;
-	color: #455;
 }
 
 .sales_masthead{
@@ -403,46 +411,46 @@ CLOCK STYLES
 
 
 
-<!-- *********************************************************
-CLOCK
-********************************************************** -->
 
-<div id="clock-wrap">
-	<div class="sale-ends">Course closes:</div>
-	<div id="clock">
-		
-		<div>
-			<span class="time days"></span>
-			<span class="smalltext">days</span>
-		</div>
-		<div>
-			<span class="time hours"></span>
-			<span class="smalltext">hrs</span>
-		</div>
-		<div>
-			<span class="time minutes"></span>
-			<span class="smalltext">min</span>
-		</div>
-		<div>
-			<span class="time seconds"></span>
-			<span class="smalltext">sec</span>
+
+	<!-- *********************************************************
+	CLOCK
+	********************************************************** -->
+
+	<div id="clock-wrap">
+		<div class="sale-ends">Course closes:</div>
+		<div id="clock">
+			
+			<div>
+				<span class="time days"></span>
+				<span class="smalltext">days</span>
+			</div>
+			<div>
+				<span class="time hours"></span>
+				<span class="smalltext">hrs</span>
+			</div>
+			<div>
+				<span class="time minutes"></span>
+				<span class="smalltext">min</span>
+			</div>
+			<div>
+				<span class="time seconds"></span>
+				<span class="smalltext">sec</span>
+			</div>
 		</div>
 	</div>
-</div>
 
 
-<div class="sales_masthead">
-	<h1>
-		Learn JavaScript.<br>Actually remember it.<br>Be able to use it in real life.
-	</h1>
-	<p class="sales_masthead_subtitle">
-		Possible side effects:
-		<br>Better jobs, bigger salaries, and more freedom to create what you want.
-	</p>
-</div>
+	<div class="sales_masthead">
+		<h1>
+			Learn JavaScript.<br>Actually remember it.<br>Be able to use it in real life.
+		</h1>
+		<p class="sales_masthead_subtitle">
+			Possible side effects:
+			<br>Better jobs, bigger salaries, and more freedom to create what you want.
+		</p>
+	</div>
 
-
-<div id="content">
 	<!-- <div id="maincol"> -->
 
 	<div class="content_width">
@@ -935,13 +943,6 @@ CLOCK
 	<!-- </div> -->
 
 
-
-
-	<div id="sidebar">
-		<a href="#">Course Map</a>
-		<a href="#">Contact</a>
-		<a href="#">Log out</a>
-	</div>
 </div>
 
 
@@ -989,6 +990,17 @@ CLOCK
 
 </script>
 <script src="../formatting/code_formatting/prism.js"></script>
+
+
+<!-- remove logo link functionality -->
+<script>
+(function(){
+	var logo = document.getElementById('logo');
+	if(logo && logo.href){
+		logo.removeAttribute('href');
+	}
+})();
+</script>
 
 
 <!-- clock script -->

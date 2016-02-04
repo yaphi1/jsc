@@ -151,7 +151,6 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 
 	<div id="login">
 		<h1>Simple Steps JavaScript</h1>
-		<h2 style="padding-top:20px; text-align:center;">Login</h2>
 	<?php
 
 	unset( $login_header_url, $login_header_title );
