@@ -1,0 +1,73 @@
+
+
+<!-- get values from payment form -->
+<script>
+(function(){
+	// get payment form from document
+	var payform = document.getElementById('regform-1451720166');
+	
+	// if form is found...
+	if(payform){
+
+		// get form field values
+		var email = payform.querySelector('.regform-email').value;
+		var firstname = payform.querySelector('.regform-first_name').value;
+		var lastname = payform.querySelector('.regform-last_name').value;
+
+		// make cookies expire in 30 days
+		var exp = new Date(Date.parse(new Date()) + (30*24*60*60*1000));
+		
+		// store email and name in cookies in order to streamline registration later
+		document.cookie='email='+email+'; path=/; expires='+exp+'; domain=.simplestepscode.com';
+		document.cookie='firstname='+firstname+'; path=/; expires='+exp+'; domain=.simplestepscode.com';
+		document.cookie='lastname='+lastname+'; path=/; expires='+exp+'; domain=.simplestepscode.com';
+	}
+})();
+</script>
+
+
+
+
+
+
+<!-- populate values in registration form -->
+<script>
+
+(function(){
+
+	// easily get cookie value
+	function getCookie(cookie_name){
+		var reg = new RegExp('(^|\\s)'+cookie_name+'\\=([^;]+)','i');
+		var mat = document.cookie.match(reg);
+		return mat ? mat[2] : '';
+	}
+
+	// if value is already available, don't make user repeat it
+	function populate_and_hide(field,value){
+		var elem = document.getElementById(field);
+		elem.value = value;
+		elem.parentElement.style.display = 'none';
+	}
+
+	// which cookie data goes in which form field
+	var cookie_data = {
+		'wlm_username_field': getCookie('email'),
+		'wlm_email_field': getCookie('email'),
+		'wlm_firstname_field': getCookie('firstname'),
+		'wlm_lastname_field': getCookie('lastname')
+	}
+
+	// if cookie data available, populate and hide corresponding form field
+	for(var i in cookie_data){
+		if(cookie_data[i]){
+			populate_and_hide(i,cookie_data[i]);
+		}
+	}
+})();
+
+</script>
+
+
+
+
+
