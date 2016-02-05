@@ -179,6 +179,50 @@ input[type=submit]:hover{
 
 
 
+
+
+
+
+
+
+
+/************************************************************
+UI ELEMENTS
+*************************************************************/
+
+.big_cta{
+	border: none;
+	background: #3C9F6A;
+	color: #fff;
+	padding: 20px 40px;
+	font-size: 25px;
+	cursor: pointer;
+	border-radius: 4px;
+	font-family: Nunito, sans-serif;
+	text-decoration: none;
+}
+
+@media (min-width: 500px){
+	.big_cta{
+		font-size: 40px;
+	}
+}
+
+.big_cta:hover{
+	background: #6ED19C;
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
 /************************************************************
 TOP MENU
 *************************************************************/
