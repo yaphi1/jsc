@@ -5,11 +5,14 @@ The dangers of JavaScript projects
 
 
 
+Hi *|FNAME|*,
+
+Look at these words:
 "I'll just make a quick slideshow."
 
 These six words have marked the beginning of so much frustration among people learning JavaScript.
 
-The source of the problems is that making a slideshow sounds simpler than it actually is.  This illusion of simplicity tricks a lot of new learners into attempting it too early.  What they don't realize is that making a slideshow requires an understanding of functions, variables, arrays, loops, timing, and the document object model.  While each of these concepts can be learned individually, attempting to learn them all at once is difficult to do and nearly impossible to retain afterwards.
+The source of the problems is that making a slideshow sounds simpler than it actually is.  This illusion of simplicity tricks a lot of learners into attempting it too early.  What they don't realize is that making a slideshow requires an understanding of functions, variables, arrays, loops, timing, and the document object model.  While each of these concepts can be learned individually, attempting to learn them all at once is difficult to do and nearly impossible to retain afterwards.
 
 The slideshow attempt usually ends in one of two ways:
 1) The learner fails and gets discouraged.
@@ -40,5 +43,3 @@ As you learn these topics, you'll start to understand what sorts of projects you
 This way of thinking can apply to a lot of things you might want to learn.  Instead of jumping into a huge project, learn small pieces at a time and you'll soon be able to build big things.
 
 I hope this helps!
-
-
