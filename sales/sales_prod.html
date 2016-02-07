@@ -1,5 +1,4 @@
 
-
 <style>
 a#logo{
 	cursor: default;
@@ -193,7 +192,8 @@ ol > li {
 	max-width: 650px;
 }
 
-.sales_cta_button{
+.sales_cta_button,
+#content button.go-regform {
 	border: none;
 	background: #3C9F6A;
 	color: #fff;
@@ -202,15 +202,20 @@ ol > li {
 	cursor: pointer;
 	border-radius: 4px;
 	font-family: Nunito, sans-serif;
+	font-weight: normal;
+	text-transform: none;
+	margin: auto;
 }
 
 @media (min-width: 500px){
-	.sales_cta_button{
+	.sales_cta_button,
+	#content button.go-regform {
 		font-size: 40px;
 	}
 }
 
-.sales_cta_button:hover{
+.sales_cta_button:hover,
+#content button.go-regform:hover {
 	background: #6ED19C;
 }
 
@@ -377,6 +382,29 @@ CLOCK STYLES
 		font-size: 30px;
 		width: 50px;
 	}
+}
+
+
+
+
+
+
+
+/*********************************************************
+STRIPE PURCHASE FORM STYLES
+**********************************************************/
+
+div.regform .regform-form .txt-fld label,
+div.regform .regform-form .widefield .expires label{
+	font-size: 13px;
+	color: #333;
+}
+
+div.regform .regform-form .btn-fld .regform-button{
+	font-size: 20px;
+	text-transform: none;
+	padding: 15px 0px;
+	width: 100%;
 }
 
 </style>
@@ -668,9 +696,11 @@ CLOCK STYLES
 
 			<p class="big_p">You can get Simple Steps JavaScript for $49.</p>
 
-			<button class="sales_cta_button">
+			<!-- <button class="sales_cta_button">
 				Get the Course
-			</button>
+			</button> -->
+			[wlm_stripe_btn sku=1451720166]
+
 			<p>
 				<img class="" src="../img/creditcards.png">
 			</p>
@@ -856,7 +886,10 @@ CLOCK STYLES
 			<h4>Price: $49</h4>
 			<!-- <p>Value: Over $10,000 per year | Price: $49</p> -->
 		
-			<button class="sales_cta_button">
+			<!-- <button class="sales_cta_button">
+				Get the Course
+			</button> -->
+			<button class="regform-button go-regform" href="#regform-1451720166">
 				Get the Course
 			</button>
 
@@ -914,4 +947,3 @@ CLOCK STYLES
 
 
 	<!-- </div> -->
-
