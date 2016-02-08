@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Steps JavaScript</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Nunito-Light'), url(https://fonts.gstatic.com/s/nunito/v7/1TiHc9yag0wq3lDO9cw0vpBw1xU1rKptJj_0jans920.woff2) format('woff2'), url(https://fonts.gstatic.com/s/nunito/v7/1TiHc9yag0wq3lDO9cw0vrO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+
+body{
+	margin: 0px;
+	font-size: 20px;
+	font-family: 'Nunito', sans-serif;
+	color: #333;
+}
+
+h1{
+	text-align: center;
+	margin: 0px auto;
+	padding: 50px 20px 30px;
+	font-size: 40px;
+	max-width: 900px;
+}
+
+#menubar{
+	padding: 30px 30px;
+	background: #455;
+	color: #fff;
+}
+
+#menubar a{
+	color: #333;
+	text-decoration: none;
+}
+
+
+#opt_in_box{
+	max-width: 900px;
+	border: 5px solid #eee;
+	padding: 20px;
+	margin: auto;
+	margin-bottom: 40px;
+}
+
+#opt_in_text{
+	padding-bottom: 20px;
+	font-size: 25px;
+}
+
+#content_container{
+	text-align: center;
+}
+
+input{
+	width: 100%;
+	margin-bottom: 10px;
+	font-size: 20px;
+	padding: 10px;
+	box-sizing: border-box;
+	border: 1px solid #ddd;
+}
+
+button{
+	width: 100%;
+	font-size: 20px;
+	padding: 10px;
+	box-sizing: border-box;
+	display: block;
+	background: #eee;
+	cursor: pointer;
+	background: #0c7;
+	color: #fff;
+	border: 0px;
+	border-bottom: 2px solid green;
+
+}
+
+button:hover{
+	background: #1d8;
+	box-shadow: 0px 5px 5px -3px #999;
+}
+
+h1 span{
+	color: #6a7;
+}
+
+.guarantee{
+	padding-top: 5px;
+	font-size: 12px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+<h1>
+	Sorry, <span>Simple Steps JavaScript</span> is now closed.
+</h1>
+<div id="content_container">
+	
+	<div id="opt_in_box">
+		<div id="opt_in_text">
+			Sign up for the Simple Steps JavaScript waiting list and be the first to know when the course reopens.
+		</div>
+
+		<!-- Begin signup form -->
+		<form action="//simplestepscode.us9.list-manage.com/subscribe/post?u=cf6125d07d2da4bcb868629d4&amp;id=7b589f034c" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+			<input type="text" value="" name="FNAME" class="required" placeholder="First Name">
+			<input type="email" value="" name="EMAIL" class="required email" placeholder="Email">
+			
+
+			<input type="hidden" value="" name="URL" class="mce_URL">
+			<input type="hidden" value="" name="PATH" class="mce_PATH">
+			<input type="hidden" value="" name="REFERRER" class="mce_REFERRER">
+			<input type="hidden" value="js_wait_list" name="FORM_TYPE" class="mce_FORM_TYPE">
+
+			<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+			<div style="position: absolute; left: -5000px;"><input type="text" name="b_cf6125d07d2da4bcb868629d4_7b589f034c" tabindex="-1" value=""></div>
+			<button type="submit" name="subscribe">Yes, let me know when the course opens</button>
+		</form>
+		<!-- End signup form -->
+
+		<div class="guarantee">
+			100% privacy. No spam.
+		</div>
+
+	</div>
+</div>
+
+
+
+
+<script>
+var yb = { id : function(str){return document.getElementById(str)} };
+
+
+// add hidden data to email forms
+function fill_form_data(css_class, input){
+	var class_string = '.' + css_class;
+	var items = document.querySelectorAll(class_string);
+	for(var i=0; i<items.length; i++){
+		items[i].value = input;
+	}
+}
+var fields_to_fill = [
+	['mce_URL', window.location.href]
+	,['mce_PATH', window.location.pathname]
+	,['mce_REFERRER', document.referrer || 'direct' ]
+];
+for(var i=0; i<fields_to_fill.length; i++){
+	var css_class = fields_to_fill[i][0];
+	var form_input = fields_to_fill[i][1];
+	fill_form_data(css_class, form_input);
+}
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-22685293-3', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
