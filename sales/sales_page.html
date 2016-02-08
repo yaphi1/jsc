@@ -1075,7 +1075,20 @@ function startClock(endtime){
 	var timeinterval = setInterval(updateClock,1000);
 }
 
-startClock(Date.parse(new Date())+(1000*60*60*3)+(1000*60*60*24*2));
+// deadline: Fri Feb 19, 2016, 11:59pm Pacific
+var deadline = 'Feb 19 2016 23:59:59 GMT-0800';
+
+// if deadline passed, redirect to course closed page
+if(Date.parse(new Date()) >= Date.parse(deadline)){
+	window.location.href = 'http://simplestepscode.com/js_course_closed/';
+}
+// otherwise, start clock
+else{
+	startClock(deadline);
+}
+
+
+// startClock(Date.parse(new Date())+(1000*60*60*3)+(1000*60*60*24*2));
 
 </script>
 </body>
