@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<style>
+
+#mydiv{
+	transition: opacity 0.2s;
+}
+
+</style>
+</head>
+<body>
+
+
+
+
+<style>
+#mydiv{
+	background: red;
+	width: 200px;
+	height: 200px;
+	transition: all 0.2s;
+}
+</style>
+
+<div id="mydiv">This is the div.</div>
+
+<input type="text" id="tbox">
+
+<button id="resize">Resize</button>
+
+<script>
+
+var mydiv = document.getElementById('mydiv');
+
+document.getElementById('resize').onclick = function(){
+	mydiv.style.width = tbox.value;
+	mydiv.style.height = tbox.value;
+};
+
+</script>
+
+
+</body>
+</html>

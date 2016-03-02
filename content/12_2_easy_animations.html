@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>12_2 - easy animations</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+		
+		<h1>Create modern animations without learning any new JavaScript</h1>
+
+
+		<p>Now that you know how to change a style and a className in JavaScript, you can trigger animations with the help of CSS3 transitions.</p>
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+
+		<div class="section">
+			<h2>CSS3 Transitions</h2>
+
+			<p>In CSS, the <b>transition</b> property determines how an element behaves when its style is changed.</p>
+
+			<p>Look at this bit of CSS, for example:</p>
+
+			<pre><code class="language-css">
+				#mydiv{
+					transition: opacity 0.2s;
+				}
+			</code></pre>
+
+			<p>This CSS says, "Hey, let's look at the element with the id <code>mydiv</code>.  Whenever the <b>opacity</b> of that element changes, the transition will take 0.2 seconds."</p>
+
+
+			<p>Type the following code to try it out.</p>
+
+			<pre><code class="language-markup">
+				&lt;style&gt;
+				#mydiv{
+					transition: opacity 0.2s;
+				}
+				&lt;/style&gt;
+
+				&lt;div id="mydiv"&gt;This div will fade in and out.&lt;/div&gt;
+
+				&lt;button id="fadeout"&gt;Fade Out&lt;/button&gt;
+				&lt;button id="fadein"&gt;Fade In&lt;/button&gt;
+				
+				&lt;script&gt;
+				// store the div in a variable so you don't have to keep typing it
+				var mydiv = document.getElementById('mydiv');
+
+				// fade out
+				document.getElementById('fadeout').onclick = function(){
+					mydiv.style.opacity = '0';
+				};
+
+				// fade in
+				document.getElementById('fadein').onclick = function(){
+					mydiv.style.opacity = '1';
+				};
+				&lt;/script&gt;
+			</code></pre>
+
+			<p>Here's what the code does:</p>
+
+			<ol>
+				<li>
+					The CSS <b>transition</b> says that our div will take 0.2 seconds to transition whenever its opacity is changed.
+				</li>
+				<li>
+					<p>The script says whenever one of the buttons is clicked, change the opacity.</p>
+					<p>The CSS transition handles the animation automatically!</p>
+				</li>
+			</ol>
+
+			<p>There you have it.  If you want to animate easily in JavaScript, just throw a CSS <b>transition</b> on there, and you can use JavaScript to change the styles as much as you want!</p>
+
+			<div class="special_section tip">
+				<h2>
+					Tip: Get elements by id more conveniently
+				</h2>
+				<p>
+					If you're going to get an element by its id more than once, just store it in a variable (like in the previous example with <code>mydiv</code>).  There are two benefits:
+				</p>
+				<p>1. You don't have to keep typing that long expression.</p>
+				<p>2. Your JavaScript will perform better because it won't have to keep searching through the whole document for the same element over and over again.</p>
+			</div>
+
+			<p><strong>Transitions work for other properties besides opacity too!</strong></p>
+
+			<h3>Color change animation</h3>
+			
+			<p>Type the following code to try a color change animation:</p>
+
+			<pre><code class="language-markup">
+				&lt;style&gt;
+				#mydiv{
+					transition: color 0.2s;
+				}
+				&lt;/style&gt;
+
+				&lt;div id="mydiv"&gt;This is the div.&lt;/div&gt;
+
+				&lt;button id="turnred"&gt;Turn Red&lt;/button&gt;
+				&lt;button id="turnblue"&gt;Turn Blue&lt;/button&gt;
+				
+				&lt;script&gt;
+
+				var mydiv = document.getElementById('mydiv');
+
+				document.getElementById('turnred').onclick = function(){
+					mydiv.style.color = 'red';
+				};
+
+				document.getElementById('turnblue').onclick = function(){
+					mydiv.style.color = 'blue';
+				};
+				&lt;/script&gt;
+			</code></pre>
+
+			<p>This works exactly the same way as the previous example except with color instead of opacity.</p>
+
+			<h3>Movement animation</h3>
+
+			<p>Now type this one to try some movement.  It's the same pattern as the previous examples.</p>
+
+			<pre><code class="language-markup">
+				&lt;style&gt;
+				#mydiv{
+					display: inline-block;
+					background: red;
+					padding: 30px;
+					transition: transform 0.2s;
+				}
+				&lt;/style&gt;
+
+				&lt;div id="mydiv"&gt;This is such a beautiful car.&lt;/div&gt;
+				&lt;br&gt;&lt;br&gt;
+				&lt;button id="turnred"&gt;Move to 100&lt;/button&gt;
+				&lt;button id="turnblue"&gt;Move to 400&lt;/button&gt;
+
+				&lt;script&gt;
+
+				var mydiv = document.getElementById('mydiv');
+
+				document.getElementById('turnred').onclick = function(){
+					mydiv.style.transform = 'translateX(100px)';
+				};
+
+				document.getElementById('turnblue').onclick = function(){
+					mydiv.style.transform = 'translateX(400px)';
+				};
+				&lt;/script&gt;
+			</code></pre>
+
+			<p>Quick note: It's easy to forget the way CSS translate is formatted, so just be aware of it to avoid tripping up.</p>
+
+
+			<h3>Animate a bunch of properties at the same time</h3>
+
+
+			<p>If you want to change a whole bunch of properties at the same time without rewriting the transition for each one, you can just use transition <b>all</b> like in this example (type it out):</p>
+
+			<pre><code class="language-markup">
+				&lt;style&gt;
+				#mydiv{
+					transition: all 0.2s;
+				}
+				&lt;/style&gt;
+
+				&lt;div id="mydiv"&gt;This is the div.&lt;/div&gt;
+
+				&lt;button id="blue"&gt;Blue&lt;/button&gt;
+				&lt;button id="redgold"&gt;Red and Gold&lt;/button&gt;
+
+				&lt;script&gt;
+
+				var mydiv = document.getElementById('mydiv');
+
+				document.getElementById('blue').onclick = function(){
+					mydiv.style.color = 'blue';
+					mydiv.style.backgroundColor = 'transparent';
+					mydiv.style.padding = '0px';
+				};
+
+				document.getElementById('redgold').onclick = function(){
+					mydiv.style.color = 'red';
+					mydiv.style.backgroundColor = 'gold';
+					mydiv.style.padding = '40px';
+				};
+				&lt;/script&gt;
+			</code></pre>
+
+
+
+
+			<p>Alternatively, you can change the <b>className</b>. Try this example:</p>
+
+			<pre><code class="language-markup">
+				&lt;style&gt;
+				#mydiv{
+					transition: all 0.2s;
+				}
+
+				.highlight{
+					background-color: yellow;
+					padding: 20px;
+				}
+				&lt;/style&gt;
+
+				&lt;div id="mydiv"&gt;This is the div.&lt;/div&gt;
+
+				&lt;button id="unhighlight"&gt;Unhighlight&lt;/button&gt;
+				&lt;button id="highlight"&gt;Highlight&lt;/button&gt;
+
+				&lt;script&gt;
+
+				var mydiv = document.getElementById('mydiv');
+
+				document.getElementById('unhighlight').onclick = function(){
+					mydiv.className = '';
+				};
+
+				document.getElementById('highlight').onclick = function(){
+					mydiv.className = 'highlight';
+				};
+				&lt;/script&gt;
+			</code></pre>
+
+
+			
+			<div class="special_section warning">
+				<h2>Warning: Remember compatibility</h2>
+				<p>CSS3 <b>transitions</b> will not work in older browsers from IE9 down.  In most cases, this shouldn't matter too much as the style will reach the same destination, just without the smooth transition.</p>
+
+				<p>
+					To cover certain versions of Safari and the iPhone, you'll need to write CSS transitions like this:
+				</p>
+				<pre><code class="language-css">
+					-webkit-transition: all 0.2s; /* for safari and iphone */
+					transition: all 0.2s;
+				</code></pre>
+			</div>
+
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+		<div class="section">
+			<h2>Other ways to animate:</h2>
+
+			<p>You already have enough to remember, so don't worry too much about this for now.</p>
+			<p>I'm only including the following info because I want you to be aware it exists.</p>
+
+			<h3>If you want more complex CSS3 animations:</h3>
+
+			<p>
+				In this case you don't have to use transitions at all.  Put a pure CSS animation in a CSS class and change the JavaScript <b>className</b> of whatever you want to animate.
+			</p>
+			<p>
+				I'm not going to go over that here because this is not a CSS course and you have more than enough to remember, but if you're interested, here's a <a href="http://www.w3schools.com/css/css3_animations.asp" target="_blank">reference on CSS3 animations</a>.
+			</p>
+
+			<h3>If you want maximum compatibility with older browsers:</h3>
+
+			<p>
+				You can use something called <code>setInterval</code> to change a CSS property repeatedly at really short intervals to create an animation.
+			</p>
+			<p>
+				We haven't gotten to <code>setInterval</code> yet, so don't worry about it for now.
+			</p>
+
+			<h3>If you want fine grained control and high performance animations, and you're not concerned about older browsers:</h3>
+
+			<p>Then you can use something called <b>requestAnimationFrame</b>.</p>
+
+			<p>Don't worry about remembering this.  The only reason I'm even mentioning it is so you know it exists.</p>
+
+
+		</div>
+
+
+
+
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+			<ol>
+				<li>
+					<p>Type the following code 5 times:</p>
+					<pre><code class="language-css">
+						transition: all 0.2s;
+					</code></pre>
+				</li>
+
+				<li>
+					<p>Create a div and two buttons.  One button should make the div fade out and the other should make it fade in.</p>
+					<p>Try not to look at any examples.</p>
+				</li>
+
+				<li>
+					<p>Create a div and a button.  The button should smoothly move the div 300 pixels to the right.</p>
+				</li>
+
+				<li>
+					<p>Challenge exercise:</p>
+					<p>Create a div, a button, and a text field.  Give the div a red background so you can see it, and give it a starting width and height of 100px.</p>
+					<p>When the button is clicked, the width and height of the div should smoothly transition to whatever value is in the text field.</p>
+					<p>For example, if the user types <code>40px</code> in the text box and clicks the button, the width and height of the div should smoothly transition to 40px.</p>
+				</li>
+
+			</ol>
+		</div>
+
+
+
+
+		<div class="section">
+			<p>Now you can do basic animations!</p>
+
+			<p>
+				Just remember:<br>Put a transition on it, and change the CSS properties.
+				<br>That's all.
+			</p>
+		</div>
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
