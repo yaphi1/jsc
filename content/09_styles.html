@@ -104,6 +104,23 @@
 			<p>Horrible color scheme aside, you can start to see a pattern here:</p>
 			<p>It's basically <code>[element]</code> dot <code>[style]</code> dot <code>[css property]</code> equals <code>[value]</code>.</p>
 
+			<div class="special_section tip">
+				<h3>But how does it actually work?</h3>
+				<p>The direct way you just learned to change styles through JavaScript works by changing the <b>style</b> property of the HTML element.</p>
+				<p>In other words, this script:</p>
+				<pre><code>
+					document.getElementById('mydiv').style.color = 'green';
+				</code></pre>
+				<p>...would change something like this:</p>
+				<pre><code class="language-markup">
+					&lt;div id="mydiv"&gt;My div&lt;/div&gt;
+				</code></pre>
+				<p>...into something like this:</p>
+				<pre><code class="language-markup">
+					&lt;div id="mydiv" style="color:green;"&gt;My div&lt;/div&gt;
+				</code></pre>
+			</div>
+
 			<br>
 			<h3>How to hide and show HTML elements with JavaScript</h3>
 			<p>Hide and show elements by changing the CSS <code>display</code> property to <code>"none"</code> or <code>"block"</code> (or <code>"inline-block"</code> if needed).</p>
