@@ -144,20 +144,27 @@
 			<pre><code>
 				var x = 5;
 
-				// these expressions all do the same thing: they add 1
+				// these expressions all increase x by 1
 				x = x+1;
 				x += 1;
 				x++;
 
-				// these expressions all subtract 1
+				// these expressions all decrease x by 1
 				x = x-1;
 				x-=1;
 				x--;
 
-				// these expressions both add 5
+				// these expressions both add 5 to x
 				x = x + 5;
 				x += 5;
 			</code></pre>
+
+
+			<div class="special_section tip">
+				<h3>Quick tip: Don't be alarmed by the behavior of x++ in the console</h3>
+				<p>If you're ever playing with <code>x++</code> in the console, and you notice it spits out x, don't worry.  Your variable was still increased by one.  It's just that x++ outputs the original x first and then immediately increments it by one.</p>
+				<p>On the other hand, <code>++x</code> increments x by one first and then outputs it.  You don't need to remember this; I just want you to know ++x exists.  All the same stuff applies for <code>x--</code> and <code>--x</code>.</p>
+			</div>
 
 		</div>
 
