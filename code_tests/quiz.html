@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+body{
+	margin: 0px;
+	font-size:20px;
+	font-family:sans-serif;
+	color:#333;
+}
+
+
+</style>
+
+</head>
+<body>
+
+
+<form id="quiz" autocomplete="off">
+
+	<fieldset>
+		<label>
+			<input type="radio" name="q1" value="a">
+			Answer A
+		</label>
+		<label>
+			<input type="radio" name="q1" value="b">
+			Answer B
+		</label>
+	</fieldset>
+
+
+
+	<fieldset>
+		<label>
+			<input type="radio" name="q2" value="a">
+			Answer A
+		</label>
+		<label>
+			<input type="radio" name="q2" value="b">
+			Answer B
+		</label>
+	</fieldset>
+
+</form>
+
+
+<button id="check">Check</button>
+
+
+
+<div id="output"></div>
+
+
+<script>
+function checkAnswers(){
+	var answerKey = ['a','b'];
+
+
+	var questions = document.querySelectorAll('#quiz > fieldset');
+	var selections = document.querySelectorAll('fieldset input:checked');
+
+	var answers = Array.slice.call(null,selections).map(function(v){return v.value});
+
+	if(selections.length!=questions.length){
+		alert('please answer everything');
+	}
+	else{
+
+		var results = answers.map(function(v,i){return v===answerKey[i]});
+
+		var numright = results.filter(function(v){return !!v;}).length;
+
+		document.getElementById('output').innerHTML = answers + '<br>'+results +'<br><br>Score: '+numright+'/'+answerKey.length;
+	}
+}
+
+document.getElementById('check').onclick = checkAnswers;
+
+
+</script>
+</body>
+</html>

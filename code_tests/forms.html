@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+body{
+	margin: 0px;
+	font-size:20px;
+	font-family:sans-serif;
+	color:#333;
+}
+
+
+</style>
+
+</head>
+<body>
+
+
+<p>Form notes:</p>
+<ul>
+	<li>radio buttons</li>
+	<li>check boxes</li>
+	<li>onclick</li>
+	<li>onchange</li>
+	<li>select options</li>
+	<li>:checked selector</li>
+	<li>multiple questions and name attribute</li>
+	<li>fieldsets</li>
+	<li>handling submit and button</li>
+	<li>autocomplete off</li>
+	<li>storing data in convenient array or object (maybe not)</li>
+</ul>
+
+<label>
+	<input type="checkbox">
+	Option 1
+</label>
+<label>
+	<input type="checkbox">
+	Option 2
+</label>
+
+<br><br>
+
+<fieldset>
+	<label>
+		<input type="radio" name="q1" value="a" id="opta">
+		Answer A
+	</label>
+	<label>
+		<input type="radio" name="q1" value="b" id="optb">
+		Answer B
+	</label>
+</fieldset>
+
+
+<script>
+function checkAnswers(){
+	var rads = document.querySelectorAll('input[type=radio]');
+	var rads = document.querySelectorAll('input[type=radio]');
+
+	for(var i=0; i<rads.length; i++){
+
+	}
+}
+
+document.getElementById('opta').onclick = function(){
+	console.log('option a');
+};
+
+document.getElementById('optb').onclick = function(){
+	console.log('option b');
+};
+
+
+
+</script>
+</body>
+</html>
