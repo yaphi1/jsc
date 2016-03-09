@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>21_2 - forms</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+
+
+
+		<h1>Get better with forms</h1>
+
+
+		- start: you already dealt with text input
+
+		- checkbox
+			- onclick (if this.checked)
+			- mention label
+		- check if a checkbox is checked with .checked
+			- mention label
+			- handle onclick
+		- handle radio buttons
+			- mention label again
+			- mention importance of names
+				- show two different questions and warn about names
+		- handle select options
+
+
+		<ul>
+			<li>radio buttons</li>
+			<li>labels</li>
+			<li>values</li>
+			<li>check boxes</li>
+			<li>fieldset</li>
+			<li>select dropdowns</li>
+			<li>autocomplete off</li>
+			<li>submit buttons</li>
+		</ul>
+
+
+		<p>There will be times you'll need to work with URLs in JavaScript.</p>
+		<p>For example, maybe you want to check what page the user is on and trigger certain behavior if they're in the right place.</p>
+		<p>Maybe you'll want to change where a link goes depending on a user's preferences.</p>
+		<p>It's up to you.</p>
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+		
+
+
+		<div class="section">
+			<h2>Get a URL</h2>
+
+			<p>Type this example to get the current url of your page:</p>
+
+			<pre><code>
+				var url = window.location.href;
+				console.log(url);
+			</code></pre>
+
+		</div>
+
+
+
+		<div class="section">
+			<h2>Set a URL</h2>
+
+			<p>Type this example to go to a new URL:</p>
+
+			<pre><code>
+				window.location.href = 'http://www.google.com/';
+			</code></pre>
+		</div>
+
+
+
+		<div class="section">
+			<h2>Get the pathname</h2>
+
+			<p>The URL <b>pathname</b> (also called path) is the part of the url after the domain name but before the question mark (if there is one).</p>
+			
+			<p>For example, in <code>http://www.google.com/analytics/?whatever</code> the path would be <code>"/analytics/"</code>.</p>
+
+			<p>Go to <a href="http://www.google.com/analytics/?whatever" target="_blank">http://www.google.com/analytics/?whatever</a> or any site of your choice and type the following in the console to see the pathname:</p>
+
+			<pre><code>
+				var path = window.location.pathname;
+				console.log(path);
+			</code></pre>
+
+			<p>This is a useful way to detect which page the user is on.</p>
+		</div>
+
+
+
+		<div class="section">
+			<h2>Find out what page the user came from</h2>
+
+			<p>To see where a user came from, use <b>document.referrer</b>.</p>
+
+			<p>To see this in action, go to any page on the internet and click on a link.  Then type the following into the console:</p>
+
+			<pre><code>
+				var previousPage =  document.referrer;
+				console.log(previousPage);
+			</code></pre>
+
+			<p><b>document.referrer</b> will show which page linked you to the page you're currently on.</p>
+			<p>If you went directly to the page you're on (not through a link), then document.referrer will be blank.</p>
+		</div>
+
+
+
+
+		<div class="section">
+			<h2>URL Reference</h2>
+
+			<p>Here's a reference that can help you work with URLs:</p>
+
+			<p>
+				<a href="http://www.w3schools.com/jsref/obj_location.asp" target="_blank">URL Reference</a>
+			</p>
+
+			<p>You don't need to memorize this stuff, but just be aware it exists.</p>
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+			<ol>
+				<li>
+					<p>Type the following code 3 times looking at an example and 5 times without looking at an example.</p>
+
+					<pre><code>
+						window.location.href
+					</code></pre>
+				</li>
+
+				<li>
+					<p>Create a basic page with one div.</p>
+					<p>If your URL has <code>".html"</code> anywhere in it, write the following in the div:</p>
+					<p><code>"This is an HTML file."</code></p>
+
+					<p>Hint: You'll have to get the URL, then use a regular expression match on it.</p>
+				</li>
+
+				<li>
+					<p>Create a text field and a button.</p>
+					<p>The text field should have a label of "Customer Type", and the button should say "Go".</p>
+					<p>If the user enters "business" in the text field, then the "Go" button should take them to
+						<pre><code>http://www.google.com/business</code></pre>
+						but otherwise it should take them to
+						<pre><code>http://www.google.com/</code></pre>
+					</p>
+					<p>Feel free to substitute whatever urls you want though.</p>
+				</li>
+			</ol>
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<p>Now you know about urls in JavaScript.</p>
+
+			<p>Good work.</p>
+		</div>
+		
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
