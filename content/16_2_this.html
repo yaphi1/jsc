@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>16_2 - this</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+		<h1>Use the "this" keyword and get better control of your objects and pages</h1>
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+		<div class="section">
+			<h2>What is the <b>this</b> keyword and why should you care?</h2>
+
+			<p>Let's say you have a <b>method</b> (a function) that belongs to an <b>object</b>.</p>
+
+			<p>For example, if you have a "car" object, one of its methods might be "drive".</p>
+
+			<p>If you ever want to refer to the car from inside the drive function, you would use the <b>this</b> keyword.</p>
+
+			<p>Huh?</p>
+
+			<p>Try this example to understand what's going on:</p>
+
+			<pre><code>
+				var car = {
+					speed: 30,
+					drive: function(){
+						var speed = this.speed;
+						console.log("I'm driving at " + speed + " mph");
+					}
+				};
+
+				car.drive();
+			</code></pre>
+
+			<p>In the example, <b>this</b> just means car.</p>
+
+			<p>So that's it.  The <b>this</b> keyword just refers to the object that a function belongs to.</p>
+
+			<p>Now that you know that, let's add a <code>driveFaster</code> function that increases the car's speed by 10 and then runs the car's <code>drive</code> function.  Type the example to try it out.</p>
+
+			<pre><code>
+				var car = {
+					speed: 30,
+					drive: function(){
+						var speed = this.speed;
+						console.log("I'm driving at " + speed + " mph");
+					},
+					driveFaster: function(){
+						this.speed += 10;
+						this.drive();
+					}
+				};
+
+				car.drive();
+
+				car.driveFaster();
+			</code></pre>
+
+			<p>There you go!</p>
+
+			<p>Now you see how the <b>this</b> keyword can help you do more with your objects.</p>
+
+			<div class="special_section tip">
+				<h3>What happens if you use <b>this</b> in a function that doesn't belong to an object?</h3>
+				<p>Good question!</p>
+				<p>If a function doesn't belong to any object you've defined, then it belongs to the <b>window</b> by default.</p>
+				<p>Therefore, if you use the <b>this</b> keyword in a function that's not inside any object, then the value of <b>this</b> will be <b>window</b>.</p>
+			</div>
+
+
+			<br>
+			<div class="special_section warning">
+				<h3>Don't mess up your objects!</h3>
+				<p>Remember that the properties of objects are separated by commas.</p>
+				<p>I've said it before, but I'm repeating it because it's so easy to forget.</p>
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+		<div class="section">
+			<h2>More useful stuff you can do with <b>this</b></h2>
+
+			<p>Type out the following example for a neat surprise.</p>
+
+
+			<pre><code class="language-markup">
+				&lt;div id="mytext"&gt;Click on this text&lt;/div&gt;
+				&lt;script&gt;
+				document.getElementById('mytext').onclick = function(){
+					this.style.color = 'red';
+				};
+				&lt;/script&gt;
+			</code></pre>
+
+			<p>If you've done it correctly, the text should turn red when you click on it.</p>
+
+			<p>Here's why.</p>
+
+			<p>What does the <b>onclick</b> method belong to?  It belongs to your div: <code>document.getElementById('mytext')</code>.</p>
+
+			<p>Therefore, <b>this</b> simply gives you your div.</p>
+
+			<p>This is very convenient in situations when you need to refer to the thing that was clicked.</p>
+
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+
+			<ol>
+
+				<li>
+					<p>Create an object called <code>shoe</code>.</p>
+					<p>The object should have a property called <code>size</code> initially set to 5.</p>
+					<p>Create two methods: <code>bigger</code> and <code>smaller</code> that increase or decrease the size of the shoe by 1, respectively.</p>
+					<p>Remember to use the <b>this</b> keyword!</p>
+
+					<p>When you're comfortable, repeat it once more without looking at an example.</p>
+				</li>
+
+				<li>
+					<p>Create a div whose background turns green when you click on the div.</p>
+					<p>Remember to use the <b>this</b> keyword.</p>
+
+					<p>When you're comfortable, repeat it once more without looking at an example.</p>
+				</li>
+
+			</ol>
+		</div>
+
+
+
+
+		<div class="section">
+			<p>A lot of people have trouble with the <b>this</b> keyword, so if you've gotten through this section, great work!</p>
+		</div>
+		
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
