@@ -36,12 +36,12 @@ body{
 </ul>
 
 <label>
-	<input type="checkbox">
-	Option 1
+	<input type="checkbox" id="mycheckbox">
+	Check 1
 </label>
 <label>
 	<input type="checkbox">
-	Option 2
+	Check 2
 </label>
 
 <br><br>
@@ -77,7 +77,63 @@ document.getElementById('optb').onclick = function(){
 };
 
 
+document.getElementById('mycheckbox').onclick = function(){
+	if(this.checked){
+		console.log('checked');
+	}
+	else{
+		console.log('unchecked');
+	}
+};
+
+
 
 </script>
+
+
+
+
+
+
+
+
+
+
+
+<div>
+	Total pizza price: $<span id="price"></span>
+</div>
+
+<form autocomplete="off">
+	<label>
+		<input type="checkbox" id="garlic" value="1">
+		Add garlic $1
+	</label>
+
+	<label>
+		<input type="checkbox" id="peppers" value="3">
+		Add peppers $3
+	</label>
+</form>
+
+<script>
+var price = 10;
+var priceSpan = document.getElementById('price');
+priceSpan.innerHTML = price;
+
+function handleCheckbox(){
+	var toppingPrice = Number(this.value);
+	if(this.checked){ price += toppingPrice; }
+	else{ price -= toppingPrice; }
+
+	priceSpan.innerHTML = price;
+};
+
+document.getElementById('garlic').onclick = handleCheckbox;
+document.getElementById('peppers').onclick = handleCheckbox;
+</script>
+
+
+
 </body>
 </html>

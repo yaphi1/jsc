@@ -56,10 +56,11 @@
 		</ul>
 
 
-		<p>There will be times you'll need to work with URLs in JavaScript.</p>
-		<p>For example, maybe you want to check what page the user is on and trigger certain behavior if they're in the right place.</p>
-		<p>Maybe you'll want to change where a link goes depending on a user's preferences.</p>
-		<p>It's up to you.</p>
+		<p>You've already dealt with text input boxes, but what about other form elements?</p>
+
+		<p>What if you want checkboxes, radio buttons, or select dropdowns?</p>
+
+		<p>You've come to the right place.</p>
 
 
 
@@ -92,25 +93,159 @@
 		</div>
 
 
+
+
+
+		<div class="section">
+			<h2>Work with a checkbox</h2>
+
+			<p>Type this example that detects whether a checkbox is checked or unchecked after you click it:</p>
+
+			<pre><code class="language-markup">
+				&lt;label&gt;
+					&lt;input type="checkbox" id="mycheckbox"&gt;
+					Check this
+				&lt;/label&gt;
+
+				&lt;script&gt;
+				document.getElementById('mycheckbox').onclick = function(){
+					if(this.checked){
+						console.log('checked');
+					}
+					else{
+						console.log('unchecked');
+					}
+				};
+				&lt;/script&gt;
+			</code></pre>
+
+			<p>There are a few things to notice here.</p>
+
+			<ol>
+				<li>
+					<strong>The &lt;label&gt; tag</strong>
+					<p>Notice that the checkbox input is inside the label tag.</p>
+					<p>That way, you can click the whole label rather than just the tiny box, so it's great for usability.</p>
+				</li>
+
+				<li>
+					<strong>The <b>checked</b> property</strong>
+					<p>In the same way that an <code>&lt;a&gt;</code> tag might have a <code>href</code> property, an <code>id</code>, or a <code>style</code> property, checkboxes have a <code>checked</code> property.</p>
+					<p>If the <code>checked</code> property evaluates as true, then our example writes "checked" in the console.</p>
+				</li>
+
+				<li>
+					<strong>We used the <b>this</b> keyword</strong>
+					<p>Instead of writing this:</p>
+					<pre><code>document.getElementById('mycheckbox').checked</code></pre>
+					<p>...we wrote this:</p>
+					<pre><code>this.checked</code></pre>
+					<p>The onclick method in our example belongs to the checkbox, so that's why the <b>this</b> keyword refers to the checkbox.</p>
+					<p>If you need a refresher, feel free to refer back to <a href="/this/" target="_blank">the section about "this"</a>.</p>
+				</li>
+
+				<li>
+					<strong>It's keyboard accessible</strong>
+					<p>If you tab over to the checkbox and hit the spacebar, you'll notice that it reacts just like a click.</p>
+					<p>That shows that if you use onclick on a checkbox, you get keyboard accessibility for free.</p>
+				</li>
+			</ol>
+
+		</div>
 		
 
 
 		<div class="section">
-			<h2>Get a URL</h2>
+			<h2>Get the value of a checkbox</h2>
 
-			<p>Type this example to get the current url of your page:</p>
+			<p>Type this example that adds toppings to a pizza and adjusts the price:</p>
 
-			<pre><code>
-				var url = window.location.href;
-				console.log(url);
+			<pre><code class="language-markup">
+				&lt;div&gt;
+					Total pizza price: $&lt;span id="price"&gt;&lt;/span&gt;
+				&lt;/div&gt;
+
+				&lt;form autocomplete="off"&gt;
+					&lt;label&gt;
+						&lt;input type="checkbox" id="garlic" value="1"&gt;
+						Add garlic $1
+					&lt;/label&gt;
+
+					&lt;label&gt;
+						&lt;input type="checkbox" id="peppers" value="3"&gt;
+						Add peppers $3
+					&lt;/label&gt;
+				&lt;/form&gt;
+
+				&lt;script&gt;
+				var price = 10;
+				var priceSpan = document.getElementById('price');
+				priceSpan.innerHTML = price;
+
+				function handleCheckbox(){
+					var toppingPrice = Number(this.value);
+					if(this.checked){ price += toppingPrice; }
+					else{ price -= toppingPrice; }
+
+					priceSpan.innerHTML = price;
+				};
+
+				document.getElementById('garlic').onclick = handleCheckbox;
+				document.getElementById('peppers').onclick = handleCheckbox;
+				&lt;/script&gt;
 			</code></pre>
+
+			<p>Some of the stuff here is familiar, but some of it is new.  Let's see what's going on.</p>
+
+			<ol>
+				<li>
+					<p>First, we're creating a span where our total price will show up.</p>
+				</li>
+				<li>
+					<p>Then we're creating the checkboxes.  Notice we've turned <b>autocomplete</b> off.</p>
+					<p>That's because we don't want the same toppings to already be selected when we refresh the page.</p>
+					<p>We could have put autocomplete=off in each checkbox, but that would be redundant, so that's why it's in the form tag instead.</p>
+				</li>
+				<li>
+					<p>We're starting with a price of 10 and showing that on our page.</p>
+				</li>
+				<li>
+					<p>Then we'll create a function called <code>handleCheckbox</code> that we'll run every time one of the checkboxes is clicked.  Here's what it does:</p>
+					<ul>
+						<li>Get the value of this checkbox (the price), convert it from a string to a number using JavaScript's built in <b>Number</b> function, and store that number in the <code>toppingPrice</code> variable.</li>
+						<li>If the checkbox is checked, add its value to the total price.  Otherwise subtract it from the price.</li>
+						<li>Show the updated price in your <code>span</code>.</li>
+					</ul>
+				</li>
+				<li>
+					<p>Finally, we'll attach our <code>handleCheckbox</code> function to each checkbox's <code>onclick</code> method.</p>
+					<p>Because we're putting handleCheckbox in each checkbox's onclick, the <b>this</b> keyword refers to whichever checkbox it's attached to.</p>
+					<p>If you tried to run handleCheckbox() by itself, then it would mess up your program because <b>this</b> would just be the window and that would be weird.</p>
+				</li>
+			</ol>
 
 		</div>
 
 
 
+
+
 		<div class="section">
-			<h2>Set a URL</h2>
+			<h2>Radio buttons</h2>
+
+			<p>Type this example to go to a new URL:</p>
+
+			<pre><code>
+				window.location.href = 'http://www.google.com/';
+			</code></pre>
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Select dropdowns</h2>
 
 			<p>Type this example to go to a new URL:</p>
 
