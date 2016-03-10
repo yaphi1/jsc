@@ -29,33 +29,6 @@
 		<h1>Get better with forms</h1>
 
 
-		- start: you already dealt with text input
-
-		- checkbox
-			- onclick (if this.checked)
-			- mention label
-		- check if a checkbox is checked with .checked
-			- mention label
-			- handle onclick
-		- handle radio buttons
-			- mention label again
-			- mention importance of names
-				- show two different questions and warn about names
-		- handle select options
-
-
-		<ul>
-			<li>radio buttons</li>
-			<li>labels</li>
-			<li>values</li>
-			<li>check boxes</li>
-			<li>fieldset</li>
-			<li>select dropdowns</li>
-			<li>autocomplete off</li>
-			<li>submit buttons</li>
-		</ul>
-
-
 		<p>You've already dealt with text input boxes, but what about other form elements?</p>
 
 		<p>What if you want checkboxes, radio buttons, or select dropdowns?</p>
@@ -233,78 +206,89 @@
 		<div class="section">
 			<h2>Radio buttons</h2>
 
-			<p>Type this example to go to a new URL:</p>
+			<p>Radio buttons work similarly to checkboxes except that only one radio button in a group can be selected at a time.</p>
 
-			<pre><code>
-				window.location.href = 'http://www.google.com/';
+			<p>To create a group of radio buttons, they all have to have the same <code>name</code> in their HTML.</p>
+
+			<p>Try out the following example to see radio buttons in action:</p>
+
+			<pre><code class="language-markup">
+				&lt;label&gt;
+					&lt;input id="radioa" type="radio" name="q1" value="radio a"&gt;
+					Answer A
+				&lt;/label&gt;
+				&lt;label&gt;
+					&lt;input id="radiob" type="radio" name="q1" value="radio b"&gt;
+					Answer B
+				&lt;/label&gt;
+				&lt;script&gt;
+				document.getElementById('radioa').onclick = function(){
+					console.log(this.value);
+				};
+
+				document.getElementById('radiob').onclick = function(){
+					console.log(this.value);
+				};
+				&lt;/script&gt;
 			</code></pre>
+
+
+			<div class="special_section warning">
+				<h3>Warning: Remember to name your radio buttons properly</h3>
+				<p>If you want some radio buttons to be in the same group, give them all the same name.</p>
+				<p>If you want some radio buttons to be in a different group, give them a different name.</p>
+				<p>This is so easy to forget.</p>
+			</div>
+
 		</div>
 
 
+		<div class="section special_section tip">
+			<h2>Tip: How to get all checked boxes and radio buttons</h2>
 
+			<p>Remember how <b>querySelectorAll</b> lets you get all elements that match a CSS selector?</p>
+
+			<p>You can use the <code>:checked</code> pseudo-class selector to get all inputs that are checked.</p>
+
+			<p>For example, this code would give you all inputs that are checked:</p>
+
+			<pre><code>
+				var checked = document.querySelectorAll('input:checked');
+			</code></pre>
+
+			<p>If you'd like more info about the <b>:checked</b> selector in CSS, feel free to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:checked" target="_blank">read about it</a>.</p>
+		</div>
 
 
 		<div class="section">
-			<h2>Select dropdowns</h2>
+			<h2>Dealing with <b>select</b> dropdowns</h2>
 
-			<p>Type this example to go to a new URL:</p>
+			<p>Type the following example to try a <b>select</b> dropdown.  See if you can determine what's going on before you read the explanation.</p>
 
-			<pre><code>
-				window.location.href = 'http://www.google.com/';
+			<pre><code class="language-markup">
+				&lt;select id="myselect"&gt;
+					&lt;option&gt;Option 1&lt;/option&gt;
+					&lt;option&gt;Option 2&lt;/option&gt;
+					&lt;option value="custom value"&gt;Option 3&lt;/option&gt;
+				&lt;/select&gt;
+
+				&lt;script&gt;
+				document.getElementById('myselect').onchange = function(){
+					console.log(this.value);
+				};
+				&lt;/script&gt;
 			</code></pre>
 		</div>
 
+		<p>Here's what the script is saying:</p>
 
+		<p>Every time the select dropdown changes value, show the value in the console.</p>
 
-		<div class="section">
-			<h2>Get the pathname</h2>
-
-			<p>The URL <b>pathname</b> (also called path) is the part of the url after the domain name but before the question mark (if there is one).</p>
-			
-			<p>For example, in <code>http://www.google.com/analytics/?whatever</code> the path would be <code>"/analytics/"</code>.</p>
-
-			<p>Go to <a href="http://www.google.com/analytics/?whatever" target="_blank">http://www.google.com/analytics/?whatever</a> or any site of your choice and type the following in the console to see the pathname:</p>
-
-			<pre><code>
-				var path = window.location.pathname;
-				console.log(path);
-			</code></pre>
-
-			<p>This is a useful way to detect which page the user is on.</p>
-		</div>
-
-
-
-		<div class="section">
-			<h2>Find out what page the user came from</h2>
-
-			<p>To see where a user came from, use <b>document.referrer</b>.</p>
-
-			<p>To see this in action, go to any page on the internet and click on a link.  Then type the following into the console:</p>
-
-			<pre><code>
-				var previousPage =  document.referrer;
-				console.log(previousPage);
-			</code></pre>
-
-			<p><b>document.referrer</b> will show which page linked you to the page you're currently on.</p>
-			<p>If you went directly to the page you're on (not through a link), then document.referrer will be blank.</p>
-		</div>
-
-
-
-
-		<div class="section">
-			<h2>URL Reference</h2>
-
-			<p>Here's a reference that can help you work with URLs:</p>
-
-			<p>
-				<a href="http://www.w3schools.com/jsref/obj_location.asp" target="_blank">URL Reference</a>
-			</p>
-
-			<p>You don't need to memorize this stuff, but just be aware it exists.</p>
-		</div>
+		<p>Two quick things to note:</p>
+		<ul>
+			<li>The example makes use of the <b>onchange</b> event, which detects when a form element has been changed.</li>
+			<li>You can set a custom value for any of the options in a select dropdown, but if you don't, the value will default to whatever text is inside the option.</li>
+		</ul>
 
 
 

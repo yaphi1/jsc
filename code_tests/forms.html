@@ -70,6 +70,7 @@ function checkAnswers(){
 
 document.getElementById('opta').onclick = function(){
 	console.log('option a');
+	console.log(this.value);
 };
 
 document.getElementById('optb').onclick = function(){
@@ -134,6 +135,40 @@ document.getElementById('peppers').onclick = handleCheckbox;
 </script>
 
 
+
+
+<label>
+	<input id="radioa" type="radio" name="q2" value="radio a">
+	Answer A
+</label>
+<label>
+	<input id="radiob" type="radio" name="q2" value="radio b">
+	Answer B
+</label>
+<script>
+document.getElementById('radioa').onclick = function(){
+	console.log(this.value);
+};
+
+document.getElementById('radiob').onclick = function(){
+	console.log(this.value);
+};
+</script>
+
+
+
+
+<select id="myselect">
+	<option>Option 1</option>
+	<option>Option 2</option>
+	<option value="custom value">Option 3</option>
+</select>
+
+<script>
+document.getElementById('myselect').onchange = function(){
+	console.log(this.value);
+};
+</script>
 
 </body>
 </html>
