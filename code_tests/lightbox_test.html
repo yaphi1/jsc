@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+body{
+	margin: 0px;
+	font-size:20px;
+	font-family:sans-serif;
+	color:#333;
+}
+
+#lightbox{
+	width: 400px;
+	height: 300px;
+	background-color: #eee;
+}
+
+</style>
+
+</head>
+<body>
+
+
+
+<button id="show">Show lightbox</button>
+
+<div id="lightbox">
+	<div id="hide">[hide]</div>
+	Lightbox content
+</div>
+
+
+<script>
+var lightbox = document.getElementById('lightbox');
+
+document.getElementById('show').onclick = function(){
+	lightbox.style.display = 'block';
+};
+
+document.getElementById('hide').onclick = function(){
+	lightbox.style.display = 'none';
+};
+</script>
+</body>
+</html>
