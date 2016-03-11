@@ -46,8 +46,8 @@ body{
 }
 
 h1{
-	margin: 0px;
-	padding: 30px 0px;
+	margin: 45px 0px;
+	padding: 0px;
 	font-size: 45px;
 	font-weight: bold;
 }
@@ -231,7 +231,7 @@ TOP MENU
 
 #menubar{
 	padding: 30px;
-	margin-bottom: 20px;
+	/*margin-bottom: 20px;*/
 	font-size: 23px;
 	/*background: #fafafa;*/
 	background: #6ED19C;
@@ -265,7 +265,7 @@ LAYOUT STRUCTURE
 #maincol{
 	vertical-align: top;
 	text-align: left;
-	margin: 0px 5px;
+	margin: 0px 27px 0px 5px;
 	display: inline-block;
 	width: 700px;
 	max-width: 90%;
@@ -284,7 +284,7 @@ sidebar
 #sidebar{
 	vertical-align: top;
 	text-align: left;
-	margin: 20px 5px 0px;
+	margin: 45px 0px 0px;
 	display: inline-block;
 	width: 300px;
 	max-width: 90%;
@@ -293,7 +293,7 @@ sidebar
 	border-right: none;
 	border-left: none;
 
-	padding: 20px;
+	padding: 15px;
 	box-sizing: border-box;
 }
 
@@ -370,17 +370,19 @@ TABLE OF CONTENTS
 
 
 .step{
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 }
 
 .step_title{
-	padding: 45px 40px 50px;
+	/*padding: 45px 40px 50px;*/
+	padding: 30px;
+
 	background: #eee;
 	cursor: pointer;
 	font-size: 30px;
 	border-radius: 5px;
 
-	border-top: 5px solid #6ED19C;
+	/*border-top: 5px solid #6ED19C;*/
 	background: #fff;
 	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
 
