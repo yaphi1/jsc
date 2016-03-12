@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>25_1 - lightbox</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+
+
+
+		<h1>Intro to approaching bigger problems - Create a lightbox</h1>
+
+
+		<p>You can do a bunch of little things in JavaScript, but when it comes time to do a bigger project, it's easy to get lost.</p>
+
+		<p>How do you solve that?</p>
+
+		<p>In this section, we're going to talk about some ways to deal with bigger JavaScript problems, and then we'll walk through an example where you'll build a lightbox.</p>
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>How to approach bigger JavaScript problems</h2>
+
+			<p>When attempting a larger JavaScript problem, the number 1 thing to keep in mind is that a big problem is just a bunch of small problems put together.</p>
+
+			<p>outline in comments</p>
+			<p>build smallest piece first</p>
+			<p>keep adding pieces until complete</p>
+
+			<pre><code class="language-markup">
+				&lt;label&gt;
+					&lt;input type="checkbox" id="mycheckbox"&gt;
+					Check this
+				&lt;/label&gt;
+
+				&lt;script&gt;
+				document.getElementById('mycheckbox').onclick = function(){
+					if(this.checked){
+						console.log('checked');
+					}
+					else{
+						console.log('unchecked');
+					}
+				};
+				&lt;/script&gt;
+			</code></pre>
+
+			<p>There are a few things to notice here.</p>
+
+			<ol>
+				<li>
+					<strong>The &lt;label&gt; tag</strong>
+					<p>Notice that the checkbox input is inside the label tag.</p>
+					<p>That way, you can click the whole label rather than just the tiny box, so it's great for usability.</p>
+				</li>
+
+				<li>
+					<strong>The <b>checked</b> property</strong>
+					<p>In the same way that an <code>&lt;a&gt;</code> tag might have a <code>href</code> property, an <code>id</code>, or a <code>style</code> property, checkboxes have a <code>checked</code> property.</p>
+					<p>If the <code>checked</code> property evaluates as true, then our example writes "checked" in the console.</p>
+				</li>
+
+				<li>
+					<strong>We used the <b>this</b> keyword</strong>
+					<p>Instead of writing this:</p>
+					<pre><code>document.getElementById('mycheckbox').checked</code></pre>
+					<p>...we wrote this:</p>
+					<pre><code>this.checked</code></pre>
+					<p>The onclick method in our example belongs to the checkbox, so that's why the <b>this</b> keyword refers to the checkbox.</p>
+					<p>If you need a refresher, feel free to refer back to <a href="/this/" target="_blank">the section about "this"</a>.</p>
+				</li>
+
+				<li>
+					<strong>It's keyboard accessible</strong>
+					<p>If you tab over to the checkbox and hit the spacebar, you'll notice that it reacts just like a click.</p>
+					<p>That shows that if you use onclick on a checkbox, you get keyboard accessibility for free.</p>
+				</li>
+			</ol>
+
+		</div>
+		
+
+
+		<div class="section">
+			<h2>Get the value of a checkbox</h2>
+
+			<p>Type this example that adds toppings to a pizza and adjusts the price:</p>
+
+			<pre><code class="language-markup">
+				&lt;div&gt;
+					Total pizza price: $&lt;span id="price"&gt;&lt;/span&gt;
+				&lt;/div&gt;
+
+				&lt;form autocomplete="off"&gt;
+					&lt;label&gt;
+						&lt;input type="checkbox" id="garlic" value="1"&gt;
+						Add garlic $1
+					&lt;/label&gt;
+
+					&lt;label&gt;
+						&lt;input type="checkbox" id="peppers" value="3"&gt;
+						Add peppers $3
+					&lt;/label&gt;
+				&lt;/form&gt;
+
+				&lt;script&gt;
+				var price = 10;
+				var priceSpan = document.getElementById('price');
+				priceSpan.innerHTML = price;
+
+				function handleCheckbox(){
+					var toppingPrice = Number(this.value);
+					if(this.checked){ price += toppingPrice; }
+					else{ price -= toppingPrice; }
+
+					priceSpan.innerHTML = price;
+				};
+
+				document.getElementById('garlic').onclick = handleCheckbox;
+				document.getElementById('peppers').onclick = handleCheckbox;
+				&lt;/script&gt;
+			</code></pre>
+
+			<p>Some of the stuff here is familiar, but some of it is new.  Let's see what's going on.</p>
+
+			<ol>
+				<li>
+					<p>First, we're creating a span where our total price will show up.</p>
+				</li>
+				<li>
+					<p>Then we're creating the checkboxes.  Notice we've turned <b>autocomplete</b> off.</p>
+					<p>That's because we don't want the same toppings to already be selected when we refresh the page.</p>
+					<p>We could have put autocomplete=off in each checkbox, but that would be redundant, so that's why it's in the form tag instead.</p>
+				</li>
+				<li>
+					<p>We're starting with a price of 10 and showing that on our page.</p>
+				</li>
+				<li>
+					<p>Then we'll create a function called <code>handleCheckbox</code> that we'll run every time one of the checkboxes is clicked.  Here's what it does:</p>
+					<ul>
+						<li>Get the value of this checkbox (the price), convert it from a string to a number using JavaScript's built in <b>Number</b> function, and store that number in the <code>toppingPrice</code> variable.</li>
+						<li>If the checkbox is checked, add its value to the total price.  Otherwise subtract it from the price.</li>
+						<li>Show the updated price in your <code>span</code>.</li>
+					</ul>
+				</li>
+				<li>
+					<p>Finally, we'll attach our <code>handleCheckbox</code> function to each checkbox's <code>onclick</code> method.</p>
+					<p>Because we're putting handleCheckbox in each checkbox's onclick, the <b>this</b> keyword refers to whichever checkbox it's attached to.</p>
+					<p>If you tried to run handleCheckbox() by itself, then it would mess up your program because <b>this</b> would just be the window and that would be weird.</p>
+				</li>
+			</ol>
+
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Radio buttons</h2>
+
+			<p>Radio buttons work similarly to checkboxes except that only one radio button in a group can be selected at a time.</p>
+
+			<p>To create a group of radio buttons, they all have to have the same <code>name</code> in their HTML.</p>
+
+			<p>Try out the following example to see radio buttons in action:</p>
+
+			<pre><code class="language-markup">
+				&lt;label&gt;
+					&lt;input id="radioa" type="radio" name="q1" value="radio a"&gt;
+					Answer A
+				&lt;/label&gt;
+				&lt;label&gt;
+					&lt;input id="radiob" type="radio" name="q1" value="radio b"&gt;
+					Answer B
+				&lt;/label&gt;
+				&lt;script&gt;
+				document.getElementById('radioa').onclick = function(){
+					console.log(this.value);
+				};
+
+				document.getElementById('radiob').onclick = function(){
+					console.log(this.value);
+				};
+				&lt;/script&gt;
+			</code></pre>
+
+
+			<div class="special_section warning">
+				<h3>Warning: Remember to name your radio buttons properly</h3>
+				<p>If you want some radio buttons to be in the same group, give them all the same name.</p>
+				<p>If you want some radio buttons to be in a different group, give them a different name.</p>
+				<p>This is so easy to forget.</p>
+			</div>
+
+		</div>
+
+
+		<div class="section special_section tip">
+			<h2>Tip: How to get all checked boxes and radio buttons</h2>
+
+			<p>Remember how <b>querySelectorAll</b> lets you get all elements that match a CSS selector?</p>
+
+			<p>You can use the <code>:checked</code> pseudo-class selector from CSS to get all inputs that are checked.</p>
+
+			<p>For example, this code would give you all inputs that are checked:</p>
+
+			<pre><code>
+				var checked = document.querySelectorAll('input:checked');
+			</code></pre>
+
+			<p>This code would give you all checked radio buttons inside an element with the id "myquiz":</p>
+
+			<pre><code>
+				var checked = document.querySelectorAll('#myquiz input[type=radio]:checked');
+			</code></pre>
+
+			<p>If you'd like more info about the <b>:checked</b> selector in CSS, feel free to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:checked" target="_blank">read about it</a>.</p>
+		</div>
+
+
+		<div class="section">
+			<h2>Dealing with <b>select</b> dropdowns</h2>
+
+			<p>Type the following example to try a <b>select</b> dropdown.  See if you can determine what's going on before you read the explanation.</p>
+
+			<pre><code class="language-markup">
+				&lt;select id="myselect"&gt;
+					&lt;option&gt;Option 1&lt;/option&gt;
+					&lt;option&gt;Option 2&lt;/option&gt;
+					&lt;option value="custom value"&gt;Option 3&lt;/option&gt;
+				&lt;/select&gt;
+
+				&lt;script&gt;
+				document.getElementById('myselect').onchange = function(){
+					console.log(this.value);
+				};
+				&lt;/script&gt;
+			</code></pre>
+		</div>
+
+		<p>Here's what the script is saying:</p>
+
+		<p>Every time the select dropdown changes value, show the value in the console.</p>
+
+		<p>Two quick things to note:</p>
+		<ul>
+			<li>The example makes use of the <b>onchange</b> event, which detects when a form element has been changed.</li>
+			<li>You can set a custom value for any of the options in a select dropdown, but if you don't, the value will default to whatever text is inside the option.</li>
+		</ul>
+
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+			<ol>
+				<li>
+					<p><strong>Make a basic checkbox</strong></p>
+					<p>Type the following code, then repeat it until you no longer need to look at an example.</p>
+
+					<pre><code class="language-markup">
+						&lt;label&gt;
+							&lt;input type="checkbox" id="mycheckbox"&gt;
+							Check this
+						&lt;/label&gt;
+
+						&lt;script&gt;
+						document.getElementById('mycheckbox').onclick = function(){
+							if(this.checked){
+								console.log('checked');
+							}
+							else{
+								console.log('unchecked');
+							}
+						};
+						&lt;/script&gt;
+					</code></pre>
+				</li>
+
+				<li>
+					<p><strong>Premium option checkbox</strong></p>
+					<p>Create price variable and set it to 50 by default.  Show that price on a page.</p>
+					<p>Create a checkbox with the label "Add premium option".  Set the checkbox's value to 50 in the HTML.</p>
+					<p>When the box is checked, add the checkbox value to the price, and when it's unchecked, subtract the checkbox value from the price.</p>
+					<p>Remember to convert the checkbox value from a string to a number.</p>
+				</li>
+
+				<li>
+					<p><strong>Basic radio buttons</strong></p>
+					<p>Try out the following example to see radio buttons in action:</p>
+
+					<pre><code class="language-markup">
+						&lt;label&gt;
+							&lt;input id="radioa" type="radio" name="q1" value="radio a"&gt;
+							Answer A
+						&lt;/label&gt;
+						&lt;label&gt;
+							&lt;input id="radiob" type="radio" name="q1" value="radio b"&gt;
+							Answer B
+						&lt;/label&gt;
+						&lt;script&gt;
+						document.getElementById('radioa').onclick = function(){
+							console.log(this.value);
+						};
+
+						document.getElementById('radiob').onclick = function(){
+							console.log(this.value);
+						};
+						&lt;/script&gt;
+					</code></pre>
+				</li>
+
+				<li>
+					<p><strong>Choose a car's color with radio buttons</strong></p>
+					<p>Create a div that says the color of a car. (For example, it might say "Car color: red".)</p>
+					<p>Create a set of radio buttons that can change the car's color to red, green, or blue.</p>
+					<p>Remember to give the radio buttons the same name since you want them to be in the same group.</p>
+				</li>
+
+				<li>
+					<p><strong>A basic <b>select</b> dropdown</strong></p>
+					
+					<p>Type the example once to get a feel for it:</p>
+
+					<pre><code class="language-markup">
+						&lt;select id="myselect"&gt;
+							&lt;option&gt;Option 1&lt;/option&gt;
+							&lt;option&gt;Option 2&lt;/option&gt;
+							&lt;option value="custom value"&gt;Option 3&lt;/option&gt;
+						&lt;/select&gt;
+
+						&lt;script&gt;
+						document.getElementById('myselect').onchange = function(){
+							console.log(this.value);
+						};
+						&lt;/script&gt;
+					</code></pre>
+				</li>
+
+				<li>
+					<p><strong>A practical <b>select</b> dropdown</strong></p>
+					
+					<p>Create a div that shows the color of a pair of shoes. (Example: "Shoe color: blue")</p>
+
+					<p>Create a select dropdown that can change the selected color of the shoes.</p>
+				</li>
+			</ol>
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<p>This section was a lot, and you don't need to have it all memorized.</p>
+
+			<p>As long as you have a basic understanding of how forms work, you can always look up what you need.</p>
+
+			<p>This is not the same as something like document.getElementById() or document.querySelector or document.querySelectorAll, which you absolutely want to know off the top of your head.</p>
+		</div>
+
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
