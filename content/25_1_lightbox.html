@@ -72,233 +72,192 @@
 		<div class="section">
 			<h2>How to approach bigger JavaScript problems</h2>
 
-			<p>When attempting a larger JavaScript problem, the number 1 thing to keep in mind is that a big problem is just a bunch of small problems put together.</p>
+			<p>When attempting a larger JavaScript problem, this is the number 1 thing to keep in mind:</p>
+			<p><strong>A big problem is just a bunch of small problems put together.</strong></p>
 
-			<p>outline in comments</p>
-			<p>build smallest piece first</p>
-			<p>keep adding pieces until complete</p>
-
-			<pre><code class="language-markup">
-				&lt;label&gt;
-					&lt;input type="checkbox" id="mycheckbox"&gt;
-					Check this
-				&lt;/label&gt;
-
-				&lt;script&gt;
-				document.getElementById('mycheckbox').onclick = function(){
-					if(this.checked){
-						console.log('checked');
-					}
-					else{
-						console.log('unchecked');
-					}
-				};
-				&lt;/script&gt;
-			</code></pre>
-
-			<p>There are a few things to notice here.</p>
-
-			<ol>
+			<p>Here are some steps to help you break down bigger problems into smaller pieces:</p>
+			<ul>
 				<li>
-					<strong>The &lt;label&gt; tag</strong>
-					<p>Notice that the checkbox input is inside the label tag.</p>
-					<p>That way, you can click the whole label rather than just the tiny box, so it's great for usability.</p>
+					<p><strong>Use comments to outline what you want your code to do.</strong></p>
 				</li>
-
 				<li>
-					<strong>The <b>checked</b> property</strong>
-					<p>In the same way that an <code>&lt;a&gt;</code> tag might have a <code>href</code> property, an <code>id</code>, or a <code>style</code> property, checkboxes have a <code>checked</code> property.</p>
-					<p>If the <code>checked</code> property evaluates as true, then our example writes "checked" in the console.</p>
+					<p><strong>Build the smallest piece first.</strong></p>
 				</li>
-
 				<li>
-					<strong>We used the <b>this</b> keyword</strong>
-					<p>Instead of writing this:</p>
-					<pre><code>document.getElementById('mycheckbox').checked</code></pre>
-					<p>...we wrote this:</p>
-					<pre><code>this.checked</code></pre>
-					<p>The onclick method in our example belongs to the checkbox, so that's why the <b>this</b> keyword refers to the checkbox.</p>
-					<p>If you need a refresher, feel free to refer back to <a href="/this/" target="_blank">the section about "this"</a>.</p>
+					<p><strong>Keep adding pieces until your project is complete.</strong></p>
 				</li>
-
-				<li>
-					<strong>It's keyboard accessible</strong>
-					<p>If you tab over to the checkbox and hit the spacebar, you'll notice that it reacts just like a click.</p>
-					<p>That shows that if you use onclick on a checkbox, you get keyboard accessibility for free.</p>
-				</li>
-			</ol>
-
+			</ul>
+			<p>We'll take a look at each of these steps in more detail as we go through an example project.</p>
 		</div>
 		
 
 
 		<div class="section">
-			<h2>Get the value of a checkbox</h2>
+			<h2>Example project: Build a Lightbox</h2>
 
-			<p>Type this example that adds toppings to a pizza and adjusts the price:</p>
+			<h3>Outline what you want your code to do</h3>
+
+			<p>Before we start, we'll write out what we want our code to accomplish.  Type something like this (feel free to use whatever sorts of comments you want):</p>
+
+			<pre><code>
+				/*
+					- basic div should show and hide
+						- we need show button and hide button
+					- should cover screen and be aligned properly
+					- should hide when people click outside it
+				*/
+			</code></pre>
+
+			<br>
+			<h3>Create the basic functionality</h3>
+			<p>Our outline tells us we want a basic div that will open and close.</p>
+
+			<p>Type the following code to make that happen:</p>
 
 			<pre><code class="language-markup">
-				&lt;div&gt;
-					Total pizza price: $&lt;span id="price"&gt;&lt;/span&gt;
+				&lt;button id="show"&gt;Show lightbox&lt;/button&gt;
+				&lt;div id="lightbox"&gt;
+					&lt;div id="hide"&gt;[hide]&lt;/div&gt;
+					Lightbox content
 				&lt;/div&gt;
 
-				&lt;form autocomplete="off"&gt;
-					&lt;label&gt;
-						&lt;input type="checkbox" id="garlic" value="1"&gt;
-						Add garlic $1
-					&lt;/label&gt;
-
-					&lt;label&gt;
-						&lt;input type="checkbox" id="peppers" value="3"&gt;
-						Add peppers $3
-					&lt;/label&gt;
-				&lt;/form&gt;
 
 				&lt;script&gt;
-				var price = 10;
-				var priceSpan = document.getElementById('price');
-				priceSpan.innerHTML = price;
+				var lightbox = document.getElementById('lightbox');
 
-				function handleCheckbox(){
-					var toppingPrice = Number(this.value);
-					if(this.checked){ price += toppingPrice; }
-					else{ price -= toppingPrice; }
+				function showLightbox(){
+					lightbox.style.display = 'block';
+				}
 
-					priceSpan.innerHTML = price;
-				};
+				function hideLightbox(){
+					lightbox.style.display = 'none';
+				}
 
-				document.getElementById('garlic').onclick = handleCheckbox;
-				document.getElementById('peppers').onclick = handleCheckbox;
+				document.getElementById('show').onclick = showLightbox;
+				document.getElementById('hide').onclick = hideLightbox;
+
 				&lt;/script&gt;
 			</code></pre>
 
-			<p>Some of the stuff here is familiar, but some of it is new.  Let's see what's going on.</p>
+			<p>So far it's not pretty, but it works.  By creating the basic functionality first, you can focus on making your code work without any distractions.</p>
 
-			<ol>
-				<li>
-					<p>First, we're creating a span where our total price will show up.</p>
-				</li>
-				<li>
-					<p>Then we're creating the checkboxes.  Notice we've turned <b>autocomplete</b> off.</p>
-					<p>That's because we don't want the same toppings to already be selected when we refresh the page.</p>
-					<p>We could have put autocomplete=off in each checkbox, but that would be redundant, so that's why it's in the form tag instead.</p>
-				</li>
-				<li>
-					<p>We're starting with a price of 10 and showing that on our page.</p>
-				</li>
-				<li>
-					<p>Then we'll create a function called <code>handleCheckbox</code> that we'll run every time one of the checkboxes is clicked.  Here's what it does:</p>
-					<ul>
-						<li>Get the value of this checkbox (the price), convert it from a string to a number using JavaScript's built in <b>Number</b> function, and store that number in the <code>toppingPrice</code> variable.</li>
-						<li>If the checkbox is checked, add its value to the total price.  Otherwise subtract it from the price.</li>
-						<li>Show the updated price in your <code>span</code>.</li>
-					</ul>
-				</li>
-				<li>
-					<p>Finally, we'll attach our <code>handleCheckbox</code> function to each checkbox's <code>onclick</code> method.</p>
-					<p>Because we're putting handleCheckbox in each checkbox's onclick, the <b>this</b> keyword refers to whichever checkbox it's attached to.</p>
-					<p>If you tried to run handleCheckbox() by itself, then it would mess up your program because <b>this</b> would just be the window and that would be weird.</p>
-				</li>
-			</ol>
+			<h3>Styling and positioning</h3>
 
-		</div>
-
-
-
-
-
-		<div class="section">
-			<h2>Radio buttons</h2>
-
-			<p>Radio buttons work similarly to checkboxes except that only one radio button in a group can be selected at a time.</p>
-
-			<p>To create a group of radio buttons, they all have to have the same <code>name</code> in their HTML.</p>
-
-			<p>Try out the following example to see radio buttons in action:</p>
+			<p>Let's add a bit of style and then position the close button in the top right corner.  Type the following in the head section of the page:</p>
 
 			<pre><code class="language-markup">
-				&lt;label&gt;
-					&lt;input id="radioa" type="radio" name="q1" value="radio a"&gt;
-					Answer A
-				&lt;/label&gt;
-				&lt;label&gt;
-					&lt;input id="radiob" type="radio" name="q1" value="radio b"&gt;
-					Answer B
-				&lt;/label&gt;
-				&lt;script&gt;
-				document.getElementById('radioa').onclick = function(){
-					console.log(this.value);
-				};
+				&lt;style&gt;
+				#lightbox{
+					width: 400px;
+					height: 300px;
+					background-color: #f8f7f3;
+					border-radius: 5px;
+					padding: 20px;
 
-				document.getElementById('radiob').onclick = function(){
-					console.log(this.value);
-				};
-				&lt;/script&gt;
+					position: relative;
+				}
+
+				#hide{
+					position: absolute;
+					top: 20px;
+					right: 20px;
+					cursor: pointer;
+				}
+				&lt;/style&gt;
 			</code></pre>
 
+			<p>Now we're getting somewhere.</p>
 
-			<div class="special_section warning">
-				<h3>Warning: Remember to name your radio buttons properly</h3>
-				<p>If you want some radio buttons to be in the same group, give them all the same name.</p>
-				<p>If you want some radio buttons to be in a different group, give them a different name.</p>
-				<p>This is so easy to forget.</p>
-			</div>
+			<p>We'll want the lightbox to sit on top of the rest of the page's content instead of being a part of it.</p>
 
-		</div>
+			<p>We can do that by using a container with a <code class="language-css">position: fixed;</code> CSS property.</p>
 
+			<p>Add these updates to your CSS:</p>
 
-		<div class="section special_section tip">
-			<h2>Tip: How to get all checked boxes and radio buttons</h2>
-
-			<p>Remember how <b>querySelectorAll</b> lets you get all elements that match a CSS selector?</p>
-
-			<p>You can use the <code>:checked</code> pseudo-class selector from CSS to get all inputs that are checked.</p>
-
-			<p>For example, this code would give you all inputs that are checked:</p>
-
-			<pre><code>
-				var checked = document.querySelectorAll('input:checked');
+			<pre><code class="language-css">
+				#lightbox_container{
+					position: fixed;
+					text-align: center;
+					left: 0px;
+					top: 0px;
+					width: 100%;
+					height: 100%;
+				}
+				#lightbox{
+					/* DO NOT delete your existing CSS properties */
+					/* just add these onto what's already there */
+					display: inline-block;
+					margin-top: 20px;
+				}
 			</code></pre>
 
-			<p>This code would give you all checked radio buttons inside an element with the id "myquiz":</p>
-
-			<pre><code>
-				var checked = document.querySelectorAll('#myquiz input[type=radio]:checked');
-			</code></pre>
-
-			<p>If you'd like more info about the <b>:checked</b> selector in CSS, feel free to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:checked" target="_blank">read about it</a>.</p>
-		</div>
-
-
-		<div class="section">
-			<h2>Dealing with <b>select</b> dropdowns</h2>
-
-			<p>Type the following example to try a <b>select</b> dropdown.  See if you can determine what's going on before you read the explanation.</p>
+			<p>Change your lightbox's HTML structure to this:</p>
 
 			<pre><code class="language-markup">
-				&lt;select id="myselect"&gt;
-					&lt;option&gt;Option 1&lt;/option&gt;
-					&lt;option&gt;Option 2&lt;/option&gt;
-					&lt;option value="custom value"&gt;Option 3&lt;/option&gt;
-				&lt;/select&gt;
-
-				&lt;script&gt;
-				document.getElementById('myselect').onchange = function(){
-					console.log(this.value);
-				};
-				&lt;/script&gt;
+				&lt;div id="lightbox_container"&gt;
+					&lt;div id="lightbox"&gt;
+						&lt;div id="hide"&gt;[hide]&lt;/div&gt;
+						Lightbox content
+					&lt;/div&gt;
+				&lt;/div&gt;
 			</code></pre>
+
+			<p>And finally, change your first line of script to this:</p>
+			<pre><code>
+				var lightbox = document.getElementById('lightbox_container');
+			</code></pre>
+
+			<p><strong>Quick recap of what you've done:</strong></p>
+
+			<ul>
+				<li>You've created a div that you can open and close.</li>
+				<li>You've styled it like a lightbox.</li>
+				<li>You've made the lightbox sit on top of your content instead of being a part of it.</li>
+			</ul>
+
+			<p>Now there's one part left: Adding a transparent overlay people can click on to close the lightbox.</p>
+
+			<h3>Close the lightbox by clicking outside it</h3>
+
+			<p>To accomplish this, we'll need a clickable overlay.</p>
+
+			<p>First, update your HTML to look like this:</p>
+
+			<pre><code class="language-markup">
+				&lt;div id="lightbox_container"&gt;
+					&lt;div id="overlay"&gt;&lt;/div&gt;
+					&lt;div id="lightbox"&gt;
+						&lt;div id="hide"&gt;[hide]&lt;/div&gt;
+						Lightbox content
+					&lt;/div&gt;
+				&lt;/div&gt;
+			</code></pre>
+
+			<p>Then update your CSS to make the overlay a transparent layer that covers the whole window.  It should look like this:</p>
+
+			<pre><code class="language-css">
+				#overlay{
+					background: rgba(33,33,33,0.8);
+					position: absolute;
+					left: 0px;
+					top: 0px;
+					width: 100%;
+					height: 100%;
+				}
+			</code></pre>
+
+			<p>Now that we have a transparent overlay in the background of our lightbox_container layer, we can add this script to hide the lightbox when the overlay is clicked:</p>
+
+			<pre><code>
+				document.getElementById('overlay').onclick = hideLightbox;
+			</code></pre>
+
+			<p>If you're satisfied with your lightbox, the final step is to make it hidden by default.</p>
+			<p>Just add <code class="language-css">display: none;</code> to your #lightbox_container CSS property.</p>
+
+			<p>Congrats! You're done.</p>
+
 		</div>
-
-		<p>Here's what the script is saying:</p>
-
-		<p>Every time the select dropdown changes value, show the value in the console.</p>
-
-		<p>Two quick things to note:</p>
-		<ul>
-			<li>The example makes use of the <b>onchange</b> event, which detects when a form element has been changed.</li>
-			<li>You can set a custom value for any of the options in a select dropdown, but if you don't, the value will default to whatever text is inside the option.</li>
-		</ul>
 
 
 
@@ -308,94 +267,20 @@
 			<h2>Exercises:</h2>
 			<ol>
 				<li>
-					<p><strong>Make a basic checkbox</strong></p>
-					<p>Type the following code, then repeat it until you no longer need to look at an example.</p>
-
-					<pre><code class="language-markup">
-						&lt;label&gt;
-							&lt;input type="checkbox" id="mycheckbox"&gt;
-							Check this
-						&lt;/label&gt;
-
-						&lt;script&gt;
-						document.getElementById('mycheckbox').onclick = function(){
-							if(this.checked){
-								console.log('checked');
-							}
-							else{
-								console.log('unchecked');
-							}
-						};
-						&lt;/script&gt;
-					</code></pre>
+					<p>Without looking at any examples, create a basic div that opens and closes when you click on the open button and the close button, respectively.</p>
+					<p>If you need to look at an example, repeat this until you don't need help.</p>
 				</li>
 
 				<li>
-					<p><strong>Premium option checkbox</strong></p>
-					<p>Create price variable and set it to 50 by default.  Show that price on a page.</p>
-					<p>Create a checkbox with the label "Add premium option".  Set the checkbox's value to 50 in the HTML.</p>
-					<p>When the box is checked, add the checkbox value to the price, and when it's unchecked, subtract the checkbox value from the price.</p>
-					<p>Remember to convert the checkbox value from a string to a number.</p>
+					<p>Take your div from the previous quesiton and style it to look more like a lightbox.</p>
 				</li>
 
 				<li>
-					<p><strong>Basic radio buttons</strong></p>
-					<p>Try out the following example to see radio buttons in action:</p>
-
-					<pre><code class="language-markup">
-						&lt;label&gt;
-							&lt;input id="radioa" type="radio" name="q1" value="radio a"&gt;
-							Answer A
-						&lt;/label&gt;
-						&lt;label&gt;
-							&lt;input id="radiob" type="radio" name="q1" value="radio b"&gt;
-							Answer B
-						&lt;/label&gt;
-						&lt;script&gt;
-						document.getElementById('radioa').onclick = function(){
-							console.log(this.value);
-						};
-
-						document.getElementById('radiob').onclick = function(){
-							console.log(this.value);
-						};
-						&lt;/script&gt;
-					</code></pre>
+					<p>Take your progress from the previous two questions and put the finishing touches on your lightbox.  This should include a clickable transparent overlay that closes the lightbox.</p>
 				</li>
 
 				<li>
-					<p><strong>Choose a car's color with radio buttons</strong></p>
-					<p>Create a div that says the color of a car. (For example, it might say "Car color: red".)</p>
-					<p>Create a set of radio buttons that can change the car's color to red, green, or blue.</p>
-					<p>Remember to give the radio buttons the same name since you want them to be in the same group.</p>
-				</li>
-
-				<li>
-					<p><strong>A basic <b>select</b> dropdown</strong></p>
-					
-					<p>Type the example once to get a feel for it:</p>
-
-					<pre><code class="language-markup">
-						&lt;select id="myselect"&gt;
-							&lt;option&gt;Option 1&lt;/option&gt;
-							&lt;option&gt;Option 2&lt;/option&gt;
-							&lt;option value="custom value"&gt;Option 3&lt;/option&gt;
-						&lt;/select&gt;
-
-						&lt;script&gt;
-						document.getElementById('myselect').onchange = function(){
-							console.log(this.value);
-						};
-						&lt;/script&gt;
-					</code></pre>
-				</li>
-
-				<li>
-					<p><strong>A practical <b>select</b> dropdown</strong></p>
-					
-					<p>Create a div that shows the color of a pair of shoes. (Example: "Shoe color: blue")</p>
-
-					<p>Create a select dropdown that can change the selected color of the shoes.</p>
+					<p>Without looking at any examples, create your own lightbox from scratch.  Once you've got the basics in place, have fun with it and make it as pretty as you want.</p>
 				</li>
 			</ol>
 		</div>
@@ -406,11 +291,17 @@
 
 
 		<div class="section">
-			<p>This section was a lot, and you don't need to have it all memorized.</p>
+			<p>Congrats on getting through this section.</p>
 
-			<p>As long as you have a basic understanding of how forms work, you can always look up what you need.</p>
+			<p>Hopefully now you're starting to see how to approach bigger problems.</p>
 
-			<p>This is not the same as something like document.getElementById() or document.querySelector or document.querySelectorAll, which you absolutely want to know off the top of your head.</p>
+			<p>It'll take practice with a variety of situations to feel comfortable, but at least you have a start.</p>
+
+			<div class="special_section tip">
+				<h3>Tip: It isn't always a JavaScript problem</h3>
+				<p>One interesting note is that sometimes, something that seems like a JavaScript problem is more of a CSS problem.</p>
+				<p>In the lightbox example, the JavaScript turned out to be a few clicks to show and hide everything while the CSS involved some tricky positioning.</p>
+			</div>
 		</div>
 
 

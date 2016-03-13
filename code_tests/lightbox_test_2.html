@@ -13,6 +13,16 @@
 	color:#333;
 }*/
 
+
+#lightbox_container{
+	position: fixed;
+	text-align: center;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
 #lightbox{
 	width: 400px;
 	height: 300px;
@@ -21,6 +31,8 @@
 	padding: 20px;
 
 	position: relative;
+	display: inline-block;
+	margin-top: 20px;
 }
 
 #hide{
@@ -37,14 +49,17 @@
 
 
 <button id="show">Show lightbox</button>
-<div id="lightbox">
-	<div id="hide">[hide]</div>
-	Lightbox content
+
+<div id="lightbox_container">
+	<div id="lightbox">
+		<div id="hide">[hide]</div>
+		Lightbox content
+	</div>
 </div>
 
 
 <script>
-var lightbox = document.getElementById('lightbox');
+var lightbox = document.getElementById('lightbox_container');
 
 function showLightbox(){
 	lightbox.style.display = 'block';

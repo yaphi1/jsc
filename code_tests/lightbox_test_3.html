@@ -13,6 +13,18 @@
 	color:#333;
 }*/
 
+
+#lightbox_container{
+	position: fixed;
+	text-align: center;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+
+	display: none;
+}
+
 #lightbox{
 	width: 400px;
 	height: 300px;
@@ -21,12 +33,24 @@
 	padding: 20px;
 
 	position: relative;
+	display: inline-block;
+	margin-top: 20px;
 }
 
 #hide{
 	position: absolute;
 	top: 20px;
 	right: 20px;
+	cursor: pointer;
+}
+
+#overlay{
+	background: rgba(33,33,33,0.8);
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
 }
 
 </style>
@@ -37,14 +61,18 @@
 
 
 <button id="show">Show lightbox</button>
-<div id="lightbox">
-	<div id="hide">[hide]</div>
-	Lightbox content
+
+<div id="lightbox_container">
+	<div id="overlay"></div>
+	<div id="lightbox">
+		<div id="hide">[hide]</div>
+		Lightbox content
+	</div>
 </div>
 
 
 <script>
-var lightbox = document.getElementById('lightbox');
+var lightbox = document.getElementById('lightbox_container');
 
 function showLightbox(){
 	lightbox.style.display = 'block';
@@ -56,6 +84,7 @@ function hideLightbox(){
 
 document.getElementById('show').onclick = showLightbox;
 document.getElementById('hide').onclick = hideLightbox;
+document.getElementById('overlay').onclick = hideLightbox;
 
 </script>
 </body>
