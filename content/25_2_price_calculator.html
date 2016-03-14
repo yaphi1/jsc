@@ -168,6 +168,11 @@
 				&lt;/script&gt;
 			</code></pre>
 
+			<div class="special_section warning">
+				<h3>Warning: Remember to convert checkbox value to number</h3>
+				<p>When you're getting a number from a checkbox value, remember to convert it from a string into a number using JavaScript's built-in Number() function.</p>
+			</div>
+
 			<br>
 			<h3>Add another option</h3>
 
@@ -246,12 +251,100 @@
 				&lt;input id="gps" type="checkbox" value="5000" data-itemname="Built-in GPS"&gt;
 			</code></pre>
 
-			<p>To get the attribute, you'll need to use JavaScript's built-in <b>getAttribute</b> method. (Explain hyphen)</p>
-			<p>var myHref = document.getElementById('whatever').getAttribute('href');</p>
+			<p>To get the attributes, you'll need to use JavaScript's built-in <b>getAttribute</b> method, which would look like this, for example, if you want to get a href attribute (no need to type it):</p>
+			<pre><code>
+				var myHref = document.getElementById('whatever').getAttribute('href');
+			</code></pre>
 
-			<p>Add this loop</p>
+			<p>You may remember getting href by doing .href instead of getAttribute('href').  Both ways work for href.</p>
+
+			<p>The reason you can't just write .data-whatever the way you can write .href is that the hyphen would get confused for a minus sign and mess stuff up.</p>
+
+			<p>Now that you know another way to get attributes, let's create a function to find each checked option, push it onto a list, and show that list on our page.</p>
+
+			<p>First make sure your HTML has a place to put the selections:</p>
+			<pre><code class="language-markup">
+				&lt;div&gt;
+					Selections:
+					&lt;div id="selections"&gt;&lt;/div&gt;
+					
+					Total Price: &lt;span id="price"&gt;&lt;/span&gt;
+				&lt;/div&gt;
+			</code></pre>
+			
+			<p>Then type the following to show the user's selections:</p>
 
 			<pre><code>
+				function showSelections(){
+					
+					// start with an empty list
+					var list = [];
+					
+					// find each checked option in our form
+					var checkedOnes = document.getElementById('carform').querySelectorAll('input:checked');
+					
+					// for each checked option, get the item name and put it on the list
+					for(var i=0; i&lt;checkedOnes.length; i++){
+						var itemname = checkedOnes[i].getAttribute('data-itemname');
+						list.push(itemname);
+					}
+
+					// show the completed list
+					document.getElementById('selections').innerHTML = list.join('&lt;br&gt;');
+				}
+			</code></pre>
+
+			<p>Then add this inside your <code>handleOption</code> function right before the price gets displayed:</p>
+			<pre><code>
+				showSelections();
+			</code></pre>
+
+			<p>Now you should have a working price calculator.</p>
+
+			<p>You can add other types of inputs, but this section has been long enough already, so I'd rather have you digest this.</p>
+
+			<p>Just so you have a reference, your final code for the whole project should look something like this (no need to type anything; this is just to help check your work):</p>
+			<pre><code class="language-markup">
+				&lt;form id="carform" autocomplete="off"&gt;
+					&lt;label&gt;
+						&lt;input id="sunroof" type="checkbox" value="1000" data-itemname="Sunroof"&gt;
+						Sunroof: $1000
+					&lt;/label&gt;
+					&lt;label&gt;
+						&lt;input id="gps" type="checkbox" value="5000" data-itemname="Built-in GPS"&gt;
+						Built-in GPS: $5000
+					&lt;/label&gt;
+				&lt;/form&gt;
+
+				&lt;div&gt;
+					Selections:
+					&lt;div id="selections"&gt;&lt;/div&gt;
+					
+					Total Price: &lt;span id="price"&gt;&lt;/span&gt;
+				&lt;/div&gt;
+
+				&lt;script&gt;
+				var price = 20000;
+				document.getElementById('price').innerHTML = price;
+
+				var options = document.getElementById('carform').querySelectorAll('input');
+				for(var i=0; i&lt;options.length; i++){
+					options[i].onclick = handleOption;
+				}
+
+				function handleOption(){
+					var itemPrice = Number(this.value);
+					if(this.checked){
+						price += itemPrice;
+					}
+					else{
+						price -= itemPrice;
+					}
+
+					showSelections();
+					document.getElementById('price').innerHTML = price;
+				}
+
 				function showSelections(){
 					var list = [];
 					var checkedOnes = document.getElementById('carform').querySelectorAll('input:checked');
@@ -261,9 +354,8 @@
 					}
 					document.getElementById('selections').innerHTML = list.join('&lt;br&gt;');
 				}
+				&lt;/script&gt;
 			</code></pre>
-
-			<p>Things to notice:</p>
 			
 
 		</div>
@@ -276,20 +368,20 @@
 			<h2>Exercises:</h2>
 			<ol>
 				<li>
-					<p>Without looking at any examples, create a basic div that opens and closes when you click on the open button and the close button, respectively.</p>
+					<p>Create a checkbox that updates and displays a price (no need to use a car this time; feel free to pick anything).</p>
 					<p>If you need to look at an example, repeat this until you don't need help.</p>
 				</li>
 
 				<li>
-					<p>Take your div from the previous quesiton and style it to look more like a lightbox.</p>
+					<p>Take your code from the previous quesiton and update it so it has a loop that can support any number of checkboxes.</p>
 				</li>
 
 				<li>
-					<p>Take your progress from the previous two questions and put the finishing touches on your lightbox.  This should include a clickable transparent overlay that closes the lightbox.</p>
+					<p>Update your code so that it shows a list of all options that the user has checked.</p>
 				</li>
 
 				<li>
-					<p>Without looking at any examples, create your own lightbox from scratch.  Once you've got the basics in place, have fun with it and make it as pretty as you want.</p>
+					<p>Without looking at any examples, create your own price calculator from scratch.  Once you've got the basics in place, have fun with it and make it as creative as you want.</p>
 				</li>
 			</ol>
 		</div>
@@ -300,16 +392,17 @@
 
 
 		<div class="section">
-			<p>Congrats on getting through this section.</p>
+			<p>Good job getting through this section.</p>
 
-			<p>Hopefully now you're starting to see how to approach bigger problems.</p>
+			<p>Don't worry if it was tricky.  That's normal.</p>
 
-			<p>It'll take practice with a variety of situations to feel comfortable, but at least you have a start.</p>
+			<p>As you continue to code more things, you'll start to get more comfortable approaching new situations.</p>
 
 			<div class="special_section tip">
-				<h3>Tip: It isn't always a JavaScript problem</h3>
-				<p>One interesting note is that sometimes, something that seems like a JavaScript problem is more of a CSS problem.</p>
-				<p>In the lightbox example, the JavaScript turned out to be a few clicks to show and hide everything while the CSS involved some tricky positioning.</p>
+				<h3>Tip: Sometimes it's about the details</h3>
+				<p>One interesting note is that sometimes, something that seems like a JavaScript problem is more about keeping track of details.</p>
+				<p>For example, what happens if the user clicks this and then that?  What happens if the user forgets to select an option?  What if I want to keep track of the information in an unusual way?</p>
+				<p>The best cure is to first write out what you want the code to do.  That way, you're not trying to code and plan at the same time.</p>
 			</div>
 		</div>
 
