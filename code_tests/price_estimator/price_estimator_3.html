@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+
+<form id="carform" autocomplete="off">
+	<label>
+		<input id="sunroof" type="checkbox" value="1000" data-itemname="Sunroof">
+		Sunroof: $1000
+	</label>
+	<label>
+		<input id="gps" type="checkbox" value="5000" data-itemname="Built-in GPS">
+		Built-in GPS: $5000
+	</label>
+</form>
+
+<div>
+	Selections:
+	<div id="selections"></div>
+	
+	Total Price: <span id="price"></span>
+</div>
+
+<script>
+var price = 20000;
+document.getElementById('price').innerHTML = price;
+
+/*
+document.getElementById('sunroof').onclick = handleOption;
+document.getElementById('gps').onclick = handleOption;
+*/
+var options = document.getElementById('carform').querySelectorAll('input');
+for(var i=0; i<options.length; i++){
+	options[i].onclick = handleOption;
+}
+
+
+function handleOption(){
+	var itemPrice = Number(this.value);
+	if(this.checked){
+		price += itemPrice;
+	}
+	else{
+		price -= itemPrice;
+	}
+
+	showSelections();
+	document.getElementById('price').innerHTML = price;
+}
+
+function showSelections(){
+	var list = [];
+	var checkedOnes = document.getElementById('carform').querySelectorAll('input:checked');
+	for(var i=0; i<checkedOnes.length; i++){
+		var itemname = checkedOnes[i].getAttribute('data-itemname');
+		list.push(itemname);
+	}
+	document.getElementById('selections').innerHTML = list.join('<br>');
+}
+</script>
+</body>
+</html>
