@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>25_2 - price calculator</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+
+
+
+		<h1>Create a price calculator</h1>
+
+
+		<p>Now that you know the basics of JavaScript, the best way to get better at projects is to do more of them.</p>
+
+		<p>In this unit, we're going to create a price calculator you can use in a bunch of scenarios.</p>
+
+		<p>Here are some possible uses:</p>
+		<ul>
+			<li>A price estimator for projects in any industry (examples: marketing, accounting, design, web development, etc.)</li>
+			<li>Customized merchandise like clothing, accessories, cars, computers, etc.</li>
+			<li>Services like catering, delivery, car care, construction, consulting, etc.</li>
+		</ul>
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Custom car price estimator</h2>
+
+			<p>We're going to create a page that lets people customize a car and get a price.</p>
+			<p>To accomplish that, we're going to follow these steps:</p>
+			<ul>
+				<li>
+					<p><strong>Use comments to outline what you want your code to do.</strong></p>
+				</li>
+				<li>
+					<p><strong>Build the smallest piece first.</strong></p>
+				</li>
+				<li>
+					<p><strong>Keep adding pieces until your project is complete.</strong></p>
+				</li>
+			</ul>
+		</div>
+		
+
+
+		<div class="section">
+			<h2>Outline the code with comments</h2>
+
+			<p>First, we'll write out what we want our code to accomplish.  Type something like this (feel free to use whatever sorts of comments you want):</p>
+
+			<pre><code>
+				/*
+					- goal: let users select options, then show price
+					- handling the price:
+						- we can store it in a variable
+						- the price should change when an option is clicked
+					- handling the options:
+						- use checkboxes for options that can all be added
+						- use radio buttons where user can only select one
+						- data can be stored in an object
+					- handling the display:
+						- we want to show a list of selections, not just price
+				*/
+			</code></pre>
+		</div>
+
+
+
+		<div class="section">
+			<h2>Create the basic functionality</h2>
+
+			<h3>The price and a checkbox</h3>
+
+			<p>First, we'll create an output span to show the price and a form to add and remove one feature.</p>
+
+			<p>Type the following to make it happen:</p>
+
+			<pre><code class="language-markup">
+				&lt;form id="carform" autocomplete="off"&gt;
+					&lt;label&gt;
+						&lt;input id="sunroof" type="checkbox" value="1000"&gt;
+						Sunroof: $1000
+					&lt;/label&gt;
+				&lt;/form&gt;
+
+				&lt;div&gt;
+					Total Price: &lt;span id="price"&gt;&lt;/span&gt;
+				&lt;/div&gt;
+
+				&lt;script&gt;
+				// start the price at 20000 and show it
+				var price = 20000;
+				document.getElementById('price').innerHTML = price;
+
+				// when user clicks sunroof, handle it properly
+				document.getElementById('sunroof').onclick = handleOption;
+
+				// when user clicks an option...
+				function handleOption(){
+
+					// convert value from string to number
+					var itemPrice = Number(this.value);
+					
+					// if checked, add to total price
+					if(this.checked){
+						price += itemPrice;
+					}
+
+					// otherwise, subtract from total price
+					else{
+						price -= itemPrice;
+					}
+
+					// show price
+					document.getElementById('price').innerHTML = price;
+				}
+				&lt;/script&gt;
+			</code></pre>
+
+			<br>
+			<h3>Add another option</h3>
+
+			<p>Add the following code to add a GPS option:</p>
+
+			<pre><code class="language-markup">
+				&lt;label&gt;
+					&lt;input id="gps" type="checkbox" value="5000"&gt;
+					Built-in GPS: $5000
+				&lt;/label&gt;
+			</code></pre>
+
+			<p>Then add this to your script:</p>
+
+			<pre><code>
+				document.getElementById('gps').onclick = handleOption;
+			</code></pre>
+
+			<p>Test your page to make sure everything works the way you expect.</p>
+
+			
+			<h3>Make the code more efficient</h3>
+			
+			<p>Now let's take a look at the script again.  We're attaching the same function to each checkbox, and that's going to get repetitive after a while.  Let's use a loop instead.</p>
+
+			<p>Change this...</p>
+
+			<pre><code>
+				document.getElementById('sunroof').onclick = handleOption;
+				document.getElementById('gps').onclick = handleOption;
+			</code></pre>
+
+			<p>...to this:</p>
+
+			<pre><code>
+				var options = document.getElementById('carform').querySelectorAll('input');
+				for(var i=0; i&lt;options.length; i++){
+					options[i].onclick = handleOption;
+				}
+			</code></pre>
+
+			<p>This loop goes through each input in our form and adds an onclick handler to each. (If you have different types of inputs like text boxes, then you can change the selector to target whatever types of elements you want.)</p>
+			<p>This way, we can put as many options as we want in our form without having to keep updating the JavaScript.</p>
+			<p>Convenient!</p>
+
+
+
+
+
+
+
+
+			
+
+
+			<h3>Styling and positioning</h3>
+
+			<p>Let's add a bit of style and then position the close button in the top right corner.  Type the following in the head section of the page:</p>
+
+			<pre><code class="language-markup">
+				&lt;style&gt;
+				#lightbox{
+					width: 400px;
+					height: 300px;
+					background-color: #f8f7f3;
+					border-radius: 5px;
+					padding: 20px;
+
+					position: relative;
+				}
+
+				#hide{
+					position: absolute;
+					top: 20px;
+					right: 20px;
+					cursor: pointer;
+				}
+				&lt;/style&gt;
+			</code></pre>
+
+			<p>Now we're getting somewhere.</p>
+
+			<p>We'll want the lightbox to sit on top of the rest of the page's content instead of being a part of it.</p>
+
+			<p>We can do that by using a container with a <code class="language-css">position: fixed;</code> CSS property.</p>
+
+			<p>Add these updates to your CSS:</p>
+
+			<pre><code class="language-css">
+				#lightbox_container{
+					position: fixed;
+					text-align: center;
+					left: 0px;
+					top: 0px;
+					width: 100%;
+					height: 100%;
+				}
+				#lightbox{
+					/* DO NOT delete your existing CSS properties */
+					/* just add these onto what's already there */
+					display: inline-block;
+					margin-top: 20px;
+				}
+			</code></pre>
+
+			<p>Change your lightbox's HTML structure to this:</p>
+
+			<pre><code class="language-markup">
+				&lt;div id="lightbox_container"&gt;
+					&lt;div id="lightbox"&gt;
+						&lt;div id="hide"&gt;[hide]&lt;/div&gt;
+						Lightbox content
+					&lt;/div&gt;
+				&lt;/div&gt;
+			</code></pre>
+
+			<p>And finally, change your first line of script to this:</p>
+			<pre><code>
+				var lightbox = document.getElementById('lightbox_container');
+			</code></pre>
+
+			<p><strong>Quick recap of what you've done:</strong></p>
+
+			<ul>
+				<li>You've created a div that you can open and close.</li>
+				<li>You've styled it like a lightbox.</li>
+				<li>You've made the lightbox sit on top of your content instead of being a part of it.</li>
+			</ul>
+
+			<p>Now there's one part left: Adding a transparent overlay people can click on to close the lightbox.</p>
+
+			<h3>Close the lightbox by clicking outside it</h3>
+
+			<p>To accomplish this, we'll need a clickable overlay.</p>
+
+			<p>First, update your HTML to look like this:</p>
+
+			<pre><code class="language-markup">
+				&lt;div id="lightbox_container"&gt;
+					&lt;div id="overlay"&gt;&lt;/div&gt;
+					&lt;div id="lightbox"&gt;
+						&lt;div id="hide"&gt;[hide]&lt;/div&gt;
+						Lightbox content
+					&lt;/div&gt;
+				&lt;/div&gt;
+			</code></pre>
+
+			<p>Then update your CSS to make the overlay a transparent layer that covers the whole window.  It should look like this:</p>
+
+			<pre><code class="language-css">
+				#overlay{
+					background: rgba(33,33,33,0.8);
+					position: absolute;
+					left: 0px;
+					top: 0px;
+					width: 100%;
+					height: 100%;
+				}
+			</code></pre>
+
+			<p>Now that we have a transparent overlay in the background of our lightbox_container layer, we can add this script to hide the lightbox when the overlay is clicked:</p>
+
+			<pre><code>
+				document.getElementById('overlay').onclick = hideLightbox;
+			</code></pre>
+
+			<p>If you're satisfied with your lightbox, the final step is to make it hidden by default.</p>
+			<p>Just add <code class="language-css">display: none;</code> to your #lightbox_container CSS property.</p>
+
+			<p>Congrats! You're done.</p>
+
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+			<ol>
+				<li>
+					<p>Without looking at any examples, create a basic div that opens and closes when you click on the open button and the close button, respectively.</p>
+					<p>If you need to look at an example, repeat this until you don't need help.</p>
+				</li>
+
+				<li>
+					<p>Take your div from the previous quesiton and style it to look more like a lightbox.</p>
+				</li>
+
+				<li>
+					<p>Take your progress from the previous two questions and put the finishing touches on your lightbox.  This should include a clickable transparent overlay that closes the lightbox.</p>
+				</li>
+
+				<li>
+					<p>Without looking at any examples, create your own lightbox from scratch.  Once you've got the basics in place, have fun with it and make it as pretty as you want.</p>
+				</li>
+			</ol>
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<p>Congrats on getting through this section.</p>
+
+			<p>Hopefully now you're starting to see how to approach bigger problems.</p>
+
+			<p>It'll take practice with a variety of situations to feel comfortable, but at least you have a start.</p>
+
+			<div class="special_section tip">
+				<h3>Tip: It isn't always a JavaScript problem</h3>
+				<p>One interesting note is that sometimes, something that seems like a JavaScript problem is more of a CSS problem.</p>
+				<p>In the lightbox example, the JavaScript turned out to be a few clicks to show and hide everything while the CSS involved some tricky positioning.</p>
+			</div>
+		</div>
+
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>

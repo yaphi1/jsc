@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+
+<form id="carform" autocomplete="off">
+	<label>
+		<input id="sunroof" type="checkbox" value="1000" data-name="Sunroof">
+		Sunroof: $1000
+	</label>
+	<label>
+		<input id="gps" type="checkbox" value="5000" data-name="Built-in GPS">
+		Built-in GPS: $5000
+	</label>
+</form>
+
+<div>
+	<div id="options"></div>
+	Total Price: <span id="price"></span>
+</div>
+
+<script>
+var price = 20000;
+document.getElementById('price').innerHTML = price;
+
+/*
+document.getElementById('sunroof').onclick = handleOption;
+document.getElementById('gps').onclick = handleOption;
+*/
+var options = document.getElementById('carform').querySelectorAll('input');
+for(var i=0; i<options.length; i++){
+	options[i].onclick = handleOption;
+}
+
+
+function handleOption(){
+	var itemPrice = Number(this.value);
+	if(this.checked){
+		price += itemPrice;
+	}
+	else{
+		price -= itemPrice;
+	}
+	document.getElementById('price').innerHTML = price;
+}
+</script>
+</body>
+</html>
