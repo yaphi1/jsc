@@ -179,6 +179,23 @@ input[type=submit]:hover{
 }
 
 
+button{
+	padding: 15px;
+	font-size: 24px;
+	font-family: Nunito, sans-serif;
+	width: 400px;
+	max-width: 90%;
+	box-sizing: border-box;
+	border-radius: 3px;
+	background: #6ED19C;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+}
+
+button:hover{
+	background: #7ea;
+}
 
 
 

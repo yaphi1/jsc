@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>25_3 - rock paper scissors</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+
+
+
+		<h1>Create a game of rock-paper-scissors</h1>
+
+		<p>In this unit, we're going to create a rock-paper-scissors game.</p>
+
+		<p>The basic rules are as follows:</p>
+		<ul>
+			<li>Each player chooses an option: rock, paper, or scissors</li>
+			<li>
+				The winner is determined according to the following rules:
+				<ul>
+					<li>Rock beats scissors</li>
+					<li>Scissors beat paper</li>
+					<li>Paper beats rock</li>
+				</ul>
+			</li>
+			<li>If both players make the same selection, it's a tie.</li>
+		</ul>
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>A different kind of unit</h2>
+
+			<p>This section has a twist.</p>
+
+			<p>Instead of doing the walkthrough, I'm going to ask you to try to make the game on your own.</p>
+
+			<p>Here's what needs to happen:</p>
+			<ul>
+				<li>There should be three buttons, one for each option.</li>
+				<li>The opponent should be the computer, and it should pick an option randomly.</li>
+				<li>Each time you click one of the buttons, the game should show your move, your opponents move, and a message telling you whether you won, lost, or tied.</li>
+			</ul>
+
+			<p>There are many ways to approach this problem, so your path is up to you.</p>
+
+			<p>Don't look at the solution until you've gotten your game working.</p>
+
+			<div style="text-align:center;">
+				<button id="show_rps_solution">Show solution</button>
+			</div>
+			
+			<div id="rps_solution">
+				<h3>Solution</h3>
+			
+				<p>If you've created a working game, congrats!  If not, keep trying.  Only come here if you're finished.</p>
+
+				<p>Now copy this code into your text editor and comment on what it is doing at each step:</p>
+				
+				<pre><code class="language-markup">
+					&lt;div id="output"&gt;&lt;/div&gt;
+					&lt;div id="buttons"&gt;
+						&lt;button id="rock"&gt;Rock&lt;/button&gt;
+						&lt;button id="paper"&gt;Paper&lt;/button&gt;
+						&lt;button id="scissors"&gt;Scissors&lt;/button&gt;
+					&lt;/div&gt;
+
+					&lt;script&gt;
+
+					var options = ['rock','paper','scissors'];
+
+					var winning = {
+						rock: 'scissors',
+						scissors: 'paper',
+						paper: 'rock'
+					};
+
+					var buttons = document.getElementById('buttons').querySelectorAll('button');
+					for(var i=0; i&lt;buttons.length; i++){
+						buttons[i].onclick = showResults;
+					}
+
+					function getOpponentMove(){
+						var rand = Math.floor(Math.random()*3);
+						return options[rand];
+					}
+
+					function showResults(){
+						var playerChoice = this.id;
+						var opponentChoice = getOpponentMove();
+
+						var output = '';
+						
+						if(winning[playerChoice]===opponentChoice){
+							output = "You win!";
+						}
+						else if(playerChoice===opponentChoice){
+							output = "It's a tie!";
+						}
+						else{
+							output = "You lose!";
+						}
+						output += "&lt;br&gt;Your choice: "
+								+ playerChoice
+								+ ", Opponent's choice: "
+								+ opponentChoice;
+
+						document.getElementById('output').innerHTML = output;
+					}
+
+					&lt;/script&gt;
+				</code></pre>
+
+				<p>Once you're done commenting, start a new blank document and see if you can create a rock-paper-scissors game from scratch.</p>
+
+				<p>You can incorporate what you've learned, and you can add your own improvements too!  It doesn't have to match the code example here.  It just has to work.</p>
+
+			</div>
+		</div>
+
+
+
+
+
+
+
+		<div class="section">
+			<div class="special_section tip">
+				<h3>Tip: It's important to try things on your own</h3>
+				<p>If this unit was a challenge, that's okay!</p>
+				<p>It's good to challenge yourself like this because then you get used to really thinking about a problem instead of just following along with an example.</p>
+				<p>The more stuff you code without leaning too much on examples, the better you'll be equiped to deal with unfamiliar problems.</p>
+			</div>
+
+			<p>Note: There are no exercises at the end of this unit because the whole unit was a big exercise.</p>
+		</div>
+
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+<script>
+var solns = document.getElementById('rps_solution').style;
+solns.display = 'none';
+var btn = document.getElementById('show_rps_solution');
+btn.onclick = function(){
+	solns.display = solns.display=='none' ? 'block':'none';
+	btn.innerHTML = solns.display=='none' ? 'Show solution':'Hide solution';
+};
+</script>
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>

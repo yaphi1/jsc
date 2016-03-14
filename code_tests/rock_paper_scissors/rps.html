@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+</style>
+
+</head>
+<body>
+
+<div id="output"></div>
+<div id="buttons">
+	<button id="rock">Rock</button>
+	<button id="paper">Paper</button>
+	<button id="scissors">Scissors</button>
+</div>
+
+<script>
+
+var options = ['rock','paper','scissors'];
+
+var winning = {
+	rock: 'scissors',
+	scissors: 'paper',
+	paper: 'rock'
+};
+
+var buttons = document.getElementById('buttons').querySelectorAll('button');
+for(var i=0; i<buttons.length; i++){
+	buttons[i].onclick = showResults;
+}
+
+function getOpponentMove(){
+	var rand = Math.floor(Math.random()*3);
+	return options[rand];
+}
+
+function showResults(){
+	var playerChoice = this.id;
+	var opponentChoice = getOpponentMove();
+
+	var output = '';
+	
+	if(winning[playerChoice]===opponentChoice){
+		output = "You win!";
+	}
+	else if(playerChoice===opponentChoice){
+		output = "It's a tie!";
+	}
+	else{
+		output = "You lose!";
+	}
+	output += "<br>Your choice: "
+			+ playerChoice
+			+ ", Opponent's choice: "
+			+ opponentChoice;
+
+	document.getElementById('output').innerHTML = output;
+}
+
+</script>
+</body>
+</html>
