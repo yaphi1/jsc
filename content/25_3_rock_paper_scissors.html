@@ -206,13 +206,15 @@
 
 
 <script>
-var solns = document.getElementById('rps_solution').style;
-solns.display = 'none';
-var btn = document.getElementById('show_rps_solution');
-btn.onclick = function(){
-	solns.display = solns.display=='none' ? 'block':'none';
-	btn.innerHTML = solns.display=='none' ? 'Show solution':'Hide solution';
-};
+(function(){
+	var solns = document.getElementById('rps_solution').style;
+	solns.display = 'none';
+	var btn = document.getElementById('show_rps_solution');
+	btn.onclick = function(){
+		solns.display = solns.display=='none' ? 'block':'none';
+		btn.innerHTML = solns.display=='none' ? 'Show solution':'Hide solution';
+	};
+})();
 </script>
 
 
