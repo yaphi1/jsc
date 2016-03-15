@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>25_4 - assorted projects</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+		<h1>Boost your skills with assorted projects</h1>
+
+		<p>Time to test your wings.</p>
+
+		<p>This unit has several projects to be done one evening at a time.</p>
+
+		<p>There won't be any hand-holding in this time, so it's up to you to create your own solutions.</p>
+
+		<p>Good luck!</p>
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Projects:</h2>
+			<ol>
+				<li>
+					<p><strong>Build the front end of a single-page shopping cart.</strong></p>
+					<p>People should be able to add or remove items, and the list of items should update along with the total cost.</p>
+				</li>
+
+				<li>
+					<p><strong>Validate a form.</strong></p>
+					<ul>
+						<li>The form should have the following input fields: name, email, and age.</li>
+						<li>Name should have something in it.</li>
+						<li>Email should have an @ somewhere in it (feel free to do more complicated validation).</li>
+						<li>Age should be a number.</li>
+						<li>There should be helpful error messages.</li>
+					</ul>
+				</li>
+
+				<li>
+					<p><strong>Create a quiz.</strong></p>
+					<p>Your quiz should tally the answers and show a score at the end.</p>
+					<p>Be as creative as you want, but make sure it works first.</p>
+				</li>
+
+				<li>
+					<p><strong>Create a collapsible navigation menu.</strong></p>
+					<p>Click an icon to toggle the menu and make it appear or disappear.</p>
+					<p>Feel free to add whatever effects and styles you want.</p>
+				</li>
+				
+
+				<li>
+					<p><strong>Create an autocorrecting text box.</strong></p>
+					<p>As the user types, the text box should change all instances of "taht" to "that".  Feel free to add more autocorrections.</p>
+				</li>
+
+				<li>
+					<p><strong>Create a 10-minute countdown clock.</strong></p>
+					<p>The clock should show minutes and seconds.  Style it however you'd like.</p>
+				</li>
+
+				<li>
+					<p><strong>Create a random name picker.</strong></p>
+					<p>How it should work: Feed a comma-separated list of names into a text box, click a button, and a random name should be selected from the list.</p>
+					<p>Hint: You might have to split a string into an array.</p>
+				</li>
+			</ol>
+		</div>
+
+
+
+
+
+
+
+		<div class="section">
+			<p>Remember, you don't need to do all of these projects in one sitting.</p>
+			<p>Just do one at a time, refine it, get comfortable with it, and move on to the next one.</p>
+			
+			<div class="special_section tip">
+				<h3>Tip: When in doubt, write it out</h3>
+				<p>Writing an outline of your code in comments can help keep you from getting confused.</p>
+				<p>Remember: If a project is tricky, you don't want to plan and code at the same time.</p>
+			</div>
+		</div>
+
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
