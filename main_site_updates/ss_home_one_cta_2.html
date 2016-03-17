@@ -8,10 +8,10 @@
 <style type="text/css">
 
 @font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Nunito-Light'), url(https://fonts.gstatic.com/s/nunito/v7/1TiHc9yag0wq3lDO9cw0vpBw1xU1rKptJj_0jans920.woff2) format('woff2'), url(https://fonts.gstatic.com/s/nunito/v7/1TiHc9yag0wq3lDO9cw0vrO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+	font-family: 'Nunito';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Nunito-Light'), url(https://fonts.gstatic.com/s/nunito/v7/1TiHc9yag0wq3lDO9cw0vpBw1xU1rKptJj_0jans920.woff2) format('woff2'), url(https://fonts.gstatic.com/s/nunito/v7/1TiHc9yag0wq3lDO9cw0vrO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
 }
 
 
@@ -31,6 +31,9 @@ button{
 	font-family: 'Nunito', sans-serif;
 }
 
+p{
+	line-height: 1.5;
+}
 
 .topbar{
 	padding: 20px;
@@ -50,13 +53,14 @@ button{
 	line-height: 1.5;
 
 	padding: 52px 10px 92px;
+
+	text-align: center;
 }
 
 .masthead h1{
-	line-height: 1.2;
+	line-height: 1.5;
 	font-size: 42px;
-	text-align: center;
-	margin: 0px 0px 72px;
+	margin: 0px 0px 63px;
 
 	font-family: georgia, 'Nunito', sans-serif;
 }
@@ -101,7 +105,7 @@ FEATURED BY
 	text-align: center;
 	/*background: #11E5E5;
 	color: #DCFCFB;*/
-	background: #eee;
+	background: #fafafa;
 	color: #999;
 }
 
@@ -138,15 +142,61 @@ FEATURED BY
 }
 
 .what_you_gain h2{
-	font-size: 35px;
-	margin-top: 72px;
+	font-size: 42px;
+	margin: 72px 10px 72px;
+	padding-bottom: 12px;
+	border-bottom: 4px solid #0bd;
+	display: inline-block;
+
+	/*font-family: georgia;*/
 }
 
 .what_you_gain h3{
 	font-size: 30px;
+	margin-top: 0px;
+}
+
+.gain_blurb{
+	background: #fafafa;
+	padding: 36px;
+	display: inline-block;
+	max-width: 310px;
+	margin: 10px;
+	vertical-align: top;
+
+	border-radius: 5px;
 }
 
 
+
+
+
+
+
+
+.bottom_cta_container{
+	background: #fafafa;
+	padding: 48px 10px;
+	margin-top: 72px;
+}
+
+.bottom_cta_container h2{
+	max-width: 800px;
+	margin: 0px auto 36px;
+}
+
+
+
+
+.bottomnav{
+	padding: 36px 10px;
+	text-align: right;
+}
+
+.bottomnav a{
+	margin: 0px 24px;
+	color: #09a;
+}
 
 
 /****************************************
@@ -164,8 +214,8 @@ Breakpoints
 <body>
 
 <div class="topbar">
-	<svg height="40" style="vertical-align: middle; padding: 0px 6px 0px 0px;" width="40" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-		<circle cx="5" cy="5" r="4.50" style="stroke-width: 0.5; fill: none; stroke: #555;"></circle>
+	<svg height="40" width="40" style="vertical-align: middle; padding: 0px 6px 0px 0px;" width="40" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+		<circle cx="5" cy="5" r="4.4" style="stroke-width: 0.5; fill: none; stroke: #555;"></circle>
 		<polyline points="3.5,6.3 5,6.3 5,3.7 6.5,3.7" style="stroke-width: 0.8; stroke-linejoin: round; stroke-linecap: round; fill: none; stroke: #555;"></polyline>
 	</svg>
 	<span>
@@ -175,8 +225,9 @@ Breakpoints
 
 <div class="masthead">
 	<h1>
-		Get the step-by-step road map for becoming a <span>front-end web developer</span>.
+		Get the step-by-step road map to become a <span>front-end web developer</span>.
 	</h1>
+	<!-- <p>Stop agonizing over what to do next.</p> -->
 	<div class="roadmap_btn_container center">
 		<button class="get_roadmap">Get the Road Map for Free</button>
 	</div>
@@ -213,24 +264,38 @@ Breakpoints
 
 
 <div class="what_you_gain">
-	<h2>What you'll gain</h2>
+	<div class="center">
+		<h2>What you'll gain</h2>
+	</div>
 
-	<div class="">
+	<div class="gain_blurb">
 		<h3>Stop feeling lost</h3>
-		<p></p>
+		<p>You'll get step-by-step guidance, so you can stop worrying about whether you're doing the right things.</p>
 	</div>
 
-	<div class="">
-		<h3>Avoid wasting time</h3>
-		<p></p>
+	<div class="gain_blurb">
+		<h3>Know what to learn</h3>
+		<p>See what to focus on and what to ignore, so you can learn front-end web development without wasting time.</p>
 	</div>
 
-	<div class="">
+	<div class="gain_blurb">
 		<h3>Shortcut the job hunt</h3>
-		<p></p>
+		<p>Get the exact steps I used to skip the endless resume submissions and get hired and recruited by famous companies.</p>
 	</div>
 </div>
 
+
+
+<div class="bottom_cta_container center">
+	<h2>Yes, I want the front-end development road map so I can finally stop agonizing over what to learn next.</h2>
+	<button class="get_roadmap">Get the road map for free</button>
+</div>
+
+<div class="bottomnav">
+	<a href="#">About</a>
+	<a href="#">Learn JavaScript</a>
+	<a href="#">Blog</a>
+</div>
 
 
 <!-- 
