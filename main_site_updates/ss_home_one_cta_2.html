@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
+<title>Simple Steps Code - Learn Front-End Web Development</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -212,6 +212,10 @@ FEATURED BY
 	display: block;
 }
 
+.bottomnav a:hover{
+	color: #2bc;
+}
+
 
 
 
@@ -227,12 +231,13 @@ LIGHTBOX
 	left: 0px;
 	top: 0px;
 	text-align: center;
+	overflow: scroll;
 
 	display: none;
 }
 
 #lightbox_overlay{
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	height: 100%;
 	background: rgba(33,33,33,0.8);
@@ -242,7 +247,6 @@ LIGHTBOX
 	background: #fff;
 	border-radius: 3px;
 	padding: 60px 12px;
-	overflow: scroll;
 	position: relative;
 	max-width: 800px;
 	margin: 36px auto;
@@ -316,7 +320,7 @@ Breakpoints
 	}
 	.bottomnav a{
 		display: inline;
-		margin: 0px 24px;
+		margin: 0px 48px 0px 0px;
 	}
 
 	.lightbox_title{
@@ -413,9 +417,9 @@ Breakpoints
 </div>
 
 <div class="bottomnav">
-	<a href="#">About</a>
-	<a href="#">Learn JavaScript</a>
-	<a href="#">Blog</a>
+	<!-- <a href="#">About</a> -->
+	<!-- <a href="#">Learn JavaScript</a> -->
+	<a href="/category/blog/">Blog</a>
 </div>
 
 
@@ -462,7 +466,7 @@ Breakpoints
 				<path d="M3,4 Q3,1.5,5,1.5 Q7,1.5,7,4 L7,4" style="stroke:#555; stroke-width:0.8; fill:none; stroke-linecap:butt;"></path>
 			</svg>
 			<span style="vertical-align:middle; padding-top:2px;">
-				I hate spam, and I'll keep your email safe.
+				I hate spam. Your email is safe.
 			</span>
 		</div>
 	</div>
