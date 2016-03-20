@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About Simple Steps Code</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+
+@font-face {
+	font-family: 'Nunito';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Nunito-Light'), url(https://fonts.gstatic.com/s/nunito/v7/1TiHc9yag0wq3lDO9cw0vpBw1xU1rKptJj_0jans920.woff2) format('woff2'), url(https://fonts.gstatic.com/s/nunito/v7/1TiHc9yag0wq3lDO9cw0vrO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+
+
+body{
+	margin: 0px;
+	font-size: 20px;
+	font-family:georgia, sans-serif;
+	color:#333;
+}
+
+h1{
+	line-height: 1.2;
+	font-size: 33px;
+}
+
+h2{
+	font-size: 24px;
+}
+
+
+li{
+	font-size: 20px;
+	margin: 20px 0px;
+}
+
+button{
+	font-family: 'Nunito', sans-serif;
+	border: 0px;
+	border-radius: 5px;
+	background: #09a;
+	color: #fff;
+	font-size: 27px;
+	padding: 18px;
+	cursor: pointer;
+}
+button:hover{
+	background: #1ab;
+}
+
+input{
+	padding: 9px;
+	font-size: 18px;
+	font-family: 'Nunito', sans-serif;
+	max-width: 100%;
+	box-sizing: border-box;
+	margin: 10px 0px;
+}
+
+
+
+
+.topbar{
+	padding: 20px;
+	font-size: 20px;
+	font-family: 'Nunito';
+}
+
+.topbar span{
+	vertical-align: middle;
+}
+
+.topbar a{
+	color: #555;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+.new_home_intro{
+	padding: 36px 18px 0px;
+	max-width: 750px;
+	margin: auto;
+	line-height: 1.5;
+}
+
+.new_home_intro span{
+	color: #09a;
+	font-weight: 700;
+}
+
+
+.roadmap_btn_container{
+	margin: 72px 0px 144px;
+}
+
+.center{
+	text-align: center;
+}
+
+
+
+.bottomnav{
+	padding: 24px 10px;
+	text-align: center;
+	font-family: 'Nunito';
+}
+
+.bottomnav a{
+	margin: 24px 0px;
+	color: #09a;
+	display: block;
+}
+
+.bottomnav a:hover{
+	color: #2bc;
+}
+
+
+
+
+
+/****************************************
+LIGHTBOX
+****************************************/
+
+#lightbox_container{
+	font-family: 'Nunito';
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	text-align: center;
+	overflow: scroll;
+
+	display: none;
+}
+
+#lightbox_overlay{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(33,33,33,0.8);
+}
+
+#lightbox{
+	background: #fff;
+	border-radius: 3px;
+	padding: 60px 12px;
+	position: relative;
+	max-width: 800px;
+	margin: 36px auto;
+}
+
+#close_lightbox{
+	position: absolute;
+	right: 18px;
+	top: 18px;
+	cursor: pointer;
+}
+
+.lightbox_title{
+	font-size: 30px;
+	font-size: 20px;
+	max-width: 500px;
+	margin: auto;
+}
+
+.lightbox_title span{
+	color: #09a;
+}
+
+.lightbox_cta{
+	font-size: 30px;
+}
+
+.spam_guarantee{
+	font-size: 16px;
+	color: #777;
+	padding-top: 5px;
+}
+
+
+
+
+
+
+/****************************************
+Breakpoints
+****************************************/
+
+
+/*first breakpoint*/
+@media (min-width:800px) {
+	h1{
+		font-size: 36px;
+	}
+
+	h2{
+		font-size: 32px;
+	}
+
+	.new_home_intro{
+		padding-top: 72px;
+	}
+
+	body{
+		font-size: 25px;
+	}
+	button{
+		font-size: 36px;
+		padding: 24px;
+	}
+
+	.bottomnav{
+		padding: 36px 10px;
+		text-align: right;
+	}
+	.bottomnav a{
+		display: inline;
+		margin: 0px 48px 0px 0px;
+	}
+
+	.lightbox_title{
+		font-size: 30px;
+	}
+
+	input {
+		padding: 18px;
+	}
+
+}
+
+</style>
+
+</head>
+<body>
+
+
+
+<div class="topbar">
+	<a href="/">
+		<svg height="40" width="40" style="vertical-align: middle; padding: 0px 6px 0px 0px;" width="40" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+			<circle cx="5" cy="5" r="4.4" style="stroke-width: 0.5; fill: none; stroke: #555;"></circle>
+			<polyline points="3.5,6.3 5,6.3 5,3.7 6.5,3.7" style="stroke-width: 0.8; stroke-linejoin: round; stroke-linecap: round; fill: none; stroke: #555;"></polyline>
+		</svg>
+		<span>
+			Simple Steps Code
+		</span>
+	</a>
+</div>
+
+
+
+<div class="new_home_intro">
+	<p>About this site:</p>
+	<h1>
+		Learning <span>front-end web development</span> shouldn't be so <span>overwhelming</span>.
+	</h1>
+	<p>
+		&ldquo;Do I really need to know all those frameworks?&rdquo;
+	</p>
+	<p>
+		&ldquo;I'm terrified I'll waste a year learning the wrong stuff.&rdquo;
+	</p>
+	<p>
+		&ldquo;There's <b>too much info</b> out there. I wish I had a <b>road map</b> so I'd know what to do.&rdquo;
+	</p>
+
+	<h2>I know your pain.</h2>
+
+	<p>
+		Hi! I'm a front-end developer by the name of Yaphi.
+	</p>
+	<p>
+		As a mostly self-taught coder, I've had these frustrations too.  I eventually realized that a lot of people make web development sound more complicated than it needs to be.
+	</p>
+	<p>
+		I created a <b>front-end development road map</b> so you can stop feeling lost, learn what you need to learn, and get paid to do what you love.
+	</p>
+	<!-- <h1>
+		When it comes to <span>front-end web development</span>, there's a ton of information, and not enough direction.
+	</h1>
+
+	<p>
+		People say you need to know <span>a mountain of different languages and frameworks</span>, but is it really true?
+	</p>
+
+	<p>
+		You're prepared to put in the work, but you're <span>terrified of wasting years learning the wrong things</span>.
+	</p>
+
+	<p>
+		You often find yourself wishing for a <span>road map</span> that could could just cut through the noise and <span>show you what to do next</span>.
+	</p>
+
+	<p>
+		As a mostly self-taught front-end developer, I've had these frustrations too.  I eventually found that a lot of devs make it sound more forbidding than it needs to sound.  I created a front-end development road map so you won't have to struggle the way I did.
+	</p> -->
+
+	<div class="roadmap_btn_container center">
+		<button class="get_roadmap">Get the Road Map<br>for Free</button>
+	</div>
+
+
+	<h2>Why would you listen to me?</h2>
+
+	<p>
+		I didn't come to web development through a neat path.
+	</p>
+	<p>
+		I did a bunch of unrelated jobs first, my degree is not in computer science, and I know how it feels to struggle to learn code.
+	</p>
+
+	<p>
+		A few years later, I'm at a stage where I develop production sites that get millions of hits, and I've been recruited by places like Amazon, Capital One, Rosetta Stone, and others.
+	</p>
+	<p>
+		My web development articles have been featured by organizations like Sitepoint, Lifehacker, Treehouse, and Dreamhost.
+	</p>
+	<p>
+		The most important qualification I have is this:
+		<br><b>I know what you're going through because I've gone through it too.</b>
+	</p>
+	
+	<p>Here are some of the issues you and I have probably shared:</p>
+
+	<ul>
+		<li>There's so much new stuff coming out.  How do I know which things to learn?  How do I keep up?  How do I avoid wasting time with the wrong things?</li>
+		<li>No matter how much I learn, I still feel like I'm faking it, as if I'm a fraud somehow.  Part of me is terrified I'll be "found out".</li>
+		<li>Traditional education can be so expensive and outdated for web dev.  A lot of classes still insist on teaching Flash or table-based HTML from 1998.</li>
+		<li>Motivation is not the problem.  I'm willing to put in the effort.  I'm just overwhelmed by which direction to go in.</li>
+		<li>I'm sick of having my ideas trapped inside my imagination.  I want to make them real.</li>
+		<li>I don't have a computer science degree, and I'm constantly afraid that will count against me.</li>
+		<li>I'm tired of depending on inflexible plugins and themes to do what I want.</li>
+		<li>Too many instructors forget what it's like to be learners.</li>
+		<li>Veteran developers in forums can sometimes be really condescending and discouraging to learners.</li>
+		<li>It's too easy to forget stuff once you learn it, so I keep going in circles forgetting and relearning.</li>
+		<li>It's easy to do a code project while I'm following along with a tutorial, but as soon as I have to do it on my own, I get lost.</li>
+		<li>It would be wonderful to be paid well to do something you love.</li>
+	</ul>
+
+	<p>
+		Based on these struggles, I've put together <b>the learning road map I wish I had</b> when I was getting into front-end web development.
+	</p>
+
+	<div class="roadmap_btn_container center">
+		<button class="get_roadmap">Get the Road Map<br>for Free</button>
+	</div>
+
+	<!--
+		- recruited by
+		- featured by
+		- degree not in CS
+		- changed jobs
+		- self taught
+		- i get you because I've experienced same things
+		- know what it's like to feel overwhelmed
+		- know what it's like to see too much info and no direction
+
+		stop having these feelings:
+		- list out stuff from email
+	-->
+
+</div>
+
+
+
+
+
+
+
+<div class="bottomnav">
+	<a href="/">Home</a>
+	<!-- <a href="#">Learn JavaScript</a> -->
+	<a href="/category/blog/">Blog</a>
+</div>
+
+
+
+
+<div id="lightbox_container">
+	<div id="lightbox_overlay"></div>
+	<div id="lightbox">
+		<div id="close_lightbox">
+			<!-- basic x -->
+			<svg class="basic_x" width="30" height="30" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+				<style type="text/css"><![CDATA[ .basic_x line{ stroke:#333; stroke-width:1; stroke-linecap:round; } ]]></style>
+				<line x1="0.5" y1="0.5" x2="9.5" y2="9.5"></line>
+				<line x1="0.5" y1="9.5" x2="9.5" y2="0.5"></line>
+			</svg>
+		</div>
+		<div class="lightbox_title">
+			Tell me where to send the <span>front-end web development</span> road map, and it's yours (takes 10 seconds).
+		</div>
+		<!-- Begin signup form -->
+		<form action="//blinkdash.us9.list-manage.com/subscribe/post?u=cf6125d07d2da4bcb868629d4&amp;id=271f6daf1b" method="post" name="mc-embedded-subscribe-form" class="homeform" target="_blank" novalidate>
+			<input type="text" value="" name="FNAME" class="required" placeholder="First Name">
+			<input type="email" value="" name="EMAIL" class="required email" placeholder="Email">
+
+			<fieldset id="hidden_fields" style="display:none;">
+				<input type="hidden" value="" name="URL" class="mce_URL">
+				<input type="hidden" value="" name="PATH" class="mce_PATH">
+				<input type="hidden" value="" name="REFERRER" class="mce_REFERRER">
+				<input type="hidden" value="about-page" name="FORM_TYPE" class="mce_FORM_TYPE">
+			</fieldset>
+
+			<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+			<div style="position: absolute; left: -5000px;"><input type="text" name="b_cf6125d07d2da4bcb868629d4_271f6daf1b" tabindex="-1" value=""></div>
+			<button type="submit" class="lightbox_cta" name="subscribe">Yes, get the free road map</button>
+		</form>
+		<!-- End signup form -->
+		<div class="spam_guarantee">
+			<!-- lock -->
+			<svg style="vertical-align:middle;" class="lock_svg" width="23" height="23" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+				<style type="text/css"><![CDATA[ .lock_svg circle, .lock_svg polygon { stroke:#555; fill:#555; stroke-linejoin:round; stroke-width:0.3; } ]]></style>
+				<rect x="2" y="4.5" width="6" height="4.5" style="stroke:#555; stroke-width:0.8; stroke-linejoin:round; fill:none;"></rect>
+				<circle cx="5" cy="6.5" r="0.5"></circle>
+				<polygon points="4.6,7.7 5,6.5 5.4,7.7"></polygon>
+				<path d="M3,4 Q3,1.5,5,1.5 Q7,1.5,7,4 L7,4" style="stroke:#555; stroke-width:0.8; fill:none; stroke-linecap:butt;"></path>
+			</svg>
+			<span style="vertical-align:middle; padding-top:2px;">
+				I hate spam. Your email is safe.
+			</span>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- 
+
+Motivation is not the problem.  You just want to be pointed in the right direction.
+
+Getting into front-end web development doesn't need to feel so overwhelming.
+
+Front-end web development is 
+
+Empathetic opening
+	- You know some HTML and CSS but now what?
+	- Want to be front-end web developer or boost skills
+	- Everyone says you need to know all these different frameworks and stuff; it's so overwhelming
+	- Easy to feel lost
+	- Too much info, not enough direction
+	- You wish you had a road map so you could know what to do next, what to avoid, how to not waste time, etc
+	- Here's your road map
+
+Button cta
+
+cred logos
+
+what you'll get (or more details)
+
+Another button cta
+
+Nav in footer:
+
+- learn js
+- get a web dev job
+- about
+- blog
+
+ -->
+
+<script>
+
+
+// open and close lightbox
+
+(function(){
+
+	var ctas = document.querySelectorAll('.get_roadmap');
+	for(var i=0; i<ctas.length; i++){
+		ctas[i].onclick = openLightbox;
+	}
+
+	document.getElementById('lightbox_overlay').onclick = closeLightbox;
+	document.getElementById('close_lightbox').onclick = closeLightbox;
+
+	function openLightbox(){
+		document.getElementById('lightbox_container').style.display = 'block';
+	}
+
+	function closeLightbox(){
+		document.getElementById('lightbox_container').style.display = 'none';
+	}
+
+})();
+
+
+
+
+// fill out hidden fields
+
+(function(){
+
+	var field_data = {
+		mce_URL : window.location.href,
+		mce_PATH : window.location.pathname,
+		mce_REFERRER : document.referrer || 'direct'
+	}
+
+	var fields = document.getElementById('hidden_fields').querySelectorAll('input');
+	for(var i=0; i<fields.length; i++){
+		var data = field_data[fields[i].className];
+		if(data){
+			fields[i].value = data;
+		}
+	}
+
+})();
+
+</script>
+
+<!-- google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-22685293-3', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
