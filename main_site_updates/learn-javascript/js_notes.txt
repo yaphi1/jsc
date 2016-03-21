@@ -1,12 +1,23 @@
 
 How to stop feeling lost and overwhelmed by all the frameworks that are out there
+- don't chase the framework of the day
+- get better at js and you'll get better at all of them
 
 Simple tricks so you won't forget everything you learned
+- learn in small pieces
+- don't trick yourself (don't move on when you understand)
 
 How to avoid the mistakes that keep people stuck
+- do stuff on your own instead of just following a tutorial and thinking you know it
+- don't jump into big projects too early
 
 Which JavaScript concepts will let you do practical things the fastest
 
 How to shortcut the job hunt, and what you need to know
+- talk to devs and ask right things
+- create portfolio (that way you have practice and stuff you can show)
+- requirements are often inaccurate
+- link for more info
 
 How your JavaScript will fit into your overall path in front-end web development (so you don't get lost in all the information out there)
+
