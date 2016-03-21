@@ -159,11 +159,11 @@ AddOutputFilterByType DEFLATE application/x-javascript
 DirectoryIndex index.html index.php
 
 
-# ensure https and no www
+
+# ensure https
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteCond %{HTTPS} off
-RewriteRule (.*) https://simplestepscode.com%{REQUEST_URI}
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 </IfModule>
-
 
