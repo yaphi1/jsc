@@ -51,17 +51,27 @@ Here's a list of concepts to look up and try out in order to do practical things
 
 
 How to shortcut the job hunt, and what you need to know
-- talk to devs and ask right things
-- create portfolio (that way you have practice and stuff you can show)
-- requirements are often inaccurate
-- link for more info
+
+- Just submitting resumes is the worst way to get a job.  That's what everyone else is doing, and that's why they're having a hard time.
+
+- Job requirements are notoriously inaccurate.  I've seen posts for front-end developers that required exclusively back-end skills.  I've seen posts with requirements that turned out to be nothing like the actual job.
+
+- The best thing to do is find developers to talk to.  Even if their organizations aren't hiring, you can ask questions that will help you appeal to other organizations.  They might even be able to point you to places that are hiring.  The key is to keep your questions focused on what they do rather than asking for a job.  That way, they'll open up to you, and it won't be weird.
+
+- To find developers to talk to, one way to start is with a Google search for "web development meetups in [your area]".  If there isn't anything near your area, then try talking to developers online whether it's through LinkedIn, meetup.com, various forums or groups, etc.
+
+- When you talk to developers, you'll want to ask the right questions to really figure out what they do, what would make a good teammate, and what surprises to expect.  This is one of the most important steps, so a full guide can be found here:
+https://simplestepscode.com/how-to-get-a-web-development-job-in-four-steps/
+
+- In the meantime, start creating a portfolio. If you have good things you've built that you can point to, then you don't need to worry as much about fancy measures of experience. When you have concrete things you've made, no one can argue with that.  It's also a great way to practice.
 
 
 
 
-How your JavaScript will fit into your overall path in front-end web development (so you don't get lost in all the information out there)
-- it's one of the main things (html, css, js); and if you do those, you can adapt to anything
 
+How your JavaScript will fit into your overall path in front-end web development
 
+- HTML, CSS, and JavaScript are the main things you need to know for web development.  Don't worry about frameworks until you've identified which ones you see at the places you want to work at.  The great part about JavaScript is that getting better at it automatically makes you better at a lot of the frameworks because many of them are built on JavaScript.
 
-
+- For the rest of the front-end web development roadmap to put your JavaScript learning into context, see the following url:
+https://simplestepscode.com/pdf/simple_steps_roadmap.pdf
