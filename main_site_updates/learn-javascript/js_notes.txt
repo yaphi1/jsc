@@ -1,25 +1,63 @@
 
 How to stop feeling lost and overwhelmed by all the frameworks that are out there
-- everyone's saying everything; block out the noise and stick to the roadmap like the one here [link]
-- don't chase the framework of the day
-- get better at js and you'll get better at all of them
+
+- Block out all the noise.  People will make it sound like you need to know everything, but that's not true.  It just seems that way because everyone chimes in with their own suggestions, and that adds up.  The best way to avoid this is to have a clear map of what to do.  Here's a map of what to do to become a front-end web developer: [link]
+
+- Don't constantly chase the new framework of the day.  Instead, practice plain JavaScript, and you'll automatically get better at a lot of the frameworks because so many of them are just prebuilt pieces of JavaScript.  When the time comes to start aiming for jobs, you'll quickly pick up whichever framework is required for the jobs you want most.
+
+
+
 
 Simple tricks so you won't forget everything you learned
-- learn in small pieces
-- don't trick yourself (don't move on when you understand)
-- let yourself have fun with it
+
+- Learn in small pieces.  Not only will you remember things better, you'll also have an easier experience finding time to code.  It can be tempting to learn a lot at once, but try to resist that.  Trust me; you'd rather learn one thing at a time and remember it than learn ten things at a time and forget all of them.
+
+- When you understand a concept, DON'T move forward just yet.  Keep playing with the concept until you're very comfortable with it.  It will seem to take a little bit longer at first, but you'll fly through the later material because you won't have to keep struggling and backtracking with earlier material.  This technique is great for keeping momentum and staying encouraged.
+
+- When you're learning JavaScript, let yourself have fun with it.  If you've learned a new concept, create something interesting, even if it's something small! Experiment, show your friends, show the internet, or keep it all to yourself.  As long as you make sure to enjoy yourself, you'll have a much easier time learning JavaScript.
+
+
+
 
 How to avoid the mistakes that keep people stuck
-- do stuff on your own instead of just following a tutorial and thinking you know it
-- don't jump into big projects too early
 
-Which JavaScript concepts will let you do practical things the fastest
+- One mistake people make is to follow a tutorial and then never actually try building something on their own.  Tutorials are great, but it's important to remember that they are only a starting point.  Too many people follow a tutorial, think they know how to do it, and then get stuck when they have to apply it for real.  The way around this is to try a concept completely on your own after you've finished a tutorial.  That way, you'll learn the process of thinking through a problem yourself instead of depending on a guide.
+
+- Another mistake people make is to jump into huge projects too soon.  They'll say things like "I'll just make a quick slideshow," without realizing that the slideshow actually involves functions, variables, timing, animation, arrays, DOM traversal, and more.  In this case, the impatience of wanting to do all of this at once ends up taking longer than it would take to just learn each concept properly first.  The solution is to learn things one small step at a time.
+
+
+
+
+
+Which JavaScript concepts will let you do practical things the fastest?
+
+Here's a list of concepts to look up and try out in order to do practical things with JavaScript quickly:
+
+- variables - Variables let you store information so you don't have to keep typing it
+
+- getElementById - This lets you access things by their ids on your page.
+
+- innerHTML - This lets you edit the HTML inside an element on your page.
+
+- functions - A function is a piece of code that you can run whenever you want just by calling its name.
+
+- onclick - This lets you detect clicks so your pages can respond however you want.
+
+- style and className - These let you dynamically change the appearance and position of the things on your pages.
+
+- arrays and objects - These let you store lists and groups of information in a convenient way.
+
+
+
 
 How to shortcut the job hunt, and what you need to know
 - talk to devs and ask right things
 - create portfolio (that way you have practice and stuff you can show)
 - requirements are often inaccurate
 - link for more info
+
+
+
 
 How your JavaScript will fit into your overall path in front-end web development (so you don't get lost in all the information out there)
 - it's one of the main things (html, css, js); and if you do those, you can adapt to anything
