@@ -1,0 +1,25 @@
+
+
+
+
+first identify source of problems:
+
+- can't know everything
+- each person suggests you need to know a couple of things
+	- you put that together and feel like you need to be an expert in all of it to even get your foot in the door
+- the more you know, the more you realize you don't know
+- it's easy for someone to read something new, talk about it the next day, and you're lost and you feel like you have no idea what's going on
+- everyone knows different things, so when you hear all of those different things, it's easy to feel like you're supposed to know all of them
+
+
+fix the problems:
+- realize it happens to almost everyone regardless of skill level
+- build concrete stuff and show it in places like codepen
+- practice raw js (brings skills and confidence while also preparing for multiple frameworks at once)
+- when you don't know something, treat it as a good thing; if you knew everything, it would be so boring
+
+
+
+
+
+
