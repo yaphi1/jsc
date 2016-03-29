@@ -1,25 +1,52 @@
+Posting this because it's something I've dealt with, and I know a lot of other people have as well.
+
+**Please feel free to add suggestions because I'm hoping to start a discussion that will help a lot of people dealing with this.**
+
+--
+
+Lots of people know the feeling.
+
+If you code websites or if you're learning to, there are some days when you feel like a complete fraud and you're terrified of being found out.
+
+Everyone else seems to know more than you, and whatever you do, it's just not good enough.
+
+How do you deal with that?
+
+I may not have the best answer, but I'll try.
+
+**First identify the source of the problems:**
+
+* You can't know everything, so whenever someone has a different piece of knowledge than you, it's easy to feel like you know nothing.
+
+* When you're trying to learn something, each person you talk to suggests you need to know a couple of things.  In your mind, you put those suggestions together, and you feel like you need to be an expert in all of it to even begin doing anything.
+
+* The more you learn, the more you realize you don't know.
+
+* It's easy for someone to read something new and talk about it the next day, making you feel like you have no idea what's going on.
 
 
 
 
-first identify source of problems:
+**Then start addressing the problems:**
 
-- can't know everything
-- each person suggests you need to know a couple of things
-	- you put that together and feel like you need to be an expert in all of it to even get your foot in the door
-- the more you know, the more you realize you don't know
-- it's easy for someone to read something new, talk about it the next day, and you're lost and you feel like you have no idea what's going on
-- everyone knows different things, so when you hear all of those different things, it's easy to feel like you're supposed to know all of them
+* First, realize it happens to almost everyone regardless of skill level, and it happens even more as you approach higher levels (due to impostor syndrome).
 
+* Prioritize what you actually want to get good at, and don't drive yourself crazy worrying about the rest.
 
-fix the problems:
-- realize it happens to almost everyone regardless of skill level
-- build concrete stuff and show it in places like codepen
-- practice raw js (brings skills and confidence while also preparing for multiple frameworks at once)
-- when you don't know something, treat it as a good thing; if you knew everything, it would be so boring
+* Code stuff and post it in places like codepen, jsfiddle, or your own portfolio.  Every time you create a concrete piece of work you can point to, you feel better about your abilities.  It's also a great way to practice.
+
+* One of the best ways to be more confident coding websites after you're comfortable with HTML and CSS is to practice plain JavaScript. By getting better at JavaScript, you not only get better at coding web pages; you also automatically get better at all the frameworks and tools that involve it (Angular, React, Node, Socket.IO, Meteor, Three.js, etc).  For those who are curious about which things to learn to get comfortable with JavaScript the fastest, an overview can be found here.
+
+* When you don't know something, instead of feeling bad, treat it as a good thing. It's like a new episode of your favorite show is on, and you can't wait to find out more.  If you knew everything, how boring would that be?
 
 
 
+**Do you have any stories about how impostor syndrome has affected you?**
 
+**Any suggestions of how to get around it?**
+
+**Is there anything I've missed or gotten completely wrong?**
+
+I'd love to hear from you about all of this.
 
 
