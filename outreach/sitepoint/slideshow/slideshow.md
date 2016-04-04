@@ -18,13 +18,15 @@ This tutorial assumes you know some JavaScript including functions, click events
 
 For the HTML, we'll need a container for the slides, and the slides themselves.  Here's how that will look:
 
-    <div id="slides">
-    	<div class="slide showing">Slide 1</div>
-    	<div class="slide">Slide 2</div>
-    	<div class="slide">Slide 3</div>
-    	<div class="slide">Slide 4</div>
-    	<div class="slide">Slide 5</div>
-    </div>
+```html
+<ul id="slides">
+	<li class="slide showing">Slide 1</li>
+	<li class="slide">Slide 2</li>
+	<li class="slide">Slide 3</li>
+	<li class="slide">Slide 4</li>
+	<li class="slide">Slide 5</li>
+</ul>
+```
 
 ### The CSS
 The core CSS will need to accomplish these things:
@@ -36,64 +38,71 @@ The core CSS will need to accomplish these things:
 
 Here's how the core CSS will look:
 
-    /*
-    essential styles:
-    these make the slideshow work
-    */
-    
-    #slides{
-    	position: relative;
-    	height: 300px;
-    }
-    
-    .slide{
-    	position: absolute;
-    	left: 0px;
-    	top: 0px;
-    	width: 100%;
-    	height: 100%;
-    	opacity: 0;
-    	z-index: 1;
-    
-    	-webkit-transition: opacity 1s;
-    	transition: opacity 1s;
-    }
-    
-    .showing{
-    	opacity: 1;
-    	z-index: 2;
-    }
+```css
+/*
+essential styles:
+these make the slideshow work
+*/
+
+#slides{
+	position: relative;
+	height: 300px;
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+}
+
+.slide{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 1;
+
+	-webkit-transition: opacity 1s;
+	transition: opacity 1s;
+}
+
+.showing{
+	opacity: 1;
+	z-index: 2;
+}
+```
 
 Now, you can add other styles to change how the slideshow looks.  I used the following for this demo:
 
-    /*
-    non-essential styles:
-    just for appearance; change whatever you want
-    */
-    
-    .slide{
-    	font-size: 40px;
-    	padding: 40px;
-    	box-sizing: border-box;
-    	background: #333;
-    	color: #fff;
-    }
-    
-    .slide:nth-of-type(1){
-    	background: red;
-    }
-    .slide:nth-of-type(2){
-    	background: orange;
-    }
-    .slide:nth-of-type(3){
-    	background: green;
-    }
-    .slide:nth-of-type(4){
-    	background: blue;
-    }
-    .slide:nth-of-type(5){
-    	background: purple;
-    }
+```css
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+
+.slide{
+	font-size: 40px;
+	padding: 40px;
+	box-sizing: border-box;
+	background: #333;
+	color: #fff;
+}
+
+.slide:nth-of-type(1){
+	background: red;
+}
+.slide:nth-of-type(2){
+	background: orange;
+}
+.slide:nth-of-type(3){
+	background: green;
+}
+.slide:nth-of-type(4){
+	background: blue;
+}
+.slide:nth-of-type(5){
+	background: purple;
+}
+```
 
 
 ### The JavaScript
@@ -102,15 +111,17 @@ The JavaScript has one job: hide the current slide and show the next one.  To ac
 
 Here's how the JavaScript will look:
 
-    var slides = document.querySelectorAll('#slides .slide');
-    var currentSlide = 0;
-    var slideInterval = setInterval(nextSlide,2000);
-    
-    function nextSlide(){
-    	slides[currentSlide].className = 'slide';
-    	currentSlide = (currentSlide+1)%slides.length;
-    	slides[currentSlide].className = 'slide showing';
-    }
+```javascript
+var slides = document.querySelectorAll('#slides .slide');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide,2000);
+
+function nextSlide(){
+	slides[currentSlide].className = 'slide';
+	currentSlide = (currentSlide+1)%slides.length;
+	slides[currentSlide].className = 'slide showing';
+}
+```
 
 Let's break down what's happening here.
 
@@ -210,29 +221,33 @@ It's time to add a "Pause/Play" button, a "Next" button, and a "Previous" button
 
 First, add the button to the HTML:
 
-    <button id="pause">Pause</button>
+```html
+<button class="controls" id="pause">Pause</button>
+```
 
 Next, add this to the JavaScript:
 
-    var playing = true;
-    var pauseButton = document.getElementById('pause');
-    
-    function pauseSlideshow(){
-    	pauseButton.innerHTML = 'Play';
-    	playing = false;
-    	clearInterval(slideInterval);
-    }
-    
-    function playSlideshow(){
-    	pauseButton.innerHTML = 'Pause';
-    	playing = true;
-    	slideInterval = setInterval(nextSlide,2000);
-    }
-    
-    pauseButton.onclick = function(){
-    	if(playing){ pauseSlideshow(); }
-    	else{ playSlideshow(); }
-    };
+```javascript
+var playing = true;
+var pauseButton = document.getElementById('pause');
+
+function pauseSlideshow(){
+	pauseButton.innerHTML = 'Play';
+	playing = false;
+	clearInterval(slideInterval);
+}
+
+function playSlideshow(){
+	pauseButton.innerHTML = 'Pause';
+	playing = true;
+	slideInterval = setInterval(nextSlide,2000);
+}
+
+pauseButton.onclick = function(){
+	if(playing){ pauseSlideshow(); }
+	else{ playSlideshow(); }
+};
+```
 
 Here's what's happening in the script:
 
@@ -254,52 +269,60 @@ Here's how your slideshow will work with the pause button:
 
 First add the "Next" and "Previous" buttons to your HTML:
 
-    <button id="previous">Previous</button>
-    <button id="next">Next</button>
+```html
+<button class="controls" id="previous">Previous</button>
+<button class="controls" id="next">Next</button>
+```
 
 For your JavaScript, change this...
 
-    function nextSlide(){
-    	slides[currentSlide].className = 'slide';
-    	currentSlide = (currentSlide+1)%slides.length;
-    	slides[currentSlide].className = 'slide showing';
-    }
+```javascript
+function nextSlide(){
+	slides[currentSlide].className = 'slide';
+	currentSlide = (currentSlide+1)%slides.length;
+	slides[currentSlide].className = 'slide showing';
+}
+```
 
 ...to this:
 
-    function nextSlide(){
-    	goToSlide(currentSlide+1);
-    }
-    
-    function previousSlide(){
-    	goToSlide(currentSlide-1);
-    }
-    
-    function goToSlide(n){
-    	slides[currentSlide].className = 'slide';
-    	currentSlide = (n+slides.length)%slides.length;
-    	slides[currentSlide].className = 'slide showing';
-    }
+```javascript
+function nextSlide(){
+	goToSlide(currentSlide+1);
+}
+
+function previousSlide(){
+	goToSlide(currentSlide-1);
+}
+
+function goToSlide(n){
+	slides[currentSlide].className = 'slide';
+	currentSlide = (n+slides.length)%slides.length;
+	slides[currentSlide].className = 'slide showing';
+}
+```
 
 In the above script, we've added a general `goToSlide` function for more flexibility.  We've also changed the math a tiny bit inside the `currentSlide` variable in order to avoid negative numbers.  To test this for yourself, pick a number for slides.length and see what happens to `currentSlide` as `n` changes.
 
 Now add this JavaScript to make the buttons do what they need to when clicked:
 
-    var next = document.getElementById('next');
-    var previous = document.getElementById('previous');
-    
-    next.onclick = function(){
-    	pauseSlideshow();
-    	nextSlide();
-    };
-    previous.onclick = function(){
-    	pauseSlideshow();
-    	previousSlide();
-    };
+```javascript
+var next = document.getElementById('next');
+var previous = document.getElementById('previous');
+
+next.onclick = function(){
+	pauseSlideshow();
+	nextSlide();
+};
+previous.onclick = function(){
+	pauseSlideshow();
+	previousSlide();
+};
+```
 
 Now you have working controls!
 
-Here's how your slideshow will look with those controls:
+Here's how the slideshow might look with controls and some added styles:
 
 <iframe height='268' scrolling='no' src='//codepen.io/yaphi1/embed/eZeJLR/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/yaphi1/pen/eZeJLR/'>JavaScript Slideshow With Controls</a> by Yaphi (<a href='http://codepen.io/yaphi1'>@yaphi1</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
@@ -311,6 +334,54 @@ Because the controls are HTML buttons, they can be accessed through the keyboard
 Feel free to style and position the controls however you like as long as they are clear and usable.
 
 If you want to add left and right arrow keyboard controls (not included here), make sure you turn those controls off when a user might use the arrows elsewhere like a text box for example.
+
+
+## Fallbacks When JavaScript Is Turned Off
+
+How you handle fallbacks for your slideshow will depend on your goals.  You can either show only the first image, or you can show all of the images in a list.
+
+If the slideshow's main purpose is to give a general visual impression of something and it's more important to preserve the page's layout than show all of the pictures, then you'll want to show the first image.
+
+If all of the images need to be seen, then you can list them out.
+
+In any case, we'll cover the steps here.
+
+### Hide Controls When JavaScript Is Off
+
+Use CSS to hide the controls by default.
+
+```css
+.controls{
+	display: none;
+}
+```
+
+Then use JavaScript to show the controls.  This way, the user will only see the controls if JavaScript is enabled.
+
+```javascript
+var controls = document.querySelectorAll('.controls');
+for(var i=0; i<controls.length; i++){
+	controls[i].style.display = 'inline-block';
+}
+```
+
+The above code loops through each of the controls and makes them all visible.
+
+
+### List Slide Images When JavaScript Is Off
+
+First change your `.slide` class from `position: absolute;` to `position: static;`.  That way, the slides will be listed out by default.
+
+Then add JavaScript to loop through each of the slides and change their position to absolute, like so: (make sure to place this code after your `slides` variable is defined)
+
+```javascript
+for(var i=0; i<slides.length; i++){
+	slides[i].style.position = 'absolute';
+}
+```
+
+That way, the slides won't be listed out if JavaScript is available.
+
 
 
 ## Conclusion
