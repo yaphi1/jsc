@@ -131,6 +131,12 @@ Congrats!  Now you have a basic slideshow.
 Compatibility note:
 CSS transitions aren't compatible with IE9 and below, so instead of a fade effect, the slideshow will degrade gracefully by showing the next slide.
 
+Here's the basic slideshow in action:
+
+<iframe height='277' scrolling='no' src='//codepen.io/yaphi1/embed/PNOZRr/?height=277&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/yaphi1/pen/PNOZRr/'>Basic JavaScript Slideshow without jQuery</a> by Yaphi (<a href='http://codepen.io/yaphi1'>@yaphi1</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+
 
 ## UX and Accessibility
 
@@ -237,6 +243,12 @@ Here's what's happening in the script:
 - Finally, we're attaching a click handler so that the Pause/Play button will toggle the slideshow between pausing and playing.
 
 
+Here's how your slideshow will work with the pause button:
+
+<iframe height='268' scrolling='no' src='//codepen.io/yaphi1/embed/ZWaQjK/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/yaphi1/pen/ZWaQjK/'>JavaScript Slideshow With Pause Button</a> by Yaphi (<a href='http://codepen.io/yaphi1'>@yaphi1</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+
 
 ### Next and Previous Buttons
 
@@ -287,7 +299,12 @@ Now add this JavaScript to make the buttons do what they need to when clicked:
 
 Now you have working controls!
 
-Note that we're pausing the slideshow so that the user's navigation won't be thwarted by autoplay.
+Here's how your slideshow will look with those controls:
+
+<iframe height='268' scrolling='no' src='//codepen.io/yaphi1/embed/eZeJLR/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/yaphi1/pen/eZeJLR/'>JavaScript Slideshow With Controls</a> by Yaphi (<a href='http://codepen.io/yaphi1'>@yaphi1</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+Note that we're pausing the slideshow when the user clicks "Next" or "Previous" so that the user's navigation won't be thwarted by autoplay.
 
 Because the controls are HTML buttons, they can be accessed through the keyboard automatically.
 
