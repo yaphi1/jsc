@@ -1,0 +1,21 @@
+Last week I received this fantastic question which I've quoted anonymously here with permission:
+
+"I have been learning about front-end web dev and web design for almost 2 years now but the more I learn, the more I realize how much I don't know and it has put me in this spot where I'm absolutely crippled by procrastination and self-doubt. I feel like I've done enough learning and I now I want to build, build, build but I really don't know where to start. 
+ 
+This could all be in my head but I feel as though, most front end development nowadays is built around these complex web apps involving React or whatever the newest framework on the block is. Is it possible for me as one person to do the UX research, layout, design AND build (incl. all the JS) for a single site? I'm not sure I have it in me to build something that impressive on my own. Something that will be worthy of a good portfolio that will get me hired. And because I'm so freaked out by this thought, I just keep plugging away at learning and trying to stay caught up with the industry instead of actually spending the time building something. It seems to be an endless cycle that I can't get out of."
+
+What makes this question great is that it perfectly expresses exactly how a lot of people feel about web development.  It seems like there are so many things to know, and it can feel overwhelming.
+
+My advice: Don't magnify the monster.  Instead of approaching website creation as a big scary beast, let's break this down into smaller pieces.
+
+"I feel as though most front end development is built around these complex web apps involving React or whatever the newest framework on the block is."
+
+First, don't even worry about frameworks.  You can build a beautiful, functional, responsvie site with a few HTML tags and a few CSS styles.  As far as the front end is concerned, that's all it takes.  JavaScript only comes in if you want to add interactive features.
+
+Second, remember that the whole point of frameworks is to make things easier.  If you can learn HTML, CSS, and JavaScript, those are the hard parts.  As an example, jQuery is just a bunch of prebuilt JavaScript that lets you write less code.  In fact, so many of the well-known frameworks involve JavaScript that if you get better at JavaScript, you'll automatically be better at jQuery, Angular, React, Node, Socket.io, Meteor, and more, all in one strike.
+
+Now let's look at the next piece:
+
+"Is it possible for me as one person to do the UX research, layout, design AND build (incl. all the JS) for a single site?"
+
+
