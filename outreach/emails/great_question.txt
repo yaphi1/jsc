@@ -14,8 +14,23 @@ First, don't even worry about frameworks.  You can build a beautiful, functional
 
 Second, remember that the whole point of frameworks is to make things easier.  If you can learn HTML, CSS, and JavaScript, those are the hard parts.  As an example, jQuery is just a bunch of prebuilt JavaScript that lets you write less code.  In fact, so many of the well-known frameworks involve JavaScript that if you get better at JavaScript, you'll automatically be better at jQuery, Angular, React, Node, Socket.io, Meteor, and more, all in one strike.
 
+The key is that if you get better with HTML, CSS, and JavaScript, you can adapt to any framework you would need to learn.  If you focus on one framework, you can spend all the time learning it only to find that the place you want to work at uses something else.
+
 Now let's look at the next piece:
 
 "Is it possible for me as one person to do the UX research, layout, design AND build (incl. all the JS) for a single site?"
+
+Yes, but the bigger you make it sound, the scarier it becomes. UX research and layout are big topics, but for the purposes of your website, you only need to ask yourself one question: Are the important parts clear and easy to find?  That question alone will put you ahead of a surprisingly large number of websites that are out there.
+
+As for design, don't overthink it for your portfolio pieces.  A lot of sites follow similar patterns anyway (such as the big hero image with a main call-to-action button).  Pick a site you like, modify it a little bit, and you'll have a working design.  Remember the main point of a front-end developer's portfolio is to show you can code a site.  First do the HTML and CSS.  That will give you a site.  Then you can add JavaScript if you want specialized interactive features.
+
+Now on to the next part:
+
+"I'm not sure I have it in me to build something that impressive on my own. Something that will be worthy of a good portfolio that will get me hired. And because I'm so freaked out by this thought, I just keep plugging away at learning and trying to stay caught up with the industry instead of actually spending the time building something."
+
+This happens to a lot of people.  For now, stop chasing trends and just build something.  Start with an HTML and CSS page with a common layout.  Then make it responsive.  Try making some more pages.  Then learn JavaScript.  Make small interactive things and post them on something like codepen or jsfiddle.  Don't worry about any next steps until you've done that.
+
+If you're reading this, hopefully you've found it helpful.
+
 
 
