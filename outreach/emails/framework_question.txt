@@ -1,0 +1,93 @@
+A reader sent a great follow-up question to the last email.  I've reprinted it here anonymously with permission:
+
+---------------
+
+"I don't know if someone reads this, or it's just a no-reply address, but here it is anyway:
+
+I felt a little disappointed with your email... don't get me wrong I do love your emails, but I'm EXACTLY in that position your reader describes so well in the question... I'm feeling kind of lost, and afraid, and at the same time procrastinating with my (self) education because it seems SOO much, and I feel SOO behind.. :\
+
+And you say learning HTML, CSS is kind of enought for building a web page... and yeah, that's true, but there is exactly where I am, with a solid knowledge of HTML5, CSS3, Responsive Web Design, some design and UI habilities and a little programming background (jQuery, PHP and little more) and 9 years of experience... and yet, I feel completely lost with all the "modern technologies of the last 4-5 years".
+
+Heard all the time about frameworks such as bootstrap, foundation, boilerplate (don't even know for certain if there are substitutes or aditionals to each other), technologies like AngularJS, Node.js, SOAP or REST APIs, all the hype arround npm package manager (that I guess it's something great)... but don't know more than a parragraph lenght of what is each of them.
+
+And so, I don't even know what to spend my little free time learning, nor how or where, I'm feeling really lost, and I'm afraid for my future.
+
+I have experience, I have some solid knowledges, but the lack of grasp on latest tecnologies makes me feel lost (let alone the good tools I'm not taking advantage of).
+
+Any advice or suggestion you can give me would be truly apreciated.
+I'm live entirely of working in web design, and it's been dificult getting jobs lately, which is making me anxious...
+
+
+​Thanks for even reading this.
+Have a nice day! :)"
+
+---------------
+
+What is really helpful about this question is that it reveals the some of the deep reasons that can hold anyone back in web development.
+
+1. Fear of framework/techology names and feeling left behind
+2. Anxiety about whether you know the right things for a job and uncertainty about what to do now
+
+
+Let's look at each one in detail.
+
+1. Fear of framework/technology names and feeling left behind
+
+This is a common one.  It's easy to hear people throw around buzzwords and feel like each of those words is a huge scary thing to learn.  One way to fix this is to look at what each thing actually is.
+
+Bootstrap and Foundation are both just a bunch of CSS, HTML, and JavaScript files that someone wrote for you so you don't have to keep rewriting common page elements like buttons, columns, and pop-ups for example.
+That's it.
+If you know HTML and CSS, you already know how to use Bootstrap and Foundation.  Boom.  Two frameworks conquered in ten seconds.
+
+In order to speak confidently about those frameworks, you'll need to know the main benefits and drawbacks.
+
+Main benefit: You get a bunch of prewritten code, so you don't need to keep rewriting common elements.  Development can be faster.
+
+Main drawback: You get a bunch of prewritten code.  That means you might get some code you don't need, and your project could be a little bloated.  There's also some extra time to look through someone else's style names.
+
+Next, let's look at HTML5 boilerplate.  This is even simpler than the others.  It's just a copy and paste HTML skeleton you can use to start your project, so you don't have to keep rewriting the beginning stuff.  It has certain things you can choose to use or not, like resetting CSS styles, adding jQuery, etc.  Now you know how to use this, so you don't need to feel like it's some huge scary thing to learn.
+
+3 frameworks and tools down.  More to go.
+
+For things like Angular, React, Node, npm, and SOAP and REST APIs, here's how to tackle them.  First, get comfortable with plain JavaScript because then you'll have the ability to learn any of them.
+
+For now, we'll talk briefly about how to approach each of them.
+
+Angular and React are JavaScript scripts that make it easier to display dynamic, changing, interactive content on an HTML page.  You can do this with HTML, CSS, and JavaScript, but Angular and React mostly provide shortcuts, readability, and convenience.  Only try these when you're comfortable writing plain JavaScript.  Even then, the one you pick will depend on what you see requested in a majority of the jobs you find interesting.
+
+It's easy to feel left behind when thinking about the JavaScript framework of the month, but here's a secret.  Frameworks these days go out of style almost as fast as they come into style.  By getting good at plain JavaScript, you'll be able to jump into any framework as needed, and by not diving headfirst into every framework of the week, you can actually come out ahead by being better at the core skills and better able to adapt to anything.
+
+How about Node? Node is another JavaScript framework that's famous for letting you write JavaScript on the backend (working with databases, for example) although it lets you do other things too. Because Node starts to get into backend territory, you can absolutely work as a front-end developer without knowing it.  NPM is just a program that lets you quickly download and install various Node snippets, files, packages, add-ons etc for convenient use.
+
+Now let's talk about APIs.  An API (Application Programming Interface) is just a set of commands that let two programs (or websites or systems) talk to each other (send data back and forth).  For example, the Google Maps API lets you get data from Google Maps and use it on your page.
+
+SOAP and REST are just a set of rules for sharing data between applications (or pages, or systems).  The main difference between SOAP and REST is that SOAP transmits data as XML.  REST transmits data as a URL.  The URL can contain XML, JSON, or other stuff, making it more flexible for the web.  For this reason, a lot of the APIs you'll see on the web are REST APIs.
+
+APIs are nothing to be overwhelmed about.  The key to mastering them is to get good at JavaScript.  Once you do that, you can use pretty much any front-end API available on the web.  The instructions for how to use a given API will usually be on the provider's website.  For example, YouTube would have info about the YouTube API.
+
+Anyway, the main point of this info so far has been not to get intimidated by lots of different framework names.  Learn the core HTML, CSS, and JavaScript, start creating a portfolio, and then you can think about the next steps.
+
+
+2. Anxiety about whether you know the right things for a job and uncertainty about what to do now
+
+This is another big one that affects a lot of people.  What you need to know for a job can vary a lot depending on the job.
+
+Another point of confusion is that a lot of job descriptions are completely inaccurate.  I've seen designer positions that were actually describing the skills of a developer.  I've seen front-end developer positions that listed mostly back-end skills.  There have been positions that list skills that were never actually used in the day-to-day work.
+
+The cure for inaccurate job descriptions is to find a way to talk to people at the companies you're interested in, whether that means finding people through conferences, meetups, LinkedIn, their blogs, Twitter, the company website, etc.  By talking to developers, you get a real idea of what's involved in the work, and you also get connections that'll make it easier to get the best jobs before they are publicly announced.
+
+Also, you'll know which tools your companies of interest are using, so you can brush up on those.  For example, if they use React, and you've been practicing your JavaScript, you can learn React relatively soon and then put up a little portfolio project to show you can use the tool.  Huge bonus points if your project is relevant to the company in some way.
+
+Finally, let go of the need to chase trends. Recognize that no one knows everything, and it's much better to spend your time learning a few core things at a time than to spend that same time worrying so much that you end up doing nothing.
+
+Your next steps right now if you have a limited amount of time:
+Refer to the front end development road map (sent to you when you signed up for this email list), see where you are, and work on that step.
+
+For those who are interested in learning JavaScript, our course enrollment is currently closed, but you can sign up here to be the first to know when it reopens:
+
+https://simplestepscode.com/js_course_closed/
+
+I hope this email has provided a bit of calm and focus.
+
+
+
