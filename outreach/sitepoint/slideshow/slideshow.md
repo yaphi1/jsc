@@ -9,6 +9,8 @@ In this tutorial, we'll cover the following topics:
    use a slideshow at all.
  - Add controls to your slideshow.
 
+The main benefits of not using a library for your slideshow are that your page performs better due to less code and you can use the slideshow anywhere without worrying about loading any extra files.
+
 This tutorial assumes you know some JavaScript including functions, click events, and style changes.  For anyone who would find it helpful, I've written a [quick roadmap of which things to learn to do practical things with JavaScript as soon as possible](https://simplestepscode.com/learn-javascript/).
 
 
@@ -36,6 +38,8 @@ The core CSS will need to accomplish these things:
 - Define what a slide should look like when it's showing or hiding.
 - Transition the opacity for a fade effect.
 
+Before looking at the CSS, remember you might need to change the class and id names to avoid conflicts in your own sites. The names in this article were picked to be short and readable.
+
 Here's how the core CSS will look:
 
 ```css
@@ -62,6 +66,8 @@ these make the slideshow work
 	z-index: 1;
 
 	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-o-transition: opacity 1s;
 	transition: opacity 1s;
 }
 
