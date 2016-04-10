@@ -1,7 +1,19 @@
-how to retain stuff better
-	- practice like reality
-	- play with small pieces instead of just following a tutorial from step to step
-	- actually write code
-	- don’t do too many different topics at one time
 
+I recently received a question from a reader about how to retain stuff better when you're learning it.
+
+My tips:
+
+1. Make your practice match reality as much as possible.
+For example, instead of just doing code inside a tutorial website's built-in code editor, try the code on your own, in your own text editor, with your own browser.  If you practice with real conditions, you'll be able to apply your learning in real life because you've been doing it the whole time.
+
+2. Play with small concepts after you learn them.
+Instead of just learning something and moving onto the next thing, play around with the small piece you just learned.  Try different things.  Experiment, and see what happens.  It might take a little bit longer now, but getting comfortable with the fundamentals will allow you to fly through later things.
+
+3. Don't just copy and paste.
+This one gets said a lot, but it's important so I'll say it again.  Actually write code.  Don't just read about it or copy and paste it and assume you're comfortable with it.  Otherwise you won't be able to use it when you need it, and you'll get stuck trying to apply what you've learned to other things.
+
+4. Don't learn too many topics at once.
+It's more efficient to learn one thing at a time and retain it than to learn ten things at a time and remember none of them.
+
+I hope this helps!
 
