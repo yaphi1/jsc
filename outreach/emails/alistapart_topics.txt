@@ -1,0 +1,26 @@
+a list apart topics
+
+
+
+
+avoid getting wrecked by third-party code
+- examples of what can happen (variable overwritten, site breaks, allows script injection on card pages, makes site slow or janky, large amounts of unnecessary code)
+- ask about the purpose (might reveal it was unnecessary or duplicated)
+- check their website for errors
+- run it in console and check for console errors
+- look at how they send the code (if it's in a word doc, that's a red flag)
+- don't assume big famous companies are immune
+- look for red flags in code (document.write, eval, etc)
+- does it slow everything down
+- how are the companies treating you (for example, shady things like removing key people from emails)
+- if it's a script, can you host it on your site? (otherwise it can change and break stuff)
+- does it create global variables? (potentially interfere with your stuff although you should avoid that in a lot of cases)
+- is it a huge thing for a small function?
+
+
+how to know when you're good enough
+- issues: people say things that make you feel like you're not good enough; info comes out that makes you think you don't know what's going on
+- treatment: building things
+- mindset shift: instead of worrying about knowing everything, be excited by what you've done and what there still is left to learn
+
+

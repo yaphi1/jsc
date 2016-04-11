@@ -1,0 +1,26 @@
+
+
+quote:
+
+----
+
+
+I really appreciate your emails and how you simplify the steps,
+I just want to share with you my current struggle...
+
+I'm strong with HTML and CSS, I should probably learn sass..
+
+but I really want to ~level up~ my JavaScript, and I guess I just want to know when I know enough.
+
+I feel like I get stuck learning and never doing, I have some great ideas for things I want to build, web apps.. my personal website.. but I just can't get started.. so I can't really show that I know about the things I know...
+
+I don't know if this makes sense, just wondering if you ever found yourself in this situation
+
+---
+
+
+answer:
+
+- key idea: concern about being good enough
+
+
