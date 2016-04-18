@@ -488,6 +488,12 @@ Nav in footer:
 
 	function openLightbox(){
 		document.getElementById('lightbox_container').style.display = 'block';
+
+		// fix for older droids showing fixed lightbox as absolute instead
+		if(window.navigator.userAgent.match(/droid/i)){
+			try{window.scrollTo(0,0);}
+			catch(e){}
+		}
 	}
 
 	function closeLightbox(){

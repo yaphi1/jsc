@@ -10,3 +10,6 @@ something neat with svg
 photorealistic devices to display your products with css
 
 
+look through rs mobile demo for techniques to suggest
+
+
