@@ -3,7 +3,7 @@ a list apart topics
 
 
 
-avoid getting wrecked by third-party code
+avoid getting wrecked by third-party code [note there's already an article about third-party code, so this might have to go into technical details rather than business considerations]
 - examples of what can happen (variable overwritten, site breaks, allows script injection on card pages, makes site slow or janky, large amounts of unnecessary code)
 - ask about the purpose (might reveal it was unnecessary or duplicated)
 - check their website for errors
@@ -22,5 +22,16 @@ how to know when you're good enough
 - issues: people say things that make you feel like you're not good enough; info comes out that makes you think you don't know what's going on
 - treatment: building things
 - mindset shift: instead of worrying about knowing everything, be excited by what you've done and what there still is left to learn
+
+
+
+how to stop solving the wrong problems
+[different than this article: http://alistapart.com/article/whatstheproblem]
+- organizational telephone (worst garbled version of idea gets transmitted)
+- focus on the problem instead of a solution
+- stop ignoring or not soliciting qualified opinions (often from people closest to a project)
+- stop ignoring seemingly "unqualified" opinions
+- keep in touch with actual users
+- avoid a culture of fear (pressure to say what sounds good instead of the true assessment)
 
 

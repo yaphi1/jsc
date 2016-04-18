@@ -1,5 +1,12 @@
 
 
+
+[PERMISSION NOT YET GRANTED]
+
+
+Recently, I received this question (reprinted with permission):
+
+
 quote:
 
 ----
@@ -19,8 +26,76 @@ I don't know if this makes sense, just wondering if you ever found yourself in t
 ---
 
 
+
+The key part of this question is, "I just want to know when I know enough."
+
+This idea of knowing enough is something a lot of developers struggle with at some point.  The problem is that "enough" is a moving target that can mean completely different things depending on the situation.  For that reason, it's easy to feel like you never know enough.
+
+
+
+What to do when you're worried about knowing enough
+
+
+Let go of the idea of knowing "enough" because when you think about it, that's a really vague goal.  Instead, focus on making specific things.  For example, with HTML and CSS, you could try making a page.  Maybe replicate the design of one of your favorite sites.  Experiment with styles.  Post your results somewhere like codepen or a portfolio.  For JavaScript you could make small interactive things based on each new concept you learn. (Refer to the JavaScript roadmap for which things to learn to do practical things the fastest.)
+
+[link]
+
+"Enough" might change, but the work you've created won't go away.
+
+The more stuff you've created, the more comfortable you'll start to feel.  Also, the process of taking action leaves less brainpower left over to focus on worrying.  Then when you add in the satisfaction of seeing your creations come to life on the screen, you start to worry less about whether you know "enough".
+
+
+Ok that's nice, but how do you measure your knowledge for practical situations, like making that site or getting that job?
+
+
+The fundamentals
+- Get comfortable with HTML, CSS, and JavaScript
+- For more details, feel free to refer back to the roadmaps any time:
+Front-end development: [link]
+JavaScript: [link]
+
+Making a site or app
+- Is your project entirely a front-end thing or does it involve back-end stuff too (like dealing with a database for example)?  This will affect what you need to know.
+
+Knowing the right things for the job
+- First get comfortable with the fundamentals.
+- Create a portfolio or codepen posts along the way.
+- Look into what your favorite jobs are asking for, and start learning those skills.
+
+
+Final note:
+
+Stop waiting to know "enough".  You don't need permission to start creating great things.
+
+Also, don't jump into the big projects first.  If you feel like you can't even start a project, it might be too big.  Build smaller pieces first.
+
+I hope this helps!
+
+
+
+
+
+
+
+notes:
+
+
+- "enough" is a moving target
+
+- ways to combat the feelings:
+	- mindset shift
+		- let go of having to know everything before starting anything
+		- treat it like a good thing that there's so much more to learn (like knowing there are more episodes of your favorite show)
+	- creating stuff and putting it somewhere (doesn't have to be perfect)
+		- stuff you create is concrete, and even though tech and feelings can change, the stuff you made doesn't just disappear
+
+
+
+
+
 answer:
 
 - key idea: concern about being good enough
+
 
 

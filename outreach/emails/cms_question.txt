@@ -1,0 +1,105 @@
+A question about CMS use and a crucial life lesson about solving any problem
+
+
+
+There's a crucial lesson in this email, and it will help you whether you're with a company, you're a freelancer, or you run a company.
+
+This email will apply to a lot of different situations in life, but it started off with a question about how to pick a CMS (content management system).
+
+
+
+Here's the original question (reprinted with permission):
+
+Hello Yaphi,
+
+If you are for real then you are speaking my line (and many people like me) on each of your mailers. And I really appreciate for what you are doing. I want to ask a blunt and long pending question awaiting to get answered. I'm an introvert and dont speak the language of programmers or freelancers. My question is:
+
+As a freelancer, I do WordPress installations, customization for my clients. I haven't built a WordPress theme from scratch and I know there are many frameworks(underscores etc) that will give a good head-start. I mostly purchase a theme from ThemeForest matching to my clients requirement and do customization(styling & installing plugins) on top of it. From my experience and what I read on the web, there are design limitations while using WordPress for creative design websites. I feel like WordPress to be heavy for my small and creative clients. There are many dynamic websites which are not built on WordPress, I wonder what CMS are being used to bind the content without losing the design sense of these website. I'm mostly a UI/UX designer with front-end development skills. What tools will help me(other than WordPress) to develop a design focused websites and can bind the contents as a regular CMS does. 
+
+Any advice on this is much appreciated.
+
+
+After reading this question, I was faced with two options:
+
+1. Take the question at face-value and answer it on the surface.
+
+- OR -
+
+2. Look deeper and ask a clarifying question to make sure I was solving the real problem.
+
+
+I chose to ask a clarifying question:
+
+Just to clarify, is your main goal to have complete flexibility and control over the design while allowing clients to conveniently update the content?
+
+
+And I got the following answer:
+
+Yes. I'm a self taught front end designer. Google is my university and people like you are my mentors. On a daily basis, I'm improving my skills by practicing from designing and developing UI elements to complete website. When it comes to fulfilling a clients requirement for a flexible design oriented website, where they are not worried about which CMS to be used as the backend, I feel stuck with the options available in front of me. I know how it can be done using WordPress but I hate buying another theme from Themeforest just to use 20% of what is required from a theme and perform customisation over it. I know how to code a website in HTML/CSS n JS. But that is not good enough for WordPress. Considering the learning curve to make custom designs for WP makes me little overwhelming. Also, I haven't spend time in learning PhP. I know there are thousands of CMS out there. Then I keep hearing about sites like WebFlow that can create website without coding and dynamically bind data using their CMS(which cannot be exported or hosted separately). I keep rejecting request from clients to build a website using WordPress in the fear of getting stuck in the World of WP.
+
+
+I'm glad I asked for clarification.
+
+If I had taken the original question at face-value, I might have provided a list of CMS tools and frameworks with their own benefits and drawbacks in a way that would make the decision of what to use even more overwhelming than it already is.
+
+Instead, the clarification has allowed me to see the actual problems we're trying to solve.  Here are those problems:
+
+- My sites need more flexibility than typical WordPress themes.
+- My sites need to be easy for clients to edit.
+- I don't want to keep paying for bloated themes with tons of stuff I'll never use.
+- To make a completely custom theme, there's way too much of a learning curve.
+- What if I don't know PHP?
+- Clients keep asking for WordPress sites.
+- There are so many CMS options, and I don't know how to choose.
+
+Now that the real problems are clear, it's much easier to give a more useful answer.
+
+Here's how I personally handle content management:
+
+1. I create an example page in pure HTML, CSS, and JS.
+
+2. I use the WordPress BlankSlate theme, which is free, and gives you a blank slate to work with.
+
+3. I go to the theme editor, and paste in the different parts of my example page (after saving the original versions of the template files just in case.)  I'll paste the first part of my page (the initial HTML and top navigation) into the "header" section, I'll paste the home page body into the "main index template" section, and I'll paste the footer in the "footer" section.  If I see something that looks like dynamic content, I'll experiment with leaving it in to see what it posts, and if I don't like it, I'll take it out.
+
+Here's what I get from this approach:
+
+- Full control of what the page looks like
+- Easy editing for the clients (they're asking for WordPress because they want something they're familiar with and can use)
+- I don't need to do all the tedious work of creating a template because the files are already made for me, and I just need to paste my stuff into them.
+- I don't need to know PHP because I can look at the names of things in the templates and figure out what they do (they use variable names like "the_title" and "the_post" for example).
+- I don't have to pay for a theme.
+- I don't have to use a bloated theme with tons of code I'll never need.
+- When clients ask for a WordPress site, I can give them what they want so I don't have to turn away business.
+- With the CMS decision already made, I can focus on building the site instead of agonizing over a decision that will stop me before I start.
+
+
+Out of the CMSs I've tried, I've found WordPress with the BlankSlate theme to be the simplest combination for general client work.
+
+Here are some of the issues I've run into with other CMSs:
+
+- There can be a lot of extra editing to make your code fit with the way they want you to do things.
+- You can easily run into unexpected problems when it's too late.
+- Some CMSs don't have the best documentation, help, or support communities.
+- Sometimes, you have to use the command line to edit anything.
+- It's possible to end up spending more time wrestling with the CMS than doing real things with your site.
+- They can trap your content in a way that makes migration painful.
+- Sometimes the CMS will be fine for other projects, but your particular custom use cases will make it impossible to work with on your project.
+
+There are certain situations where I won't use a CMS at all, like if I'm making a site for myself with a limited number of pages, and I want blazing fast performance.
+
+For Simple Steps Code, I used Wordpress with the BlankSlate theme for the blog, but I don't use a CMS for the main pages.
+
+Tl;dr:
+WordPress + BlankSlate theme + paste your code in the theme editor
+
+The more important takeaway:
+Whenever you're faced with a request, make sure to ask about the underlying problems people are really trying to solve.
+
+It's like that quote by Henry Ford where he says something like, "If I asked people what they wanted, they'd say faster horses."  That's an example of asking for people's solutions instead of their problems.  Ford recognized that the underlying problem was that people wanted to travel faster.  If he had looked at the surface question, he would have been dealing with horses.  Since he focused on the actual problem instead he realized it was about going faster, not about horses. That's why he manufactured cars.
+
+I encourage you to do this with everything you work on.  Ask yourself if you're just working on an assumed solution or if you're really solving the underlying problem.  When you get the chance, ask people about their underlying problems instead of their solutions.  That way, you'll get much stronger insights and much better solutions.
+
+I hope this email has been helpful!
+
+
