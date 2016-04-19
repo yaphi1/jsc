@@ -28,10 +28,13 @@ framework intimidation (too many names; too much fear)
 
 meanness to beginners (or being more encouraging to those with less experience)
 maybe stop discouraging new coders
+making the web more friendly for learning
 - forums [don't say s-overflow by name]
 - "helpful" stuff that's overwhelming (you need to know 100 things before you can get started)
 - "requirements" that aren't actually required (related: not well-thought out job descriptions that discourage good coders)
-- what makes a real developer (or what makes a great developer) and it always seems to correlate with the author's skills
-
-
+- what makes a "real" developer (or what makes a great developer) and it always seems to correlate with the author's skills
+- judging everyone by our current standard of code (we might be unhappy with what we wrote 6 months ago, but we forget that and judge everyone else based on the pinnacle of our experience)
+- stop treating code like an innate ability instead of a learned skill
+- start recognizing everyone knows different things
+- stop the age battles (you're too young and inexperienced vs you're too old and not with the times)
 
