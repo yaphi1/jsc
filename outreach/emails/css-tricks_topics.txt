@@ -13,14 +13,15 @@ photorealistic devices to display your products with css
 look through rs mobile demo for techniques to suggest
 
 
-how to stop solving the wrong problems
+how to stop solving the wrong problems in web development
 [different than this article: http://alistapart.com/article/whatstheproblem]
 - organizational telephone (worst garbled version of idea gets transmitted)
 - focus on the problem instead of a solution
 - stop ignoring or not soliciting qualified opinions (often from people closest to a project)
 - stop ignoring seemingly "unqualified" opinions
-- keep in touch with actual users
+- keep in touch with actual users (avoid incentives to impress people inside organization instead of outside of it)
 - avoid a culture of fear (pressure to say what sounds good instead of the true assessment)
+- stop throwing money and complex technology at the problem when it's really a strategy problem (alternatively: understand the problem instead of throwing money/tech at it and hoping it gets better) (don't use money and technology as substitutes for thinking)
 
 
 framework intimidation (too many names; too much fear)
@@ -38,3 +39,47 @@ making the web more friendly for learning
 - start recognizing everyone knows different things
 - stop the age battles (you're too young and inexperienced vs you're too old and not with the times)
 
+
+
+
+
+https://css-tricks.com/guest-posting/#looking-for
+advertising script topic:
+
+Subject:
+Autopsy of an advertising tracking script
+
+
+As someone who has had to deal with a lot of advertising tracking scripts at my job, I've been keeping a log of some of the worst offenses I've found in their code, and I'd love to write about this topic.
+
+Here are some of the highlights I've seen:
+
+- Scripts loading other unexpected tracking scripts (which might load other scripts of their own)
+- Not sanitizing data (one exploit allowed people to insert any code after the hash sign, which meant people could steal credit cards)
+- One script loaded an entire icon font data URI and referenced comic sans for some reason
+- Polluting global scope and blowing out crucial variables
+- Inserting visible whitespace at beginning and end of document
+- Some custom enterprise solutions map too closely to the page structure instead of the underlying data, so if you ever edit any page on your site, all the tracking scripts will shatter
+- Loading new resources at timed intervals on every page, each one erroring out
+- Hugely increased loading times and slower sites
+- Unnecessary use of document.write
+- Freely using eval
+- Presenting the code to us in a way that they'd be credited for every conversion regardless of whether it came from them (this was more likely a miscommunication between their sales and their tech, not on purpose)
+- Danger not always in script itself; sometimes in business around it (sometimes vendors will try to skip around business people and request directly to devs to put in stuff no one asked for)
+- Scrolljacking slowing performance
+
+
+
+Scripts loading other unexpected tracking scripts (which might load other scripts of their own)
+Not sanitizing data (one exploit allowed people to insert any code after the hash sign, which meant people could steal credit cards)
+One script loaded an entire icon font data URI and referenced comic sans for some reason
+Polluting global scope and blowing out crucial variables
+Inserting visible whitespace at beginning and end of document
+Some custom enterprise solutions map too closely to the page structure instead of the underlying data, so if you ever edit any page on your site, all the tracking scripts will shatter
+Loading new resources at timed intervals on every page, each one erroring out
+Hugely increased loading times and slower sites
+Unnecessary use of document.write
+Freely using eval
+Presenting the code to us in a way that they'd be credited for every conversion regardless of whether it came from them (this was more likely a miscommunication between their sales and their tech, not on purpose)
+Danger not always in script itself; sometimes in business around it (sometimes vendors will try to skip around business people and request directly to devs to put in stuff no one asked for)
+Scrolljacking slowing performance
