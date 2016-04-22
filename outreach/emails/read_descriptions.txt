@@ -8,7 +8,7 @@ First, my short answer is not to rely on job descriptions at all.  Talk to peopl
 
 However, if you insist on reading job descriptions, here are some things to be aware of.
 
-- A lot of web development position descriptions are written by people in HR who are not always informed about web development.  It's not their fault.  They are often unfairly forced to write requirements for someone else's skillset.  A lot of descriptions will include keywords that sound good but are not necessarily needed.
+- A lot of web development position descriptions are written by people who are not always informed about web development.  It's not their fault.  They are often unfairly forced to write requirements for someone else's skillset.  A lot of descriptions will include keywords that sound good but are not necessarily needed.
 
 - If you have most of the qualifications, you can still apply.  Don't count yourself out because a few things are missing.
 
