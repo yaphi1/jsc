@@ -1,0 +1,68 @@
+how to read descriptions
+
+
+
+I received a question about how to tell which parts of a job description are accurate, so I'll answer it here.
+
+First, my short answer is not to rely on job descriptions at all.  Talk to people at your target companies (or find a way to hear from them) whether it's through meetups, happy hours, tech talks, conferences, email, LinkedIn, quora posts, reddit posts, individual blogs, etc.
+
+However, if you insist on reading job descriptions, here are some things to be aware of.
+
+- A lot of web development position descriptions are written by people in HR who are not always informed about web development.  It's not their fault.  They are often unfairly forced to write requirements for someone else's skillset.  A lot of descriptions will include keywords that sound good but are not necessarily needed.
+
+- If you have most of the qualifications, you can still apply.  Don't count yourself out because a few things are missing.
+
+- Look for contradictions between title and responsibilities.  For example, if you see something that says "front-end developer" but has many back-end requirements, that's a red flag.  Either you'll be expected to do more than you're paid for, or the company has no idea what they're looking for, which can lead to a whole host of problems.
+
+- If the requirements include something weirdly specific (like their custom CMS), you often won't be expected to know that.
+
+- If they have a certain type of degree requirement, that doesn't matter as long as you have the portfolio and skills to show you can do the job.  The good thing about web development is that you don't need to wait for someone else to give you experience; you can always code your own projects.
+
+- If they have a direct explanation of why something is important to the job, then it's best to know that.  For example, "We will be working with _____ on a day-to-day basis for our main website."  More often, you don't see these explanations because the people writing the descriptions often don't think about how the skills will apply so they just list stuff that sounds nice.
+
+No matter how good you get at reading descriptions, they're still going to be unreliable.  The best thing to do is to talk to people or hear their stories.  A lot of these companies and developers have meetups, happy hours, blogs, talks, quora posts, reddit posts, etc where you can get real info.
+
+If you go to events, don't go to "networking" events.  Those are often full of people passing out business cards and wasting their own time.  Instead, go to events for people who are interested in certain things (for example: making user experiences better, making sites faster, looking at cool CSS projects, etc.)  That way, you get access to people in the industry instead of people trying to get in.
+
+I hope this helps!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+outline and notes:
+
+- first, don't
+
+- if you must, here's some stuff to be aware of
+
+- descriptions often written by HR (not their fault, it's unfair to have to write requirements for someone else's skillset); it'll include all the keywords that sound good, but not necessarily what's needed
+
+- if you have most of the qualifications, you can apply (you don't have to have all of them)
+
+- look for contradictions between title and responsibilities
+
+- if the requirements include something weirdly specific (like their custom CMS), you often won't be expected to know that
+
+- if they have a certain type of degree requirement, that doesn't matter if you have the portfolio and skills to show you can do the job
+
+- if they have a direct explanation of why something is important to the job, then it's best to know that (often they don't think about how the skills will apply so they just list stuff that sounds nice)
+
+- final note: reiterate it's best to talk to people or hear their stories (a lot of these companies have meetups, happy hours, blogs, talks, quora posts, reddit posts, etc where you can get real info)
+
