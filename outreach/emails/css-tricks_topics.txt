@@ -83,3 +83,19 @@ Freely using eval
 Presenting the code to us in a way that they'd be credited for every conversion regardless of whether it came from them (this was more likely a miscommunication between their sales and their tech, not on purpose)
 Danger not always in script itself; sometimes in business around it (sometimes vendors will try to skip around business people and request directly to devs to put in stuff no one asked for)
 Scrolljacking slowing performance
+
+
+
+
+red flags
+- document.write
+- eval
+- insisting on putting their script in the head
+- code given in word doc format
+- their site is broken
+- they give a solution that's too closely tied to your dom (more in corporate situations than individual ones)
+- abusing global scope
+- console errors right off the bat
+- inserting unknown tracking scripts of their own
+
+
