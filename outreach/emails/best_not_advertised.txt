@@ -1,1 +1,40 @@
-why the best ones are not advertised
+Why the Best Web Development Jobs Are Not Advertised (and What to Do About It)
+
+
+The best web development jobs are not publicly advertised.
+
+I'll tell you why in a moment, but first let's try a quick experiment.
+
+Imagine you need someone to collaborate with you on a project.  This project is important to you, so you want someone you can trust to do a good job.
+
+What do you do?
+
+A) Ask a qualified person you know and trust.
+
+B) Check your network to see if anyone you know can recommend someone good.
+
+C) Post an ad somewhere on the internet and hope the right people show up.
+
+Options A and B have the most trust baked into them, while Option C requires you to hope a random stranger will work out.  If you're looking for someone you can trust to do a great job it's understandable that C might be your last resort.
+
+Now imagine you're the hiring manager at the company of your choice, and you want to fill a position.
+
+When you publicly advertise a job, you receive tons of resumes from people who don't seem to have looked at the job descriptions, and you don't know or trust any of them.  You waste a lot of time and money writing and posting job descripions, sifting through resumes, and going through HR processes with a string of candidates.  What's worse is that after months of effort, it's hard to know if you made the right choice.  What if they're good at interviewing and bad at the job?  What if your hiring process is flawed?  What if you're missing great candidates?  Now multiply this whole process by the number of positions you have to fill.
+
+Even writing this is giving me nightmares.
+
+Now imagine if instead of going through that long hiring process, you already know someone who is perfect for the role.  You can skip the whole nightmare.  No wasted money.  No wasted months.  No more major doubts.  Alternatively, if someone you trust can recommend a candidate to you, then you'll have a much easier time too.
+
+If you had to hire someone, which option would you pick?  Would you go with someone you trust, or would you prefer to spend months sifting through hundreds of strangers?
+
+I don't know about you, but I'd go with someone I trust.
+
+So now you may be asking yourself, how do you become one of those trusted people instead of a stranger?
+
+Find a way to interact with people at the companies you're interested in and ask questions about their work.  Don't ask for a job because that'll make it weird.  You can find developers to talk to through meetups, conferences, tech talks, happy hours, email, Twitter, their blogs, LinkedIn, Quora, company websites, etc.  Any time you spend connecting with people at a company is more valuable than time you spend firing off random resumes.
+
+
+
+
+
+

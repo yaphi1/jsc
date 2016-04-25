@@ -28,7 +28,7 @@ how to know when you're good enough
 how to stop solving the wrong problems
 [different than this article: http://alistapart.com/article/whatstheproblem]
 - organizational telephone (worst garbled version of idea gets transmitted)
-- focus on the problem instead of a solution
+- focus on the problem instead of one particular solution
 - stop ignoring or not soliciting qualified opinions (often from people closest to a project)
 - stop ignoring seemingly "unqualified" opinions
 - keep in touch with actual users

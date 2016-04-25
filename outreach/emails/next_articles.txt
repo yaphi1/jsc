@@ -1,0 +1,42 @@
+next articles (some for emails and some for guest posts)
+
+
+(in no particular order)
+
+
+
+- story about worst job description that sounded like legit dev thing but turned out to be copying and pasting stuff
+
+- why the best ones are not advertised
+
+- "not a code person" (maybe use this in next sales funnel)
+
+- tutorials can be misleading about the path of process
+
+- how to get hired at facebook according to people at facebook
+https://www.quora.com/How-can-I-become-a-frontend-developer-for-Facebook/answer/Josh-Duck?srid=un3yW
+
+- things that stop people learning web development (examples: framework intimidation, worrying about what's next instead of doing what's now, doing too much at a time, following tutorials and not practicing on your own, being so concerned about doing everything that they don't do anything)
+
+- thing great developers have in common (or really people who get good at anything): the people who are great at things are the ones who are okay with being bad at things (they don't immediately freeze up or shut down; they're okay with being bad and getting better)
+
+
+
+
+
+
+webdesignerdepot
+- how to do a cool css thing
+- how to understand some feature of the web
+- something about ux
+- organizational stuff (like solving the right problems)
+- how to keep up with all the frameworks and tools in web dev
+
+
+huffpo
+- best positions not advertised
+- how to keep up with all the frameworks and tools in web dev
+- things that stop people from learning web development
+- what I learned from tennis and m kart
+
+
