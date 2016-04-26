@@ -2,12 +2,37 @@
 worst description
 
 
+Subject:
 
+The worst web dev job description I've ever been tricked by
+
+
+
+I remember the worst web dev job description I've ever been tricked by.
+
+It sounded like a legit development position.  I thought I'd be coding neat things.  I went through their application, their screening, and their interviewing.
+
+Then I got in.
+
+Guess what. The job turned out to be mostly copying and pasting text content into a template.
+
+There are two main points to this story:
+
+1. It's really easy for job descriptions to make you feel like you're not good enough when you're actually way overqualified.
+
+2. Whether you're in an interview or you're talking to your companies of choice beforehand, you really need to grill them for specifics of what you'll be doing.
+
+
+
+
+
+
+
+
+Notes:
 
 - sounded like legit dev thing
 
 - actually copy and paste text into a template
 
 - all that vetting for this
-
-
