@@ -35,3 +35,10 @@ how to stop solving the wrong problems
 - avoid a culture of fear (pressure to say what sounds good instead of the true assessment)
 
 
+How to Make the Web Friendlier for Learners
+- avoid the framework pileup
+- remember your code evolves, so don't be unkind to those who aren't at your standard
+- 
+
+
+

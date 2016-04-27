@@ -5,8 +5,6 @@ next articles (some for emails and some for guest posts)
 
 
 
-- story about worst job description that sounded like legit dev thing but turned out to be copying and pasting stuff
-
 - why the best ones are not advertised
 
 - "not a code person" (maybe use this in next sales funnel)
@@ -31,6 +29,7 @@ webdesignerdepot
 - something about ux
 - organizational stuff (like solving the right problems)
 - how to keep up with all the frameworks and tools in web dev
+- things that slow people down when learning web development (or javascript)
 
 
 huffpo

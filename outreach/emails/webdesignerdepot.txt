@@ -1,0 +1,42 @@
+
+
+Hi!  I'm a front-end web developer by the name of Yaphi, and I'd love to write some articles for WebdesignerDepot.
+
+To prove my writing is credible, here's an article on Sitepoint:
+http://www.sitepoint.com/build-javascript-countdown-timer-no-dependencies/
+
+...and a mention from Treehouse:
+https://twitter.com/treehouse/status/649312271999631360
+
+...and an appearance on Lifehacker:
+http://lifehacker.com/learn-to-code-faster-by-treating-new-concepts-like-gett-1734039966
+
+
+Article ideas:
+
+- When Web Developers Solve the Wrong Problems
+	- Mismatched incentives (trying to impress the client or manager instead of the customer)
+	- Chasing one particular solution instead of asking about the problem
+	- Not enough information to make the right judgement calls
+	- Ideas mutate as they go from person to person (so much that the original good idea might get lost)
+	- Specific steps to make sure you're solving the right problems
+
+- How to Know When You're "Good Enough" at Web Development
+	- Navigate common traps that make you feel inadequate (certain comments from others, floods of information, etc)
+	- Specific action steps to improve without wasting time
+	- Mindset shift that will help you learn faster and enjoy it more
+
+- What Stops People from Learning JavaScript
+	- Why rushing makes you go slower
+	- Spending hours piecing together random answers when it would take minutes to understand the underlying concepts instead
+	- Taking the wrong psychological approach (easily fixed)
+	- Not practicing a concept after learning it (and the compounding effects of this)
+	- Too high of a reading-to-coding ratio
+
+My desired rate is $150 per article.
+
+Let me know if any of these sound like good topics.  I'd be more than happy to tweak the ideas as well.
+
+Best,
+
+Yaphi
