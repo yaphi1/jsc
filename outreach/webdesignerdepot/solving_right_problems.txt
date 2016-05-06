@@ -1,0 +1,40 @@
+
+
+
+
+
+- When Web Developers Solve the Wrong Problems
+	
+	- Mismatched incentives (trying to impress the client or manager instead of the customer)
+	
+	- Chasing one particular solution instead of asking about the problem
+	
+	- Not enough information to make the right judgement calls
+	
+	- Ideas mutate as they go from person to person (so much that the original good idea might get lost)
+	
+	- Specific steps to make sure you're solving the right problems
+		- ask about customer in order to keep incentives and alignment in the right place
+		- ask about underlying problems instead of solutions so everyone understands the real goal instead of chasing one (possibly doomed) approach
+		- ask for input from people involved in project
+		- avoid a word-of-mouth telephone process for giving ideas; put it in writing when possible, or make sure enough people in the process hear the true intent (whether it's all at once or individually); also start with the problem being solved
+		- when you find yourself getting to deep into something, step back and reevaluate how this helps get to the goal; often this reveals that you were spending a disproportionate amount of time on something that wouldn't make a difference
+
+
+
+
+
+
+
+
+
+notes:
+
+- When Web Developers Solve the Wrong Problems
+	- Mismatched incentives (trying to impress the client or manager instead of the customer)
+	- Chasing one particular solution instead of asking about the problem
+	- Not enough information to make the right judgement calls
+	- Ideas mutate as they go from person to person (so much that the original good idea might get lost)
+	- Specific steps to make sure you're solving the right problems
+
+
