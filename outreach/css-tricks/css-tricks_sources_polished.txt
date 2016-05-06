@@ -1,0 +1,69 @@
+css-tricks sources
+
+
+
+
+
+Tracking code info:
+
+Common names: web beacons, tracking pixels, third-party advertising code, tracking tags, remarketing, retargeting, etc
+
+Methods of delivery: images, iframes, scripts
+
+How it works:
+A third party places a 1x1 image on your page. When users come to your page, the image gets requested from the third party site, in the process transmitting your IP address, what page you visited, what time you visited, what browser you're using, and other information used to identify you.
+Sometimes, third parties will use iframes or scripts instead of images in order to get more detailed information including registrations, add to cart, purchases, user id, etc
+
+Results:
+Publishers can target and segment users by behavior, preferences, and sometimes demographics so that they can show relevant ads.  That's why people will sometimes go to a site and find that the site's ads seem to follow them across the web.
+
+Sources:
+https://en.wikipedia.org/wiki/Web_beacon
+https://policies.yahoo.com/us/en/yahoo/privacy/topics/webbeacons/index.htm
+https://support.google.com/adwordspolicy/answer/94230#PIN-AW
+https://www.facebook.com/business/help/952192354843755
+http://www.steelhouse.com/2012/04/10/steelhouse-clients-see-massive-returns-from-its-real-time-behavioral-commerce-technology/
+https://en.wikipedia.org/wiki/Quantcast
+
+
+Weird things in the code
+
+Security risks:
+- You don't know what code is coming in.
+- Bringing third party scripts onto your site involves a lot of trust.
+
+Tracking tags often bring in other tracking tags:
+Example: steelhouse brings in adnxs.com, adsrvr.org, and facebook (see screenshot)
+
+Some tags include unexplained things like a reference to comic sans:
+http://static.yieldmo.com/ym.adv.min.js (screenshot attached)
+
+Some tags involve document.write, which can cause negative effects on pages:
+See adnxs screenshot attached (source url: http://ib.adnxs.com/seg?add=333519&t=1)
+
+Some tags will use eval on arbitrary js code (eval is often a sign of possible security risks since it runs anything):
+Hilariously, there's actually a screenshot where they have a function called arbitraryJSCode that evals anything you give it
+
+Some tags can allow script injection (with horrible consequences like credit cards being stolen):
+http://randywestergren.com/widespread-xss-vulnerabilities-ad-network-code-affecting-top-tier-publishers-retailers/
+
+Page layout changes can happen when these tags are inserted:
+See attached screenshot where comcast/xfinity has a gap under the footer (some sites have had gaps on top if the tracking tags get inserted at the beginning)
+
+On the other side of tracking, showing ads can cause issues if their scripts don't work properly:
+See elite daily screenshot of script error
+
+Tracking tags can slow down page load times:
+Example: business insider (anywhere from 7 to 15 seconds to load; about 1 second appears to be on the actual page and its content, and the remaining time is spent on third party ad code)
+fastcompany - load time becomes 400 percent as slow with third-party ad code
+Fortunately those sites have done a good job of loading stuff in the background without blocking perceived performance
+
+Some tracking tags can bog down scrolling:
+For example, the following script runs a long loop on scroll involving google analytics tracking.
+http://www.steelhouse.com/wp-content/plugins/wp-google-analytics-events/js/ga-scroll-events.js?ver=-b-modified-1437613258
+
+Tags can occasionally be so closely tied to the DOM that any changes to your site will break the third party tags:
+Screenshot attached (steelhouse tag on vans site)
+
+
+

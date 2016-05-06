@@ -1,0 +1,69 @@
+css-tricks sources
+
+
+
+
+Tracking code explanation:
+https://en.wikipedia.org/wiki/Web_beacon
+names: tracking pixels, third-party advertising code, etc
+methods: image gives user's ip address, sometimes scripts do more (purchase amounts, user id, pages visited, etc)
+
+
+
+what facebook tracks:
+https://www.facebook.com/business/help/952192354843755
+examples of tracked actions: add to cart, complete registration, make purchase, view content
+
+
+
+http://static.yieldmo.com/ym.adv.min.js
+see comic sans
+also loads other pixels
+
+
+brings in other tracking beacons:
+steelhouse (see screenshot): brings in adnxs.com, adsrvr.org, facebook
+
+
+criteo
+does email hashing and userid (see screenshot)
+
+
+
+had document.write:
+doubleclick floodlight
+adnxs screenshots (url: http://ib.adnxs.com/seg?add=333519&t=1)
+
+
+security vulnerabilities:
+http://randywestergren.com/widespread-xss-vulnerabilities-ad-network-code-affecting-top-tier-publishers-retailers/
+
+
+other side of tracking - showing ads:
+use elite daily screenshot of script error
+
+
+page layout changes:
+comcast/xfinity bottom gap
+
+
+disastrously slow-loading pages:
+example: business insider (anywhere from 7 to 15 seconds to load; about 1 second appears to be on the actual page and its content, and the remaining time is spent on third party ad code)
+fastcompany - load time becomes 400 percent as slow with third-party ad code
+
+
+
+steelhouse:
+http://www.steelhouse.com/2012/04/10/steelhouse-clients-see-massive-returns-from-its-real-time-behavioral-commerce-technology/
+
+"By enabling retailers to convert website traffic via retargeting, segment shoppers based on their buying behaviors, and then immediately message these shoppers with personalized incentives via Real Time Offers, merchants are creating a total brand experience both offsite and onsite for their shoppers.
+Embedded on a retailer’s website with a single pixel, SteelHouse’s marketing solutions allow marketers to see, monitor and act on instantaneous, real time data without the need for IT involvement."
+
+
+scrolling:
+runs this long loop on scroll involving google analytics tracking
+
+http://www.steelhouse.com/wp-content/plugins/wp-google-analytics-events/js/ga-scroll-events.js?ver=-b-modified-1437613258
+
+
+
