@@ -1,6 +1,146 @@
 
 
 
+When web developers solve the wrong problems
+
+
+
+Impressing the wrong people
+
+A common problem occurs when web developers are encouraged to impress their clients, their managers, their organization, or an awards committee instead of the actual users of their sites.  The result is often a site that excites the company but confuses the customers.  A common symptom of this problem is when a site has complex visual effects, but the users have to struggle to find the basic information they're looking for.
+
+This problem can happen for a number of reasons including pressure, misaligned incentives, attachment to an idea, or a lack of communication.
+
+The solution is to keep the focus on the user.  Whether you're creating a site or you're paying for one, that means always asking how decisions will affect the users.  Is everything on the site clear?  Can people find what they're looking for?  Do any of our choices get in our customers' way?
+
+If you're still having trouble getting people to listen, make sure you're showing the business value of your comments.  For example, "If we take out that bulky file, the page will load faster, which means more people will stay on it, and profits will go up by $X."  If that doesn't work, there might be a bigger organizational problem that won't be solved with user experience questions.  Leaders should also make sure to set a tone of "Don't try to dazzle me; just make our customers' lives easier."
+
+
+
+Chasing a doomed solution instead of fixing the real problem
+
+Sometimes, web developers will find themselves laboring over a solution that is time-consuming, expensive, or fundamentally flawed when something simple would have worked much better.
+
+For example, let's say the client asks for site search functionality.  It's easy to dive into specifics.  Where do they want the search bar?  What's the deadline?  How do they want the results page to look?  What should the url structure be?
+
+The question no one asked was "Why?"
+
+In this totally hypothetical story, the client didn't need search at all.  They weren't a major retailer or a reference site, and the real issue was that customers couldn't find what they were looking for.
+
+A few simple tweaks to the home page navigation would have solved the problem, but instead, the company ended up building a site search that ultimately didn't solve the customers' confusion.
+
+How do you avoid this?
+
+The best approach is to keep asking about the underlying problems instead of getting too deep into the idea of one solution.  For example, instead of diving into building a site search, ask why it is needed.  If you keep asking why, you'll eventually uncover the real problem, which will be something like "Customers can't find what they're looking for."
+
+If everyone understands the true problems and goals, you'll end up with solutions that are less costly, less time-consuming, and more effective.
+
+
+
+
+Spending time according to difficulty instead of importance
+
+
+
+
+	
+	- Difficulty and importance are not always correlated (result: time can get spent based on difficulty rather than importance)
+		- when you find yourself getting to deep into something, step back and reevaluate how this helps get to the goal; often this reveals that you were spending a disproportionate amount of time on something that wouldn't make a difference
+	
+	- Not enough information to make the right judgement calls
+		- ask for input from people involved in project
+	
+	- Ideas mutate as they go from person to person (so much that the original good idea might get lost)
+		- avoid a word-of-mouth telephone process for giving ideas; put it in writing when possible, or make sure enough people in the process hear the true intent (whether it's all at once or individually); also start with the problem being solved
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+better outline:
+
+
+- When Web Developers Solve the Wrong Problems
+	
+	- Mismatched incentives (trying to impress the client or manager instead of the customer)
+		- ask about customer in order to keep incentives and alignment in the right place
+
+	- Chasing one particular solution instead of asking about the problem
+		- ask about underlying problems instead of solutions so everyone understands the real goal instead of chasing one (possibly doomed) approach
+	
+	- Difficulty and importance are not always correlated (result: time can get spent based on difficulty rather than importance)
+		- when you find yourself getting to deep into something, step back and reevaluate how this helps get to the goal; often this reveals that you were spending a disproportionate amount of time on something that wouldn't make a difference
+	
+	- Not enough information to make the right judgement calls
+		- ask for input from people involved in project
+	
+	- Ideas mutate as they go from person to person (so much that the original good idea might get lost)
+		- avoid a word-of-mouth telephone process for giving ideas; put it in writing when possible, or make sure enough people in the process hear the true intent (whether it's all at once or individually); also start with the problem being solved
+		
+		
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+longer outline:
+
+
 
 
 - When Web Developers Solve the Wrong Problems
@@ -8,6 +148,8 @@
 	- Mismatched incentives (trying to impress the client or manager instead of the customer)
 	
 	- Chasing one particular solution instead of asking about the problem
+
+	- Difficulty and importance are not always correlated (result: time can get spent based on difficulty rather than importance)
 	
 	- Not enough information to make the right judgement calls
 	
