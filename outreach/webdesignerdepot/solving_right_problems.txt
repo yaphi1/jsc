@@ -40,19 +40,57 @@ If everyone understands the true problems and goals, you'll end up with solution
 
 Spending time according to difficulty instead of importance
 
+If you've been involved in a web project, you might have experienced a situation where too much time was spent on something that wasn't really important.  Difficult things can take longer, but difficulty is often not correlated with importance.
+
+For example, I once saw a situation where a ton of time was almost spent on a complex, barely visible background animation that was useless at best and distracting at worst.  This animation was also going to be buried way at the bottom of the page.
+
+It woud have been easy to spend lots time on this footer background effect while neglecting the important parts of the page.  Fortunately, a meeting revealed that the real reason the distracting animation was there was because someone in the company, at the last minute, wanted to feel dazzled.  When it became clear that this was a vanity project and not something that would help the users, the animation became deprioritized.
+
+How do you avoid spending too much time on difficult but unimportant things?
+
+1) Before you start a website, make sure you understand its most important goals.  That understanding can help prevent you from going too deep into a section or feature that doesn't provide a significant benefit.  If you need to ask someone, do that too!
+
+2) If you find yourself spending too much time on something that isn't important, step back and reevaluate the priorities.  Does the company really need this feature?  Will it help the users?  Is there an acceptable shortcut that will have the same effect?  Questions like these can free up more of your time so you can work on the stuff that matters.  That's best for the company, the users, and you.
 
 
 
-	
-	- Difficulty and importance are not always correlated (result: time can get spent based on difficulty rather than importance)
-		- when you find yourself getting to deep into something, step back and reevaluate how this helps get to the goal; often this reveals that you were spending a disproportionate amount of time on something that wouldn't make a difference
-	
-	- Not enough information to make the right judgement calls
-		- ask for input from people involved in project
-	
-	- Ideas mutate as they go from person to person (so much that the original good idea might get lost)
-		- avoid a word-of-mouth telephone process for giving ideas; put it in writing when possible, or make sure enough people in the process hear the true intent (whether it's all at once or individually); also start with the problem being solved
-		
+
+Not having enough information to make the right decisions
+
+As a developer or designer, sometimes you might not hear all of the business reasons for a particular decision.  As a client or manager, you might not hear all of the technical or user experience information you need to make a judgement call.  A lack of information can lead to decisions that waste time, money, and customer attention.
+
+One way to fix a lack of information is to be vocal (in a friendly way) when you see an issue.
+
+For example, if a certain course of action will destroy the user experience in a way that will stop people from buying, you might want to mention that.  Oftentimes, you'll find that everyone was too focused on something else to see the issue.
+
+If you're a client or a manager, it's good to let everyone know the business reasons for various decisions so that everyone involved can produce the best solutions.
+
+
+
+
+
+Letting ideas mutate from person to person
+
+There's a children's game called Telephone, where everyone stands in a line.  Starting at one end, each person whispers a message to the next, with the goal of preserving the original message.  By the end, the message is often drastically different.
+
+This scenario is funny as a game, but it's not so funny when this happens in professional communication.
+
+It's all too common for a good idea to go through several layers of misunderstanding until the version that gets communicated to the key stakeholder sounds ridiculous.
+
+Sometimes, this scenario results in an entire web project based on a misunderstood version of the original idea.
+
+To be clear, I'm not saying it's bad when ideas change.  I'm saying it's a problem when ideas change due to misunderstandings rather than intentional feedback and growth.
+
+Here are some suggestions for how to avoid mutating ideas:
+
+1) Distill the message into its simplest form.  Focus on the main intent, and as many extraneous details as possible.  People have enough to think about already.
+
+2) When necessary, communicate your ideas directly to the people who need to hear it.  To be clear, this does not mean CC the whole office or alarm the CEO with every stray thought.  It simply means that if you have something important to say, don't just casually mention it to the person next to you and hope it gets around.
+
+3) Put your message in writing whenver possible.  That way, you have more time to think about it, and there's a clear record anyone can refer to if needed.
+
+
+
 
 
 
