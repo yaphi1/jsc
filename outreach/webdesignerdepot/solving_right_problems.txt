@@ -1,19 +1,25 @@
 
 
 
-When web developers solve the wrong problems
+When web professionals solve the wrong problems
+
+
+If you're a web professional, there's a good chance you've found yourself spending at least some time on the wrong problems.  Maybe you were asked to implement a useless feature.  Maybe you've ended up spending too much time on something because it was difficult rather than important.
+
+For the purposes of this article, we'll define the wrong problems as ones whose solutions will help neither the business nor the customer while wasting time and money in the process.  We'll examine why this happens, and find specific ways to avoid it.
+
 
 
 
 Impressing the wrong people
 
-A common problem occurs when web developers are encouraged to impress their clients, their managers, their organization, or an awards committee instead of the actual users of their sites.  The result is often a site that excites the company but confuses the customers.  A common symptom of this problem is when a site has complex visual effects, but the users have to struggle to find the basic information they're looking for.
+A common problem occurs when web professionals are encouraged to impress their clients, their managers, their organization, or an awards committee instead of the actual users of their sites.  The result is often a site that excites the company but confuses the customers.  A common symptom of this problem is when a site has complex visual effects, but the users have to struggle to find the basic information they're looking for.
 
 This problem can happen for a number of reasons including pressure, misaligned incentives, attachment to an idea, or a lack of communication.
 
-The solution is to keep the focus on the user.  Whether you're creating a site or you're paying for one, that means always asking how decisions will affect the users.  Is everything on the site clear?  Can people find what they're looking for?  Do any of our choices get in our customers' way?
+The solution is to keep the focus on the user.  Whether you're creating a site or you're paying for one, that means always asking how decisions will affect the users.  Is everything on the site clear?  Can people find what they're looking for?  Do any of your choices get in your customers' way?
 
-If you're still having trouble getting people to listen, make sure you're showing the business value of your comments.  For example, "If we take out that bulky file, the page will load faster, which means more people will stay on it, and profits will go up by $X."  If that doesn't work, there might be a bigger organizational problem that won't be solved with user experience questions.  Leaders should also make sure to set a tone of "Don't try to dazzle me; just make our customers' lives easier."
+If you're still having trouble getting your clients or your organization to listen, make sure you're showing the business value of your comments.  For example, "If we take out that bulky file, the page will load faster, which means more people will stay on it, and profits will go up by $X."  If that doesn't work, there might be a bigger organizational problem that won't be solved with user experience questions.  Leaders can help avoid misaligned incentives by making sure to set a tone of "Don't try to dazzle me; just make our customers' lives easier."
 
 
 
@@ -44,13 +50,13 @@ If you've been involved in a web project, you might have experienced a situation
 
 For example, I once saw a situation where a ton of time was almost spent on a complex, barely visible background animation that was useless at best and distracting at worst.  This animation was also going to be buried way at the bottom of the page.
 
-It woud have been easy to spend lots time on this footer background effect while neglecting the important parts of the page.  Fortunately, a meeting revealed that the real reason the distracting animation was there was because someone in the company, at the last minute, wanted to feel dazzled.  When it became clear that this was a vanity project and not something that would help the users, the animation became deprioritized.
+It would have been easy to spend lots time on this footer background effect while neglecting the important parts of the page.  Fortunately, a meeting revealed that the real reason the distracting animation was there was because someone in the company, at the last minute, wanted to feel dazzled.  When it became clear that this was a vanity project and not something that would help the users, the animation became deprioritized.
 
 How do you avoid spending too much time on difficult but unimportant things?
 
 1) Before you start a website, make sure you understand its most important goals.  That understanding can help prevent you from going too deep into a section or feature that doesn't provide a significant benefit.  If you need to ask someone, do that too!
 
-2) If you find yourself spending too much time on something that isn't important, step back and reevaluate the priorities.  Does the company really need this feature?  Will it help the users?  Is there an acceptable shortcut that will have the same effect?  Questions like these can free up more of your time so you can work on the stuff that matters.  That's best for the company, the users, and you.
+2) If you find yourself spending too much time on something that isn't important, step back and reevaluate the priorities.  Does the company really need this feature?  Will it help the users?  Is there an acceptable shortcut that will have the same effect?  Questions like these can free up more of your time so you can work on the stuff that matters.  That's best for the business, the users, and you.
 
 
 
@@ -83,11 +89,21 @@ To be clear, I'm not saying it's bad when ideas change.  I'm saying it's a probl
 
 Here are some suggestions for how to avoid mutating ideas:
 
-1) Distill the message into its simplest form.  Focus on the main intent, and as many extraneous details as possible.  People have enough to think about already.
+1) Distill the message into its simplest form.  Focus on the main intent, and remove as many extraneous details as possible.  People have enough to think about already.
 
-2) When necessary, communicate your ideas directly to the people who need to hear it.  To be clear, this does not mean CC the whole office or alarm the CEO with every stray thought.  It simply means that if you have something important to say, don't just casually mention it to the person next to you and hope it gets around.
+2) When necessary, communicate an idea directly to the people who need to hear it.  To be clear, this does not mean CC the whole office or alarm the CEO with every stray thought.  It simply means that if you have something important to say, don't just casually mention it to the person next to you and hope it gets around.
 
 3) Put your message in writing whenver possible.  That way, you have more time to think about it, and there's a clear record anyone can refer to if needed.
+
+
+
+
+Conclusion
+
+Web professionals can end up solving the wrong problems for a variety of reasons, many of which are not entirely in their control.  While the suggestions in this article won't solve everything, I hope they will give you a framework for approaching the things you work on.  As long as you focus on the user, avoid being misled by surface solutions, and communicate openly, you have a much better shot of solving the right problems.
+
+I hope this article has been helpful, and if you have anything you'd like to add, feel free to do so in the comments.
+
 
 
 
