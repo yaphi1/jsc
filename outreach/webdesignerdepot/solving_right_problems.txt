@@ -3,50 +3,50 @@
 
 When web professionals solve the wrong problems
 
+If you’re a web professional, there’s a good chance you’ve found yourself spending at least some time on the wrong problems.  Maybe you were asked to implement a useless feature.  Maybe you’ve ended up spending too much time on something because it was difficult rather than important.
 
-If you're a web professional, there's a good chance you've found yourself spending at least some time on the wrong problems.  Maybe you were asked to implement a useless feature.  Maybe you've ended up spending too much time on something because it was difficult rather than important.
-
-For the purposes of this article, we'll define the wrong problems as ones whose solutions will help neither the business nor the customer while wasting time and money in the process.  We'll examine why this happens, and find specific ways to avoid it.
-
+For the purposes of this article, we’ll define the wrong problems as ones whose solutions will help neither the business nor the customer while wasting time and money in the process.  We’ll examine why this happens, and find specific ways to avoid it.
 
 
 
-Impressing the wrong people
 
-A common problem occurs when web professionals are encouraged to impress their clients, their managers, their organization, or an awards committee instead of the actual users of their sites.  The result is often a site that excites the company but confuses the customers.  A common symptom of this problem is when a site has complex visual effects, but the users have to struggle to find the basic information they're looking for.
+Issue 1: Impressing the wrong people
+
+A common problem occurs when web professionals are encouraged to impress their clients, their managers, their organization, or an awards committee instead of the actual users of their sites.  The result is often a site that excites the company but confuses the customers.  A common symptom of this problem is when a site has complex visual effects, but the users have to struggle to find the basic information they’re looking for.
 
 This problem can happen for a number of reasons including pressure, misaligned incentives, attachment to an idea, or a lack of communication.
 
-The solution is to keep the focus on the user.  Whether you're creating a site or you're paying for one, that means always asking how decisions will affect the users.  Is everything on the site clear?  Can people find what they're looking for?  Do any of your choices get in your customers' way?
+The solution is to keep the focus on the user.  Whether you’re creating a site or you’re paying for one, that means always asking how decisions will affect the users.  Is everything on the site clear?  Can people find what they’re looking for?  Do any of your choices get in your customers’ way?
 
-If you're still having trouble getting your clients or your organization to listen, make sure you're showing the business value of your comments.  For example, "If we take out that bulky file, the page will load faster, which means more people will stay on it, and profits will go up by $X."  If that doesn't work, there might be a bigger organizational problem that won't be solved with user experience questions.  Leaders can help avoid misaligned incentives by making sure to set a tone of "Don't try to dazzle me; just make our customers' lives easier."
+If you’re still having trouble getting your clients or your organization to listen, make sure you’re showing the business value of your comments.  For example, “If we take out that bulky file, the page will load faster, which means more people will stay on it, and profits will go up by $X.”  If that doesn’t work, there might be a bigger organizational problem that won’t be solved with user experience questions.  Leaders can help avoid misaligned incentives by making sure to set a tone of “Don’t try to dazzle me; just make our customers’ lives easier.”
 
 
 
-Chasing a doomed solution instead of fixing the real problem
+
+Issue 2: Chasing a doomed solution instead of fixing the real problem
 
 Sometimes, web developers will find themselves laboring over a solution that is time-consuming, expensive, or fundamentally flawed when something simple would have worked much better.
 
-For example, let's say the client asks for site search functionality.  It's easy to dive into specifics.  Where do they want the search bar?  What's the deadline?  How do they want the results page to look?  What should the url structure be?
+For example, let’s say the client asks for site search functionality.  It’s easy to dive into specifics.  Where do they want the search bar?  What’s the deadline?  How do they want the results page to look?  What should the URL structure be?
 
-The question no one asked was "Why?"
+The question no one asked was “Why?”
 
-In this totally hypothetical story, the client didn't need search at all.  They weren't a major retailer or a reference site, and the real issue was that customers couldn't find what they were looking for.
+In this totally hypothetical story, the client didn’t need search at all.  They weren’t a major retailer or a reference site, and the real issue was that customers couldn’t find what they were looking for.
 
-A few simple tweaks to the home page navigation would have solved the problem, but instead, the company ended up building a site search that ultimately didn't solve the customers' confusion.
+A few simple tweaks to the home page navigation would have solved the problem, but instead, the company ended up building a site search that ultimately didn’t solve the customers’ confusion.
 
 How do you avoid this?
 
-The best approach is to keep asking about the underlying problems instead of getting too deep into the idea of one solution.  For example, instead of diving into building a site search, ask why it is needed.  If you keep asking why, you'll eventually uncover the real problem, which will be something like "Customers can't find what they're looking for."
+The best approach is to keep asking about the underlying problems instead of getting too deep into the idea of one solution.  For example, instead of diving into building a site search, ask why it is needed.  If you keep asking why, you’ll eventually uncover the real problem, which will be something like “Customers can’t find what they’re looking for.”
 
-If everyone understands the true problems and goals, you'll end up with solutions that are less costly, less time-consuming, and more effective.
-
-
+If everyone understands the true problems and goals, you’ll end up with solutions that are less costly, less time-consuming, and more effective.
 
 
-Spending time according to difficulty instead of importance
 
-If you've been involved in a web project, you might have experienced a situation where too much time was spent on something that wasn't really important.  Difficult things can take longer, but difficulty is often not correlated with importance.
+
+Issue 3: Spending time according to difficulty instead of importance
+
+If you’ve been involved in a web project, you might have experienced a situation where too much time was spent on something that wasn’t really important.  Difficult things can take longer, but difficulty is often not correlated with importance.
 
 For example, I once saw a situation where a ton of time was almost spent on a complex, barely visible background animation that was useless at best and distracting at worst.  This animation was also going to be buried way at the bottom of the page.
 
@@ -54,55 +54,55 @@ It would have been easy to spend lots time on this footer background effect whil
 
 How do you avoid spending too much time on difficult but unimportant things?
 
-1) Before you start a website, make sure you understand its most important goals.  That understanding can help prevent you from going too deep into a section or feature that doesn't provide a significant benefit.  If you need to ask someone, do that too!
+1) Before you start a website, make sure you understand its most important goals.  That understanding can help prevent you from going too deep into a section or feature that doesn’t provide a significant benefit.  If you need to ask someone, do that too!
 
-2) If you find yourself spending too much time on something that isn't important, step back and reevaluate the priorities.  Does the company really need this feature?  Will it help the users?  Is there an acceptable shortcut that will have the same effect?  Questions like these can free up more of your time so you can work on the stuff that matters.  That's best for the business, the users, and you.
-
-
+2) If you find yourself spending too much time on something that isn’t important, step back and reevaluate the priorities.  Does the company really need this feature?  Will it help the users?  Is there an acceptable shortcut that will have the same effect?  Questions like these can free up more of your time so you can work on the stuff that matters.  That’s best for the business, the users, and you.
 
 
-Not having enough information to make the right decisions
 
-As a developer or designer, sometimes you might not hear all of the business reasons for a particular decision.  As a client or manager, you might not hear all of the technical or user experience information you need to make a judgement call.  A lack of information can lead to decisions that waste time, money, and customer attention.
+
+Issue 4: Not having enough information to make the right decisions
+
+As a developer or designer, sometimes you might not hear all of the business reasons for a particular decision.  As a client or manager, you might not hear all of the technical or user experience information you need to make a judgment call.  A lack of information can lead to decisions that waste time, money, and customer attention.
 
 One way to fix a lack of information is to be vocal (in a friendly way) when you see an issue.
 
-For example, if a certain course of action will destroy the user experience in a way that will stop people from buying, you might want to mention that.  Oftentimes, you'll find that everyone was too focused on something else to see the issue.
+For example, if a certain course of action will destroy the user experience in a way that will stop people from buying, you might want to mention that.  Oftentimes, you’ll find that everyone was too focused on something else to see the issue.
 
-If you're a client or a manager, it's good to let everyone know the business reasons for various decisions so that everyone involved can produce the best solutions.
-
-
+If you’re a client or a manager, it’s good to let everyone know the business reasons for various decisions so that everyone involved can produce the best solutions.
 
 
 
-Letting ideas mutate from person to person
 
-There's a children's game called Telephone, where everyone stands in a line.  Starting at one end, each person whispers a message to the next, with the goal of preserving the original message.  By the end, the message is often drastically different.
+Issue 5: Letting ideas mutate from person to person
 
-This scenario is funny as a game, but it's not so funny when this happens in professional communication.
+There’s a children’s game called Telephone, where everyone stands in a line.  Starting at one end, each person whispers a message to the next, with the goal of preserving the original message.  By the end, the message is often drastically different.
 
-It's all too common for a good idea to go through several layers of misunderstanding until the version that gets communicated to the key stakeholder sounds ridiculous.
+This scenario is funny as a game, but it’s not so funny when this happens in professional communication.
+
+It’s all too common for a good idea to go through several layers of misunderstanding until the version that gets communicated to the key stakeholder sounds ridiculous.
 
 Sometimes, this scenario results in an entire web project based on a misunderstood version of the original idea.
 
-To be clear, I'm not saying it's bad when ideas change.  I'm saying it's a problem when ideas change due to misunderstandings rather than intentional feedback and growth.
+To be clear, I’m not saying it’s bad when ideas change.  I’m saying it’s a problem when ideas change due to misunderstandings rather than intentional feedback and growth.
 
 Here are some suggestions for how to avoid mutating ideas:
 
 1) Distill the message into its simplest form.  Focus on the main intent, and remove as many extraneous details as possible.  People have enough to think about already.
 
-2) When necessary, communicate an idea directly to the people who need to hear it.  To be clear, this does not mean CC the whole office or alarm the CEO with every stray thought.  It simply means that if you have something important to say, don't just casually mention it to the person next to you and hope it gets around.
+2) When necessary, communicate an idea directly to the people who need to hear it.  To be clear, this does not mean CC the whole office or alarm the CEO with every stray thought.  It simply means that if you have something important to say, don’t just casually mention it to the person next to you and hope it gets around.
 
-3) Put your message in writing whenver possible.  That way, you have more time to think about it, and there's a clear record anyone can refer to if needed.
+3) Put your message in writing whenever possible.  That way, you have more time to think about it, and there’s a clear record anyone can refer to if needed.
 
 
 
 
 Conclusion
 
-Web professionals can end up solving the wrong problems for a variety of reasons, many of which are not entirely in their control.  While the suggestions in this article won't solve everything, I hope they will give you a framework for approaching the things you work on.  As long as you focus on the user, avoid being misled by surface solutions, and communicate openly, you have a much better shot of solving the right problems.
+Web professionals can end up solving the wrong problems for a variety of reasons, many of which are not entirely in their control.  While the suggestions in this article won’t solve everything, I hope they will give you a framework for approaching the things you work on.  As long as you focus on the user, avoid being misled by surface solutions, and communicate openly, you have a much better shot of solving the right problems.
 
-I hope this article has been helpful, and if you have anything you'd like to add, feel free to do so in the comments.
+I hope this article has been helpful, and if you have anything you’d like to add, feel free to do so in the comments.
+
 
 
 
