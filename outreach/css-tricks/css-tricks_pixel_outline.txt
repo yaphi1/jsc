@@ -1,0 +1,53 @@
+
+tracking tags
+
+
+what they do
+
+good parts
+- can help small businesses to succeed (advertising is less expensive and better targeted)
+- can give relevant ads
+
+bad parts
+- with scripts: lots of trust to outside source (code could be anything; mention comic sans reference)
+- security risks (mention xss breach)
+- error risks
+- unnecessary or unoptimized code (comic sans example, and maybe briteverify 7000 to 36 lines example)
+- performance hit
+	- huge extra code
+	- inefficient code (every scroll for example)
+
+
+how to protect your site
+
+
+- how to spot potential risks (security, errors, and performance)
+	- doc write
+	- unnecessary globals
+	- free use of eval
+	- if their site is broken, look deeper into what they give you
+	- unexplained stuff like comic sans
+	- watch out for scroll event stuff (like the google analytics scroll thing without a debounce)
+	- code given in word doc
+	- tag not made invisible, causing page layout changes
+	- search for .com or .org or .net to see if it's bringing in any other tracking code
+	- when comfortable, run it in the console to see if it causes obvious issues or errors
+
+- how to minimize risks (security, errors, and performance)
+	- use what you need and nothing more
+	- use img when possible; otherwise iframe; script is last choice
+	- put tracking tags at end when possible so they don't block the rest of the document
+	- have a clear reason why this is going on your page
+	- don't assume code is safe just because a famous tech company name is attached to it (they mess up too; and sometimes it's not even them but a partner they work with)
+	- communicate (lots of issues come from miscommunication rather than code)
+		- lack of clarity about what's where and why
+		- use comments (requester, date, purpose) (to avoid the situation where everyone's afraid to remove something because no one knows what it does)
+		- redundant functionality because different people wanted the same thing and didn't know it was already there
+	- build in time to get rid of old tracking tags
+	- avoid depending on global variables in your own code whenever possible
+	- avoid being too closely tied to DOM
+		- if it needs to collect data, make sure the data is in a reusable format (for example have a price variable instead of depending on getting the price by looking at the text in the third column on the left)
+
+
+
+
