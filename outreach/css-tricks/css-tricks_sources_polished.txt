@@ -67,3 +67,9 @@ Screenshot attached (steelhouse tag on vans site)
 
 
 
+update:
+fingerprinting and other methods
+https://webtransparency.cs.princeton.edu/webcensus/index.html
+https://securehomes.esat.kuleuven.be/~gacar/persistent/#evercookies-results
+https://www.propublica.org/article/meet-the-online-tracking-device-that-is-virtually-impossible-to-block
+
