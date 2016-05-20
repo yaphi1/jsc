@@ -1,18 +1,26 @@
 
 tracking tags
 
+intro:
+- certain ads follow you around web
+- sometimes know your interests with alarming accuracy
+
 
 what they do
+- img tracks stuff
+- sometimes iframes or scripts that do more complex versions
+- sources
 
 good parts
 - can help small businesses to succeed (advertising is less expensive and better targeted)
 - can give relevant ads
+- make content free for users and support creators
 
 bad parts
-- with scripts: lots of trust to outside source (code could be anything; mention comic sans reference)
+- with scripts: lots of trust to outside source (code could be anything)
 - security risks (mention xss breach)
 - error risks
-- unnecessary or unoptimized code (comic sans example, and maybe briteverify 7000 to 36 lines example)
+- unnecessary or unoptimized code (comic sans example [REMOVE: could be font fingerprinting], and maybe briteverify 7000 to 36 lines example)
 - performance hit
 	- huge extra code
 	- inefficient code (every scroll for example)
@@ -26,7 +34,7 @@ how to protect your site
 	- unnecessary globals
 	- free use of eval
 	- if their site is broken, look deeper into what they give you
-	- unexplained stuff like comic sans
+	- unexplained stuff like comic sans [REMOVE]
 	- watch out for scroll event stuff (like the google analytics scroll thing without a debounce)
 	- code given in word doc
 	- tag not made invisible, causing page layout changes
