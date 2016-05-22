@@ -1,0 +1,94 @@
+
+
+
+
+
+
+You know how some ads seem to follow you around the web?
+
+There's a reason.
+
+Advertisers use code snippets called tracking tags to know which websites you visit, so they can make their ads more relevant (or creepy depending on your view).
+
+After a quick explanation of what tracking tags are, I'm going to talk about the good parts, the bad parts, and how to protect your sites and your users against the risks.
+
+
+
+Who this article is for?
+
+- People involved in creating websites, including, developers, designers, ux specialists, social marketers, business owners, coding students, and more
+
+- Anyone who uses the internet and is curious about how tracking affects their browsing experience
+
+
+
+
+What is a tracking tag and what does it do?
+
+A tracking tag is a snippet of code that lets an advertiser know which sites you go to, and what you do on those sites.
+
+That way, they can show ads relevant to you.
+
+Tracking tags have enough different names that you'd think they're on the run from the law, so don't get confused.  Some of the names include web beacons, pixels, third-party tracking code, remarketing tags, retargeting code, and others.
+
+Tracking tags come in the form of images, iframes, or scripts.  Each form has its own benefits and risks.
+
+
+
+How does a tracking tag work?
+
+An advertiser gives you the code for a 1x1 image to put on your page. When users come to your page, the image gets requested from the third party site, in the process transmitting your IP address, what page you visited, what time you visited, what browser you're using, and other information used to identify you.
+
+Sometimes, advertisers will use iframes or scripts instead of images in order to get more detailed information including registrations, purchases, shopping cart abandonment, preferences, and sometimes demographics.
+
+
+
+The good parts
+
+- ads are more interesting/relevant (not pointless or embarrassing)
+- make it possible for your favorite sites to exist
+- keeping sites free to use
+- help small businesses compete without huge budgets
+
+
+
+The bad parts
+
+- with scripts: lots of trust to outside source (code could be anything, could change or be compromised, etc)
+- security risks (xss example)
+- error risks
+- performance slowdowns
+- privacy issues
+- what if you went to a site you're not interested in and now the ads follow you around (tedious to clear cache, cookies, etc)
+
+
+
+
+How to protect your sites and your users
+
+business side (before we even get techincal)
+- nailing down the business priorities can take care of a lot of potential issues before you even have to think about the code
+- use what you need and nothing more
+- clear reason why this is going on page
+- communicate
+
+technical side (once all the business stuff is taken care of)
+- first, images when possible, then iframes; scripts last
+
+
+
+
+
+Conclusion
+
+- briefly say the good, the bad, and protection
+- describe ideal scenario to aim for in web
+- my hope: together, all make web better place for everyone
+
+
+Note to self:
+DON'T FORGET TO CREDIT FRIENDS FOR THEIR FINDINGS
+
+
+
+

@@ -1,10 +1,15 @@
 
+audience: web creators
+- people creating websites possibly wondering about remarketing or third-party ad scripts
+- 
+
+
 tracking tags
 
 intro:
 - certain ads follow you around web
 - sometimes know your interests with alarming accuracy
-
+- who should care about this article
 
 what they do
 - img tracks stuff
@@ -47,12 +52,14 @@ how to protect your site
 	- put tracking tags at end when possible so they don't block the rest of the document
 	- have a clear reason why this is going on your page
 	- don't assume code is safe just because a famous tech company name is attached to it (they mess up too; and sometimes it's not even them but a partner they work with)
+		- related point, sometimes it's not even related to the company; it might be a random plugin from someone else (Random McRandomson's google tracking plugin)
 	- communicate (lots of issues come from miscommunication rather than code)
 		- lack of clarity about what's where and why
 		- use comments (requester, date, purpose) (to avoid the situation where everyone's afraid to remove something because no one knows what it does)
 		- redundant functionality because different people wanted the same thing and didn't know it was already there
 	- build in time to get rid of old tracking tags
 	- avoid depending on global variables in your own code whenever possible
+	- use https when possible (and definitely on secure pages like logins and payments)
 	- avoid being too closely tied to DOM
 		- if it needs to collect data, make sure the data is in a reusable format (for example have a price variable instead of depending on getting the price by looking at the text in the third column on the left)
 
