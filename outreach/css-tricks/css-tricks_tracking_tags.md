@@ -12,7 +12,7 @@ After a quick explanation of what tracking tags are, I'm going to talk about the
 
 ##Who is this article for?
 
-- People involved in creating websites, including, developers, designers, ux specialists, social marketers, business owners, coding students, and more
+- People involved in creating websites, including, developers, designers, UX specialists, marketers, business owners, coding students, and more
 
 - Anyone who uses the internet and is curious about how tracking affects their browsing experience
 
@@ -146,7 +146,7 @@ In addition to the above pieces of advice, you'll want to know how to spot the r
 If the code is given to you in a Word doc or a PDF instead of a plain text file, unwanted formatting could cause errors.  For example, you might get curly "smart quotes," and those will cause issues.
 
 - **Watch out for document.write**
-If a tracking tag uses `document.write` in the code, see if you can ask for a version that doesn't use it.  It can behave unpredictably, and if you want to load the script asynchronously for a performance boost, forget it.
+If a tracking tag uses `document.write` in the code, see if you can ask for a version that doesn't use it.  It'll block your page from loading, it can behave unpredictably, and if you want to load the script asynchronously for a performance boost, forget it.
 
 - **Unnecessary global variables**
 If a tracking script has a global variable that doesn't need to be global, it could interfere with the variables on your site.
@@ -166,7 +166,7 @@ If the advertiser's own website is broken, there's a good chance their tracking 
 - **Avoid close ties to the document structure**
 Some advertisers will write highly customized code for their business clients.  If you're on the receiving end of this code, make sure it's not too closely tied to your document structure.  For example, if the advertiser wants to know the price of an item, give them a variable or a piece of data to use instead of forcing them to rely on looking at that number in the second box on the bottom left column.  Otherwise, you can't change your page without breaking stuff.
 
-- **Make sure you know which other tags getting dragged in**
+- **Make sure you know which other tags get dragged in**
 Some tracking tags bring in their own tracking tags.  To check for this, search the tracking tag's code for things like .com, .org, .net, .co, or .io.
 Additional tags are not necessarily bad, but you'll want to at least know what's being put on your site.
 
@@ -185,7 +185,7 @@ My cutting-edge friend Brent Kimmel told me about a technique known as [subresou
 
 ##Conclusion
 
-Tracking tags are a controversial subject because they're responsible for so much good and bad on the internet.
+Advertisers' tracking tags are a controversial subject because they're responsible for so much good and bad on the internet.
 
 In a lot of ways, they make the internet better by helping enable high-quality free content.  They make people's lives better through relevant ads that solve real problems.  They help small businesses compete.
 
@@ -196,5 +196,6 @@ I don't claim to have any answers for the privacy debate, but if you've read thi
 In the future, my hope is that we'll all find a middle ground where privacy is respected, ads are helpful, great content is available, businesses can compete fairly, and site owners don't need to worry about bad tags.
 
 Then the web will be a better place for everyone.
+
 
 
