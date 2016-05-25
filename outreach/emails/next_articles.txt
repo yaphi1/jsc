@@ -24,7 +24,9 @@ do)
 
 - "not a code person" (maybe use this in next sales funnel)
 
-- tutorials can be misleading about the path of process
+- the copy-paste approach: seems like a shortcut; actually wastes hours/days, so it's better to learn underlying js (use in sales)
+
+- tutorials can be misleading about the path of process [written, not sent]
 
 - how to get hired at facebook according to people at facebook
 https://www.quora.com/How-can-I-become-a-frontend-developer-for-Facebook/answer/Josh-Duck?srid=un3yW

@@ -1,0 +1,41 @@
+
+Web dev tutorials are so misleading!
+
+
+
+
+So I write tutorials.
+
+How can I say they're misleading?
+
+I'll tell you how in a second, but first, here'a quick tutorial I wrote on how to create a simple JavaScript slideshow.
+
+Feel free to give it a thumbs-up if you like it.
+
+Now for the interesting and misleading part...
+
+Coding tutorials often don't actually reflect the process of coding.
+
+When you see a tutorial on the web, it'll be presented in a neat way.  The HTML, CSS, and JavaScript will be presented in clean, shiny form, as if they just sprang into existence in neat steps.
+
+Yes, you should be keeping your code as neat and clean as possible while coding, but the actual process looks less like a neat series of steps and more like a whole lot of testing small pieces, seeing how they look, adding a bit more, and repeating.
+
+If tutorials reflected this, they would be unreadable.  They'd say things like "Check the border width.  Set it to 2 pixels, no 5, no actually 2 looks better.  Hmm what about 3? Ok 3's fine.  Now let's check if this toggle works when you click it..."
+
+So why am I telling you this?
+
+It's because a lot of people look at tutorials and get discouraged.  They'll see something and think, oh that was such a simple linear process for them, but when I try to do it, I have to do a whole bunch of trial-and-error in small steps.
+
+The person who wrote the tutorial most likely did a lot of trial-and-error with small pieces too.  That's because it makes sense as a process.
+
+Most of the time, you don't want to produce big swaths of code at once.  If you're building and testing small pieces at a time, you're far less likely to make errors, and the process will ultimately go a lot faster.
+
+Then you can clean it up and make it look effortless.
+
+Maybe the most interesting part of this is that it applies elsewhere in life too.  It's so easy to look at someone else's results and get discouraged instead of seeing that their process was a lot less neat than it might have seemed.
+
+Just something to think about. :)
+
+
+
+
