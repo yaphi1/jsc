@@ -9,6 +9,8 @@ next articles (some for emails and some for guest posts)
 (most of the time it takes to do something is the time spent not doing it)
 (action step: do something this week)
 
+- learning canvas: use glow pong example of learning in one weekend and how most of the time it took was the time spent not doing it
+
 - putting off the things that matter most to you in favor of small daily distractions (harness the power of distractions to do something you actually want to 
 do)
 
@@ -35,8 +37,11 @@ https://www.quora.com/How-can-I-become-a-frontend-developer-for-Facebook/answer/
 
 - thing great developers have in common (or really people who get good at anything): the people who are great at things are the ones who are okay with being bad at things (they don't immediately freeze up or shut down; they're okay with being bad and getting better)
 
+- css specificity wars
 
+- perils of third-party code (maybe use as part of sales launch)
 
+- stack-overflow-driven development and the copy-pasters (could use as part of launch)
 
 helpful list of places to pitch:
 https://pjrvs.com/about/

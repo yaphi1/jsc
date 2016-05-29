@@ -1,0 +1,45 @@
+next steps
+
+
+
+current:
+- constructor functions
+- specificity email
+
+
+
+upcoming:
+
+update course
+
+Improve Your JavaScript:
+- constructor functions
+- prototypes and inheritance
+- mention codewars as next step
+
+intermediate js:
+- event object
+- iifes
+- event listeners
+- cookies
+- map
+- sort
+- reduce
+- event delegation
+
+intermediate-advanced js:
+- closures
+- recursion
+- high performance animations
+
+email at least once per week
+next up:
+- css specificity wars
+- learning canvas and time it took vs procrastination
+
+
+update sales page
+- testimonials
+- new course length and content
+- get critique
+

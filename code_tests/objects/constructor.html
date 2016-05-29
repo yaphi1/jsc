@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+body{
+	margin: 0px;
+	font-size:20px;
+	font-family:sans-serif;
+	color:#333;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="output"></div>
+
+<script>
+
+var output = document.getElementById('output');
+
+function Car(color, speed){
+	this.color = color;
+	this.topSpeed = speed;
+	
+	/*
+	this.showCarInfo = function(){
+		console.log('Color: ' + this.color);
+		console.log('Top Speed: '+ this.topSpeed);
+	};
+	*/
+}
+
+Car.prototype.showCarInfo = function(){
+	console.log('Color: ' + this.color);
+	console.log('Top Speed: '+ this.topSpeed);
+};
+
+var myCar = new Car('red', 200);
+var yourCar = new Car('blue', 150);
+var otherCar = new Car('green', 180);
+var yetAnotherCar = new Car('gold', 240);
+
+// show your car (notice showCarInfo isn't there)
+				console.log('yourCar:');
+				console.log(yourCar);
+
+				// try using showCarInfo anyway
+				console.log('here is the car info:');
+				yourCar.showCarInfo();
+
+
+</script>
+</body>
+</html>

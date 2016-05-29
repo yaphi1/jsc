@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>25_5 - codewars</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+
+
+
+		<h1>Take Your JavaScript to the Next Level</h1>
+
+
+		<p>In order to improve your JavaScript really fast, it helps to have a fun way to practice.</p>
+
+		<p>Personally, I like the <a href="http://www.codewars.com/" target="_blank">free practice problems on Codewars</a>, because they helped me improve a lot while enjoying myself immensely.</p>
+
+		<p>But there's a catch.</p>
+
+		<p>In order to get past the entry challenge, you'll need to know about <b>constructor functions</b> and <b>prototypes</b>.</p>
+
+		<p>This section will teach you about those, so that you can get into Codewars and get better at JavaScript fast.</p>
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>What is a constructor function and why does it matter?</h2>
+
+			<p>In JavaScript, a <b>constructor</b> is a function that creates an object based on a sort of template.</p>
+
+			<p>Why would that be used?</p>
+
+			<p>First, forget about constructors for a second.  Let's say we want to make a couple of regular car objects.</p>
+
+			<p>Here's how that would look...</p>
+
+			<p><strong>Without constructors (DON'T TYPE THIS ONE):</strong></p>
+
+			<pre><code>
+				var myCar = {
+					color: 'red',
+					topSpeed: 180,
+					showCarInfo : function(){
+						console.log('Color: ' + this.color);
+						console.log('Top Speed: '+ this.topSpeed);
+					}
+				};
+
+				var yourCar = {
+					color: 'blue',
+					topSpeed: 200,
+					showCarInfo : function(){
+						console.log('Color: ' + this.color);
+						console.log('Top Speed: '+ this.topSpeed);
+					}
+				};
+
+				var otherCar = {
+					color: 'green',
+					topSpeed: 150,
+					showCarInfo : function(){
+						console.log('Color: ' + this.color);
+						console.log('Top Speed: '+ this.topSpeed);
+					}
+				};
+
+				var yetAnotherCar = {
+					color: 'gold',
+					topSpeed: 240,
+					showCarInfo : function(){
+						console.log('Color: ' + this.color);
+						console.log('Top Speed: '+ this.topSpeed);
+					}
+				};
+			</code></pre>
+
+			<p>So repetitive!</p>
+			<p>Can you imagine if we wanted to add more cars?  This would quickly turn into a mess.</p>
+
+			<p>A <b>constructor</b> lets you create an object according to a sort of template or blueprint, so you won't need to keep rewriting the same properties over and over.</p>
+
+			<p>Here's how that would look...</p>
+
+			<p><strong>With constructors (YES, TYPE THIS ONE):</strong></p>
+
+
+			<pre><code>
+				// this constructor function creates a car object
+				function Car(color, speed){
+					this.color = color;
+					this.topSpeed = speed;
+					
+					this.showCarInfo = function(){
+						console.log('Color: ' + this.color);
+						console.log('Top Speed: '+ this.topSpeed);
+					};
+				}
+
+				// now you can create as many cars as you want
+				var myCar = new Car('red', 180);
+				var yourCar = new Car('blue', 200);
+				var otherCar = new Car('green', 150);
+				var yetAnotherCar = new Car('gold', 240);
+
+				// feel free to test out your objects!
+				console.log("Your Car's Color: " + yourCar.color);
+				myCar.showCarInfo();
+				console.log("Other Car's Top Speed: " + otherCar.topSpeed);
+			</code></pre>
+
+			<p>Things to notice:</p>
+			<ul>
+				<li>In JavaScript, people will capitlize the first letter of a JavaScript <b>constructor</b> function.  It'll still work lowercase, but people use uppercase so that anyone reading it knows it's a constructor.</li>
+				<li>The <b>new</b> keyword creates a new object based on your constructor function.</li>
+				<li>Each new car object has the properties you specified in the constructor.</li>
+			</ul>
+
+			<p>Is it starting to make sense?</p>
+
+			<p>Play around a bit more to get comfortable with constructors.</p>
+
+
+		</div>
+
+
+
+		
+
+
+		<div class="section">
+			<h2>What is a prototype and what does it do?</h2>
+
+			<p>In JavaScript, objects can inherit properties from other objects.</p>
+
+			<p>A <b>prototype</b> is a hidden object that sits in the background and allows other objects to inherit its properties.</p>
+
+			<p>All JavaScript objects have a <b>prototype</b>.</p>
+
+			<p>It's okay if this sounds a bit confusing.</p>
+
+			<p>Try this example to clear things up:</p>
+
+			<pre><code>
+				// your basic car constructor function
+				function Car(color, speed){
+					this.color = color;
+					this.topSpeed = speed;
+				}
+
+				// add the showCarInfo function to Car's prototype object
+				// this means all the cars will get access to showCarInfo
+				Car.prototype.showCarInfo = function(){
+					console.log('Color: ' + this.color);
+					console.log('Top Speed: '+ this.topSpeed);
+				};
+
+				// create a bunch of cars
+				var myCar = new Car('red', 200);
+				var yourCar = new Car('blue', 150);
+				var otherCar = new Car('green', 180);
+				var yetAnotherCar = new Car('gold', 240);
+
+				// show your car (notice showCarInfo isn't there)
+				console.log('yourCar:');
+				console.log(yourCar);
+
+				// try using showCarInfo anyway
+				console.log('here is the car info:');
+				yourCar.showCarInfo();
+			</code></pre>
+
+			<p>What?</p>
+
+			<p><code>showCarInfo()</code> wasn't in the <code>yourCar</code> object, so how were we able to use it?</p>
+
+			<p>Here's how:</p>
+
+			<p>We changed the Car's <b>prototype</b> object so that all the cars would automatically get access to <code>showCarInfo</code>.</p>
+
+			<p><strong>Editing Car's prototype has these advantages:</strong></p>
+			<ul>
+				<li>
+					<strong>Convenient updates</strong>
+					<br>You can update the prototype any time and all the cars will get the updates.
+				</li>
+				<li>
+					<strong>Less clutter</strong>
+					<br>All of the cars are referencing one prototype object, so the same showCarInfo function isn't cluttering every single car object.
+				</li>
+				<li>
+					<strong>Saves space</strong>
+					<br>It's better for memory when you're storing a function in one prototype object instead of putting it in every single car object.
+				</li>
+			</ul>
+
+			
+			<div class="special_section terminology">
+				<h3>The prototype chain</h3>
+				<p>When you call an object's property (a car's color for example), first your browser will check if that property is inside the object.</p>
+				<p>If it doesn't find the property there in the object, then it'll check the prototype.</p>
+
+				<p>Then it checks the prototype's prototype.  It keeps going until it finds nothing left.</p>
+
+				<p>For example, you might have three kinds of object: Animal, Dog, and Poodle.  Poodle inherits properties from Dog, which inherits properties from Animal.</p>
+
+				<p>This series of objects in which one inherits from the next is called the <b>prototype chain</b>.</p>
+				
+				<p>For the sake of maintainability, you don't want to go too many levels deep.</p>
+
+				<p>Also, there's no need to worry a whole lot about the prototype chain at the moment.  I just want you to see the term at least once.</p>
+			</div>
+
+
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+			<ol>
+				<li>
+					<p><strong>Social network profiles - Part 1</strong></p>
+					<p>Create a constructor function called <code>User</code>.</p>
+					<p>Each new User object should have the following properties: <code>name</code>, <code>city</code>, and <code>hobby</code>.</p>
+					<p>Use your constructor function to create at least three new users.</p>
+				</li>
+
+				<li>
+					<p><strong>Social network profiles - Part 2</strong></p>
+					<p>Start with your code from the previous question.</p>
+					<p>Update User's prototype so that all the user objects can access a method called <code>showProfile</code>. (Remember a method is just a function that belongs to an object.</p>
+					<p>The function should show a given user's profile neatly in a div.</p>
+				</li>
+
+				<li>
+					<p><strong>Off to Codewars!</strong></p>
+					<p>Now that you have enough info to get past the entry barrier, <a href="http://www.codewars.com/" target="_blank">try out some practice problems on Codewars</a>.</p>
+				</li>
+
+			</ol>
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<p>Congrats on getting through this section.</p>
+
+			<p>At this point, you have plenty of stuff to keep you busy.</p>
+
+			<ul>
+				<li>Practice on Codewars.</li>
+
+				<li>Work on your portfolio.</li>
+
+				<li>Refer to the previous section on getting in contact with developers.</li>
+
+				<li>Bonus: Feel free to let me know how you've improved.</li>
+			</ul>
+
+		</div>
+
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
