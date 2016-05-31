@@ -8,7 +8,7 @@ So I write tutorials.
 
 How can I say they're misleading?
 
-I'll tell you how in a second, but first, here'a quick tutorial I wrote on how to create a simple JavaScript slideshow.
+I'll tell you how in a second, but first, here's a quick tutorial I wrote on how to create a simple JavaScript slideshow.
 
 Feel free to give it a thumbs-up if you like it.
 
