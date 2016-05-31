@@ -1,6 +1,98 @@
 
-how to compete with wp-jockeys
+When fakers win
 
+
+Have you ever seen a really strong faker?
+
+They don't have your skills, they don't have your knowledge, and they don't have your experience, and yet somehow they keep winning at everything.
+
+They fake their way to create things that look flashy, and everyone falls for it.
+
+But is that the whole story?  Is it really fair to dismiss these people as "fakers"?
+
+A reader emailed me asking how to deal with a similar scenario:
+
+- He knows the details of how to code because he has spent a lot of time improving his craft.
+- His friends have no idea how to code.
+- They grab WordPress themes and produce beautiful websites, so they get clients and money while he does not.
+- How can he compete with that?
+
+First, instead of dismissing the competition as "fakers" (my word, not the reader's, by the way), examine what they did.
+
+Regardless of knowledge or skills, they produced a solution that made the client happy, and they got paid for it.
+
+That's admirable.  It requires an intelligent approach to finding clients and understanding their needs.
+
+So what should the reader do?
+
+
+There are two parts to this answer:
+1. The advantages you get from knowing code
+2. How you position yourself so clients and employers can clearly see the advantages of working with you
+
+
+
+Why it's better for you if you know code
+- More control over your pages
+- Better page speed and performance
+- Less dependence on random plugins (this is better for security, speed, and customization)
+- Less time getting stuck, and therefore everything goes faster
+- More opportunities to get paid better (whether corporate or freelance)
+
+All of this is great, but it won't matter if you can't show why it helps your clients and employers.
+
+
+
+So why does it matter to your clients or employers?
+
+What you can do only matters in terms of what you can give them.
+
+A lot of times, your clients goals will fall into these categories:
+- More revenue
+- Lower expenses
+- Less risk
+
+Any time you can explain how your services help achieve these goals, you'll become more valuable than the competition.
+
+For example, fast loading pages get more people to stay, which often translates to direct revenue.
+Reference: https://blog.kissmetrics.com/loading-time/
+
+Less dependence on random plugins means you'll get a faster site, and you're less likely to get hacked.  People won't think their site would get hacked, but then it happens and they have embarrassing stuff on their home page.  This is bad for revenue, trust, search reputation, and sometimes legal standing.
+
+Being able to code means more flexibility, so your clients and employers will have more freedom in what they can accomplish.
+
+A better understanding of code means you can move faster.  That means time will be saved, and that's good for everyone.
+
+
+
+How to frame your work (for clients or for employers):
+
+- Whenever you do something, always focus on how it helps them.  Instead of focusing on your cool features, focus on their bottom line.
+- Ask about your clients' problems and how much they'd make by solving them (and what it costs to not solve them).
+- Once you find out their real goals, be an advisor. If they request a pointless feature, ask how it gets closer to the goal. If it doesn't get closer to the goal, advise against it. You'll be respected more for doing that because now you're not just a tool doing what they want; instead you are seen as a trusted expert.  The higher value perception means you can get better rates for whatever you do.
+
+The advice in this email will help you whether you're doing the freelance road or the corporate road.
+
+However, if you're doing freelancing, some of my favorite material can be found here:
+https://doubleyourfreelancing.com/category/pricing/
+
+I'm pointing you to that link because trust matters to me, and I'd rather give you the best material I can find, even if it's not mine.
+
+Hopefully this helps!
+
+Best,
+
+Yaphi
+Simple Steps Code
+
+
+
+
+
+
+
+
+notes:
 
 people who don't know any code can grab a wordpress theme and produce a beautiful website with a few clicks, yet they get money and clients while questioner does not
 
