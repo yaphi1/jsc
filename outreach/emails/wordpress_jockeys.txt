@@ -1,0 +1,27 @@
+
+how to compete with wp-jockeys
+
+
+people who don't know any code can grab a wordpress theme and produce a beautiful website with a few clicks, yet they get money and clients while questioner does not
+
+
+better to learn underlying code for these reasons:
+- more control
+- better performance
+- less plugin dependence: security, speed, control;
+- no more getting stuck (stuff happens much faster because you don't have to spend a ton of time stuck)
+- more opportunities to get paid better (corporate or freelance)
+
+
+companies only care about their results, not the details of your coding expertise (unless framed in a way that affects their results)
+- focus on them
+- what they want: get more money, more customers, etc
+
+
+how to frame your work (for clients or for jobs)
+- focus on business value
+- ask about their problems and how much they'd make by solving them (and what it costs to not solve them)
+- once you find out their real goals, be an advisor; if they request a pointless feature, ask how it gets closer to the goal; advise against it if it doesn't get closer to goal; you'll be respected more for doing that because now you're not just a servant doing what they want; you are seen as a trusted expert instead
+
+
+

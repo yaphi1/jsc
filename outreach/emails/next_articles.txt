@@ -11,6 +11,8 @@ next articles (some for emails and some for guest posts)
 
 - learning canvas: use glow pong example of learning in one weekend and how most of the time it took was the time spent not doing it
 
+- UI anti-pattern: follow that scrolling thingy down the page
+
 - putting off the things that matter most to you in favor of small daily distractions (harness the power of distractions to do something you actually want to 
 do)
 

@@ -3,21 +3,16 @@ next steps
 
 
 current:
-- constructor functions
-- specificity email
-
+- canvas email
+- harness power of distractions
+- wordpress jockeys email
 
 
 upcoming:
 
 update course
 
-Improve Your JavaScript:
-- constructor functions
-- prototypes and inheritance
-- mention codewars as next step
-
-intermediate js:
+useful things in js:
 - event object
 - iifes
 - event listeners
