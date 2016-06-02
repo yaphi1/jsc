@@ -3,9 +3,9 @@ next steps
 
 
 current:
+- pay attention to what you paste (addthis example where I get everyone's data)
 - canvas email
 - harness power of distractions
-- wordpress jockeys email
 
 
 upcoming:
