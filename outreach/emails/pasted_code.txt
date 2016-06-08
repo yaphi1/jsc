@@ -1,0 +1,33 @@
+
+
+A fun little disaster with pasted code
+
+
+
+I accidentally set a trap for a bunch of people.
+
+One day, I thought I'd post a helpful piece of code on a social sharing widget site's forum.
+
+In the description, I warned people to change part of the code from my username to theirs.
+
+I should have known better than to include my username at all.
+
+People just copied and pasted the whole thing onto their sites, and to this day, I still get their social sharing analytics.
+
+I tried to contact everyone, but it was too late.  They had no contact info available, so I was stuck.
+
+
+Two key takeaways from this experience:
+
+1. When putting anything on the web, don't assume the user will behave exactly as you hope.
+
+2. Before copying and pasting code, please try to make sure you know what it does.
+
+
+I hope you enjoyed this!
+
+Best,
+
+Yaphi
+Simple Steps Code
+

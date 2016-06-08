@@ -1,0 +1,41 @@
+
+
+dissection of what's happening in the code of tracking tags and some of the scary side effects
+(mention lots of trust given when third party script is used)
+
+
+
+exposing credit card info
+
+
+overwrite your variables
+- particularly bad example: using two variables to create one random number
+
+
+bogging down scrolling
+
+
+close ties to dom: setting you up for errors if you ever change your layout
+
+
+creating unnecessary risks by using eval
+
+
+preventing async and blocking your page (document.write)
+
+
+changing your layout (adding gaps to bottom or top of page)
+- comcast/xfinity bottom gap
+
+
+bringing in other scripts
+
+
+font signature thingy (and maybe canvas fingerprinting)
+
+
+slow-loading pages
+- use examples of BI and FC with lots of time loading those scripts
+
+
+

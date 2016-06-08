@@ -1,0 +1,85 @@
+
+
+You know those tracking scripts that make certain ads follow you around the web?
+
+We're going to dig into the code and take an objective look at some of the side effects of those scripts.
+
+
+
+
+Exposing credit card info
+
+Many tracking scripts have been found not to sanitize data properly.  This allows attackers to inject any code they want, including code that can steal credit card numbers.
+
+Here's a screenshot of malicious code getting injected into an unsanitized url:
+
+[screenshot and credit to source of info]
+
+
+
+Overwriting your variables
+
+Certain popular tracking scripts use unnecessary global variables that can break your sites.
+
+The following screenshot shows a script using two global variables to generate one random number (even doing an unnecessary type conversion in the process).
+
+[doubleclick script screenshot]
+
+
+
+Creating unnecessary risks by using eval
+
+Since eval will run anything, it's a prime target for attackers.  Here's an example of a tracking script with a function that uses eval on any arbitrary JavaScript.  Interestingly enough, the function is actually called runArbitraryJS.
+
+[screenshot of arbitrary js eval]
+
+
+
+Setting you up for errors by tying functionality too closely to the DOM
+
+The following example shows a tracking script whose functionality depends on specific DOM elements.  A slight change to the site's layout can break this code.
+
+[screenshot of tightly coupled functionality with specific dom elements]
+
+
+
+Changing your layout
+
+Some tracking scripts insert 1x1 pixel images at the bottom or top of your page, which can create a gap above your header or below your footer.
+
+The following screenshot shows a tracking tag creating a gap at the bottom of the Comcast/Xfinity site.
+
+[screenshot of comcast layout change]
+
+
+
+Bogging down scrolling
+
+Some advertisers' tracking scripts perform operations on the scroll event.  Here's a screenshot of a script running a loop on every scroll.
+
+[screenshot]
+
+While this example alone won't take down a site, it can cause a noticable slowdown when multiple scripts are hammering the scroll event.
+
+
+
+Preventing async and blocking your page
+
+Certain tracking scripts still use document.write, which prevents them from being loaded in the background.  With enough scripts, this can destroy performance.
+
+[screenshot of document.write in major ad network code]
+
+
+
+Slowing down page load
+
+
+
+
+
+Bringing in other tracking scripts
+- multiply potential for all problems above
+- making debugging trickier
+
+
+
