@@ -1,0 +1,41 @@
+
+
+
+http://senglehardt.com/papers/www15_cookie_surveil.pdf
+
+page 2 col 2: plaintext transmission of data and possibility for surveillance (42% of sites present unique identifiers in clear text)
+- preferences, history, purchase history, address, full name, email, location, etc
+
+page 3 col 2: NSA
+
+
+
+
+
+
+
+
+http://wws.princeton.edu/faculty-research/research/item/cookies-give-you-away-surveillance-implications-web-tracking
+
+"We study the ability of a passive eavesdropper to leverage “third-party” HTTP tracking cookies for mass surveillance. If two web pages embed the same tracker which tags the browser with a unique cookie, then the adversary can link visits to those pages from the same user (i.e., browser instance) even if the user’s IP address varies. Further, many popular websites leak a logged-in user’s identity to an eavesdropper in unencrypted traffic."
+
+"the adversary can reconstruct 62—73% of a typical user’s browsing history"
+
+"Finally, we find that some browser-based privacy tools mitigate the attack while others are largely ineffective."
+
+
+
+
+
+
+
+canvas fingerprinting:
+
+https://securehomes.esat.kuleuven.be/~gacar/persistent/
+
+https://www.eff.org/deeplinks/2014/07/white-house-website-includes-unique-non-cookie-tracker-despite-privacy-policy
+
+https://s7.addthis.com/static/r07/core143.js
+
+http://static.yieldmo.com/ym.adv.min.js
+
