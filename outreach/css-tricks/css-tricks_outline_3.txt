@@ -1,0 +1,30 @@
+Title: Things To Know (and The Potential Dangers of) Third-Party Scripts
+
+- QUICK intro
+  - What is a third-party script
+    - <script> JavaScript
+  - Reasons why sites put third-party scripts on their sites
+    - ads, analytics, retargeting, etc.
+
+- A third-party script might be a privacy concern
+  - They can report back data that you weren't aware of
+  - Embarrassing? 
+  - Data/example
+  - Talk about "tracking", but careful to be specific. 
+    - Retargetting is tracking, but it's kinda "known" tracking. Weird/creepy sometimes, but not the mysterious secret kind most people talk about.
+    - There may be tracking going on we don't even know about. Evidence? Concerns?
+
+- A third-party script might be a security concern
+  - Data/example
+  - https
+  - subresource integreity
+
+- A third-party script might be a performance concern
+  - Data/example
+  - document.write
+  - scrolling
+
+- A third party script might have unintended consequences
+  - global vars
+  - eval
+  - layout shifting

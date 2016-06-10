@@ -39,3 +39,57 @@ https://s7.addthis.com/static/r07/core143.js
 
 http://static.yieldmo.com/ym.adv.min.js
 
+
+
+
+
+
+
+
+
+
+credit card data siphon with google analytics
+
+https://www.trustwave.com/Resources/SpiderLabs-Blog/Card-Data-Siphon-with-Google-Analytics/
+
+
+
+
+
+
+
+
+https://www.safervpn.com/blog/tracking-cookies/
+
+"There’s a big risk if your cookies are sent over the web as clear text without any encryption. Keep in mind that anything personal could be saved into cookies, for example your SSN, credit card details, e-mail address and more. This means that if the cookies aren’t sent over HTTPS, they’re readable by anyone on the network. Any hacker connected to the same network can then use a sniffing tool (a software that intercepts all traffic on a network) and steal all your sensitive data."
+
+
+
+
+
+
+
+
+local storage, ip address, opt-out cookies
+
+https://developer.mozilla.org/en-US/docs/Web/Security/Do_not_track_field_guide/Introduction/Background
+
+
+Some advertisers have moved away from HTTP cookies, using other forms of local storage like LSOs (Flash cookies,) Silverlight, or HTML5. Other advertisers are using techniques like browser fingerprinting or typing patterns to uniquely identify users without using local storage. IP address is a quasi-stable identifier, and on all but new versions of Windows, IPv6 includes MAC addresses (hardware-based permanent unique identifiers) as part of the user’s IP address by default. Most modern mobile devices have unique identifiers. This means that even users who set opt-out cookies, delete other cookies, and read privacy policies may still not have transparency or control over their data privacy. With technologies that do not rely on local storage, users are particularly unlikely to know what data is being collected about them, by whom, or how it is being used.
+
+
+
+
+
+
+
+
+
+wikipedia on cookies, device fingerprinting, canvas fingerprinting:
+
+https://en.wikipedia.org/wiki/HTTP_cookie
+https://en.wikipedia.org/wiki/Device_fingerprint
+https://en.wikipedia.org/wiki/Canvas_fingerprinting
+
+
+
