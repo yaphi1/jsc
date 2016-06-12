@@ -1,0 +1,166 @@
+
+
+
+The web is full of third-party scripts that track your behavior, your preferences, and other information.
+
+Some of the reasons sites use third-party scripts include ads, analytics, and retargeting.
+
+Here, we're going to look at the potential risks of these scripts.
+
+
+
+
+##A third-party script might be a privacy concern
+
+First off, third-party scripts can report back data that you weren't aware of.
+
+According to documentation from Google [link], Facebook [link], and Wikipedia [link], these scripts can track behavior, sites visited, purchase history, demographics, IP address, location, and more.
+
+[screenshot of code sample or maybe documentation showing parameters facebook tracks]
+
+One possible side effect is when you get ads from sites you clicked on by mistake or sites someone else viewed on the same internet connection. [maybe remove this sentence entirely]
+
+This sort of ad retargeting is generally known, but there may be tracking we don't know about.
+
+For example, according to a Princeton faculty-research study [link], 42% of the top sites present unique identifiers in plain text.  That means eavesdroppers can track things like your email, full name, home address, purchases, location, history, and preferences.  In fact, that same study discussed how the NSA piggybacked on some of Google's scripts to track people.
+
+Here's a screenshot of an advertiser's official implementation guide that explicitly gives people code to transmit email addresses to them as unencrypted plain text.
+
+[screenshot of implementation guide]
+
+
+
+
+
+
+##A third-party script might be a security concern
+
+Any time you include someone else's external script on your page, there's an inherent security risk because that script has backdoor access to your site.  Here are some examples of what these scripts have done.
+
+
+###Unsanitized data
+
+Security researcher Randy Westergren discovered that many major tracking scripts don't sanitize data properly [link] (thanks to my colleague Sam Ratcliffe for bringing this to my attention).  This allows attackers to inject any code they want, including code that can steal credit card numbers.
+
+Here's a screenshot of malicious code getting injected into an unsanitized url:
+
+[screenshot and credit to source of info]
+
+Many of the advertisers have since fixed the vulnerability, but that leaves open the question of what other exploits are still out there.
+
+
+###Non-https scripts
+
+Many tracking scripts in the wild use regular http.  This can let attackers grab people's information, and it can cause security warnings that can scare away users on secure pages.
+
+Here's an example of an implementation guide that uses http on a secure cart page.
+
+[code example]
+
+
+###Code can change without you knowing
+
+With third-party scripts, there's always the danger that the code can change or disappear without you knowing it.
+
+My colleague Brent Kimmel told me about a techique called subresource integrity [link], which essentially lets you make sure what you get is what you expect.  At the time of this writing, it hasn't gained full browser support yet, but keep your eyes open for it.
+Also keep in mind that this technique doesn't help as much if the unchanged script was flawed in the first place.
+
+
+###Third-party scripts often load other third-party scripts of their own
+
+When the third-party scripts you trust bring in scripts you don't expect, this multiplies the potential for all of the security and privacy risks mentioned thus far.
+
+Here's an example of a third-party script loading other scripts:
+
+[screenshot]
+
+
+
+
+
+
+##A third-party script might be a performance concern
+
+
+###Slower page loads
+
+Third-party scripts frequently cause pages to load slower.  For example, here's a screenshot from Business Insider showing that their actual site loads in about 1 second while third-party scripts account for the majority of the remaining 9 seconds of load time.
+
+[screenshot of page load speed test graph]
+
+To their credit, Business Insider appears to load most of their third-party scripts in the background, so the perceived loading time doesn't take nearly as long as 10 seconds.
+
+What happens when third-party scripts don't let you load them in the background?
+
+
+###Some scripts don't let themselves load in the background
+
+When a script uses document.write, that prevents it from being loaded asynchronously.  A lot of common third-party scripts use document.write, so they block the document and extend page load times unnecessarily.
+
+Here's an example:
+
+[screenshot of doubleclick using doc write]
+
+
+###Some scripts affect scrolling performance
+
+Third-party scripts often perform operations on the scroll event.  Here's a screenshot of a script running a loop on every scroll.
+
+[screenshot]
+
+While this example alone won't take down a site, it can cause a noticable slowdown when multiple scripts are hammering the scroll event.
+
+
+
+
+
+
+
+
+##A third-party script might have unintended consequences
+
+Third-party scripts can do all sorts of unexpected things to your pages.  Here are a few.
+
+
+###Overwriting your variables
+
+Some of the most widely used third-party scripts on the web use unnecessary global variables which can overwrite the variables on your site.
+
+The following screenshot shows a script using two global variables to generate one random number (even using an unnecessary type conversion and an invalid url parameter in the process).
+
+[doubleclick script screenshot]
+
+
+###Creating unnecessary risks by using eval
+
+Since eval will run anything, it's a prime target for attackers.  Here's an example of a tracking script with a function that uses eval on any arbitrary JavaScript.  Interestingly enough, the function is actually called runArbitraryJS.
+
+[screenshot of arbitrary js eval]
+
+While eval doesn't necessarily destroy everything in all cases, it does pose risks, so it at least warrants a second look when you see it.
+
+
+###Changing your layout
+
+Some tracking scripts insert 1x1 pixel images at the bottom or top of your page, which can create a gap above your header or below your footer.
+
+The following screenshot shows a tracking tag creating a gap at the bottom of the Comcast/Xfinity site.
+
+[screenshot of comcast layout change]
+
+
+###Setting you up for errors by tying functionality too closely to the DOM
+
+The following example shows a tracking script whose functionality depends on specific DOM elements.  A slight change to the site's layout can break this code.
+
+[screenshot of tightly coupled functionality with specific dom elements]
+
+
+
+
+##Final recap
+
+Third-party scripts provide powerful functionality, but they also bring risks to privacy, security, performance, and page behavior.
+
+Now that you've seen some of the risks of third-party scripts, you'll be better prepared to protect your sites and your users.
+

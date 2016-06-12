@@ -12,7 +12,7 @@ Title: Things To Know (and The Potential Dangers of) Third-Party Scripts
   - Data/example
     - fb: behavior, sites visited, demographics, ip address, purchase history, location, etc
   - Talk about "tracking", but careful to be specific. 
-    - Retargetting is tracking, but it's kinda "known" tracking. Weird/creepy sometimes, but not the mysterious secret kind most people talk about.
+    - Retargeting is tracking, but it's kinda "known" tracking. Weird/creepy sometimes, but not the mysterious secret kind most people talk about.
       - device fingerprinting
         - canvas fingerprinting, font fingerprinting, browser fingerprinting, etc
 
