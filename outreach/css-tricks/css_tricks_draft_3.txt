@@ -22,7 +22,7 @@ One possible side effect is when you get ads from sites you clicked on by mistak
 
 This sort of ad retargeting is generally known, but there may be tracking we don't know about.
 
-For example, according to a Princeton faculty-research study [link], 42% of the top sites present unique identifiers in plain text.  That means eavesdroppers can track things like your email, full name, home address, purchases, location, history, and preferences.  In fact, that same study discussed how the NSA piggybacked on some of Google's scripts to track people.
+For example, according to a Princeton faculty-research study [link], 42% of the top sites (Alexa top 50 U.S.) present unique identifiers in plain text.  That means eavesdroppers can track things like your email, username, full name, home address, purchases, location, history, and preferences.  In fact, that same study discussed how the NSA piggybacked on some of Google's scripts to track people.
 
 Here's a screenshot of an advertiser's official implementation guide that explicitly gives people code to transmit email addresses to them as unencrypted plain text.
 
@@ -108,7 +108,7 @@ Third-party scripts often perform operations on the scroll event.  Here's a scre
 
 [screenshot]
 
-While this example alone won't take down a site, it can cause a noticable slowdown when multiple scripts are hammering the scroll event.
+While this example alone won't take down a site, it can contribute to a noticable slowdown when multiple scripts are hammering the scroll event.
 
 
 
