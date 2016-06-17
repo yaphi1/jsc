@@ -3,6 +3,8 @@ next articles (some for emails and some for guest posts)
 
 (in no particular order)
 
+- simple naming trick for clearer code: when naming, do you have to explain the name?
+
 - putting something off? don't blame yourself. that trains your mind to come up with excuses to deflect the blame.  when you try to do something, your mind automatically jumps to reasons you can't do it
 
 - advice to friends about portfolio; over a year later, they hadn't started
@@ -12,6 +14,8 @@ next articles (some for emails and some for guest posts)
 - learning canvas: use glow pong example of learning in one weekend and how most of the time it took was the time spent not doing it
 
 - UI anti-pattern: follow that scrolling thingy down the page
+
+- space jam "special stuff" was just water all along; everyone is looking for a magic shortcut (use example of workout question), but the biggest shortcut is to actually get started
 
 - putting off the things that matter most to you in favor of small daily distractions (harness the power of distractions to do something you actually want to 
 do)
