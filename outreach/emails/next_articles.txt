@@ -10,6 +10,7 @@ next articles (some for emails and some for guest posts)
 - advice to friends about portfolio; over a year later, they hadn't started
 (most of the time it takes to do something is the time spent not doing it)
 (action step: do something this week)
+(by signing up for list, readers have already proven that they take steps to learn)
 
 - learning canvas: use glow pong example of learning in one weekend and how most of the time it took was the time spent not doing it
 
@@ -34,7 +35,7 @@ do)
 
 - the copy-paste approach: seems like a shortcut; actually wastes hours/days, so it's better to learn underlying js (use in sales)
 
-- tutorials can be misleading about the path of process [written, not sent]
+- tutorials can be misleading about the path of process [sent]
 
 - how to get hired at facebook according to people at facebook
 https://www.quora.com/How-can-I-become-a-frontend-developer-for-Facebook/answer/Josh-Duck?srid=un3yW

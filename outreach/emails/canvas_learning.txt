@@ -1,0 +1,45 @@
+
+subject:
+
+Something in web development took me an embarrassingly long time...
+
+
+
+
+
+message:
+
+
+A while ago, I saw people creating really cool graphical effects with the canvas element.
+
+I decided I wanted to learn to do that too.
+
+It took me a staggering two years to learn the basics of canvas even though I was already comfortable with HTML, CSS, and JavaScript.
+
+Why?
+
+Simple.  Most of that time, I didn't actually take a single step to even try.
+
+After two years, I decided to start learning it, and it took one weekend.
+
+That's it.
+
+After all that time of not doing anything, one weekend of effort was all it took.
+
+By the end of that weekend, it wasn't just the basics I had learned; I had built a fully functioning game of glowing space pong.
+
+That experience reinforced a point I had seen in a lot of situations:
+Most of the time it takes to do something is the time spent not actually doing it.
+
+Obviously this isn't true in all cases, but it's a good reminder that helps put things in perspective, especially when there's something you want to do but haven't done yet.
+
+Anyways, I hope this email is helpful!
+
+Best,
+
+Yaphi
+Simple Steps Code
+
+
+
+

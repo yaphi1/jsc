@@ -1,11 +1,11 @@
-
+# Things to Know (and Potential Dangers) with Third-Party Scripts
 
 
 The web is full of third-party scripts that track your behavior, your preferences, and other information.
 
-Some of the reasons sites use third-party scripts include ads, analytics, and retargeting.
+Sites use these scripts for ads, analytics, retargeting, and more, but this isn't always the whole story.
 
-Here, we're going to look at the potential risks of these scripts.
+Here, we're going to look at the potential risks of these third-party scripts.
 
 
 
@@ -14,42 +14,40 @@ Here, we're going to look at the potential risks of these scripts.
 
 First off, third-party scripts can report back data that you weren't aware of.
 
-According to documentation from Google [link], Facebook [link], and Wikipedia [link], these scripts can track behavior, sites visited, purchase history, demographics, IP address, location, and more.
+According to documentation from [Google](https://support.google.com/adwords/answer/2453998?hl=en), [Facebook](https://www.facebook.com/business/help/952192354843755), and [Wikipedia](https://en.wikipedia.org/wiki/Web_beacon), these scripts can track behavior, sites visited, purchase history, demographics, IP address, location, and more, but that part is generally known.
 
 [screenshot of code sample or maybe documentation showing parameters facebook tracks]
 
-One possible side effect is when you get ads from sites you clicked on by mistake or sites someone else viewed on the same internet connection. [maybe remove this sentence entirely]
+While standard third-party tracking is generally documented, there may be tracking we don't know about.
 
-This sort of ad retargeting is generally known, but there may be tracking we don't know about.
+For example, according to [a study](http://senglehardt.com/papers/www15_cookie_surveil.pdf) by researchers at Princeton and Stanford, 42% of the top sites (Alexa top 50 U.S.) present unique identifiers in plain text.  That means eavesdroppers can track things like your email, username, full name, home address, purchases, location, history, IP address, and preferences.  Just by clicking around the web, you can unknowingly allow someone to build up a huge profile of information about you.  In fact, that same [study](http://senglehardt.com/papers/www15_cookie_surveil.pdf) discussed how the NSA piggybacked on some of Google's scripts to track people.
 
-For example, according to a Princeton faculty-research study [link], 42% of the top sites (Alexa top 50 U.S.) present unique identifiers in plain text.  That means eavesdroppers can track things like your email, username, full name, home address, purchases, location, history, and preferences.  In fact, that same study discussed how the NSA piggybacked on some of Google's scripts to track people.
+Here's a screenshot of an advertiser's official implementation guide that explicitly gives people code to transmit email addresses to them as unencrypted plain text.  They encrypt each address after receiving it, but it still gets sent as plain text, so the damage is done.
 
-Here's a screenshot of an advertiser's official implementation guide that explicitly gives people code to transmit email addresses to them as unencrypted plain text.
-
-[screenshot of implementation guide]
-
-
+[screenshot of implementation guide with unencrypted email code]
 
 
 
 
 ##A third-party script might be a security concern
 
-Any time you include someone else's external script on your page, there's an inherent security risk because that script has backdoor access to your site.  Here are some examples of what these scripts have done.
+Any time you include someone else's external script on your page, there's an inherent security risk because that script has backdoor access to your site.
+
+Here are some examples of what these scripts have done.
 
 
-###Unsanitized data
+###Leaking credit card info through unsanitized data
 
-Security researcher Randy Westergren discovered that many major tracking scripts don't sanitize data properly [link] (thanks to my colleague Sam Ratcliffe for bringing this to my attention).  This allows attackers to inject any code they want, including code that can steal credit card numbers.
+Security researcher Randy Westergren discovered that many major tracking scripts [don't sanitize data properly](https://randywestergren.com/widespread-xss-vulnerabilities-ad-network-code-affecting-top-tier-publishers-retailers/) (thanks to my colleague Sam Ratcliffe for bringing this article to my attention).  This allows attackers to inject any code they want, including code that can steal credit card numbers.
 
 Here's a screenshot of malicious code getting injected into an unsanitized url:
 
-[screenshot and credit to source of info]
+[screenshot of script injection]
 
 Many of the advertisers have since fixed the vulnerability, but that leaves open the question of what other exploits are still out there.
 
 
-###Non-https scripts
+### Exposing private data with non-https scripts
 
 Many tracking scripts in the wild use regular http.  This can let attackers grab people's information, and it can cause security warnings that can scare away users on secure pages.
 
@@ -62,8 +60,9 @@ Here's an example of an implementation guide that uses http on a secure cart pag
 
 With third-party scripts, there's always the danger that the code can change or disappear without you knowing it.
 
-My colleague Brent Kimmel told me about a techique called subresource integrity [link], which essentially lets you make sure what you get is what you expect.  At the time of this writing, it hasn't gained full browser support yet, but keep your eyes open for it.
-Also keep in mind that this technique doesn't help as much if the unchanged script was flawed in the first place.
+My colleague Brent Kimmel told me about a technique called [subresource integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity), which essentially lets you make sure what you get is what you expect.  At the time of this writing, it hasn't gained full browser support yet, but keep your eyes open for it.
+
+Also keep in mind that this technique works best when the original third-party script isn't flawed in the first place.
 
 
 ###Third-party scripts often load other third-party scripts of their own
@@ -162,5 +161,6 @@ The following example shows a tracking script whose functionality depends on spe
 
 Third-party scripts provide powerful functionality, but they also bring risks to privacy, security, performance, and page behavior.
 
-Now that you've seen some of the risks of third-party scripts, you'll be better prepared to protect your sites and your users.
+Now that you've seen some of the risks of third-party scripts, you'll hopefully have an idea of what to expect when you encounter them.
+
 

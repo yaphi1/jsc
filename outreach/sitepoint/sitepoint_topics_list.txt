@@ -1,0 +1,72 @@
+
+
+
+
+personal ideas:
+- why people struggle to learn javascript
+- quick tricks that will make your javascript better if you're starting out
+- fun with javascript text to speech engine (chrome)
+- common things with regex
+- [already exists on sitepoint] quick tip: how to verify an email with javascript regex
+- quick tip: verify form field (phone for example) with regex
+
+
+
+
+So far I really like the following ideas (from their list):
+- Useful things you didn't know you could do with JS
+- Neat things you can do with jQuery
+- Reasons you don't need jQuery (with and without ES6)
+	- common tasks:
+		- animations
+		- ajax
+		- applying actions to all of a class
+- Fun with regular expressions
+
+
+
+
+
+
+full list:
+
+Re. a new topic, what about writing something on how ES6 means that you can really, really drop jQuery.
+In the past we've had things like youmightnotneedjquery.com, but then-a-days ES6 wasn't really a thing.
+
+How about something focusing on ten(?) things you really really don't need jQuery for in modern browsers.
+
+
+Sure thing. Here's a selection of topics that we'd like covered in no particular order:
+
+    5 Things you didn't know you could do with jquery (e.g. jQuery’s `css()` adds prefixes for you after v1.8.0, you can replace `function() {}` with `$.noop`)
+    You probably _really_ don't need jQuery (https://twitter.com/malyw/status/727868059411746816)
+    10 things you didn't know about JS (source)
+    Vue.js 2.0
+    Fun with Regular Expressions. For example, how to replace the last occurrence of a pattern (source)
+    Create add ons for MS office usingJS/HTML/CSS (mentioned here)
+    Serverless frameworks (https://github.com/serverless/serverless)
+    Scala.js
+    Dev tooling for popular frameworks e.g. React, Ember, Angular.
+    How to implement file uploads in AngularJS (quick tip?)
+    Stress Testing your Web Application
+    Server side rendering with Relay
+    Getting started with Relay
+    Queue Jobs with Kue (https://github.com/Automattic/kue)
+    How to wrap external JavaScript libraries in AngularJS (or React for that matter)
+    Up and running with ESLint
+    Using the Angular 2 CLI (quick tip?)
+
+We're also really looking for Node.js content. For example:
+
+    Back to Basics: Writing Node Apps
+    Cover some basics of how Node works - what is different from JS in the browser? How do you create/run Node apps, and what are some best practices/guidelines to follow when starting out.
+    Deploying / managing Node apps (esp. Nodal)
+        https://github.com/dthree/vantage
+        https://www.youtube.com/watch?v=IxBXkFbUqtk
+        https://github.com/claudiajs/claudia
+    Security in Node apps - how to secure a Node-based web app
+    Writing better quality Node.js applications - tips, tricks, best practises (advanced version of point 1)
+    ES6 with Node (Node v6 - supports 93% of ES6 features)
+    Debugging a Node.js application
+    Scaling a Node.js application
+    Frodo: A Rails-like app generator for Node/Express (https://github.com/leemalmac/frodo)
