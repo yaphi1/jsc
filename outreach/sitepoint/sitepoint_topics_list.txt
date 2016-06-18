@@ -5,26 +5,32 @@
 personal ideas:
 - why people struggle to learn javascript
 - quick tricks that will make your javascript better if you're starting out
+	- using && to check for existence before using (window.requestAnimationFrame && requestAnimationFrame() || setTimeout())
+	- match with capturing groups
+	- map and reduce
 - fun with javascript text to speech engine (chrome)
 - common things with regex
 - [already exists on sitepoint] quick tip: how to verify an email with javascript regex
 - quick tip: verify form field (phone for example) with regex
-
+- javascript animations without jquery
+- [already exists] recursive setTimeout
+- [already exists] how to use requestAnimationFrame
 
 
 
 So far I really like the following ideas (from their list):
 - Useful things you didn't know you could do with JS
 - Neat things you can do with jQuery
-- Reasons you don't need jQuery (with and without ES6)
+- [exists] Reasons you don't need jQuery (with and without ES6)
 	- common tasks:
 		- animations
 		- ajax
 		- applying actions to all of a class
+		- exists: https://www.sitepoint.com/jquery-vs-raw-javascript-2-css3-animation/
 - Fun with regular expressions
-
-
-
+- quick tip: "javascript add class without jquery" (remove class too)
+- quick tip: how to loop through a javascript object
+- quick tip: get url parameters with js (there's one on jquery but not one here)
 
 
 
