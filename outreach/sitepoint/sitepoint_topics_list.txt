@@ -28,7 +28,7 @@ So far I really like the following ideas (from their list):
 		- applying actions to all of a class
 		- exists: https://www.sitepoint.com/jquery-vs-raw-javascript-2-css3-animation/
 - Fun with regular expressions
-- quick tip: "javascript add class without jquery" (remove class too)
+- quick tip: "javascript add class without jquery" (remove class too) (exists here: https://www.sitepoint.com/jquery-vs-raw-javascript-2-css3-animation/)
 - quick tip: how to loop through a javascript object
 - quick tip: get url parameters with js (there's one on jquery but not one here)
 
