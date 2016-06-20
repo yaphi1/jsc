@@ -1,0 +1,37 @@
+Hi *|FNAME|*,
+
+"A good programmer is someone who always looks both ways before crossing a one-way street." - Doug Linder
+
+I first saw this quote on Codrops, and I thought I'd share it here because it's a great reminder to avoid assuming too much about how your web pages' users will behave.
+
+When you're creating websites, it's so easy to get caught up in what you want the user to do and forget what they'll actually do.
+
+For example, a client once wanted to use audio on a mobile page.  I suggested it might create a bad user experience because people often use their mobile phones in public, and they don't want surprise audio blaring from their phone.  The client replied that people would probably be at home in their living room when looking at this page anyway.
+
+That was incredible.  The client was so invested in putting audio on that page that they were willing to invent a world in which people never use their mobile phones outside their home.
+
+The point here is not to disparage the client.  This sort of thing happens to all of us.  It's so easy to so get attached to an idea that you lose sight of the people using it.
+
+The most direct cure is to get feedback from other people.  Let them use your site and see what they do without your input.
+
+If you don't have an immediate way to get feedback, then at least ask yourself these two questions:
+
+1. What do I want the user to do?
+2. How might the user deviate from that?
+
+In the case of the client who wanted users to listen to mobile audio at home, these questions could have helped spot the problems immediately:
+
+1. What do I want the user to do? [Use their phone at home so they can listen to the audio.]
+
+2. How might the user deviate from that? [They could use their phone absolutely anywhere else.]
+
+All that's required for the client's assumption to be proven false is for users to use their phones when they're not home.
+
+Takeaway point:
+
+Seek the truth instead of seeking what you want to be true.
+
+Best,
+
+Yaphi
+Simple Steps Code
