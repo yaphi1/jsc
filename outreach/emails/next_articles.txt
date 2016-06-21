@@ -3,6 +3,14 @@ next articles (some for emails and some for guest posts)
 
 (in no particular order)
 
+
+- making responsive a pain
+	- too many media queries
+	- overly complex media queries (unnecessary portrait vs landscape instead of just width for example) (won't see when resizing browser)
+	- lack of fluidity
+	- stacking relative sizes on top of each other
+	- needless query sandwiches and gaps instead of progressive enhancement
+
 - simple naming trick for clearer code: when naming, do you have to explain the name?
 
 - putting something off? don't blame yourself. that trains your mind to come up with excuses to deflect the blame.  when you try to do something, your mind automatically jumps to reasons you can't do it
