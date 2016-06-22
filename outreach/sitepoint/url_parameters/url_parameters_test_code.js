@@ -4,8 +4,38 @@
 function getUrlParameter(param){
 	var pattern = new RegExp('[?&]'+param+'((=([^&]+))|(?=(&|$)))','i');
 	var m = window.location.search.match(pattern);
-	return m && (typeof(m[3])==='undefined' ? true : decodeURIComponent(m[3]));
+	return m && ( typeof(m[3])==='undefined' ? true : decodeURIComponent(m[3]) );
 }
+
+
+
+// longer, more readable (?) version
+function getUrlParameter(param){
+	var pattern = new RegExp('[?&]'+param+'((=([^&]+))|(?=(&|$)))','i');
+	var match = window.location.search.match(pattern);
+
+	if(match) {
+		var parameterValue = match[3];
+		if(typeof(parameterValue)==='undefined') {
+			return true;
+		}
+		else{
+			return decodeURIComponent(parameterValue);
+		}
+	}
+	else {
+		return null;
+	}
+}
+
+
+
+// sitepoint code width reference:
+var isVisible = el.offsetWidth && var isVisible = el.offsetWidth && 
+
+
+
+
 
 // usage:
 getUrlParameter('testparam');
