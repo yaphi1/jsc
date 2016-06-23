@@ -50,13 +50,19 @@ getUrlParameter('testparam');
 
 // this one returns an object
 function getAllUrlParameters(){
-	var arr = window.location.search.substr(1).split('&');
-	var obj = {};
-	for(var i=0; i<arr.length; i++){
-		var a = arr[i].split('=');
-		obj[a[0]] = typeof(a[1])==='undefined' ? true : a[1];
+	var s = window.location.search;
+	if(s) {
+		var arr = s.substr(1).split('&');
+		var obj = {};
+		for(var i=0; i<arr.length; i++) {
+			var a = arr[i].split('=');
+			obj[a[0]] = typeof(a[1])==='undefined' ? true : a[1];
+		}
+		return obj;
 	}
-	return obj;
+	else {
+		return {};
+	}
 }
 
 // usage:
