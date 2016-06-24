@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+
+.standard{
+	background: #eee;
+}
+
+.red{
+	background: red;
+}
+
+.blue{
+	background: blue;
+}
+
+.highlight{
+	background: gold;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="iddiv">ID div</div>
+
+<div class="classdiv">Class div</div>
+<div class="classdiv">Class div</div>
+<div class="classdiv">Class div</div>
+<div class="classdiv">Class div</div>
+<div class="classdiv">Class div</div>
+
+<button>Add Class</button>
+<button>Remove Class</button>
+
+<script>
+
+var output = document.getElementById('mydiv');
+
+function addClass(selector,name){
+	var elements = document.querySelectorAll(selector);
+	for(var i=0; i<elements.length; i++){
+		if(!(' '+elements[i].className+' ').indexOf(' '+name+' ') > -1){
+			elements[i].className += ' ' + name;
+		}
+	}
+}
+
+function removeClass(selector,name){
+	var elements = document.querySelectorAll(selector);
+	for(var i=0; i<elements.length; i++){
+		var reg = new RegExp('(^| )'+name+'($| )','ig');
+		elements[i].className = elements[i].className.replace(reg,' ');
+	}
+}
+
+
+
+/*
+usage examples:
+
+addClass('#iddiv','highlight');
+addClass('.classdiv','highlight');
+removeClass('.classdiv','highlight');
+*/
+
+
+</script>
+</body>
+</html>
