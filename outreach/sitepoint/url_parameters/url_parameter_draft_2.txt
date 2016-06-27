@@ -1,0 +1,80 @@
+
+
+intro:
+
+what this is for and what this is not:
+
+	- getting info from query string; getting part of url after question mark, but not including hash part (link to definition of query string and explanation of url parameters)
+
+	- example of why one would get url parameters
+
+	- nothing built in jQuery, so you'd have to either use plain JS or a plugin or library
+
+
+
+quick pure js solution (along with usage examples)
+
+how it works
+	- what is a valid query string
+	- line by line of code
+	- how it handles special cases
+
+- edge cases
+	- duplicate query keys: there's no spec on this (http://stackoverflow.com/questions/1746507/authoritative-position-of-duplicate-http-get-query-keys)
+	- semicolons? do those get used
+	- &amp; does that get used?
+	- multiple &s in a row
+	- multiple question marks?
+	- no equals sign
+	- key and equals sign only
+	- non-standard characters
+	- badly formed urls (then that's the url's problem)
+
+
+version that gets all params and spits out an object
+
+existing libraries and solutions; benefits and drawbacks
+	- tradeoff: extra code, but extra functionality
+	- maybe mention libraries, and briefly what they do for url parsing, but then say it's beyond the scope of this article
+
+
+
+
+
+sources and links:
+
+
+uri recommendations (cmd+f "query strings"):
+	https://www.w3.org/Addressing/URL/4_URI_Recommentations.html
+	- no common syntax or semantics
+
+nice list of edge cases:
+	http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+
+https://url.spec.whatwg.org/#application/x-www-form-urlencoded
+	- query string format is monstrosity (for encoding form data in name value pairs)
+
+query string content type (see 2.):
+	https://www.w3.org/TR/REC-html40/interact/forms.html#form-content-type
+
+
+https://www.w3.org/TR/1999/REC-html401-19991224/appendix/notes.html#h-B.2.2
+	- & &amp; and semicolon
+
+wikipedia query string
+	https://en.wikipedia.org/wiki/Query_string#Structure
+
+
+jquery url plugin:
+https://plugins.jquery.com/url/
+	note: handles arrays, doesn't handle semicolons
+	- https://websanova.com/plugins/url
+
+
+
+jim's recommended library URL:
+	http://medialize.github.io/URI.js/
+	- on github: https://github.com/medialize/URI.js
+		note: has list of other url libraries too
+
+

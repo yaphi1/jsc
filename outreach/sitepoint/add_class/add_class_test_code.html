@@ -77,7 +77,6 @@ function removeClass(elements, myClass){
 
 
 
-
 /*
 usage examples:
 
@@ -99,6 +98,56 @@ removeClass('.classdiv','highlight');
 
 
 
+
+
+
+
+
+
+
+
+// commented versions
+
+
+function addClass(elements, myClass){
+	// if there are no elements, do nothing
+	if(!elements) return;
+
+	// if we have a selector, get the chosen elements
+	if(typeof(elements)==='string'){
+		elements = document.querySelectorAll(elements);
+	}
+
+	// if we have only one dom element, make it an array to simplify behavior
+	else if(!elements.length){ elements=[elements]; }
+	
+	// add class to all chosen elements
+	for(var i=0; i<elements.length; i++){
+		if(!(' '+elements[i].className+' ').indexOf(' '+myClass+' ') > -1){
+			elements[i].className += ' ' + myClass;
+		}
+	}
+}
+
+
+function removeClass(elements, myClass){
+	// if there are no elements, do nothing
+	if(!elements) return;
+
+	// if we have a selector, get the chosen elements
+	if(typeof(elements)==='string'){
+		elements = document.querySelectorAll(elements);
+	}
+	
+	// if we have only one dom element, make it an array to simplify behavior
+	else if(!elements.length){ elements=[elements]; }
+	
+	// remove class from all chosen elements
+	for(var i=0; i<elements.length; i++){
+		var reg = new RegExp('(^| )'+myClass+'($| )','ig');
+		elements[i].className = elements[i].className.replace(reg,' ');
+	}
+}
 
 
 
