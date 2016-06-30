@@ -29,6 +29,9 @@ how it works
 	- key and equals sign only
 	- non-standard characters
 	- badly formed urls (then that's the url's problem)
+	- double decoding url components (don't do it)
+	- inconsistent separators (for example &amp;b;c;d)
+	- array values in thingies
 
 
 version that gets all params and spits out an object

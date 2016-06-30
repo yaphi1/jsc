@@ -1,5 +1,98 @@
 
 
+
+
+// one function
+function getUrlParameter(param, url){
+	var query;
+	if(url){
+		query = url.split('?')[1];
+		if(query){
+			query = query.split('#')[0];
+		}
+	}
+	else{
+		query = window.location.search.substr(1);
+	}
+	if(!query){
+		return null;
+	}
+	query = query.replace(/&amp;|;/gi,'&');
+
+	var pattern = new RegExp('[?&]'+param+'((=([^&]+))|(?=(&|$)))','i');
+	var m = query.match(pattern);
+	return m && ( typeof(m[3])==='undefined' ? '' : m[3] );
+}
+
+
+
+
+
+// 2 functions
+function getCleanUrlQuery(url){
+	var query;
+	if(url){
+		query = url.split('?')[1];
+		if(query){
+			query = query.split('#')[0];
+		}
+	}
+	else{
+		query = window.location.search.substr(1);
+	}
+	return query && query.replace(/&amp;|;/gi,'&');
+}
+
+function getUrlParameter(param, url){
+	var query = getCleanUrlQuery(url);
+	if(!query){ return null; }
+
+	var pattern = new RegExp('[?&]'+param+'((=([^&]+))|(?=(&|$)))','i');
+	var m = query.match(pattern);
+	return m && ( typeof(m[3])==='undefined' ? '' : m[3] );
+}
+
+
+
+
+
+
+
+
+
+// regex test code
+var a = 'whatevz&amp;abc&amp;gold';
+a.split(/&amp;|;|&/i);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// old versions
+
+
+
+
 // more robust than most on internet since this one also handles params without equals signs
 function getUrlParameter(param){
 	var pattern = new RegExp('[?&]'+param+'((=([^&]+))|(?=(&|$)))','i');
