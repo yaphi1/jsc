@@ -4,6 +4,12 @@ next articles (some for emails and some for guest posts)
 (in no particular order)
 
 
+
+- how to avoid the marketing tactical vortex
+	- examples of focusing on everything and getting no results
+	- one startup incubator - bad sign: when they have a logo and buzzwords but no real prototype
+	- latching onto shiny technology as a substitute for thinking
+
 - making responsive a pain
 	- too many media queries
 	- overly complex media queries (unnecessary portrait vs landscape instead of just width for example) (won't see when resizing browser)
