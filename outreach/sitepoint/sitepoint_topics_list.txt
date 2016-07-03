@@ -15,7 +15,7 @@ personal ideas:
 - javascript animations without jquery
 - [already exists] recursive setTimeout
 - [already exists] how to use requestAnimationFrame
-- how to make a quiz in JavaScript
+- how to make a quiz in JavaScript (also useful for other things like product pricing estimates)
 - how to get unstuck when learning javascript
 
 

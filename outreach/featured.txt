@@ -15,5 +15,9 @@ http://lifehacker.com/learn-to-code-faster-by-treating-new-concepts-like-gett-17
 
 https://twitter.com/dreamhost/status/648920206069248000
 
+https://webplatformdaily.org/releases/2016-06-23
+WebdesignerDepot article on solving wrong problems
 
+http://javascriptweekly.com/issues/286
+Sitepoint slideshow tutorial
 

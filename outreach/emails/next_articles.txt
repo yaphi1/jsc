@@ -4,6 +4,7 @@ next articles (some for emails and some for guest posts)
 (in no particular order)
 
 
+- ux problems with slideshows
 
 - how to get unstuck when learning javascript
 	- (first assume google and stackoverflow haven't worked)
