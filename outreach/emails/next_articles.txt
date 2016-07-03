@@ -5,6 +5,19 @@ next articles (some for emails and some for guest posts)
 
 
 
+- how to get unstuck when learning javascript
+	- (first assume google and stackoverflow haven't worked)
+	- two types of code problems: technical or behavioral
+	- technical - syntax or compatibility
+		- linters (maybe console instead because linters can be weird sometimes) (http://jshint.com/ is nice though)
+		- caniuse
+	- behavior - code doesn't do what you expect
+		- write in plain language what to do
+		- break those steps into smaller steps (until they're much simpler)
+		- write code for each tiny step, and see if it works
+		- keep doing this until the whole thing is ready
+
+
 - how to avoid the marketing tactical vortex
 	- examples of focusing on everything and getting no results
 	- one startup incubator - bad sign: when they have a logo and buzzwords but no real prototype

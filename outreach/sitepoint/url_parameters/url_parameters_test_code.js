@@ -2,6 +2,58 @@
 
 
 
+
+
+
+
+// latest simplified versions
+function getUrlParameter(param){
+	var pattern = new RegExp('[?&]'+param+'((=([^&]*))|(?=[&$]))','i');
+	var m = window.location.search.match(pattern);
+	return m && ( typeof(m[3])==='undefined' ? '' : m[3] );
+}
+
+
+/*
+http://example.com/?a=1&b=adsf&c=&d&whatever&abc=1
+*/
+
+
+function getAllUrlParameters(){
+	var s = window.location.search;
+	if(s) {
+		var arr = s.substr(1).split('&');
+		var obj = {};
+		for(var i=0; i<arr.length; i++) {
+			var a = arr[i].split('=');
+			obj[a[0]] = typeof(a[1])==='undefined' ? '' : a[1];
+		}
+		return obj;
+	}
+	else {
+		return {};
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // one function
 function getUrlParameter(param, url){
 	var query;
@@ -28,17 +80,59 @@ function getUrlParameter(param, url){
 
 
 
-// 2 functions
+
+
+
+
+
+
+
+
+// 2 functions updated (acutally just less readable)
+function getCleanUrlQuery(url){
+	var query;
+	if(url){
+		query = url.match(/\?[^#]+/i)[0];
+	}
+	else{
+		query = window.location.search;
+	}
+	return query && query.replace(/&amp;|;/gi,'&');
+}
+
+function getUrlParameter(param, url){
+	var query = getCleanUrlQuery(url);
+	if(!query){ return null; }
+
+	var pattern = new RegExp('[?&]'+param+'((=([^&]+))|(?=(&|$)))','i');
+	var m = query.match(pattern);
+	return m && ( typeof(m[3])==='undefined' ? '' : m[3] );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 2 functions previous
 function getCleanUrlQuery(url){
 	var query;
 	if(url){
 		query = url.split('?')[1];
 		if(query){
-			query = query.split('#')[0];
+			query = '?' + query.split('#')[0];
 		}
 	}
 	else{
-		query = window.location.search.substr(1);
+		query = window.location.search;
 	}
 	return query && query.replace(/&amp;|;/gi,'&');
 }

@@ -1,121 +1,353 @@
 
+So you want to get a parameter from a URL?
 
-intro:
+Good choice.  URL parameters (sometimes called URL variables) can have lots of useful data including:
 
-what this is for and what this is not:
+- Product information
+- Settings or preferences
+- The original source of a link referral
+- Records of user actions during a session on your page
 
-	- getting info from query string; getting part of url after question mark, but not including hash part (link to definition of query string and explanation of url parameters)
+Here's how this article will be arranged:
 
-	- example of why one would get url parameters
+- Get a URL Parameter (good for most common use cases)
+- Get All URL Parameters as a Neat Data Object
+- Edge Cases to Know About
+- Handling URLs Outside the Address Bar
+- Libraries to Do More with URLs
 
-	- nothing built in jQuery, so you'd have to either use plain JS or a plugin or library
-
-
-
-quick pure js solution (along with usage examples)
-
-how it works
-	- what is a valid query string
-	- line by line of code
-	- how it handles special cases
-
-- edge cases
-	- duplicate query keys: there's no spec on this (http://stackoverflow.com/questions/1746507/authoritative-position-of-duplicate-http-get-query-keys)
-	- semicolons? do those get used
-	- &amp; does that get used?
-	- multiple &s in a row
-	- multiple question marks?
-	- no equals sign
-	- key and equals sign only
-	- non-standard characters
-	- badly formed urls (then that's the url's problem)
-	- double decoding url components (don't do it)
-	- inconsistent separators (for example &amp;b;c;d)
-	- array values in thingies
-
-
-version that gets all params and spits out an object
-
-existing libraries and solutions; benefits and drawbacks
-	- tradeoff: extra code, but extra functionality
-	- maybe mention libraries, and briefly what they do for url parsing, but then say it's beyond the scope of this article
+Let's get started!
 
 
 
 
+##Get a URL Parameter
+
+Let's say you have the following url:
+
+```html
+http://example.com/?product=shirt&color=blue&newuser&size=m
+```
+
+Here's a function to give you the URL parameter:
+
+```javascript
+function getUrlParameter(param){
+	var pattern = new RegExp('[?&]'+param+'((=([^&]*))|(?=[&$]))','i');
+	var m = window.location.search.match(pattern);
+	return m && ( typeof(m[3])==='undefined' ? '' : m[3] );
+}
+```
+
+You'll see how this works soon, but first, here are some usage examples:
+
+```javascript
+getUrlParameter('product'); // 'shirt'
+getUrlParameter('color'); // 'blue'
+getUrlParameter('newuser'); // ''
+getUrlParameter('size'); // 'm'
+getUrlParameter('nonexistent'); // null
+```
+
+Things to know before using this function:
+
+- Our function assumes the parameters are separated by the `&` character.  This appears to be the most standard format as mentioned in the [W3C specifications](https://www.w3.org/TR/REC-html40/interact/forms.html#form-content-type) and used on major sites such as Google, Facebook, and Amazon.  However, the URL parameter format in general is [not clearly defined](https://url.spec.whatwg.org/#application/x-www-form-urlencoded), so you occasionally might see `;` or `&amp;` as [separators](https://www.w3.org/TR/1999/REC-html401-19991224/appendix/notes.html#h-B.2.2).
+
+- Our function still works if a parameter doesn't have an equals sign or if it has an equals sign but no value.
+
+If you just wanted a function you could drop into your code, you're done now.  If you'd like to understand how the function works, read on.
+
+The following section assumes basic familiarity with JavaScript, so I've written [a quick guide to help you get up to speed](https://simplestepscode.com/learn-javascript/) in case you need it.
+
+
+###Here's how the function works:
+
+On a high level, the function finds the URL parameter we're looking for based on a pattern match.  Let's look at it line-by-line.
+
+First, we're going to tell our program what pattern to look for in order to find a parameter.  We'll do that with the following [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions):
+
+```javascript
+var pattern = new RegExp('[?&]'+param+'((=([^&]*))|(?=[&$]))','i');
+```
+
+Let's break this into smaller pieces to see what's going on.
+
+1. `'[?&]'` - When we see a `?` or an `&` that means we're at the beginning of a parameter, so look for that first.
+
+2. `param` - This variable is the parameter we're looking for ('product' or 'color' for example).
+
+3. `'((=([^&]*))|(?=[&$]))'` - This looks crazy at first, but notice that this pipe character `|` means "or."  That means we're looking for the first blob of stuff or the second.  We can break this up into two parts to understand it better.
+- Part A: `(=([^&]*))` - Look for an equals sign followed by zero or more characters that are anything except `&`.
+- Part B: `(?=[&$])` - Alternatively, see if the parameter is followed by `&` or the end of the string (denoted by `$`).
+- Taken together, Part A and Part B basically say, "Either look for a value (Part A), or look for the end of the parameter (Part B)."
+
+4. `,'i'` - The `i` means case-insensitive, so uppercase or lowercase will be fine.
+
+If that was a bit tricky, don't worry.  The best way to get comfortable with regular expressions is to try them out yourself.  Here are my favorite tools and references:
+
+- A regular expression [testing tool](https://regex101.com/#javascript) where you can immediately see and play with the results
+- A [quick reference](http://www.w3schools.com/jsref/jsref_obj_regexp.asp) when you want to look up a property fast
+- A [detailed reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) for when you want to read in more depth
+
+Now that we have our regular expression pattern, we need to find it in our URL.
+
+Instead of looking at the whole URL, we only want to look at the query string (the part after the `?` and before the `#` if there is one).
+
+JavaScript's `window.location.search` gives us the query string.
+
+We can find our pattern like this:
+
+```javascript
+var m = window.location.search.match(pattern);
+```
+
+Right now, our regular expression is set up to find the first occurrence of our pattern instead of all occurrences.  That's because we didn't include a `g` next to the `i` that made it case-insensitive.
+
+This is good because it changes how `match` behaves.  If the regular expression is set up to find all occurrences, then match gives you an array of all matches of the pattern.
+
+However, if the regular expression is set up to find only the first occurrence, then `match` will give us an array where the first item is our pattern, and the subsequent items are the things in each set of parentheses.  These things in parentheses are called capturing groups, and they're recorded in order of appearance.
+
+To make it easier to see, let's look at what `match` gives us for various examples.
+
+As a reminder, here's the sample url we're looking at:
+
+```html
+http://example.com/?product=shirt&color=blue&newuser&size=m
+```
+
+Values of match depending on which parameter we're looking for:
+
+```javascript
+// When param='product', match gives us the following:
+["?product=shirt", "=shirt", "=shirt", "shirt"]
+
+// param = 'blue'
+["&color=blue", "=blue", "=blue", "blue"]
+
+// param = 'newuser'
+[ "&newuser", "", undefined, undefined ]
+
+// param = 'nonexistent'
+null
+```
+
+Notice that the value of the parameter is captured in the fourth slot (position 3) in the array.
+
+We'll use that info in our next line of code:
+
+```javascript
+return m && ( typeof(m[3])==='undefined' ? '' : m[3] );
+```
+
+The first part, `m &&` is shorthand that says "First check if m is considered true and then..."
+
+In our case, m will count as true if it found a match.  Otherwise, it'll just return `null`, and our function is done.
+
+If we've found a match, we'll go onto the next part:
+
+```javascript
+( typeof(m[3])==='undefined' ? '' : m[3] )
+```
+
+First, remember that the value was at the fourth slot (position 3) of the array when we ran our `match`.  That means `m[3]` is the value of the parameter ('blue' for example).
+
+The code above is shorthand that says, if `m[3]` is undefined, set it to an empty string to show that the parameter is there but it just doesn't have a value.  If m[3] has a value, then just return m[3], which is the value of our parameter.
+
+If your URL has any encoded special characters like spaces (encoded as `%20`), you can also decode them to get the original value like this:
+
+```javascript
+// assume a url parameter of test=a%20space
+
+var original = getUrlParameter('test'); // 'a%20space'
+var decoded = decodeURIComponent(original); // 'a space'
+```
+
+Just be careful not to decode something that's already decoded or else you can get a mistake, especially if percents are involved.
+
+Anyways, congrats! Now you know how to get a URL parameter, and you might have picked up some other tricks along the way.
 
 
 
 
-example weird urls from demopixels.js:
 
-doubleclick semicolons:
-	'http://4476300.fls.doubleclick.net/activityi;src=4476300;type=gener0;cat=Demo_0;u5=demo;ord=' + doubleclick_floodlight_random + '?'
+##Get All URL Parameters as a Neat Data Object
 
-facebook array:
-	https://www.facebook.com/tr?ev=6032453444871&cd[value]=0.00&cd[currency]=USD&noscript=1
+Let's say you have the following url...
 
+```html
+http://example.com/?product=shirt&color=blue&newuser&size=m
+```
 
-google &amp;
-	//www.googleadservices.com/pagead/conversion/'+google_conversion_id+'/?label='+google_conversion_label+'&amp;guid=ON&amp;script=0
+...and you want to have the URL parameters organized in a neat object for easy data access like this:
 
+```javascript
+{ product: 'shirt', color: 'blue', newuser: '', size: 'm' }
+```
 
+Here's a function to do that:
 
+```javascript
+function getAllUrlParameters(){
+	var s = window.location.search;
+	if(s) {
+		var arr = s.substr(1).split('&');
+		var obj = {};
+		for(var i=0; i<arr.length; i++) {
+			var a = arr[i].split('=');
+			obj[a[0]] = typeof(a[1])==='undefined' ? '' : a[1];
+		}
+		return obj;
+	}
+	else {
+		return {};
+	}
+}
+```
 
+Here's how to use the function:
 
-sources and links:
+```javascript
+var data = getAllUrlParameters();
 
+console.log(data.product); // 'shirt'
+console.log(data.color); // 'blue'
+```
 
-uri recommendations (cmd+f "query strings"):
-	https://www.w3.org/Addressing/URL/4_URI_Recommentations.html
-	- no common syntax or semantics
+Here's how the function works:
 
-nice list of edge cases:
-	http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+- First, get the query string with `window.location.search`.
+- If the URL has a query string, then continue. Otherwise, return an empty object.
+- Remove the question mark at the beginning of the query string using `substr(1)`.
+- Create an empty object to hold our data.
+- Split each of the parameters into an array using `&` as the separator.  This will give us:
 
-https://url.spec.whatwg.org/#application/x-www-form-urlencoded
-	- query string format is monstrosity (for encoding form data in name value pairs)
+```javascript
+['product=shirt', 'color=blue', 'newuser', 'size=m']
+```
 
-query string content type (see 2.):
-	https://www.w3.org/TR/REC-html40/interact/forms.html#form-content-type
-
-
-ampersands in uri attribute values:
-	https://www.w3.org/TR/1999/REC-html401-19991224/appendix/notes.html#h-B.2.2
-	- & &amp; and semicolon
-	- &amp; can also be &#38;
-
-wikipedia query string
-	https://en.wikipedia.org/wiki/Query_string#Structure
-
-
-jquery url plugin:
-https://plugins.jquery.com/url/
-	note: handles arrays, doesn't handle semicolons
-	- https://websanova.com/plugins/url
-
-
-
-jim's recommended library URL:
-	http://medialize.github.io/URI.js/
-	- on github: https://github.com/medialize/URI.js
-		note: has list of other url libraries too
-
-
-
-http://www.skorks.com/2010/05/what-every-developer-should-know-about-urls/
-	- don't double-decode! (if one of the encoded characters is a percent, and you decode it twice, you risk messing up your url)
-
-
-semicolons not widely followed, but recommended by w3c:
-	http://stackoverflow.com/questions/3481664/semicolon-as-url-query-separator
+- For each value in the array, split it up by the equals sign to separate the parameter and the value.  Then put each parameter and value in our object.
+- If a value is undefined, set it to an empty string to differentiate between parameters that exist and parameters that don't.
+- Return our newly created object!
 
 
-http://www.ietf.org/rfc/rfc3986.txt
-	3.4. Query
-	The query component contains non-hierarchical data that, along with
-	data in the path component (Section 3.3), serves to identify a
-	resource within the scope of the URI's scheme and naming authority
-	(if any).  The query component is indicated by the first question
-	mark ("?") character and terminated by a number sign ("#") character
-	or by the end of the URI.
+
+
+
+
+
+##Edge Cases to Know About
+
+Because URL query strings [don't have clear specifications](https://www.w3.org/Addressing/URL/4_URI_Recommentations.html), there are some weird edge cases that can happen.
+
+Here are some to be aware of:
+
+- Duplicate parameters (There's no official spec on [how to handle this](http://stackoverflow.com/questions/1746507/authoritative-position-of-duplicate-http-get-query-keys))
+- Separators besides `&` (including `;` and '&amp;' for example)
+- Inconsistent separators (for example, using an `&` and a `;` in the same query string)
+- Multiple `&` characters in a row
+- Non-standard characters
+- Badly formed URLs
+- Array values in parameters (for example: `thing[0]=abc&thing[1]=efg`)
+- Situations where the official W3C specification almost appears to contradict itself (for example, defining `#` as the [end of a query string](http://www.ietf.org/rfc/rfc3986.txt) but supposedly allowing `&#38;` [in the middle](https://www.w3.org/TR/1999/REC-html401-19991224/appendix/notes.html#h-B.2.2) under certain circumstances.
+
+There's not one way to deal with these situations because your course of action will depend on your individual use case and intent.
+
+As long as you're aware of the types of URL parameters you're dealing with, you should be fine.
+
+
+
+
+
+
+
+
+
+##Handling URLs Outside the Address Bar
+
+Maybe you want to work with URLs that are not in the address bar.  A link URL might be a good example of this.
+
+We can reuse most of our code from the first `getUrlParameter` function with a few differences.
+
+First we'll need a way to extract the query string and handle what happens if it's not there.
+
+Also, URLs in the document are more likely to have the less common separators such as `&amp;` and `;`, so we'll have our function replace those separators with `&` to keep things simple.
+
+Here, we're writing two functions:
+
+- `getCleanUrlQuery`, which takes a URL and spits out a query string with unusual separators normalized to `&`.  If no URL is given, the function will default to whatever is in the address bar.
+
+- `getUrlParameter`, which is almost the same as before, but now it allows an optional custom URL.
+
+Here are those functions:
+
+```javascript
+function getCleanUrlQuery(url){
+	var query;
+	if(url){
+		query = url.split('?')[1];
+		if(query){
+			query = '?' + query.split('#')[0];
+		}
+	}
+	else{
+		query = window.location.search;
+	}
+	return query && query.replace(/&amp;|;/gi,'&');
+}
+
+function getUrlParameter(param, url){
+	var query = getCleanUrlQuery(url);
+	if(!query){ return null; }
+
+	var pattern = new RegExp('[?&]'+param+'((=([^&]+))|(?=(&|$)))','i');
+	var m = query.match(pattern);
+	return m && ( typeof(m[3])==='undefined' ? '' : m[3] );
+}
+```
+
+###How it Works:
+
+Our `getCleanUrlQuery` function does these things:
+
+- If there's a custom URL, continue. Otherwise, use what's in the address bar.
+- Split the URL into its parts, and get what's after the question mark.  If there's anything there, then make sure to shave off anything from the `#` character forward.
+- Using the `&&` shorthand we've seen before in this article, we're checking if the query is there, and if so, we're returning a clean version of the query, where `&amp;` and `;` are replaced with `&`.  Please note that if you have a really unusual URL scheme where semicolons are present but not considered separators, then you'll need to remove the replacement and make that line simply `return query;` instead.
+
+The `getUrlParameter` function is exactly the same as earlier except it uses `getCleanUrlQuery` instead of `window.location.search` to get the query string.
+
+
+Usage examples:
+
+```javascript
+getUrlParameter('color'); // 'blue'
+
+var customURL = 'http://example.com/?color=red';
+getUrlParameter('color', customURL); // 'red'
+```
+
+
+
+
+
+
+##Libraries to Do More with URLs
+
+If you want to do more with URLs, you could use a library.  The benefits include real-world testing and versatility while the drawbacks include potential extra overhead and unknown stuff in your sites.
+
+Some popular libraries include [jQuery URL plugin](https://plugins.jquery.com/url/) and [Medialize URI.js](http://medialize.github.io/URI.js/).
+
+Whether you use your own code or go with a library, make sure to test everything to make sure it works for your use cases.
+
+
+
+
+
+
+##Conclusion
+
+Due to a flexible spec, URL query strings can definitely be inconsistent.  For most common use cases, the first solution in this article should work just fine.
+
+If you have any questions or thoughts, feel free to let me know in the comments.
+
+
+

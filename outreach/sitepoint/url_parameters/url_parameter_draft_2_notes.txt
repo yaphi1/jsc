@@ -1,0 +1,188 @@
+
+
+
+
+intro
+	- use cases
+	- outline
+
+
+
+basic get param
+	
+	- use for certain url format with & (mention spec allows others, but no clarity)
+
+	- show code
+
+	- usage examples
+
+	- how it works
+
+get all params
+
+
+edge cases and other usage
+
+	- other separators
+	- url not from address bar
+
+
+other edge cases to be aware of
+
+
+libraries for doing more with urls
+
+
+
+
+
+
+
+
+
+
+
+
+
+from first version of article:
+
+
+Here's how this article will be arranged:
+	- Get a URL parameter (good for most common use cases)
+	- Get all URL parameters as a neat data object
+	- A more robust way to get URL parameters
+	- Edge cases to be aware of
+	- Libraries to do more with URLs
+
+
+
+
+
+
+
+
+
+------------------------------------------
+
+old outline:
+
+
+intro:
+
+what this is for and what this is not:
+
+	- getting info from query string; getting part of url after question mark, but not including hash part (link to definition of query string and explanation of url parameters)
+
+	- example of why one would get url parameters
+
+	- nothing built in jQuery, so you'd have to either use plain JS or a plugin or library
+
+
+
+quick pure js solution (along with usage examples)
+
+how it works
+	- what is a valid query string
+	- line by line of code
+	- how it handles special cases
+
+- edge cases
+	- duplicate query keys: there's no spec on this (http://stackoverflow.com/questions/1746507/authoritative-position-of-duplicate-http-get-query-keys)
+	- semicolons? do those get used
+	- &amp; does that get used?
+	- multiple &s in a row
+	- multiple question marks?
+	- no equals sign
+	- key and equals sign only
+	- non-standard characters
+	- badly formed urls (then that's the url's problem)
+	- double decoding url components (don't do it)
+	- inconsistent separators (for example &amp;b;c;d)
+	- array values in thingies
+
+
+version that gets all params and spits out an object
+
+existing libraries and solutions; benefits and drawbacks
+	- tradeoff: extra code, but extra functionality
+	- maybe mention libraries, and briefly what they do for url parsing, but then say it's beyond the scope of this article
+
+
+
+
+
+
+
+
+example weird urls from demopixels.js:
+
+doubleclick semicolons:
+	'http://4476300.fls.doubleclick.net/activityi;src=4476300;type=gener0;cat=Demo_0;u5=demo;ord=' + doubleclick_floodlight_random + '?'
+
+facebook array:
+	https://www.facebook.com/tr?ev=6032453444871&cd[value]=0.00&cd[currency]=USD&noscript=1
+
+
+google &amp;
+	//www.googleadservices.com/pagead/conversion/'+google_conversion_id+'/?label='+google_conversion_label+'&amp;guid=ON&amp;script=0
+
+
+
+
+
+sources and links:
+
+
+uri recommendations (cmd+f "query strings"):
+	https://www.w3.org/Addressing/URL/4_URI_Recommentations.html
+	- no common syntax or semantics
+
+nice list of edge cases:
+	http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+
+https://url.spec.whatwg.org/#application/x-www-form-urlencoded
+	- query string format is monstrosity (for encoding form data in name value pairs)
+
+query string content type (see 2.):
+	https://www.w3.org/TR/REC-html40/interact/forms.html#form-content-type
+
+
+ampersands in uri attribute values:
+	https://www.w3.org/TR/1999/REC-html401-19991224/appendix/notes.html#h-B.2.2
+	- & &amp; and semicolon
+	- &amp; can also be &#38;
+
+wikipedia query string
+	https://en.wikipedia.org/wiki/Query_string#Structure
+
+
+jquery url plugin:
+https://plugins.jquery.com/url/
+	note: handles arrays, doesn't handle semicolons
+	- https://websanova.com/plugins/url
+
+
+
+jim's recommended library URL:
+	http://medialize.github.io/URI.js/
+	- on github: https://github.com/medialize/URI.js
+		note: has list of other url libraries too
+
+
+
+http://www.skorks.com/2010/05/what-every-developer-should-know-about-urls/
+	- don't double-decode! (if one of the encoded characters is a percent, and you decode it twice, you risk messing up your url)
+
+
+semicolons not widely followed, but recommended by w3c:
+	http://stackoverflow.com/questions/3481664/semicolon-as-url-query-separator
+
+
+http://www.ietf.org/rfc/rfc3986.txt
+	3.4. Query
+	The query component contains non-hierarchical data that, along with
+	data in the path component (Section 3.3), serves to identify a
+	resource within the scope of the URI's scheme and naming authority
+	(if any).  The query component is indicated by the first question
+	mark ("?") character and terminated by a number sign ("#") character
+	or by the end of the URI.

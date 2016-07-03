@@ -1,0 +1,24 @@
+
+
+"While trying to learn to code my biggest problem has been not having someone to run something by if I get stuck.  I was working on a project in one of the big code schools online and I was stuck for hours.  Actually I still wake up trying to solve the problem.  However in order to get help I would have had to wait a week.  To pay $200 a month and need to wait a week seemed a little like a waste of my money.  So that's my biggest problem, how to get unstuck when stackoverflow just doesn't get it done."
+
+
+
+Here's what I personally do when I get stuck on a coding problem:
+
+1. There are generally two types of code problems: technical errors (I missed a semicolon or something) and unexpected behavior (the code is technically correct, but it doesn't do what I want).  First, I check if it's a technical error.  With JavaScript, for example, I would usually check my browser console to see if there were any errors.
+
+2. If the error is not technical, then I check the behavior of my code.  This is a little trickier, but here's my process:
+
+- First break my code into as small pieces as possible and check if those pieces work.  Then gradually put them together again.
+
+If that doesn't work, here's what I try next:
+
+- Write in plain language what I want the code to do. (Example; If the user clicks, turn this box green and display a success message.)
+- Break those instructions into even smaller steps when possible.
+- Write code for each tiny step, and see if it works. (Example: Detect if the user clicks.  Did that work?  Turn box green.  Did that work?  Now turn the box green when the user clicks. Did that work? Etc.)
+- Keep doing this until your whole code is ready.
+
+I know this isn't the same as asking someone for help, but one of the most prized skills is being able to get unstuck when the internet doesn't help.  Based on the fact that you spend time looking on stackoverflow and waking up thinking about these problems, it's clear that you're determined enough to get good at getting unstuck.  That quality is going to take you places, and I applaud you for it.
+
+I hope this helps!
