@@ -25,7 +25,7 @@ Let's get started!
 
 Let's say you have the following url:
 
-```html
+```text
 http://example.com/?product=shirt&color=blue&newuser&size=m
 ```
 
@@ -111,7 +111,7 @@ To make it easier to see, let's look at what `match` gives us for various exampl
 
 As a reminder, here's the sample url we're looking at:
 
-```html
+```text
 http://example.com/?product=shirt&color=blue&newuser&size=m
 ```
 
@@ -174,7 +174,7 @@ Anyways, congrats! Now you know how to get a URL parameter, and you might have p
 
 Let's say you have the following url...
 
-```html
+```text
 http://example.com/?product=shirt&color=blue&newuser&size=m
 ```
 
@@ -345,9 +345,18 @@ Whether you use your own code or go with a library, make sure to test everything
 
 ##Conclusion
 
-Due to a flexible spec, URL query strings can definitely be inconsistent.  For most common use cases, the first solution in this article should work just fine.
+Due to flexible standards, URL query strings can definitely be inconsistent.  For most common use cases, the first solution in this article should work just fine.
 
 If you have any questions or thoughts, feel free to let me know in the comments.
 
 
+Sources:
 
+- https://www.w3.org/Addressing/URL/4_URI_Recommentations.html
+- https://en.wikipedia.org/wiki/Query_string#Structure
+- https://url.spec.whatwg.org/#application/x-www-form-urlencoded
+- http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+- https://www.w3.org/TR/REC-html40/interact/forms.html#form-content-type
+- https://www.w3.org/TR/1999/REC-html401-19991224/appendix/notes.html#h-B.2.2
+- http://stackoverflow.com/questions/3481664/semicolon-as-url-query-separator
+- http://www.ietf.org/rfc/rfc3986.txt
