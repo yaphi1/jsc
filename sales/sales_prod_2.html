@@ -142,6 +142,45 @@ ol > li {
 
 
 
+.graph_container{
+	border: 1px solid #333;
+	padding: 10px;
+	background: #fafafa;
+}
+
+.graph_title{
+	text-align: center;
+	font-family: courier;
+	max-width: 480px;
+	margin: auto;
+}
+
+.salary_graph{
+	border: 1px solid #333;
+}
+
+.graph_bar{
+	background: #444;
+	color: #fff;
+	/*height: 50px;*/
+	margin: 20px 0px;
+	padding: 20px;
+	box-sizing: border-box;
+	font-size: 16px;
+	font-family: courier;
+}
+
+.graph_caption{
+	font-size: 16px;
+	font-family: courier;
+	text-align: center;
+}
+
+
+
+
+
+
 
 
 
@@ -573,9 +612,27 @@ div.regform .regform-form .btn-fld .regform-button{
 			<li><b>More jobs</b> will be open to you (and <b>better quality</b> ones too).</li>
 			<li class="salary_graphs">
 				<p>
-					Knowing JavaScript can add an <b>extra $10,000 to $70,000</b> onto your salary.  (My personal experience was towards the upper range of this.)
+					Knowing JavaScript can add an <b>extra $10,000 to $70,000</b> onto your salary. (Personal experience: upper range of this.)
 				</p>
+
+				<div class="graph_container">
+					<div class="graph_title">
+						Average Web Developer Salaries With and Without JavaScript
+					</div>
+					<div class="salary_graph">
+						<div class="graph_bar" style="width:58%; background:#b40;">Without JavaScript: $58,000</div>
+						<div class="graph_bar" style="width:94%; background:#0b8;">With JavaScript: $94,000</div>
+					</div>
+					<div class="graph_caption">
+						Sources: Salary data from SimplyHired, Indeed.com, Glassdoor
+					</div>
+				</div>
+
+
 				<p>
+					What this graph doesn't tell you is that a lot of the best jobs are never publicly advertised while the worst ones often stay available because no one takes them.  This skews the data.  The salaries get significantly higher, especially as you gain experience.
+				</p>
+				<!-- <p>
 					<strong>Average without JavaScript</strong>
 					<img src="../img/without_js.png">
 				</p>
@@ -598,11 +655,16 @@ div.regform .regform-form .btn-fld .regform-button{
 				</p>
 				<p>
 					From what I've seen (feel free to research this on your own), the jobs you'll get with HTML and CSS alone are often in the $30,000 to $50,000 range, while JavaScript jobs are often in the $70,000 to $130,000 range.
-				</p>
+				</p> -->
 			</li>
 		</ol>
 
-		<p class="big_p">Anyways, enough charts. Now for the course.</p>
+		<p class="big_p">
+			Anyways, enough about salary. The other real joy about learning JavaScript is that it opens up opportunities to love what you do every day.
+		</p>
+		<p class="big_p">
+			Now for the course...
+		</p>
 
 
 	</div>
@@ -834,30 +896,33 @@ div.regform .regform-form .btn-fld .regform-button{
 
 
 
-	<div style="background:#fda; padding:1px 0px 20px; margin:30px 0px;"><div class="content_width">
-		<h3>Who am I, and why would you listen to me?</h3>
+	<div style="background:#fda; padding:1px 0px 20px; margin:30px 0px;">
+		<div class="content_width">
+			<h3>Who am I, and why would you listen to me?</h3>
 
-		<p>
-			My name is Yaphi, and I'm a front-end web developer.  I didn't come to web development through a neat path.
-		</p>
-		<p>
-			I did a bunch of unrelated jobs first, my degree is not in computer science, and I know how it feels to struggle to learn code.
-		</p>
-		<p>
-			A few years later, I'm at a stage where I develop production sites that get millions of hits, and my work has been featured or mentioned by organizations like Sitepoint, Lifehacker, Treehouse, Dreamhost, CSS-Tricks, Webdesigner Depot, and Smashing Magazine.
-		</p>
-		<p>
-			But who cares? Why does that matter?
-		</p>
-		<p>
-		</p>
-		<p>
-			<strong>The most important qualification I have is this:</strong>
-		</p>
-		<p>
-			<strong>I'm always learning.  I know what you're going through because I constantly go through it too.  I'm not an out-of-touch expert who has forgotten what it's like to learn, so I don't skip steps or rush when I teach.</strong>
-		</p>
-	</div></div>
+			<p>
+				My name is Yaphi, and I'm a front-end web developer at a publicly-traded tech company you've probably heard of.
+			</p>
+			<p>
+				I didn't come to web development through a neat path.
+			</p>
+			<p>
+				I did a bunch of unrelated jobs first, my degree is not in computer science, and I know how it feels to struggle to learn code.
+			</p>
+			<p>
+				A few years later, I'm at a stage where I develop production sites that get millions of hits, I've been recruited by companies including Amazon and Captial One, and my work has been featured or mentioned by organizations like Sitepoint, Lifehacker, Treehouse, Dreamhost, CSS-Tricks, Webdesigner Depot, and Smashing Magazine.
+			</p>
+			<p>
+				But who cares? Why does that matter?
+			</p>
+			<p>
+				<strong>The most important qualification I have is this:</strong>
+			</p>
+			<p>
+				<strong>I'm always learning.  I know what you're going through because I constantly go through it too.  I'm not an out-of-touch expert who has forgotten what it's like to learn, so I don't skip steps or rush when I teach.</strong>
+			</p>
+		</div>
+	</div>
 
 
 
