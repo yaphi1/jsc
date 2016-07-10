@@ -1,12 +1,13 @@
 
-
-"While trying to learn to code my biggest problem has been not having someone to run something by if I get stuck.  I was working on a project in one of the big code schools online and I was stuck for hours.  Actually I still wake up trying to solve the problem.  However in order to get help I would have had to wait a week.  To pay $200 a month and need to wait a week seemed a little like a waste of my money.  So that's my biggest problem, how to get unstuck when stackoverflow just doesn't get it done."
-
-
+A reader asked me how to get unstuck when Google and Stackoverflow don't help.  This is one of the most important and challenging skills in coding, so I've decided to answer it for the group.
 
 Here's what I personally do when I get stuck on a coding problem:
 
-1. There are generally two types of code problems: technical errors (I missed a semicolon or something) and unexpected behavior (the code is technically correct, but it doesn't do what I want).  First, I check if it's a technical error.  With JavaScript, for example, I would usually check my browser console to see if there were any errors.
+1. There are generally two types of code problems:
+a) Technical errors (I missed a semicolon or something)
+b) Unexpected behavior (the code is technically correct, but it doesn't do what I want).
+
+First, I check if it's a technical error.  With JavaScript, for example, I would usually check my browser console to see if there were any errors.
 
 2. If the error is not technical, then I check the behavior of my code.  This is a little trickier, but here's my process:
 
@@ -15,10 +16,13 @@ Here's what I personally do when I get stuck on a coding problem:
 If that doesn't work, here's what I try next:
 
 - Write in plain language what I want the code to do. (Example; If the user clicks, turn this box green and display a success message.)
-- Break those instructions into even smaller steps when possible.
-- Write code for each tiny step, and see if it works. (Example: Detect if the user clicks.  Did that work?  Turn box green.  Did that work?  Now turn the box green when the user clicks. Did that work? Etc.)
-- Keep doing this until your whole code is ready.
 
-I know this isn't the same as asking someone for help, but one of the most prized skills is being able to get unstuck when the internet doesn't help.  Based on the fact that you spend time looking on stackoverflow and waking up thinking about these problems, it's clear that you're determined enough to get good at getting unstuck.  That quality is going to take you places, and I applaud you for it.
+- Break those instructions into even smaller steps when possible.
+
+- Write code for each tiny step, and see if it works. (Example: Turn box green.  Did that work?  Detect if the user clicks.  Did that work?  Now turn the box green when the user clicks. Did that work? Etc.)  If something didn't work, either examine it more closely or break it into even smaller pieces.  If the pieces get so small that they feel almost stupidly simple, that's a good sign.
+
+- If all else fails, breaking things down into smaller pieces means you'll have an easier time finding help on Google too.  For instance, you can find a much clearer answer to something like "detect click in JavaScript" than "create a fully-functional live chat social application in JavaScript."
+- Keep testing and putting together small pieces until your whole code is ready.
 
 I hope this helps!
+

@@ -1,0 +1,56 @@
+
+
+
+
+schedule:
+
+mon: get unstuck [written]
+
+wed: course sign-up open again after 6 months [written]
+
+fri: not a code person [progress]
+
+mon: a personal story and the key to understanding anything
+
+tues: copying and pasting code
+
+wed: doubters and other courses (and testimonials)
+
+thurs: faq and sign-up closing soon
+
+fri:
+- special stuff and shiny tactics vs what works
+- sign-up closing in a few hours
+
+
+
+
+
+
+possible email topics:
+
+
+
+* - when people say they're "not a code person"
+
+* - (the things people tell me about JavaScript courses) problem with other course formats
+	[possibly same topic] - what the doubters say whenever I say I have a JS course (vs people who have seen the course)
+
+* - what sounds simple isn't always; problem with making a quiz and other too big projects
+	[possibly same topic] - why people struggle with JS
+
+* - frequently asked questions
+
+* - course open again after 6 months
+
+- which frameworks vs timeless js (maybe not)
+
+* - special stuff and shiny tactics vs what works
+
+* - copying and pasting code (actually takes longer than learning)
+
+- what sounds complicated can be broken into simple steps
+
+- a personal story and the key to understanding anything
+
+
