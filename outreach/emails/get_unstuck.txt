@@ -1,3 +1,4 @@
+Hi *|FNAME|*,
 
 A reader asked me how to get unstuck when Google and Stackoverflow don't help.  This is one of the most important and challenging skills in coding, so I've decided to answer it for the group.
 
@@ -7,7 +8,7 @@ Here's what I personally do when I get stuck on a coding problem:
 a) Technical errors (I missed a semicolon or something)
 b) Unexpected behavior (the code is technically correct, but it doesn't do what I want).
 
-First, I check if it's a technical error.  With JavaScript, for example, I would usually check my browser console to see if there were any errors.
+First, I check if it's a technical error.  With JavaScript, for example, I would usually check my browser console to see if there were any notifications.
 
 2. If the error is not technical, then I check the behavior of my code.  This is a little trickier, but here's my process:
 
@@ -19,10 +20,16 @@ If that doesn't work, here's what I try next:
 
 - Break those instructions into even smaller steps when possible.
 
-- Write code for each tiny step, and see if it works. (Example: Turn box green.  Did that work?  Detect if the user clicks.  Did that work?  Now turn the box green when the user clicks. Did that work? Etc.)  If something didn't work, either examine it more closely or break it into even smaller pieces.  If the pieces get so small that they feel almost stupidly simple, that's a good sign.
+- Write code for each tiny step, and see if it works. (Example: Turn box green.  Did that work?  Detect if the user clicks.  Did that work?  Now turn the box green when the user clicks. Did that work? Etc.)  If something didn't work, either examine it more closely or break it into even smaller pieces.  If the pieces get so small that they feel almost stupidly simple, that's a good sign.  If not, that's okay too.
 
 - If all else fails, breaking things down into smaller pieces means you'll have an easier time finding help on Google too.  For instance, you can find a much clearer answer to something like "detect click in JavaScript" than "create a fully-functional live chat social application in JavaScript."
+
 - Keep testing and putting together small pieces until your whole code is ready.
 
 I hope this helps!
+
+Best,
+
+Yaphi
+Simple Steps Code
 

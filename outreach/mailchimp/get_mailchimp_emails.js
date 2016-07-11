@@ -1,0 +1,1 @@
+Array.slice.call(null, document.querySelectorAll('.profile-view a')).forEach(function(v){console.log(v.innerHTML)});

@@ -4,11 +4,13 @@
 
 schedule:
 
-mon: get unstuck [written]
+mon: get unstuck [done]
 
-wed: course sign-up open again after 6 months [written]
+wed: course sign-up open again after 6 months [done]
 
-fri: not a code person [progress]
+thurs 6pm: easiest way to get comfortable with code (repeat a few times until automatic)
+
+fri 3pm: not a code person [progress]
 
 mon: a personal story and the key to understanding anything
 
@@ -53,4 +55,5 @@ possible email topics:
 
 - a personal story and the key to understanding anything
 
+- repetition: the easiest thing you can do to learn js (like typing; can focus on message instead of where the "a" key is)
 
