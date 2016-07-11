@@ -8,7 +8,7 @@ mon: get unstuck [done]
 
 wed: course sign-up open again after 6 months [done]
 
-thurs 6pm: easiest way to get comfortable with code (repeat a few times until automatic)
+[progress] thurs 6pm: easiest way to get comfortable with code (repeat a few times until automatic)
 
 fri 3pm: not a code person [progress]
 
