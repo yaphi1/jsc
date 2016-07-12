@@ -4,22 +4,34 @@ One of the easiest things you can do to get better at JavaScript
 
 
 
-Here's one of my favorite ways to get better at JavaScript, or any coding language in general.
+Hi *|FNAME|*,
 
-When I learn something new, I type it repeatedly a few times so it starts to feel automatic.
+Here's one of my favorite ways to get better at JavaScript or any coding language in general.
+
+When I learn something new, I type it repeatedly a few times so it starts to feel automatic.  That's it.
 
 Here are the reasons I like that approach:
 
-- It's easy
-- A few extra minutes now can save many hours later
-- When the code starts to feel automatic, you can focus on solving problems and creating cool things instead of worrying about that semicolon
+- It's easy, and it makes you comfortable with a new thing very quickly.
+
+- A few extra minutes now can save many hours later.  For a lot of people, that extra momentum that can mean the difference between succeeding and giving up.
+
+- When the code starts to feel automatic, you can focus on solving problems and creating cool things instead of worrying about whether you put that semicolon in the right place.
+
+- You start to feel like a wizard at this stuff, and that feeling helps you make even more progress.
+
+I hope this helps!
+
+Best,
+
+Yaphi
+Simple Steps Code
+
+P.S.: If you're interested in learning JavaScript, feel free to see what the course is like.
 
 
 
 
-
-
-easiest way to get comfortable with code (repeat a few times until automatic)
 
 
 
