@@ -1,6 +1,73 @@
 
 
 
+points to include:
+- future pacing
+- common frustrations
+- curiosity
+
+
+
+too big projects (like a quiz)
+
+
+
+
+learning spiral of failure (maybe with previous topic)
+
+
+
+
+time and effort wasted on copying and pasting
+
+
+
+
+confessions about web development courses
+	- people tell me:
+		- did codecademy but forgot and couldn't apply
+		- tried videos, but too much rewinding/pausing
+		- traditional edu: expensive and irrelevant
+
+	- decided to fix this:
+		- practice like real conditions
+
+
+
+
+faq
+
+
+
+
+
+special stuff and shiny tactics vs what works
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+old info:
+
+
+
+
 
 schedule:
 
