@@ -4,21 +4,28 @@
 points to include:
 - future pacing
 - common frustrations
-- curiosity
-
-
-
-too big projects (like a quiz)
+- curiosity (maybe a question: what would you do with $10,000 for example)
 
 
 
 
-learning spiral of failure (maybe with previous topic)
+a personal story and the key to understanding anything
+	- use math example
 
 
 
 
-time and effort wasted on copying and pasting
+
+this web dev story might be about you
+	- first come to js: copy and paste snippets (actually takes more time and effort)
+	- finally decide to learn it
+	- take on too big projects too early like a quiz
+	- get discouraged
+	- stop
+
+	- doesn't have to be this way
+	- take small pieces; get comfortable with them, might feel stupidly simple, but that's the point; you'll feel like a wizard
+
 
 
 
@@ -31,11 +38,18 @@ confessions about web development courses
 
 	- decided to fix this:
 		- practice like real conditions
+		- quick wins (psychology of rewards and progress)
+		- sequence of common things early instead of late so you get to practice them
+		- long enough to cover important things but still short and focused enough that you'll actually complete it
 
 
 
 
-faq
+You spoke. I listened.
+- why should I do this instead of other courses?
+- what if I'm already using codecademy, treehouse etc
+- what about the risk of spending?
+
 
 
 

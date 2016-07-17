@@ -1,0 +1,18 @@
+
+
+
+this web dev story might be about you
+	- first come to js: copy and paste snippets (actually takes more time and effort)
+	- finally decide to learn it
+	- take on too big projects too early like a quiz
+	- get discouraged
+	- stop
+
+	- doesn't have to be this way
+	- take small pieces; get comfortable with them, might feel stupidly simple, but that's the point; you'll feel like a wizard
+
+
+
+
+
+
