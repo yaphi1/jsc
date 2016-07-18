@@ -1,16 +1,34 @@
+This web dev story might be about you
 
 
 
-this web dev story might be about you
-	- first come to js: copy and paste snippets (actually takes more time and effort)
-	- finally decide to learn it
-	- take on too big projects too early like a quiz
-	- get discouraged
-	- stop
+Picture this:
 
-	- doesn't have to be this way
-	- take small pieces; get comfortable with them, might feel stupidly simple, but that's the point; you'll feel like a wizard
+You've first started needing JavaScript.  Maybe you wanted a small bit of functionality, so you copied and pasted it, and it worked after some tweaking.
 
+Great!  But soon it starts to be not so great.
+
+Soon you're spending hours searching for something to copy every single time you want to accomplish a tiny task.
+
+Exhausting!
+
+After a while, you start to realize copying and pasting takes more time than actually learning JavaScript, so you decide you'll finally learn it.
+
+In order to learn, you start with a "small" project like a quiz or a slideshow.  These projects are way too big to start with because they can involve animations, timing, data structures, DOM manipulation, event listeners, and more.  Because you first thought of it as a small project, you get discouraged.
+
+You tell yourself you'll do it later.
+
+Then you stop trying.  Sometimes forever.
+
+It doesn't have to be this way.
+
+If you get comfortable with tiny concepts (e.g.: show text on a page, add two numbers, etc), then you can learn much more effectively and move much faster than you would otherwise.
+
+At times, this approach will seem almost stupidly simple, but that's exactly the point.  If you keep repeating basic snippets of code until they start to feel obvious (and then repeat a few more times), then everything will start to feel automatic.  You'll suddenly be able to think about what you want to create instead of worrying about whether that semicolon was in the right place.
+
+That will make you feel like a JavaScript wizard.  This feeling is so encouraging that it will propel you forward to learn more and more, and soon you'll surpass your expectations.
+
+Once the building blocks are in place, you'll be able to create those projects you wanted to make and so much more.
 
 
 
