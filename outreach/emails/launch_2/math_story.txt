@@ -2,6 +2,11 @@
 A personal story and the key to understanding anything
 
 
+
+
+
+Hi *|FNAME|*,
+
 In life, there are a few key skills that unlock everything.  One of those skills is how to approach learning new things.
 
 There's a crucial insight coming soon, but it starts with a quick story.
@@ -10,7 +15,7 @@ There's a crucial insight coming soon, but it starts with a quick story.
 
 Once upon a time, I was tutoring my cousin, who needed to catch up with math for a test in one of her college courses.
 
-The problem? She never had the chance to learn the things she was already assumed to know, as her previous instruction throughout highschool had revolved around memorization instead of actual understanding.
+The problem? She never had the chance to learn the things she was already assumed to know, as her previous instruction throughout high school had revolved around memorization instead of actual understanding.
 
 This meant I had to teach her trigonometry, limits, and differential calculus from scratch.
 
@@ -26,9 +31,13 @@ People often give up, thinking something is too complicated for them, or that th
 
 That's it.
 
-So I went back to the basics and guided my cousin through, one step at a time, and with that approach, she was able to learn more in four days than in all of high school.
+So we went back to the basics, one step at a time, and with that approach, my cousin was able to learn more in four days than in all of high school.
+
+Whenever I say this, someone always says they don't have the brain for this, or something to that effect.  Think about this though.  By reading this email right now, you're scanning strange symbols on a screen and instantly converting them to a coherent message.  That's incredible.  In fact, the average human brain's processing power blows supercomputers out of the water.  What holds people back is often the psychology and the approach rather than ability.
 
 ---
+
+So how does this tie back into web development?
 
 Learning is like a staircase.  It's so easy to see someone way higher up, and think, "I could never get there."
 
@@ -42,5 +51,8 @@ Best,
 
 Yaphi
 Simple Steps Code
+
+P.S.: I hope I've entertained at least one person (besides myself) by using the title of the site in a sentence.
+
 
 
