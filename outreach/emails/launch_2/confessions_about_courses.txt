@@ -1,0 +1,63 @@
+
+Confessions about web development courses
+
+
+
+
+Whenever I tell people I run a JavaScript course (enrollment closes this Friday at 11:59pm Pacific Time), they always ask the same thing.
+
+What makes it different from Codecademy, Treehouse, Udemy, etc?
+
+I think those are fantastic resources, and yet the more I listened to people, the more I began to hear interesting things...
+
+I began to hear confessions like these (paraphrased):
+
+"I did Codecademy for a bit, but then I stopped.  Now I can't remember what I learned."
+
+"I did Treehouse, and it was great, but then when I tried to apply it on my own, I felt lost."
+
+I began to hear the same themes over and over:
+	- Not remembering what they learned
+	- Not finishing the courses
+	- Not being able to apply their knowledge in real life
+
+These seem like some pretty important issues.
+
+So I asked myself why this was happening.  Here's what I came up with:
+
+Videos are too passive.  You spend more time watching and waiting than practicing.  There's also too much rewinding, pausing, fast-forwarding, etc.
+
+Courses with a built-in code editor are a bit better because they focus on practice, but they don't match real-life conditions, so people find themselves unable to apply what they've learned.
+
+I decided these problems needed to be fixed, so I created a JavaScript course with these principles:
+
+- All practice must match real-life conditions, so you can apply the stuff after you've learned it.
+
+- Quick wins are important. Show real progress quickly in order to maintain motivation.
+
+- Introduce the most common useful things first so that practice happens naturally throughout the whole course. (Too many courses wait forever to get to the practical bits.)
+
+- Make the course long enough to cover the important things but short and focused enough that you'll actually complete it.
+
+- Sections need to be short and digestible so they're easier to remember and they'll fit into your schedule.
+
+Here are some things people have said about the course:
+
+“I am really happy with the course. I couldn’t do much in the past because although I knew the syntax I found it hard to ‘think’ the JS way. But now that you have made functions crystal clear (as well as objects and methods) I can do lots of things. My understanding has increased exponentially, and I’m enjoying all the exercises.”
+– Lucia P. 
+
+“Before I found Javascript very daunting and complex a “black art” if you like. Now I feel I can get my head round the fundamentals, build small bits and feel confident in tinkering and trying out new things.”
+– Robin R. 
+
+“First of all, I want to say it’s a great course. The repetition and little projects all throughout made it easy to commit a lot of this stuff to memory better than I had memorized this stuff in the past and your projects at the end are good ideas which I’m going to get started on ASAP.”
+– Nate S. 
+
+
+"...I did a little research on JS and decided to study Javascript.  I looked around for information, and came a cross Free Code Camp, Team Treehouse and various Udemy courses out there.  I even attended several Free Code Camp meetings.  But, sadly, I just was not catching on to JS.
+...Previously, I was confused (mind you, I'd been studying sense November) as to how to use innerHTML, document.getElementById() Method, definitely did not understand what "this" meant! and so much more. Well, I faithfully followed your guide and just kept at it.  So, this morning, I'm sitting here in Starbucks working on the material and I said to myself, " I actually am starting to understand this stuff!"   And I had to write you!  This course has been an eye opener!   If I were you, I'd market yourself so much more.  In fact, I am going to do a YouTube video on Javascript at some point and I will most definitely mention your course as a major source of any success I have to this point.  I know that this email has been long, but I just had to tell you my whole story and let you know what you have done for me in the way of learning Javascript.  I actually feel like someone that is on the verge of accomplishing great things.   Once again thank you."
+- Dominic H.
+
+Now that you've seen what other people are saying about Simple Steps JavaScript, I invite you to take a look at it for yourself.
+
+
+
