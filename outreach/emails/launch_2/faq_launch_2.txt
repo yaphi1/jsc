@@ -1,0 +1,66 @@
+
+
+I've answered some questions you might have
+
+
+
+
+
+Hi *|FNAME|*,
+
+I wanted to answer some common questions about the JavaScript course before it closes tomorrow night.
+
+The course is called Simple Steps JavaScript, and its purpose is to train you to do practical things with JavaScript as soon as possible.
+
+Here are the big questions:
+
+Q: "Why would I do Simple Steps JavaScript when there are so many other courses out there?"
+A: One of the most common things I hear about the most popular courses out there is that many people don't finish the material, don't remember what they learned, and aren't able to apply the material in real life.  I've built a course to fix these things, and I get thank you emails from customers telling me that they can finally remember and apply this stuff.
+
+
+Q: "Is the course right for me?"
+A: The course is right for you if you know enough HTML and CSS to style a div or a span using a class or an id, and you want to learn JavaScript.
+
+
+Q: "But what if I already know some JavaScript?"
+A: That's fine! The course will help you solidify the parts you know while guiding you into the things you don't.  However, the course is NOT right for you if you're already comfortable using all of the following JavaScript concepts: arrays, objects, DOM manipulation, loops, functions, variables, booleans, dates, timing, click events, keyboard events, input validation, regex, and the console.
+
+
+Q: "What sorts of things will I be able to do by the end of the course?"
+A: The course is structured to give you useful building blocks of knowledge to make what you want, and here are some examples:
+
+    Showing and hiding things when users click
+    Validating forms
+    Changing styles dynamically
+    Responding to user actions
+    Interactive games
+    Countdown timers
+    Calculation helpers
+    Much more stuff than I can list
+
+
+
+Q: "I'm busy! How will this course fit into my schedule?"
+A: The course is structured in small, convenient pieces that you can whenever it's convenient for you.
+
+
+Q: "How long do I have access to the course?"
+A: Once you get the course, it's yours for life. That way, you can take it at your own pace and refer back to it whenever you want.
+
+
+Q: "What if I'm not happy with the course?"
+A: Just email me any time within 60 days, and you'll get your money back in full.  That way, there's no risk in trying it, and you can see if you like it.  I stand behind this material, so if you're not 100% happy, I don't want a cent.
+
+
+
+Sign-up for Simple Steps JavaScript closes at 11:59pm Friday night, so here's the link to the course:
+
+https://javascript.simplestepscode.com/get-the-course/
+
+Best,
+
+Yaphi
+Simple Steps Code
+
+
+
