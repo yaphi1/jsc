@@ -1,0 +1,46 @@
+Subject:
+Does this sound familiar to you?
+
+
+
+
+Hi *|FNAME|*,
+
+If you're interested in learning JavaScript, I suggest you read this before 11:59pm tonight because that's when the course sign-up closes for Simple Steps JavaScript.
+
+Do any of the following statements sound familiar?
+
+"I want to learn JavaScript, but I feel overwhelmed."
+"The stuff makes sense as I'm learning, but I can't really apply it or put it together afterwards."
+"I can never remember the stuff I learn."
+"I'd like to learn JavaScript, but I can't find the time."
+"I try to follow along with tutorials, but I get lost."
+"When am I going to be able to do ____?  How do I get there?"
+"I try to learn by doing a simple project, but I get hopelessly lost and give up."
+“People seem to expect you to figure it out on your own.”
+
+For too many JavaScript learners, these statements are a reality.
+
+In the face of such challenges, there are two ways to go:
+
+1) Change nothing, and keep getting the same results.
+
+2) Take a different approach, and succeed faster.
+
+Unlike lots of other courses, Simple Steps JavaScript was designed so you would not just learn JavaScript, but actually remember it and be able to apply it.
+
+The key to this method is that I'd rather tell you one thing at a time and have you remember it than ten things and have you forget all of them.
+
+Anyways, the course closes tonight at 11:59pm, so if you want to learn JavaScript, now is the time.
+
+You can look at the course here:
+
+https://javascript.simplestepscode.com/get-the-course/
+
+Best,
+
+Yaphi
+Simple Steps Code
+
+
+
