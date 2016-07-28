@@ -18,6 +18,9 @@ personal ideas:
 - how to make a quiz in JavaScript (also useful for other things like product pricing estimates)
 - how to get unstuck when learning javascript
 
+- Projects Can Be the Worst Way to Learn JavaScript
+
+
 
 
 So far I really like the following ideas (from their list):

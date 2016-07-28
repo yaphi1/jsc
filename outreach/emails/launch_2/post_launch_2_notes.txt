@@ -34,3 +34,53 @@ Possible next steps:
 
 
 
+------------------
+
+notes from call:
+
+
+three revenue multipliers:
+	- average order value
+	- purchase frequency
+	- number of clients
+
+
+increase AOV:
+	- add upsell
+	- add another tier
+
+
+
+
+from traffic vault:
+- write about others
+- get ideas from your customers
+- track your competitors
+- help subscribers 1-on-1 and create case studies
+- become a regular on forums
+
+
+suggestions from primoz and marc:
+- consider podcasts
+- summits (events, etc): try to be a guest
+- ask for introductions from subscribers
+- try video interviews
+
+
+next steps:
+- increase traffic (this has no ceiling compared to other methods)
+	- maybe consider lifehacker again
+- add upsell
+- add new tier
+- maybe change price (there's elasticity there, so try to get it down to between 0.5% to 1%)
+- see what other course sellers are doing
+- maybe change blurb to js (on sitepoint)
+
+
+
+another question for later:
+	- how to balance timing with launch windows
+	- urgency creates more sales, but also there were a lot of people telling me they wanted the course but just were away that week when it came out
+	- consider lifetime guarantee to help with timing
+
+
