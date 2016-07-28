@@ -1,0 +1,36 @@
+post launch 2
+
+
+
+
+total subs: ~2000
+new subs: ~800
+
+sales: 16
+refunds: 1
+net: 15
+
+price: 99
+net profit: $1437 (after fees and refunds)
+
+net conversion of new subs: 1.75%
+
+
+avg value per new subscriber
+launch 1: $0.83 per sub
+launch 2: $1.79 per sub
+
+
+
+Possible next steps:
+- Survey list more for new product ideas
+- Add a tier or upsell
+- Update copy
+- Automate funnel
+- Do more guest posts
+- Create another product?
+
+
+
+
+
