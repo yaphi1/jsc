@@ -1,0 +1,16 @@
+
+
+
+challenges:
+
+- how to approach bigger js problems
+- ideas for js practice projects
+- responsiveness
+
+
+reasons:
+- timing
+- price
+- in other course
+- certain doubts not answered (need more demo, less vagueness in about text, etc)
+

@@ -1,0 +1,25 @@
+url parameter peer review notes
+
+
+
+
+doable within word count:
+
+edit regex
+	- change empty string to true
+	- check out ?= suggestion and [$] thingy
+
+shorten explanations
+
+make note of case-sensitivity choice
+
+
+
+
+hard to do within word count:
+
+explain regex
+
+deal with multiple same params (checkboxes, select multiple, etc)
+
+
