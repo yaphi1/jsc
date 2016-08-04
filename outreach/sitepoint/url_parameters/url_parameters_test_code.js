@@ -2,13 +2,87 @@
 
 
 
+// latest version
+
+function getAllUrlParams(url){
+	var s = url ? url.split('?')[1] : window.location.search.substr(1);
+	if(s) {
+		// split our query string into its component parts
+		var arr = s.split('&');
+		var obj = {};
+		for(var i=0; i<arr.length; i++) {
+			// separate the keys and the values
+			var a = arr[i].split('=');
+			
+			// in case params look like: list[]=thing1&list[]=thing2
+			var paramName = a[0].replace('[]','');
+
+			// set parameter value (use 'true' if empty)
+			var paramValue = typeof(a[1])==='undefined' ? true : a[1];
+			
+			// if parameter name already exists
+			if(obj[paramName]){
+				// convert to array (if still string)
+				if(typeof obj[paramName] === 'string'){
+					obj[paramName] = obj[paramName].split();
+				}
+				// add latest item to array
+				obj[paramName].push(paramValue);
+			}
+			// if param name doesn't exist yet, set it
+			else{
+				obj[paramName] = paramValue;
+			}
+		}
+		return obj;
+	}
+	else {
+		return {};
+	}
+}
+
+getAllUrlParams('http://example.com/?a=1&b=adsf&c=&d&whatever&abc=1');
+
+
+
+
+/*
+var url = http://example.com/?a=1&b=adsf&c=&d&whatever&abc=1;
+*/
+
+
+// now add in duplicate parameters and array parameters
+
+// add note about case sensitivity
+/*
+Use
+a[0].toLowerCase();
+a[1].toLowerCase();
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 // latest simplified versions
 function getUrlParameter(param){
-	var pattern = new RegExp('[?&]'+param+'((=([^&]*))|(?=[&$]))','i');
+	var pattern = new RegExp('[?&]'+param+'((=([^&]*))|(?=(&|$)))','i');
 	var m = window.location.search.match(pattern);
 	return m && ( typeof(m[3])==='undefined' ? '' : m[3] );
 }

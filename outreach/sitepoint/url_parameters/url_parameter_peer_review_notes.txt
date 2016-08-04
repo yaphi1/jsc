@@ -13,6 +13,9 @@ shorten explanations
 
 make note of case-sensitivity choice
 
+maybe convert to object?
+
+
 
 
 
@@ -21,5 +24,18 @@ hard to do within word count:
 explain regex
 
 deal with multiple same params (checkboxes, select multiple, etc)
+
+
+
+
+
+
+
+possible use cases:
+
+getUrlParameter(name);
+
+getAllUrlParameters(url);
+
 
 
