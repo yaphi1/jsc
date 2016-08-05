@@ -50,6 +50,10 @@ function getAllUrlParams(url){
 
 			// set parameter value (use 'true' if empty)
 			var paramValue = typeof(a[1])==='undefined' ? true : a[1];
+
+			// (optional) keep case consistent
+			paramName = paramName.toLowerCase();
+			paramValue = paramValue.toLowerCase();
 			
 			// if parameter name already exists
 			if(obj[paramName]){
@@ -99,56 +103,118 @@ getAllUrlParams('http://test.com/?a=abc').a; // 'abc'
 
 If you just wanted a function you could drop into your code, you're done now.  If you'd like to understand how the function works, read on.
 
-The following section assumes basic familiarity with JavaScript, so I've written [a quick guide to help you get up to speed](https://simplestepscode.com/learn-javascript/) in case you need it.
+The following section assumes you know some JavaScript, including functions, objects, and arrays. For anyone who’d find it helpful, I’ve written a [quick roadmap](https://simplestepscode.com/learn-javascript/) of which things to learn to do practical things with JavaScript as soon as possible.
 
 
 ##How the Function Works
 
 Overall, the function takes a URL's query string (the part after the `?` and before the `#`) and spits out the data in a neat object.
 
-
+First, this line says, if we've specified a URL, get everything after the question mark, but otherwise, just use the URL of the window.
 
 ```javascript
-
-
+var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
 ```
 
+Next, we'll create an object to store our parameters.
 
-explain function line-by-line
+```javascript
+var obj = {};
+```
 
-mention case sensitivity preference
+If the query string exists, we'll start parsing it.  First we have to make sure to shave off the part starting from the `#` since it's not part of the query string.
 
+```javascript
+queryString = queryString.split('#')[0];
+```
 
+Now we can split the query string into its component parts.
+```javascript
+var arr = queryString.split('&');
+```
 
-// get query string from url (optional) or window
-// we'll store the parameters here
-// if query string exists
-	// stuff after # is not part of query string, so get rid of it
-	// split our query string into its component parts
+That will give us an array that looks like this:
+```javascript
+['product=shirt', 'color=blue', 'newuser', 'size=m']
+```
 
-		// separate the keys and the values
-		// in case params look like: list[]=thing1&list[]=thing2
-		// set parameter value (use 'true' if empty)
+Next we'll loop through this array and split each item into a key and a value, which we'll soon put into our object.
+```javascript
+var a = arr[i].split('=');
+```
 
-		// if parameter name already exists
-			// convert value to array (if still string)
-			// if no array index number specified...
-				// put the value on the end of the array
-			// if array index number specified...
-				// put the value at that index number
-		// if param name doesn't exist yet, set it
+We'll need to deal with duplicate parameters or array parameters like these:
 
+```text
+colors=red&colors=green&colors=blue
 
+colors[]=red&colors[]=green&colors[]=blue
 
+colors[0]=red&colors[2]=green&colors[5]=blue
+```
 
+To deal with duplicates and arrays, first we'll set the parameter's index number as `undefined` by default.  Then we'll replace anything in the parameter name that is zero or more digits within square brackets (so `[]` or `[2]` or `[45]`).  As we replace, we'll record if there's an existing index number.
 
+```javascript
+var paramNum = undefined;
+var paramName = a[0].replace(/\[\d*\]/, function(v){
+	paramNum = v.slice(1,-1);
+	return '';
+});
+```
+
+Now we'll set the parameter value.  If there isn't one, we'll set it to true to indicate that the parameter name exists.  Feel free to change this depending on your use case.
+
+```javascript
+var paramValue = typeof(a[1])==='undefined' ? true : a[1];
+```
+
+Optionally, you can set all parameter names and values to lowercase.  That way, you can avoid situations where someone sends traffic to a url with `example=TRUE` instead of `example=true` and your script breaks (I've seen this happen).  However, if your query string needs to be case sensitive, feel free to omit this part:
+
+```javascript
+paramName = paramName.toLowerCase();
+paramValue = paramValue.toLowerCase();
+```
+
+If a parameter name already exists at this step in our loop, then we need to put the value in an array like so:
+
+```javascript
+// if parameter name already exists
+if(obj[paramName]){
+
+	// convert value to array (if still string)
+	if(typeof obj[paramName] === 'string'){
+		obj[paramName] = [obj[paramName]];
+	}
+
+	// if no array index number specified...
+	if(typeof paramNum === 'undefined'){
+		// put the value on the end of the array
+		obj[paramName].push(paramValue);
+	}
+
+	// if array index number specified...
+	else{
+		// put the value at that index number
+		obj[paramName][paramNum] = paramValue;
+	}
+}
+```
+
+If the parameter name doesn't exist yet, we'll simply create it and set it to the correct value.
+
+```javascript
+obj[paramName] = paramValue;
+```
+
+Finally, we return our object with the parameters and values.
 
 If your URL has any encoded special characters like spaces (encoded as `%20`), you can also decode them to get the original value like this:
 
 ```javascript
 // assume a url parameter of test=a%20space
 
-var original = getUrlParameter('test'); // 'a%20space'
+var original = getAllUrlParams().test; // 'a%20space'
 var decoded = decodeURIComponent(original); // 'a space'
 ```
 
@@ -160,6 +226,6 @@ Anyways, congrats! Now you know how to get a URL parameter, and you might have p
 
 The code in this article works for the most common use cases where you would get a URL query parameter.  If you are working with any edge cases such as uncommon separators or special formatting, then be sure to test and adjust accordingly.
 
-If you want to do more with URLs, you can try out certain libraries including [jQuery URL plugin](https://plugins.jquery.com/url/) and [Medialize URI.js](http://medialize.github.io/URI.js/).  Whether you use your own code or go with a library, make sure to check everything to make sure it works for your use cases.
+If you want to do more with URLs, there are certain libraries including [jQuery URL plugin](https://plugins.jquery.com/url/) and [Medialize URI.js](http://medialize.github.io/URI.js/).  Since it's string manipulation, it often makes the most sense to just use plain JavaScript.  Whether you use your own code or go with a library, make sure to check everything to make sure it works for your use cases.
 
 
