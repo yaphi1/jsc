@@ -1,0 +1,28 @@
+
+title
+
+Projects Can Sometimes Be the Worst Way to Learn JavaScript
+
+
+
+
+
+outline
+
+
+- the common phrase that often spells doom
+	- I'll make a quick slideshow/quiz/etc
+	- sounds simple, but it's not at first
+
+- too much too soon
+	- complexity, lots of stuff
+	- discouragement or get through it and don't remember anything; don't feel comfortable applying etc
+	- important to stretch beyond one's comfort zone, but at the beginning, it's hard to know what's too far
+
+what to do instead
+	- small pieces of functionality first
+
+when are projects helpful
+
+conclusion
+

@@ -1,0 +1,135 @@
+Projects Can Sometimes Be the Worst Way to Learn JavaScript
+
+
+
+One of the most surprisingly dangerous pieces of advice to JavaScript learners is to "just do projects."
+
+Projects can be a great way to learn any coding language, but problems arise when people do the wrong projects at the wrong time.
+
+But everyone learns differently, so how can a project be "wrong?"
+
+I'll explain.
+
+
+## The Common Phrase that Often Leads to Failure
+
+One of the most common things I hear from people who want to learn JavaScript is, "I'll just make a quick slideshow."
+
+They'll try to make the slideshow, and one of two things will usually happen.
+
+1. It'll be too hard, and they tell themselves they'll "come back to it later" which often means giving up forever.
+
+2. They'll succeed in creating the slideshow, but since they had to cover so much at once, they won't remember any of it or be able to apply it afterwards.
+
+Why does this happen?
+
+
+
+## Too Much Too Soon
+
+JavaScript learners often pick a slideshow as their first project because it sounds simple.
+
+Once they attempt it, they discover it's much harder than they thought.  Making a slideshow might involve arrays, functions, loops, animation, timing, event listeners, DOM manipulation and more.  This can be an overwhelming number of new concepts for someone who is starting out.
+
+Suddenly, this project that was supposed to be easy is too difficult.  That difference from the orignal expectation creates a nasty psychological effect.  "If I can't do this easy thing," learners tell themselves, "then maybe I'm just not cut out for JavaScript."
+
+Alternatively, some people will succeed in creating a slideshow, but it'll be cobbled together with a ton of help from tutorials and relatively little understanding of what's happening.  In those cases, you frequently hear phrases like, "I was able to follow along with the tutorial, but then I couldn't apply any of it on my own."
+
+Either way, the end result is often a feeling of discouragement that can lead to the "I'll do it later" trap.  This trap is particularly dangerous because it doesn't sound like that big of a deal.  There's no permanence in saying "later," so it's easy to commit to.  Too often, "later" becomes "never."
+
+These scenarios happen not just with slideshows but other projects that learners will attempt too soon.  For example, a to-do list sounds simple, but that can be a full-stack project if the data is to be saved outside the browser's local storage or cookies.
+
+When someone is starting to learn JavaScript, it can be hard to identify the difficulty level of a project beforehand, and that's the source of the trouble.
+
+
+## Which Projects Often Hinder Learning
+
+In order to make this discussion more concrete, here are some specific, simple-sounding projects people often attempt too early and the concepts that are actually involved.
+
+Project: Quiz
+Concepts involved: Arrays, objects, forms, event listeners
+
+Project: To-do list
+Concepts involved: Arrays, objects, some form of storage (front-end or back-end), DOM manipulation, event listeners
+
+Project: A "little social network"
+Concepts involved: This is a full-stack project that, in addition to front-end JavaScript, involves back-end concepts including databases, authentication, security, user management, etc.
+
+### What's the Point?
+
+The point of this section is not to scare you off from attempting new things.  You can arrive at some of these projects faster than you'd expect as long as you don't start with them from the beginning.
+
+All you need is a better approach.
+
+
+## How to Learn More Effectively
+
+Instead of jumping directly into big projects, try learning the smallest pieces of functionality first.  Show text inside a div with `innerHTML`.  Change the color of a paragraph's text.  Add two numbers together.  Write your first function.  Get comfortable with variables.  Store a collection of things in an array or an object.  Make something happen when a button gets clicked.  Learn about logic with `if` and `else`.  Try some loops.
+
+Play with these concepts and get comfortable with them.  You'll soon find yourself able to create lots of things.  In addition, your newfound experience will make you much better at deciding which projects to do.  As you see yourself succeed more, your confidence will grow, and the momentum will carry you forward much faster than trying to rush into a big project at the beginning.
+
+To be clear, challenges are important because they help you grow.  It's great to stretch beyond your comfort zone but not so far that it actually gets in the way of your progress.
+
+
+## Examples of Doable Projects
+
+JavaScript learners have often told me they want to do projects, but they can't come up with ideas.  Here are some examples of mini-projects you can do as you learn each concept.
+
+
+New concepts learned:
+Variables, functions
+
+Possible mini-project:
+- Create a greeting function that takes your name from a variable and displays a greeting to you on the page.
+
+
+New concepts learned:
+Click handling, changing a class
+
+Possible mini-projects:
+- Create a "more information" button that makes a blurb of information appear or disappear.
+- Create two theme selection buttons.  When you click either one of them, a bunch of stuff on the page changes colors and styles to fit a theme.
+
+
+New concepts learned:
+If statements, random numbers
+
+Possible mini-project:
+- Create a game where there are two doors and you have to click on the correct one to get the prize.
+
+
+New concepts learned:
+Get a text input value, JavaScript arithmetic
+
+Possible mini-project:
+- Create a restaurant tip calculator
+
+
+New concepts learned:
+Arrays, loops
+
+Possible mini-project:
+- Create the front end of a social posting site.  Use an array to hold a list of text posts.  Loop through that array to display the posts.
+
+
+
+### Where Is This Going?
+
+Notice that we've done things in a different order this time.  Instead of starting with a project and trying to play catch-up with the required concepts, we've started with the concepts and built projects based on those.
+
+This has a profound impact on how you learn because instead of jumping too far ahead and feeling behind, you learn the foundations that let you move forward confidently at each step.  The little things you learn build on each other, and soon enough, you arrive at the bigger projects you wanted to do in the first place.
+
+
+
+
+Key Takeaways
+
+Going back to our original question, what makes a project "right" or "wrong," and what does that question even mean?
+
+Simple. A project is right for you if it helps you to learn, and it's wrong for you if it gets in your way.
+
+People often stumble and give up because they attempt too much too early.  If there's one thing I want you to remember from this article, it's this:
+
+Trying to learn ten things at once is the fastest way to learn zero things.
+
+
