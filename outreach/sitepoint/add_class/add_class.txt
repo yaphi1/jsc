@@ -1,0 +1,296 @@
+
+Add or Remove a Class Without jQuery
+
+
+
+Sometimes you need to add or remove a CSS class with JavaScript, and you don't want to include an entire library like jQuery to do it.
+
+There are two approaches to this.  One is to modify the className property.  This approach is widely compatible, so you can feel safe using it in production.
+
+The other approach is to modify the classList property.  This approach is more convenient, but the fact that it's more modern means it's not compatible with IE9.
+
+We'll start with the compatible version first.
+
+
+
+## Modifying Classes the Compatible Way
+
+The JavaScript `className` property lets you access the `class` attribute of an HTML element.  Some string manipulation will let us add and remove classes.
+
+### Add a Class
+
+To add a class, we'll write a function that takes in the elements we want to change and adds a specified class to all of them.
+
+```javascript
+function addClass(elements, myClass){
+	// if there are no elements, do nothing
+	if(!elements) return;
+
+	// if we have a selector, get the chosen elements
+	if(typeof(elements)==='string'){
+		elements = document.querySelectorAll(elements);
+	}
+
+	// if we have only one dom element, make it an array to simplify behavior
+	else if(!elements.length){ elements=[elements]; }
+	
+	// add class to all chosen elements
+	for(var i=0; i<elements.length; i++){
+		if(!(' '+elements[i].className+' ').indexOf(' '+myClass+' ') > -1){
+			elements[i].className += ' ' + myClass;
+		}
+	}
+}
+```
+
+You'll see how the function works soon, but to watch the function in action, feel free to use this CSS:
+
+```css
+.red{
+	background: red;
+}
+
+.highlight{
+	background: gold;
+}
+```
+
+...and this HTML:
+
+```html
+<div id="iddiv" class="highlight">ID div</div>
+
+<div class="classdiv">Class div</div>
+<div class="classdiv">Class div</div>
+<div class="classdiv">Class div</div>
+```
+
+Here are some usage examples of the function itself:
+
+addClass('#iddiv','highlight');
+addClass('.classdiv','highlight');
+
+addClass(document.getElementById('iddiv'),'highlight');
+addClass(document.querySelector('.classdiv'),'highlight');
+addClass(document.querySelectorAll('.classdiv'),'highlight');
+
+Notice that you can identify the HTML elements you want to change through a selector or you can directly put in the elements themselves.
+
+
+### How Our addClass Function Works
+
+Our addClass function first takes two parameters: the HTML elements we want to modify and the class we want to add.  Our goal is to loop through each HTML element, make sure the class is not already there, and then add the class.
+
+If there are no elements, we tell the function to simply return.  Nothing to do here.
+
+```javascript
+// if there are no elements, do nothing
+if(!elements) return;
+```
+
+If we've chosen to identify our HTML elements through a selector such as `#iddiv` or `.classdiv`, then we can use `querySelectorAll` to grab all of our desired elements.
+
+```javascript
+// if we have a selector, get the chosen elements
+if(typeof(elements)==='string'){
+	elements = document.querySelectorAll(elements);
+}
+```
+
+However, if the HTML elements are fed into the function directly, then we don't need to do much more.  In many cases we can simply loop through the elements, but if there is only one element specified (as with `document.getElementById()`), then we need to turn it into an array.  That way we can use the same loop for everything, which simplifies our code.
+
+```javascript
+// if we have only one dom element, make it an array to simplify behavior
+else if(!elements.length){ elements=[elements]; }
+```
+
+Now that we have our elements in a format we can loop through, we'll go through each one, check if the class is already there, and if not, we'll add the class.
+
+```javascript
+// add class to all chosen elements
+for(var i=0; i<elements.length; i++){
+	if(!(' '+elements[i].className+' ').indexOf(' '+myClass+' ') > -1){
+		elements[i].className += ' ' + myClass;
+	}
+}
+```
+
+Notice we're adding a space at the beginning and end in order to simplify the pattern we're looking for and avoid needing a regular expression.
+
+In any case, we're done!  You can now add a class.
+
+
+
+### Remove a Class
+
+To remove a class, we can use the following function:
+
+```javascript
+function removeClass(elements, myClass){
+	// if there are no elements, do nothing
+	if(!elements) return;
+
+	// if we have a selector, get the chosen elements
+	if(typeof(elements)==='string'){
+		elements = document.querySelectorAll(elements);
+	}
+	
+	// if we have only one dom element, make it an array to simplify behavior
+	else if(!elements.length){ elements=[elements]; }
+	
+	// remove class from all chosen elements
+	for(var i=0; i<elements.length; i++){
+		var reg = new RegExp('(^| )'+myClass+'($| )','g');
+		elements[i].className = elements[i].className.replace(reg,' ');
+	}
+}
+```
+
+If you looked through the `addClass` function, you'll notice this `removeClass` function has a lot of similarities.  For example, its usage works the same way as our `addClass` examples earlier except you'd replace `addClass` with `removeClass`.
+
+Most of the function works the same way by gathering the desired HTML elements and looping through them.  The only difference is the part where the class gets removed.
+
+Here's the class removal in more detail:
+
+```javascript
+// remove class from all chosen elements
+for(var i=0; i<elements.length; i++){
+	var reg = new RegExp('(^| )'+myClass+'($| )','g');
+	elements[i].className = elements[i].className.replace(reg,' ');
+}
+```
+
+For each element, we're creating a regular expression to look for all instances of our desired class.  The expression `'(^| )'+myClass+'($| )'` means the beginning or a space followed by `myClass` followed by the end or a space.  The `'g'` means global match, which tells our regular expression to find all instances of the pattern.  That way, we ensure the class is completely removed even if it has somehow ended up on an element multiple times by accident.
+
+Next, we make use of our regular expression by replacing all matches with a space.  That way, class names in the middle of the list will remain separated, and there's no harm done if the removed class is on the ends.
+
+
+
+
+
+
+compatibility of querySelectorAll
+
+
+
+
+## Modifying Classes the Modern Way
+
+
+
+
+
+
+
+
+
+
+
+
+
+notes:
+
+
+add/remove class w/o jquery
+
+reason for doing this without a library
+
+versions:
+- robust compatible version
+- modern version
+
+
+
+
+compatible version
+
+
+
+function addClass(elements, myClass){
+	// if there are no elements, do nothing
+	if(!elements) return;
+
+	// if we have a selector, get the chosen elements
+	if(typeof(elements)==='string'){
+		elements = document.querySelectorAll(elements);
+	}
+
+	// if we have only one dom element, make it an array to simplify behavior
+	else if(!elements.length){ elements=[elements]; }
+	
+	// add class to all chosen elements
+	for(var i=0; i<elements.length; i++){
+		if(!(' '+elements[i].className+' ').indexOf(' '+myClass+' ') > -1){
+			elements[i].className += ' ' + myClass;
+		}
+	}
+}
+
+
+function removeClass(elements, myClass){
+	// if there are no elements, do nothing
+	if(!elements) return;
+
+	// if we have a selector, get the chosen elements
+	if(typeof(elements)==='string'){
+		elements = document.querySelectorAll(elements);
+	}
+	
+	// if we have only one dom element, make it an array to simplify behavior
+	else if(!elements.length){ elements=[elements]; }
+	
+	// remove class from all chosen elements
+	for(var i=0; i<elements.length; i++){
+		var reg = new RegExp('(^| )'+myClass+'($| )','g');
+		elements[i].className = elements[i].className.replace(reg,' ');
+	}
+}
+
+lyrx look up later:
+i nvr wnt to c ur fce (or maybe evrn cn c ur fce)
+evrthng's gng 2 b ok
+
+
+
+
+modern versions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From Craig Buckler article
+
+https://www.sitepoint.com/jquery-vs-raw-javascript-2-css3-animation/
+
+Fortunately, modern browsers now offer a new classList property which implements a DOMTokenList — an array-like collection of all classes applied to a node. The following properties are available:
+
+    length — the number of class names applied
+    item(index) — the class name at a specific index
+    contains(class) — returns true if a node has that class applied
+    add(class) — applies a new class to the node
+    remove(class) — removes a class from the node
+    toggle(class) — removes or adds a class if it’s applied or not applied respectively
+
+We can use this in preference to the clunkier className property:
+
+document.getElementById("myelement").classList.add("myclass");
+
+classList is supported by most browsers except IE9. Fortunately, a couple of shims are available which could be conditionally loaded in that browser.
+

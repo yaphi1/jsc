@@ -70,7 +70,7 @@ function removeClass(elements, myClass){
 	}
 	else if(!elements.length){ elements=[elements]; }
 	for(var i=0; i<elements.length; i++){
-		var reg = new RegExp('(^| )'+myClass+'($| )','ig');
+		var reg = new RegExp('(^| )'+myClass+'($| )','g');
 		elements[i].className = elements[i].className.replace(reg,' ');
 	}
 }
@@ -144,7 +144,7 @@ function removeClass(elements, myClass){
 	
 	// remove class from all chosen elements
 	for(var i=0; i<elements.length; i++){
-		var reg = new RegExp('(^| )'+myClass+'($| )','ig');
+		var reg = new RegExp('(^| )'+myClass+'($| )','g');
 		elements[i].className = elements[i].className.replace(reg,' ');
 	}
 }
