@@ -1,0 +1,39 @@
+
+Subject:
+Something that wrecks the CSS on many sites
+
+
+
+There's one thing I've seen destroy the CSS on lots of professionally produced sites:
+
+Overly complicated media queries.
+
+A CSS media query lets you assign different styles for different screen widths.
+
+This is great!  But it's too easy to go overboard.
+
+Ideally, you'd want as few media queries as possible.  Personally, I like to start with a mobile page that works for any width (even if it starts to look a bit stretched out), then put in a min-width media query that says something like "If the screen is at least 700px wide, apply the following styles."  Sometimes, I'll leave it at that, but other times, I'll add something for 1000px or whatever makes the most sense.
+
+I'm not prescribing any specific methods here; all I'm saying is that the fewer media queries you use, the easier of a time you'll have.
+
+In a related point, one way of overcomplicating your media queries is to use what I like to call a "media query sandwich."
+
+The media query sandwich attempts to target specific ranges of widths.  For example, between 640px and 960px do this, but between 1020px and 1260px, do that.  Once you start targeting ranges like that, you run the risk of missing spots or overlapping spots with weird style collisions.
+
+This alone has been responsible for so many of the website bloopers I've seen throughout the internet.
+
+To be clear, these aren't ironclad rules.  You might find yourself needing to target a range of widths, for example (but maybe do that as a last resort).
+
+In any case, the main point is:
+
+Keep your media queries few and simple.
+
+Your sites will be easier to plan, easier to build, easier to maintain, and less likely to break.
+
+I hope this helps!
+
+Best,
+
+Yaphi
+Simple Steps Code
+
