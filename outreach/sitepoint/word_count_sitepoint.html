@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+body{
+	margin: 0px;
+	font-size:20px;
+	font-family:sans-serif;
+	color:#333;
+}
+textarea{
+	width: 700px;
+	height: 500px;
+}
+</style>
+
+</head>
+<body>
+
+<div>Paste here:</div>
+<textarea id="input"></textarea>
+<button id="btn">Count</button>
+<div>
+	Word count: <span id="output"></span>
+</div>
+
+test
+<textarea id="test"></textarea>
+
+<script>
+var textbox = document.getElementById('input');
+var btn = document.getElementById('btn');
+var output = document.getElementById('output');
+
+var test = document.getElementById('test');
+
+
+btn.onclick = function(){
+	var text = textbox.value;
+
+	text = text.replace(/```[^`]+```/g,'');
+	test.innerHTML = text;
+
+	output.innerHTML = text.match(/\b/g).length / 2;
+};
+
+</script>
+</body>
+</html>
