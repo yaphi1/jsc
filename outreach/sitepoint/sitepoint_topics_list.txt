@@ -8,6 +8,8 @@ personal ideas:
 	- using && to check for existence before using (window.requestAnimationFrame && requestAnimationFrame() || setTimeout())
 	- match with capturing groups
 	- map and reduce
+    - iifes
+    - pure functions
 - fun with javascript text to speech engine (chrome)
 - common things with regex
 - [already exists on sitepoint] quick tip: how to verify an email with javascript regex
@@ -17,6 +19,8 @@ personal ideas:
 - [already exists] how to use requestAnimationFrame
 - how to make a quiz in JavaScript (also useful for other things like product pricing estimates)
 - how to get unstuck when learning javascript
+- create a product filter in JS
+- js project ideas [maybe even collect project ideas from influencers/experts]
 
 - Projects Can Be the Worst Way to Learn JavaScript
 

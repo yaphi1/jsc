@@ -7,18 +7,18 @@ total subs: ~2000
 new subs: ~800
 
 sales: 17
-refunds: 1
-net: 16
+refunds: 2
+net: 15
 
 price: 99
-net profit: $1532 (after fees and refunds)
+net profit: $1437 (after fees and refunds)
 
-net conversion of new subs: 2%
+net conversion of new subs: 1.875%
 
 
 avg value per new subscriber
 launch 1: $0.83 per sub
-launch 2: $1.91 per sub
+launch 2: $1.85 per sub
 
 
 

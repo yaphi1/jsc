@@ -1,0 +1,25 @@
+
+Someone brought up a good point about last week's email
+
+
+
+
+Last week I sent out an email discussing how too many media queries can ruin a site.
+
+A friend and accomplished developer pointed out that sometimes a project requires more complexity.
+
+That's true!
+
+I should have phrased my original point better.  Yes, you normally want to keep your media queries as simple as you can, but not to the point where it gets in the way of your project.
+
+This brings up a really important point.
+
+As you progress in web development, you'll start hearing more and more about the "right way" to do things.  A lot of these recommendations will be good advice based on sound reasoning and solid experience.
+
+However, there will be situations where the prevailing wisdom doesn't apply.
+
+For that reason, it's helpful to take the time to understand the principles you hear.  That way, you'll be able to intelligently evaluate what makes sense for your projects instead of blindly applying a principle just because someone else told you it was the right thing to do.
+
+I hope this helps!
+
+

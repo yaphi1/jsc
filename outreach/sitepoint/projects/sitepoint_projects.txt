@@ -19,7 +19,7 @@ They'll try to make the slideshow, and one of two things will usually happen.
 
 1. It'll be too hard, and they tell themselves they'll "come back to it later" which often means giving up forever.
 
-2. They'll succeed in creating the slideshow, but since they had to cover so much at once, they won't remember any of it or be able to apply it afterwards.
+2. They'll succeed in creating the slideshow, but since they had to cover so much material at once, they won't remember any of it or be able to apply it afterwards.
 
 Why does this happen?
 
@@ -126,10 +126,11 @@ Key Takeaways
 
 Going back to our original question, what makes a project "right" or "wrong," and what does that question even mean?
 
-Simple. A project is right for you if it helps you to learn, and it's wrong for you if it gets in your way.
+Simple. A project is right for you if it helps you to learn, and it's wrong for you if it hinders your learning.
 
 People often stumble and give up because they attempt too much too early.  If there's one thing I want you to remember from this article, it's this:
 
 Trying to learn ten things at once is the fastest way to learn zero things.
+
 
 

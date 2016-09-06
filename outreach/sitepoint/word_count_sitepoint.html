@@ -25,27 +25,30 @@ textarea{
 <textarea id="input"></textarea>
 <button id="btn">Count</button>
 <div>
-	Word count: <span id="output"></span>
+	Word count: <span id="count"></span>
 </div>
 
-test
-<textarea id="test"></textarea>
+output
+<textarea id="output"></textarea>
 
 <script>
 var textbox = document.getElementById('input');
 var btn = document.getElementById('btn');
-var output = document.getElementById('output');
+var count = document.getElementById('count');
 
-var test = document.getElementById('test');
+var output = document.getElementById('output');
 
 
 btn.onclick = function(){
 	var text = textbox.value;
 
-	text = text.replace(/```[^`]+```/g,'');
-	test.innerHTML = text;
+	// remove code snippets and urls
+	text = text.replace(/```[^`]+```/g,'')
+				.replace(/https*:[^\s]+/ig,'');
 
-	output.innerHTML = text.match(/\b/g).length / 2;
+	output.innerHTML = text;
+
+	count.innerHTML = text.match(/\b/g).length / 2;
 };
 
 </script>
