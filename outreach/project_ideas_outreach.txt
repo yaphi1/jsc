@@ -1,0 +1,65 @@
+
+
+
+
+
+
+css-tricks
+
+create svg icons
+hand-code ____ in svg
+(tie-in to svg book)
+
+
+draft letter:
+
+
+I hope all's well!
+
+I'm planning to make a post on my site featuring a collection of front-end portfolio project ideas from the experts.
+
+I figured I'd reach out to you to see if you'd be willing to suggest one project idea for people who are learning front-end web development (more would be great too, but I'd be thrilled with even one).
+
+Since I'd like this to take as little of your time as possible, here are some fill-in-the-blanks answers you can use if you'd like:
+
+- Hand-code [something] in SVG.
+- Re-create [cool CodePen demo]
+- Build a [common UI component]
+- Look at [website] for inspiration
+
+Ideally this will be beneficial for the readers (a very popular question is being answered) and for the contributors (cross-pollination of audiences).
+
+I plan to tie in a link to whatever you'd like (your SVG book, for example), so let me know if this sounds good!
+
+Best,
+
+Yaphi
+
+
+
+
+
+
+learntocodewith.me
+
+
+
+sitepoint
+
+
+
+webdesignerdepot
+
+
+
+skillcrush
+
+
+
+smashing mag?
+a list apart?
+treehouse?
+udemy?
+onemonth?
+lynda?
+

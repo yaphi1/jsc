@@ -1,0 +1,21 @@
+
+algorithm patterns
+
+
+greedy algorithm approach:
+- try to walk through once, finding best answer so far
+- what other values do we need to keep updated in order to maintain the best answer so far?
+
+
+
+when in doubt, try a hash map (think it's constant, but check time complexity)
+
+
+
+when unsure, write out naive solution and look for repeated steps to eliminate
+
+
+
+sometimes walk through a problem once forwards and once backwards
+
+

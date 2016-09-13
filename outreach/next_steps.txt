@@ -3,9 +3,16 @@ next steps
 
 
 current:
-- pay attention to what you paste (addthis example where I get everyone's data)
-- canvas email
-- harness power of distractions
+
+- front end project ideas (get experts)
+- dangers of js projects (sitepoint)
+- js project ideas (sitepoint)
+
+
+
+
+
+
 
 
 upcoming:
