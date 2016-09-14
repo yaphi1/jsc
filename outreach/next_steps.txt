@@ -8,7 +8,7 @@ current:
 - dangers of js projects (sitepoint)
 - js project ideas (sitepoint)
 
-
+- quiz article (sitepoint)
 
 
 

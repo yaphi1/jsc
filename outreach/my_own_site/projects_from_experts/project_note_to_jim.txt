@@ -1,0 +1,24 @@
+Hey Jim,
+
+I hope all's well!
+
+I'm planning to make a post on my site featuring a collection of front-end portfolio project ideas from the experts.
+
+I figured I'd reach out to you to see if you'd be willing to suggest one project idea for people who are learning front-end web development (more would be even better, but I'd still be thrilled with one).
+
+Since I'd like this to take as little of your time as possible, here are some fill-in-the-blanks answers you can use if you'd like:
+
+- Hand-code [something] in SVG.
+- Re-create [cool CodePen demo]
+- Build a [common UI component]
+- Look at [website] for inspiration
+
+So far, I've reached out to Chris Coyier, who replied essentially that learners can practice by copying websites they like.  That's the only taken idea, so anything else is fair game.
+
+Ideally this will be beneficial for the community (a very popular question is being answered) and for the contributors (cross-pollination of audiences).
+
+I plan to tie in a link to whatever you'd like, so let me know if this sounds good!
+
+Best,
+
+Yaphi
