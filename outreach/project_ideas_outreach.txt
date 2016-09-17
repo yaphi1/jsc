@@ -40,19 +40,25 @@ Yaphi
 
 
 
-learntocodewith.me
 
-
+done:
 
 sitepoint
-
-
 
 webdesignerdepot
 
 
 
+
+to do:
+
+interviewcake
+
+learntocodewith.me
+
 skillcrush
+
+soueidan
 
 
 

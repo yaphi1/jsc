@@ -47,10 +47,10 @@ When someone is starting to learn JavaScript, it can be hard to identify the dif
 In order to make this discussion more concrete, here are some specific, simple-sounding projects people often attempt too early and the concepts that are actually involved.
 
 Project: Quiz
-Concepts involved: Arrays, objects, forms, event listeners
+Concepts involved: Arrays, objects, functions, forms, event listeners
 
 Project: To-do list
-Concepts involved: Arrays, objects, some form of storage (front-end or back-end), DOM manipulation, event listeners
+Concepts involved: Arrays, objects, functions, some form of storage (front-end or back-end), DOM manipulation, event listeners
 
 Project: A "little social network"
 Concepts involved: This is a full-stack project that, in addition to front-end JavaScript, involves back-end concepts including databases, authentication, security, user management, etc.
@@ -126,11 +126,11 @@ Key Takeaways
 
 Going back to our original question, what makes a project "right" or "wrong," and what does that question even mean?
 
-Simple. A project is right for you if it helps you to learn, and it's wrong for you if it hinders your learning.
+There's no easy answer, but here's my attempt at a starting point: A project is right for you if it helps you to learn, and it's wrong for you if it completely stops you from learning.
 
 People often stumble and give up because they attempt too much too early.  If there's one thing I want you to remember from this article, it's this:
 
-Trying to learn ten things at once is the fastest way to learn zero things.
+Trying to learn a hundred things at once can be the fastest way to learn zero things.
 
 
 

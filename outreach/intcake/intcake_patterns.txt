@@ -19,3 +19,14 @@ when unsure, write out naive solution and look for repeated steps to eliminate
 sometimes walk through a problem once forwards and once backwards
 
 
+when dealing with numbers, don't forget negatives and zero (also, really huge numbers can cause integer overflows where the number is too big for the memory allocated for it)
+
+
+sometimes an intermediate RESULT is more important than intermediate VALUES. for example we might need to keep track of highest number and product of highest two numbers (instead of keeping track of highest and second highest).  that way we can test for the bigger number instead of having to maintain an order of items
+
+
+for each iteration in a greedy algorithm, go through each value we need to keep updated and ask:
+do we have a new best [value]?
+
+
+

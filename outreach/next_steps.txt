@@ -5,7 +5,15 @@ next steps
 current:
 
 - front end project ideas (get experts)
-- dangers of js projects (sitepoint)
+	- getting experts one at a time in order to have list of projects
+	- can still draft personalized notes
+
+	- while waiting for responses:
+		- prepare on-post opt-in forms
+		- add intermediate content to course
+
+
+- dangers of js projects (sitepoint) [done, need to submit next]
 - js project ideas (sitepoint)
 
 - quiz article (sitepoint)
@@ -29,19 +37,18 @@ useful things in js:
 - reduce
 - event delegation
 
+
 intermediate-advanced js:
 - closures
 - recursion
 - high performance animations
+- object oriented vs functional
+- js interview questions
+
 
 email at least once per week
 next up:
 - css specificity wars
-- learning canvas and time it took vs procrastination
 
 
-update sales page
-- testimonials
-- new course length and content
-- get critique
 
