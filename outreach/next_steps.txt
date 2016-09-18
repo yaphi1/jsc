@@ -28,14 +28,31 @@ upcoming:
 update course
 
 useful things in js:
+
+events:
 - event object
-- iifes
-- event listeners
+- event delegation
+- multiple event listeners
+
+
+client-side storage:
 - cookies
+- local storage
+
+array methods:
+- filter
 - map
 - sort
 - reduce
-- event delegation
+
+functional concepts:
+- iifes
+- closures
+- recursion
+- functions as first-class objects
+- partially applied functions
+
+
 
 
 intermediate-advanced js:
@@ -44,6 +61,13 @@ intermediate-advanced js:
 - high performance animations
 - object oriented vs functional
 - js interview questions
+- es6
+- ajax
+- jsonp
+- api calls
+- type coersion
+
+
 
 
 email at least once per week

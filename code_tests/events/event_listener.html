@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+body{
+	margin: 0px;
+	font-size:20px;
+	font-family:sans-serif;
+	color:#333;
+}
+
+</style>
+
+</head>
+<body>
+
+<button id="btn">Button</button>
+
+<script>
+var btn = document.getElementById('btn');
+
+function doThing(){
+	console.log('thing');
+}
+
+btn.addEventListener('click', doThing);
+
+
+
+
+function doOtherThing(){
+	console.log('other thing');
+}
+
+btn.addEventListener('click', doOtherThing);
+
+</script>
+</body>
+</html>
