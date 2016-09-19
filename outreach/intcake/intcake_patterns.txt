@@ -29,4 +29,4 @@ for each iteration in a greedy algorithm, go through each value we need to keep 
 do we have a new best [value]?
 
 
-
+sometimes the order of items can matter. check if a problem can be made easier by sorting
