@@ -31,6 +31,8 @@ body{
 
 <div id="box"></div>
 
+<input id="mytext">
+
 <script>
 var btn = document.getElementById('btn');
 var box = document.getElementById('box');
@@ -47,6 +49,13 @@ window.onclick = function(e){
 
 	box.style.transform = 'translate('+e.pageX+'px,'+e.pageY+'px)';
 };
+
+
+window.onkeydown = function(e){
+	console.log(e);
+	console.log(e.keyCode);
+};
+
 
 </script>
 </body>

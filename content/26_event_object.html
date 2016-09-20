@@ -33,7 +33,7 @@
 
 		<p>But what if you're not satisfied yet?</p>
 
-		<p>What if you want to know where on the page someone clicked, which key they pressed, or where someone moved their mouse?</p>
+		<p>What if you want to know where on the page someone clicked, which key they pressed, or where they moved their mouse?</p>
 
 		<p>Good news! There's something called the <strong>event object</strong> that gives you all this info.</p>
 
@@ -72,113 +72,91 @@
 
 
 		<div class="section">
-			<h2>What is the event object and how do you use it?</h2>
+			<h2>What is the event object and how do you find it?</h2>
 
 			<p>Whenever an event happens (like a click or a key press), JavaScript gives you an object with information about that event.</p>
 
-			<p></p>
+			<p>This is called the <b>event object</b>.</p>
 
-
-
-			<p>In JavaScript, a <b>constructor</b> is a function that creates an object based on a sort of template.</p>
-
-			<p>Why would that be used?</p>
-
-			<p>First, forget about constructors for a second.  Let's say we want to make a couple of regular car objects.</p>
-
-			<p>Here's how that would look...</p>
-
-			<p><strong>Without constructors (DON'T TYPE THIS ONE):</strong></p>
+			<p>Type the following script to see how it works:</p>
 
 			<pre><code>
-				var myCar = {
-					color: 'red',
-					topSpeed: 180,
-					showCarInfo : function(){
-						console.log('Color: ' + this.color);
-						console.log('Top Speed: '+ this.topSpeed);
-					}
-				};
-
-				var yourCar = {
-					color: 'blue',
-					topSpeed: 200,
-					showCarInfo : function(){
-						console.log('Color: ' + this.color);
-						console.log('Top Speed: '+ this.topSpeed);
-					}
-				};
-
-				var otherCar = {
-					color: 'green',
-					topSpeed: 150,
-					showCarInfo : function(){
-						console.log('Color: ' + this.color);
-						console.log('Top Speed: '+ this.topSpeed);
-					}
-				};
-
-				var yetAnotherCar = {
-					color: 'gold',
-					topSpeed: 240,
-					showCarInfo : function(){
-						console.log('Color: ' + this.color);
-						console.log('Top Speed: '+ this.topSpeed);
-					}
+				window.onclick = function(e){
+					console.log(e);
 				};
 			</code></pre>
 
-			<p>So repetitive!</p>
-			<p>Can you imagine if we wanted to add more cars?  This would quickly turn into a mess.</p>
+			<p>Now click anywhere in the browser window and watch the console.</p>
 
-			<p>A <b>constructor</b> lets you create an object according to a sort of template or blueprint, so you won't need to keep rewriting the same properties over and over.</p>
+			<p>Notice that each time you click, you get a bunch of data about that click.  That data is the <b>event object</b>.  You can call it whatever you want, but we've just called it "e" because it's short.</p>
 
-			<p>Here's how that would look...</p>
-
-			<p><strong>With constructors (YES, TYPE THIS ONE):</strong></p>
-
-
-			<pre><code>
-				// this constructor function creates a car object
-				function Car(color, speed){
-					this.color = color;
-					this.topSpeed = speed;
-					
-					this.showCarInfo = function(){
-						console.log('Color: ' + this.color);
-						console.log('Top Speed: '+ this.topSpeed);
-					};
-				}
-
-				// now you can create as many cars as you want
-				var myCar = new Car('red', 180);
-				var yourCar = new Car('blue', 200);
-				var otherCar = new Car('green', 150);
-				var yetAnotherCar = new Car('gold', 240);
-
-				// feel free to test out your objects!
-				console.log("Your Car's Color: " + yourCar.color);
-				myCar.showCarInfo();
-				console.log("Other Car's Top Speed: " + otherCar.topSpeed);
-			</code></pre>
-
-			<p>Things to notice:</p>
-			<ul>
-				<li>In JavaScript, people will capitlize the first letter of a JavaScript <b>constructor</b> function.  It'll still work lowercase, but people use uppercase so that anyone reading it knows it's a constructor.</li>
-				<li>The <b>new</b> keyword creates a new object based on your constructor function.</li>
-				<li>Each new car object has the properties you specified in the constructor.</li>
-			</ul>
-
-			<p>Is it starting to make sense?</p>
-
-			<p>Play around a bit more to get comfortable with constructors.</p>
-
+			<p>Quick Note:<br> For simplicity, we're checking when the user clicks anywhere on the window, but this could easily be any other event like a button click, a key press inside a text box, or other things.</p>
 
 		</div>
 
 
 
-		
+
+
+		<div class="section">
+			<h2>Get the coordinates of a click</h2>
+
+			<p>Remember that with objects, you can access their properties.  The event object is no different.</p>
+
+			<p>Type the following to get the coordinates of each click:</p>
+
+			<pre><code>
+				window.onclick = function(e){
+					console.log('x = ' + e.pageX);
+					console.log('y = ' + e.pageY);
+				};
+			</code></pre>
+
+			<p>Neat, right?</p>
+
+			<p>There are plenty of ways you can use this.</p>
+
+			<ul>
+				<li>Maybe you have a map and you want to place a marker where the user clicks.</li>
+				<li>Maybe you're creating web analytics software and you want to record where users click most.</li>
+				<li>Maybe you're making a game whose input involves clicking.</li>
+			</ul>
+
+			<p>Also, feel free to play around with various events and event object properties.</p>
+
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>Find out which key was pressed</h2>
+
+			<p>Type the following to get data about each key press:</p>
+
+			<pre><code>
+				window.onkeydown = function(e){
+					console.log(e);
+					console.log(e.keyCode);
+				};
+			</code></pre>
+
+			<p>Here we're looking at two things:</p>
+			<ul>
+				<li>The event object (all data about this key press)</li>
+				<li>The pressed key's code number ("a" gives 65, "d" gives 68, and the up arrow gives 38 for example)</li>
+			</ul>
+
+			<p>When you see the event object in your console, you can click on it to see what properties are available.</p>
+
+			<p><strong>Note about keyCode:</strong><br> There have been a lot of changes in how key presses are handled, so when you're making your big site or app, be sure to check compatibility.</p>
+
+		</div>
+
+
+
 
 
 		<div class="section">
