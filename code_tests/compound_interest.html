@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+
+
+Starting Amount: <input value="100000" type="text" id="amt">
+<br>
+Annual Percent Return: <input value="5" type="text" id="pct">
+<br>
+Years Invested: <input value="10" type="text" id="yrs">
+
+<br><br>
+<button id="btn">Get Returns</button>
+
+<br><br>
+Final return:
+<div id="output"></div>
+
+<script>
+var yb = { id : function(str){return document.getElementById(str)} };
+
+var btn = document.getElementById('btn');
+var output = document.getElementById('output');
+
+function getData(id){
+	return document.getElementById(id).value;
+}
+
+btn.onclick = function(){
+	output.innerHTML = getReturn(getData('amt'), getData('pct'), getData('yrs'));
+};
+
+function getReturn(amt,pct,yrs){
+	// console.log(amt);
+	if(yrs===0){
+		// console.log('final amt: '+amt);
+		return amt.toFixed(2);
+	}
+
+	yrs--;
+	amt *= 1+(pct/100);
+	return getReturn(amt,pct,yrs);
+}
+
+</script>
+</body>
+</html>

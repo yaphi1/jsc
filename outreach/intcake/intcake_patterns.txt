@@ -22,11 +22,13 @@ sometimes walk through a problem once forwards and once backwards
 when dealing with numbers, don't forget negatives and zero (also, really huge numbers can cause integer overflows where the number is too big for the memory allocated for it)
 
 
-sometimes an intermediate RESULT is more important than intermediate VALUES. for example we might need to keep track of highest number and product of highest two numbers (instead of keeping track of highest and second highest).  that way we can test for the bigger number instead of having to maintain an order of items
+sometimes an intermediate RESULT is more important than the intermediate VALUES that determine the result (like a sum might be more important than the two numbers making it). for example we might need to keep track of highest number and product of highest two numbers (instead of keeping track of highest and second highest).  that way we can test for the bigger number instead of having to maintain an order of items
 
 
 for each iteration in a greedy algorithm, go through each value we need to keep updated and ask:
 do we have a new best [value]?
 
 
-sometimes the order of items can matter. check if a problem can be made easier by sorting
+sometimes the order of items can matter. check if a problem can be made easier by sorting, especially if it seems like each item needs to be compared against each other item (might be easier to compare adjacent sorted items)
+
+

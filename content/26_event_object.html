@@ -149,7 +149,7 @@
 				<li>The pressed key's code number ("a" gives 65, "d" gives 68, and the up arrow gives 38 for example)</li>
 			</ul>
 
-			<p>When you see the event object in your console, you can click on it to see what properties are available.</p>
+			<p>When you log the event object in your console, you can click on it to see what properties are available.</p>
 
 			<p><strong>Note about keyCode:</strong><br> There have been a lot of changes in how key presses are handled, so when you're making your big site or app, be sure to check compatibility.</p>
 
@@ -159,116 +159,40 @@
 
 
 
-		<div class="section">
-			<h2>What is a prototype and what does it do?</h2>
-
-			<p>In JavaScript, objects can inherit properties from other objects.</p>
-
-			<p>A <b>prototype</b> is a hidden object that sits in the background and allows other objects to inherit its properties.</p>
-
-			<p>All JavaScript objects have a <b>prototype</b>.</p>
-
-			<p>It's okay if this sounds a bit confusing.</p>
-
-			<p>Try this example to clear things up:</p>
-
-			<pre><code>
-				// your basic car constructor function
-				function Car(color, speed){
-					this.color = color;
-					this.topSpeed = speed;
-				}
-
-				// add the showCarInfo function to Car's prototype object
-				// this means all the cars will get access to showCarInfo
-				Car.prototype.showCarInfo = function(){
-					console.log('Color: ' + this.color);
-					console.log('Top Speed: '+ this.topSpeed);
-				};
-
-				// create a bunch of cars
-				var myCar = new Car('red', 200);
-				var yourCar = new Car('blue', 150);
-				var otherCar = new Car('green', 180);
-				var yetAnotherCar = new Car('gold', 240);
-
-				// show your car (notice showCarInfo isn't there)
-				console.log('yourCar:');
-				console.log(yourCar);
-
-				// try using showCarInfo anyway
-				console.log('here is the car info:');
-				yourCar.showCarInfo();
-			</code></pre>
-
-			<p>What?</p>
-
-			<p><code>showCarInfo()</code> wasn't in the <code>yourCar</code> object, so how were we able to use it?</p>
-
-			<p>Here's how:</p>
-
-			<p>We changed the Car's <b>prototype</b> object so that all the cars would automatically get access to <code>showCarInfo</code>.</p>
-
-			<p><strong>Editing Car's prototype has these advantages:</strong></p>
-			<ul>
-				<li>
-					<strong>Convenient updates</strong>
-					<br>You can update the prototype any time and all the cars will get the updates.
-				</li>
-				<li>
-					<strong>Less clutter</strong>
-					<br>All of the cars are referencing one prototype object, so the same showCarInfo function isn't cluttering every single car object.
-				</li>
-				<li>
-					<strong>Saves space</strong>
-					<br>It's better for memory when you're storing a function in one prototype object instead of putting it in every single car object.
-				</li>
-			</ul>
-
-			
-			<div class="special_section terminology">
-				<h3>The prototype chain</h3>
-				<p>When you call an object's property (a car's color for example), first your browser will check if that property is inside the object.</p>
-				<p>If it doesn't find the property there in the object, then it'll check the prototype.</p>
-
-				<p>Then it checks the prototype's prototype.  It keeps going until it finds nothing left.</p>
-
-				<p>For example, you might have three kinds of object: Animal, Dog, and Poodle.  Poodle inherits properties from Dog, which inherits properties from Animal.</p>
-
-				<p>This series of objects in which one inherits from the next is called the <b>prototype chain</b>.</p>
-				
-				<p>For the sake of maintainability, you don't want to go too many levels deep.</p>
-
-				<p>Also, there's no need to worry a whole lot about the prototype chain at the moment.  I just want you to see the term at least once.</p>
-			</div>
-
-
-		</div>
-
-
 
 
 
 		<div class="section">
 			<h2>Exercises:</h2>
+			
+			<p>There's not really much to memorize here as long as you understand how the event object works, so these exercises are going to be more about experimenting and playing.</p>
+
 			<ol>
 				<li>
-					<p><strong>Social network profiles - Part 1</strong></p>
-					<p>Create a constructor function called <code>User</code>.</p>
-					<p>Each new User object should have the following properties: <code>name</code>, <code>city</code>, and <code>hobby</code>.</p>
-					<p>Use your constructor function to create at least three new users.</p>
+					<p>When the user clicks anywhere on the page, show the <b>event object</b> in the console.</p>
+					<p>Once you get that to work, try other events and see what happens.  Maybe <code>onmousemove</code> or <code>onkeydown</code> or something else.</p>
+					<p>Experiment with some of the properties to see what's available.</p>
 				</li>
 
 				<li>
-					<p><strong>Social network profiles - Part 2</strong></p>
-					<p>Start with your code from the previous question.</p>
-					<p>Update User's prototype so that all the user objects can access a method called <code>showProfile</code>. (Remember a method is just a function that belongs to an object.</p>
-					<p>The function should show a given user's profile neatly in a div.</p>
+					<p>When the user clicks anywhere on the page, display the coordinates of that click in a div.</p>
 				</li>
 
 				<li>
-					<p><strong>Off to Codewars!</strong></p>
-					<p>Now that you have enough info to get past the entry barrier, <a href="http://www.codewars.com/" target="_blank">try out some practice problems on Codewars</a>.</p>
+					<p><strong>Practical mini-project: Place a marker on a map</strong></p>
+					<p>Create a page with a map and a destination marker.</p>
+					<p>On that page, you should be able to change the position of the destination marker by clicking anywhere on the map.</p>
+					<p><strong>Hint:</strong><br> You already know how to get the coordinates of a click.  The rest of this question is just CSS positioning.</p>
+				</li>
+
+				<li>
+					<p><strong>Practical mini-project: Make a basic moving game character token</strong></p>
+					<p>Create a div that's a small orange square.</p>
+					<p>When the user pushes a key anywhere on the page, check the keyCode.</p>
+					<p>If the keyCode corresponds to the up arrow, the square should move up 20 pixels.  If right arrow, right 20 pixels.  Etc.</p>
+					<p>If done correctly, you should be able to move this token around the screen.</p>
+					<p>For fun, you can replace it with an image of a game character.</p>
+					<p>Bonus: What if you want it to move more smoothly?</p>
 				</li>
 
 			</ol>
@@ -280,19 +204,9 @@
 
 
 		<div class="section">
-			<p>Congrats on getting through this section.</p>
+			<p>I hope you've enjoyed learning about the event object.</p>
 
-			<p>At this point, you have plenty of stuff to keep you busy.</p>
-
-			<ul>
-				<li>Practice on Codewars.</li>
-
-				<li>Work on your portfolio.</li>
-
-				<li>Refer to the previous section on getting in contact with developers.</li>
-
-				<li>Bonus: Feel free to let me know how you've improved.</li>
-			</ul>
+			<p>It unlocks a lot of functionality that you can now use, so feel free to experiment!</p>
 
 		</div>
 
