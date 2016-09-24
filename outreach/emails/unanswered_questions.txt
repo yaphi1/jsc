@@ -1,0 +1,86 @@
+
+subject:
+
+more great questions: forgetting stuff, following tutorials, and...
+
+
+
+message:
+
+
+
+I got some great questions from a reader, so I've paraphrased them here.
+
+
+
+1. It's too easy to forget stuff after learning it.  How do I handle that?
+
+- Give yourself more time to play with each new thing you learn.  It's tempting to immediately move onto the next thing after learning something, but that's a guaranteed way to forget it soon.
+
+- Small doses are best.  It's usually better to do a little bit each day than to do an overwhelming marathon one day and need to stop for the next three days.  Better to learn one thing at a time and remember it than 20 things at a time and forget all of them.
+
+- If it's a syntax memorization thing, practice it like an instrument or a sport, especially when starting out.  For example, if you're having trouble remembering how to put in an image or a link, just keep typing the tags until they become easy.  Doing that requires no extra difficulty, and it'll make the next steps much easier because you can think about what you want to create instead of worrying where that closing tag goes.
+
+It feels like it takes a bit longer at first, but then everything will be much faster for you after that.
+
+
+
+
+2. I can follow along with a tutorial, but when I have to try something on my own, I get lost.  How do I fix this?
+
+Tutorials are notorious for making you feel more comfortable with something than you really are.  The best way to fix this?
+
+Usually I prefer to learn small concepts and build up projects that way instead of following long multi-step tutorials where it's hard to keep track of everything that happened.
+
+If you do follow longer tutorials, here's my advice:
+
+After going through a tutorial, spend plenty of time coding without it.
+
+Usually a tutorial has multiple concepts in it.  Try coding each of those concepts on your own, in your own text editor and your own browser.  If you stumble, you'll know where you need to get more comfortable.  Eventually, try to recreate the tutorial itself without looking.
+
+Then code your own twist on the project.
+
+After that, try coding something else with the concepts you learned.
+
+
+
+
+3. How long have you been coding? Do you practice every day? How long?
+
+Tried it as a kid.  Stopped for many years.  Took it back up much later.  I've been coding professionally for about 5 years.  That means coding most weekdays at work, and many weekends and evenings working on personal projects.
+
+I have gotten into a bit of a comfort zone though, so I'm now taking more time to practice new things instead of sticking to things I know well.
+
+
+
+
+4. Do you ever forget stuff?
+
+Yes, and that's normal.  No one can remember everything.
+
+The key is to memorize the stuff I use all the time.
+
+With the other stuff, as long as I understand the concepts, I'm able to look up quick things when I need to.
+
+
+
+
+5. Why did you recommend learning about WordPress and hosting for people who wanted to freelance?
+
+Freelancing involves setting up the whole site for someone, and that includes hosting.  You'll also want to make the site as easy as possible for the client to update, so I've found WordPress is good for that.
+
+In front-end development jobs however, you often won't need to handle these sorts of things (but you might, depending on where you go and what you want to do).
+
+
+
+Anyways, I hope these answers have been helpful!
+
+
+Best,
+
+Yaphi
+Simple Steps Code
+
+
+
+

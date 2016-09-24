@@ -1,0 +1,28 @@
+
+
+
+
+scriptify
+
+ybgulp (build and compression process)
+
+code highlighter
+
+svg icons
+
+sitepoint code-remover word count
+
+keycode utility
+
+yaphi-chat
+
+collaborative notes app
+
+ai experiments
+	- arrow trajectory
+	- bet calculator
+
+autocomplete
+	- quickipedia
+	- other sites (google, amazon)
+
