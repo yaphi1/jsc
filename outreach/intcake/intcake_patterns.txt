@@ -32,3 +32,19 @@ do we have a new best [value]?
 sometimes the order of items can matter. check if a problem can be made easier by sorting, especially if it seems like each item needs to be compared against each other item (might be easier to compare adjacent sorted items)
 
 
+memoization can store intermediate values in an object to avoid duplicate work
+
+
+recursion is usually best to avoid for arbitrarily large inputs because those functions pile up into a call stack that takes up O(n) space (also can cause a stack overflow) (look for bottom-up approach instead)
+
+
+dynamic programming is kind of like the next step up from greedy algorithms. instead of keeping track of the best answer so far, we're keeping track of all our answers so far (possibly keeping them in an array)
+
+
+to avoid confusion in details with visual problems:
+	- draw out all cases
+	- use clear variable names
+
+
+
+

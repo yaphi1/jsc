@@ -9,7 +9,6 @@ current:
 	- can still draft personalized notes
 
 	- while waiting for responses:
-		- prepare on-post opt-in forms
 		- add intermediate content to course
 
 
@@ -18,6 +17,7 @@ current:
 
 - quiz article (sitepoint)
 
+- gravity article: drop, jump, bounce, arrow (css-tricks)
 
 
 

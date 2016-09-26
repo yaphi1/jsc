@@ -4,9 +4,13 @@
 
 scriptify
 
+angle bracket converter
+
 ybgulp (build and compression process)
 
 code highlighter
+
+compound interest calculator
 
 svg icons
 
@@ -25,4 +29,10 @@ ai experiments
 autocomplete
 	- quickipedia
 	- other sites (google, amazon)
+
+games
+	- zelda
+	- glow pong
+	- tic tac toe
+
 
