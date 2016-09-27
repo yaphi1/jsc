@@ -46,5 +46,13 @@ to avoid confusion in details with visual problems:
 	- use clear variable names
 
 
+always read carefully through problem and do what it's actually asking for.  sounds obvious, but this is one of THE most common mistakes.
+
+
+whenever designing a data structure with inserts and getters, remember ahead-of-time vs just-in-time approach.  ahead of time can often be better because you're computing and storing and keeping track of stuff before it's needed, so it can be accessed quickly when needed. also it can be easier to keep track of stuff as it comes in one at a time rather than waiting until the end to dig through a pile of stuff. depends on the situation and usage though
+
+
+
+
 
 
