@@ -26,3 +26,38 @@ when are projects helpful
 
 conclusion
 
+
+
+
+
+
+
+
+
+trello outline
+
+
+Intro
+	- first be clear that projects are often a great way to learn
+	- say there are times when projects can be disastrous (and create reader curiosity as to why)
+
+Two most common traps with projects and how they make people give up
+	- trap 1: easy-sounding project; immediate failure
+	- trap 2: false success; complete project but can't remember any of it
+
+Why the traps happen and what effect they have
+	- too much too soon
+	- psychological spiral (if I can't do this easy-sounding project, maybe I'm not cut out for JavaScript)
+
+Specific examples of projects that hinder learning
+
+What to do instead (with specific examples)
+	- also includes how and when to incorporate projects
+
+Key takeaways
+
+
+
+
+
+
