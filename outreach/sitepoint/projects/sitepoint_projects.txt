@@ -2,34 +2,45 @@ Projects Can Sometimes Be the Worst Way to Learn JavaScript
 
 
 
+
 One of the most surprisingly dangerous pieces of advice to JavaScript learners is to "just do projects."
 
-Projects can be a great way to learn any coding language, but problems arise when people do the wrong projects at the wrong time.
+To be 100% clear, projects are often a great way to learn any coding language.  However, problems arise when people attempt certain projects before they know enough of the basics to judge what's reasonable.
 
-But everyone learns differently, so how can a project be "wrong?"
+This topic is important because attempting a project too early is one of the most common reasons people give up on JavaScript entirely.
 
-I'll explain.
+I'm not about to let that happen to you, so here's what we'll cover:
+
+- The most common traps JavaScript learners fall into when attempting projects and why
+- Specific examples of projects that frequently stop people from learning JavaScript
+- How to avoid the common traps and learn more effectively
+- When and how to start doing projects
+
+The aim of this article is to give you confidence in moving forward, whether you're learning JavaScript or any other language.
+
+
 
 
 ## The Common Phrase that Often Leads to Failure
 
 One of the most common things I hear from people who want to learn JavaScript is, "I'll just make a quick slideshow."
 
-They'll try to make the slideshow, and one of two things will usually happen.
+They'll try to make the slideshow, and one of two things will usually happen:
 
 1. It'll be too hard, and they tell themselves they'll "come back to it later" which often means giving up forever.
 
-2. They'll succeed in creating the slideshow, but since they had to cover so much material at once, they won't remember any of it or be able to apply it afterwards.
+2. They'll succeed in creating the slideshow, but since they had to cover so much material at once, they won't be able to apply it afterwards.  This leads to discouragement, which can mean, once again, giving up forever.
 
 Why does this happen?
 
 
 
-## Too Much Too Soon
+
+## The Trap of Too Much Too Soon
 
 JavaScript learners often pick a slideshow as their first project because it sounds simple.
 
-Once they attempt it, they discover it's much harder than they thought.  Making a slideshow might involve arrays, functions, loops, animation, timing, event listeners, DOM manipulation and more.  This can be an overwhelming number of new concepts for someone who is starting out.
+Once they attempt it, they discover it's harder than they thought.  Making a slideshow might involve arrays, functions, loops, animation, timing, event listeners, DOM manipulation and more.  This can be an overwhelming number of new concepts for someone who is starting out.
 
 Suddenly, this project that was supposed to be easy is too difficult.  That difference from the orignal expectation creates a nasty psychological effect.  "If I can't do this easy thing," learners tell themselves, "then maybe I'm just not cut out for JavaScript."
 
@@ -64,17 +75,22 @@ All you need is a better approach.
 
 ## How to Learn More Effectively
 
-Instead of jumping directly into big projects, try learning the smallest pieces of functionality first.  Show text inside a div with `innerHTML`.  Change the color of a paragraph's text.  Add two numbers together.  Write your first function.  Get comfortable with variables.  Store a collection of things in an array or an object.  Make something happen when a button gets clicked.  Learn about logic with `if` and `else`.  Try some loops.
+Instead of jumping directly into big projects, try learning the smallest pieces of functionality first.
+
+Show text inside a div with `innerHTML`.  Change the color of a paragraph's text.  Add two numbers together.  Write your first function.  Get comfortable with variables.  Store a collection of things in an array or an object.  Make something happen when a button gets clicked.  Learn about logic with `if` and `else`.  Try some loops.
 
 Play with these concepts and get comfortable with them.  You'll soon find yourself able to create lots of things.  In addition, your newfound experience will make you much better at deciding which projects to do.  As you see yourself succeed more, your confidence will grow, and the momentum will carry you forward much faster than trying to rush into a big project at the beginning.
 
-To be clear, challenges are important because they help you grow.  It's great to stretch beyond your comfort zone but not so far that it actually gets in the way of your progress.
+To be clear, challenges are important because they help you grow.  It's great to stretch beyond your comfort zone but not so far that it gets in the way of your progress.
 
 
-## Examples of Doable Projects
+## So When Do the Projects Happen?
 
-JavaScript learners have often told me they want to do projects, but they can't come up with ideas.  Here are some examples of mini-projects you can do as you learn each concept.
+Once you begin learning the fundamentals of JavaScript, you'll start to know what sorts of projects are within reach.
 
+While it's important to challenge yourself, you don't want to try building an end-to-end digital banking app, for example, before you know how to display a line of text on the screen.
+
+Let's look at some specific examples of concepts you can learn and mini-projects you can then do.
 
 New concepts learned:
 Variables, functions
@@ -122,15 +138,27 @@ This has a profound impact on how you learn because instead of jumping too far a
 
 
 
-Key Takeaways
+##Key Takeaways
 
-Going back to our original question, what makes a project "right" or "wrong," and what does that question even mean?
+Projects can be among the best and worst ways to learn JavaScript.  The difference is in the timing.
 
-There's no easy answer, but here's my attempt at a starting point: A project is right for you if it helps you to learn, and it's wrong for you if it completely stops you from learning.
+- **Projects too early = trap**
+One of the most common ways people fail to learn JavaScript is to jump into a project before knowing enough of the basics to understand what's reasonable.  This often leads to discouragement and quitting.
 
-People often stumble and give up because they attempt too much too early.  If there's one thing I want you to remember from this article, it's this:
+- **Concepts first, projects second**
+To avoid the project trap, play with concepts first and then do mini-projects based on those concepts.  That way, you won't get in too deep too soon.
 
-Trying to learn a hundred things at once can be the fastest way to learn zero things.
+- **Projects at the right time = more effective learning**
+Approaching your learning with concepts first can give the following benefits: stronger understanding, better retention, encouragement, momentum, feeling less overwhelmed, and faster progress.
+
+In closing, it should be said that everyone learns differently.  None of the ideas in this article are meant to be hard and fast rules.  Instead, they are friendly suggestions that I hope will help you or someone you know avoid the traps I've seen too many people fall into.
+
+
+
+
+
+
+
 
 
 
