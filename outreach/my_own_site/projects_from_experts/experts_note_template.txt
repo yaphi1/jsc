@@ -1,8 +1,18 @@
 I'm planning to make a post on my site featuring a collection of front-end portfolio project ideas from the experts.
 
-I figured I'd reach out to you to see if you'd be willing to suggest one project idea for people who are learning front-end web development (more would be even better, but I'd still be thrilled with one).  The format would be a sentence, a couple of sentences, or a few bullet points, depending on what's convenient.
+I figured I'd reach out to you to see if you'd be willing to suggest one project idea for people who are learning front-end web development (more would be even better, but I'd still be thrilled with one).
 
-These are mini-summaries of the responses I've received so far:
+The format would be a sentence, a couple of sentences, or a few bullet points, depending on what's convenient for you.
+
+Since I'd like this to take as little of your time as possible, here are some fill-in-the-blanks answers you can use if you're up for this:
+
+- Hand-code [something fun] in SVG.
+- Re-create [cool CodePen or Codrops demo]
+- Build a [common UI component]
+- Look at [website] for inspiration
+- Create experiment based on [concept]
+
+These are summaries of the responses I've received so far:
 
 Chris Coyier (CSS-Tricks and CodePen):
 - Closely copy websites you like
@@ -10,18 +20,10 @@ Chris Coyier (CSS-Tricks and CodePen):
 Jim Hibbard (JavaScript editor at Sitepoint):
 - Reimplement a library (such as lightbox or jQuery)
 
-Benjie Moss (Editor at WebdesignerDepot)
-- Create problems and solutions based on day-to-day situations you encounter
+Ben Moss (Editor at WebdesignerDepot)
+- Find out why a language or tool is useful by doing a task without it
 
 Other than these, all topics are open.
-
-Since I'd like this to take as little of your time as possible, here are some fill-in-the-blanks answers you can use if you're up for this:
-
-- Hand-code [something] in SVG.
-- Re-create [cool CodePen demo]
-- Build a [common UI component]
-- Look at [website] for inspiration
-- Create experiment based on [concept]
 
 Ideally this will be beneficial for the community (a very popular question is being answered) and for the contributors (cross-pollination of audiences).
 
@@ -30,3 +32,5 @@ I plan to tie in a link to whatever you'd like, so let me know if this sounds go
 Best,
 
 Yaphi
+
+
