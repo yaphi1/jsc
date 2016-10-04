@@ -86,7 +86,11 @@ function addClass(elements, myClass){
 	
 	// add class to all chosen elements
 	for(var i=0; i<elements.length; i++){
-		if(!(' '+elements[i].className+' ').indexOf(' '+myClass+' ') > -1){
+
+		// if class is not already found
+		if ( (' '+elements[i].className+' ').indexOf(' '+myClass+' ') < 0 ) {
+			
+			// add class
 			elements[i].className += ' ' + myClass;
 		}
 	}
