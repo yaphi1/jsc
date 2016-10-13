@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+<style type="text/css">
+body{
+	margin: 0px;
+	font-size:20px;
+	font-family:sans-serif;
+	color:#333;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="menubar"></div>
+
+<svg id="mysvg" width="800" height="400" viewbox="0 0 200 100" style="border:3px solid #333; transform:rotateX(-180deg)">
+	<polyline id="mygraph" points="" style="stroke:#333; stroke-width:0.6; fill:none;"></polyline>
+</svg>
+
+<script>
+
+var mysvg = document.getElementById('mysvg');
+
+var lines = '';
+
+for(var i=1; i<10; i++){
+	lines += '<line x1="0" y1="'+10*i+'" x2="200" y2="'+10*i+'" style="stroke:#333; stroke-width:0.2;"></line>';
+}
+
+mysvg.innerHTML += lines;
+
+
+var graph = document.getElementById('mygraph');
+// var data = [10,40,20,30,50,20,70,60,75,10,50,90,20,30,20,30,80];
+
+data = [];
+
+for(var i=0; i<50; i++){
+	console.log(i+': '+data[i-1]);
+	data.push(addPoint(data[i-1]));
+}
+
+function addPoint(prev, variance, val){
+	var variance = 20;
+	if(typeof prev === 'undefined'){
+		val = Math.floor(100 * Math.random());
+	}
+	else{
+		val = prev + (Math.floor(variance * 2 * Math.random()) - variance);
+		if(val<0){val = 0;}
+		if(val>100){val = 100;}
+	}
+
+	return val;
+}
+
+
+var increment = Math.floor(200 / data.length);
+
+var points = '';
+for(var i=0; i<=data.length; i++){
+	points += increment*(i+0.5) + ',' + data[i] + ' ';
+}
+
+graph.setAttribute('points',points);
+
+
+</script>
+</body>
+</html>
+

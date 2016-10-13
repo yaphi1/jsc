@@ -1,4 +1,4 @@
-I'm planning to make a post on my site featuring a collection of front-end portfolio project ideas from the experts.
+I'm planning to make a blog post featuring a collection of front-end portfolio project ideas from the experts.
 
 I figured I'd reach out to you to see if you'd be willing to suggest one project idea for people who are learning front-end web development (more would be even better, but I'd still be thrilled with one).
 
@@ -7,7 +7,7 @@ The format would be a sentence, a couple of sentences, or a few bullet points, d
 Since I'd like this to take as little of your time as possible, here are some fill-in-the-blanks answers you can use if you're up for this:
 
 - Hand-code [something fun] in SVG.
-- Re-create [cool CodePen or Codrops demo]
+- Re-create [cool CodePen demo]
 - Build a [common UI component]
 - Look at [website] for inspiration
 - Create experiment based on [concept]
@@ -22,6 +22,12 @@ Jim Hibbard (JavaScript editor at Sitepoint):
 
 Ben Moss (Editor at WebdesignerDepot)
 - Find out why a language or tool is useful by doing a task without it
+
+Sara Soueidan (Dev of the Year and writer at Codrops):
+- Don't wait to start, share what you learn, and break down other people's code
+
+Parker Phinney (Interview Cake)
+- Write a JS bookmarklet that manipulates other websites in an interesting and helpful way
 
 Other than these, all topics are open.
 
