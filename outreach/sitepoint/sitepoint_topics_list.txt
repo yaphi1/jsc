@@ -23,7 +23,7 @@ personal ideas:
 - js project ideas [maybe even collect project ideas from influencers/experts]
 
 - Projects Can Be the Worst Way to Learn JavaScript
-
+- quick tip: js random numbers
 
 
 
