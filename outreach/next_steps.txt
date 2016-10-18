@@ -12,12 +12,16 @@ current:
 		- add intermediate content to course
 
 
-- dangers of js projects (sitepoint) [done, need to submit next]
-- js project ideas (sitepoint)
 
 - quiz article (sitepoint)
+- maybe quick tip "for loop" article (sitepoint)
 
 - gravity article: drop, jump, bounce, arrow (css-tricks)
+
+
+growth strategies:
+- more seo articles for sitepoint
+- aim get bigger partnerships (lifehacker)
 
 
 

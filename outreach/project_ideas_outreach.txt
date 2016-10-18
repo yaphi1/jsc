@@ -47,18 +47,24 @@ sitepoint
 
 webdesignerdepot
 
+interviewcake
+
+soueidan
+
 
 
 
 to do:
 
-interviewcake
-
 learntocodewith.me
 
 skillcrush
 
-soueidan
+rachel nabors
+http://rachelnabors.com/2013/01/javascript-study-for-designers/
+
+http://rmurphey.com/blog/2016/02/13/exercises-for-js-beginners
+
 
 
 

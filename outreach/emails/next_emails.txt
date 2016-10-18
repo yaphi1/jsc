@@ -1,0 +1,20 @@
+
+
+
+
+
+one thing that makes sites look bad
+	- messing up padding/spacing
+	- use example of how fake sites always mess up the padding
+
+
+
+as a coder do you have to memorize everything?
+	no
+	two types of knowledge:
+		1. can do without looking
+		2. understand but look up specifics
+
+
+
+

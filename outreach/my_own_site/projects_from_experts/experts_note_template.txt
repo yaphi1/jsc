@@ -1,8 +1,8 @@
-I'm planning to make a blog post featuring a collection of front-end portfolio project ideas from the experts.
+I'm planning to make a blog post at Simple Steps Code featuring a collection of front-end portfolio project ideas from the experts.
 
 I figured I'd reach out to you to see if you'd be willing to suggest one project idea for people who are learning front-end web development (more would be even better, but I'd still be thrilled with one).
 
-The format would be a sentence, a couple of sentences, or a few bullet points, depending on what's convenient for you.
+The format could be a sentence, a couple of sentences, or a few bullet points, depending on what's convenient for you.
 
 Since I'd like this to take as little of your time as possible, here are some fill-in-the-blanks answers you can use if you're up for this:
 
@@ -28,6 +28,9 @@ Sara Soueidan (Dev of the Year and writer at Codrops):
 
 Parker Phinney (Interview Cake)
 - Write a JS bookmarklet that manipulates other websites in an interesting and helpful way
+
+Laurence Bradford (Learn to Code With Me)
+- Make a JS quiz. It's a great way to create something fun and interesting and there's a social aspect because you can share it.
 
 Other than these, all topics are open.
 
