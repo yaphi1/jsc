@@ -1,0 +1,44 @@
+
+
+"They always mess up the padding."
+
+This is what my friend said when he saw a fake version of a site that was trying to get his gmail password.
+
+It's true.
+
+When scammers try to trick people with fake versions of sites, the padding and margins always seem to be a little bit off.
+
+While it's fun to laugh at them, there's an interesting point here.
+
+Have you ever built a site and wondered why it didn't quite look quite as polished or professional as you wanted it to?
+
+Did something feel a little bit off?
+
+A lot of the time, it has to do with the way elements are spaced on a page.  Margins, padding, line height, column width, etc.
+
+Here are some of my favorite quick tips for making your layouts look neater (along with some links to great articles for further reading):
+
+1. "Double your whitespace."
+I've seen this one a lot, and it helps a page look better instantly.  To be clear, it doesn't have to be double, and the term whitespace can mean any color, but the principle is to give everything on your page more breathing room.
+
+2. Use grayscale first.
+https://medium.com/@erikdkennedy/7-rules-for-creating-gorgeous-ui-part-1-559d4e805cda#.p90fqjd37
+That way you can focus on the proportions of your layout without being distracted by color.  Add color in afterwards.
+
+3. Make the spacing look neat using horizontal and vertical rhythm.
+https://zellwk.com/blog/why-vertical-rhythms/
+The basic idea is that the human eye likes consistency, so if you space things evenly (or in consistent ratios), then your layouts will look good.
+
+4. Use proximity to make sure things that should be grouped together are.
+https://zellwk.com/blog/wrong-about-vertical-rhythm/
+For example, if a header is too far away from its corresponding text, then you might not know the things are connected, so try to avoid this.
+
+I hope these tips help!
+
+Best,
+
+Yaphi
+Simple Steps Code
+
+
+

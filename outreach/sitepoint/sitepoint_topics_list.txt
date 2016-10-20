@@ -24,7 +24,7 @@ personal ideas:
 
 - Projects Can Be the Worst Way to Learn JavaScript
 - quick tip: js random numbers
-
+- how to think through a js project
 
 
 So far I really like the following ideas (from their list):
