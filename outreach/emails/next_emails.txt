@@ -14,12 +14,42 @@ how to recover from a mistake
 
 
 
-
 as a coder do you have to memorize everything?
 	no
 	two types of knowledge:
 		1. can do without looking
 		2. understand but look up specifics
+
+
+what sorts of things do you want to know about
+- interview tips
+- project ideas
+- useful sites/tools
+
+
+project idea: create version of google
+- basic: layout
+- intermediate: working form
+- advanced: autocomplete
+
+
+interview tip: check inputs
+- shows you pay attention
+- shows you can be trusted not to mess up a codebase
+
+
+interview tip: clear naming
+- helps clarify thinking
+- helps avoid off-by-one errors (nextItem is easier than items[i+1])
+- also a good habit in everyday coding
+
+
+
+check compatibility
+- caniuse
+- mdn
+
+
 
 
 
