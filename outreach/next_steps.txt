@@ -19,10 +19,14 @@ current:
 - gravity article: drop, jump, bounce, arrow (css-tricks)
 
 
-growth strategies:
+list growth strategies:
 - more seo articles for sitepoint
 - aim get bigger partnerships (lifehacker)
 
+
+sales growth strategies:
+- interview recruiters and hiring managers about what they're looking for, what they wish candidates would do, etc, then put in course
+- add intermediate level
 
 
 
