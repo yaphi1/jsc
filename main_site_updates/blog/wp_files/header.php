@@ -43,7 +43,7 @@ h1{
 	margin: 0px auto;
 	padding: 40px 0px 20px;
 	font-weight: 100;
-	font-size: 2.1em;
+	font-size: 2.0em;
 	max-width: 800px;
 	line-height: 1.3;
 }
@@ -102,14 +102,18 @@ MENUBAR
 #menubar{
 	padding: 20px;
 	font-weight: 100;
-	font-size: 24px;
+	font-size: 18px;
 	line-height: 1.3;
 	position: relative;
 }
 
 #menubar a{
 	text-decoration: none;
-	color: #333;
+	color: #555;
+}
+
+#menubar span{
+	vertical-align: middle;
 }
 
 
@@ -122,6 +126,7 @@ NAVIGATION
 	float: right;
 	width: 36px;
 	cursor: pointer;
+	margin-top: 6px;
 }
 #hamburger div:first-child{
 	margin-top: 4px;
@@ -140,13 +145,14 @@ NAVIGATION
 
 #topnav a{
 	display: block;
-	padding: 20px;
-	font-size: 20px;
+	padding: 15px;
+	font-size: 18px;
 	border-top: 1px solid #eee;
 }
 
 #topnav a:hover{
-	background: #0c7;
+	/*background: #0c7;*/
+	background: #229CCB;
 	color: #fff;
 }
 
@@ -413,7 +419,6 @@ code, .resultcontainer{
 EMAIL FORM
 ***********************************************************/
 
-
 .signupsection{
 	padding: 10px 20px 40px;
 }
@@ -424,7 +429,7 @@ EMAIL FORM
 }
 
 .signupform{
-	background:#ffcfac;
+	background: #fdf7f1;
 	padding: 30px;
 	border-radius: 5px;
 	color: #333;
@@ -498,7 +503,6 @@ EMAIL FORM
 
 
 
-
 /***********************************************************
 FOOTER
 ***********************************************************/
@@ -534,7 +538,7 @@ first breakpoint
 	#topnav{
 		padding: 0px;
 		position: absolute;
-		top: 10px;
+		top: 13px;
 		right: 30px;
 	}
 
@@ -544,7 +548,7 @@ first breakpoint
 		display: inline-block;
 		padding: 15px;
 		border-radius: 5px;
-		font-size: 20px;
+		font-size: 18px;
 		border-top: 0px none;
 		margin: 0px 15px;
 		vertical-align: top;
@@ -671,7 +675,16 @@ TOP OPT IN BAR
 		<div></div><div></div><div></div>
 	</div>
 
-	<a href="/">Simple Steps Code</a>
+	<!-- <a href="/">Simple Steps Code</a> -->
+	<a href="/">
+		<svg height="40" width="40" style="vertical-align: middle; padding: 0px 6px 0px 0px;" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+			<circle cx="5" cy="5" r="4.4" style="stroke-width: 0.5; fill: none; stroke: #555;"></circle>
+			<polyline points="3.5,6.3 5,6.3 5,3.7 6.5,3.7" style="stroke-width: 0.8; stroke-linejoin: round; stroke-linecap: round; fill: none; stroke: #555;"></polyline>
+		</svg>
+		<span>
+			Simple Steps Code
+		</span>
+	</a>
 	
 	<div id="topnav" class="closed">
 		<a href="/category/tutorials">Tutorials</a>
