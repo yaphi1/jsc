@@ -52,13 +52,13 @@ I like the idea of copying a website as closely as you can. You'd only do this f
 
 Commentary:
 
-Two big things I like about this suggestion:
+What I like about Chris's suggestion:
 
 1. It can be whatever difficulty level you want.
 
 2. You won't run out of projects until you run out of sites on the entire internet.
 
-
+3. It deals with the importance of giving credit where credit is due.
 
 
 
@@ -79,9 +79,19 @@ I'd also highly recommend pulling apart common libraries, as that is a great lea
 
 Commentary:
 
-self-reliance (avoid plugin reflex)
-deeper understanding
-good habits from seeing how great coders did something
+Here's what I like about Jim's approach:
+
+Deeper understanding
+Implementing things in different ways helps give you a deeper understanding of the tools you use.
+
+Self-reliance
+It's important to get comfortable enough that you don't need to rely on a plugin for everything.
+
+Better code performance
+With practice, you'll be able to write the functionality you need without the extra baggage from a full plugin.  To be clear, there are times when it will make sense to use a tool or plugin, but it's important to understand when it makes sense.
+
+
+
 
 
 
@@ -114,11 +124,17 @@ My advice can be summarized as follows:
 
 Commentary:
 
-psychology of start today and only do what you need so you don't get overwhelmed
+Here's what I like about Sara's advice:
 
-sharing what you learn: great way to understand and remember, but also impressive to potential employers or clients; makes you look like an expert and a communicator; also helps you practice communicating an idea, which can be as important as the idea itself
+It deals with the psychology of learning.
+I like this answer's emphasis on starting today and focusing on only a few things at a time.  This approach is a great way to make progress quickly.
 
-seeing others' code is important
+Teaching what you learn has several benefits.
+Not only is it a great way to understand and remember, it's also impressive to potential employers and clients.  It gives you credibility both in knowledge and communication.  It can also help you practice communicating an idea, which can be as important as the idea itself.
+
+Seeing other people's code makes you better.
+Playing with other people's code is a quick way to expose yourself to techniques and ideas you might not have thought of on your own.  If you apply this consistently, you can absorb years of experience and level up quickly.
+
 
 
 
@@ -148,7 +164,12 @@ You’ll end up with a deeper understanding of your toolset and a broader founda
 
 Commentary:
 
-too easy to go through just using things because someone told you to, but if you try to accomplish stuff without the tools, then you understand why the tools make sense and also when they don't make sense
+What I like about Ben's answer:
+
+You'll learn to think for yourself.
+It's too easy to end up using certain tools because someone told you to, but if you try to accomplish things without the tools, you understand when they make sense and also when they don't.
+
+In web development, it's so important to learn to make informed decisions so that your sites and web apps will have performance, maintainability, and more.  You'll also start to feel more confident in your work.
 
 
 
@@ -180,9 +201,18 @@ I like quizzes because they're fun! It allows a person to show their personality
 
 Commentary:
 
-- importance of creating something fun/useful
-- social aspect of being able to show your friends this cool thing you created can be a great motivator
-- plugin: being able to incorporate someone else's code is important in working with a team
+What I like about Laurence's answer:
+
+Importance of fun and usefulness
+It's too easy to focus on dry information without taking the time to make it fun and potentially useful.  Enjoyment is an important part of motivation, and it can often make all the difference in your success.
+
+Social aspect as motivation
+When learning to code, one of the most satisfying feelings is to show your creations to someone and say "I made that."  The social aspect of having other people see your work can help keep you accountable for your progress.  As an added bonus, when people try your code creations, you start to learn things about user experience.
+
+Collaboration skills
+I talk a lot about the importance of not depending on plugins, but at the same time, it's important to know how to use them.  In a team, you won't be the only one working on a codebase, so it's vital to be able to work with other people's code and tools.
+
+
 
 
 
@@ -209,9 +239,15 @@ Great way to practice JavaScript and DOM manipulation. And hopefully it makes yo
 
 Commentary:
 
-- practical usefulness
 
-- psychology of capturing the feeling of having these new powers; really imporant
+What I like about Parker's answer:
+
+The practicality
+When you create something practical, you learn, you stay motivated, and you end up with something you can use.  You also get something good for your portfolio.
+
+The psychological effect
+When learning to code, it's so important to do things that help you enjoy and appreciate these new powers you have.  You tend to progress much faster when you're enjoying something.
+
 
 
 
