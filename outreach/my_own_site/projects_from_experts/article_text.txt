@@ -16,7 +16,7 @@ Jim Hibbard (JavaScript Editor at Sitepoint)
 
 Sara Soueidan (Dev of the Year and writer at Codrops)
 
-Ben Moss (Editor at WebdesignerDepot)
+Ben Moss (Editor at Webdesigner Depot)
 
 Laurence Bradford (Learn to Code With Me)
 
@@ -297,6 +297,26 @@ When learning to code, it's so important to do things that help you enjoy and ap
 
 
 
+
+Zell Liew
+
+https://zellwk.com/
+
+
+
+Project ideas from Zell:
+
+- Focus on getting the fundamentals right. Everything becomes so much easier afterwards.
+- Learn and teach. Repeat the process. You'll learn clearer and faster.
+
+
+Commentary
+
+What I like about Zell's answer:
+
+It's too easy to jump into projects first without taking the time to understand some of the fundamentals.  That can lead to difficulties, so it's important to get the fundamentals first.
+
+Also, here's another vote for teaching what you've learned as a way of solidifying your understanding and communication.
 
 
 
