@@ -92,6 +92,25 @@ p a:hover, li a:hover{
 
 ul li{ margin-bottom: 20px; }
 
+blockquote{
+	background: #f9f9f9;
+	border-left: 3px solid #0ad;
+	margin: 10px 0px 10px 5px;
+	padding: 15px 20px;
+	font-size: 90%;
+}
+
+blockquote p:first-of-type{
+	margin-top: 0px;
+}
+
+blockquote p:last-of-type{
+	margin-bottom: 0px;
+}
+
+
+
+
 
 
 
@@ -286,11 +305,10 @@ TUTORIAL CONTENT
 .firstcontentline{
 	font-size: 1.3em;
 	font-weight: 100;
-	padding-top: 10px;
 	line-height: 1.5;
 }
 .showcasetitle{
-	padding: 50px 0px 20px;
+	padding: 50px 0px 0px;
 	font-weight: 100;
 	font-size: 1.8em;
 	color: #89a;
@@ -689,6 +707,6 @@ TOP OPT IN BAR
 	<div id="topnav" class="closed">
 		<a href="/category/tutorials">Tutorials</a>
 		<div class="separator"></div>
-		<a href="/category/fun">Fun</a>
+		<a href="/category/blog">Blog</a>
 	</div>
 </div>

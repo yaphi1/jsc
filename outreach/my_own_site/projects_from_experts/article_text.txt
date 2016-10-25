@@ -124,7 +124,11 @@ With practice, you'll be able to write the functionality you need without the ex
 Sara Soueidan
 
 Freelancer, Developer of the Year (Net Awards), Writer at Codrops
+
+Award-winning front-end developer, speaker, and writer
 http://sarasoueidan.com/
+http://tympanus.net/codrops/author/sarasoueidan/
+https://sarasoueidan.com/speaking/
 
 
 Project ideas from Sara:
