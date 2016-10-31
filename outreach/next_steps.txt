@@ -4,12 +4,22 @@ next steps
 
 current:
 
-- front end project ideas (get experts)
-	- getting experts one at a time in order to have list of projects
-	- can still draft personalized notes
 
-	- while waiting for responses:
-		- add intermediate content to course
+
+
+
+
+- tutorials can be misleading (how to approach projects article)
+
+- why people struggle to learn js
+- make quiz code (and outline process)
+- hacks to become a better coder
+	- don't be afraid to look stupid asking questions
+	- don't do your thinking and coding at the same time
+
+
+- interview hacks article
+- js closures reddit post
 
 
 
@@ -17,6 +27,10 @@ current:
 - maybe quick tip "for loop" article (sitepoint)
 
 - gravity article: drop, jump, bounce, arrow (css-tricks)
+
+
+
+- add intermediate content to course
 
 
 list growth strategies:
@@ -27,6 +41,13 @@ list growth strategies:
 sales growth strategies:
 - interview recruiters and hiring managers about what they're looking for, what they wish candidates would do, etc, then put in course
 - add intermediate level
+
+
+
+
+sales email ideas:
+
+- tale of three learning paths: videos vs codecademy vs ss (videos were fun but too passive, codecademy showed progress but couldn't apply in real life, ss did it and actually understood it, etc)
 
 
 

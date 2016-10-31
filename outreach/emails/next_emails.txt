@@ -3,13 +3,6 @@
 
 
 
-one thing that makes sites look bad
-	- messing up padding/spacing
-	- use example of how fake sites always mess up the padding
-
-
-
-
 how to recover from a mistake
 
 
