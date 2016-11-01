@@ -5,13 +5,14 @@ next steps
 current:
 
 
+- look into forbes blogging
+- research lifehacker
 
 
-
-
-- tutorials can be misleading (how to approach projects article)
 
 - why people struggle to learn js
+- tutorials can be misleading (how to approach projects article)
+
 - make quiz code (and outline process)
 - hacks to become a better coder
 	- don't be afraid to look stupid asking questions
