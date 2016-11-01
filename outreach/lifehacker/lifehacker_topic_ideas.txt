@@ -1,0 +1,71 @@
+lifehacker topic ideas
+
+
+
+
+tags to look through:
+	http://lifehacker.com/tag/learn-to-code
+	http://lifehacker.com/tag/coding
+	http://lifehacker.com/tag/code
+
+
+authors:
+	- Alan Henry (editor-in-chief) alan@lifehacker.com topic: html cheat sheet
+
+	- Melanie Pinola (contributing writer) melanieuy@gmail.com topics: lots of learn to code
+
+	- Andy Orin (edit assist) andy@lifehacker.com
+
+	- Kristin Wong (contributing writer) kristin.wong@lifehacker.com
+
+	- Thorin Klosowski (writer) thorin@lifehacker.com topics: general tech, some learn to code
+
+	- Patrick Allan (staff writer) patrick.allan@lifehacker.com topic: best paying US cities for software engineers
+
+
+
+
+
+past topics on site:
+	- infographics
+	- helpful tools
+	- what you need to know to get hired
+	- how to learn to code better
+	- how to decide what to learn
+	- best resources to learn to code
+	- ways/tactics to teach yourself code
+	- best code students are ones who make most mistakes
+	- top 10 mistakes you might be making in job search
+	- how to hack into ____
+	- how to protect yourself from hacks
+	- sites that help you learn to code
+	- salary negotiation
+	- seasonal stuff (halloween candy calculator)
+
+
+
+
+notable articles:
+
+
+http://lifehacker.com/lrn-helps-you-learn-to-code-at-your-convenience-1721210656
+
+
+
+
+
+
+ideas:
+
+
+coding cheat sheet
+	example (html cheat sheet): http://lifehacker.com/get-a-jump-start-on-your-next-web-site-with-this-html-c-1782183641
+
+
+- look good in coding interview even if you don't know the answer right away
+
+- tricks to remember better when learning to code
+
+- what I learned about code from watching a nationally ranked tennis player get good at mario kart
+
+
