@@ -53,6 +53,33 @@ http://lifehacker.com/lrn-helps-you-learn-to-code-at-your-convenience-1721210656
 
 
 
+contributing info:
+http://lifehacker.com/want-to-contribute-to-lifehacker-1174273961
+	
+	- pitch: two sentences and link
+
+
+
+
+
+general info:
+http://lifehacker.com/lifehacker-the-index-1524507989
+
+	relevant categories:
+		how to
+		mind hacks
+		psychology
+		communication
+		security
+		privacy
+		jobs
+		infographics
+		101
+		diy
+		productivity
+
+
+
 
 
 ideas:
@@ -70,5 +97,13 @@ coding cheat sheet
 
 - harness the power of distractions to find time to learn code
 
+
+- learn to code faster with this trick from pokemon go (km requirement reduced for buddy; smaller progress milestones made it more manageable therefore inspired more walking distance)
+
+
+- how to hide spoilers on facebook
+
+
+- what stops people from learning to code
 
 
