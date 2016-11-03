@@ -29,7 +29,7 @@ authors:
 past topics on site:
 	- infographics
 	- helpful tools
-	- what you need to know to get hired
+	- what you need to know to get hired as web dev
 	- how to learn to code better
 	- how to decide what to learn
 	- best resources to learn to code
@@ -47,8 +47,10 @@ past topics on site:
 
 notable articles:
 
-
 http://lifehacker.com/lrn-helps-you-learn-to-code-at-your-convenience-1721210656
+
+http://lifehacker.com/11-essential-tech-skills-you-need-to-get-hired-as-a-web-1755192150
+
 
 
 
@@ -105,5 +107,24 @@ coding cheat sheet
 
 
 - what stops people from learning to code
+
+
+- why you struggle to learn code (and what to do about it)
+	(in the format of: http://lifehacker.com/why-you-get-dark-circles-under-your-eyes-1787064767)
+
+- things new code learners obsess over that don't matter
+	(in the format of: http://lifehacker.com/five-things-job-candidates-obsess-over-that-hiring-mana-1670410029)
+
+- red flags in web dev job descriptions
+	(in the format of: http://lifehacker.com/four-red-flags-to-watch-out-for-in-job-interviews-1773447368)
+
+- X steps to create your first web page
+	(similar: http://lifehacker.com/10-steps-to-create-your-first-android-app-1773386357)
+
+- I want to code web pages. Where do I start?
+	(similar: http://lifehacker.com/i-want-to-write-android-apps-where-do-i-start-1643818268)
+
+
+
 
 
