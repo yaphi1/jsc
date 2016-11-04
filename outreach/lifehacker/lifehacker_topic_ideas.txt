@@ -10,15 +10,22 @@ tags to look through:
 
 
 authors:
+	- Thorin Klosowski (writer) thorin@lifehacker.com topics: general tech, some learn to code
+		- seems to post most on learn to code topics of any other author
+		- fulltime staff writer
+		- info:
+			http://tjktjktjktjk.kinja.com/
+			http://thorinklosowski.com/
+		- interested in productivity
+
 	- Alan Henry (editor-in-chief) alan@lifehacker.com topic: html cheat sheet
 
 	- Melanie Pinola (contributing writer) melanieuy@gmail.com topics: lots of learn to code
+		- no longer full time at lifehacker but makes occasional post
 
 	- Andy Orin (edit assist) andy@lifehacker.com
 
 	- Kristin Wong (contributing writer) kristin.wong@lifehacker.com
-
-	- Thorin Klosowski (writer) thorin@lifehacker.com topics: general tech, some learn to code
 
 	- Patrick Allan (staff writer) patrick.allan@lifehacker.com topic: best paying US cities for software engineers
 
