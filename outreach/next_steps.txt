@@ -2,10 +2,63 @@ next steps
 
 
 
-current:
+immediate:
+
+- pitch lifehacker
+	- have something by the end of this weekend
 
 
-- look into forbes blogging
+- prep launch
+	- update sales page
+	- update course
+	- add paypal
+	- prepare emails
+	- see how conversion should be calculated for previous launch
+	- consider price change
+
+
+
+
+
+
+[Question about conversion rates]
+
+For my second launch, I launched to my full list (raising the price from $49 to $99).
+
+How should I measure the conversion rate without getting skewed results from people who have already been launched to before?
+
+Do I measure from the new people only?  Should I just measure out of the total anyway?  Should I include the customers from the previous launch in my calculations?
+
+The point of this is to figure out whether the price is where it needs to be.
+
+Putting this question here because others might benefit from it as well.
+
+Stats:
+
+Launch 2
+Total subscribers: 2000
+New subscribers since previous launch: 800
+Price: $99
+Paying customers (after refunds): 15
+Conversion rate: 0.75% of total list
+Conversion rate: 1.875% of new subs
+
+
+Launch 1
+Total subscribers: 1300
+Price: $49
+Paying customers (after refunds): 22
+Conversion rate: 1.7%
+
+
+
+
+
+
+
+notes:
+
+
 - research lifehacker
 
 

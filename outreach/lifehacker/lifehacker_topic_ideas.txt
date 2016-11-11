@@ -141,4 +141,12 @@ coding cheat sheet
 - get people to do what you want with the power of the standard option (use burger example)
 	defaults are mentioned: http://twocents.lifehacker.com/improve-your-money-habits-by-pinpointing-and-changing-y-1785060443
 
+- most destructive code-learning advice: just do projects
+	alt headlines:
+	- Learning code? Don't "just do projects"
+	- Learning code? "Just do projects" is bad advice
+	- Learning code? The most common piece of advice is wrong
+
+
+
 
