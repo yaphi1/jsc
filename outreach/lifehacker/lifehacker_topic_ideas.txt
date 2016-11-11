@@ -1,6 +1,11 @@
 lifehacker topic ideas
 
 
+guestblogging.com description:
+	Lifehacker is the premier place for tips, tricks and downloads for getting things done. Wants straightforward, descriptive how-to posts that the reader can follow, step-by-step, and get the same results as you.
+
+	Editor: Alan Henry
+	Email: submissions@lifehacker.com
 
 
 tags to look through:
@@ -111,10 +116,11 @@ coding cheat sheet
 
 
 - how to hide spoilers on facebook
+	(nope; already done many times years ago)
 
 
 - what stops people from learning to code
-
+	(example of mistakes list: http://lifehacker.com/four-common-mistakes-that-can-derail-any-negotiation-1668899157)
 
 - why you struggle to learn code (and what to do about it)
 	(in the format of: http://lifehacker.com/why-you-get-dark-circles-under-your-eyes-1787064767)
@@ -133,6 +139,6 @@ coding cheat sheet
 
 
 - get people to do what you want with the power of the standard option (use burger example)
-
+	defaults are mentioned: http://twocents.lifehacker.com/improve-your-money-habits-by-pinpointing-and-changing-y-1785060443
 
 
