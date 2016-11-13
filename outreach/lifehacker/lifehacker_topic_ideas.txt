@@ -12,6 +12,24 @@ tags to look through:
 	http://lifehacker.com/tag/learn-to-code
 	http://lifehacker.com/tag/coding
 	http://lifehacker.com/tag/code
+	http://lifehacker.com/tag/republished
+
+
+advice:
+	http://lifehacker.com/want-to-contribute-to-lifehacker-1174273961
+
+	http://lifehacker.com/5639095/how-to-write-a-post-for-lifehacker
+
+	http://whitsongordon.kinja.com/how-i-started-writing-for-lifehacker-and-advice-to-asp-1496411848
+
+	http://lifehacker.com/5625621/share-your-expertise-on-lifehacker-expert-pages
+
+	http://lifehacker.com/tag/tips
+
+	https://ahrefs.com/blog/how-to-get-your-content-syndicated/
+
+	http://lifehacker.com/lifehacker-is-looking-for-some-new-writers-1550660199
+
 
 
 authors:
@@ -29,6 +47,8 @@ authors:
 		- no longer full time at lifehacker but makes occasional post
 
 	- Andy Orin (edit assist) andy@lifehacker.com
+		- topic: interview tips
+		- http://lifehacker.com/ask-this-question-to-end-your-job-interview-on-a-good-n-1787624433?utm_source=taboola
 
 	- Kristin Wong (contributing writer) kristin.wong@lifehacker.com
 
@@ -146,6 +166,7 @@ coding cheat sheet
 	- Learning code? Don't "just do projects"
 	- Learning code? "Just do projects" is bad advice
 	- Learning code? The most common piece of advice is wrong
+	- The best advice for learning code is also the worst advice
 
 
 

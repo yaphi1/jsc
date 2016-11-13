@@ -1,0 +1,133 @@
+
+
+new opening:
+
+When you're learning to code, people will tell you to do projects.  Often you'll do the project too early, get discouraged, and stop coding.
+
+Here's how to prevent this from happening to you.
+
+Some of the most common and dangerous advice for learning to code is to "just do projects."
+We'll talk about why that happens and how to protect yourself.
+
+
+When learning to code, people often attempt projects too early.  This leads them to get discouraged and quit.  We'll talk about why that happens and what learning approach to take instead.
+
+article:
+
+
+The best piece of advice for learning to code is also the worst:
+
+"Just do projects."
+
+Projects can be a great way to improve your coding skills, but people often attempt them too early.
+
+People say things like "I'll just code up a quick slideshow," or "I'll just make a simple social network app."
+
+These statements lead to one of two scenarios:
+
+1. The project is way too hard, and the person gets discouraged.
+2. They stumble through and complete the project, but since it required so much new information at one time, they can never remember it or apply it again.
+
+Both scenarios lead to a nasty psychological effect where a learner will think, "If I can't even do this easy thing, maybe I'm not cut out for coding."
+
+As a result, trying to do a project too soon is often the thing that stops people from learing to code altogether.
+
+
+The solution:
+
+Learn small concepts first.
+
+For example, show text on a screen, add two numbers together, or change a background color.
+
+As you learn concepts, you'll be able to create mini-projects based on your new skills.
+
+The key with the concepts-first approach is that you'll learn to judge a project better.  That way, you won't jump into anything huge and get discouraged.
+
+Here are some other benefits of going concepts-first:
+- Smaller pieces of learning will give you more quick wins and therefore more momentum.
+- Concepts build on each other, so with each concept you learn, you'll unlock a whole set of new projects you can do.
+- You'll remember things better if they're in smaller pieces.
+- It'll be easier to apply what you've learned to different situations.
+
+
+
+A quick caveat:
+
+It's important to challenge yourself, and taking on an unfamiliar project can be a great way to do that.
+
+My point in this article is not to avoid challenging projects; instead get a few basic concepts under your belt so you can judge the situation better and avoid getting discouraged.
+
+
+
+
+What's next?
+
+If you're interested in learning JavaScript, here's a roadmap of which concepts to learn to make quick progress.
+
+
+
+
+
+
+
+
+- common trap: jump into project too early
+	- two scenarios:
+		- get stuck and discouraged
+		- stumble through project but don't understand or remember any of it
+
+- solution: concepts first
+	- momentum, better awareness of skill level
+	- patience leads to faster progress
+	- easier to remember
+
+- caveat: challenges are important
+
+
+
+
+- most destructive code-learning advice: just do projects
+	alt headlines:
+	- Learning to Code? Don't "Just Do Projects"
+	- Learning to code? "Just do projects" is bad advice
+	- Learning to code? The most common piece of advice is wrong
+	- The best advice for learning to code is also the worst
+	- This one piece of advice has stopped so many people from learning to code
+
+
+
+
+
+pitch notes:
+
+
+"Just do projects" sounds like good advice, but it actually stops people from learning to code.
+
+Here's how to protect oneself from the damage that advice can cause:
+[link]
+
+Writing credibility:
+- My writing has appeared in Lifehacker through a Sitepoint article. [link]
+- I've also appeared in CSS-Tricks, Smashing Magazine, Webdesigner Depot, and more.
+
+
+
+
+subject line ideas:
+
+Common advice to code learners is harmful
+
+Learning to code? Don't just do projects
+
+
+
+
+
+unused writing:
+
+"Just do projects" is some of the most common and destructive advice about learning to code.
+
+The most common advice about learning to code is harmful.
+
+"Just do projects." It's the most common advice about learning to code
+
