@@ -101,6 +101,48 @@ If you're interested in learning JavaScript, here's a roadmap of which concepts 
 pitch notes:
 
 
+
+
+
+
+"Just do projects" sounds like good advice, but I've seen it stop too many people from learning to code.
+
+I wrote about why the problem happens and how to avoid it:
+
+This topic matters to me because it can help a lot of people who might otherwise be needlessly discouraged.
+
+If you like the post, I'd love to see it republished on Lifehacker.
+
+
+
+Writing credibility:
+- My writing has appeared in Lifehacker through a Sitepoint article. [http://lifehacker.com/learn-to-code-faster-by-treating-new-concepts-like-gett-1734039966]
+- I've also appeared in CSS-Tricks, Smashing Magazine, Webdesigner Depot, and more.
+
+
+https://css-tricks.com/potential-dangers-of-third-party-javascript/
+
+https://www.smashingmagazine.com/2016/07/web-development-reading-list-143/
+
+http://www.webdesignerdepot.com/2016/06/are-you-solving-the-wrong-problems/
+
+
+
+
+
+
+I think this topic matters because I see too many people get discouraged by a learning approach that is easily fixed.
+
+
+
+
+
+
+
+
+
+
+
 "Just do projects" sounds like good advice, but it actually stops people from learning to code.
 
 Here's how to protect oneself from the damage that advice can cause:
@@ -119,8 +161,9 @@ Common advice to code learners is harmful
 
 Learning to code? Don't just do projects
 
+Common advice for learning to code is actually harmful
 
-
+This one piece of advice stops people from learning to code
 
 
 unused writing:
