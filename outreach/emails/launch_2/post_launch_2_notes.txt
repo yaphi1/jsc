@@ -22,6 +22,20 @@ launch 2: $1.85 per sub
 
 
 
+
+sales to existing subs: 4 (/1200 = 0.33%) (0.4 or 0.5 depending on other subs)
+sales to new subs: 9 (/800 = 1.125%) (1.25% if unknown goes here)
+unknown: 1
+friend's bro not on list: 1
+
+
+(LtS = list to sale)
+1. Overall LtS: 0.75%
+2. Existing Subscriber LtS: 0.4%
+3. New Subscriber LtS: 1.25%
+
+
+
 Possible next steps:
 - Survey list more for new product ideas
 - Add a tier or upsell
