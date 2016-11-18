@@ -1,0 +1,35 @@
+
+Something that bothers coders but no one talks about
+
+
+Recently, a reader sent a very honest message about an important topic.
+
+I've reprinted it here with permission:
+
+"I'm afraid to create, and this sound so dumb for me because the purpose I wanted to learn JS, CSS, HTML (Front-End Design) is for me to be able to create things and for me be able to get my dream Job and I want to help other trough frontend design. But after this years of learning it seems that it isn't enough. I'm afraid that the things I will create will suck at the end."
+
+
+parts
+
+1) worry about throwing away a lot of time for a bad result
+2) feeling doubt about one's abilities
+3) fear of falling behind or not knowing enough
+4) fear of judgement from others
+
+
+how to solve
+
+1
+recreate small things you like; this limits time and guarantees you'll like the result
+
+2
+more stuff you create, the more you can point to when doubts start to appear
+
+3
+get better at html, css, and js; get better at everything
+
+4
+everyone makes mistakes; it's okay
+
+
+

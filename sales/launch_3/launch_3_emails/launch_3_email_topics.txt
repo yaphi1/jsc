@@ -2,13 +2,16 @@
 /*
 
 - what to do when concerned about projects not being good enough
-- answer to question about copying and pasting
+- answer to question about copying and pasting (maybe personal story about testimonial slider)
 - dangers of just doing projects
 - dangers of following tutorials
+- lazy teaching (overload you with info; now I've said it and you're responsible for it)
 - easiest way to keep up with new stuff: learn js
 - confessions of people who are learning web development (problems with various course formats)
 - faq email
+- a story I got (testimonial)
 - course closes soon x2 (new years' resolutions can be one email)
 
 */
+
 
