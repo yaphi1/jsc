@@ -8,28 +8,53 @@ I've reprinted it here with permission:
 
 "I'm afraid to create, and this sound so dumb for me because the purpose I wanted to learn JS, CSS, HTML (Front-End Design) is for me to be able to create things and for me be able to get my dream Job and I want to help other trough frontend design. But after this years of learning it seems that it isn't enough. I'm afraid that the things I will create will suck at the end."
 
+A lot of people face these sorts of concerns, so let's break down what's going on here.  There are four parts to this:
 
-parts
+1) Worry about throwing away a lot of time for a bad result
+2) Doubt about one's abilities
+3) Fear of falling behind or not knowing enough
+4) Fear of judgement from others
 
-1) worry about throwing away a lot of time for a bad result
-2) feeling doubt about one's abilities
-3) fear of falling behind or not knowing enough
-4) fear of judgement from others
-
-
-how to solve
-
-1
-recreate small things you like; this limits time and guarantees you'll like the result
-
-2
-more stuff you create, the more you can point to when doubts start to appear
-
-3
-get better at html, css, and js; get better at everything
-
-4
-everyone makes mistakes; it's okay
+I've put together some suggestions for handling each of these problems.
 
 
+1) Worry about throwing away a lot of time for a bad result
+
+One way to solve this is to recreate good things you find on the web.  Maybe it's a home page, a menu, a layout, a grid, or a form.
+
+By keeping the project small, you limit the time investment, and by picking something you already know you like, you won't have to worry about the result.
+
+The more you do this, the more you'll start to understand why you like the things you do, and then you'll find yourself creating things you like.
+
+2) Doubt about one's abilities
+
+Doubts happen to everyone, and they don't completely go away.  It's impossible to know everything, so you'll always hear new information and wonder if it's something you should know.
+
+I like to reframe this as a good thing.  If there were nothing new to discover, things would be boring.
+
+Also, a great way to reduce doubts is to create more stuff with code.  That way, when doubts appear, you can point to the stuff you've made as a concrete reminder of your progress.  No doubts can take away what you've done.
+
+
+3) Fear of falling behind or not knowing enough
+
+There are a lot of tools and frameworks in the web development world, and it's easy to feel like things are moving too fast.
+
+In this case, my advice is the same as always:
+Get better at HTML, CSS, and JavaScript, and you'll automatically be better at everything else.
+
+
+4) Fear of judgement from others
+
+It's natural to be concerned about what others will think of your code.  The truth is, most people are too busy worrying about themselves to judge you.
+
+Also, everyone makes mistakes.  For example, I've seen Apple, Google, and Facebook mess up their CSS in highly visible ways.
+
+You know what?
+
+It wasn't the end of the world.  They fixed it, and no one cared.
+
+My point is that it happens to everyone, so don't worry about it too much.
+
+
+Anyways, I hope this email has been helpful!
 

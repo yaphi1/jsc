@@ -4,8 +4,6 @@ next steps
 
 immediate:
 
-- pitch lifehacker
-	- have something by the end of this weekend
 
 
 - prep launch
@@ -17,6 +15,7 @@ immediate:
 	- consider price change
 
 
+- lh outreach
 
 great advice about growth and sales
 http://growthlab.com/how-i-increased-my-monthly-income-44-without-launching-a-new-product/

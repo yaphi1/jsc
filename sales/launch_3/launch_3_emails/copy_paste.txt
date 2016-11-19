@@ -1,0 +1,36 @@
+The real cost of copying and pasting code
+
+
+
+Before I knew JavaScript, I used to depend on copied and pasted code to create anything interactive.
+
+I thought this was a shortcut, but it wasn't at all.
+
+When I wanted to do one thing, I'd have to spend hours searching the web and reading through instructions to find the perfect code snippet for my purposes.
+
+Then when the code snippet didn't do quite what I wanted, I'd spend more hours or even days figuring out how to tweak it.
+
+Once I sat down and learned JavaScript, I realized the so-called shortcut of copying and pasting actually cost me more time than learning the language.
+
+After learning JavaScript, the things that would take me hours or days were now getting done in minutes.
+
+Even better, the things I coded would work exactly the way I wanted them to.  It felt good not to deal with code snippets that were inflexible or a bad fit.
+
+I didn't even learn JavaScript efficiently, and it was still better than copying and pasting stuff.
+
+Still, I would have liked to avoid the wrong turns I made while learning JavaScript.
+
+For that reason, I went ahead and created the course I wish had when I was starting out.
+
+Feel free to take a look at the course here.
+
+Best,
+
+Yaphi
+Simple Steps Code
+
+
+
+
+
+
