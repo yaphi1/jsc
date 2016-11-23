@@ -6,7 +6,68 @@ Someone submitted something that made me laugh at myself
 
 Last week, I issued a challenge: Recreate Google's home page in a creative way.
 
-One of the submissions I got
+My favorite submission had the title "4x the power of raw Google."
+
+Immediately, I launched into a series of thoughts.  What could this be?  Does this use some intense algorithms or APIs?  Does it have huge performance optimizations Google has overlooked?
+
+Then I clicked on it.
+
+http://casman.co.uk/4xGoogle/
+[Credit: Charlie S.]
+
+Clever. Very clever.
+
+I had to laugh at myself because I had completely overthought everything, and yet here was a smart, straightforward way of reaching the goal.
+
+I really like this solution because it's an important reminder to step back and ask about the real problem we're trying to solve instead of immediately jumping in and making things complicated.
+
+Unnecessary complexity creates so many problems including website errors and maintenance nightmares.
+
+Here's a trick to avoid unnecessary complexity:
+
+Instead of jumping into solutions and techniques, try stepping back and take some time to define the problem itself.
+
+This step gets skipped so often, and it's the source of a lot of problems.
+
+Bringing this up can help you look good in interviews too because it shows you're really thinking instead of just randomly acting.
+
+I hope this helps!
+
+
+			<div class="oct_2016_col">
+				<div class="oct_2016_product_info_square">
+					<div class="oct_2016_language_header">
+						Learn <span class="js_langname_1">a Language</span>
+					</div>
+					<div class="oct_2016_language_subhead">
+						Online Subscription
+					</div>
+					<div class="oct_2016_review_star_container">
+						<div class="hollow_stars">
+							&#9734; &#9734; &#9734; &#9734; &#9734;
+							<div class="filled_stars">
+								&#9733; &#9733; &#9733; &#9733; &#9733;
+							</div>
+						</div>
+						<div class="oct_2016_review_star_text">(239 Reviews)</div>
+					</div>
+					<div class="oct_2016_product_intro">
+						If speaking <span class="js_langname_1">a new language</span> in the real world is your goal, you've come to the right place.
+						Our program lets you learn your second language the way you learned your first, with an intuitive, immersive method that's as fun to use as it is effective.
+					</div>
+					<ul class="oct_2016_ul">
+						<li>Unlimited access to all 5 levels for selected duration</li>
+						<!-- <li>Access for 1 person</li> -->
+						<li>Speech Recognition</li>
+						<li>Learn anywhere on any device including use of our award-winning mobile app</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="oct_2016_col oct_2016_subscription_image">
+			</div>
+		</div>
+
 
 
 
