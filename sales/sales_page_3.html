@@ -5,13 +5,10 @@
 
 <!--
 Updates to make:
-- number of chapters of content
-- update course outline
+- update price on back end
 - update screenshots, provide better previews (more details)
-- add project examples
 - add paypal
 - add receipts
-- add section on convincing your employer to pay for this
 - stop timer from redirecting once user is on the page
 - prepare clock date
 
@@ -20,6 +17,12 @@ finished updates:
 - change price in wishlist backend
 - add testimonials
 - update about me
+- number of chapters of content
+- update course outline
+- add project examples
+- add section on convincing your employer to pay for this
+- update price on page
+
 
 -->
 
@@ -157,6 +160,45 @@ ol > li {
 	padding-left: 10px;
 	border-left: none;
 }
+
+@media(max-width: 400px){
+	body{
+		font-size: 20px;
+	}
+	h1{
+		font-size: 30px;
+	}
+	.h1_subtitle{
+		font-size: 30px;
+	}
+	h4{
+		font-size: 30px;
+	}
+	ul{
+		padding: 0px 0px 0px 20px;
+	}
+	ul > li{
+		padding-left: 0px;
+	}
+	ol{
+		padding: 0px 10px 0px 40px;
+	}
+	ol > li:before{
+		left: -0.8em;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .course_intro{
@@ -368,9 +410,28 @@ TESTIMONIALS
 
 
 
+
+
+/****************************************
+COURSE OUTLINE
+****************************************/
+
 .js_details{
 	display: none;
 }
+.section_outline{
+	padding: 10px 0px 0px 20px;
+}
+.section_outline > li{
+	padding-left: 0px;
+}
+
+
+
+
+
+
+
 
 
 
@@ -880,6 +941,7 @@ div.regform .regform-form .btn-fld .regform-button{
 			<li>Interactive games</li>
 			<li>Countdown timers</li>
 			<li>Calculation helpers</li>
+			<li>Modern animations</li>
 			<li>Much more stuff than I can list</li>
 		</ul>
 
@@ -893,8 +955,18 @@ div.regform .regform-form .btn-fld .regform-button{
 					<a class="js_toggle_details" href="#">Show Details</a>
 				</p>
 				<div class="js_details">
-					<strong>Specific concepts covered:</strong>
-					<br>getElementById, innerHTML, comments, console, variables, strings, concatenation, escaping characters, operators, declarations, assignment, modular arithmetic
+					<strong>Section outline:</strong>
+					<ul class="section_outline">
+						<li>How to get the most out of this course</li>
+						<li>Write some practical JavaScript</li>
+						<li>How to avoid getting stuck</li>
+						<li>Use variables so you don’t have to keep repeating yourself</li>
+						<li>Make JavaScript do your math for you</li>
+					</ul>
+					<p>
+						<strong>Specific concepts covered:</strong>
+						<br>getElementById, innerHTML, comments, console, variables, strings, concatenation, escaping characters, operators, declarations, assignment, modular arithmetic
+					</p>
 				</div>
 			</li>
 
@@ -906,38 +978,154 @@ div.regform .regform-form .btn-fld .regform-button{
 					<a class="js_toggle_details" href="#">Show Details</a>
 				</p>
 				<div class="js_details">
-					<strong>Specific concepts covered:</strong>
-					<br>getElementById, innerHTML, comments, console, variables, strings, concatenation, escaping characters, operators, declaration, assignment, modular arithmetic
+					<strong>Section outline:</strong>
+					<ul class="section_outline">
+						<li>Make your life easier with functions</li>
+						<li>How to avoid messing up your functions: Know scope and hoisting</li>
+						<li>Make your code smart by building in logic</li>
+						<li>Supercharge your code’s logic with logical operators, parentheses, and booleans</li>
+					</ul>
+					<p>
+						<strong>Specific concepts covered:</strong>
+						<br>Functions, parameters, scope, hoisting, control flow, comparison operators, logical operators, booleans
+					</p>
 				</div>
 			</li>
 
 			<li>
 				<p><strong>Make magic happen with styles and interactivity</strong></p>
-				<p>You'll learn to respond to user actions and change stuff on your page dynamically.</p>
+				<p>You'll learn to respond to user actions and change stuff on your page dynamically. You'll also learn to make simple, modern animations.</p>
+
+				<p>
+					<a class="js_toggle_details" href="#">Show Details</a>
+				</p>
+				<div class="js_details">
+					<strong>Section outline:</strong>
+					<ul class="section_outline">
+						<li>Manipulate styles with JavaScript</li>
+						<li>Make your pages do cool things when your users click</li>
+						<li>Let your users input text!</li>
+						<li>Handle user interactions besides clicks</li>
+						<li>Create modern animations without learning any new JavaScript</li>
+					</ul>
+					<p>
+						<strong>Specific concepts covered:</strong>
+						<br>Style changes, class changes, click events, anonymous functions, input values, keyboard events, focus and blur events, modern animations
+					</p>
+				</div>
 			</li>
 
 			<li>
 				<p><strong>Get efficient and powerful with data</strong></p>
 				<p>You'll learn about loops, arrays, objects, and manipulation of all three.  No more struggling with "for" loops.</p>
+
+				<p>
+					<a class="js_toggle_details" href="#">Show Details</a>
+				</p>
+				<div class="js_details">
+					<strong>Section outline:</strong>
+					<ul class="section_outline">
+						<li>Loops: accomplish a lot with little code</li>
+						<li>Arrays: Convenient lists that will make your code easier to write</li>
+						<li>Array methods: Get better control of your arrays and do useful things with lists of data</li>
+						<li>Objects: Handle data neatly and conveniently</li>
+						<li>Use the “this” keyword and get better control of your objects and pages</li>
+					</ul>
+					<p>
+						<strong>Specific concepts covered:</strong>
+						<br>For loops, while loops, arrays, array methods (push, pop, shift, unshift, etc), objects, keys, values, properties, methods, the document object model (DOM), the "this" keyword
+					</p>
+				</div>
 			</li>
 
 			<li>
 				<p><strong>Gain better control of your pages</strong></p>
 				<p>Do more with your pages by learning about DOM traversal, attributes, string methods, regex, input validation, and urls.</p>
+
+				<p>
+					<a class="js_toggle_details" href="#">Show Details</a>
+				</p>
+				<div class="js_details">
+					<strong>Section outline:</strong>
+					<ul class="section_outline">
+						<li>Better DOM Traversal: Get elements by more than just their ids</li>
+						<li>Change HTML attributes dynamically</li>
+						<li>String methods: Get better control of your text</li>
+						<li>Validate user input with regular expressions</li>
+						<li>Working with URLs</li>
+						<li>Get better with forms</li>
+					</ul>
+					<p>
+						<strong>Specific concepts covered:</strong>
+						<br>DOM traversal, querySelector, querySelectorAll, selector performance, attribute manipulation, string methods (slice, replace, etc), regex, match, URL manipulation, form handling, input validation
+					</p>
+				</div>
 			</li>
 
 			<li>
 				<p><strong>Number wizardry: math, timing, and dates</strong></p>
 				<p>JavaScript has some useful tools to work with math, timing, and dates, and you'll get to use their power.</p>
+
+				<p>
+					<a class="js_toggle_details" href="#">Show Details</a>
+				</p>
+				<div class="js_details">
+					<strong>Section outline:</strong>
+					<ul class="section_outline">
+						<li>Get better control of your numbers – Math and randomness</li>
+						<li>Learn to control timing</li>
+						<li>JavaScript dates and times</li>
+					</ul>
+					<p>
+						<strong>Specific concepts covered:</strong>
+						<br>The Math object, random numbers, rounding, timing (setTimeout, setInterval, etc), dates and times
+					</p>
+				</div>
 			</li>
 
 			<li>
 				<p><strong>Learn to approach bigger projects</strong></p>
 				<p>Projects that used to sound big and scary will become doable as you learn to break them down into small, simple pieces.</p>
 				<p>Additionally, you'll get suggestions for what to do after completing the course, including portfolio project ideas and avenues for further practice.</p>
+
+				<p>
+					<a class="js_toggle_details" href="#">Show Details</a>
+				</p>
+				<div class="js_details">
+					<strong>Section outline:</strong>
+					<ul class="section_outline">
+						<li>Intro to approaching bigger problems – Create a lightbox</li>
+						<li>Create a price calculator</li>
+						<li>Create a game of rock-paper-scissors</li>
+						<li>Boost your skills with assorted projects</li>
+						<li>What to do next: portfolio projects</li>
+						<li>Take your JavaScript to the next level</li>
+					</ul>
+				</div>
 			</li>
 		</ol>
 
+
+
+
+		<h4>Portfolio projects you'll have by the end</h4>
+
+		<ul>
+			<li>Price estimator</li>
+			<li>Shopping cart front end</li>
+			<li>Autocorrecting text box</li>
+			<li>Social network front end</li>
+			<li>Form validator</li>
+			<li>Basic quiz</li>
+			<li>Modal dialog box</li>
+			<li>Tip calculator</li>
+			<li>Rock-paper-scissors game</li>
+			<li>Collapsible navigation menu</li>
+			<li>Countdown clock</li>
+			<li>Cost splitter</li>
+			<li>Random name picker</li>
+			<li>Front end of interactive online store</li>
+		</ul>
 
 
 
@@ -1042,7 +1230,7 @@ div.regform .regform-form .btn-fld .regform-button{
 		<div class="content_width">
 			<p>Because you can make an extra $10,000 to $70,000 per year by knowing JavaScript, this course is easily worth thousands of dollars.</p>
 
-			<p class="big_p">You can get lifetime access to <br>Simple Steps JavaScript for $99.</p>
+			<p class="big_p">You can get lifetime access to <br>Simple Steps JavaScript for <sup>$</sup>149.</p>
 
 			<!-- <button class="sales_cta_button">
 				Get the Course
@@ -1105,6 +1293,8 @@ div.regform .regform-form .btn-fld .regform-button{
 				<h4>What if I'm not happy with the course?</h4>
 
 				<p>There's a 60-day money-back guarantee.  If you're not 100% satisfied with the course, email me within 60 days and you'll get a full refund, no questions asked.</p>
+
+				<p>I don't want a cent unless you're satisfied with the course.</p>
 			</li>
 
 
@@ -1132,6 +1322,11 @@ div.regform .regform-form .btn-fld .regform-button{
 					<li>
 						<h5>Traditional education:</h5>
 						<p>Huge price (debt for years), inadequate offerings, and often outdated material.  I had a friend whose programming professor said, "I can't believe I have to teach this old book."</p>
+					</li>
+
+					<li>
+						<h5>Coding bootcamps:</h5>
+						<p>You pay thousands of dollars, you spend 6 months, and you have to follow their schedule.</p>
 					</li>
 
 					<li>
@@ -1194,6 +1389,26 @@ div.regform .regform-form .btn-fld .regform-button{
 			</li>
 
 
+
+
+			<li>
+				<h4>How do I convince my employer to pay for this?</h4>
+
+				<p>The course is focused on getting you to do practical things as quickly as possible.  That means it adds value to your organization in a very short amount of time.</p>
+
+				<p><strong>Here are some of the benefits:</strong></p>
+				<ul>
+					<li>You'll have more capabilities.</li>
+					<li>You'll save time in your daily work.</li>
+					<li>Your organization will have more security because you won't need to depend on random copied and pasted code as much.</li>
+					<li>The course is structured to fit around a busy schedule, so it won't get in the way of anything.</li>
+					<li>The cost is fantastic for the amount of value.</li>
+					<li>There's a 60-day money-back guarantee, so there's no risk anyway.</li>
+				</ul>
+
+			</li>
+
+
 		</ol>
 	</div>
 
@@ -1231,8 +1446,8 @@ div.regform .regform-form .btn-fld .regform-button{
 		<div class="cta_ribbon">
 			<h3>Get Simple Steps JavaScript</h3>
 			<p>Value: $10,000+ salary boost and more freedom</p>
-			<h4>Price: $99 for lifetime access</h4>
-			<!-- <p>Value: Over $10,000 per year | Price: $99</p> -->
+			<h4>Price: <sup>$</sup>149 for lifetime access</h4>
+			<!-- <p>Value: Over $10,000 per year | Price: <sup>$</sup>149</p> -->
 		
 			<!-- <button class="sales_cta_button">
 				Get the Course
