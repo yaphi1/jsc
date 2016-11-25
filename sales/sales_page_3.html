@@ -7,18 +7,19 @@
 Updates to make:
 - number of chapters of content
 - update course outline
-- add testimonials
-- update about me
 - update screenshots, provide better previews (more details)
-- maybe add project examples
+- add project examples
 - add paypal
 - add receipts
 - add section on convincing your employer to pay for this
 - stop timer from redirecting once user is on the page
-
-DONE - places featured
-DONE - change price in wishlist backend
 - prepare clock date
+
+finished updates:
+- places featured
+- change price in wishlist backend
+- add testimonials
+- update about me
 
 -->
 
@@ -366,6 +367,10 @@ TESTIMONIALS
 
 
 
+
+.js_details{
+	display: none;
+}
 
 
 
@@ -884,11 +889,26 @@ div.regform .regform-form .btn-fld .regform-button{
 			<li>
 				<p><strong>The basics: Get strong fundamentals and make everything else easier</strong></p>
 				<p>You'll show stuff on a page, learn to avoid getting stuck, and manipulate words and numbers.</p>
+				<p>
+					<a class="js_toggle_details" href="#">Show Details</a>
+				</p>
+				<div class="js_details">
+					<strong>Specific concepts covered:</strong>
+					<br>getElementById, innerHTML, comments, console, variables, strings, concatenation, escaping characters, operators, declarations, assignment, modular arithmetic
+				</div>
 			</li>
 
 			<li>
 				<p><strong>Make your code smart with functions and logic</strong></p>
 				<p>Functions will let you write code once and use it whenever.  Logic will let your code make intelligent decisions.  You'll learn the details of both.</p>
+
+				<p>
+					<a class="js_toggle_details" href="#">Show Details</a>
+				</p>
+				<div class="js_details">
+					<strong>Specific concepts covered:</strong>
+					<br>getElementById, innerHTML, comments, console, variables, strings, concatenation, escaping characters, operators, declaration, assignment, modular arithmetic
+				</div>
 			</li>
 
 			<li>
@@ -953,7 +973,7 @@ div.regform .regform-form .btn-fld .regform-button{
 			<h3>Who am I, and why would you listen to me?</h3>
 
 			<p>
-				My name is Yaphi, and I'm a front-end web developer at a publicly-traded tech company you've probably heard of.
+				My name is Yaphi, and I'm a front-end web developer.
 			</p>
 			<p>
 				I didn't come to web development through a neat path.
@@ -962,7 +982,7 @@ div.regform .regform-form .btn-fld .regform-button{
 				I did a bunch of unrelated jobs first, my degree is not in computer science, and I know how it feels to struggle to learn code.
 			</p>
 			<p>
-				A few years later, I'm at a stage where I develop production sites that get millions of hits, I've been recruited by companies including Amazon and Captial One, and my work has been featured or mentioned by organizations like Sitepoint, Lifehacker, Treehouse, Dreamhost, CSS-Tricks, Webdesigner Depot, and Smashing Magazine.
+				A few years later, I'm at a stage where I develop production sites that get millions of hits, I've been recruited by companies including Amazon, Facebook, Rosetta Stone, and Captial One, and my work has been featured or mentioned by organizations like Sitepoint, Lifehacker, Treehouse, Dreamhost, CSS-Tricks, Webdesigner Depot, and Smashing Magazine.
 			</p>
 			<p>
 				But who cares? Why does that matter?
@@ -1000,6 +1020,14 @@ div.regform .regform-form .btn-fld .regform-button{
 			&ldquo;First of all, I want to say it's a great course. The repetition and little projects all throughout made it easy to commit a lot of this stuff to memory better than I had memorized this stuff in the past and your projects at the end are good ideas which I'm going to get started on ASAP.&rdquo;
 			<br><span class="testimonial_name">- Nate S.</span>
 		</blockquote>
+
+
+		<blockquote class="testimonial">
+			&ldquo;...I did a little research on JS and decided to study Javascript.  I looked around for information, and came a cross Free Code Camp, Team Treehouse and various Udemy courses out there.  I even attended several Free Code Camp meetings.  But, sadly, I just was not catching on to JS. ...Previously, I was confused (mind you, I'd been studying sense November) as to how to use innerHTML, document.getElementById() Method, definitely did not understand what "this" meant! and so much more. Well, I faithfully followed your guide and just kept at it.  So, this morning, I'm sitting here in Starbucks working on the material and I said to myself, " I actually am starting to understand this stuff!"   And I had to write you!  This course has been an eye opener!   If I were you, I'd market yourself so much more.  In fact, I am going to do a YouTube video on Javascript at some point and I will most definitely mention your course as a major source of any success I have to this point.  I know that this email has been long, but I just had to tell you my whole story and let you know what you have done for me in the way of learning Javascript.  I actually feel like someone that is on the verge of accomplishing great things.   Once again thank you.&rdquo;
+			<br><span class="testimonial_name">- Dominic H.</span>
+		</blockquote>
+
+
 
 	</div>
 
@@ -1370,6 +1398,25 @@ div.regform .regform-form .btn-fld .regform-button{
 		logo.removeAttribute('href');
 	}
 })();
+</script>
+
+
+<!-- show and hide details -->
+<script>
+
+(function(){
+	var toggles = document.querySelectorAll('.js_toggle_details');
+	for(var i=0; i<toggles.length; i++){
+		toggles[i].onclick = function(){
+			var details = this.parentElement.parentElement.querySelector('.js_details');
+
+			this.innerHTML = this.innerHTML==='Show Details' ? 'Hide Details' : 'Show Details';
+			details.style.display = details.style.display==='block' ? 'none' : 'block';
+			return false;
+		};
+	}
+})();
+
 </script>
 
 
