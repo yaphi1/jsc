@@ -7,11 +7,17 @@
 
 [DONE] - answer to question about copying and pasting (maybe personal story about testimonial slider)
 
-- influencing how things sound (95% safe vs. 1 in 20 dangerous); relevant to code because: (story about making it sound like I didn't know what jQuery was)
+[ignore] - influencing how things sound (95% safe vs. 1 in 20 dangerous); relevant to code because: (story about making it sound like I didn't know what jQuery was)
 
-- dangers of just doing projects
+[quick one to prev list] - dangers of just doing projects
 
-- dangers of following tutorials
+- dangers of following tutorials (alt title: why it's hard to learn from tutorials)
+
+- js course now open
+
+- videos make you feel like you're learning, but they're too passive
+
+- good code instruction like getting lego blocks you can use anywhere instead of a recipe you follow along with but can't remember
 
 - lazy teaching (overload you with info; now I've said it and you're responsible for it)
 

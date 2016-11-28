@@ -6,9 +6,8 @@
 <!--
 Updates to make:
 
-- update screenshots, provide better previews (more details)
-- stop timer from redirecting once user is on the page
-- prepare clock date
+- upload screenshots
+- publish page
 
 
 finished updates:
@@ -26,7 +25,9 @@ finished updates:
 - set up paypal in back end
 - make paypal not ask for shipping address
 - add paypal button to sales page
-
+- update screenshots, provide better previews (more details)
+- stop timer from redirecting once user is on the page
+- prepare clock date
 
 -->
 
@@ -81,6 +82,10 @@ h1{
 	text-align: center;
 }
 
+ol{
+	padding: 0px 20px 0px 50px;
+}
+
 #menubar{
 	margin-bottom: 0px;
 	background: #fff;
@@ -100,6 +105,7 @@ h1{
 
 	/*background-color: #3B2F63;*/
 	
+	/*background: #005678;*/
 	/*background-image: radial-gradient(circle at 50% top , rgba(84, 90, 182, 0.6) 0%, rgba(84, 90, 182, 0) 75%), radial-gradient(circle at right top , #794AA2 0%, rgba(121, 74, 162, 0) 57%);*/
 
 	/*background-color: #6ED19C;
@@ -497,6 +503,16 @@ FEATURED BY
 	opacity: 0.6;
 }
 
+@media(max-width:700px){
+	.featured_logos{
+		max-width: 30%;
+	}
+	.wdd, .smashing{
+		height: auto;
+	}
+}
+
+
 
 
 
@@ -584,8 +600,8 @@ CLOCK STYLES
 .screenshots img{
 	border-radius: 5px;
 	box-shadow: 0px 3px 5px -2px rgba(33,33,33,0.3);
-	/*max-width: 100%;*/
-	width: 49%;
+	max-width: 100%;
+	/*width: 49%;*/
 	display: inline-block;
 	vertical-align: top;
 	margin: 10px 0px;
@@ -873,7 +889,7 @@ div.regform .regform-form .btn-fld .regform-button{
 
 	<div class="content_width">
 
-		<h3>Benefits you'll get from this course:</h3>
+		<h3 id="section_benefits">Benefits you'll get from this course:</h3>
 
 		<ol>
 			<li>
@@ -925,7 +941,7 @@ div.regform .regform-form .btn-fld .regform-button{
 
 
 	<div class="content_width">
-		<h3>What's in the course?</h3>
+		<h3 id="section_course_contents">What's in the course?</h3>
 		<ul>
 			<li>
 				34 chapters of online written content
@@ -1008,7 +1024,7 @@ div.regform .regform-form .btn-fld .regform-button{
 					<ul class="section_outline">
 						<li>Manipulate styles with JavaScript</li>
 						<li>Make your pages do cool things when your users click</li>
-						<li>Let your users input text!</li>
+						<li>Let your users input text</li>
 						<li>Handle user interactions besides clicks</li>
 						<li>Create modern animations without learning any new JavaScript</li>
 					</ul>
@@ -1112,7 +1128,7 @@ div.regform .regform-form .btn-fld .regform-button{
 
 
 
-		<h4>Portfolio projects you'll have by the end</h4>
+		<h4 id="section_projects">Portfolio projects you'll have by the end</h4>
 
 		<ul>
 			<li>Price estimator</li>
@@ -1134,9 +1150,9 @@ div.regform .regform-form .btn-fld .regform-button{
 
 
 
-		<h4>Screenshots of the course</h4>
+		<h4 id="section_screenshots">Screenshots of the course</h4>
 
-		<p>I've included some mini-screenshots to get a general visual idea of what the course looks like.  Here are some things to notice:</p>
+		<!-- <p>I've included some mini-screenshots to get a general visual idea of what the course looks like.  Here are some things to notice:</p>
 		<ul>
 			<li>Clear structure</li>
 			<li>Code samples</li>
@@ -1152,7 +1168,55 @@ div.regform .regform-form .btn-fld .regform-button{
 			<img src="../img/screenshots/screenshot_4.png">
 			<img src="../img/screenshots/screenshot_5.png">
 			<img src="../img/screenshots/screenshot_6.png">
-		</div>
+		</div> -->
+
+		<p>
+			Below, you'll see some screenshots of the course along with captions explaining the features that are hopefully relevant to you.
+		</p>
+
+		<ol class="screenshots">
+			<li>
+				An efficient structure that gets you to do practical things as soon as possible:
+				<br><img src="../img/screenshots/launch_3/outline.png">
+			</li>
+			<li>
+				Clear breakdowns of concepts:
+				<br><img src="../img/screenshots/launch_3/clear_breakdowns.png">
+			</li>
+			<li>
+				Instead of randomly following instructions, you'll understand why each concept matters:
+				<br><img src="../img/screenshots/launch_3/why_it_matters.png">
+			</li>
+			<li>
+				Plain-language explanations and no skipped steps:
+				<br><img src="../img/screenshots/launch_3/plain_language_no_skipping.png">
+			</li>
+			<li>
+				Friendly warnings about what not to do:
+				<br><img src="../img/screenshots/launch_3/friendly_warnings.png">
+			</li>
+			<li>
+				Syntax hints so you can spend less time worrying about whether that semicolon is in the right place and more time having fun with code:
+				<br><img src="../img/screenshots/launch_3/syntax_hints.png">
+			</li>
+			<li>
+				Practical examples:
+				<br><img src="../img/screenshots/launch_3/practical_examples.png">
+			</li>
+			<li>
+				Bright, color-coded sections:
+				<br><img src="../img/screenshots/launch_3/color_coded.png">
+			</li>
+			<li>
+				Helpful tips that come from experience:
+				<br><img src="../img/screenshots/launch_3/helpful_tips.png">
+			</li>
+			<li>
+				Bite-sized explanations, and then you jump right into code. This keeps it interesting and helps you learn better:
+				<br><img src="../img/screenshots/launch_3/brief_explanation_then_you_code.png">
+			</li>
+			
+		</ol>
 
 	</div>
 
@@ -1193,7 +1257,7 @@ div.regform .regform-form .btn-fld .regform-button{
 
 	<div class="content_width">
 
-		<h3>What are people saying about Simple Steps JavaScript?</h3>
+		<h3 id="section_testimonials">What are people saying about Simple Steps JavaScript?</h3>
 
 
 		<blockquote class="testimonial">
@@ -1269,7 +1333,7 @@ div.regform .regform-form .btn-fld .regform-button{
 
 
 
-	<h3>Questions you might have</h3>
+	<h3 id="section_faq">Questions you might have</h3>
 
 
 	<div class="content_width">
@@ -1312,7 +1376,7 @@ div.regform .regform-form .btn-fld .regform-button{
 
 
 			<li>
-				<h4>Why is this better than other types of courses?</h4>
+				<h4 id="section_course_comparison">Why is this better than other types of courses?</h4>
 
 				<ul>
 					<li>
@@ -1361,7 +1425,11 @@ div.regform .regform-form .btn-fld .regform-button{
 
 				<p>Yes you can!  All of the information is available for free on the internet.</p>
 
-				<p>Just be prepared to spend a year struggling to cobble together an incomplete understanding.</p>
+				<p>But free has costs:</p>
+				<ul>
+					<li>You could spend years you'll never get back only to end up not learning JavaScript.</li>
+					<li>After all that time, you'll always be afraid you're not learning properly or that your understanding is incomplete.</li>
+				</ul>
 			</li>
 
 
@@ -1454,7 +1522,7 @@ div.regform .regform-form .btn-fld .regform-button{
 
 		<p>If you're ready to learn JavaScript, here's the next step:</p>
 
-		<div class="cta_ribbon">
+		<div id="section_buy_bottom" class="cta_ribbon">
 			<h3>Get Simple Steps JavaScript</h3>
 			<p>Value: $10,000+ salary boost and more freedom</p>
 			<h4>Price: <sup>$</sup>149 for lifetime access</h4>
@@ -1693,9 +1761,9 @@ function startClock(endtime){
 	var timeinterval = setInterval(updateClock,1000);
 }
 
-// deadline: Fri July 22, 2016, 11:59pm Pacific
-// var deadline = 'July 22 2016 23:59:59 GMT-0800';
-var deadline = new Date(Date.now() + 1000*60*60*24*3);
+// deadline: Fri December 9, 2016, 11:59pm Pacific
+var deadline = 'December 9 2016 23:59:59 GMT-0800';
+// var deadline = new Date(Date.now() + 1000*60*60*24*3);
 
 // if deadline passed, redirect to course closed page
 if(Date.parse(new Date()) >= Date.parse(deadline)){

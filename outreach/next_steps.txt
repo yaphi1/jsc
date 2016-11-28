@@ -7,12 +7,7 @@ immediate:
 
 
 - prep launch
-	- update sales page
-	- update course
-	- add paypal
 	- prepare emails
-	- see how conversion should be calculated for previous launch
-	- consider price change
 
 
 - lh outreach
