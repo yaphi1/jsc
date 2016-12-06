@@ -1,7 +1,7 @@
 
 /*
 
-[get permission] - google project submission; 4x the power of google; importance of solving the real problem instead of jumping in and overengineering something
+[SENT] - google project submission; 4x the power of google; importance of solving the real problem instead of jumping in and overengineering something
 
 [DONE] - what to do when concerned about projects not being good enough
 
@@ -11,26 +11,25 @@
 
 [quick one to prev list] - dangers of just doing projects
 
-- dangers of following tutorials (alt title: why it's hard to learn from tutorials)
+[WRITTEN] - dangers of following tutorials (alt title: why it's hard to learn from tutorials)
+	- good code instruction like getting lego blocks you can use anywhere instead of a recipe you follow along with but can't remember
 
 - js course now open
-
-- videos make you feel like you're learning, but they're too passive
-
-- good code instruction like getting lego blocks you can use anywhere instead of a recipe you follow along with but can't remember
 
 - lazy teaching (overload you with info; now I've said it and you're responsible for it)
 
 - easiest way to keep up with new stuff: learn js
 
-- confessions of people who are learning web development (problems with various course formats)
+[WRITTEN] - confessions of people who are learning web development (problems with various course formats)
+	- videos make you feel like you're learning, but they're too passive
 
-- faq email
+[SENT] - faq email
 
 - a story I got (testimonial)
 
 - course closes soon x2 (new years' resolutions can be one email)
 
 */
+
 
 

@@ -1,0 +1,35 @@
+
+
+Why it's hard to learn from tutorials
+
+
+So many people have said they've followed along with various code tutorials and found that they could never apply any of it afterwards.
+
+That has happened to me too.
+
+Here's why.
+
+Following a tutorial is like following along with a really long recipe.  You can do it when the steps are all in front of you, but without that, there's no way to remember what you did or know what to do after any given step.
+
+With that in mind, of course it's difficult to learn from tutorials!
+
+That's why my favorite kind of instruction (in anything, not just code), is the kind that gives you small, versatile pieces of info that you can use as tools.
+
+For example, instead of immediately following a tutorial about how to make a slideshow or a clock, you can learn about animations and timing.  With those tools, you can make much more than a slideshow or a clock, but if you just try to do the slideshow or clock tutorials, you'll end up with a long list of steps which will be hard to remember.
+
+Key takeaway:
+If you learn small, useful pieces of knowledge, you can build much more than if you try to remember long lists of steps.
+
+For that reason, I've built a JavaScript course that gives you the tools you need to do practical, real-world things that employers look for.
+
+The best part is that you'll be able to remember it and apply it.  That's because the course doesn't rush or skip steps.
+
+If you'd like to learn JavaScript, click the link below:
+
+Learn more about Simple Steps JavaScript
+
+
+
+
+
+

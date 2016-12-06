@@ -9,11 +9,17 @@ immediate:
 - prep launch
 	- prepare emails
 
+- after launch, restart email sequence!!!
 
 - lh outreach
 
 great advice about growth and sales
 http://growthlab.com/how-i-increased-my-monthly-income-44-without-launching-a-new-product/
+http://growthlab.com/earn-67000-in-5-days/
+
+- update js roadmap to include if statements (and something else but I forgot)
+
+- look into creating more intermediate material
 
 
 

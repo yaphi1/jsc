@@ -1,0 +1,89 @@
+
+
+Confessions of people who are learning JavaScript
+
+
+
+Whenever I tell people I run a JavaScript course, they always ask the same question:
+
+How is it different from other courses (Codecademy, Treehouse, Udemy, Lynda, etc)?
+
+To be clear, I think a lot of these courses are fantastic.
+
+However, I've talked to plenty of people about their experiences with these and other courses, and I heard some interesting confessions (paraphrased as best as possible from memory).
+
+"I did [course name redacted], but I couldn't remember it or apply it afterwards."
+
+"I hate learning code through videos because I can't stand the constant pausing, rewinding, and skipping around."
+
+"It dumped too much info on me at once."
+
+"I wasted like 6 months and it didn't click."
+
+Since people were saying these things about the major courses, I realized there was a problem.
+
+So I set out to fix it.
+
+I spent a ton of time listening to people's struggles, and I discovered why people struggle with these courses.
+
+
+Why people struggle with courses:
+
+Other courses in general:
+Introducing too much material at a time.  Not enough practice and reinforcement.
+
+Courses where you code directly on their site:
+You get used to coding in their custom editor, and it becomes hard to apply it on your own.
+
+Videos:
+Too much pausing, rewinding, etc.  Also, it's a passive form of learning, so it's easy to make no progress but feel like you've accomplished something.
+
+Books:
+Sometimes too long.  Marathon examples that span multiple chapters.  If it's in print with a mistake, it can't change until the next edition.
+
+Bootcamps:
+Thousands of dollars, lots of time, and not on your schedule
+
+
+What Simple Steps JavaScript does differently:
+
+- Bite-sized lessons. This is good for remembering what you learned and fitting it into your schedule.
+- Short explanations and then the course gets out of your way and lets you code.
+- Practice conditions match real life.  This means you use your own text editor and browser so when it's time to use this stuff for real, you'll know how because you'be been doing it all along.
+- No videos.  No pausing, rewinding, etc.
+- Each lesson is self-contained.  That means you don't need to have a copy of that example from section 3 in order to do section 7.
+- Practice is built in.  Too many other courses move onto the next thing immediately after you've understood something, and that's why it's hard to remember what you've learned.
+- There's an entire series of sections on how to approach larger projects.  Instead of just being told what to do, you'll learn how to think about these things.
+
+
+What people are saying about Simple Steps JavaScript:
+
+“I am really happy with the course. I couldn’t do much in the past because although I knew the syntax I found it hard to ‘think’ the JS way. But now that you have made functions crystal clear (as well as objects and methods) I can do lots of things. My understanding has increased exponentially, and I’m enjoying all the exercises.”
+- Lucia P. 
+
+“Before I found Javascript very daunting and complex a "black art" if you like. Now I feel I can get my head round the fundamentals, build small bits and feel confident in tinkering and trying out new things.”
+- Robin R. 
+
+“First of all, I want to say it's a great course. The repetition and little projects all throughout made it easy to commit a lot of this stuff to memory better than I had memorized this stuff in the past and your projects at the end are good ideas which I'm going to get started on ASAP.”
+- Nate S. 
+
+“...I did a little research on JS and decided to study Javascript. I looked around for information, and came a cross Free Code Camp, Team Treehouse and various Udemy courses out there. I even attended several Free Code Camp meetings. But, sadly, I just was not catching on to JS. ...Previously, I was confused (mind you, I'd been studying sense November) as to how to use innerHTML, document.getElementById() Method, definitely did not understand what "this" meant! and so much more. Well, I faithfully followed your guide and just kept at it. So, this morning, I'm sitting here in Starbucks working on the material and I said to myself, " I actually am starting to understand this stuff!" And I had to write you! This course has been an eye opener! If I were you, I'd market yourself so much more. In fact, I am going to do a YouTube video on Javascript at some point and I will most definitely mention your course as a major source of any success I have to this point. I know that this email has been long, but I just had to tell you my whole story and let you know what you have done for me in the way of learning Javascript. I actually feel like someone that is on the verge of accomplishing great things. Once again thank you.”
+- Dominic H. 
+
+
+If this sounds exciting, the JavaScript course is available here:
+
+Take a look at Simple Steps JavaScript
+
+Also, the sign-up closes Friday just before midnight (Pacific Time), so now is the time to decide.
+
+Best,
+
+Yaphi
+Simple Steps Code
+
+
+
+
+
+
