@@ -16,9 +16,11 @@
 
 - js course now open
 
-- lazy teaching (overload you with info; now I've said it and you're responsible for it)
+[SENT] - lazy teaching (overload you with info; now I've said it and you're responsible for it)
 
 - easiest way to keep up with new stuff: learn js
+
+- followed the train
 
 [WRITTEN] - confessions of people who are learning web development (problems with various course formats)
 	- videos make you feel like you're learning, but they're too passive
