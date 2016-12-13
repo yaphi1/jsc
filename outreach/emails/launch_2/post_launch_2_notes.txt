@@ -18,7 +18,7 @@ net conversion of new subs: 1.875%
 
 avg value per new subscriber
 launch 1: $0.83 per sub
-launch 2: $1.85 per sub
+launch 2: $1.85 per sub (note this was miscalculated: full sales out of only 800 new subs)
 
 
 

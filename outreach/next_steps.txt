@@ -116,6 +116,13 @@ update course
 
 useful things in js:
 
+- performance (dom selectors, etc)
+- readability
+- avoiding variable collisions (iifes, objects, etc)
+- things you might get asked about in interviews
+- data types (and auto conversions)
+
+
 events:
 - event object
 - event delegation

@@ -8,14 +8,57 @@ paypal was a good addition
 next time, use mailchimp groups to simplify workflow and see connections better; having a separate list is getting out of hand
 
 
-all or most purchasers so far were people who had gotten on the list within the past week or so
+all or most early purchasers were people who had gotten on the list within the past week or so
 	- possibilities:
 		- when they sign up for the email list, they need a solution now, and if they have to wait, they'll do something else
 		- maybe the past list members haven't been engaged enough
 		- past list members might have been conditioned for previous (lower) prices
 
-consider revamping homepage to be about js instead
+consider revamping homepage to be about js instead (nah)
 
 change copy to target people who are more like your paying customers (instead of getting a job; make it about either changing your job or boosting your skills in your current job)
+
+
+
+
+goals:
+
+16 purchases, 2 refunds
+
+
+
+actual stats:
+
+purchases: 22
+partial refunds: 1
+full refunds: 0
+net purchases: 21
+
+price $149
+
+revenue (after fees): $3080
+
+net purchases via paypal: 8
+net via stripe: 13
+
+
+known emails: 19
+unknown emails: 3
+
+new customers: 8 (first time seeing launch)
+existing customers: 11
+unknown: 3
+
+new email subs: 1200
+existing subs: 2000
+total: 3000
+
+conversion rates
+new customers: 0.67% to 1%
+existing: 0.55% to 0.7%
+overall: 0.6875%
+
+value per new sub:
+$0.96 (8 sales) to $1.45 (12 sales) but maybe more considering possibility of later purchase
 
 
