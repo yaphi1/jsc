@@ -36,7 +36,7 @@ net purchases: 21
 
 price $149
 
-revenue (after fees): $3080
+revenue (after fees): $3040
 
 net purchases via paypal: 8
 net via stripe: 13
@@ -60,5 +60,64 @@ overall: 0.6875%
 
 value per new sub:
 $0.96 (8 sales) to $1.45 (12 sales) but maybe more considering possibility of later purchase
+
+
+
+
+
+
+
+------
+fb post version
+
+
+
+Launch 3 Post-launch notes
+
+Course topic: Learn JavaScript
+
+Projected net revenue: about $2000
+Actual net revenue: $3040 (after fees)
+Price: $149
+
+Projected net purchases: 14 (16 with 2 refunds)
+Actual net purchases: 21 (22 with 1 partial refund)
+
+New subscribers: 1200
+Existing subscribers: 2000
+Total list size: 3200
+
+New customers: 8 (first time seeing launch)
+Existing customers: 11
+Unknown: 3
+
+Conversion rates:
+New customers: 0.67% to 1%
+Existing customers: 0.55% to 0.7%
+Overall: 0.6875%
+(Note: 3 customers used different purchase emails than list emails, so I wasn't sure if they were new or existing, hence the ranges)
+
+Net purchases via PayPal: 8
+Net purchases via Stripe: 13
+
+Lessons:
+
+- Adding paypal was a great idea (nearly 40% of purchases came from there).
+
+- Raising the price helped not only with revenue but also in the way people respected the material.
+
+- Incorporating feedback from previous launches had fantastic results (e.g.: clarifying parts where people wanted more detail, addressing doubts, etc).
+
+- Having a separate mailchimp list for customers proved to be a pain.  Lists aren't aware of each other in mailchimp, so I had to manually indicate which people from my original list had become customers so I wouldn't keep sending them sales emails.  Also, having the same person in two lists means I have to pay twice for those people.  I might experiment with mailchimp groups instead.  Not sure if that will solve my issues, but it seems like a promising route.
+
+- Progress has been decent.  Launch 1 was $1000, Launch 2 was $1400, and now Launch 3 is $3000. (Each launch was 5-6 months apart.)
+
+- I did a week and a half launch, which was nice (Wednesday through Friday).  It gave more people a chance to get the course and made it less likely that they'd be away while the course was open.  It also gave me a chance to space the emails out a bit to avoid being overwhelming.  I sold more this time, and I dropped fewer subscribers this time too.
+
+- The best-performing emails had personal stories that led into brief descriptions of features in a way that directly addressed the audience's burning pains.
+
+- Nearly half of the customers purchased at the very beginning and half at the end.  Few in the middle.  The ones who purchased at the beginning had just gotten onto my email list recently (like within the past week or two).  The ones who purchased near the end of the sales period had generally been on the list for a while.  These findings suggest there's a significant number of people who are looking for a solution right away and might try something else if the product doesn't present itself quickly.
+
+
 
 
