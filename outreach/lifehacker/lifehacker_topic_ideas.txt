@@ -175,5 +175,8 @@ coding cheat sheet
 	- The best advice for learning code is also the worst advice
 
 
+- test how you introduce yourself to change how people see you
+	- example: "web developer" sometimes gets reaction "oh! my neighbor's dog needs a website!" or "can you fix my printer?"
+
 
 
