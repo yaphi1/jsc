@@ -185,7 +185,7 @@
 
 
 			<br>
-			<h3>Variable values do NOT get hoisted</h3>
+			<h3>Variable <b>values</b> do NOT get hoisted</h3>
 
 			<p>If you assign a value to a variable, that value will only apply afterwards.</p>
 
@@ -198,13 +198,74 @@
 				console.log(greeting); // this will say "Hello"
 			</code></pre>
 
+			<br>
+			<h3>But variable <b>declarations</b> DO get hoisted</h3>
+
+			<p>What?</p>
+
+			<p>To understand this, I'll guide you through some quick background.</p>
+
+			<p>First, try pasting this code, and see if you can predict what will happen:</p>
+
+			<pre><code>
+				console.log(whatever);
+			</code></pre>
+
+			<p>If you thought it would cause an error, you're right!</p>
+
+			<p>It should cause an error because the variable <code>whatever</code> has not been defined yet.</p>
+
+			<p>Now what what will happen here?</p>
+
+			<pre><code>
+				console.log(whatever);
+
+				var whatever = 'some text';
+			</code></pre>
+
+			<p>There's no more error!  It just says <code>undefined</code>.</p>
+
+			<p>What's going on?</p>
+
+			<p>It turns out the <b>declaration</b> (creation) of the variable is getting hoisted to the top of the scope.</p>
+
+			<p>So this code...</p>
+			<pre><code>
+				console.log(whatever);
+				
+				var whatever = 'some text';
+			</code></pre>
+
+			<p>...is equivalent to this</p>
+			<pre><code>
+				var whatever;
+				console.log(whatever);
+				
+				whatever = 'some text';
+			</code></pre>
+
+			<p>The <b>declaration</b> (creation) of the variable gets hoisted, but the <b>assignment</b> of a value stays where it is in the code.</p>
+
 
 			<div class="special_section tip">
 				<h3>Main benefit of understanding hoisting:</h3>
 
 				<p>You'll know where you can access variables and functions, so you'll avoid a lot of mistakes.</p>
 			</div>
+
+			<br>
+			<h3>Quick recap:</h3>
+			<p>
+				<strong>Gets hoisted:</strong>
+				<br>Function declarations (creating a function)
+				<br>Variable declarations (creating a variable)
+			</p>
+			<p>
+				<strong>Does not get hoisted:</strong>
+				<br>Variable assignments (assigning a value to a variable)
+			</p>
 		</div>
+
 
 
 

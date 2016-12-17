@@ -6,9 +6,20 @@ immediate:
 
 
 
-- update js roadmap to include if statements (and something else but I forgot)
 
 - lh outreach
+
+- pitch huffpo
+
+	pitch form:
+	https://docs.google.com/forms/d/e/1FAIpQLScrz0kcSTcl6MrGJF-13l2MMSZJ3BBZtt6_znfxb4FwMLQiSQ/viewform
+
+	example article:
+	http://www.huffingtonpost.com/entry/the-truth-about-why-your-recordings-and-mixes-suck_us_57bc50bde4b029a9a46780c0
+
+
+
+- sitepoint articles (while lh outreach is happening)
 
 great advice about growth and sales
 http://growthlab.com/how-i-increased-my-monthly-income-44-without-launching-a-new-product/

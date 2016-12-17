@@ -112,7 +112,21 @@
 
 			<p>For example, you can log it to the console, or you can display it on your page.</p>
 
-			<p>Another bonus feature of return statements is that anything after them inside a function won't run.  This is useful if you ever want to stop a function early.</p>
+			<p><strong>Note:</strong> The <code>sum</code> variable in the previous example wasn't strictly necessary.  I just wanted to show that you can return a variable if you need to.  The following function also works.</p>
+
+			<pre><code>
+				function add(){
+					return 1 + 5;
+				}
+			</code></pre>
+
+
+			<div class="special_section tip">
+				<h3>Tip: A <b>return</b> statement stops a function</h3>
+
+				<p>A bonus feature of return statements is that once it runs, the function it's in stops and no further code inside that function will run.</p>
+				<p>This can be useful if you ever want to stop a function early, but if you use this technique, make sure it's not in a way that will confuse you or a teammate.</p>
+			</div>
 
 		</div>
 

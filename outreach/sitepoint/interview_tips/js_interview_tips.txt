@@ -1,0 +1,59 @@
+
+
+
+titles:
+- interview hacks for when you don't know the answers
+- how to sound good in interviews even if you don't know the answers
+
+
+
+
+say how you'd find out things you don't know
+
+google (say which terms)
+stack overflow
+cross-verify with mdn
+test in console
+
+
+example of something you didn't know and how you learned it
+
+
+make it collaborative
+
+
+make it a two-way interview (you're trying to find out about them too)
+- shows competence
+- makes you look discerning instead of desperate
+
+
+questions:
+- not about what you get but about how they work (not what's the salary but instead)
+
+
+when you don't know
+- start with things you do know
+- break down problem into smaller parts
+- narrow it down and get specific about the parts you don't know
+- once you're specific:
+	- don't be afraid to ask for info or clarification
+	- ask if there's anything else you might be overlooking
+	- talk about how you might find that info
+
+
+
+mention input validation
+
+
+
+prepare an opening story about yourself and your projects
+- this can let you dictate how you're perceived instead of just going in as an unknown and answering questions (it's the difference between a professional introducing themselves vs a student nervously showing up for a test)
+
+
+
+talk about something you're excited about
+
+
+
+
+
