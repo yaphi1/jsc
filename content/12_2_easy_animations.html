@@ -181,18 +181,18 @@
 
 				&lt;div id="mydiv"&gt;This is such a beautiful car.&lt;/div&gt;
 				&lt;br&gt;&lt;br&gt;
-				&lt;button id="turnred"&gt;Move to 100&lt;/button&gt;
-				&lt;button id="turnblue"&gt;Move to 400&lt;/button&gt;
+				&lt;button id="move100"&gt;Move to 100&lt;/button&gt;
+				&lt;button id="move400"&gt;Move to 400&lt;/button&gt;
 
 				&lt;script&gt;
 
 				var mydiv = document.getElementById('mydiv');
 
-				document.getElementById('turnred').onclick = function(){
+				document.getElementById('move100').onclick = function(){
 					mydiv.style.transform = 'translateX(100px)';
 				};
 
-				document.getElementById('turnblue').onclick = function(){
+				document.getElementById('move400').onclick = function(){
 					mydiv.style.transform = 'translateX(400px)';
 				};
 				&lt;/script&gt;

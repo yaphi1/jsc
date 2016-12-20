@@ -5,7 +5,7 @@ RewriteEngine On
 
 # ensure https and no www
 RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://simplestepscode.com%{REQUEST_URI} [L,R=301]
+RewriteRule ^(.*)$ https://javascript.simplestepscode.com%{REQUEST_URI} [L,R=301]
 
 
 # stuff from wordpress
