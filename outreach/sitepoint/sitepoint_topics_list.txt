@@ -28,6 +28,17 @@ personal ideas:
 - easy hacks to sound better in javascript interviews (validate input, name things clearly and mention maintainability [show that you care about the next person], couch your decisions in what they mean for the business, show concern for the user experience, lay out all info and assumptions you have [shows clear thinking, helps think easier, etc], talk out loud, get specific about what you're unsure of, don't be afraid to ask questions [try to narrow it down first and be specific])
 - tricks to make a nice portfolio project (visual appeal can be as psychologically important as code; use a design you like and give 100% clear credit [you get points for giving credit and the high quality look gets associated with your work])
 
+- advice for people beginning to learn js
+    - traps learners can fall into
+    - common errors new js coders make
+    - roadmap for learning js
+    - how to approach js projects
+    - reasons to learn js this year (and things you can do with js)
+    - common fears/struggles and how to overcome them
+    - js portfolio tips (game: fun/personality, tool: utility/practicality, something related to company of interest), user experience, design, responsiveness, fast loading + good performance (efficient selectors, etc)
+    - ways your coding life changes after you learn js
+
+
 
 So far I really like the following ideas (from their list):
 - Useful things you didn't know you could do with JS
