@@ -1,0 +1,23 @@
+tutorials misleading
+
+what happens and why this is important
+
+- why and how it happens
+- story
+- problems and consequences
+- real code vs tutorial code
+
+
+solutions:
+
+real style of coding:
+
+small pieces, lots of testing and trying
+
+(each of the following will have examples and benefits)
+- make small test cases for each step
+- if there's a concept you're not sure about, don't just skip over it (this is some of the most important learning)
+- adapt concepts to other mini projects
+- redo the project without the tutorial
+- create a version with a twist
+
