@@ -89,7 +89,7 @@
 			
 			<pre><code>['thing 1', 'thing 2', 'thing 3']</code></pre>
 
-			<p>Arrays are cool because they make lists much easier to keep track of.</p>
+			<p>Arrays are useful because they make lists much easier to keep track of.</p>
 		</div>
 
 
@@ -172,7 +172,13 @@
 				console.log(names.length);
 			</code></pre>
 
-			<p>Here, you can see that <b>names.length</b> gives you the total number of items in the <b>names</b> array.</p>
+			<p>Here, you can see that <b>names.length</b> gives you the total number of slots in the <b>names</b> array.</p>
+
+			<div class="special_section tip">
+				<h3>Tip: Array <b>length</b> is editable </h3>
+				<p>Try typing <code>names.length = 2;</code> (or 6) in the previous example and see what happens.</p>
+				<p>This can be useful if you want to make sure a list never grows over a certain size.</p>
+			</div>
 		</div>
 
 
@@ -189,6 +195,10 @@
 				names[1] = 'Link';
 				console.log(names[1]);
 			</code></pre>
+
+			<p>You can also set values that don't exist yet.</p>
+			<p>Try typing <code>names[3] = 'Luigi';</code> and see what happens to your array.</p>
+			<p>Next, try <code>names[6]='Bob';</code>  Notice how the array length changes, and notice the empty slots that get added.</p>
 		</div>
 
 
