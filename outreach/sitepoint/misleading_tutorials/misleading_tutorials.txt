@@ -8,16 +8,18 @@ what happens and why this is important
 - real code vs tutorial code
 
 
-solutions:
+solutions (how to get most out of tutorial):
 
 real style of coding:
 
 small pieces, lots of testing and trying
 
 (each of the following will have examples and benefits)
-- make small test cases for each step
-- if there's a concept you're not sure about, don't just skip over it (this is some of the most important learning)
-- adapt concepts to other mini projects
+- make small test cases for each step (clock example: first show current date then hours etc.)
+- if there's a concept you're not sure about (e.g.: arrays), don't just skip over it (this is some of the most important learning)
+- adapt concepts to other mini projects (get better at underlying concepts; example guest list with arrays)
 - redo the project without the tutorial
 - create a version with a twist
+
+don't just follow the code like a cookbook since it's hard to remember the steps that way (and it'll be about remembering instead of understanding)
 

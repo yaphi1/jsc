@@ -119,6 +119,32 @@
 
 
 
+		
+
+		<div class="section">
+			<div class="special_section tip">
+				<h3>Tip: <b>pop</b> and <b>shift</b> tell you what they removed from the array</h3>
+				
+				<p>One useful feature of pop and shift is that their returned value tells you what they just removed from the array.</p>
+
+				<p>Try the following example to see this in action:</p>
+
+				<pre><code>
+					var deck = ['Ace','Queen','Joker'];
+					console.log('deck of cards before the pop: ' + deck);
+
+					var pickedCard = deck.pop();
+
+					console.log('deck of cards after the pop: ' + deck);
+					console.log('picked card is: ' + pickedCard);
+				</code></pre>
+
+				<p>You don't need to memorize this right away.  I just want you to be aware this exists.</p>
+			</div>
+		</div>
+
+
+
 
 
 		<div class="section">
@@ -136,13 +162,41 @@
 				<li><b>slice</b> - Grab a section of an array</li>
 			</ul>
 
-			<p>Here's a good reference in case you want to do something with an array but you're not sure how:</p>
-			<p><a href="http://www.w3schools.com/jsref/jsref_obj_array.asp" target="_blank">
-					JavaScript Array Reference
-			</a></p>
+			<p>Here are some good references in case you want to do something with an array but you're not sure how:</p>
+			<ul>
+				<li>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">
+					Mozilla Developer Network (MDN)</a>
+					(Good if you want something detailed and authoritative)
+				</li>
+				<li>
+					<a href="http://www.w3schools.com/jsref/jsref_obj_array.asp" target="_blank">
+					W3Schools</a>
+					(Good if you want a quick and readable reference, but if you're not sure about something, double check with MDN)
+				</li>
+				<li>
+					<a href="http://caniuse.com/" target="_blank">
+					CanIUse.com</a>
+					(Good for checking browser compatibility)
+				</li>
+			</ul>
 
 			<p>Feel free to try out some of the examples if you're curious.</p>
 
+		</div>
+
+
+
+
+		<div class="section">
+			<div class="special_section terminology">
+				<h3>Talk the talk: A note about references</h3>
+				<p>Years ago, W3Schools had a reputation for having errors.  They've generally fixed them, but the reputation stuck.</p>
+
+				<p>The reason this matters is that if you cite W3Schools as your number one source for some info, you risk sounding like you've picked up bad habits (based on people's perceptions of the site's earlier reputation).</p>
+
+				<p>Personally, I use W3Schools when I already know a concept and I want a quick refresher.  I use MDN if a concept is completely new and I want to be sure I know the full story.</p>
+			</div>
 		</div>
 
 
