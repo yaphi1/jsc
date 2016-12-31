@@ -1,10 +1,164 @@
+JavaScript Tutorials Can Be So Misleading
+
+
+When I was first learning JavaScript, I remember looking up a tutorial on how to create a slideshow. The code in the tutorial was concise, organized, clean, and clever. I remember thinking I could never write code like that.
+
+The idea of sitting down and producing, line-by-line, perfect code was mind-boggling to me.
+
+Several years later, I was writing tutorials of my own.  I received a comment where someone was wondering what thought process it required to sit down and produce such elegant code.
+
+That was when it hit me: Tutorials often don't reflect the process of writing code.
+
+The process of writing code is a lot messier than a neatly-packaged tutorial might have us believe.  A lot of this is by necessity because documenting all the trial and error and experimentation would make a tutorial long and confusing.
+
+However, there can be consequences for those who see a tutorial and think the neatly-packaged process is the whole story:
+
+- Discouragement: Seeing an unrealistically perfect process can make people think "I'll never get there."
+
+- An ineffective process: The linear progression of a tutorial can get you accustomed to looking for the one true next step and getting stuck instead of stepping back, planning, experimenting, and trying different angles.
+
+- Difficulty remembering: Tutorials can lead people to treat projects like recipes where you have to remember a bunch of steps in a specific order.  Because this approach favors random memorization over understanding, it becomes difficult to remember anything.
+
+- Can't apply afterwards: Because there are so many steps to remember, it becomes difficult to apply the knowledge after doing a tutorial.
+
+Now we've laid out some of the problems with tutorials. What should we do about all this?
+
+First we'll go behind the scenes of tutorial creation to show the real process no one talks about. This will help show you how to approach coding projects on your own.
+
+Afterwards we'll talk about how to get the most out of tutorials.
+
+
+
+
+
+
+
+## How to Approach Projects: What the Tutorials Don't Tell You
+
+
+One of the issues I hear most often is that people who follow tutorials find themselves unable to approach projects on their own.
+
+One reason this happens is that tutorials give you a neat set of steps rather than the actual process of figuring out those steps on your own.
+
+Here are some suggestions for how you might approach a project in real life.
+
+
+### Don't Start from Step 1
+	- big picture first, plan out general things you'll need (example, for a clock, you might need...)
+
+Write it without code
+	- separate thinking from coding (so not distracted by syntax and implementation details)
+
+Build small pieces
+	- make sure individual functionality works
+	- good for not being distracted by too many moving parts
+
+Put pieces together
+	- see if pieces that worked on their own work together (might require some changes)
+	- easier to put together pieces than to try to make an entire working thing all at once
+
+Experiment and test
+	better approaches
+	edge cases
+
+Get outside info
+	reference material
+	other people (friends, peer review, etc)
+
+Refactor
+	- neat, concise, readable (note tradeoffs)
+	- not redundant (can it become a function or a loop)
+	- efficient (e.g.: not calling same selector tons of times)
+	- clear naming
+	- avoiding collisions (examples: id=container, polluting global scope, etc)
+
+
+
+
+
+
+
+
+
+## How to Get the Most Out of Tutorials
+
+
+
+- before starting, get a few concepts in tool belt (variables, functions, arrays, etc)
+
+(each of the following will have examples and benefits)
+- make small test cases for each step (clock example: first show current date then hours etc.)
+
+- if there's a concept you're not sure about (e.g.: arrays), don't just skip over it (this is some of the most important learning)
+
+- adapt concepts to other mini projects (get better at underlying concepts; example guest list with arrays)
+
+- redo the project without the tutorial
+
+- create a version with a twist
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+notes:
+
+
+
 tutorials misleading
 
 what happens and why this is important
 
 - why and how it happens
 - story
-- problems and consequences
+- problems and consequences (including psychological effects)
 - real code vs tutorial code
 
 
@@ -23,3 +177,22 @@ small pieces, lots of testing and trying
 
 don't just follow the code like a cookbook since it's hard to remember the steps that way (and it'll be about remembering instead of understanding)
 
+
+
+
+
+
+removed sections:
+
+
+
+Seeing a tutorial laid out in a linear way can make people attempt to solve a problem in one sweep instead of solving mini problems and building up from there.
+
+
+
+
+From the comment I received, it was clear the reader felt the same way I had in the past: that writing code was supposedly about performing a neat set of steps and arriving at a perfect answer.
+
+Nothing could have been further from the truth.
+
+In reality, I had arrived at

@@ -183,4 +183,8 @@ coding cheat sheet
 	- example: "web developer" sometimes gets reaction "oh! my cousin's dog needs a website!" or "can you fix my printer?"
 
 
+- x phrases that will change the way you work
+	- "I did the math and..." or "I did the research and..." (No one wants to argue with this unless you're glaringly wrong)
+	- "Can you email me clarification on this point?" (If it's not important, they'll take forever to respond, and it'll be documented that you asked for it.)
+
 

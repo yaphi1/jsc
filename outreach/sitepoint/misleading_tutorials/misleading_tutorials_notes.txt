@@ -1,0 +1,108 @@
+tutorials misleading
+
+
+
+
+outline 2:
+
+
+intro
+
+explain title meaning: why are tutorials misleading (and why they need to be)
+
+- note that this applies to my own tutorials
+
+- can create wrong impression about process of coding
+
+- didn't really think about it until someone asked about one of my tutorials and said they could never code something that neat
+
+- effects:
+	- discouragement
+	- attempting problems in a way that's difficult (trying to get it all at once)
+	- trying to remember a long list of steps like a cookbook instead of understanding small concepts and being able to build up a result on your own
+	- not being able to apply it afterwards
+
+
+
+
+
+
+the process tutorials don't tell you about
+
+- start from bigger picture (instead of trying to start from step 1 and go linearly, trusting that it will just work out like the tutorial)
+- write out what it will do
+- small pieces
+- testing, trial + error
+- refactoring
+- outside info:
+	- looking up reference material as needed
+	- maybe even getting advice from a friend (or a peer review)
+
+
+
+
+
+how to get the most out of tutorials
+
+- before starting, get a few concepts in tool belt (variables, functions, arrays, etc)
+
+(each of the following will have examples and benefits)
+- make small test cases for each step (clock example: first show current date then hours etc.)
+
+- if there's a concept you're not sure about (e.g.: arrays), don't just skip over it (this is some of the most important learning)
+
+- adapt concepts to other mini projects (get better at underlying concepts; example guest list with arrays)
+
+- redo the project without the tutorial
+
+- create a version with a twist
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+first outline attempt:
+
+what happens and why this is important
+
+- why and how it happens
+- story
+- problems and consequences (including psychological effects)
+- real code vs tutorial code
+
+
+solutions (how to get most out of tutorial):
+
+real style of coding:
+
+small pieces, lots of testing and trying
+
+(each of the following will have examples and benefits)
+- make small test cases for each step (clock example: first show current date then hours etc.)
+- if there's a concept you're not sure about (e.g.: arrays), don't just skip over it (this is some of the most important learning)
+- adapt concepts to other mini projects (get better at underlying concepts; example guest list with arrays)
+- redo the project without the tutorial
+- create a version with a twist
+
+don't just follow the code like a cookbook since it's hard to remember the steps that way (and it'll be about remembering instead of understanding)
+
