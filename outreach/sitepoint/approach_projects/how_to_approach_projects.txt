@@ -62,7 +62,19 @@ Also note that you won't need to have a perfect series of steps written out at t
 
 ## Build Small Pieces
 
-Once you have your steps written out, you can start writing small pieces of code. For a countdown clock, you might start by getting the current time.
+Once you have your steps written out, you can start writing small pieces of code. For a countdown clock, you might start by getting the current time:
+
+```javascript
+var currentTime = new Date().getTime();
+console.log(currentTime);
+```
+
+Once you're satisfied, you might then get the countdown's end time:
+
+```javascript
+var endTime = new Date(2017, 4, 4, 7, 30).getTime();
+console.log(endTime);
+```
 
 Here are some benefits of writing your code in small pieces:
 - You get a chance to make sure the individual pieces of functionality work before moving on to the next steps.
@@ -76,6 +88,23 @@ Here are some benefits of writing your code in small pieces:
 ## Put the Pieces Together
 
 With your individual pieces ready, you can start putting your project together. For this stage, the key challenge is to make sure the pieces that worked on their own will still work once they're connected. This might require some small changes.
+
+For example, here's how you might put together the start time and end time to calculate the remaining time in a countdown clock:
+
+```javascript
+
+// set our end time
+var endTime = new Date(2017, 4, 4, 7, 30).getTime();
+
+// calculate remaining time from now until deadline
+function getRemainingTime(deadline){
+  var currentTime = new Date().getTime();
+  return deadline - currentTime;
+}
+
+// plug endTime into function to output remaining time
+console.log(getRemainingTime(endTime));
+```
 
 This method of putting smaller pieces together is much easier than trying to make an entire project all at once because this way, you don't need to keep track of everything in your head at the same time.
 
