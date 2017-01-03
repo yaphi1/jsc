@@ -1,60 +1,25 @@
-NOTE:
-I'm splitting this into two articles since it's two separate topics:
-
-1. How to approach JS projects
-
-2. How to get the most out of tutorials
+How to Approach JavaScript Projects: What the Tutorials Don't Tell You
 
 
+One of the issues I hear most often is that people who follow tutorials find themselves unable to approach JavaScript projects on their own.
 
+One reason this happens is that tutorials give you a neat set of steps rather than the actual process of figuring out those steps on your own. Another reason people struggle with projects is that they compare their intermediate steps with someone else's finished product and get discouraged.
 
-
-JavaScript Tutorials Can Be So Misleading
-
-
-When I was first learning JavaScript, I remember looking up a tutorial on how to create a slideshow. The code in the tutorial was concise, organized, clean, and clever. I remember thinking I could never write code like that.
-
-The idea of sitting down and producing, line-by-line, perfect code was mind-boggling to me.
-
-Several years later, I was writing tutorials of my own. I received a comment where someone was wondering what thought process it required to sit down and produce such elegant code.
-
-That was when it hit me: Tutorials often don't reflect the process of writing code.
-
-The process of writing code is a lot messier than a neatly-packaged tutorial might have us believe. A lot of this is necessary because documenting all the trial and error and experimentation would make a tutorial long and confusing.
-
-However, there can be consequences for those who see a tutorial and think the neatly-packaged process is the whole story:
-
-- Discouragement: Seeing an unrealistically perfect process can make people think "I'll never get there."
-
-- An ineffective process: The linear progression of a tutorial can get you accustomed to looking for the one true next step and getting stuck instead of stepping back, planning, experimenting, and trying different angles.
-
-- Difficulty remembering: Tutorials can lead people to treat projects like recipes where you have to remember a bunch of steps in a specific order. Because this approach favors random memorization over understanding, it becomes difficult to remember anything.
-
-- Can't apply afterwards: Because there are so many steps to remember, it becomes difficult to apply the knowledge after doing a tutorial.
-
-Now that we've laid out some of the problems with tutorials, what should we do about all this?
-
-First we'll go behind the scenes of working through a project to show the real process tutorials don't tell you about. This will help show you how to approach coding projects on your own.
-
-Afterwards we'll talk about how to get the most out of tutorials.
-
-
-
-
-
-
-
-## How to Approach Projects: What the Tutorials Don't Tell You
-
-
-One of the issues I hear most often is that people who follow tutorials find themselves unable to approach projects on their own.
-
-One reason this happens is that tutorials give you a neat set of steps rather than the actual process of figuring out those steps on your own.
+The truth of approaching a project isn't as neat as the tutorials (mine included) make it seem. The reality is that rather than belting out lines of perfect code, projects are done in small pieces with plenty of trial and error and a healthy dose of searching through reference materials.
 
 Here are some suggestions for how you might approach a project in real life.
 
 
-### Don't Start from Step 1
+## First Get Comfortable With the Basics
+
+At a minimum, you'll want to get familiar with some of the basics of JavaScript.  That might include variables, functions, if statements, loops, arrays, objects, getElementById, querySelectorAll, and innerHTML.
+
+Once you're comfortable with these concepts, you'll move much faster because you can focus on creating your project instead of worrying about how to write an if statement.
+
+A lot of people rush past this step, and everything takes longer as a result. It's like attempting to play Level 3 of a video game without getting comfortable with the controls back in Level 1. Lots of avoidable frustration.
+
+
+## Make a Plan
 
 Instead of jumping in and trying to do your project in a series of linear steps, take some time to look at the big picture first. Make a general plan. What sorts of things need to happen? For example, if you're trying to make a countdown clock, you might need a way to measure time, a place to hold the data, some spaces to display the numbers, and maybe a way to control the clock.
 
@@ -62,7 +27,7 @@ At this stage, you don't want to get bogged down in technical details because yo
 
 
 
-### Write It Without Code
+## Write It Without Code
 
 Now that you have your plan, you'll want to figure out the details. My favorite way to do this is to write specifically what you want each part of your project to do. The key is to write it not in code but in plain language. That way, you can think clearly about what your project is doing without getting distracted by syntax details.
 
@@ -95,7 +60,7 @@ Also note that you won't need to have a perfect series of steps written out at t
 
 
 
-### Build Small Pieces
+## Build Small Pieces
 
 Once you have your steps written out, you can start writing small pieces of code. For a countdown clock, you might start by getting the current time.
 
@@ -108,19 +73,19 @@ Here are some benefits of writing your code in small pieces:
 - You'll often end up writing helpful pieces of code you can use elsewhere.
 
 
-### Put the Pieces Together
+## Put the Pieces Together
 
 With your individual pieces ready, you can start putting your project together. For this stage, the key challenge is to make sure the pieces that worked on their own will still work once they're connected. This might require some small changes.
 
 This method of putting smaller pieces together is much easier than trying to make an entire project all at once because this way, you don't need to keep track of everything in your head at the same time.
 
 
-### Experiment and Test
+## Experiment and Test
 
 By this point in your project, you will have done plenty of experimenting and testing to make sure everything works. Once it seems to work, see if you can break it. For example, what if the user clicks here or there? What if one of the inputs is unexpected? What if the screen size is narrow? Does everything work in the browsers you expect? Is there a more efficient approach to any part of this project?
 
 
-### Get Outside Help
+## Get Outside Help
 
 Getting outside help can be an important step at any point when doing a project. This help can come from reference materials or other people. The reason I bring this up is that there's a common myth that developers sit down and write perfect code without having to look anything up or ask anyone for advice.
 
@@ -129,7 +94,7 @@ I've often heard that newer developers are surprised to know how frequently an e
 Tools and techniques change, but the skill of learning doesn't go away.
 
 
-### Refactor Your Code
+## Refactor Your Code
 
 Before you finish your project, you'll want to refactor your code.  Here are some questions you can ask yourself in order to improve your project:
 
@@ -145,128 +110,14 @@ Before you finish your project, you'll want to refactor your code.  Here are som
 
 - Has the editing process caused any errors? For instance, have you changed a variable name in one place without changing it everywhere else? Have you added something to an object but forgot to put in an extra comma?
 
-As you refactor, your code will start to seem more and more elegant.  Then you'll put out the finished product and people will ask how you wrote this perfect code.
+As you refactor, your code will start to seem more and more elegant.  Then you'll put out the finished product and people will wonder how you wrote such perfect code.
 
 
+## Recap
 
+A coding project is rarely a linear process. If there's one thing I'd like you to take away from this article, it's that small pieces and experimentation will take you farther than trying to do everything at once.
 
+If you've struggled with JavaScript projects in the past, I hope this article has been helpful, and if you have any other ideas that have helped you approach projects, feel free to share in the comments.
 
 
 
-
-## How to Get the Most Out of Tutorials
-
-
-
-- before starting, get a few concepts in tool belt (variables, functions, arrays, etc)
-
-(each of the following will have examples and benefits)
-- make small test cases for each step (clock example: first show current date then hours etc.)
-
-- if there's a concept you're not sure about (e.g.: arrays), don't just skip over it (this is some of the most important learning)
-
-- adapt concepts to other mini projects (get better at underlying concepts; example guest list with arrays)
-
-- redo the project without the tutorial
-
-- create a version with a twist
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-notes:
-
-
-
-tutorials misleading
-
-what happens and why this is important
-
-- why and how it happens
-- story
-- problems and consequences (including psychological effects)
-- real code vs tutorial code
-
-
-solutions (how to get most out of tutorial):
-
-real style of coding:
-
-small pieces, lots of testing and trying
-
-(each of the following will have examples and benefits)
-- make small test cases for each step (clock example: first show current date then hours etc.)
-- if there's a concept you're not sure about (e.g.: arrays), don't just skip over it (this is some of the most important learning)
-- adapt concepts to other mini projects (get better at underlying concepts; example guest list with arrays)
-- redo the project without the tutorial
-- create a version with a twist
-
-don't just follow the code like a cookbook since it's hard to remember the steps that way (and it'll be about remembering instead of understanding)
-
-
-
-
-
-
-removed sections:
-
-
-
-Seeing a tutorial laid out in a linear way can make people attempt to solve a problem in one sweep instead of solving mini problems and building up from there.
-
-
-
-
-From the comment I received, it was clear the reader felt the same way I had in the past: that writing code was supposedly about performing a neat set of steps and arriving at a perfect answer.
-
-Nothing could have been further from the truth.
-
-In reality, I had arrived at
