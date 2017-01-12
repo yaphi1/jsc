@@ -59,6 +59,7 @@ authors:
 	- Kristin Wong (contributing writer) kristin.wong@lifehacker.com
 
 	- Patrick Allan (staff writer) patrick.allan@lifehacker.com topic: best paying US cities for software engineers
+		- web security: http://lifehacker.com/your-browsers-autofill-data-can-be-phished-heres-how-t-1791084371
 
 
 
@@ -89,6 +90,7 @@ http://lifehacker.com/lrn-helps-you-learn-to-code-at-your-convenience-1721210656
 
 http://lifehacker.com/11-essential-tech-skills-you-need-to-get-hired-as-a-web-1755192150
 
+look into themuse.com (lifehacker republishes stuff from there a lot)
 
 
 
