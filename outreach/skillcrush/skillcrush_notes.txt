@@ -1,0 +1,21 @@
+
+skillcrush notes
+
+
+
+
+article ideas:
+
+- when people say they're not a tech person (or not a _____ person)
+- easy hacks to sound better in javascript interviews (validate input, name things clearly and mention maintainability [show that you care about the next person], couch your decisions in what they mean for the business, show concern for the user experience, lay out all info and assumptions you have [shows clear thinking, helps think easier, etc], talk out loud, get specific about what you're unsure of, don't be afraid to ask questions [try to narrow it down first and be specific])
+- traps learners fall into
+- how to get unstuck when learning javascript
+
+
+
+cite following in pitch:
+
+https://skillcrush.com/2016/06/23/getting-women-to-code/
+single most insidious idea:
+if you don’t learn to code early in life, it’s too late.
+
