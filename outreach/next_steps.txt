@@ -4,6 +4,14 @@ next steps
 
 immediate:
 
+- pitch:
+	- learntocodewith.me
+	- skillcruh
+	- the muse
+		example:
+		https://www.themuse.com/author/jeremy-schifeling
+
+
 
 
 

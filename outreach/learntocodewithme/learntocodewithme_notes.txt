@@ -1,0 +1,63 @@
+subject line:
+Article idea for LTCWM
+(this was requested on submission page)
+
+
+I hope all's well! Thanks again for your part in that compilation article about coding projects. The editors at SitePoint loved it, and Chris Coyier seemed to enjoy it too.
+
+I'd love to write a guest article on LTCWM, and I wanted to know if the following topic is something that would resonate with your audience:
+
+Working title:
+Easy Ways to Sound Better In Coding Interviews Without Learning Anything New
+
+Two-sentence summary:
+Many coding candidates focus entirely on their knowledge and their portfolio while missing a few key techniques that can put their experience in the best light. Examples include how to frame discussions to make them more effective, what to do if you're stuck, and how to make questions easier to answer.
+
+Writing samples:
+https://www.sitepoint.com/mind-tricks-to-learn-javascript-faster/
+http://www.webdesignerdepot.com/2016/06/are-you-solving-the-wrong-problems/
+https://css-tricks.com/potential-dangers-of-third-party-javascript/
+
+I've read through your style guide, and I'll continue to consult it during the process if this topic interests you.
+
+Let me know what you think, and if it's not the right fit, that's completely cool too.
+
+Best,
+Yaphi
+
+
+
+
+
+
+
+- How to make questions easier to answer
+- What to do if you're stuck
+- Something you can mention at the beginning of a coding problem to gain points without knowing how you'll answer yet
+- Topics to bring up during discussions
+
+
+
+
+
+notes from style guide:
+
+
+tweet format:
+[Tweet "Tweet text goes here"]
+
+images are 960px wide max
+thumbnails are 150x150 (bio photo)
+
+end with cta (examples given in guide)
+	- leave a comment below
+	- share this with friends
+	- download corresponding guide
+
+
+
+
+- when people say they're not a tech person (or not a _____ person)
+- easy hacks to sound better in javascript interviews (validate input, name things clearly and mention maintainability [show that you care about the next person], couch your decisions in what they mean for the business, show concern for the user experience, lay out all info and assumptions you have [shows clear thinking, helps think easier, etc], talk out loud, get specific about what you're unsure of, don't be afraid to ask questions [try to narrow it down first and be specific]), if you don't know a piece of info then walk them through how you'd find out
+- traps learners fall into
+- how to get unstuck when learning javascript

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+body{
+	margin: 0px;
+	font-size:20px;
+	font-family:sans-serif;
+	color:#333;
+}
+textarea{
+	width: 700px;
+	height: 500px;
+}
+</style>
+
+</head>
+<body>
+
+<div>Start typing:</div>
+<textarea id="input"></textarea>
+<div>
+	Word count: <span id="count"></span>
+</div>
+
+<script>
+var textbox = document.getElementById('input');
+var count = document.getElementById('count');
+
+
+textbox.onkeyup = function(){
+	var text = textbox.value;
+
+	count.innerHTML = text.match(/\b/g).length / 2;
+};
+
+</script>
+</body>
+</html>
