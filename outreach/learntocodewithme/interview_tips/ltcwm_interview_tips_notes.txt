@@ -1,0 +1,187 @@
+
+
+
+
+Working title:
+Easy Ways to Sound Better In Coding Interviews Without Learning Anything New
+
+
+
+
+Intro
+
+- who this is for and why
+- what you'll gain from this article (quick tips you can use to sound better in your next interview)
+- establish credibility (having been on both sides of interview table)
+
+
+
+
+
+Tip 1: Think of the People
+
+Frame answers and discussions in terms of who will be impacted:
+- the users
+- the company
+- the team
+
+- Shows awareness, empathy, business sense, teamwork, etc
+- Relatively little effort, yet accomplishes a lot
+
+
+
+
+
+Tip 2: Name Things Clearly
+
+- shows you write understandable/maintainable code
+- helps you keep track of things
+
+
+
+
+
+
+Tip 3: Lay Out the Puzzle Pieces
+
+- Info you have
+- Missing info
+- Helpful diagrams
+
+Benefits:
+Narrows down what you need to solve
+Helps you keep track of progress so you don't get lost
+Makes it easier to see connections between points
+Shows your thinking process
+Helps you avoid stalling (instead of saying ummm for 5 minutes, you look structured and logical and you get more time to think)
+
+
+
+
+
+
+
+
+Tip 4: If You Don't Know, Say How You'd Find Out
+
+examples:
+specific search terms you might use
+common sources like stack overflow and mdn
+test code in console
+
+
+
+
+
+
+
+Tip 5: Narrow It Down, Then Ask
+
+- once you've laid out all info, you can be more specific about gaps (this allows better questions)
+- shows you're willing to learn and willing to admit when you don't know something
+- sets a collaborative mood, which makes it easier to envision you on the team
+
+
+
+
+
+
+
+Tip 6: Mention Input Validation
+
+This is a quick win that lets you get immediate points before you've started to figure out an answer.
+
+Benefits:
+- gives momentum
+- builds comfort talking through thought process
+- shows attention to detail
+- gives time to think
+
+
+
+
+
+
+
+Tip 7: Prepare A 30-Second Opening Story
+
+- quick overview of experience and how it relates to them
+- this lets you dictate how you're perceived instead of going in and answering questions (it's the difference between a professional introducing themselves vs a student nervously showing up for a test)
+
+
+
+
+
+Conclusion
+
+- key takeaways
+- cta
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+earlier notes:
+
+
+
+- easy hacks to sound better in javascript interviews (validate input, name things clearly and mention maintainability [show that you care about the next person], couch your decisions in what they mean for the business, show concern for the user experience, lay out all info and assumptions you have [shows clear thinking, helps think easier, etc], talk out loud, get specific about what you're unsure of, don't be afraid to ask questions [try to narrow it down first and be specific]), if you don't know a piece of info then walk them through how you'd find out
+
+
+
+
+say how you'd find out things you don't know
+
+google (say which terms)
+stack overflow
+cross-verify with mdn
+test in console
+
+
+example of something you didn't know and how you learned it
+
+
+make it collaborative
+
+
+make it a two-way interview (you're trying to find out about them too)
+- shows competence
+- makes you look discerning instead of desperate
+
+
+questions:
+- not about what you get but about how they work (not what's the salary but instead)
+
+
+when you don't know
+- start with things you do know
+- break down problem into smaller parts
+- narrow it down and get specific about the parts you don't know
+- once you're specific:
+	- don't be afraid to ask for info or clarification
+	- ask if there's anything else you might be overlooking
+	- talk about how you might find that info
+	- after you've gotten as far as you can, say you're always interested to learn and ask how they might approach it
+
+
+
+mention input validation
+
+
+
+prepare an opening story about yourself and your projects
+- this can let you dictate how you're perceived instead of just going in as an unknown and answering questions (it's the difference between a professional introducing themselves vs a student nervously showing up for a test)
+
+
+
+talk about something you're excited about
