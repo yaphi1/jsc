@@ -27,7 +27,7 @@ personal ideas:
 - how to approach a js project
 - easy hacks to sound better in javascript interviews (validate input, name things clearly and mention maintainability [show that you care about the next person], couch your decisions in what they mean for the business, show concern for the user experience, lay out all info and assumptions you have [shows clear thinking, helps think easier, etc], talk out loud, get specific about what you're unsure of, don't be afraid to ask questions [try to narrow it down first and be specific])
 - tricks to make a nice portfolio project (visual appeal can be as psychologically important as code; use a design you like and give 100% clear credit [you get points for giving credit and the high quality look gets associated with your work])
-- tutorias can be misleading; how to get the most out of them
+- how to get the most out of tutorials
 
 - advice for people beginning to learn js
     - traps learners can fall into

@@ -11,10 +11,6 @@ immediate:
 		example:
 		https://www.themuse.com/author/jeremy-schifeling
 
-
-
-
-
 - lh outreach
 
 - pitch huffpo
@@ -26,8 +22,11 @@ immediate:
 	http://www.huffingtonpost.com/entry/the-truth-about-why-your-recordings-and-mixes-suck_us_57bc50bde4b029a9a46780c0
 
 
-
 - sitepoint articles (while lh outreach is happening)
+	- how to get the most out of tutorials (see misleading_tutorials.txt and search for how to get the most out of tutorials)
+
+
+
 
 great advice about growth and sales
 http://growthlab.com/how-i-increased-my-monthly-income-44-without-launching-a-new-product/

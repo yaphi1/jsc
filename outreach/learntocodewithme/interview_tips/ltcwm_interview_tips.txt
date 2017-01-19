@@ -1,56 +1,101 @@
 
+Easy Ways to Sound Better In Coding Interviews Without Learning Anything New
 
 
 
 
 
-- easy hacks to sound better in javascript interviews (validate input, name things clearly and mention maintainability [show that you care about the next person], couch your decisions in what they mean for the business, show concern for the user experience, lay out all info and assumptions you have [shows clear thinking, helps think easier, etc], talk out loud, get specific about what you're unsure of, don't be afraid to ask questions [try to narrow it down first and be specific]), if you don't know a piece of info then walk them through how you'd find out
+Tip 1: Think of the People
+
+When answering an interview question, people often give the technical solution without thinking about who the solution might affect.
+
+This is a missed opportunity.
+
+For example, consider the question, "What's one way to make a web page load faster?"
+
+Answer A:
+"I would compress images to make a website load faster."
+
+Answer B:
+"I would compress images to make a website load faster. That's really important because faster sites create a better experience for the users, so they're more likely to stay on the site. That directly affects revenue."
+
+Both answers are correct, but Answer B looks much better despite showing the same level of technical knowledge.
+
+So what's the difference?
+
+Answer A gives a solution, while Answer B explains who that solution affects and why. By framing your answers in terms of who they affect, you show an ability to put your work in context and understand the reasons behind decisions rather than just doing things because you think you should. In this example, the candidate has shown empathy for the users and a strategic mindset for the business. Not bad for two extra sentences!
+
+You can apply these insights to any stage of your interview. For example, when discussing your skills, experience, or personal projects, try asking yourself, "Who does this affect?" A good guideline is to consider the users, the business, and the team.
+
+User considerations:
+- Is the site fast, convenient, and easy to navigate?
+- Are things being put on the site to help the user or just to look cool?
+
+Business considerations:
+- Is the value of the product clear?
+- Can people find what they're looking for?
+- Is there anything distracting or confusing that could hurt conversions?
+
+Team considerations:
+- Is the code clear, organized, and maintainable?
+- Does a particular action or idea save time or effort for the team?
+- Does a decision fit the working styles and strengths of the team?
+
+Now that we have this framework to put our experience in context, we can look at a couple of examples.
+
+How to Discuss a Code Demo
+
+Let's say you're showing a bouncing ball animation you've created. Instead of talking about the code and stopping there, you can also discuss the process of learning how to animate that ball. Then you can talk about how you'd use this process to learn new things on the job whenever you need to. This saves time and energy for the team because you can get up to speed on new things without holding everyone else back.
+
+By taking a few extra seconds to discuss your learning process, you've transformed a normal code demo into evidence that you'll be great for the team.
+
+How to Discuss Past Experience
+
+Suppose you're discussing a website you've created. It could be professional experience, or it could be something you did on your own. Either way, you can frame what you've done in terms of the people it affects.
+
+For example, maybe you made your code clear and readable. That'll make it easier to maintain, showing that you'd be a good teammate. On the other hand, maybe you could have made a navigation menu clearer. Mentioning this shows awareness of the user experience as well as growth in your thinking.
+
+When discussing past experience in general, think of the people affected in terms of what you did well and what you'd do differently.
+
+
+Key Takeaway
+
+In interviews, think about the users, the business, and the team. Your performance will improve with no new knowledge.
 
 
 
 
-say how you'd find out things you don't know
-
-google (say which terms)
-stack overflow
-cross-verify with mdn
-test in console
-
-
-example of something you didn't know and how you learned it
-
-
-make it collaborative
-
-
-make it a two-way interview (you're trying to find out about them too)
-- shows competence
-- makes you look discerning instead of desperate
-
-
-questions:
-- not about what you get but about how they work (not what's the salary but instead)
-
-
-when you don't know
-- start with things you do know
-- break down problem into smaller parts
-- narrow it down and get specific about the parts you don't know
-- once you're specific:
-	- don't be afraid to ask for info or clarification
-	- ask if there's anything else you might be overlooking
-	- talk about how you might find that info
-	- after you've gotten as far as you can, say you're always interested to learn and ask how they might approach it
 
 
 
-mention input validation
 
 
 
-prepare an opening story about yourself and your projects
-- this can let you dictate how you're perceived instead of just going in as an unknown and answering questions (it's the difference between a professional introducing themselves vs a student nervously showing up for a test)
 
 
 
-talk about something you're excited about
+Tip 2: Name Things Clearly
+
+In the heat of a coding interview, it can be tempting to give short, hard-to-read names to JavaScript variables, CSS classes, or whatever else you might name.
+
+Resist this temptation.
+
+you'll save 5 seconds
+se
+submitEmail
+waste much more time keeping track of everything
+
+
+Benefits
+- helps you keep track of things
+- helps interviewer see your thought process (so even if you don't get all the way to the end, you can still get 80% credit)
+- shows you write understandable/maintainable code
+
+
+
+
+
+
+
+
+
