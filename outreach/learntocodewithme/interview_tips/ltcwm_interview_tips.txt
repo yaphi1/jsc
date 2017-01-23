@@ -1,17 +1,38 @@
 
-Easy Ways to Sound Better In Coding Interviews Without Learning Anything New
+7 Easy Ways to Sound Better in Coding Interviews
+
+
+7 Tips to Supercharge Your Coding Interview Performance
+
+
+
+
+Interviews can be scary.
+
+What if you don't know enough? What if you say the wrong things? What if you embarrass yourself?
+
+Breathe easy. I'm here with good news.
+
+There are several things you can say and do to sound instantly more impressive with the knowledge you already have. Having been on both sides of the interview table, I can assure you these tips work.
+
+While the advice in this article is not a substitute for knowing your stuff, it will help make your answers shine. It'll also protect you from getting stuck.
+
+By the end, I aim to give you more confidence in tackling your interviews.
 
 
 
 
 
-Tip 1: Think of the People
+
+
+
+Tip 1: Frame Answers in Terms of Who Will Be Impacted
 
 When answering an interview question, people often give the technical solution without thinking about who the solution might affect.
 
 This is a missed opportunity.
 
-For example, consider the question, "What's one way to make a web page load faster?"
+For example, consider the question, "What's one way to make a website load faster?"
 
 Answer A:
 "I would compress images to make a website load faster."
@@ -23,7 +44,7 @@ Both answers are correct, but Answer B looks much better despite showing the sam
 
 So what's the difference?
 
-Answer A gives a solution, while Answer B explains who that solution affects and why. By framing your answers in terms of who they affect, you show an ability to put your work in context and understand the reasons behind decisions rather than just doing things because you think you should. In this example, the candidate has shown empathy for the users and a strategic mindset for the business. Not bad for two extra sentences!
+Answer A gives a solution, while Answer B explains who that solution affects and why. By framing your answers in terms of who they affect, you show an ability to put your work in context and understand the reasons behind decisions rather than just doing things because you think you should. In Answer B, the candidate has shown empathy for the users and a strategic mindset for the business. Not bad for two extra sentences!
 
 You can apply these insights to any stage of your interview. For example, when discussing your skills, experience, or personal projects, try asking yourself, "Who does this affect?" A good guideline is to consider the users, the business, and the team.
 
@@ -132,15 +153,77 @@ Here are the benefits of laying out the pieces before jumping into an answer:
 
 Tip 4: If You Don't Know, Say How You'd Find Out
 
-Sometimes, you'll run into questions you're not sure how to answer.
+Sometimes, you'll run into a question you're not sure how to answer. This is an opportunity to show how you find new information.
 
-examples:
-specific search terms you might use
-common sources like stack overflow and mdn
-test code in console
+Start with what you know, and narrow down the missing parts as much as possible. Then you can discuss specific search terms and reference materials you might use. For example, if you're not sure of the difference between "substr" and "substring" in JavaScript, you can talk about how you'd look them up in the MDN.
+
+Next you can talk about what sorts of code snippets you'd write to test concepts and answer your own questions. For example, if you're not sure how a certain CSS position will look, what code would you write to test that?
+
+By discussing how you find new information, you can actually impress an interviewer more than by knowing the answers straight away. Technology is constantly changing, and so how you learn is arguably more important than what you know.
+
+If you're not sure how to answer a question, don't worry. You might be able to turn that to your advantage.
 
 
 
+
+
+
+
+
+
+
+
+
+
+Tip 5: Narrow It Down, Then Ask
+
+Suppose a question completely stumps you. You've laid out all the information, you've found the gaps, you've drawn diagrams, and you've talked about how you'd find some of the missing info, but it's not enough.
+
+This is a great time to ask a question.
+
+Since you've done the work of laying out the available information, you'll have an easier time being specific in what you ask. When your question is specific, you're more likely to get a helpful answer while showing competence in the process.
+
+By asking for help when you're stuck, you also show that you're willing to learn and willing to admit when you don't know something. This sets a collaborative mood, which makes it easier for your interviewer to envision you on the team. It also says good things about your personality.
+
+You don't have to wait until you're stumped to ask a question. In fact, it is useful to ask questions early to check assumptions and clarify requirements. A quick clarification in the beginning can save you from going too far on the wrong track. This is especially important as you'll encounter many situations in any job where a quick question at the beginning can prevent tons of wasted effort later on.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tip 6: Mention Input Validation If It Makes Sense
+
+Input validation means making sure the input is what you'd expect. For example, if a form asks for someone's age, you can validate the input by checking if it consists of numbers and not letters.
+
+Input validation is a quick win that lets you get immediate points before you've started to figure out an answer to an interview question. You won't necessarily have to validate input during an interview, but at least asking about it shows that you pay attention to these things. As a result, you boost the interviewer's confidence that you won't write buggy code.
+
+Another benefit of mentioning input validation is that it builds momentum. Instead of stalling at the beginning of a question, you have immediate steps you can take to score points while buying time to think. This approach also helps build comfort in talking through your thought process.
+
+Not every question will have an opportunity for input validation, but on the questions that do, give it a mention.
+
+
+
+
+
+
+
+
+
+
+Tip 7: Prepare A 30-Second Opening Story
+
+- quick overview of experience and how it relates to them
+- this lets you dictate how you're perceived instead of going in and answering questions (it's the difference between a professional introducing themselves vs a student nervously showing up for a test)
 
 
 

@@ -1,11 +1,27 @@
 
 
-
-
-Working title:
+previous title:
 Easy Ways to Sound Better In Coding Interviews Without Learning Anything New
 
+alt titles:
+	- X Tips to Do Better On Coding Interview Questions Without Learning Anything New
+	- Answer Coding Interview Questions Better Without Learning Anything New
+	- Give Better Answers In Coding Interviews Without Learning Anything New
 
+
+Current title:
+7 Easy Ways to Sound Better in Coding Interviews
+
+Feedback:
+Use something more specific than "Better"
+
+
+more alternate titles:
+	- 7 Tips to Supercharge Your Coding Interview Answers Using What You Already Know
+	- 7 Ways to Supercharge Your Coding Interview Answers
+	- 7 Easy Ways to Supercharge Your Coding Interview Performance
+	- 7 (Easy) Tips to Supercharge Your Coding Interview Performance
+	- 7 Tips to Nail Your Coding Interview
 
 
 Intro
