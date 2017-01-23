@@ -222,6 +222,27 @@ Not every question will have an opportunity for input validation, but on the que
 
 Tip 7: Prepare A 30-Second Opening Story
 
+You can gain a huge advantage with a quick overview of your experience and how it relates to the company you're applying for.
+
+Why?
+
+A quick, relevant intro lets you dictate how you're perceived instead of leaving it up to your interviewers and hoping you get the right questions. Here's how that might sound:
+
+Interviewer: "Tell me a bit about your background."
+
+You: "Okay, so in terms of front-end development, I'm most interested in responsive websites and JavaScript performance. [Optional sentence: I've worked on A, B, and C, and I'd like to try more of Z.] I'm excited to work with your company because I've noticed you do a great job with responsiveness and performance on your homepage. I think we can make your site load even faster by compressing the masthead images and combining CSS files where possible. I know the company is getting ready to launch Product XYZ, and having a fast website is a great way to retain more leads. Either way, I'm excited to come in and see where I can make the biggest impact."
+
+- what you're interested in (implies understanding and expertise without having to rate yourself)
+- optional: experience and personal projects
+- what you like about the company
+- potential improvements that you've noticed on the company's website (or user experience, or whatever)
+- relate your job to the business's bottom line
+- end with your enthusiasm to get started
+
+It's the difference between a professional introducing themselves versus a student nervously showing up for a test.
+
+
+
 - quick overview of experience and how it relates to them
 - this lets you dictate how you're perceived instead of going in and answering questions (it's the difference between a professional introducing themselves vs a student nervously showing up for a test)
 
