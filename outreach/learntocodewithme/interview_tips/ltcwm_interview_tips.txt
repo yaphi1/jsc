@@ -2,7 +2,6 @@
 7 Easy Ways to Sound Better in Coding Interviews
 
 
-7 Tips to Supercharge Your Coding Interview Performance
 
 
 
@@ -15,7 +14,7 @@ Breathe easy. I'm here with good news.
 
 There are several things you can say and do to sound instantly more impressive with the knowledge you already have. Having been on both sides of the interview table, I can assure you these tips work.
 
-While the advice in this article is not a substitute for knowing your stuff, it will help make your answers shine. It'll also protect you from getting stuck.
+While the advice in this article is not a substitute for knowing your stuff, it will help set you apart from other candidates. It'll also protect you from getting stuck.
 
 By the end, I aim to give you more confidence in tackling your interviews.
 
@@ -226,27 +225,49 @@ You can gain a huge advantage with a quick overview of your experience and how i
 
 Why?
 
-A quick, relevant intro lets you dictate how you're perceived instead of leaving it up to your interviewers and hoping you get the right questions. Here's how that might sound:
+A quick, relevant intro lets you dictate how you're perceived instead of leaving it up to your interviewers and hoping you get the right questions. Here's how this approach might sound:
 
 Interviewer: "Tell me a bit about your background."
 
-You: "Okay, so in terms of front-end development, I'm most interested in responsive websites and JavaScript performance. [Optional sentence: I've worked on A, B, and C, and I'd like to try more of Z.] I'm excited to work with your company because I've noticed you do a great job with responsiveness and performance on your homepage. I think we can make your site load even faster by compressing the masthead images and combining CSS files where possible. I know the company is getting ready to launch Product XYZ, and having a fast website is a great way to retain more leads. Either way, I'm excited to come in and see where I can make the biggest impact."
+You: "Okay, so in terms of front-end development, I'm very interested in responsive websites and JavaScript performance. [Optional sentence: I've worked on A, B, and C, and I'd like to try more of Z.] I'm excited to work with your company because I've noticed you do a great job with responsiveness and performance on your homepage. I think we can make your site load even faster by compressing the masthead images and combining CSS files where possible, but I understand there might be constraints we need to work around. Either way, I'm excited to come in and see where I can make the biggest impact. If you want, I'd be happy to do a quick walk-through of my portfolio."
 
-- what you're interested in (implies understanding and expertise without having to rate yourself)
-- optional: experience and personal projects
-- what you like about the company
-- potential improvements that you've noticed on the company's website (or user experience, or whatever)
-- relate your job to the business's bottom line
-- end with your enthusiasm to get started
+Let's break down the elements of this introduction.
 
-It's the difference between a professional introducing themselves versus a student nervously showing up for a test.
+1. Lead off with the concepts, tools, or subjects you're interested in. The phrasing is important. By saying you're interested in a particular concept, you communicate understanding and enthusiasm without having to rate yourself. You get to display competence without doing the dance of "I'd say I'm an X/10 at JavaScript," or "I've been doing this for X years."
+
+2. Briefly mention your experience if it makes sense for you. When doing this, pick key highlights that can fit into a sentence or so. For example, "I worked at A, B, and C, and I was most excited about doing Z." If you don't have coding work experience, you can mention a relevant personal project. The point is to bring up something concrete you've done so that you'll interviewer will see you've done something relevant to them.
+
+3. Say what you like about the company and why you're excited to work there. The more specific you can be, the better. This immediately shows preparation, competence, relevance, and enthusiasm.
+
+4. Mention one thing you can do for the company. For example, you might bring up improvements to performance, user experience, code readability, or maintainability. Maybe you know about a big upcoming company goal, and you can mention how you'll help with that. It also helps to mention constraints because it shows awareness that there might have been outside factors preventing the team from making the suggested improvements in the first place.
+
+5. End with your enthusiasm to get started, and transition into your portfolio. In the worst case, they'll say they don't have time to look at it, and you'll look extra prepared. Most of the time, you'll get a yes, which is great. Showing your portfolio lets you present your best work on your terms. You can draw attention to your strengths in a memorable way rather than wishing the interview focused on your good points.
+
+A crisp opening story is crucial in setting the tone of your interview. It's the difference between a professional introducing themselves versus a student nervously showing up for a test.
 
 
 
-- quick overview of experience and how it relates to them
-- this lets you dictate how you're perceived instead of going in and answering questions (it's the difference between a professional introducing themselves vs a student nervously showing up for a test)
 
 
+
+
+
+
+
+Conclusion
+
+
+
+- key takeaways
+- cta
+
+
+- frame answers and experience in terms of who it helps
+- clarify pieces, draw them out, ask
+- show thought process when possible
+- if stuck, talk through it
+
+cta: front-end dev guide
 
 
 
