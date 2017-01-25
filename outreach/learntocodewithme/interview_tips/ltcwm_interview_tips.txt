@@ -47,39 +47,14 @@ Answer A gives a solution, while Answer B explains who that solution affects and
 
 You can apply these insights to any stage of your interview. For example, when discussing your skills, experience, or personal projects, try asking yourself, "Who does this affect?" A good guideline is to consider the users, the business, and the team.
 
-User considerations:
-- Is the website fast, convenient, and easy to navigate?
-- Are things being put on the site to help the user or just to look cool?
+Discussing a code demo you built?
+Talk about your learning process. This shows you're able to pick up new things, which is a crucial skill that will save time for your team.
 
-Business considerations:
-- Is the value of the product clear?
-- Can people find what they're looking for?
-- Is there anything distracting or confusing that could hurt conversions?
+Discussing a personal project?
+Go over what you did well and what you would have done differently in terms of the users, the business, and the team. This shows awareness and growth in your thinking.
 
-Team considerations:
-- Is the code clear, organized, and maintainable?
-- Does a particular action or idea save time or effort for the team?
-- Does a decision fit the working styles and strengths of the team?
+[Tweet "Your coding interviews will go much better if you think of the users, the business, and the team."]
 
-Now that we have this framework to put our experience in context, we can look at a couple of examples.
-
-How to Discuss a Code Demo
-
-Let's say you're showing a bouncing ball animation you've created. Instead of talking about the code and stopping there, you can also discuss the process of learning how to animate that ball. Then you can talk about how you'd use this process to learn new things on the job whenever you need to. This saves time and energy for the team because you can get up to speed on new things without holding everyone else back.
-
-By taking a few extra seconds to discuss your learning process, you've transformed a normal code demo into evidence that you'll be great for the team.
-
-How to Discuss Past Experience
-
-Suppose you're discussing a website you've created. It could be professional experience, or it could be something you did on your own. Either way, you can frame what you've done in terms of the people it affects.
-
-For example, maybe you made your code clear and readable. That'll make it easier to maintain, showing that you'd be a good teammate. On the other hand, maybe you could have made a navigation menu clearer. Mentioning this shows awareness of the user experience as well as growth in your thinking.
-
-When discussing past experience in general, think of the people affected in terms of what you did well and what you'd do differently.
-
-Key Takeaway
-
-In interviews, think about the users, the business, and the team. Your performance will improve with no new knowledge.
 
 
 
@@ -162,6 +137,8 @@ By discussing how you find new information, you can actually impress an intervie
 
 If you're not sure how to answer a question, don't worry. You might be able to turn that to your advantage.
 
+[Tweet: "Stuck on an interview question? Saying how you find information can impress more than knowing the answer."]
+
 
 
 
@@ -229,13 +206,13 @@ A quick, relevant intro lets you dictate how you're perceived instead of leaving
 
 Interviewer: "Tell me a bit about your background."
 
-You: "Okay, so in terms of front-end development, I'm very interested in responsive websites and JavaScript performance. [Optional sentence: I've worked on A, B, and C, and I'd like to try more of Z.] I'm excited to work with your company because I've noticed you do a great job with responsiveness and performance on your homepage. I think we can make your site load even faster by compressing the masthead images and combining CSS files where possible, but I understand there might be constraints we need to work around. Either way, I'm excited to come in and see where I can make the biggest impact. If you want, I'd be happy to do a quick walk-through of my portfolio."
+You: "Okay, so in terms of front-end development, I'm very interested in responsive websites and JavaScript performance. [Optional sentence: I've worked on A, B, and C, and I'd like to try more of Z.] I'm excited to work with your company because I've noticed you do a great job with responsiveness and performance on your homepage. I think we can make your site load even faster by compressing the masthead images and combining CSS files where possible, and I understand there might be constraints we need to work around. Either way, I'm excited to come in and see where I can make the biggest impact. If you want, I'd be happy to do a quick walk-through of my portfolio."
 
 Let's break down the elements of this introduction.
 
 1. Lead off with the concepts, tools, or subjects you're interested in. The phrasing is important. By saying you're interested in a particular concept, you communicate understanding and enthusiasm without having to rate yourself. You get to display competence without doing the dance of "I'd say I'm an X/10 at JavaScript," or "I've been doing this for X years."
 
-2. Briefly mention your experience if it makes sense for you. When doing this, pick key highlights that can fit into a sentence or so. For example, "I worked at A, B, and C, and I was most excited about doing Z." If you don't have coding work experience, you can mention a relevant personal project. The point is to bring up something concrete you've done so that you'll interviewer will see you've done something relevant to them.
+2. Briefly mention your experience if it makes sense for you. When doing this, pick key highlights that can fit into a sentence or so. For example, "I worked at A, B, and C, and I was most excited about doing Z." If you don't have coding work experience, you can mention a relevant personal project. The point is to bring up something concrete you've done so that your interviewer will see you've done something relevant to them.
 
 3. Say what you like about the company and why you're excited to work there. The more specific you can be, the better. This immediately shows preparation, competence, relevance, and enthusiasm.
 
@@ -246,6 +223,8 @@ Let's break down the elements of this introduction.
 A crisp opening story is crucial in setting the tone of your interview. It's the difference between a professional introducing themselves versus a student nervously showing up for a test.
 
 Feel free to mix and match parts or remove them as needed, but whatever you do, keep your intro short. Aim for no more than 30 seconds.
+
+[Tweet "A good intro is the difference between entering a coding interview as a professional vs entering as a nervous student."]
 
 
 

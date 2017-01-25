@@ -1,0 +1,34 @@
+
+User considerations:
+- Is the website fast, convenient, and easy to navigate?
+- Are things being put on the site to help the user or just to look cool?
+
+Business considerations:
+- Is the value of the product clear?
+- Can people find what they're looking for?
+- Is there anything distracting or confusing that could hurt conversions?
+
+Team considerations:
+- Is the code clear, organized, and maintainable?
+- Does a particular action or idea save time or effort for the team?
+- Does a decision fit the working styles and strengths of the team?
+
+Now that we have this framework to put our experience in context, we can look at a couple of examples.
+
+How to Discuss a Code Demo
+
+Let's say you're showing a bouncing ball animation you've created. Instead of talking about the code and stopping there, you can also discuss the process of learning how to animate that ball. Then you can talk about how you'd use this process to learn new things on the job whenever you need to. This saves time and energy for the team because you can get up to speed on new things without holding everyone else back.
+
+By taking a few extra seconds to discuss your learning process, you've transformed a normal code demo into evidence that you'll be great for the team.
+
+How to Discuss Past Experience
+
+Suppose you're discussing a website you've created. It could be professional experience, or it could be something you did on your own. Either way, you can frame what you've done in terms of the people it affects.
+
+For example, maybe you made your code clear and readable. That'll make it easier to maintain, showing that you'd be a good teammate. On the other hand, maybe you could have made a navigation menu clearer. Mentioning this shows awareness of the user experience as well as growth in your thinking.
+
+When discussing past experience in general, think of the people affected in terms of what you did well and what you'd do differently.
+
+Key Takeaway
+
+In interviews, think about the users, the business, and the team. Your performance will improve with no new knowledge.
