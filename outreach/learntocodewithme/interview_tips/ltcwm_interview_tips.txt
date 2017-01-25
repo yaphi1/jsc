@@ -245,7 +245,7 @@ Let's break down the elements of this introduction.
 
 A crisp opening story is crucial in setting the tone of your interview. It's the difference between a professional introducing themselves versus a student nervously showing up for a test.
 
-
+Feel free to mix and match parts or remove them as needed, but whatever you do, keep your intro short. Aim for no more than 30 seconds.
 
 
 
@@ -256,18 +256,18 @@ A crisp opening story is crucial in setting the tone of your interview. It's the
 
 Conclusion
 
+Part of what makes interviews scary is the uncertainty of what might happen.
 
+The best defense is to focus on the things you can control. For example, a strong intro can ensure you cover your good points instead of hoping your interviewer asks the right questions.
 
-- key takeaways
-- cta
+Whenever possible, show that you're thinking of the users, the business, and the team. This will frame you as a smart, practical thinker.
 
+If you ever get stuck, start by talking through what you already know. Then identify the gaps, ask questions, and say how you'd find out the things you don't know.
 
-- frame answers and experience in terms of who it helps
-- clarify pieces, draw them out, ask
-- show thought process when possible
-- if stuck, talk through it
+With these tips, I hope you'll be able to walk into your next interview with confidence.
 
-cta: front-end dev guide
+If you happen to be interested in front-end web development, feel free to check out my quick, step-by-step guide (https://simplestepscode.com/) on how to get into the field.
+
 
 
 
