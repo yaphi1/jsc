@@ -17,17 +17,18 @@ body{
 
 </head>
 <body>
-
+<!-- 
 <button id="btn">Button</button>
 
 <script>
 var btn = document.getElementById('btn');
 
-function doThing(){
-	console.log('thing');
+function doThing(e){
+	console.log(e);
 }
 
 btn.addEventListener('click', doThing);
+
 
 
 
@@ -36,8 +37,56 @@ function doOtherThing(){
 	console.log('other thing');
 }
 
-btn.addEventListener('click', doOtherThing);
+btn.addEventListener('mouseover', doOtherThing);
 
+function showMouseLocation(e){
+	console.log('x='+e.clientX+', y='+e.clientY);
+}
+// window.addEventListener('mousemove', showMouseLocation);
+
+
+
+function respondOnlyOnce(){
+	console.log('You should see this only once.');
+
+	btn.removeEventListener('click', respondOnlyOnce);
+}
+
+btn.addEventListener('click', respondOnlyOnce);
+
+
+</script>
+ -->
+
+
+
+<button id="btn">Button</button>
+<div id="output">Not clicked yet.</div>
+
+<script>
+var btn = document.getElementById('btn');
+var outputDiv = document.getElementById('output');
+
+function showSuccessMessage(){
+	outputDiv.innerHTML = 'Success!';
+}
+
+btn.addEventListener('click', showSuccessMessage);
+
+function turnGreen(){
+	outputDiv.style.color = 'lightgreen';
+}
+btn.addEventListener('click', turnGreen);
+
+
+
+
+
+
+(function(){
+	var message = 'Secret message';
+	console.log(message);
+})();
 </script>
 </body>
 </html>

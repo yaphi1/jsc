@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>help</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+		<h1>What to Do When You're Stuck</h1>
+
+		<p>This course doesn't have answers included, and that's on purpose.</p>
+
+		<p>It's too easy to look at an answer, think "oh that makes sense" and move on without truly understanding it.</p>
+
+		<p>Also answers can rob you of the most important skills in coding: getting unstuck, and gaining confidence in your ability to find your own answers.</p>
+
+		<p>This section will give you some strategies to get unstuck.</p>
+
+
+
+
+
+
+
+		<div class="section">
+			<h2>First check the console</h2>
+
+			<p>If something isn't working properly, first check the browser console.</p>
+
+			<p>If you have a syntax error (like you put a bracket in the wrong place or something), the console will show you which line number your error is on.</p>
+
+			<p>If you try to use a variable that doesn't exist yet, the console will catch that too.</p>
+
+			<p><strong>The console is one of the quickest and easiest ways to catch errors, so start there.</strong></p>
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Check your spelling and capitalization</h2>
+
+			<p>Let's say you're trying to change the HTML inside a div.</p>
+
+			<p>If you use <b>innerHTML</b>, it will work properly because it's correct.</p>
+
+			<p>However, if you make a typo like "innerLMHT", the console won't show an error!</p>
+
+			<p>Why?</p>
+
+			<p>It's because you can store custom properties if you want to, so the browser just thinks you intended to store data in a custom property you've named "innerLMHT".</p>
+
+			<p>The same problem would happen if you typed "innerhtml". JavaScript is case-sensitive, so "innerhtml" is different from <b>innerHTML</b>.</p>
+
+			<p><strong>If something's not working the way you expect, check your spelling and capitalization.</strong></p>
+		</div>
+
+
+
+
+
+
+
+		<div class="section">
+			<h2>Test small pieces</h2>
+
+			<p>If your code isn't working, break it down into the smallest possible pieces and test those.</p>
+
+			<p>For example if you're making a countdown clock, don't test the whole clock immediately. Instead start with the basics. Show a single number on the screen and see if that works. Then move onto the next step.</p>
+
+			<p><strong>The smaller the pieces you test, the easier it will be to see where things went wrong.</strong></p>
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>Write what your code is doing</h2>
+
+			<p>In order to get clarity on what your code is doing, break it down into small pieces and write in plain language what it is doing. I like to use comments for this purpose.</p>
+
+			<p>For example, let's say you have a loop that's showing a list of social media posts. Instead of saying "It's showing a list of posts," actually go into detail and say what's happening in each step of the loop.</p>
+
+			<p>A better example would be, "The first time the loop runs, i=0 and we're showing the first post (posts[0]). After this, i increases by 1, and we go through the cycle again. This repeats as long as i is less than the total number of posts." And just continue explaining everything like this.</p>
+
+			<p>Often, this technique leads to a moment where you say something like "oh, the variable i is not what I expected it to be here" or "oh, that loop ends too early" or "hmm I was getting the number of the post, but I never actually used that number to get the post itself!"</p>
+
+			<p><strong>When in doubt, write it out.</strong></p>
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>Start over and write what you want your code to do</h2>
+
+			<p>This is similar to the previous technique except instead of writing what your existing code is doing, you start over again and write what you want your code to do.</p>
+
+			<p>Again, the smaller the pieces, the better.</p>
+
+			<p>The benefit of starting over is that you won't be distracted by previous code, and it can be much easier to think with a clean slate.</p>
+
+			<p><strong>When you're doing a complex project, you don't want to do your thinking and your coding at the same time. Write in plain language first to clarify your thinking and avoid being distracted by syntax concerns.</strong></p>
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Look back through the lessons</h2>
+
+			<p>Self-explanatory.</p>
+			<p>If you're stuck look back through the lessons and you might find a hint.</p>
+			<p>If you find there's something from a previous lesson you don't quite remember, play with it until you get comfortable again.</p>
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Google your specific issues</h2>
+
+			<p>If you've done the previous steps up to now and you're still stuck, then you have a great foundation to start Googling things.</p>
+
+			<p>By breaking down your problems into small parts, you can look up specific things instead of floundering for general answers.</p>
+
+			<p><strong>Before Googling something, narrow down the problem as much as possible.</strong></p>
+		</div>
+
+
+
+
+
+
+
+		<div class="section">
+			<h2>Still stuck?</h2>
+
+			<p>If these steps didn't help, send me an email, and I'll be happy to help.</p>
+			<p>simplesteps [at] simplestepscode [dot] com</p>
+		</div>
+
+
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>

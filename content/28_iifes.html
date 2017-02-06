@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>28 - iifes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+		<h1>IIFEs - Keep Stuff out of Global Scope</h1>
+
+		<p>Are you tired of having your variables interfered with? Are you sick of overwriting other people's variables by mistake?</p>
+
+		<p>I've got good news.</p>
+
+		<p>IIFEs can help. Stay tuned to find out how.</p>
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>What is an IIFE and how do you use one?</h2>
+
+			<p>An <b>immediately-invoked function expression</b> is a function that is declared and immediately run.</p>
+
+			<p>It is often abbreviated as <b>IIFE</b> and pronounced "iffy".</p>
+
+			<p>You can use an IIFE to keep your code out of global scope, which is awesome because:</p>
+			<ul>
+				<li>You won't overwrite someone else's variables</li>
+				<li>Your variables won't get overwritten</li>
+			</ul>
+
+			<p>Type the following to see an IIFE in action:</p>
+
+			<pre><code>
+				(function(){
+					var message = 'Secret message';
+					console.log(message);
+				})();
+			</code></pre>
+
+			<p>What happens when you try to access the message variable outside your function?</p>
+
+			<p>Neat, right?</p>
+
+			<p>Let's break down what's happening here.</p>
+
+			<p>We're creating an anonymous function, putting it in parentheses, and then running it immediately.</p>
+
+			<p>In pseudo-code (pretend code), it looks like this:</p>
+
+			<pre><code class="language-markup">
+				(See this thing?)(Run it immediately.);
+			</code></pre>
+
+			<p>In real code, here's how it looks.</p>
+
+			<p><strong>Step 1:</strong> Create an anonymous function.</p>
+
+			<pre><code>
+				function(){}
+			</code></pre>
+
+			<p><strong>Step 2:</strong> Put your function in parentheses (spaces don't matter here).</p>
+
+			<pre><code>
+				( function(){} )
+			</code></pre>
+
+			<p><strong>Step 3:</strong> Run your function.</p>
+
+			<pre><code>
+				( function(){} )();
+			</code></pre>
+
+			<p><strong>Step 4:</strong> Put whatever you want in your function.</p>
+
+			<pre><code>
+				(function(){
+					console.log('stuff');
+				})();
+			</code></pre>
+
+			<div class="special_section terminology">
+				<h3>Talk the Talk: The invocation operator</h3>
+				<p>When someone talks about invoking a function, they just mean running a function.</p>
+				<p>This thing <code>()</code> is called the <b>invocation operator</b> because it invokes a function.</p>
+			</div>
+
+			<p>Note: You can give an IIFE a name, but you won't be able to access it outside the function, so most of the time you'll see IIFEs as anonymous functions.</p>
+
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Parameters in IIFEs</h2>
+
+			<p>Just like with other functions, IIFEs let you use parameters.</p>
+
+			<p>Type the following to see how that might look:</p>
+
+			<pre><code>
+				(function(a,b){
+					console.log(a+b);
+				})(1,2);
+			</code></pre>
+
+			<p>One common use for parameters in IIFEs is to store frequently used globals like <b>window</b> or <b>document</b>. This can help for brevity (long names can be shortened) and performance (so the browser doesn't have to look far to find the variables).</p>
+
+			<p>Try the following script. Make sure to have an HTML element to call on.</p>
+
+			<pre><code>
+				(function(d){
+					d.getElementById('whatever').innerHTML = 'something';
+				})(document);
+			</code></pre>
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+			
+			<p>The hardest part of IIFEs is getting the parentheses and brackets right.</p>
+
+			<ol>
+				<li>
+					<p>Type the following and make sure it works:</p>
+
+					<pre><code>
+						(function(){
+							console.log('It worked');
+						})();
+					</code></pre>
+
+					<p>Once it works, retype the following 10 times:</p>
+
+					<pre><code>
+						(function(){})();
+					</code></pre>
+
+					<p>If it helps, remember it like this:</p>
+					<pre><code class="language-markup">
+						( your function goes here )();
+					</code></pre>
+
+					<p>When you're done, see if you can write an IIFE without looking at an example.</p>
+				</li>
+
+				<li>
+					<p>Store a message inside a variable in an IIFE.</p>
+					<p>Still inside the IIFE, log that message to the console.</p>
+				</li>
+
+			</ol>
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<p>All done?</p>
+
+			<p>IIFEs are some of the most useful things in JavaScript.</p>
+
+			<p>You can write code that doesn't interfere with other code, and you can look good in interviews by talking about how your code doesn't pollute global scope.</p>
+		</div>
+
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>

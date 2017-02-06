@@ -132,9 +132,13 @@
 		<div class="section">
 			<h2>clearInterval() - Stop a setInterval() from running</h2>
 
-			<p>In order to stop an interval easily, you'll first need to give it a name.  You can do this by storing the interval in a variable.</p>
+			<p>Every time you set an interval, it generates an id number so you can refer to it later.</p>
 
-			<p>Once the interval has a name, you can just run <b>clearInterval()</b> on that name.  You can see this concept in action by typing the following code:</p>
+			<p>You'll want to store that id number in a variable so you can easily refer to the interval when needed.</p>
+
+			<p>That way, you can stop the interval whenever you want.</p>
+
+			<p>Just run <b>clearInterval()</b> on your interval's id number, which you've stored in a variable. It'll make more sense after you try it:</p>
 
 			<pre><code>
 				var count = 0;

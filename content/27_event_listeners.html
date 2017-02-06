@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>27 - event listeners</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../formatting/course_style.css">
+
+
+<link rel="stylesheet" type="text/css" href="../formatting/code_formatting/prism.css">
+
+</head>
+<body class="language-javascript">
+
+
+<div id="menubar">
+	Simple Steps JavaScript
+</div>
+
+
+<div id="content">
+	<div id="maincol">
+
+
+		<h1>Event Listeners - Add More than One Event Handler to an Element</h1>
+
+
+		<p>Let's say you're working on a big codebase.</p>
+
+		<p>You want something extra to happen when a button is clicked, but you don't want to overwrite what the button was doing before.</p>
+
+		<p>You're in luck. You can use something called an <strong>event listener</strong>.</p>
+
+
+
+		<div class="special_section getting_started">
+			<h2>Getting Started</h2>
+			<p>
+				Copy and paste the following code into a new HTML document:
+			</p>
+			<pre><code class="language-markup">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+				&lt;head&gt;
+					&lt;title&gt;&lt;/title&gt;
+					&lt;meta charset="UTF-8"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+
+
+				&lt;script&gt;
+
+				&lt;/script&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</code></pre>
+
+			<p>
+				For convenience, you can start with this HTML document to type the code from the lesson.
+			</p>
+			<p><b>Remember to put all scripts between the script tags.</b></p>
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>What is an event listener and how do you use it?</h2>
+
+			<p>Event listeners let you perform actions when certain events happen, such as clicks for example.</p>
+
+			<p>Type the following to see how it works:</p>
+
+			<pre><code class="language-markup">
+				&lt;button id="btn"&gt;Button&lt;/button&gt;
+
+				&lt;script&gt;
+				var btn = document.getElementById('btn');
+
+				function doThing(){
+					console.log('thing');
+				}
+
+				btn.addEventListener('click', doThing);
+				&lt;/script&gt;
+			</code></pre>
+
+			<p>In the above code, you're attaching an event listener to your button in order to respond to clicks.</p>
+
+			<p>Got it?</p>
+
+			<p>Now here's the cool part.</p>
+
+			<p>Try adding this onto the end of your script from the example you just typed:</p>
+
+			<pre><code>
+				function doOtherThing(){
+					console.log('other thing');
+				}
+
+				btn.addEventListener('click', doOtherThing);
+			</code></pre>
+
+			<p>If you've done it correctly, you should see both events happening.</p>
+
+			<p>Congrats! Now you know how to listen for events without overwriting what's already there.</p>
+
+			<p>If you're curious to see the difference, try setting an element's onclick the way you would before (yourElement.onclick = whatever). Then try setting the onclick value to something else and see what happens.</p>
+
+		</div>
+
+
+
+
+
+		<div class="section">
+			<h2>How to listen for other events besides clicks</h2>
+
+			<p>Remember how you were able to use events like <code>onclick</code> and <code>onmouseover</code> for example?</p>
+
+			<p>You can use all those same events with event listeners, but just remove the <code>on</code>.</p>
+
+			<p>Type the following to see the <code>mouseover</code> event in action:</p>
+
+			<pre><code class="language-markup">
+				&lt;button id="btn"&gt;Button&lt;/button&gt;
+
+				&lt;script&gt;
+				var btn = document.getElementById('btn');
+
+				function doThing(){
+					console.log('you hovered here');
+				}
+
+				btn.addEventListener('mouseover', doThing);
+				&lt;/script&gt;
+			</code></pre>
+
+
+			<p>Feel free to play around with this and try it with other events.</p>
+
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>Other ways to use event listeners</h2>
+
+			<p>With event listeners, you can do a lot of the things you've already learned how to do with your events.</p>
+
+			<p>We'll go through some examples.</p>
+
+			<p><strong>The event object</strong></p>
+
+			<p>Type the following to see how to use the event object with an event listener (you can use your previous code this time):</p>
+
+			<pre><code>
+				function doThing(e){
+					console.log(e);
+				}
+
+				btn.addEventListener('click', doThing);
+			</code></pre>
+
+			<p>This gives you useful data like where you clicked (or other things for other events like where you moved your mouse).</p>
+
+			
+			<p><strong>Listen for events on the whole window</strong></p>
+
+			<p>Type this script to see how to get the coordinates of the mouse every time it moves:</p>
+
+			<pre><code>
+				function showMouseLocation(e){
+					console.log('x=' + e.clientX + ', y=' + e.clientY);
+				}
+				window.addEventListener('mousemove', showMouseLocation);
+			</code></pre>
+
+			
+			<p><strong>You can use anonymous functions here too</strong></p>
+
+			<p>Type this and feel free to use your previous HTML code:</p>
+
+			<pre><code>
+				btn.addEventListener('click', function(){
+					console.log('here\'s an anonymous function');
+				});
+			</code></pre>
+
+			
+			<p><strong>Other options</strong></p>
+			
+			<p>Event listeners give you other options to have finer control over your events.</p>
+
+			<p>For example, if you ever find yourself in a situation where you have a click event on a button and you don't want it to also register on the button's containing div, then it's time to look up capturing and bubbling.</p>
+
+			<p>Since I don't want to overload you with information, here's a reference if you ever find yourself wanting your events to behave differently:</p>
+
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="_blank">MDN Event Listener Reference</a></p>
+
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<h2>Remove event listeners</h2>
+
+			<p>Don't want your button to react to clicks anymore? You can remove the event listener.</p>
+
+			<p>Here's how (type this):</p>
+
+			<pre><code class="language-markup">
+				&lt;button id="btn"&gt;Button&lt;/button&gt;
+
+				&lt;script&gt;
+				var btn = document.getElementById('btn');
+
+				function respondOnlyOnce(){
+					console.log('You should see this only once.');
+
+					btn.removeEventListener('click', respondOnlyOnce);
+				}
+
+				btn.addEventListener('click', respondOnlyOnce);
+				&lt;/script&gt;
+			</code></pre>
+
+			<p>If you did it correctly, you should see the console message only after the first click.</p>
+
+			<p><code>removeEventListener</code> has the same kind of syntax as addEventListener, so there's not too much to remember here.</p>
+
+			<div class="special_section warning">
+				<h3>Warning: Removing an event listener requires a named function</h3>
+				<p><code>removeEventListener</code> doesn't work with anonymous functions because it needs to know which function you're removing.</p>
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+		<div class="section">
+			<h2>Compatibility</h2>
+
+			<p>Now you might be wondering, if addEventListener is so great, why have you been using onclick?</p>
+
+			<p>It's because onclick is compatible with pretty much every browser and has been for a really long time.</p>
+
+			<p>addEventListener is widely compatible, but <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Legacy_Internet_Explorer_and_attachEvent" target="_blank">you'll still need fallbacks if you want to support IE8 or earlier</a>. There's also an extra parameter you'll need if you want to support really old versions of Firefox (like 6). This will be less and less of a problem as time goes on, so you'll be able to start using addEventListener exclusively.</p>
+
+			<p>For most situations, addEventListener is relatively safe to use these days.</p>
+
+		</div>
+
+
+
+
+		<div class="section">
+			<h2>Exercises:</h2>
+			
+			<p>There's not really much to memorize here as long as you understand how the event object works, so these exercises are going to be more about experimenting and playing.</p>
+
+			<ol>
+				<li>
+					<p>Type the following and make sure it works:</p>
+
+					<pre><code class="language-markup">
+						&lt;button id="btn"&gt;Button&lt;/button&gt;
+
+						&lt;script&gt;
+						var btn = document.getElementById('btn');
+
+						function doThing(){
+							console.log('thing');
+						}
+
+						btn.addEventListener('click', doThing);
+						&lt;/script&gt;
+					</code></pre>
+
+					<p>Once it works, retype the following line 20 times:</p>
+
+					<pre><code>
+						btn.addEventListener('click', doThing);
+					</code></pre>
+
+					<p>Even if you feel like you get it, I don't recommend skipping this because you'll use this a lot.</p>
+				</li>
+
+				<li>
+					<p>Let's say you're working on a codebase and you see this code (you can copy and paste it):</p>
+
+					<pre><code class="language-markup">
+						&lt;button id="btn"&gt;Button&lt;/button&gt;
+						&lt;div id="output"&gt;Not clicked yet.&lt;/div&gt;
+
+						&lt;script&gt;
+						var btn = document.getElementById('btn');
+						var outputDiv = document.getElementById('output');
+
+						function showSuccessMessage(){
+							outputDiv.innerHTML = 'Success!';
+						}
+
+						btn.addEventListener('click', showSuccessMessage);
+						&lt;/script&gt;
+					</code></pre>
+
+					<p>When a user clicks the button, you want to turn the output div's text green without touching any of the existing functions.</p>
+
+					<p>What would you do?</p>
+				</li>
+
+				<li>
+					<p>When the user clicks anywhere on the page, display the coordinates of that click in a div.</p>
+
+					<p>Use an <b>event listener</b> and the <b>event object</b> to make this happen.</p>
+
+					<p>If you're not sure how to do this, you can refer back to the lesson, but once you've got it, redo it without help.</p>
+				</li>
+
+				<li>
+					<p>Create a div that only shows up after someone clicks on a button.</p>
+
+					<p>Use an event listener to handle the click.</p>
+				</li>
+
+				<li>
+					<p><strong>Practical mini-project: Make Your Own Analytics</strong></p>
+
+					<p>Pretend you're building some analytics software to tell a company which of three important buttons their users clicked on the most.</p>
+
+					<p>Start with an object that looks like this:</p>
+
+					<pre><code>
+						var buttons = {
+							top: 0,
+							middle: 0,
+							bottom: 0
+						};
+					</code></pre>
+
+					<p>Each time the user clicks on one of the buttons, add 1 to the corresponding number in the buttons object.</p>
+
+					<p>If you've done it correctly, then clicking on the buttons a bunch of times should change the numbers in your object.</p>
+				</li>
+
+			</ol>
+		</div>
+
+
+
+
+
+
+		<div class="section">
+			<p>Are you starting to feel comfortable with event listeners?</p>
+
+			<p>If not, play around with them until you do.</p>
+
+			<p>The reason I didn't introduce them earlier is that I remember how confusing it was to learn onclick, addEventListener, and various fallbacks at the same time.</p>
+
+			<p>Now it's my hope that you'll have clarity on how event listeners work.</p>
+
+		</div>
+
+
+	</div>
+
+
+
+
+	<div id="sidebar">
+		<a href="#">Course Map</a>
+		<a href="#">Contact</a>
+		<a href="#">Log out</a>
+	</div>
+</div>
+
+
+
+<div id="footer">
+	&copy; Simple Steps Code
+</div>
+
+
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+
+</script>
+<script src="../formatting/code_formatting/prism.js"></script>
+</body>
+</html>
