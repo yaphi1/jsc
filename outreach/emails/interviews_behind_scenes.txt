@@ -1,0 +1,19 @@
+
+Web dev interviews behind the scenes
+
+
+Having interviewed a good number of web dev candidates, I've got some advice.
+
+It's better to know the underlying languages than a framework.
+
+I saw so many people struggle with common pieces of layout because they depended on Bootstrap for everything instead of getting comfortable with CSS.
+
+The thing is, if you know CSS, then you automatically know how to use Bootstrap because Bootstrap is mostly a bunch of pre-written CSS (and some JS).
+
+However, if you prioritize learning Bootstrap over plain CSS, then you'll get stuck every time you need to lay out a part of a page on your own.
+
+Same thing happened with Angular vs plain JavaScript.
+
+My advice:
+Get comfortable with HTML, CSS, and JavaScript first. Everything will be much easier for you as a result.
+
