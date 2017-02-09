@@ -5,15 +5,30 @@ next steps
 immediate:
 
 - pitch:
-	- learntocodewith.me
-	- skillcruh
+	- learntocodewith.me [done]
+	- skillcrush [maybe try new topics]
 	- the muse
 		example:
 		https://www.themuse.com/author/jeremy-schifeling
+		- instructions:
+			https://www.themuse.com/contribute
+		- when people say they're not a tech person (or not a _____ person)
+			- titles:
+			The Phrase that Holds Back Your Tech Career
+			The Phrase that Strangles Your Career
+			- topics:
+				- interacting with work - technical skills (tech, code, math, excel, writing, etc)
+				- interacting with people - interpersonal skills (interview, negotiation)
+				- interacting with self - internal psychology
+				- what to do about it
+					- every time you start thinking you're not a ___ person, reframe as you haven't practiced yet
+					- instead of giving up before starting, take the first step
+					- get comfortable being a beginner (treat it like a new game or a new episode or a new meal or whatever it is) (it's really exciting because there's so much progress you can make and the feeling of accomplishment multiplies)
+					- pick small milestones and you'll go farther
 
 - lh outreach
 
-- pitch huffpo
+- pitch huffpo [nvm not good source]
 
 	pitch form:
 	https://docs.google.com/forms/d/e/1FAIpQLScrz0kcSTcl6MrGJF-13l2MMSZJ3BBZtt6_znfxb4FwMLQiSQ/viewform
