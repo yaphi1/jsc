@@ -20,6 +20,7 @@ immediate:
 				- interacting with work - technical skills (tech, code, math, excel, writing, etc)
 				- interacting with people - interpersonal skills (interview, negotiation)
 				- interacting with self - internal psychology
+				- the key insight: if you've struggled with something, it's often because a key step was missing; not because of some innate ability
 				- what to do about it
 					- every time you start thinking you're not a ___ person, reframe as you haven't practiced yet
 					- instead of giving up before starting, take the first step
