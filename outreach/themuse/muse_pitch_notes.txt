@@ -2,6 +2,71 @@
 
 
 
+About me
+
+My name is Yaphi, and I'm a web engineer with experience on both sides of the interview table. My writing has appeared in outlets including Sitepoint, Lifehacker, CSS-Tricks, and Webdesigner Depot, and I'd love to contribute to The Muse.
+
+
+Story Idea
+
+Title:
+The Phrase that Strangles Your Tech Career (and 4 Steps to Fight It)
+
+Intro:
+
+"I'm not a [fill-in-the-blank] person."
+
+This phrase gets tossed around so casually, but it can wreck your career.
+
+People fail to learn new skills because they convince themselves they're "not a code person" or "not a tech person." They do poorly in interviews because they convince themselves they're "not an interview person." They lose tens of thousands of dollars because they believe they're "not a negotiating person."
+
+To be fair, the phrase, "I'm not a [fill-in-the-blank] person," can be useful for defining your interests, but once you let it define your abilities, you'll limit your potential.
+
+This issue is particularly relevant in tech, where learning new things is one of the most important skills you can develop.
+
+When it comes to abilities, the phrase, "I'm not a [fill-in-the-blank] person," represents a mindset that defeats you before you start. The good part is that once you're aware of this mindset, you can fight it.
+
+
+
+
+Outline:
+
+- Every time you start thinking you're not a [blank] person, reframe as you haven't practiced [blank] yet
+	- Recognize that these are learnable skills
+	- Often the problem is a key missing step, not some sort of innate ability
+
+- Instead of giving up before starting, take the first step
+	- People often spend 6 months worrying about how hard something will be instead of spending one afternoon trying it
+	- Convincing yourself you can't do something is often longer and more painful than actually doing it
+
+- Get comfortable being a beginner (treat it like a new game or a new episode or a new meal or whatever it is) (it's really exciting because there's so much progress you can make and the feeling of accomplishment multiplies)
+	- Cite learning curve study and how there's a lot to learn at the beginning and therefore a lot more accomplishments (http://ritter.ist.psu.edu/papers/ritterS01.pdf, p.4)
+	- If you're not feeling like a beginner, maybe you're not learning and growing enough
+
+- Pick small milestones and you'll go farther
+	- good for motivation and retention
+	- citations:
+		- https://www.psychologytoday.com/blog/brain-wise/201310/use-small-steps-motivate
+		- http://hilt.harvard.edu/blog/principles-multimedia-learning-richard-e-mayer
+
+- Conclusion
+	- Key takeaways and actions (reframe as something you can do and take the smallest possible first step)
+
+
+Writing Samples
+https://www.sitepoint.com/mind-tricks-to-learn-javascript-faster/
+http://www.webdesignerdepot.com/2016/06/are-you-solving-the-wrong-problems/
+https://css-tricks.com/potential-dangers-of-third-party-javascript/
+
+
+Let me know if you need any more info.
+
+
+
+
+
+
+
 
 
 
@@ -21,8 +86,21 @@ The Phrase that Strangles Your Career
 		- instead of giving up before starting, take the first step
 		- get comfortable being a beginner (treat it like a new game or a new episode or a new meal or whatever it is) (it's really exciting because there's so much progress you can make and the feeling of accomplishment multiplies)
 		- pick small milestones and you'll go farther
+		- there are some times when it's actually a helpful phrase, but only when it represents your interests rather than your abilities
 
 
+
+
+
+sources:
+
+https://en.wikipedia.org/wiki/Learning_curve:
+
+Ritter, F. E., & Schooler, L. J. The learning curve. In International Encyclopedia of the Social and Behavioral Sciences (2002), 8602-8605. Amsterdam: Pergamon
+
+http://ritter.ist.psu.edu/papers/ritterS01.pdf
+
+"The learning curve has implications for learning in education and everyday life.  It suggests that practice always helps improve performance, but that the most dramatic improvements happen first.  Another implication is that with sufficient practice people can achieve comparable levels of performance.  For example, extensive practice on mental arithmetic (Staszewski reported in Delaney et al., 1998) and on digit memorization have turned average individuals into world class performers." (p. 4)
 
 
 
@@ -40,6 +118,10 @@ About me:
 
 
 Story Idea:
+
+Title:
+Intro:
+Outline:
 
 
 Writing Samples:
@@ -61,3 +143,34 @@ PLEASE INCLUDE THE FOLLOWING:
 A bit about you: Give us 1-2 sentences about yourself and the experiences you have to share.
 Your idea: Pitch us your article idea. Tell us the title, write out a sample introduction, and then briefly outline how you would approach the rest of the piece, including any experts or sources you would include. Please don't send a full draft.
 Links: Send us 2-3 samples of your previous writing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+misc. notes:
+
+
+
+One of the most important skills is the ability to learn new things.
+
+unstructured notes
+When people say "I'm not a tech person" or "I'm not a code person," they limit themselves. They dismiss themselves before they even try, and it becomes a self-fullfilling prophecy. This is especially important in tech because the most useful ability is to learn new things. If you have a habit of telling yourself you're not a ___ person, then you're stuck. This isn't just a thing for technical skills though. It's also a thing for other skills. For example, people will lose out on interviews because they've convinced themselves they're not an interview person, or they'll lose tons of salary because they'll convince themselves they're not a negotiating person.
+
