@@ -39,6 +39,11 @@ personal ideas:
     - js portfolio tips (game: fun/personality, tool: utility/practicality, something related to company of interest), user experience, design, responsiveness, fast loading + good performance (efficient selectors, etc)
     - ways your coding life changes after you learn js
 
+- surprising and dangerous side effect of impostor syndrome:
+	- pros think they're not good enough, so they assume their knowledge is super basic; then when a real beginner asks for help, the pros assume an overwhelming amount of knowledge as the baseline
+	- that's why when a beginner asks what they need to know to be a front end dev, pros will chime in with every language and framework under the sun until the beginner thinks it's impossible; this also affects job descriptions
+	- note that the audience for this is not really the beginners except for perspective on what they need to know
+
 
 
 So far I really like the following ideas (from their list):

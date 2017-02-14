@@ -1,0 +1,56 @@
+
+How to Get the Most Out of Tutorials
+
+
+
+outline:
+
+
+Intro: It's too easy to go through a JS tutorial and not get the most out of it.
+	- Brief discussion of frustrations of going through a tutorial but not being able to apply it afterwards
+	- Introduce process to get the most out of tutorials (in terms of understanding, remembering, etc)
+
+Step 1: Before starting, get a few concepts in tool belt (variables, functions, arrays, etc)
+
+Step 2: Make small test cases for each step (use slideshow example)
+
+Step 3: If there's a concept you're not sure about (e.g.: arrays), don't just skip over it (this is some of the most important learning)
+
+Step 4: Adapt concepts to other mini projects (get better at underlying concepts; example guest list with arrays)
+
+Step 5: Redo the project without the tutorial
+	- If too difficult, this will reveal areas that require more practice
+	- After successful completion, add a twist
+
+Conclusion
+- Don't just go linear. Dig in and make sure you understand. It will seem longer, but you'll cover a lot at once, and you'll remember it better.
+- Better to go slowly once and understand a ton of stuff than to go quickly, forget it all, and watch your time evaporate.
+
+
+
+
+
+
+
+
+
+
+original notes:
+
+
+How to Get the Most Out of Tutorials
+
+
+
+- before starting, get a few concepts in tool belt (variables, functions, arrays, etc)
+
+(each of the following will have examples and benefits)
+- make small test cases for each step (clock example: first show current date then hours etc.)
+
+- if there's a concept you're not sure about (e.g.: arrays), don't just skip over it (this is some of the most important learning)
+
+- adapt concepts to other mini projects (get better at underlying concepts; example guest list with arrays)
+
+- redo the project without the tutorial
+
+- create a version with a twist
