@@ -521,6 +521,36 @@ EMAIL FORM
 
 
 
+
+
+/***********************************************************
+BOTTOM NAV
+***********************************************************/
+
+.bottom_nav_container{
+	background-color: #F1F4F7;
+	padding: 20px;
+	text-align: center;
+}
+
+.bottom_nav_container a{
+	text-decoration: none;
+	background-color: #4A9CC7;
+	color: #fff;
+	display: inline-block;
+	padding: 20px;
+	border-radius: 3px;
+}
+.bottom_nav_container a:hover{
+	text-decoration: none;
+	background-color: #5ad;
+	color: #fff;
+}
+
+
+
+
+
 /***********************************************************
 FOOTER
 ***********************************************************/
