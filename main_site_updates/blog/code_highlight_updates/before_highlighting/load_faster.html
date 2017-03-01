@@ -1,0 +1,122 @@
+<div class="intro contentwidth">
+	<div class="showcasetitle">
+		What to expect
+	</div>
+	<div class="firstcontentline">
+		There are many ways to make your web pages load faster.  Here are the ones that give the biggest gains with the least effort:
+	</div>
+	<ol>
+		<li><a href="#step1">Compress your images</a></li>
+		<li><a href="#step2">Minimize http requests</a></li>
+		<li><a href="#step3">Handle responsive images</a></li>
+		<li><a href="#step4">Put scripts at end of body</a></li>
+		<li><a href="#step5">Compress your code with gzip</a></li>
+	</ol>
+	There are other ways to speed up your web pages, but these are among the most convenient.
+
+</div>
+
+<div class="stepscontainer">
+
+	<div class="contentwidth stepbox">
+
+		<h2 id="step1">Step 1: Compress your images</h2>
+		<p>Compressing your images will give you the biggest performance boosts for the least effort.  You don't even have to compress everything.  Just do the big images.</p>
+
+		<h3>What to do:</h3>
+		<p>A couple of good resources for image compression are <a href="https://tinypng.com/">Tinypng</a> and <a href="http://optimizilla.com/">Optimizilla</a>, but there are plenty of others.  Just submit your images, and you'll get compressed ones back.  In many cases, the file sizes will be drastically smaller, and there will be no noticeable drop in quality!</p>
+
+	</div>
+
+
+
+	<div class="contentwidth stepbox">
+		<h2 id="step2">Step 2: Minimize http requests</h2>
+		<p>Every time you load an external file (such as an image, a stylesheet, a script, or iframe), the browser has to request that file from the internet.  That http request takes time and slows your page down.</p>
+
+		<h3>Ways to fix this:</h3>
+		<ul>
+			<li><b>Combine external stylesheets</b> into as few files as possible.  Do the same for your external scripts.</li>
+			<li>If there's a convenient way to <b>do something without an image</b>, try to do that.  CSS3 supports a lot of nice graphical effects, and browser support improves every day.  The added bonus of this approach is that you can make changes without having to create and upload a new image each time.</li>
+			<li>If you have a bunch of little icon images, <b>combine those icons into one image file</b>. Then you can access those images by creating a small div with a set width and height, and then playing around with the background image's position until the section you want is showing.</li>
+		</ul>
+	</div>
+
+
+	<div class="contentwidth stepbox">
+		<h2 id="step3">Step 3: Handle responsive images</h2>
+		<p>People will see your pages on all sorts of devices.  For a desktop user, that big banner image on your home page might be ok, but for a mobile user, that's a disaster.</p>
+		
+		<h3>What to do:</h3>
+		<p>First, make sure you have the following tag in your page's head.  It prevents your page from showing up as a really zoomed-out version of your full desktop page.</p>
+		<code>
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+		</code>
+
+		<p>Your stylesheet should have something like this for your biggest images:</p>
+		<code>
+			/* basic background - mobile and small screens */
+			background-image:url('smallimage.jpg');
+
+			/* enhanced background - larger screens */
+			@media(min-width:700px){
+				background-image:url('bigimage.jpg');
+			}
+		</code>
+		<p>By default, the above code loads your smaller image.  If the screen is wider than 700 pixels (or whatever width you choose), then the bigger version of the image will show.  This is a great way to get good performance across devices.  Your mobile users will love you.</p>
+	</div>
+
+
+
+
+	<div class="contentwidth stepbox">
+		<h2 id="step4">Step 4: Put your scripts at the end of the body</h2>
+		<p>When your page runs a script, the page stops whatever it's doing until that script has been executed.  Putting your scripts in the head means that there will be a delay in showing the page, so avoid that as much as possible.</p>
+
+		<h3>The fix:</h3>
+		<p>If you move your scripts to the end of the body, then they won't interrupt the page load, so the users will get their content faster.</p>
+	</div>
+
+
+
+
+	<div class="contentwidth stepbox">
+		<h2 id="step5">Step 5: Compress your code with gzip</h2>
+		<p>HTML has a lot of redundancies, such as many opening and closing tags being almost the same. Gzip compression takes advantage of this by cutting out the fluff and compressing your code.</p>
+
+		<h3>Make it happen:</h3>
+		<p>Go to the place where you've uploaded your home page.  If you see a file called <b>.htaccess</b>, edit it.  If not, make your own text file called .htaccess but make sure it does NOT get saved with an extension (like .html or .txt).  The filename should literally be <b>.htaccess</b></p>
+
+		<p>Once you have your .htaccess file open, paste this into it:</p>
+		<code>
+			<IfModule mod_headers.c>
+			  <FilesMatch "\.(js|css|xml|gz|html)$">
+			    Header append Vary: Accept-Encoding
+			  </FilesMatch>
+			</IfModule>
+
+			# compress text, html, javascript, css, xml:
+			AddOutputFilterByType DEFLATE text/plain
+			AddOutputFilterByType DEFLATE text/html
+			AddOutputFilterByType DEFLATE text/xml
+			AddOutputFilterByType DEFLATE text/css
+			AddOutputFilterByType DEFLATE application/xml
+			AddOutputFilterByType DEFLATE application/xhtml+xml
+			AddOutputFilterByType DEFLATE application/rss+xml
+			AddOutputFilterByType DEFLATE application/javascript
+			AddOutputFilterByType DEFLATE application/x-javascript
+		</code>
+
+		<p>Upload your .htaccess file to the same directory as your home page, and you're all set!</p>
+		<p>Now your pages will be compressed, resulting in faster load times.</p>
+	</div>
+
+
+
+	<div class="contentwidth stepbox">
+		<h2 id="bonus">Bonus: Proof that this stuff works</h2>
+		<p>Want to see these techniques in action? Navigate to any page on this site, and see if it takes long to load.  To get you started, here's the <a href="/">home page</a>.</p>
+	</div>
+
+	
+</div>

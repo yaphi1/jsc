@@ -1,0 +1,241 @@
+<style>
+/***********************************
+DEMO STYLES
+************************************/
+
+
+/* demo code */
+.glass{
+	margin: 40px 0px;
+	position: relative;
+	display: inline-block;
+	padding: 15px 25px;
+	background-color: green;
+	background-image: linear-gradient(green,lightgreen);
+	box-shadow: 0px 1px 4px -2px #333;
+	border-radius: 3px;
+	text-decoration: none;
+	color: #fff;
+	font-size: 25px;
+	font-weight: 100;
+	text-shadow: 0px -1px #333;
+}
+
+.glass:after{
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: calc(100% - 4px);
+	height: 50%;
+	background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.2));
+}
+
+.glass:hover{
+	background-image: linear-gradient(#073,#0fa);
+}
+
+
+
+
+
+
+/* step 1 result */
+.result1{
+	position: relative;
+	display: inline-block;
+	padding: 15px 25px;
+	background: green;
+	background-image: linear-gradient(green,lightgreen);
+	text-decoration: none;
+	color: #fff;
+	font-size: 25px;
+	font-weight: 100;
+}
+
+
+/* step 2 result */
+.result2{
+	position: relative;
+	display: inline-block;
+	padding: 15px 25px;
+	background: green;
+	background-image: linear-gradient(green,lightgreen);
+	text-decoration: none;
+	color: #fff;
+	font-size: 25px;
+	font-weight: 100;
+}
+.result2:after{
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: calc(100% - 4px);
+	height: 50%;
+	background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+}
+
+
+/* step 3 result */
+.result3{
+	position: relative;
+	display: inline-block;
+	padding: 15px 25px;
+	background: green;
+	background-image: linear-gradient(green,lightgreen);
+	text-decoration: none;
+	color: #fff;
+	font-size: 25px;
+	font-weight: 100;
+	border-radius: 3px;
+	box-shadow: 0px 1px 4px -2px #333;
+	text-shadow: 0px -1px #333;
+}
+.result3:after{
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: calc(100% - 4px);
+	height: 50%;
+	background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+}
+
+.result3:hover{
+	background: linear-gradient(#073,#0fa);
+}
+
+.resultbuttons button{ margin:10px; }
+</style>
+
+
+<div class="intro contentwidth">
+	<div class="showcasetitle">
+		What to expect
+	</div>
+	<div class="showcase">
+		<a href="#" class="glass">My button</a>
+	</div>
+	<div class="firstcontentline">
+		Good news. There are only 3 steps to creating a CSS glass button:
+	</div>
+	<ol>
+		<li><a href="#step1">The background gradient layer</a></li>
+		<li><a href="#step2">A light overlay</a></li>
+		<li><a href="#step3">Some finishing touches</a></li>
+	</ol>
+	That's it.  Take a few minutes to go through this, and you'll be impressing everyone with glossy buttons, icons, and other things that go on pages. Let's get started!
+
+</div>
+
+<div class="stepscontainer">
+
+	<div class="contentwidth stepbox">
+
+		<h2 id="step1">Step 1: The background gradient layer</h2>
+		<p>Pick the color you want your button to be, then set the background gradient to go from dark on top to light on the bottom. Also put in a solid background color for older browsers that don't support gradients.</p>
+		<p>While you're here, format the text to make sure it looks nice with the background.</p>
+
+		<h3>The CSS:</h3>
+		<code>
+			.glass{
+				/* background styles */
+				position: relative;
+				display: inline-block;
+				padding: 15px 25px;
+				background: green; /*for compatibility with older browsers*/
+				background-image: linear-gradient(green,lightgreen);
+
+				/* text styles */
+				text-decoration: none;
+				color: #fff;
+				font-size: 25px;
+				font-family: sans-serif;
+				font-weight: 100;
+			}
+		</code>
+
+		<h3>The HTML:</h3>
+		<code>
+			<a href="#" class="glass">My Button</a>
+		</code>
+
+		<h3>The result so far:</h3>
+		<div class="resultcontainer">
+			<a href="#" class="result1">My button</a>
+		</div>
+
+		<p>In the above CSS, the position needs to be relative so that you can put the overlay in the right place in the next step.</p>
+
+	</div>
+
+
+
+	<div class="contentwidth stepbox">
+		<h2 id="step2">Step 2: A light overlay</h2>
+		<p>Now the glass should start to look like glass.  All you need to do is overlay a gradient that goes from transparent white to more transparent white and stops about halfway down.</p>
+
+		<h3>The CSS:</h3>
+		<code>
+			.glass:after{
+				content: '';
+				position: absolute;
+				top: 2px;
+				left: 2px;
+				width: calc(100% - 4px);
+				height: 50%;
+				background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+			}
+		</code>
+
+		<h3>The result so far:</h3>
+		<div class="resultcontainer">
+			<a href="#" class="result2">My button</a>
+		</div>
+	</div>
+
+
+	<div class="contentwidth stepbox">
+		<h2 id="step3">Step 3: The finishing touches</h2>
+		<p>Now that your glass actually looks like glass, you can round the corners, engrave the text, add subtle shadows, and use hover effects.</p>
+		<p>Try adding the following lines to your .glass class in your CSS:</p>
+		<code>
+			border-radius: 3px;
+			box-shadow: 0px 1px 4px -2px #333;
+			text-shadow: 0px -1px #333;
+		</code>
+		<p>The first two lines round the corners of your button, and the last line gives the text an engraved look.</p>
+
+		<p>Now try adding the following CSS for a hover effect:</p>
+		<code>
+			.glass:hover{
+				background: linear-gradient(#073,#0fa);
+			}
+		</code>
+
+		<h3>The finished product:</h3>
+		<div class="resultcontainer">
+			<a href="#" class="result3">My button</a>
+		</div>
+	</div>
+
+
+
+	<div class="contentwidth stepbox">
+		<h2>Bonus: The fun part</h2>
+		<p>Now that you have the basic idea of how to make a glass button, you can try changing the colors, sizes, shapes, and more.  Maybe you'll make a <b>nav bar</b>, or maybe you'll make some <b>neat icons</b>.</p>
+
+		<h3>Examples of buttons and icons:</h3>
+		<div class="resultcontainer resultbuttons">
+			<button class="result3" style="background:linear-gradient(#258,#aef);">?</button>
+			<button class="result3" style="background:linear-gradient(#700,#f00);">b</button>
+			<button class="result3" style="background:linear-gradient(#740,gold);">app</button>
+			<button class="result3" style="background:linear-gradient(#507,#eaf);">icon</button>
+			<button class="result3" style="background:linear-gradient(#b40,orange);">button</button>
+			<button class="result3" style="background:linear-gradient(#073,#0fa);">go</button>
+			<button class="result3" style="background:linear-gradient(#000,#888);">&sum;</button>
+		</div>
+	</div>
+
+</div>

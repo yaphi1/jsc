@@ -1,0 +1,189 @@
+<div class="intro contentwidth">
+	<div class="showcasetitle">
+		What to expect
+	</div>
+	<a href="/autocomplete-data-demo/" class="demobutton" target="_blank">Basic Demo</a>
+	<a href="/quickipedia/" class="demobutton" target="_blank">Fancy Demo</a>
+	<div class="firstcontentline">
+		If you've ever wanted to know how to get autocomplete results from sites like Wikipedia, Google, and YouTube, now's your chance.  Here are the steps:
+	</div>
+	<ol>
+		<li><a href="#step1">Know what JSONP is</a></li>
+		<li><a href="#step2">Find out where the autocomplete data is coming from</a></li>
+		<li><a href="#step3">Call the autocomplete data yourself</a></li>
+		<li><a href="#step4">Call the data when a key is pressed</a></li>
+		<li><a href="#step5">Clean up the excess data</a></li>
+	</ol>
+	JavaScript knowledge is helpful but not required for this tutorial.
+
+</div>
+
+<div class="stepscontainer">
+
+	<div class="contentwidth stepbox">
+
+		<h2 id="step1">Step 1: Know what JSONP is</h2>
+		
+		<p>JSON, or JavaScript Object Notation, is a way of storing information in this format {"vehicle":"car", "color":"blue", "size":"big", "shape":"awesome"}.  You can pass this sort of information around in your own website, but for security reasons, you can't directly pass this info from a separate website.  That restriction is called the same-origin policy, but there's a way around it.</p>
+
+		<h3>The solution:</h3>
+
+		<p>The HTML script tag allows you to import a script from anywhere, including another website.  Just what we needed!</p>
+
+		<p><b>The trick is to pretend the desired data is a script and call it through an HTML script tag.</b>  However it will just be the JSON data, and the browser won't know what to do with that data on its own.</p>
+		
+		<p>What do you do?</p>
+		
+		<p>Wrap that JSON data in a function (this will be explained in a bit).  That function is known as the "padding" around the raw data, and it will allow you to do what you want with that data.</p>
+		
+		<p>Now you have your JSONP, which stands for JSON with padding, and you can get data from other sites.  (Note: The other sites have to configure themselves to allow this, so don't worry; you're not taking data from sites unless they've allowed it.)</p>
+
+		<p>The details of how to do all of this will be explained in the next steps.</p>
+
+	</div>
+
+
+
+	<div class="contentwidth stepbox">
+		<h2 id="step2">Step 2: Find out where the autocomplete data is coming from</h2>
+		
+		<p>Each time a site gets autocomplete data, your browser has to request it through the internet.  That's called a network request, and you can use it to see what urls the autocomplete data is coming from.</p>
+
+		<p>To see this in action, go to wikipedia and use your browser's developer tools to look at the network requests.  Here's how:</p>
+
+		<ul>
+			<li>Firefox: Tools > Developer > Network (refresh page to see)</li>
+			<li>Chrome: View > Developer > Developer Tools > click Network</li>
+			<li>Safari: Develop > Show Web Inspector > click Timelines (refresh page to see)</li>
+			<li>Internet Explorer: press F12 key > click Network</li>
+		</ul>
+
+		<p>Now that the network info is open, type something into the wikipedia search bar, and when the autocomplete results come up, you should see another network request added to the list.  Copy the full url of that request.  It should be something like this:</p>
+		<pre><code class="language-markup">
+			http://en.wikipedia.org/w/api.php?action=opensearch&limit=10&format=json&callback=portalOpensearchCallback&search=a
+		</code></pre>
+
+		<p>Try pasting that url into your browser's address bar, and you should see the data for your search term.  You can experiment with different search terms by changing the part after "search=" in the url.</p>
+
+		<p>Congrats! Now you've found the data.  This works for other sites like google and youtube for example (for google, you'll have to make sure it's set to regular autocomplete and not automatic full search results).</p>
+
+	</div>
+
+
+	<div class="contentwidth stepbox">
+		<h2 id="step3">Step 3: Call the autocomplete data yourself</h2>
+
+		<p>If you look at the url you got in the previous step, you'll notice a part that says <b>callback=portalOpensearchCallback</b> or something like that.  If you used a site other than Wikipedia, you might see something like <b>jsonp=whatever</b> (or maybe you'll still see <b>callback=whatever</b>).</p>
+
+		<p>If you can't find anything in the url that says callback, just add <b>&callback=whatever</b>) to the end of the url.</p>
+
+		<p>In any case, that thingy represents <b>the function that will be called to handle the data you're getting.</b>  Replace the existing function name with a function name of your choice.  For this example, I'm going to use <b>callback=myAmazingFunction.</b></p>
+
+		<p>Now create a script tag with your new url.  Here's an example:</p>
+
+		<pre><code class="language-markup">
+			&lt;script src="http://en.wikipedia.org/w/api.php?action=opensearch&limit=10&format=json&callback=myAmazingFunction&search=a"&gt;&lt;/script&gt;
+		</code></pre>
+
+		<p>Next, create a script to output the data and a div to hold the output.</p>
+
+		<pre><code class="language-markup">
+			&lt;div id="output"&gt;&lt;/div&gt;
+
+			&lt;script&gt;
+			/* this function shows the raw data */
+			function myAmazingFunction(data){
+				document.getElementById('output').innerHTML = data;
+			}
+			&lt;/script&gt;
+		</code></pre>
+
+		<p>Now the raw data should be showing up in your div!  If you'd like, you can change the "search=" parameter in your url to different values like "search=batman" for example.  Have fun with it!</p>
+	</div>
+
+
+
+
+	<div class="contentwidth stepbox">
+		<h2 id="step4">Step 4: Call the data when a key is pressed</h2>
+		
+		<p>Now that you know how to access the autocomplete data, you want the data to show up whenever you type inside a text box.  Here's how to make that happen.</p>
+
+		<p>When a key is pressed inside the text box, attach a script to the body and set the script's src equal to the url of the data from the previous step.</p>
+
+		<p>First create your input and output boxes:</p>
+
+		<pre><code class="language-markup">
+			&lt;input type="text" id="searchbox"&gt;
+			&lt;div id="output"&gt;&lt;/div&gt;
+		</code></pre>
+
+		<p>Then write the code that attaches a script to the body every time a key press happens.</p>
+
+		<pre><code class="language-markup">
+			&lt;script&gt;
+			/* this function handles the data */
+			function myAmazingFunction(data){
+				document.getElementById('output').innerHTML = data;
+			}
+
+			/* this variable will hold the script tag with your desired data */
+			var myScript = '';
+
+			/* this section handles what happens after a key is pressed inside your input text box */
+			document.getElementById('searchbox').onkeyup = function(){
+
+				/* this variable stores whatever is in the input text box */
+				var stuff_in_text_box = document.getElementById('searchbox').value;
+
+				/* this is the script that will hold the data we're trying to get */
+				myScript = document.createElement('script');
+				
+				/* this sets the src of the script equal to the url of the data */
+				myScript.src = 'http://en.wikipedia.org/w/api.php?action=opensearch&limit=10&format=json&callback=myAmazingFunction&search='+stuff_in_text_box;
+
+				/* this attaches the script to the body of the page */
+				document.body.appendChild(myScript);
+			};
+			&lt;/script&gt;
+		</code></pre>
+
+		<p>Now you should see the data appear whenever you type stuff into the input text box.  Try it out!</p>
+
+	</div>
+
+
+
+
+	<div class="contentwidth stepbox">
+		<h2 id="step5">Step 5: Clean up the excess data</h2>
+	
+		<p>Up to this point, you should have an autocomplete box that spits out data every time a key is pressed inside a text box.  The problem is that it will keep adding scripts to the body.  You need to delete the old scripts so that the page doesn't get flooded.</p>
+
+		<p>In order to get rid of excess scripts, add this code right before the part that says "var stuff_in_text_box":</p>
+
+		<pre><code class="language-javascript">
+			/* if an old version of your script is on the page, this code removes it */
+			if(myScript!==''){
+				document.body.removeChild(myScript);
+			}
+		</code></pre>
+
+		<p>There! Now you you have your autocomplete data.</p>
+		
+	</div>
+
+
+
+
+	<div class="contentwidth stepbox">
+		<h2 id="nextsteps">Next Steps</h2>
+
+		<p>From this point, you can use JavaScript to do what you want with the data.  That involves working with arrays, objects, and loops, all of which are beyond the scope of this tutorial.</p>
+
+		<p>However, <b>now you know how to get autocomplete data and incorporate it into your page.</b>  I hope this info helps you in some way!</p>
+		
+	</div>
+
+	
+</div>

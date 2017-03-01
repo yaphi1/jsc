@@ -1,0 +1,135 @@
+<div class="intro contentwidth">
+	<div class="showcasetitle">
+		What to expect
+	</div>
+	<div class="firstcontentline">
+		<p>The point of responsive design is to allow people to use a web page just as well on a phone or a tablet as they would on their main computer.</p>
+		<p>Here are the steps to make that happen.</p>
+	</div>
+	<ol>
+		<li><a href="#step1">Define the viewport</a></li>
+		<li><a href="#step2">Use fluid widths</a></li>
+		<li><a href="#step3">Write media queries</a></li>
+		<li><a href="#step4">Handle images properly</a></li>
+	</ol>
+	If these steps sound weird, don't worry.  You'll understand them soon.
+
+</div>
+
+<div class="stepscontainer">
+
+	<div class="contentwidth stepbox">
+
+		<h2 id="step1">Step 1: Define the viewport</h2>
+		<p>The <b>viewport</b> is the viewing window through which users see your page.</p>
+		<p><b>If you don't set the viewport properly, your mobile visitors will see a really zoomed out version of your desktop layout.</b></p>
+
+		<h3>What to do:</h3>
+		<p>Put this tag anywhere between your opening and closing head tags:</p>
+		<pre><code class="language-markup">
+			&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+		</code></pre>
+		<p>This tag tells your browser two things:</p>
+		<ol>
+			<li>Use the user's device width as the viewport width (width=device-width)</li>
+			<li>Don't start zoomed in or out (initial-scale=1.0)</li>
+		</ol>
+		<p>With this tag, you're ready to start making your site responsive.</p>
+
+	</div>
+
+
+
+	<div class="contentwidth stepbox">
+		<h2 id="step2">Step 2: Use fluid widths</h2>
+
+		<p>The general idea is to give the pieces of your page percent widths as needed so your layout adjusts with the page width.</p>
+
+		<p>There are many ways to use fluid widths, so I'll give a few common examples.</p>
+
+		<h3>Example 1: A standard content div</h3>
+
+		<p>Suppose you want to style a <b>div</b> so that it takes up the full width of the page until the page reaches a certain width. This is common for content.  Here's how the code would look:</p>
+
+		<pre><code class="language-css">
+			.example-div{
+				max-width: 700px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		</code></pre>
+
+		<p>In this example, the div will take up the full width of its container (divs do this by default), but the div will never get wider than 700 pixels.  The div's left and right margins are set to auto so that the div will be centered.</p>
+
+
+		<h3>Example 2: Side by side boxes</h3>
+
+		<p>Let's say you want some fixed-width side-by-side divs that will stack on top of each other automatically when the viewport gets narrow. Here's how that might look:</p>
+
+		<pre><code class="language-css">
+			.side-by-side-div{
+				display: inline-block;
+				margin: 10px;
+				width: 350px;
+				max-width: 85%;
+			}
+		</code></pre>
+
+		<p>First, we're using <b>display: inline-block;</b> so that the divs will stay on the same line together. The margin will keep the divs from being smashed together.  The width will be 350 pixels unless the viewport gets too narrow in which case the width won't go over 85%.</p>
+
+		<p>Feel free to play around with fluid widths to see how changes affect your layouts.</p>
+	</div>
+
+
+	<div class="contentwidth stepbox">
+		<h2 id="step3">Step 3: Write media queries</h2>
+		<p>A media query is a feature of CSS3 that lets you apply different styles depending on the width of the page.  It can detect things besides width, but width is the most common.</p>
+
+		<p>Here's an example of a media query:</p>
+
+		<pre><code class="language-css">
+			.example-div{
+				background-color: blue;
+			}
+
+			@media (min-width:700px) {
+				.example-div{
+					background-color: red;
+				}
+			}
+		</code></pre>
+		
+		<p>Here the div is set to have a blue background by default.  However, if the viewport width goes above 700 pixels, then our div's background will turn red.  Neat, right?</p>
+
+		<p>You're more likely to use this to adjust layout rather than colors, but now you know how a media query works.</p>
+
+		<h3>Don't overuse media queries!</h3>
+
+		<p>Media queries are a powerful and useful tool, but if you use too many of them, your pages will become bloated and complicated.  <b>If you don't believe me, just imagine styling the same div over and over for six different page widths, and now do this for all the other stuff on your page.</b></p>
+
+		<p>As much as possible, try to use fluid widths and careful thought before resorting to a media query.  You'll thank yourself later.</p>
+	</div>
+
+
+	<div class="contentwidth stepbox">
+		<h2 id="step4">Step 4: Handle images properly</h2>
+		<p>People will see your pages on all sorts of devices.  For a desktop user, that big banner image on your home page might be ok, but for a mobile user, that's a disaster because it loads slower and uses up more data.</p>
+
+		<p>Your stylesheet should have something like this for your biggest images:</p>
+		<pre><code class="language-css">
+			/* basic background - mobile and small screens */
+			background-image: url('smallimage.jpg');
+
+			/* enhanced background - larger screens */
+			@media(min-width:700px){
+				background-image: url('bigimage.jpg');
+			}
+		</code></pre>
+		<p>By default, the above code loads your smaller image.  If the screen is wider than 700 pixels (or whatever width you choose), then the bigger version of the image will show.</p>
+
+		<p>This is a great way to get good performance across devices. Your mobile users will love you.</p>
+	</div>
+	
+
+	
+</div>

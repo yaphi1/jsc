@@ -401,7 +401,11 @@ CODE
 	font-family: courier;
 }
 
-code, .resultcontainer{
+code{
+	font-size: 20px;
+}
+
+.resultcontainer{
 	background: #444;
 	color: #fff;
 	display: block;
@@ -707,6 +711,7 @@ TOP OPT IN BAR
 }
 </style>
 
+<link rel="stylesheet" type="text/css" href="/code_formatting/prism.css">
 
 </head>
 <body>
