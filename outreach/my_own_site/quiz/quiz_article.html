@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>How to create a simple glass button with CSS  |  Simple Steps Code</title>
+<title>How to make a simple quiz with JavaScript  |  Simple Steps Code</title>
 
 <style type="text/css">
 @font-face {
@@ -711,7 +711,7 @@ TOP OPT IN BAR
 }
 </style>
 
-<link rel="stylesheet" type="text/css" href="/code_formatting/prism.css">
+<link rel="stylesheet" type="text/css" href="https://simplestepscode.com/code_formatting/prism.css">
 
 </head>
 <body>
@@ -747,118 +747,8 @@ TOP OPT IN BAR
 </div>
 <section id="content" role="main">
 <div class="masthead">
-	<h1>How to create a simple glass button with CSS</h1>
+	<h1>How to make a simple quiz with JavaScript</h1>
 </div>
-<style>
-/***********************************
-DEMO STYLES
-************************************/
-
-
-/* demo code */
-.glass{
-	margin: 40px 0px;
-	position: relative;
-	display: inline-block;
-	padding: 15px 25px;
-	background-color: green;
-	background-image: linear-gradient(green,lightgreen);
-	box-shadow: 0px 1px 4px -2px #333;
-	border-radius: 3px;
-	text-decoration: none;
-	color: #fff;
-	font-size: 25px;
-	font-weight: 100;
-	text-shadow: 0px -1px #333;
-}
-
-.glass:after{
-	content: '';
-	position: absolute;
-	top: 2px;
-	left: 2px;
-	width: calc(100% - 4px);
-	height: 50%;
-	background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.2));
-}
-
-.glass:hover{
-	background-image: linear-gradient(#073,#0fa);
-}
-
-
-
-
-
-
-/* step 1 result */
-.result1{
-	position: relative;
-	display: inline-block;
-	padding: 15px 25px;
-	background: green;
-	background-image: linear-gradient(green,lightgreen);
-	text-decoration: none;
-	color: #fff;
-	font-size: 25px;
-	font-weight: 100;
-}
-
-
-/* step 2 result */
-.result2{
-	position: relative;
-	display: inline-block;
-	padding: 15px 25px;
-	background-color: green;
-	background-image: linear-gradient(green,lightgreen);
-	text-decoration: none;
-	color: #fff;
-	font-size: 25px;
-	font-weight: 100;
-}
-.result2:after{
-	content: '';
-	position: absolute;
-	top: 2px;
-	left: 2px;
-	width: calc(100% - 4px);
-	height: 50%;
-	background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
-}
-
-
-/* step 3 result */
-.result3{
-	position: relative;
-	display: inline-block;
-	padding: 15px 25px;
-	background: green;
-	background-image: linear-gradient(green,lightgreen);
-	text-decoration: none;
-	color: #fff;
-	font-size: 25px;
-	font-weight: 100;
-	border-radius: 3px;
-	box-shadow: 0px 1px 4px -2px #333;
-	text-shadow: 0px -1px #333;
-}
-.result3:after{
-	content: '';
-	position: absolute;
-	top: 2px;
-	left: 2px;
-	width: calc(100% - 4px);
-	height: 50%;
-	background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
-}
-
-.result3:hover{
-	background: linear-gradient(#073,#0fa);
-}
-
-.resultbuttons button{ margin:10px; }
-</style>
 
 
 <div class="intro contentwidth">
@@ -866,15 +756,15 @@ DEMO STYLES
 		What to expect
 	</div>
 	<div class="showcase">
-		<a href="#" class="glass">My button</a>
+		quiz goes here
 	</div>
 	<div class="firstcontentline">
-		Good news. There are only 3 steps to creating a CSS glass button:
+		To make a simple JavaScript quiz, there are three steps:
 	</div>
 	<ol>
-		<li><a href="#step1">The background gradient layer</a></li>
-		<li><a href="#step2">A light overlay</a></li>
-		<li><a href="#step3">Some finishing touches</a></li>
+		<li><a href="#step1">Set up the structure</a></li>
+		<li><a href="#step2">Show the questions</a></li>
+		<li><a href="#step3">At the end, show the results</a></li>
 	</ol>
 	That's it.  Take a few minutes to go through this, and you'll be impressing everyone with glossy buttons, icons, and other things that go on pages. Let's get started!
 
@@ -884,7 +774,7 @@ DEMO STYLES
 
 	<div class="contentwidth stepbox">
 
-		<h2 id="step1">Step 1: The background gradient layer</h2>
+		<h2 id="step1">Step 1: Set up the structure</h2>
 		<p>Pick the color you want your button to be, then set the background gradient to go from dark on top to light on the bottom. Also put in a solid background color for older browsers that don't support gradients.</p>
 		<p>While you're here, format the text to make sure it looks nice with the background.</p>
 
@@ -924,7 +814,7 @@ DEMO STYLES
 
 
 	<div class="contentwidth stepbox">
-		<h2 id="step2">Step 2: A light overlay</h2>
+		<h2 id="step2">Step 2: Show the questions</h2>
 		<p>Now the glass should start to look like glass.  All you need to do is overlay a gradient that goes from transparent white to more transparent white and stops about halfway down.</p>
 
 		<h3>The CSS:</h3>
@@ -948,7 +838,7 @@ DEMO STYLES
 
 
 	<div class="contentwidth stepbox">
-		<h2 id="step3">Step 3: The finishing touches</h2>
+		<h2 id="step3">Step 3: At the end, show the results</h2>
 		<p>Now that your glass actually looks like glass, you can round the corners, engrave the text, add subtle shadows, and use hover effects.</p>
 		<p>Try adding the following lines to your .glass class in your CSS:</p>
 		<pre><code class="language-css">
@@ -1155,7 +1045,7 @@ function formatCode(code){
 	};
 })();
 </script>
-<script src="/code_formatting/prism.js"></script>
+<script src="https://simplestepscode.com/code_formatting/prism.js"></script>
 
 
 <script>
