@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>How to make a simple quiz with JavaScript  |  Simple Steps Code</title>
+<title>How to make a simple JavaScript quiz  |  Simple Steps Code</title>
 
 <style type="text/css">
 @font-face {
@@ -747,7 +747,7 @@ TOP OPT IN BAR
 </div>
 <section id="content" role="main">
 <div class="masthead">
-	<h1>How to make a simple quiz with JavaScript</h1>
+	<h1>How to make a simple JavaScript quiz</h1>
 </div>
 
 
@@ -755,19 +755,24 @@ TOP OPT IN BAR
 	<div class="showcasetitle">
 		What to expect
 	</div>
-	<div class="showcase">
-		quiz goes here
-	</div>
+	<!-- <div class="showcase"> -->
+		<p data-height="355" data-theme-id="0" data-slug-hash="NpZvJp" data-default-tab="result" data-user="yaphi1" data-embed-version="2" data-pen-title="Simple JavaScript Quiz" class="codepen">See the Pen <a href="http://codepen.io/yaphi1/pen/NpZvJp/">Simple JavaScript Quiz</a> by Yaphi (<a href="http://codepen.io/yaphi1">@yaphi1</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+		<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+	<!-- </div> -->
 	<div class="firstcontentline">
-		To make a simple JavaScript quiz, there are three steps:
+		To make a simple JavaScript quiz, there are four steps:
 	</div>
 	<ol>
 		<li><a href="#step1">Set up the structure</a></li>
 		<li><a href="#step2">Show the questions</a></li>
-		<li><a href="#step3">At the end, show the results</a></li>
+		<li><a href="#step3">On submit, show the results</a></li>
+		<li><a href="#step4">Put it all together</a></li>
 	</ol>
-	That's it.  Take a few minutes to go through this, and you'll be impressing everyone with glossy buttons, icons, and other things that go on pages. Let's get started!
+	<p>The point of this tutorial is to make the simplest possible JavaScript quiz without any external code needed.</p>
+	<p>We'll also avoid animations, excessive styles, and anything else that will distract from the JavaScript quiz.</p>
 
+	<h3>A Quick Note Before You Start:</h3>
+	<p>This tutorial assumes a basic understanding of JavaScript. If you're not there yet, I've put together <a href="https://simplestepscode.com/learn-javascript/" target="_blank">a JavaScript road map to get you comfortable with practical concepts quickly</a>.</p>
 </div>
 
 <div class="stepscontainer">
@@ -775,39 +780,52 @@ TOP OPT IN BAR
 	<div class="contentwidth stepbox">
 
 		<h2 id="step1">Step 1: Set up the structure</h2>
-		<p>Pick the color you want your button to be, then set the background gradient to go from dark on top to light on the bottom. Also put in a solid background color for older browsers that don't support gradients.</p>
-		<p>While you're here, format the text to make sure it looks nice with the background.</p>
 
-		<h3>The CSS:</h3>
-		<pre><code class="language-css">
-			.glass{
-				/* background styles */
-				position: relative;
-				display: inline-block;
-				padding: 15px 25px;
-				background-color: green; /*for compatibility with older browsers*/
-				background-image: linear-gradient(green,lightgreen);
+		<p>First, we'll create divs to hold our quiz and our results.</p>
+		<p>Then we'll put in a submit button.</p>
 
-				/* text styles */
-				text-decoration: none;
-				color: #fff;
-				font-size: 25px;
-				font-family: sans-serif;
-				font-weight: 100;
+		<h3>Here's the HTML:</h3>
+		<pre><code class="language-markup">
+			&lt;div id="quiz"&gt;&lt;/div&gt;
+			&lt;button id="submit"&gt;Get Results&lt;/button&gt;
+			&lt;div id="results"&gt;&lt;/div&gt;
+		</code></pre>
+
+		<p>Next, we'll create a function to generate a quiz.</p>
+		
+		<p>Your function will need these inputs:</p>
+		<ul>
+			<li>The quiz questions</li>
+			<li>A place to put the quiz</li>
+			<li>A place for the results</li>
+			<li>A submit button</li>
+		</ul>
+		<p>And if you put those things in, the function should spit out a fully-formed quiz.</p>
+
+		<h3>The JavaScript structure:</h3>
+
+		<pre><code class="language-javascript">
+			function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+
+				function showQuestions(questions, quizContainer){
+					// code will go here
+				}
+
+				function showResults(questions, quizContainer, resultsContainer){
+					// code will go here
+				}
+
+				// show the questions
+				showQuestions(questions, quizContainer);
+
+				// when user clicks submit, show results
+				submitButton.onclick = function(){
+					showResults(questions, quizContainer, resultsContainer);
+				}
 			}
 		</code></pre>
 
-		<h3>The HTML:</h3>
-		<pre><code class="language-markup">
-			&lt;a href="#" class="glass"&gt;My button&lt;/a&gt;
-		</code></pre>
-
-		<h3>The result so far:</h3>
-		<div class="resultcontainer">
-			<a href="#" class="result1">My button</a>
-		</div>
-
-		<p>In the above CSS, the position needs to be relative so that you can put the overlay in the right place in the next step.</p>
+		<p>If you look closely at the JavaScript structure, you'll see that our <code>generateQuiz</code> function contains helper functions to show the quiz, accept submissions, and show the results.</p>
 
 	</div>
 
@@ -815,68 +833,219 @@ TOP OPT IN BAR
 
 	<div class="contentwidth stepbox">
 		<h2 id="step2">Step 2: Show the questions</h2>
-		<p>Now the glass should start to look like glass.  All you need to do is overlay a gradient that goes from transparent white to more transparent white and stops about halfway down.</p>
+		<p>First we'll need the questions, so put this in your JavaScript:</p>
 
-		<h3>The CSS:</h3>
-		<pre><code class="language-css">
-			.glass:after{
-				content: '';
-				position: absolute;
-				top: 2px;
-				left: 2px;
-				width: calc(100% - 4px);
-				height: 50%;
-				background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+		<pre><code class="language-javascript">
+			var myQuestions = [
+				{
+					question: "What is 10/2?",
+					answers: {
+						a: '3',
+						b: '5',
+						c: '115'
+					},
+					correctAnswer: 'b'
+				},
+				{
+					question: "What is 30/3?",
+					answers: {
+						a: '3',
+						b: '5',
+						c: '10'
+					},
+					correctAnswer: 'c'
+				}
+			];
+		</code></pre>
+
+		<p>Next we'll need a way to show our questions.</p>
+
+		<p>For this, we'll fill out our <code>showQuestions</code> function.</p>
+
+		<p>The general idea:<br>For each question, show the question along with all of its answer choices. Read through the comments in this code to see how it works.</p>
+
+		<pre><code class="language-javascript">
+			function showQuestions(questions, quizContainer){
+				// we'll need a place to store the output and the answer choices
+				var output = [];
+				var answers;
+
+				// for each question...
+				for(var i=0; i&lt;questions.length; i++){
+					
+					// first reset the list of answers
+					answers = [];
+
+					// for each available answer to this question...
+					for(letter in questions[i].answers){
+
+						// ...add an html radio button
+						answers.push(
+							'&lt;label&gt;'
+								+ '&lt;input type="radio" name="question'+i+'" value="'+letter+'"&gt;'
+								+ letter + ': '
+								+ questions[i].answers[letter]
+							+ '&lt;/label&gt;'
+						);
+					}
+
+					// add this question and its answers to the output
+					output.push(
+						'&lt;div class="question"&gt;' + questions[i].question + '&lt;/div&gt;'
+						+ '&lt;div class="answers"&gt;' + answers.join('') + '&lt;/div&gt;'
+					);
+				}
+
+				// finally combine our output list into one string of html and put it on the page
+				quizContainer.innerHTML = output.join('');
 			}
 		</code></pre>
 
-		<h3>The result so far:</h3>
-		<div class="resultcontainer">
-			<a href="#" class="result2">My button</a>
-		</div>
+		<p>Once that's ready, you can run the function like this:</p>
+
+		<pre><code class="language-javascript">
+			showQuestions(questions, quizContainer);
+		</code></pre>
+
+		<p>Note that in this line, the <code>questions</code> and <code>quizContainer</code> values will come from your <code>generateQuiz</code> function.</p>
+
+		<p>The nice part about our code is that it works for any number of questions or answer choices you might have in your JavaScript quiz.</p>
+
 	</div>
 
 
-	<div class="contentwidth stepbox">
-		<h2 id="step3">Step 3: At the end, show the results</h2>
-		<p>Now that your glass actually looks like glass, you can round the corners, engrave the text, add subtle shadows, and use hover effects.</p>
-		<p>Try adding the following lines to your .glass class in your CSS:</p>
-		<pre><code class="language-css">
-			border-radius: 3px;
-			box-shadow: 0px 1px 4px -2px #333;
-			text-shadow: 0px -1px #333;
-		</code></pre>
-		<p>The first two lines round the corners of your button, and the last line gives the text an engraved look.</p>
 
-		<p>Now try adding the following CSS for a hover effect:</p>
-		<pre><code class="language-css">
-			.glass:hover{
-				background: linear-gradient(#073,#0fa);
+	<div class="contentwidth stepbox">
+		<h2 id="step3">Step 3: On submit, show the results</h2>
+
+		<p>We'll need to fill out our <code>showResults</code> function to show the results of our quiz.</p>
+
+		<p>Here's how our JavaScript logic will look:</p>
+		<ul>
+			<li>For each question, find the selected answer</li>
+			<li>If the answer is correct, respond accordingly</li>
+			<li>If the answer is wrong, respond accordingly</li>
+			<li>Show the number of correct answers out of the total</li>
+		</ul>
+		
+		<p>And here's the JavaScript to show the results of our quiz:</p>
+
+		<pre><code class="language-javascript">
+			function showResults(questions, quizContainer, resultsContainer){
+				
+				// gather answer containers from our quiz
+				var answerContainers = quizContainer.querySelectorAll('.answers');
+				
+				// keep track of user's answers
+				var userAnswer = '';
+				var numCorrect = 0;
+				
+				// for each question...
+				for(var i=0; i&lt;questions.length; i++){
+
+					// find selected answer
+					userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+					
+					// if answer is correct
+					if(userAnswer===questions[i].correctAnswer){
+						// add to the number of correct answers
+						numCorrect++;
+						
+						// color the answers green
+						answerContainers[i].style.color = 'lightgreen';
+					}
+					// if answer is wrong or blank
+					else{
+						// color the answers red
+						answerContainers[i].style.color = 'red';
+					}
+				}
+
+				// show number of correct answers out of total
+				resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
 			}
 		</code></pre>
 
-		<h3>The finished product:</h3>
-		<div class="resultcontainer">
-			<a href="#" class="result3">My button</a>
-		</div>
+		<p>In the line that says "//find selected answer", we did a little trick.  We used the <code>||</code> operator, which means "or" to basically say "Give us the selected answer OR if there's not one, then just give us an empty object." That way, trying to get the <code>.value</code> will give us <code>undefined</code> instead of causing an error.</p>
+		<p>That way, the quiz won't break if someone skips a question.</p>
+
+		<h3>Show quiz results on submit</h3>
+
+		<p>The next step is to show quiz results when someone clicks the submit button.</p>
+
+		<p>The following JavaScript will make that happen:</p>
+
+		<pre><code class="language-javascript">
+			// on submit, show results
+			submitButton.onclick = function(){
+				showResults(questions, quizContainer, resultsContainer);
+			}
+		</code></pre>
+
+		<p>Note that the <code>submitButton</code> variable comes from our original <code>generateQuiz</code> function as one of the parameters.</p>
+
+	</div>
+
+
+
+	<div class="contentwidth stepbox">
+		<h2 id="step4">Step 4: Put it all together</h2>
+		<p>Now that you have the pieces, you can generate your very own JavaScript quiz.</p>
+
+		<p>You have the questions in the <code>myQuestions</code> variable from Step 2. Now you need to let your JavaScript know which HTML elements to use for the quiz, the results, and the submit button.</p>
+
+		<pre><code class="language-javascript">
+			var quizContainer = document.getElementById('quiz');
+			var resultsContainer = document.getElementById('results');
+			var submitButton = document.getElementById('submit');
+		</code></pre>
+
+		<p>Now that everything's in place, you can generate your JavaScript quiz!</p>
+
+		<pre><code class="language-javascript">
+			generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+		</code></pre>
+
+		<p>Congrats!</p>
 	</div>
 
 
 
 	<div class="contentwidth stepbox">
 		<h2>Bonus: The fun part</h2>
-		<p>Now that you have the basic idea of how to make a glass button, you can try changing the colors, sizes, shapes, and more.  Maybe you'll make a <b>nav bar</b>, or maybe you'll make some <b>neat icons</b>.</p>
+		<p>Now that you have the basic idea of how to make a JavaScript quiz, you can try styling the elements however you want.</p>
 
-		<h3>Examples of buttons and icons:</h3>
-		<div class="resultcontainer resultbuttons">
-			<button class="result3" style="background:linear-gradient(#258,#aef);">?</button>
-			<button class="result3" style="background:linear-gradient(#700,#f00);">b</button>
-			<button class="result3" style="background:linear-gradient(#740,gold);">app</button>
-			<button class="result3" style="background:linear-gradient(#507,#eaf);">icon</button>
-			<button class="result3" style="background:linear-gradient(#b40,orange);">button</button>
-			<button class="result3" style="background:linear-gradient(#073,#0fa);">go</button>
-			<button class="result3" style="background:linear-gradient(#000,#888);">&sum;</button>
-		</div>
+		<h3>Sample CSS used in demo:</h3>
+		<pre><code class="language-css">
+			body{
+				font-size: 20px;
+				font-family: sans-serif;
+				color: #333;
+			}
+			.question{
+				font-weight: 600;
+			}
+			.answers {
+			    margin-bottom: 20px;
+			}
+			#submit{
+				font-family: sans-serif;
+				font-size: 20px;
+				background-color: #297;
+				color: #fff;
+				border: 0px;
+				border-radius: 3px;
+				padding: 20px;
+				cursor: pointer;
+				margin-bottom: 20px;
+			}
+			#submit:hover{
+				background-color: #3a8;
+			}
+		</code></pre>
+
+		<p>Feel free to change whatever you want!</p>
+
 	</div>
 
 </div></section>
@@ -957,57 +1126,6 @@ yb.id('hamburger').onclick = function(){
 	yb.id('topnav').className = yb.id('topnav').className=='open' ? 'closed' : 'open';
 };
 
-/*
-var codetags = document.getElementsByTagName('code');
-
-for(var i=0; i<codetags.length; i++){
-	formatCode(codetags[i]);
-}
-
-function formatCode(code){
-
-	code.innerHTML = code.innerHTML
-					// replace html brackets with html entities
-					.replace(/</g, '&lt;')
-					.replace(/>/g, '&gt;')
-					
-					// add indents after starting tags (but not single tags)
-					.replace(/(&lt;[^\/;]+&gt;)\n/g, function(v){
-						return v.search(/&lt;(img|br|input)/gi)>-1 ? v : v+'<div class="indent">';
-					})
-
-					// end indentation divs
-					.replace(/\n\s*&lt;\//g, '</div>&lt;\/')
-
-					// color the html tags
-					.replace(/&lt;/g, '&lt;<span class="tag">')
-					.replace(/&gt;/g, '</span>&gt;')
-
-					// get rid of the first line break
-					.replace(/^\n/, '')
-					
-					// replace subsequent line breaks with <br>
-					.replace(/\n/g, '<br>')
-
-					// color the css properties
-					.replace(/([\w-_]+(?=:)(?!(:[\w-_\s]+\{)))/gim, '<span class="cssproperty">$1</span>')
-
-					// color the css classes and ids
-					.replace(/((\.|#)[\w\d-_]+ *)\{/gim, '<span class="cssclass">$1</span>{')
-
-					// indent the css styles
-					.replace(/\{<br>/g, '{<div class="indent">')
-					.replace(/\}/g, '</div>}')
-
-					// style css comments
-					.replace(/\/\*/g, '<span class="csscomment">/*')
-					.replace(/\*\//g, '*/</span>')
-
-					// style js stuff before parentheses
-					.replace(/([\w\_\$]+)\(/gim, '<span class="beforeparentheses">$1</span>(')
-					;
-}
-*/
 </script>
 
 
