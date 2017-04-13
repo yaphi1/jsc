@@ -1,0 +1,108 @@
+
+<!-- ****************************************************
+SALES PRODUCTS
+***************************************************** -->
+
+<footer class="sales_footer">
+
+	<div class="social_icons">
+		<a target="_blank" href="https://www.linkedin.com/company/rosettastone"><img src="./assets/linkedin-icon.svg" alt="LinkedIn"></a><!--
+		--><a target="_blank" href="https://twitter.com/RosettaStoneBiz"><img src="./assets/twitter-icon.svg" alt="Twitter"></a><!--
+		--><a target="_blank" href="https://www.facebook.com/RosettaStoneEducation"><img src="./assets/facebook-icon.svg" alt="Facebook"></a>
+	</div>
+
+
+	<div class="footer_legalese">
+		<p>
+			&copy;<span class="copyright-range"></span> Rosetta Stone Ltd. All Rights Reserved.
+		</p>
+		<p>
+			<a href="/anti-piracy">Anti-Piracy</a>
+			| <a target="_blank" href="/agreements">Agreements</a>
+			| <a target="_blank" href="/terms">Terms &amp; Conditions</a>
+			| <a target="_blank" href="/privacy">Privacy Policy</a>
+		</p>
+	</div>
+
+</footer>
+<script>
+// keep copyright year updated
+$('.copyright-range').html('1999-'+(new Date()).getFullYear());
+</script>
+
+
+
+
+Labeling yourself
+
+People give themselves destructive labels all the time. They'll say things like "I'm not one of those tech whiz kids," or "I was never a code person."
+
+The thing is, no one is born with tech abilities. These are learned skills, and they're not restricted to a special group of people.
+
+When you label yourself as someone who can't do things, you sabotage yourself for no reason.
+
+So should you "just believe in yourself" and everything will fall into place?
+
+No.
+
+Instead of worrying whether you're good enough, take the smallest possible first step to learn. Then repeat.
+
+If you keep taking small steps to learn, your doubts will slowly become irrelevant because you'll have concrete progress under your belt.
+
+Soon, you'll be the "tech person" others tell themselves they can never be.
+
+
+
+
+
+
+Chasing every trend
+
+[mention front-end road map]
+
+
+
+
+
+
+
+Moving slower by rushing
+
+
+
+
+
+
+
+
+
+
+
+notes:
+
+
+
+X mistakes that can kill your (web development | tech | coding) career before it starts
+
+
+
+- labeling yourself
+having a fixed mindset
+
+- moving slower by rushing
+
+- chasing every trend instead of focusing (listening to the internet)
+
+- not building a portfolio
+
+- worrying about the best way to learn instead of picking a way and going with it
+
+- believing the job descriptions
+
+- convincing yourself you don't have enough time
+
+- taking on huge pieces
+
+- being good at everything you do
+(a sign of not trying new things)
+
