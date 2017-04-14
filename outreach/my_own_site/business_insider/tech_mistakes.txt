@@ -1,46 +1,18 @@
 
-<!-- ****************************************************
-SALES PRODUCTS
-***************************************************** -->
 
-<footer class="sales_footer">
-
-	<div class="social_icons">
-		<a target="_blank" href="https://www.linkedin.com/company/rosettastone"><img src="./assets/linkedin-icon.svg" alt="LinkedIn"></a><!--
-		--><a target="_blank" href="https://twitter.com/RosettaStoneBiz"><img src="./assets/twitter-icon.svg" alt="Twitter"></a><!--
-		--><a target="_blank" href="https://www.facebook.com/RosettaStoneEducation"><img src="./assets/facebook-icon.svg" alt="Facebook"></a>
-	</div>
-
-
-	<div class="footer_legalese">
-		<p>
-			&copy;<span class="copyright-range"></span> Rosetta Stone Ltd. All Rights Reserved.
-		</p>
-		<p>
-			<a href="/anti-piracy">Anti-Piracy</a>
-			| <a target="_blank" href="/agreements">Agreements</a>
-			| <a target="_blank" href="/terms">Terms &amp; Conditions</a>
-			| <a target="_blank" href="/privacy">Privacy Policy</a>
-		</p>
-	</div>
-
-</footer>
-<script>
-// keep copyright year updated
-$('.copyright-range').html('1999-'+(new Date()).getFullYear());
-</script>
+5 Mistakes That Can Kill Your Tech Career Before It Starts
 
 
 
+Tech careers are in high demand, and it makes sense.
+
+With a career in tech, you don't have to choose between doing something fun and getting paid well.
+
+If this interests you, it's crucial to avoid the mistakes that can stop you before you start.
 
 
 
-intro about why reader should care
-
-
-
-
-Labeling yourself
+Mistake #1: Labeling yourself
 
 People give themselves destructive labels all the time. They'll say things like "I'm not one of those tech whiz kids," or "I was never a code person."
 
@@ -52,7 +24,7 @@ Should you "just believe in yourself" and everything will fall into place?
 
 No.
 
-Instead of worrying whether you're good enough, take the smallest possible first step to learn. Then repeat.
+Instead of worrying whether you believe in yourself, take the smallest possible first step to learn. Then repeat.
 
 If you keep taking small steps to learn, your doubts will slowly become irrelevant because you'll have concrete progress under your belt.
 
@@ -64,7 +36,7 @@ Soon, you'll be the "tech genius" others tell themselves they can never be.
 
 
 
-Listening to everyone at once
+Mistake #2: Listening to everyone at once
 
 "What should I learn if I want to make a website/app/startup?"
 
@@ -89,7 +61,7 @@ In general, the best way to cut through the conflicting advice is to know your g
 
 
 
-Moving slower by rushing
+Mistake #3: Moving slower by rushing
 
 People slow their progress by rushing.
 
@@ -115,7 +87,13 @@ At first, this approach will seem to take longer, but it will save you a ton of 
 
 
 
-Being good at everything you do
+Mistake #4: Being good at everything you do
+
+The people who end up good with tech are not afraid to be bad with tech.
+
+That's because tech requires a lot of learning, which means frequently feeling like a beginner. While this might sound daunting, it can actually be reassuring. If you find yourself feeling like a beginner, that means you're learning things, and therefore you're on the right track.
+
+However, if you find that you're good at most of the things you do, maybe it's time to step out of your comfort zone and learn new things.
 
 
 
@@ -126,7 +104,33 @@ Being good at everything you do
 
 
 
+Mistake #5: Convincing yourself you don't have enough time
 
+I purposely put this at the end of the article because if you have time to read this, you have more than enough time to learn tech skills.
+
+The reason it seems hard to find time is that people treat learning like it's a big thing that requires hours at a time. However, when it comes to other activities, such as reading articles or browsing social media, we tell ourselves, "I'll just check this one thing quickly." That one quick check turns into 3 hours of reading.
+
+The truth is that you can learn to code in 20 minutes a day. The easiest way to find time is to treat it the same way you treat other activities. Tell yourself you'll learn for just one minute. That tiny commitment makes it much easier to start, and starting can be the hardest part. If you do this, you'll have a much easier time fitting learning into your schedule.
+
+
+
+
+
+
+Key takeaways
+
+Here's a recap of the points that will help you in your quest for a tech career:
+
+- Avoid giving yourself destructive labels.
+- Replace doubts with progress.
+- Get clear about your goals to filter through all the advice out there.
+- Take your time, and you'll go faster.
+- Get comfortable being a beginner, and you'll end up more advanced.
+- Make tiny commitments so you won't struggle to find time.
+
+If you're interested in web development, here's a <a href="https://simplestepscode.com/">quick roadmap of what you need to learn</a>.
+
+I hope this article has been helpful!
 
 
 
