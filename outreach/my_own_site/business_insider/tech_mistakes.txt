@@ -33,6 +33,13 @@ $('.copyright-range').html('1999-'+(new Date()).getFullYear());
 
 
 
+
+
+intro about why reader should care
+
+
+
+
 Labeling yourself
 
 People give themselves destructive labels all the time. They'll say things like "I'm not one of those tech whiz kids," or "I was never a code person."
@@ -41,7 +48,7 @@ The thing is, no one is born with tech abilities. These are learned skills, and 
 
 When you label yourself as someone who can't do things, you sabotage yourself for no reason.
 
-So should you "just believe in yourself" and everything will fall into place?
+Should you "just believe in yourself" and everything will fall into place?
 
 No.
 
@@ -49,16 +56,32 @@ Instead of worrying whether you're good enough, take the smallest possible first
 
 If you keep taking small steps to learn, your doubts will slowly become irrelevant because you'll have concrete progress under your belt.
 
-Soon, you'll be the "tech person" others tell themselves they can never be.
+Soon, you'll be the "tech genius" others tell themselves they can never be.
 
 
 
 
 
 
-Chasing every trend
 
-[mention front-end road map]
+Listening to everyone at once
+
+"What should I learn if I want to make a website/app/startup?"
+
+You'll see variations of this question all over the internet.
+
+Each time, the same pattern ensues.
+
+Everyone will jump in with a list of things the asker should learn. Since each person named the three to five things relevant to themselves, the overall result might turn into a list of 40+ things to learn.
+
+This is overwhelming, and it can discourage people from learning tech skills.
+
+Your path will differ depending on what you want to do. For many areas in tech, there are a few core pieces you'll want to focus on, and you can safely ignore the rest while you're learning. To learn web development, for example, you can start with HTML and CSS and then move onto JavaScript. If you're interested, I've put together a <a href="https://simplestepscode.com/">quick road map for people who want to learn web development</a>.
+
+In general, the best way to cut through the conflicting advice is to know your goals. Research which areas in tech sound most appealing to you, and then you'll be in a much better position to evaluate what you need to learn and whether it fits your goals.
+
+
+
 
 
 
@@ -67,6 +90,37 @@ Chasing every trend
 
 
 Moving slower by rushing
+
+People slow their progress by rushing.
+
+It's ironic, but it's true.
+
+When learning to code, it's natural to encounter a concept, understand it, and move onto the next thing. On the surface, that sounds like a normal progression, but it's actually a problem.
+
+Why?
+
+By moving onto the next thing immediately after understanding a concept, you haven't given yourself time to practice that concept and retain it. As a result, you'll feel like you're making progress, but you'll soon realize you've forgotten everything. When you can't remember what you learned at the beginning, all the later steps become impossible. You then have to skip back and forth trying to move forwards and play catch-up at the same time. You start to feel like coding is impossible, and then you give up.
+
+This has happened to too many people, but it doesn't need to happen to you.
+
+The key is this: when you understand something, don't immediately move on to the next thing. Take some time to play with what you just learned. Build something neat. Try a variation. See if you can type it without looking at any examples.
+
+At first, this approach will seem to take longer, but it will save you a ton of time as the later stages become much easier.
+
+
+
+
+
+
+
+
+
+Being good at everything you do
+
+
+
+
+
 
 
 
@@ -100,9 +154,15 @@ having a fixed mindset
 - believing the job descriptions
 
 - convincing yourself you don't have enough time
+[could be its own article]
 
 - taking on huge pieces
 
 - being good at everything you do
 (a sign of not trying new things)
+
+- overanalyzing
+
+- comparing self to someone at the top of staircase and getting overwhelmed
+
 
