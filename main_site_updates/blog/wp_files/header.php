@@ -714,12 +714,37 @@ TOP OPT IN BAR
 
 
 
+
+
+
 /************************************************************
 CODE SAMPLES
 ************************************************************/
 pre code{
 	font-size: 16px;
 }
+
+
+
+
+
+
+
+/************************************************************
+IMAGES IN POSTS
+************************************************************/
+.img_float_right{
+	max-width: 40%;
+	float: right;
+	padding: 20px;
+}
+.img_feature_float_right{
+	max-width: 35%;
+	float: right;
+	padding: 10px 5%;
+}
+
+
 
 
 </style>
