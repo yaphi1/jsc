@@ -1,0 +1,162 @@
+<script>
+
+$(function(){
+
+	// *********************************************************
+	// NEW FEATURES
+	// *********************************************************
+
+	(function(){
+		var feature_images = {
+			'multi_device' : {
+				'desktop' : './assets/multi_device_desktop.png',
+				'mobile' : './assets/multi_device_mobile.png'
+			},
+			'phrasebook' : {
+				'desktop' : './assets/phrasebook_desktop.png',
+				'mobile' : './assets/phrasebook_mobile.png'
+			},
+			'audio_companion' : {
+				'desktop' : './assets/audio_companion_desktop.png',
+				'mobile' : './assets/audio_companion_mobile.png'
+			},
+			'stories' : {
+				'desktop' : './assets/stories_desktop.png',
+				'mobile' : './assets/stories_mobile.png'
+			},
+			'truaccent' : {
+				'desktop' : './assets/truaccent_desktop.png',
+				'mobile' : './assets/truaccent_mobile.png'
+			},
+			'tutoring' : {
+				'desktop' : './assets/tutoring_desktop.png',
+				'mobile' : './assets/tutoring_mobile.png'
+			}
+		};
+
+		// preload feature images if screen is wide enough
+		if(window.innerWidth >= 830){
+			init_features();
+			var img = document.createElement('img');
+			for(key in feature_images){
+				img.src = feature_images[key].desktop;
+				img.src = feature_images[key].mobile;
+			}
+		}
+
+		function init_features(){
+			var $first_feature = $('.new_feature').eq(0);
+			$first_feature.addClass('new_feature_selected');
+
+			var current_feature = $first_feature.attr('data-feature');
+			show_feature_images(current_feature);
+		}
+
+		function show_feature_images(feature_name){
+			var current_images = feature_images[feature_name];
+
+			$('.new_features_screen_macbook').css({
+				'background-image': 'url('+current_images.desktop+')'
+			});
+			$('.new_features_screen_iphone').css({
+				'background-image': 'url('+current_images.mobile+')'
+			});
+		}
+
+		$('.new_feature').on('mouseover', function(){
+			var $self = $(this);
+			$('.new_feature').removeClass('new_feature_selected');
+			$self.addClass('new_feature_selected');
+
+			var current_feature = $self.attr('data-feature');
+			show_feature_images(current_feature);
+		});
+
+	})();
+
+
+	// *********************************************************
+	// SEE MORE REVIEWS
+	// *********************************************************
+
+	$('.more_reviews_button').on('click',function(){
+		$(this).hide();
+		$('.more_reviews').addClass('more_reviews_showing');
+		return false;
+	});
+
+
+	// *********************************************************
+	// VIDEO OVERLAY
+	// *********************************************************
+
+	// any elements with this class will open a video of your choice
+	$('.js_open_video').on('click', function(){
+		showVideo(this);
+		return false;
+	});
+
+
+	// show correct video
+	function showVideo(elem){
+		var vid_name = elem ? elem.getAttribute('data-video') : 'how_it_works';
+
+		var youtube_id = {
+			live_studio_session: 'SiRtFaXqCqU',
+			how_it_works : 'imK17Pb3Yws',
+			red_ball : 'xmS1rgDUec4',
+			delaine : 'KwFphr58e94',
+			grace : 'g6WEYqaMFsk',
+			peter : 'p6l9xp3yH7E',
+			chris : 'ZOwb57bx4mA',
+			food_truck : 'jMPL9EjBucA'
+		};
+
+		var vid_id = youtube_id[vid_name] || youtube_id['how_it_works'];
+
+		var youtube_video = '<iframe src="http://www.youtube.com/embed/'+vid_id+'?rel=0&autoplay=1&iv_load_policy=3" frameborder="0" allowfullscreen></iframe>';
+		document.getElementById('video_container').innerHTML = youtube_video;
+
+		$('#video_overlay').fadeIn();
+	}
+
+	// hide video
+	function hideVideo(){
+
+		// hide overlay
+		$('#video_overlay').fadeOut(function(){
+			// get rid of video altogether (otherwise youtube will keep playing it)
+			document.getElementById('video_container').innerHTML = '';
+		});
+	}
+
+	// click to close video overlay
+	document.getElementById('video_overlay').onclick = function(e){
+		// if the user clicks the background, close the video
+		if( e.target.id.match(/(^(close_|)video_overlay$)/) ){
+			hideVideo();
+		}
+	};
+	// if user clicks x, close video (the reason this wasn't added to the event delegation was to make the functionality bulletproof across browsers; yes there was an IE bug)
+	document.getElementById('close_video_overlay').onclick = hideVideo;
+
+});
+
+</script>
+
+<!-- 
+
+[ZTL Module 2 - Getting bigger media]
+
+For anyone who has had a guest post on Business Insider or Lifehacker, how did you do it?
+
+Was it a cold pitch through their submission instructions? Did you contact a specific person? Did you build a relationship?
+
+I'm specifically looking for the type of advice you don't see everywhere on the internet (e.g. "Write great content! Be concise/newsworthy!", etc).
+
+Were there specific email scripts that worked or didn't work?
+
+-->
+
+
+
