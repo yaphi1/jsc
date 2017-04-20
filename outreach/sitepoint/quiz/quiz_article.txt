@@ -1,0 +1,34 @@
+
+
+use cases
+- general quiz
+- product proposals/selections
+- mention data security as well
+
+
+
+## Set up the structure
+
+We want to create a situation where we can list our quiz's questions and answers, and our JavaScript will automatically generate a quiz.
+
+That way, we won't need to write a bunch of repetitive markup, and we can add and remove questions easily.
+
+To set up the structure of our JavaScript quiz, we'll need to start with the following HTML:
+
+- A div to store the quiz
+- A button to submit the quiz
+- A div to store the results
+
+Here's how that would look:
+
+```html
+&lt;div id="quiz"&gt;&lt;/div&gt;
+&lt;button id="submit"&gt;Get Results&lt;/button&gt;
+&lt;div id="results"&gt;&lt;/div&gt;
+```
+
+
+
+
+
+

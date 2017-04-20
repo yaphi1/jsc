@@ -1,0 +1,22 @@
+
+
+Intro
+- Example use cases
+- Expected level of JS
+- What you'll get at the end
+
+Set up the structure
+
+Show the questions
+
+On submit, show results
+
+Put it all together
+
+Let users check answers
+
+Add pagination
+
+Data protection
+
+Conclusion
