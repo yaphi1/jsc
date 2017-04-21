@@ -1,4 +1,9 @@
 
+OSX sublime keymap
+{ "keys": ["command+option+w"], "command": "toggle_setting", "args" : {"setting": "word_wrap"} }
+
+also remember to use spaces instead of tabs for code samples
+
 
 use cases
 - general quiz
@@ -7,7 +12,7 @@ use cases
 
 
 
-## Set up the structure
+## Set up the Structure
 
 We want to create a situation where we can list our quiz's questions and answers, and our JavaScript will automatically generate a quiz.
 
@@ -27,7 +32,115 @@ Here's how that would look:
 &lt;div id="results"&gt;&lt;/div&gt;
 ```
 
+Next we'll need a way to show questions, show results, and put it all together to generate a quiz.
 
+We can start by laying out our functions, and we'll fill them in as we go:
+
+```javascript
+function showQuestions(questions, quizContainer){}
+
+function showResults(questions, quizContainer, resultsContainer){}
+
+function generateQuiz(questions, quizContainer, resultsContainer, submitButton){}
+```
+
+Looking at the parameters, our ```showQuestions``` function will take in a list of questions and put it into whatever HTML container we want. Convenient, right?
+
+Our ```showResults``` function will take three parameters:
+- The quiz questions
+- The HTML container where we'll find the quiz and check the answers
+- The HTML container where we want to put our results
+
+Finally, the ```generateQuiz``` function will put everything together. With the parameters, we'll tell our function:
+- what the questions are
+- where we want the quiz
+- where we want the results
+- and which button should submit the quiz.
+
+Once those parameters are in, the ```generateQuiz``` function will spit out a fully-working quiz.
+
+
+
+
+
+## Show the Quiz Questions
+
+Before we can show our questions, we'll need some questions (shocking, I know). Here's how the JavaScript might look:
+
+```javascript
+const myQuestions = [
+  {
+    question: "What is 10/2?",
+    answers: {
+      a: '3',
+      b: '5',
+      c: '115'
+    },
+    correctAnswer: 'b'
+  },
+  {
+    question: "What is 30/3?",
+    answers: {
+      a: '3',
+      b: '5',
+      c: '10'
+    },
+    correctAnswer: 'c'
+  }
+];
+```
+
+Feel free to put in as many questions or answers as you want.
+
+Now that we have our list of questions, we can show them on the page. We'll go through the following JavaScript line-by-line to see how it works:
+
+```javascript
+function showQuestions(questions, quizContainer){
+  // we'll need a place to store the output and the answer choices
+  let output = [];
+  let answers = [];
+
+  // for each question...
+  questions.forEach( (currentQuestion, questionNumber) => {
+    
+    // first reset the list of answers
+    answers = [];
+
+    // for each available answer...
+    for(letter in currentQuestion.answers){
+
+      // ...add an html radio button
+      answers.push(
+        `<label>
+          <input type="radio" name="question${questionNumber}" value="${letter}">
+          ${letter} :
+          ${currentQuestion.answers[letter]}
+        </label>`
+      );
+    }
+
+    // add this question and its answers to the output
+    output.push(
+      `<div class="question"> ${currentQuestion.question} </div>
+      <div class="answers"> ${answers.join('')} </div>`
+    );
+  });
+
+  // finally combine our output list into one string of html and put it on the page
+  quizContainer.innerHTML = output.join('');
+}
+```
+
+notes:
+store HTML output in array and then put it together
+same for answers
+
+next go through each question from our list
+reset and populate the answers
+
+add the question plus the group of answers to our output array
+
+at the end, combine the output into one string and put it inside the quiz container
 
 
 

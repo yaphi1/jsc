@@ -71,12 +71,21 @@ const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 
-generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 
+var quiz = {
+	questions : myQuestions,
 
-function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+	createQuiz : function(questions, quizContainer, resultsContainer, submitButton){
 
-	function showQuestions(questions, quizContainer){
+		quiz.showQuestions(questions, quizContainer);
+
+		// on submit, show results
+		submitButton.onclick = function(){
+			quiz.showResults(questions, quizContainer, resultsContainer);
+		}
+	},
+
+	showQuestions : function(questions, quizContainer){
 		// we'll need a place to store the output and the answer choices
 		let output = [];
 		let answers = [];
@@ -109,10 +118,9 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
 		// finally combine our output list into one string of html and put it on the page
 		quizContainer.innerHTML = output.join('');
-	}
+	},
 
-
-	function showResults(questions, quizContainer, resultsContainer){
+	showResults: function(questions, quizContainer, resultsContainer){
 		
 		// gather answer containers from our quiz
 		let answerContainers = quizContainer.querySelectorAll('.answers');
@@ -146,15 +154,9 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 		resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
 	}
 
-	// show questions right away
-	showQuestions(questions, quizContainer);
-	
-	// on submit, show results
-	submitButton.onclick = function(){
-		showResults(questions, quizContainer, resultsContainer);
-	}
-
 }
+
+quiz.createQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 
 
 </script>

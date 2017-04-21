@@ -2,7 +2,51 @@ next steps
 
 
 
-immediate:
+- write sitepoint quiz article
+- update membership site to be courses.simplestepscode.com
+	- add redirect
+	- add subdomain to https list
+	- reconfigure wishlist memeber settings
+- maybe get better email automation service
+	- determine which parts of email funnel should be more automatic
+- automate sales process and sell earlier
+- find out how to get on bigger sites (specifically lifehacker and business insider)
+
+
+
+note to accelerator:
+[ZTL M4 - Question about next steps]
+For some reason, I'm blanking on what to do next. I have a bunch of things on my to-do list, but I'm sitting here with analysis paralysis, so I figured it would be better to talk it out rather than keep thinking in circles.
+.
+First a quick data snapshot:
+Current list size (Apr 21 2017): 4,700
+Number of launches so far: 3
+List size at last launch (Dec 2016): 3,200
+Total ZTL product revenue so far: $5,400
+.
+Posible to-dos:
+.
+- Write new guest post for a site where I regularly contribute
+.
+- Update domain name of membership site to be more general (so I can add multiple products in the future); lots of reconfiguration work required
+.
+- Maybe get a better email automation service. (With Mailchimp, I find myself having to do a lot of things manually that should be automatic. Also, they've had a site error that has stopped people from seeing monthly growth for the entirety of 2017 so far.)
+.
+- Automate sales process and sell earlier.
+.
+- Find out how to get on bigger sites (specifically Lifehacker and Business Insider). This is the only to-do I'm excited about, but it's the one I feel least knowledgeable about.
+
+
+
+
+
+
+
+
+
+
+
+
 
 - pitch:
 	- learntocodewith.me [done]
