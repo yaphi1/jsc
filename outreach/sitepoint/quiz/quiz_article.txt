@@ -12,7 +12,7 @@ use cases
 
 
 
-## Set up the Structure
+## Set up the Structure of Your Quiz
 
 We want to create a situation where we can list our quiz's questions and answers, and our JavaScript will automatically generate a quiz.
 
@@ -131,17 +131,165 @@ function showQuestions(questions, quizContainer){
 }
 ```
 
-notes:
-store HTML output in array and then put it together
-same for answers
+First, we'll create an ```output``` variable to contain all the HTML output including questions and answer choices.
 
-next go through each question from our list
-reset and populate the answers
+Next, we'll create an ```answers``` variable to store the answer choices for each question. The use for this will become clearer in the next step.
 
-add the question plus the group of answers to our output array
+Now that we have variables to store our output, we can start building the HTML for each question. We'll need to loop through each question like so:
 
-at the end, combine the output into one string and put it inside the quiz container
+```javascript
+questions.forEach( (currentQuestion, questionNumber) => {
+  // here goes the code we want to run for each question
+});
+```
+
+For brevity, we're using an [arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to perform our operations on each question. Because this is in a [forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach?v=control) loop, we get the current value, the index (the position number of the current item in the array), and the array itself as parameters. We only need the current value and the index, which for our purposes, we'll name ```currentQuestion``` and ```questionNumber``` respectively.
+
+Now let's look a the code inside our loop:
+
+```javascript
+// first reset the list of answers
+answers = [];
+
+// for each available answer...
+for(letter in currentQuestion.answers){
+
+  // ...add an html radio button
+  answers.push(
+    `<label>
+      <input type="radio" name="question${questionNumber}" value="${letter}">
+      ${letter} :
+      ${currentQuestion.answers[letter]}
+    </label>`
+  );
+}
+
+// add this question and its answers to the output
+output.push(
+  `<div class="question"> ${currentQuestion.question} </div>
+  <div class="answers"> ${answers.join('')} </div>`
+);
+```
+
+For each question, we'll want to generate the right HTML, and so our first step is to reset the list of possible answers.
+
+Next, we'll use a loop to fill in the answer choices for the current question. For each choice, we're creating an HTML radio button. Notice we're using [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals), which are strings but more powerful. We'll make use of the following features:
+
+- Multi-line capabilities
+- No more having to [escape](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation) quotes within quotes because template literals use backticks instead
+- Embedded expressions so you can put bits of JavaScript right into your strings like this: ```${code_goes_here}```
+
+Once we have our list of answer buttons, we can push the question HTML and the answer HTML onto our overall list of outputs.
+
+Notice that we're using a template literal and some embedded expressions to first create the question div and then create the answer div. The ```join``` expression takes our list of answers and puts them together in one string that we can output into our ```answers``` div.
+
+Now that we've generated the HTML for each question, we can join it all together and show it on the page:
+
+```javascript
+quizContainer.innerHTML = output.join('');
+```
+
+Now our ```showQuestions``` function is complete.
 
 
+
+
+
+## Show the Quiz Results
+
+
+- now show results
+- function to look through our quiz, check the answers, and output the results
+- we'll go through in more detail
+
+
+function showResults(questions, quizContainer, resultsContainer){
+  
+  // gather answer containers from our quiz
+  let answerContainers = quizContainer.querySelectorAll('.answers');
+  
+  // keep track of user's answers
+  let userAnswer = '';
+  let numCorrect = 0;
+  
+  // for each question...
+  questions.forEach( (currentQuestion, questionNumber) => {
+
+    // find selected answer
+    userAnswer = (answerContainers[questionNumber].querySelector('input[name=question'+questionNumber+']:checked')||{}).value;
+    
+    // if answer is correct
+    if(userAnswer===currentQuestion.correctAnswer){
+      // add to the number of correct answers
+      numCorrect++;
+      
+      // color the answers green
+      answerContainers[questionNumber].style.color = 'lightgreen';
+    }
+    // if answer is wrong or blank
+    else{
+      // color the answers red
+      answerContainers[questionNumber].style.color = 'red';
+    }
+  });
+
+  // show number of correct answers out of total
+  resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+}
+
+
+
+- first find answer divs (we'll look through them soon)
+- now use a loop to go through each question
+- for each question, see which answer was picked
+  use selector to find checked; but if not then use empty object to avoid crashing the page
+if correct answer
+  add to correct number
+  color this answer set green
+if not correct answer
+  color this answer set red
+after we've checked each question, show the number correct out of the total
+
+
+
+
+
+
+
+
+## Put Together the Pieces of Your Quiz
+
+
+time to generate quiz
+
+
+function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+
+  // show questions right away
+  showQuestions(questions, quizContainer);
+  
+  // on submit, show results
+  submitButton.onclick = function(){
+    showResults(questions, quizContainer, resultsContainer);
+  }
+
+}
+
+show questions
+when clicking submit, show answers
+
+
+now to run our function
+
+const quizContainer = document.getElementById('quiz');
+const resultsContainer = document.getElementById('results');
+const submitButton = document.getElementById('submit');
+
+generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+
+
+store elements in variables
+(remember you already have the questions variable from before)
+use those elements to generate your quiz
 
 
