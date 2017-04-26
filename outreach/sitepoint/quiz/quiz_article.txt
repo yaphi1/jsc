@@ -4,6 +4,8 @@ OSX sublime keymap
 
 also remember to use spaces instead of tabs for code samples
 
+word count before intro and conclusion: 1225
+
 
 use cases
 - general quiz
@@ -197,11 +199,9 @@ Now our ```showQuestions``` function is complete.
 
 ## Show the Quiz Results
 
+At this point, we want to create a function to look through our quiz, check the answers, and show the results.
 
-- now show results
-- function to look through our quiz, check the answers, and output the results
-- we'll go through in more detail
-
+Here's the function, which we'll go through in detail next:
 
 function showResults(questions, quizContainer, resultsContainer){
   
@@ -237,19 +237,95 @@ function showResults(questions, quizContainer, resultsContainer){
   resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
 }
 
+First, we'll find all the answer containers in our quiz's HTML. Then we'll create variables to keep track of the user's current answer and the total number of correct answers.
 
+```javascript
+// gather answer containers from our quiz
+let answerContainers = quizContainer.querySelectorAll('.answers');
 
-- first find answer divs (we'll look through them soon)
-- now use a loop to go through each question
-- for each question, see which answer was picked
-  use selector to find checked; but if not then use empty object to avoid crashing the page
-if correct answer
-  add to correct number
-  color this answer set green
-if not correct answer
-  color this answer set red
-after we've checked each question, show the number correct out of the total
+// keep track of user's answers
+let userAnswer = '';
+let numCorrect = 0;
+```
 
+Now we can loop through each question and check the answers.
+
+```javascript
+// for each question...
+questions.forEach( (currentQuestion, questionNumber) => {
+
+  // find selected answer
+  userAnswer = (answerContainers[questionNumber].querySelector('input[name=question'+questionNumber+']:checked')||{}).value;
+  
+  // if answer is correct
+  if(userAnswer===currentQuestion.correctAnswer){
+    // add to the number of correct answers
+    numCorrect++;
+    
+    // color the answers green
+    answerContainers[questionNumber].style.color = 'lightgreen';
+  }
+  // if answer is wrong or blank
+  else{
+    // color the answers red
+    answerContainers[questionNumber].style.color = 'red';
+  }
+});
+```
+
+The general gist of this code is:
+- Find the selected answer in the HTML.
+- Handle what happens if the answer is correct.
+- Handle what happens if the answer is wrong.
+
+Let's look more closely at how we're finding the selected answer in our HTML:
+
+```javascript
+// find selected answer
+userAnswer = (answerContainers[questionNumber].querySelector('input[name=question'+questionNumber+']:checked')||{}).value;
+```
+
+First, we're making sure we're looking amongst the answers for the current question:
+
+```javascript
+answerContainers[questionNumber]
+```
+
+Next we're using ```querySelector``` and a CSS selector that lets us find which radio button is checked.
+
+Now we can get the value of that answer by using ```.value```.
+
+But what if the user left an answer blank? Then ```.value``` would cause an error because you can't get the value of something that's not there. To solve this, we've added ```||```, which means "or" and ```{}``` which is an empty object. Now the overall statement says:
+- Get our selected answer HTML element OR use an empty object.
+- Get the value of whatever was in the first statement.
+As a result, the value will either be the user's answer or ```undefined```, which means a user can skip a question without crashing our quiz.
+
+The next statements in our answer-checking loop will let us handle correct and incorrect answers.
+
+```javascript
+// if answer is correct
+if(userAnswer===currentQuestion.correctAnswer){
+  // add to the number of correct answers
+  numCorrect++;
+  
+  // color the answers green
+  answerContainers[questionNumber].style.color = 'lightgreen';
+}
+// if answer is wrong or blank
+else{
+  // color the answers red
+  answerContainers[questionNumber].style.color = 'red';
+}
+```
+
+If the user's answer matches the correct choice, increase the number of correct answers by one and (optionally) color the set of choices green.  If the answer is wrong or blank, color the answer choices red (again, optional).
+
+Once the answer-checking loop is finished, we can show how many questions the user got right:
+
+```javascript
+// show number of correct answers out of total
+resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+```
 
 
 
@@ -259,37 +335,40 @@ after we've checked each question, show the number correct out of the total
 
 ## Put Together the Pieces of Your Quiz
 
+Now that we have the questions and the answers handled, it's time to generate our quiz:
 
-time to generate quiz
-
-
+```javascript
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
   // show questions right away
   showQuestions(questions, quizContainer);
   
   // on submit, show results
-  submitButton.onclick = function(){
+  submitButton.addEventListener('click', ()=>{
     showResults(questions, quizContainer, resultsContainer);
-  }
+  });
 
 }
+```
 
-show questions
-when clicking submit, show answers
+This function takes in a list of questions, an HTML element to contain the quiz, an HTML element to show the results, and a button to submit the answers.
 
+First, we'll use our ```showQuestions``` function to show the questions. Next we'll use an event listener to run our ```showResults``` function when the submit button is clicked.
 
-now to run our function
+Now we can run our function:
 
+```javascript
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 
 generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+```
+
+Notice we've gathered the HTML elements to use as inputs so the function knows where to work its magic. Remember that the we already defined the ```myQuestions``` variable while we were creating our ```showQuestions``` function.
+
+Now that we've generated our quiz, we're all done! Feel free to add or remove questions and answers and style the quiz however you like.
 
 
-store elements in variables
-(remember you already have the questions variable from before)
-use those elements to generate your quiz
 
 

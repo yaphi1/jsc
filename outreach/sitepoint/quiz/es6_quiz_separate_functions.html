@@ -79,9 +79,9 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 	showQuestions(questions, quizContainer);
 	
 	// on submit, show results
-	submitButton.onclick = function(){
+	submitButton.addEventListener('click', ()=>{
 		showResults(questions, quizContainer, resultsContainer);
-	}
+	});
 
 }
 

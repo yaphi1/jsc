@@ -43,7 +43,7 @@ btn.onclick = function(){
 	var text = textbox.value;
 
 	// remove code snippets and urls
-	text = text.replace(/```[^`]+```/g,'')
+	text = text.replace(/```((.|\n)(?!(``(\n|\s))))+```/g,'')
 				.replace(/https*:[^\s]+/ig,'');
 
 	output.innerHTML = text;
