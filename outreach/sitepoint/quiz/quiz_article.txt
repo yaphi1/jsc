@@ -1,17 +1,34 @@
+"How do I make a JavaScript quiz?"
 
-OSX sublime keymap
-{ "keys": ["command+option+w"], "command": "toggle_setting", "args" : {"setting": "word_wrap"} }
+This is one of the most common questions I see among people who are learning web development, and for good reason.
 
-also remember to use spaces instead of tabs for code samples
+Quizzes are useful! Some example uses include:
 
-word count before intro and conclusion: 1225
+- Testing your knowledge
+- Choosing the best product for you in an online store
+- Social marketing through quizzes that get shared
+- Generating a project proposal
+- Entertainment
 
+Here's a demo of what you'll create in this tutorial:
 
-use cases
-- general quiz
-- product proposals/selections
-- mention data security as well
+<p data-height="265" data-theme-id="0" data-slug-hash="vmggZX" data-default-tab="result" data-user="yaphi1" data-embed-version="2" data-pen-title="Simple JavaScript Quiz (ES6)" class="codepen">See the Pen <a href="https://codepen.io/yaphi1/pen/vmggZX/">Simple JavaScript Quiz (ES6)</a> by Yaphi (<a href="http://codepen.io/yaphi1">@yaphi1</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
+A few things to know before starting:
+
+- This tutorial is entirely on the front end, meaning that the data is in the browser and someone who knows how to look through the code can find the answers. For serious quizzes, the data needs to be handled through the back end, which is beyond the scope of this tutorial.
+- The code in this article uses JavaScript at the [ES6](https://github.com/lukehoban/es6features) level, meaning the code will not be compatible with any versions of Internet Explorer. However it does work for modern browsers, including Microsoft Edge. In case you need it, I've written a [JavaScript quiz tutorial](https://simplestepscode.com/javascript-quiz-tutorial/) that's compatible back to IE8.
+- You'll need some familiarity with HTML, CSS, and JavaScript, but each line of code will be explained.
+
+Here are the steps to expect in this tutorial:
+
+- Set up the structure of the quiz.
+- Show the questions.
+- Show the results.
+- Put together the pieces of your JavaScript quiz.
+
+Let's get started!
 
 
 ## Set up the Structure of Your Quiz
@@ -30,7 +47,7 @@ Here's how that would look:
 
 ```html
 &lt;div id="quiz"&gt;&lt;/div&gt;
-&lt;button id="submit"&gt;Get Results&lt;/button&gt;
+&lt;button id="submit"&gt;Submit Quiz&lt;/button&gt;
 &lt;div id="results"&gt;&lt;/div&gt;
 ```
 
@@ -203,6 +220,7 @@ At this point, we want to create a function to look through our quiz, check the 
 
 Here's the function, which we'll go through in detail next:
 
+```javascript
 function showResults(questions, quizContainer, resultsContainer){
   
   // gather answer containers from our quiz
@@ -236,6 +254,7 @@ function showResults(questions, quizContainer, resultsContainer){
   // show number of correct answers out of total
   resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
 }
+```
 
 First, we'll find all the answer containers in our quiz's HTML. Then we'll create variables to keep track of the user's current answer and the total number of correct answers.
 
@@ -368,6 +387,19 @@ generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 Notice we've gathered the HTML elements to use as inputs so the function knows where to work its magic. Remember that the we already defined the ```myQuestions``` variable while we were creating our ```showQuestions``` function.
 
 Now that we've generated our quiz, we're all done! Feel free to add or remove questions and answers and style the quiz however you like.
+
+
+
+
+## What's next?
+
+Now that you have a basic JavaScript quiz, it's time to experiment.
+
+Maybe you'll try different ways of responding to a correct answer or a wrong answer. Maybe you'll find a creative use for the concepts in this type of quiz. Maybe you'll update the interactions so one question is shown at a time.
+
+If you have questions or comments or if you've made an interesting quiz, feel free to share in the comments section below.
+
+
 
 
 
