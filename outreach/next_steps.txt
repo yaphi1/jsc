@@ -2,7 +2,39 @@ next steps
 
 
 
-- write sitepoint quiz article
+- research who to pitch
+	- find specific articles by them that I liked
+	- find mutual connections or people they know
+	- then go back to growthlab cold pitch article for next steps
+
+
+- do more outreach
+	- only two sites to look at besides sitepoint:
+		- b ins
+		- lh
+		so focus on these exclusively
+			- look for articles on topic that did well
+			- contact article writers for advice
+- in between outreach instances, go through cta to boost conversions
+- up price to 197
+- automate launch sequence to be earlier and have personalized timer
+	- mention experiment with customized timer on ztl (way to have evergreen and launch urgency at the same time)
+	- this can be harder to measure and more difficult to pivot on, so make sure everything is working first
+	- to explain why timer; say win-win and say more sales and also clearer decisions
+
+
+
+see article:
+http://growthlab.com/how-i-built-a-6-figure-online-business-in-12-months/
+1 product in entire portfolio, $197 price point, just over 500 sales
+
+
+
+
+
+
+
+
 - update membership site to be courses.simplestepscode.com
 	- add redirect
 	- add subdomain to https list
@@ -11,7 +43,6 @@ next steps
 	- determine which parts of email funnel should be more automatic
 - automate sales process and sell earlier
 - find out how to get on bigger sites (specifically lifehacker and business insider)
-
 
 
 note to accelerator:
