@@ -17,6 +17,8 @@ Starting Amount: <input value="100000" type="text" id="amt">
 <br>
 Annual Percent Return: <input value="5" type="text" id="pct">
 <br>
+Amount invested per year: <input value="1000" type="text" id="amt_per_yr">
+<br>
 Years Invested: <input value="10" type="text" id="yrs">
 
 <br><br>
@@ -36,10 +38,10 @@ function getData(id){
 }
 
 btn.onclick = function(){
-	output.innerHTML = getReturn(getData('amt'), getData('pct'), getData('yrs'));
+	output.innerHTML = getReturn(getData('amt'), getData('pct'), getData('amt_per_yr'), getData('yrs'));
 };
 
-function getReturn(amt,pct,yrs){
+function getReturn(amt,pct,amt_per_yr,yrs){
 	// console.log(amt);
 	if(yrs===0){
 		// console.log('final amt: '+amt);
@@ -48,7 +50,9 @@ function getReturn(amt,pct,yrs){
 
 	yrs--;
 	amt *= 1+(pct/100);
-	return getReturn(amt,pct,yrs);
+	amt += +amt_per_yr;
+	// console.log(amt);
+	return getReturn(amt,pct,amt_per_yr,yrs);
 }
 
 </script>

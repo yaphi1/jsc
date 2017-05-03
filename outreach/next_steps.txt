@@ -16,7 +16,6 @@ next steps
 			- look for articles on topic that did well
 			- contact article writers for advice
 - in between outreach instances, go through cta to boost conversions
-- up price to 197
 - automate launch sequence to be earlier and have personalized timer
 	- mention experiment with customized timer on ztl (way to have evergreen and launch urgency at the same time)
 	- this can be harder to measure and more difficult to pivot on, so make sure everything is working first
@@ -27,6 +26,17 @@ next steps
 see article:
 http://growthlab.com/how-i-built-a-6-figure-online-business-in-12-months/
 1 product in entire portfolio, $197 price point, just over 500 sales
+
+
+
+
+
+- Continue guest posting at best traffic sources so far
+- Keep doing outreach to get bigger media
+- While that is going on, read Jay Abraham's book
+- Go through CTA
+- Fix sales process so I don't have to manually tag people in the main list when they join the customer list.
+- Possibly automate sales to start closer to signup since a lot of launch sales were within a week of signing up for the email list, which suggests people want a solution sooner rather than later.
 
 
 
