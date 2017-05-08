@@ -1,0 +1,82 @@
+
+
+https://www.quora.com/What-is-the-best-way-to-learn-JavaScript
+
+
+https://www.quora.com/What-is-the-best-way-to-learn-JavaScript/answer/Yaphi-Berhanu
+
+
+The way we learn JavaScript is crazy.
+
+Stick with me for a second and I'll explain why.
+
+If you've ever tried to learn a skill (a sport, a craft, an instrument, etc), think about how you did that.
+
+You learned some of the basics and then practiced them until you got comfortable enough to move on.
+
+With learning to code, people often take a different approach. They'll fumble through a tutorial, messing up and fixing at each step, and then at the end, they'll see their finished product, think, "okay I get it," and then move onto the next thing.
+
+The problem is that they haven't stayed there to practice until they're comfortable applying the concepts they've just learned. As a result, they end up saying things like:
+
+"I followed along with the tutorial, but I couldn't apply any of it afterwards."
+
+or
+
+"I learned this stuff, but I can't remember it."
+
+Can you imagine if you tried to learn an instrument the way people learn to code? It would be like getting every note wrong, nodding smugly at your success, and moving on.
+
+I've made this mistake plenty of times!
+
+That doesn't have to be you.
+
+The key to success is this:
+When you've understood a concept, don't move on immediately.
+
+Take a bit of time to practice, play with what you've learned, and see what you can create. You'll remember it better, you'll have more fun, and you'll finally be able to apply everything on your own.
+
+The ironic part is by taking that extra time to practice, you'll save a ton of time overall.
+
+I hope this has been helpful, and if you'd like a concise roadmap of how to learn JavaScript as quickly as possible, I've written one for you.
+
+https://simplestepscode.com/learn-javascript/
+
+
+
+
+
+
+
+
+
+
+
+
+notes:
+
+moving onto the next thing too soon
+learning too much at once
+
+
+I know what it’s like to struggle to learn JavaScript.
+
+Maybe you'll follow along with a tutorial but not be able to apply it later.
+
+Maybe you'll see so many frameworks and learning tools that you're not sure which direction to take.
+
+Maybe you'll learn stuff but then keep forgetting it and having to relearn it.
+
+In any case, here are some of the big reasons people struggle with JavaScript:
+
+- 
+
+
+
+People struggle to learn JavaScript for x reasons
+
+moving onto the next thing too quickly
+jumping into projects too soon
+not practicing like real life
+learning too much at once
+consuming too much content and not typing out code
+
