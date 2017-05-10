@@ -117,7 +117,6 @@ Lessons:
 - The best-performing emails had personal stories that led into brief descriptions of features in a way that directly addressed the audience's burning pains.
 
 - Nearly half of the customers purchased at the very beginning and half at the end.  Few in the middle.  The ones who purchased at the beginning had just gotten onto my email list recently (like within the past week or two).  The ones who purchased near the end of the sales period had generally been on the list for a while.  These findings suggest there's a significant number of people who are looking for a solution right away and might try something else if the product doesn't present itself quickly.
-
-
+	(note this is about 10 people of about 200 recent subs, so the list-to-sale conversion rate is about 5% in the first two weeks)
 
 
