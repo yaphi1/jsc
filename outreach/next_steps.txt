@@ -2,6 +2,44 @@ next steps
 
 
 
+
+automate sales process
+
+get new domain:
+- https://courses.simplestepscode.com
+- update https certificates
+- redirect js to courses subdomain
+- create courses home page
+- make sure integrations all work
+	- wishlist member
+	- mailchimp api
+	- stripe
+	- paypal
+
+back up and consolidate lists in mailchimp:
+http://kb.mailchimp.com/lists/growth/combine-lists-to-a-master-list-that-uses-groups
+	- main list
+	- customer list
+	- wait list
+
+update course-closed signup form to point to consolidates list
+
+wishlist member > integrations > autoresponder
+- add to main list, but change interest group to js customers
+
+use same sales page, but use custom countdown timer
+- update timer and also explanation of timer
+- aim for 2 sales per week on average at first
+
+
+
+
+
+
+
+
+
+
 - research who to pitch
 	- find specific articles by them that I liked
 	- find mutual connections or people they know

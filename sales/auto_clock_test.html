@@ -153,7 +153,7 @@ CLOCK
 
 
 
-<div id="test_output"></div>
+
 
 <script>
 function getTimeRemaining(endtime){
@@ -211,35 +211,43 @@ else{
 
 /*
 sample output:
-?n=181497012320170512193748
+?n=18149701232017051215193748
 look between
-970123 and 193748 for yyyymmdd
+970123 and 193748 for yyyymmddnn
+
+where nn is number of days till deadline with leading zero
 
 */
 
-var test_output = document.getElementById('test_output');
 
 var param = (window.location.search.match(/970123(\d+)(?=193748)/) || [])[1];
 console.log(param);
 if(param){
-	console.log('show timer');
-
 	param = ''+param;
-	var days_till_deadline = 7;
 	var year = +param.slice(0,4);
 	var month = +param.slice(4,6)-1;
 	var day = +param.slice(6,8);
-	var hour = new Date().getHours();
-	var minute = new Date().getMinutes();
-	var second = new Date().getSeconds();
-	var deadline = Date.parse(new Date(year,month,day,hour,minute,second)) + days_till_deadline*(1000*60*60*24);
+	var days_till_deadline = +param.slice(8,10);
+	var deadline = Date.parse(new Date(year,month,day)) + days_till_deadline*(1000*60*60*24);
 
-	startClock(deadline);
+	// if time is already up, show course closed page
+	if(Date.parse(new Date()) >= deadline){
+		goToCourseClosedPage();
+	}
+	// otherwise, start clock
+	else{
+		console.log('show clock');
+		startClock(deadline);
+	}
 }
 else{
-	console.log('go to course closed page');
+	goToCourseClosedPage();
 }
 
+function goToCourseClosedPage(){
+	console.log('go to course closed page');
+	// window.location.href = 'https://simplestepscode.com/js_course_closed/';
+}
 
 
 // startClock(Date.parse(new Date())+(1000*60*60*3)+(1000*60*60*24*2));
