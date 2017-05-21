@@ -35,7 +35,7 @@
 				?>
 				<div class="step">
 					<div class="step_title">
-						<?php echo $category->name; ?>
+						<?php echo $category->name . ' &ndash; ' . $category->description; ?>
 					</div>
 					<div class="step_content">
 						
