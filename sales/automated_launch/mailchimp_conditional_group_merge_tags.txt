@@ -1,0 +1,28 @@
+*|INTERESTED:Customers:Simple Steps JavaScript Customers, Simple Steps JavaScript Refunds|*
+
+*|ELSE:|*
+
+https://courses.simplestepscode.com/get-javascript-course/?n=*|DATE:si970123Ymd01193748|*
+
+*|END:INTERESTED|*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+example usage:
+
+*|INTERESTED:Customers:Simple Steps JavaScript Customers, Simple Steps JavaScript Refunds|* *|ELSE:|*
+If you're interested, I've created a JavaScript course based on years of talking to people about their struggles with other courses and solving those problems.
+*|END:INTERESTED|*

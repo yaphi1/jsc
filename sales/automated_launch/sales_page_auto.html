@@ -1760,22 +1760,67 @@ function startClock(endtime){
 	updateClock();
 	var timeinterval = setInterval(updateClock,1000);
 }
+/*
 
 // deadline: Fri December 9, 2016, 11:59pm Pacific
-// var deadline = 'December 9 2016 23:59:59 GMT-0800';
+var deadline = 'June 9 2017 23:59:59 GMT-0800';
 // var deadline = new Date(Date.now() + 1000*60*60*24*3);
 
 // if deadline passed, redirect to course closed page
-/*if(Date.parse(new Date()) >= Date.parse(deadline)){
-	window.location.href = 'https://simplestepscode.com/js_course_closed/';
-}*/
+if(Date.parse(new Date()) >= Date.parse(deadline)){
+	alert('time is up');
+	// window.location.href = 'https://simplestepscode.com/js_course_closed/';
+}
 // otherwise, start clock
-/*else{
+else{
 	startClock(deadline);
-}*/
+}
+
+*/
+
+/*
+sample output:
+?n=18149701232017051215193748
+look between
+970123 and 193748 for yyyymmddnn
+
+where nn is number of days till deadline with leading zero
+
+*/
 
 
-startClock(Date.parse(new Date())+(1000*60*60*3)+(1000*60*60*24*2));
+var param = (window.location.search.match(/970123(\d+)(?=193748)/) || [])[1];
+console.log(param);
+if(param){
+	param = ''+param;
+	var year = +param.slice(0,4);
+	var month = +param.slice(4,6)-1;
+	var day = +param.slice(6,8);
+	var days_till_deadline = +param.slice(8,10);
+	var deadline = Date.parse(new Date(year,month,day)) + days_till_deadline*(1000*60*60*24);
+
+	// if time is already up, show course closed page
+	if(Date.parse(new Date()) >= deadline){
+		goToCourseClosedPage();
+	}
+	// otherwise, start clock
+	else{
+		console.log('show clock');
+		startClock(deadline);
+	}
+}
+else{
+	goToCourseClosedPage();
+}
+
+function goToCourseClosedPage(){
+	// console.log('go to course closed page');
+	window.location.href = 'https://simplestepscode.com/js_course_closed/';
+}
+
+
+// startClock(Date.parse(new Date())+(1000*60*60*3)+(1000*60*60*24*2));
+
 
 </script>
 </body>
