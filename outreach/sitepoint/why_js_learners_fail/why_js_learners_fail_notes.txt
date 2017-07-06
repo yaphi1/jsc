@@ -1,0 +1,41 @@
+
+Why People Fail to Learn JavaScript (and What to Do About It)
+
+
+
+Outline
+
+
+intro
+- motivation for article (people give up on js when they don't need to)
+- this can also be applied to learning other things
+
+
+moving to the next step too soon
+
+
+not breaking concepts down into small enough pieces
+
+
+attempting something too big too early
+
+
+overanalyzing instead of getting started
+
+
+not practicing under real-life conditions
+
+
+comparing yourself to more advanced people
+
+
+consuming information and not actually coding
+
+
+following tutorials without understanding or experimenting
+
+
+giving up
+
+
+conclusion
