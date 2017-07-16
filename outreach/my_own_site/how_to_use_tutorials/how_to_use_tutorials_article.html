@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>How to use tutorials</title>
+
+<style type="text/css">
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Nunito-Light'), url(https://fonts.gstatic.com/s/nunito/v7/1TiHc9yag0wq3lDO9cw0vpBw1xU1rKptJj_0jans920.woff2) format('woff2'), url(https://fonts.gstatic.com/s/nunito/v7/1TiHc9yag0wq3lDO9cw0vrO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+
+
+/***********************************************************
+GENERAL
+***********************************************************/
+body{
+	margin: 0px;
+	font-size: 110%;
+	font-family: 'Nunito', sans-serif;
+	color:#333;
+	background: #fff;
+	line-height: 1.5;
+	font-weight: 100;
+}
+
+img{ border: 0px; }
+
+a{ text-decoration: none; }
+
+b{ font-weight: 700; }
+
+button{
+	border:0px;
+	cursor: pointer;
+}
+
+h1{
+	margin: 0px auto;
+	padding: 40px 0px 20px;
+	font-weight: 100;
+	font-size: 2.0em;
+	max-width: 800px;
+	line-height: 1.3;
+}
+
+h1.homeh1{
+	margin: 0px auto;
+	padding: 0px 0px 40px;
+	font-size: 35px;
+	max-width: 920px;
+}
+
+h2{
+	line-height: 1.1;
+    font-weight: 100;
+    margin: 0px;
+    font-size: 2.3em;
+    padding: 0px 0px 20px;
+    color: #678;
+}
+
+h3 {
+    font-size: 1.8em;
+    margin: 30px 0px 0px;
+    font-weight: 100;
+}
+
+p{
+	margin: 15px 0px;
+	line-height: 1.5;
+	font-weight: 100;
+}
+
+ol li{
+	line-height: 1;
+	margin-bottom: 15px;
+}
+
+p a, li a{
+	color: #09d;
+}
+
+p a:hover, li a:hover{
+	color: #0be;
+	text-decoration: underline;
+}
+
+ul li{ margin-bottom: 20px; }
+
+blockquote{
+	background: #f9f9f9;
+	border-left: 3px solid #0ad;
+	margin: 10px 0px;
+	padding: 15px 20px;
+	font-size: 90%;
+}
+
+blockquote p:first-of-type{
+	margin-top: 0px;
+}
+
+blockquote p:last-of-type{
+	margin-bottom: 0px;
+}
+
+
+
+
+
+
+
+/***********************************************************
+MENUBAR
+***********************************************************/
+
+#menubar{
+	padding: 20px;
+	font-weight: 100;
+	font-size: 18px;
+	line-height: 1.3;
+	position: relative;
+}
+
+#menubar a{
+	text-decoration: none;
+	color: #555;
+}
+
+#menubar span{
+	vertical-align: middle;
+}
+
+
+
+/***********************************************************
+NAVIGATION
+***********************************************************/
+
+#hamburger{
+	float: right;
+	width: 36px;
+	cursor: pointer;
+	margin-top: 6px;
+}
+#hamburger div:first-child{
+	margin-top: 4px;
+}
+#hamburger div{
+	margin-top: 5px;
+	width: 100%;
+	height: 3px;
+	background: #555;
+	border-radius: 3px;
+}
+
+#topnav{
+	padding-top: 20px;
+}
+
+#topnav a{
+	display: block;
+	padding: 15px;
+	font-size: 18px;
+	border-top: 1px solid #eee;
+}
+
+#topnav a:hover{
+	/*background: #0c7;*/
+	background: #229CCB;
+	color: #fff;
+}
+
+.open{ display: block; }
+.closed{ display: none; }
+
+
+
+
+/***********************************************************
+MASTHEAD
+***********************************************************/
+
+.masthead{
+	/*background: #269;*/
+	background: #229CCB;
+	text-align: center;
+	color: #fff;
+	padding: 140px 20px;
+}
+
+.mastheadhome{
+	background: #28b;
+	text-align: center;
+	color: #fff;
+	padding: 50px 20px;
+}
+
+.homeformtext{
+	font-size:20px;
+	max-width: 700px;
+	margin: auto;
+	font-weight: 100;
+}
+
+.homeform{
+	max-width: 700px;
+	margin: auto;
+	padding-top: 10px;
+}
+
+.homeform input{
+	padding: 15px;
+	border: 1px solid #aaa;
+	font-size: 20px;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	box-shadow: 1px 1px 3px 0px #ddd inset;
+	border-radius: 3px;
+	width: 100%;
+	display: block;
+}
+
+.homeform button{
+	padding: 15px 10px;
+	border: 0px;
+	font-size: 20px;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	border-radius: 3px;
+	background: #0c7;
+	color: #fff;
+	width: 100%;
+	display: block;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.homeform button:hover{
+	background: #0d8;
+}
+
+
+
+
+
+/***********************************************************
+PLAIN CONTENT
+***********************************************************/
+
+.plaincontent{
+	padding: 30px 20px;
+	font-size: 1em;
+	font-weight: 100;
+	line-height: 1.5;
+}
+
+.plaincontent h2{
+	margin: 0px;
+	padding: 80px 0px 20px;
+}
+
+.plaincontent p{
+	margin: 0px;
+	padding: 0px 0px 20px;
+}
+
+.plaincontent ul{
+	margin: 0px;
+	padding: 0px 0px 20px 30px;
+}
+
+.plaincontent a{
+	color: #09d;
+}
+
+.plaincontent a:hover{
+	color: #0be;
+}
+
+
+
+
+
+
+/***********************************************************
+TUTORIAL CONTENT
+***********************************************************/
+
+.demobutton{
+	background: #229CCB;
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+	padding: 15px 30px;
+	border-radius: 3px;
+	margin-bottom: 10px;
+}
+.demobutton:hover{ background: #3ad; }
+
+.firstcontentline{
+	font-size: 1.3em;
+	font-weight: 100;
+	line-height: 1.5;
+}
+.showcasetitle{
+	padding: 50px 0px 0px;
+	font-weight: 100;
+	font-size: 1.8em;
+	color: #89a;
+}
+
+.showcase{
+	text-align: center;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	margin-bottom: 20px;
+}
+
+.contentwidth{
+	max-width: 700px;
+	margin: auto;
+}
+
+.content{
+	padding: 20px;
+}
+
+.intro{
+	padding: 20px 20px 70px;
+}
+.intro a{
+	color: #4A9CC7;
+}
+.intro a:hover{
+	text-decoration: underline;
+}
+
+.stepscontainer{
+	background:#0ad;
+	padding:50px 0px;
+}
+
+.stepbox{
+	background:#fff;
+	padding:30px 20px;
+	border-radius:5px;
+	margin-bottom: 70px;
+}
+
+
+
+
+
+
+
+
+/***********************************************************
+CATEGORY GRID STYLES
+***********************************************************/
+
+.gridbg{background:#F1F4F7; padding:30px 10px; text-align:center;}
+
+.gridcontainer{ max-width:650px; display: inline-block;}
+
+.gridbox{
+	background: #fff;
+	border-top: 5px solid #229CCB;
+	padding: 40px;
+	margin: 30px 10px;
+	font-size: 30px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.gridbox a{
+	color: #333;
+	text-decoration: none;
+}
+.gridbox a:hover{ color: #4bd; text-decoration:none; }
+
+.tags{
+	padding-top: 20px;
+	font-size: 20px;
+}
+
+.tags a{
+	color: #3ac;
+}
+
+
+
+
+
+
+/***********************************************************
+CODE
+***********************************************************/
+
+.codespan{
+	background: #333;
+	color: #fff;
+	font-family: courier;
+}
+
+code{
+	font-size: 20px;
+}
+
+.resultcontainer{
+	background: #444;
+	color: #fff;
+	display: block;
+	padding: 20px;
+	/*word-wrap: break-word;*/
+	overflow: scroll;
+	white-space: nowrap;
+	/*font-size: 20px;*/
+}
+.resultcontainer{ text-align: center; white-space: normal;}
+
+
+.tag{ color: gold; }
+
+.cssclass{ color: #aef; }
+
+.cssproperty{ color: pink; }
+
+.csscomment { color: #6f6; }
+
+.indent{ padding-left: 40px; }
+
+.beforeparentheses{ color:#f6a; }
+
+
+
+
+
+
+
+
+/***********************************************************
+EMAIL FORM
+***********************************************************/
+
+.signupsection{
+	padding: 10px 20px 40px;
+}
+
+.enjoyedthis{
+	font-size: 2em;
+	padding: 60px 0px 20px;
+}
+
+.signupform{
+	background: #fdf7f1;
+	padding: 30px;
+	border-radius: 5px;
+	color: #333;
+	vertical-align: middle;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.signupcopy{
+	padding-bottom: 10px;
+}
+
+.gettutorials{
+	font-weight: 100;
+	font-size: 30px; 
+	padding: 0px 0px 20px;
+	line-height: 1.2;
+}
+
+.bluechecks{
+	list-style: none;
+	padding: 0px;
+	padding-left: 15px;
+	margin: 0px;
+	font-size: 0.95em;
+	font-weight: 100;
+}
+.bluechecks span{ color:#19b; }
+
+
+.zerofont{ font-size: 0px; }
+
+.signupform input{
+	padding: 15px;
+	border: 1px solid #aaa;
+	font-size: 20px;
+	box-sizing: border-box;
+	width: 100%;
+	margin-bottom: 10px;
+	box-shadow: 1px 1px 3px 0px #ddd inset;
+	border-radius: 3px;
+}
+
+
+.signupbutton{
+	font-family: nunito, sans-serif;
+	position: relative;
+	display: inline-block;
+	padding: 15px 25px;
+	background: #15BBDD;
+	text-decoration: none;
+	color: #fff;
+	font-size: 25px;
+	text-align: center;
+	border-radius: 3px;
+	border: 0px;
+	width: 100%;
+	box-sizing: border-box;
+}
+a.signupbutton{
+	margin-bottom: 40px;
+}
+
+.signupbutton:hover{
+	background: #2ce;
+}
+
+.nospam{
+	margin-top: 10px;
+	font-size: 16px;
+	text-align: center;
+}
+
+
+
+
+
+
+
+/***********************************************************
+BOTTOM NAV
+***********************************************************/
+
+.bottom_nav_container{
+	background-color: #F1F4F7;
+	padding: 20px;
+	text-align: center;
+}
+
+.bottom_nav_container a{
+	text-decoration: none;
+	background-color: #4A9CC7;
+	color: #fff;
+	display: inline-block;
+	padding: 20px;
+	border-radius: 3px;
+}
+.bottom_nav_container a:hover{
+	text-decoration: none;
+	background-color: #5ad;
+	color: #fff;
+}
+
+
+
+
+
+/***********************************************************
+FOOTER
+***********************************************************/
+
+.copyright{
+	background: #333;
+	color: #fff;
+	padding: 30px 10px;
+	text-align: center;
+	font-size: 17px;
+}
+
+
+
+
+
+
+
+
+/************************************************************
+first breakpoint
+************************************************************/
+@media (min-width:700px) {
+	body{
+		font-size: 134%;
+	}
+
+	
+	/* begin navigation styles */
+	
+	#hamburger{ display: none; }
+
+	#topnav{
+		padding: 0px;
+		position: absolute;
+		top: 13px;
+		right: 30px;
+	}
+
+	.open, .closed{ display: inline-block; }
+
+	#topnav a{
+		display: inline-block;
+		padding: 15px;
+		border-radius: 5px;
+		font-size: 18px;
+		border-top: 0px none;
+		margin: 0px 15px;
+		vertical-align: top;
+	}
+
+	.separator{
+		display: inline-block;
+		height: 20px;
+		width: 1px;
+		padding: 15px 0px;
+		background: #eee;
+		vertical-align: top;
+	}
+
+	/* end navigation styles */
+
+
+
+	.mastheadhome{
+		padding: 150px 20px;
+		background-image:url('img/macbgdark.png');
+		background-size: cover;
+	}
+
+	h1.homeh1{
+		font-size: 49px;
+	}
+
+	.homeform input{
+		width: 28%;
+		display: inline;
+	}
+
+	.homeform button{
+		width: 33%;
+		display: inline;
+	}
+
+	.stepbox{ padding:80px 100px; }
+
+	.signupform input{
+		width: 49%;
+		display:inline-block;
+	}
+
+	.signupform input:first-child{
+		margin-right: 2%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+/************************************************************
+TOP OPT IN BAR
+************************************************************/
+#top_opt_in{
+	display: none;
+	background: #396;
+	color: #fff;
+	font-size: 16px;
+	padding: 6px;
+	text-align: center;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	z-index: 100;
+
+	-webkit-transition: transform .2s;
+	transition: transform .2s;
+	
+	-ms-transform: translateY(-40px);
+	-webkit-transform: translateY(-40px);
+	transform: translateY(-40px);
+}
+#top_opt_in a{
+	display: inline-block;
+	color: #fff;
+	background: #444;
+	padding: 1px 15px;
+	border-radius: 3px;
+	margin-left: 10px;
+}
+#top_opt_in a:hover{
+	background: #555;
+}
+#menubar{
+	-webkit-transition: margin-top .2s;
+	transition: margin-top .2s;
+}
+
+@media (min-width:920px) {
+	#top_opt_in{
+		display: block;
+	}
+
+	#menubar.top_promo{
+		margin-top: 36px;
+	}
+
+}
+
+
+
+
+
+/************************************************************
+CODE SAMPLES
+************************************************************/
+pre code{
+	font-size: 16px;
+}
+
+
+
+
+/************************************************************
+IMAGES IN POSTS
+************************************************************/
+.img_float_right{
+	max-width: 40%;
+	float: right;
+	padding: 20px;
+}
+.img_feature_float_right{
+	max-width: 35%;
+	float: right;
+	padding: 10px 5%;
+}
+</style>
+
+<link rel="stylesheet" type="text/css" href="/code_formatting/prism.css">
+
+</head>
+<body>
+
+<!-- TOP OPT-IN BAR -->
+<div id="top_opt_in">
+	Get the actual steps I used to get hired as a front-end web developer at a well-known company
+	<a href="/opt-in/">Click here</a>
+</div>
+
+
+<div id="menubar">
+	<div id="hamburger">
+		<div></div><div></div><div></div>
+	</div>
+
+	<a href="/">
+		<svg height="40" width="40" style="vertical-align: middle; padding: 0px 6px 0px 0px;" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+			<circle cx="5" cy="5" r="4.4" style="stroke-width: 0.5; fill: none; stroke: #555;"></circle>
+			<polyline points="3.5,6.3 5,6.3 5,3.7 6.5,3.7" style="stroke-width: 0.8; stroke-linejoin: round; stroke-linecap: round; fill: none; stroke: #555;"></polyline>
+		</svg>
+		<span>
+			Simple Steps Code
+		</span>
+	</a>
+	
+	<div id="topnav" class="closed">
+		<a href="/category/tutorials">Tutorials</a>
+		<div class="separator"></div>
+		<a href="/category/blog">Blog</a>
+	</div>
+</div>
+<section id="content" role="main">
+	<div class="masthead">
+		<h1>When that "simple" JavaScript tutorial is super complicated</h1>
+	</div>
+
+
+	<!-- wordpress post content start -->
+
+	<div class="intro contentwidth">
+
+		<blockquote class="firstcontentline">
+			&ldquo;For some reason JavaScript tutorials often start with &lsquo;In this tutorial we will write a simple...&rsquo; and, 12,000 lines later you can't remember what it was you were trying to learn.&rdquo;
+			<br><br>- <a href="https://twitter.com/perrydBUCS" target="_blank">@perrydBUCS</a> in a comment on <a href="https://dev.to/yaphi1/what-are-your-biggest-struggles-in-learning-javascript/comments/dd8" target="_blank">dev.to</a>
+		</blockquote>
+		
+		<p>This is really well said, and it illustrates the key problem with a lot of tutorials: they promise simplicity at the beginning, and then they end up being so long and complicated that the readers give up.</p>
+		<p>Let's talk about how you can get around this problem and get the most out of a tutorial.</p>
+
+	</div>
+
+	<div class="stepscontainer">
+
+		<div class="contentwidth stepbox">
+			<h2>Tip #1: Start with the smallest possible piece</h2>
+
+			<img src="https://simplestepscode.com/img/icons/puzzle.svg" class="img_float_right" alt="">
+
+			<p>A lot of tutorials group a bunch of concepts into one big step. For example, they might ask you to perform an animation when a button is clicked.</p>
+			<p>If you follow along with the tutorial at this point, you'll end up typing (or pasting) a lot of stuff and not remembering it.</p>
+			<p>Instead, break the first step down into even smaller steps. First show a button. Next make the button do something simple (like maybe just saying hello when clicked). After that, try to create the animation on its own. Once you have a working button and a working animation, you can put the pieces together, and you'll understand how they work.</p>
+			<p>It also helps if you strip out unnecessary styles or markup in order to stay close to the bare essentials of what makes the code work. (Key word: unnecessary. If some of the styles and markup are necessary, keep them.)</p>
+			<p>In general, smaller pieces are easier to understand, easier to work with, and easier to remember. This approach will make a huge difference in how you learn.</p>
+		</div>
+
+
+
+		<div class="contentwidth stepbox">
+			<h2>Tip #2: Experiment before moving on</h2>
+
+			<img src="https://simplestepscode.com/img/icons/experiment.svg" class="img_float_right" alt="">
+
+			<p>If you're learning new concepts, don't just follow a tutorial as written. Experiment with each step. For example, if the tutorial shows you one type of animation, try another type too. If something needs to happen when a button is clicked, try making different things happen when that button is clicked.</p>
+			<p>Adjust, experiment, play, break things. You'll learn so much in such a short time this way.</p>
+		</div>
+
+
+
+		<div class="contentwidth stepbox">
+			<h2>Tip #3: Try each step on your own first</h2>
+
+			<img src="https://simplestepscode.com/img/icons/running.svg" class="img_float_right" alt="">
+
+			<p>When possible, try something on your own before looking at the tutorial. You might struggle, but you'll think deeply about the problem you're trying to solve and the issues to be aware of. This will prepare you to understand the tutorial much better because you'll understand why certain steps are included.</p>
+			<p>It isn't always possible to try solving the problem before looking at the tutorial, but it's something to consider in case it makes sense for your situation.</p>
+		</div>
+
+
+		<div class="contentwidth stepbox">
+			<h2>Key takeaways</h2>
+
+			<img src="https://simplestepscode.com/img/icons/key.svg" class="img_float_right" alt="">
+
+			<p>The next time you see a tutorial, try these tips:</p>
+			<ul>
+				<li>Break it down into the smallest possible pieces.</li>
+				<li>Experiment before moving to the next step.</li>
+				<li>Try to solve some pieces on your own first.</li>
+			</ul>
+			<p>When trying these tips myself, here's what happened:</p>
+			<p>Instead of doing ten tutorials and learning zero things, I would do one tutorial and learn ten things.</p>
+			<p>I hope this will happen for you too.</p>
+		</div>
+
+	</div>
+	<!-- wordpress post content end -->
+
+
+</section>
+
+
+
+<div class="contentwidth signupsection">
+	<div class="enjoyedthis">
+		<!-- My Gift to You -->
+		If you're curious to know a fast way to learn JavaScript...
+	</div>
+
+	<div>
+		<a href="https://simplestepscode.com/learn-javascript/" target="_blank" class="signupbutton">Click here to get the free guide to do real things with JavaScript as soon as possible</a>
+	</div>
+
+</div>
+
+
+<div class="copyright">
+	Copyright &copy; <span id="copyyear"></span> Simple Steps Code
+</div>
+
+
+<script>
+/*(function(){
+	var after_masthead = document.querySelector('.masthead + *');
+	if(after_masthead){
+		var div = document.createElement('div');
+		div.innerHTML = 'test message';
+		after_masthead.parentElement.insertBefore(div, after_masthead);
+	}
+})();*/
+</script>
+<script>
+var yb = { id : function(str){return document.getElementById(str)} };
+
+yb.id('copyyear').innerHTML = new Date().getFullYear();
+
+// add hidden data to email forms
+function fill_form_data(css_class, input){
+	var class_string = '.' + css_class;
+	var items = document.querySelectorAll(class_string);
+	for(var i=0; i<items.length; i++){
+		items[i].value = input;
+	}
+}
+var fields_to_fill = [
+	['mce_URL', window.location.href]
+	,['mce_PATH', window.location.pathname]
+	,['mce_REFERRER', document.referrer || 'direct' ]
+];
+for(var i=0; i<fields_to_fill.length; i++){
+	var css_class = fields_to_fill[i][0];
+	var form_input = fields_to_fill[i][1];
+	fill_form_data(css_class, form_input);
+}
+
+// open and close main nav
+yb.id('hamburger').onclick = function(){
+	yb.id('topnav').className = yb.id('topnav').className=='open' ? 'closed' : 'open';
+};
+
+
+</script>
+
+
+<script>
+//**********************************************************
+//
+// ALLOW NORMAL INDENTING IN CODE SAMPLES
+//
+//**********************************************************
+(function(){
+	var pres = document.getElementsByTagName('pre');
+	for(var i=0; i<pres.length; i++){
+		
+		// get code elements from pre tags (ignore standalone code elements)
+		var code = pres[i].getElementsByTagName('code')[0];
+		var output = code.innerHTML;
+
+		// remove extra tabs (so you can indent normally in code samples)
+		var tabs = output.match(/^\n*(\t+)/);
+		if(tabs){
+
+			// count beginning tabs (to get base level of indentation)
+			var n = tabs[1].length;
+			
+			// remove that number of beginning tabs from each line
+			var reg = RegExp('^\t{'+n+'}','gm');
+			output = output.replace(reg,'');
+		}
+
+		// trim beginning and end of code sample
+		output = output.replace(/^\n+|\s+$/g,'');
+
+		// show clean output in code samples
+		code.innerHTML = output;
+	};
+})();
+</script>
+<script src="/code_formatting/prism.js"></script>
+
+
+</body>
+</html>

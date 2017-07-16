@@ -1,0 +1,30 @@
+
+For some reason Javascript tutorials often start with "In this tutorial we will write a simple ..." and, 12,000 lines later you can't remember what it was you were trying to learn.
+
+Perry Donham
+http://twitter.com/perrydBUCS
+https://dev.to/yaphi1/what-are-your-biggest-struggles-in-learning-javascript
+
+
+
+Possible headlines:
+- When that "simple" JavaScript tutorial is super complicated
+- Why JavaScript tutorials can suck for learning
+
+
+
+points to cover:
+
+start with the problem; paint a picture of it
+
+why the problem happens
+- tutorials are created one small piece at a time but then dumped in one big article
+
+give practical advice for how to use tutorials
+- start with minimum unit
+- experiment
+- try next step on your own first in cases where you think you might be able to (or even if you're not quite sure)
+- if there's a way to try out a later concept in a small unit, try that first (instead of piling the animation onto your slideshow project, try the animation by itself first)
+
+
+
