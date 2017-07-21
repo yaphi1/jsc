@@ -1,0 +1,19 @@
+email topics:
+- when devs underestimate css
+- lego story (about trying to rush making the train but it looked like a truck) and how this relates to learning
+- css mistakes by google, youtube, facebook, etc
+- css side overflow problem
+- arrays: how to remember shift, unshift, push, pop
+- understanding "this" in js
+- chrome-itis: when devs develop only for chrome 9000
+- distilling tutorials to smallest possible piece (instead of "in this tutorial, we'll write a simple ___ and 12,000 lines later"
+- knowing a topic, but not knowing what it's called
+- how to detect a culture of blame before going somewhere (ask for a specific example of something the person has done to contribute to a culture of helpfulness rather than blame)
+- when you're feeling discouraged like you can't keep up: it's just a matter of time, being bad at something is good because it means you're doing something new (only worry if you're good at everything), brain is incredible (evidence: reading = scanning symbols and translating them instantly into sounds and meaning)
+- everything is simple steps
+- finally a simple explanation of closures (function that accesses a variable outside of itself)
+- how to use tutorials (start with perry's quote "tutorials say simple but 12,000 lines later..." from https://dev.to/yaphi1/what-are-your-biggest-struggles-in-learning-javascript)
+- the knowledge lottery (when someone knows a tidbit, they might seem super knowledgeable, and when you don't know a certain tidbit, you may seem at a much lower level than you actually are; it's too easy to extrapolate about someone's entire knowledge from one data point)
+- maybe a dev.to community compilation post on terms to know (so you sound like you know as much as you know)
+- useful portfolio resources (like free stock photos, good fonts, etc)
+
