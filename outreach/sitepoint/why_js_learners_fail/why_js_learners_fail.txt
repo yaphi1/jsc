@@ -1,0 +1,82 @@
+
+Why People Fail to Learn JavaScript (and What to Do About It)
+
+
+
+A lot of people try to learn JavaScript and then give up. Then they tell themselves things like, "JavaScript is too confusing," or worse, "Maybe I'm not cut out for web development."
+
+The sad part? There was no need to give up. All that was needed was a different learning approach.
+
+In this article, we'll cover some of the most common learning mistakes people make and what to do instead. Many of these tips will be applicable outside of JavaScript or even web development, so there's that bonus too.
+
+Let's dive in!
+
+
+
+
+Mistake #1: Overanalyzing Instead of Getting Started
+
+It can be tempting to look for all the info you can get before you start learning JavaScript. If you'll look, you'll find information about how JavaScript is the best thing ever or the worst thing ever, or that you need to be on this framework or that framework. You might also hear that you need to write JavaScript a certain way or else you'll never be a "real" developer.
+
+Whether or not these points have validity, nothing is worse than the six months to a year you'll waste agonizing instead of starting.
+
+Just type one line of code. It doesn't have to be perfect. It can be terrible. Still, if you get started, you've already passed one of the hurdles that stop a lot of people.
+
+
+
+
+Mistake #2: Learning a Framework Before Learning Plain JavaScript
+
+JavaScript frameworks are built on top of plain JavaScript, so if you understand JavaScript, you automatically understand the fundamentals of how to use any JavaScript framework.
+
+However, if you jump straight into a framework, you'll end up memorizing without understanding. It's like trying to write sentences without knowing what words mean. You'll end up memorizing random phrases instead of understanding how words work and how to put them together to make your own sentences.
+
+If you go straight to a framework, it'll be harder to learn, and you'll have a harder time adapting to another framework if you need to. If you learn plain JavaScript first, you have a basis to understand all the frameworks.
+
+
+
+Mistake #3: Moving to the Next Step Too Soon
+
+One of the most common mistakes is to move on immediately after understanding a concept.
+
+I've definitely struggled with this one because it's tempting to move forwards once you understand something.
+
+What helped was to treat each concept like a new toy. That means taking some time to enjoy what you just learned. Play around, experiment, see if you can do something new with it. You'll learn a lot that way, and you'll remember better as well.
+
+Once you feel like you can apply a concept in your sleep, move on. It takes a little bit more time up front, but soon it makes everything go much faster.
+
+On the other hand, if you rush, you'll end up forgetting and having to backtrack for every little thing. That ends up taking way more time, and it can be discouraging. In fact, this is a common reason people have said they quit JavaScript.
+
+
+
+Mistake #4: Not Breaking Concepts Into Small Enough Pieces
+
+
+
+not breaking concepts down into small enough pieces
+- too tempting to try to understand something as a whole
+
+attempting a complex project too early
+- make a quick social network
+
+not practicing under real-life conditions
+- only coding within a website (or after copying a file) rather than trying something from scratch on your own
+- the best way to prepare to have the training wheels off is to practice with the training wheels off
+
+comparing oneself to more advanced people
+- see one's own bloopers and other people's highlights
+- people have seen my tutorials and asked how I wrote such clean code; the whole process was actually a mess and they're just seeing the polished version
+
+consuming information and not actually coding
+- watching videos, reading tutorials, etc; feel like you're learning, but you're not; need to actually write code
+
+following tutorials without understanding or experimenting
+- linearly following steps; doesn't teach practice of solving a problem which is much more experimental and incremental
+- instead, experiment with each step; example: for slideshow, experiment with responding to a click, then animation, then whatever else
+
+conclusion
+- all points lead people to give up, which is the biggest mistake of all
+- if it's difficult sometimes, that's good; it means you're learning new things; if it's always too easy, that might be bad since you're not stretching your abilities
+
+
+

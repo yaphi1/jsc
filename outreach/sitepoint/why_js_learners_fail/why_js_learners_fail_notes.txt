@@ -11,31 +11,41 @@ intro
 - this can also be applied to learning other things
 
 
-moving to the next step too soon
+overanalyzing instead of getting started
+- reading about all the frameworks
+- just get better at js and you'll be better at all of them, then find out which frameworks are relevant to the places you're looking at
 
+learning a framework before learning plain js
+- memorizing magic words instead of understanding what they do
+- like it's much easier to read a book when you know how words and sentences work
+- get overwhelmed trying to keep up with frameworks instead of understanding how they all work at once
+
+moving to the next step too soon
+- easy to move on after understanding something, but that's the time to stay with it instead
 
 not breaking concepts down into small enough pieces
+- too tempting to try to understand something as a whole
 
-
-attempting something too big too early
-
-
-overanalyzing instead of getting started
-
+attempting a complex project too early
+- make a quick social network
 
 not practicing under real-life conditions
+- only coding within a website (or after copying a file) rather than trying something from scratch on your own
+- the best way to prepare to have the training wheels off is to practice with the training wheels off
 
-
-comparing yourself to more advanced people
-
+comparing oneself to more advanced people
+- see one's own bloopers and other people's highlights
+- people have seen my tutorials and asked how I wrote such clean code; the whole process was actually a mess and they're just seeing the polished version
 
 consuming information and not actually coding
-
+- watching videos, reading tutorials, etc; feel like you're learning, but you're not; need to actually write code
 
 following tutorials without understanding or experimenting
-
-
-giving up
-
+- linearly following steps; doesn't teach practice of solving a problem which is much more experimental and incremental
+- instead, experiment with each step; example: for slideshow, experiment with responding to a click, then animation, then whatever else
 
 conclusion
+- all points lead people to give up, which is the biggest mistake of all
+- if it's difficult sometimes, that's good; it means you're learning new things; if it's always too easy, that might be bad since you're not stretching your abilities
+
+

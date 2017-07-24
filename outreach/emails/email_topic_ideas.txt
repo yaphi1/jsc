@@ -16,4 +16,5 @@ email topics:
 - the knowledge lottery (when someone knows a tidbit, they might seem super knowledgeable, and when you don't know a certain tidbit, you may seem at a much lower level than you actually are; it's too easy to extrapolate about someone's entire knowledge from one data point)
 - maybe a dev.to community compilation post on terms to know (so you sound like you know as much as you know)
 - useful portfolio resources (like free stock photos, good fonts, etc)
+- portfolio visuals examples (text on image, layout, padding, etc)
 
