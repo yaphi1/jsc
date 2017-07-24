@@ -51,19 +51,38 @@ On the other hand, if you rush, you'll end up forgetting and having to backtrack
 
 Mistake #4: Not Breaking Concepts Into Small Enough Pieces
 
+Learning is like a staircase. If you can take one step, you can keep taking more steps until you reach your goals. When something is tough to understand, it's often because you're trying to take a flying leap instead of going one step at a time. Of course it seems impossible!
+
+In practical terms, I've seen situations where people would struggle to understand a piece of code. I would ask them to explain it, and they'd get tripped up trying to explain the entire thing at once. I'd ask them to explain it again but this time line by line, and that was when it made sense.
+
+If something seems confusing, there's often a step that's being skipped, so it helps to focus on smaller and smaller pieces until you find the sticking point. If a concept still doesn't make sense after breaking it down, you'll have an easier time searching for help because it's easier to look up specific topics than vague ones.
 
 
-not breaking concepts down into small enough pieces
-- too tempting to try to understand something as a whole
 
-attempting a complex project too early
-- make a quick social network
+Mistake #5: Attempting a Complex Project Too Early
 
-not practicing under real-life conditions
-- only coding within a website (or after copying a file) rather than trying something from scratch on your own
-- the best way to prepare to have the training wheels off is to practice with the training wheels off
+People who are just starting with JavaScript often say something like "I'll just code a quick little social network," not realizing the extent of what's involved. When the project proves difficult, they give up on JavaScript altogether.
 
-comparing oneself to more advanced people
+I've [written about projects](https://www.sitepoint.com/projects-can-sometimes-be-the-worst-way-to-learn-javascript/) in more detail, but the jist is that it's often easier to start with some fundamental concepts first. That way you have some building blocks in your toolkit for when you start doing projects.
+
+To be clear, I'm not saying to go overboard and avoid projects for a long time. I've just found it easier to start projects if I've done some fundamental things first, like showing some text in the browser or responding to a button click.
+
+
+
+Mistake #6: Not Practicing Under Real-Life Conditions
+
+When you're learning JavaScript, you might end up practicing under conditions that don't match real life. For example, you might be typing inside a website's built-in code editor, or you might be depending on a pasted file from a tutorial.
+
+These approaches can be great for learning, but it's also important to try the material on your own. That would mean using your own text editor and coding a concept from scratch.
+
+If you don't take a bit of time to practice each concept on your own, you'll come to depend on the training wheels. Then you end up in a situation where you've spent all this time learning, but you can't seem to apply any of it on your own.
+
+
+
+Mistake #7: Comparing Oneself to More Advanced People
+
+
+
 - see one's own bloopers and other people's highlights
 - people have seen my tutorials and asked how I wrote such clean code; the whole process was actually a mess and they're just seeing the polished version
 
