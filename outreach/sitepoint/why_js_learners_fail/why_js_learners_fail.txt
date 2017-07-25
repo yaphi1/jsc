@@ -81,21 +81,46 @@ If you don't take a bit of time to practice each concept on your own, you'll com
 
 Mistake #7: Comparing Oneself to More Advanced People
 
+One of the easiest ways to get discouraged is to compare yourself to more advanced people. That's because you're looking at where they are instead of how they got there.
+
+To use a personal example, people have seen my tutorials and asked how I wrote such clean code. They then said they couldn't write clean code like that, so maybe they just weren't cut out for JavaScript.
+
+The truth is that my process was a mess. I experimented, made mistakes, looked things up, wrote ugly code, and finally refined everything into a presentable tutorial. People saw the polished version, and assumed the whole process was like that. I also made these assumptions about tutorial writers until I started writing my own.
+
+The point is, just focus on what you're learning right now, and you'll get better at that. Keep repeating this process, and soon you'll be at a point where other people wonder how you got there.
 
 
-- see one's own bloopers and other people's highlights
-- people have seen my tutorials and asked how I wrote such clean code; the whole process was actually a mess and they're just seeing the polished version
 
-consuming information and not actually coding
-- watching videos, reading tutorials, etc; feel like you're learning, but you're not; need to actually write code
+Mistake #8: Consuming Information and Not Actually Coding
 
-following tutorials without understanding or experimenting
-- linearly following steps; doesn't teach practice of solving a problem which is much more experimental and incremental
-- instead, experiment with each step; example: for slideshow, experiment with responding to a click, then animation, then whatever else
+It's easy to spend a lot of time watching videos and reading tutorials, but you won't really learn unless you actually write code.
 
-conclusion
-- all points lead people to give up, which is the biggest mistake of all
-- if it's difficult sometimes, that's good; it means you're learning new things; if it's always too easy, that might be bad since you're not stretching your abilities
+The dangerous part about consuming information without acting on it is that you'll feel like you're learning. Then six months later, you'll find yourself unable to apply any of what you've learned.
+
+Fifteen minutes of actually coding can often teach you more than an hour of consuming information.
+
+
+
+Mistake #9: Following Tutorials Without Understanding or Experimenting
+
+When reading tutorials, it's tempting to just copy the steps in a linear way. This approach doesn't teach the process of solving a problem, which typically involves experimenting and taking small steps in various directions. As a result, someone who follows tutorials in a linear way will often be unable to apply the knowledge afterwards.
+
+So what's the solution?
+
+Instead of copying each step, take time to experiment. For example, if you're doing a slideshow tutorial, experiment with showing and hiding divs, then experiment with timing, and then try another small piece. You'll learn much more through experiments than through the linear approach, and you'll be able to apply it better too.
+
+
+
+
+Key Takeaways
+
+If there's one thing I want you to remember from this article, it's that you'll make the biggest progress by taking the smallest steps.
+
+Whatever it is you're learning, get comfortable with the fundamentals, experiment with what you've learned, and have fun.
+
+It might be difficult sometimes, but that's good. The challenge means you're stretching what you're capable of, and that's what will make you improve. If everything is always too easy, that might mean something needs to change.
+
+I hope this has been helpful, and if there's anything that has helped you learn JavaScript, feel free to share in the comments.
 
 
 
