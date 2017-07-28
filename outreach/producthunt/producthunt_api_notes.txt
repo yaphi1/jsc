@@ -1,0 +1,9 @@
+
+https://api.producthunt.com/v1/posts
+
+https://api.producthunt.com/v1/posts?access_token=b1456a4abc645fd8b5ecd88f98695ab3df7678695ae9b82a39b58cd667ea1518
+
+
+
+example from https://producthuntshell.com/js/producthuntshell.min.js:
+https://api.producthunt.com/v1/posts?days_ago="+j+"&access_token="+p
