@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+body{
+	margin: 0px;
+	font-size: 16px;
+	font-family: 'courier new', sans-serif;
+	background-color: #333;
+	color: #eee;
+}
+.code_container{
+	margin: 0px;
+	padding: 20px;
+	max-width: 100%;
+	white-space: pre-wrap;
+	font-size: 1em;
+}
+
+h2{
+	font-weight: normal;
+	font-size: 1em;
+	margin: 0px;
+	color: lightgreen;
+}
+p{
+	margin: 0px;
+}
+.tagline{
+	color: #eee;
+}
+
+.html_tag{
+	color: #eee;
+}
+
+.tagname{
+	color: #f29;
+}
+
+</style>
+
+</head>
+<body>
+
+
+<pre class="code_container">
+&lt;!DOCTYPE html&gt;
+&lt;<span class="tagname">html</span>&gt;
+&lt;<span class="tagname">head</span>&gt;
+  &lt;<span class="tagname">title</span>&gt;Code Product Hunt&lt;/<span class="tagname">title</span>&gt;
+&lt;/<span class="tagname">head</span>&gt;
+&lt;<span class="tagname">body</span>&gt;
+
+	<div id="output">Loading...</div>
+
+&lt;/<span class="tagname">body</span>&gt;
+&lt;/<span class="tagname">html</span>&gt;
+</pre>
+
+
+
+
+<script>
+
+var token = 'b1456a4abc645fd8b5ecd88f98695ab3df7678695ae9b82a39b58cd667ea1518';
+var url = 'https://api.producthunt.com/v1/posts?access_token='+token;
+
+
+var outputdiv = document.getElementById('output');
+
+
+
+
+function getJSON(url, callback){
+
+	if(!sessionStorage.producthunt_data){
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function(){
+			if(this.readyState==4 && this.status==200){
+				var response = this.responseText;
+				sessionStorage.setItem('producthunt_data', response);
+
+				var json_data = JSON.parse(response);
+				callback(json_data);
+			}
+		};
+		xhr.open('GET', url, true);
+		xhr.send();
+	}
+
+	else{
+		var data = JSON.parse(sessionStorage.producthunt_data);
+		callback(data);
+	}
+}
+
+getJSON(url, showData);
+
+
+
+function showData(data){
+	// outputdiv.innerHTML = data;
+
+	var html = [];
+
+	var posts = data.posts;
+	posts.forEach(function(v){
+		var entry = ''
+				+ '<div class="html_tag">&lt;<span class="tagname">div</span>&gt;</div>'
+					
+					// title
+					+ '<div class="html_tag">  &lt;<span class="tagname">h2</span> class="product"&gt;</div>'
+						+ '<h2>    '+v.name+' <span class="tagline">- '+v.tagline+'</span></h2>'
+					+ '<div class="html_tag">  &lt;/<span class="tagname">h2</span>&gt;</div>'
+					
+					// subtitle
+					// + '<div class="html_tag">  &lt;<span class="tagname">p</span> class="subtitle"&gt;</div>'
+					// 	+ '<p>    '+v.tagline+'</p>'
+					// + '<div class="html_tag">  &lt;/<span class="tagname">p</span>&gt;</div>'
+
+				+ '<div class="html_tag">&lt;/<span class="tagname">div</span>&gt;</div>';
+		html.push(entry);
+	});
+
+	outputdiv.innerHTML = html.join('');
+}
+
+
+
+function showComments(){
+	/*
+	sample url:
+	https://api.producthunt.com/v1/posts/104582/comments?access_token=b1456a4abc645fd8b5ecd88f98695ab3df7678695ae9b82a39b58cd667ea1518
+
+	code:
+	var token = 'b1456a4abc645fd8b5ecd88f98695ab3df7678695ae9b82a39b58cd667ea1518';
+	var post_id = '104582';
+	var url = 'https://api.producthunt.com/v1/posts/'+post_id+'/comments?access_token='+token;
+	*/
+}
+
+
+
+
+</script>
+</body>
+</html>
