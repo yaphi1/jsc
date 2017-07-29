@@ -24,7 +24,30 @@ body{
 	width: 200px;
 	overflow: scroll;
 	background-color: #555;
+	padding: 20px 0px;
+	box-sizing: border-box;
 }
+.folders_title{
+	padding: 0px 10px;
+	margin-bottom: 10px;
+}
+
+.folders a{
+	color: #eee;
+	display: block;
+	border-bottom: 1px solid #999;
+	padding: 10px 20px;
+	text-decoration: none;
+	font-size: 14px;
+}
+.folders a:hover{
+	background-color: #333;
+}
+
+
+
+
+
 
 
 .code_container{
@@ -46,7 +69,7 @@ body{
 .product_link:hover{
 	color: #8de;
 }
-.product_link > img{
+.preview{
 	display: none;
 	max-width: 300px;
 	position: fixed;
@@ -54,6 +77,23 @@ body{
 	top: 5px;
 	border: 3px solid #666;
 	border-radius: 2px;
+	text-align: center;
+	overflow: hidden;
+}
+.preview_image{
+	/* ratio 1480 x 1037 */
+	width: 300px;
+	height: 210px;
+	display: block;
+	background-size: cover;
+}
+.preview_title{
+	background-color: #eee;
+	color: #444;
+	padding: 10px;
+	display: block;
+	position: relative;
+	box-shadow: 0px 1px 3px -1px rgba(33,33,33,0.8);
 }
 
 @media(min-width: 750px){
@@ -63,23 +103,12 @@ body{
 	.code_container{
 		margin-left: 200px;
 	}
-	.product_link:hover > img{
+	.product_link:hover .preview{
 		display: block;
 	}
 }
 
 
-h2{
-	font-weight: normal;
-	font-size: 1em;
-	margin: 0px;
-	/*color: lightgreen;*/
-}
-p{
-	margin: 0px;
-}
-.tagline{
-}
 
 
 
@@ -102,6 +131,9 @@ p{
 
 
 <div class="folders">
+	<div class="folders_title">Folders</div>
+	<a href="#" class="topic_link" data-topic="">Front Page</a>
+	<a href="#" class="topic_link" data-topic="games">Games</a>
 </div>
 
 <pre class="code_container">
@@ -117,6 +149,7 @@ p{
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+
 
 
 
@@ -162,14 +195,19 @@ var outputdiv = document.getElementById('output');
 
 
 
-function getJSON(url, callback){
+function getJSON(url, callback, topic){
 
-	if(!sessionStorage.producthunt_data){
+	outputdiv.innerHTML = 'Loading...';
+
+
+	var data_title = topic ? 'producthunt_data_'+topic : 'producthunt_data';
+
+	if(!sessionStorage[data_title]){
 		var xhr = new XMLHttpRequest();
 		xhr.onreadystatechange = function(){
 			if(this.readyState==4 && this.status==200){
 				var response = this.responseText;
-				sessionStorage.setItem('producthunt_data', response);
+				sessionStorage.setItem(data_title, response);
 
 				var json_data = JSON.parse(response);
 				callback(json_data);
@@ -180,7 +218,7 @@ function getJSON(url, callback){
 	}
 
 	else{
-		var data = JSON.parse(sessionStorage.producthunt_data);
+		var data = JSON.parse(sessionStorage[data_title]);
 		callback(data);
 	}
 }
@@ -190,7 +228,6 @@ getJSON(url, showData);
 
 
 function showData(data){
-	// outputdiv.innerHTML = data;
 
 	var html = [];
 
@@ -204,7 +241,10 @@ function showData(data){
 					+ '\t&lt;h2 class="product" data-votes="'+v.votes_count+'" data-comments="'+v.comments_count+'"&gt;\n'
 						+ '\t\t<a class="product_link" href="'+v.discussion_url+'" target="_blank">'
 							+v.name+' <span class="tagline">- '+v.tagline+'</span>'
-							+'<img src="'+v.screenshot_url['300px']+'" alt="">'
+							+'<span class="preview">'
+								+'<span class="preview_title">Quick Preview:</span>'
+								+'<span class="preview_image" style="background-image:url('+v.screenshot_url['300px']+')"></span>'
+							+'</span>'
 						+'</a>\n'
 					+ '\t&lt;/h2&gt;\n'
 
@@ -235,16 +275,29 @@ function showComments(){
 function showPostsByTopic(topic){
 	/*
 	sample url for tech topic:
-	https://api.producthunt.com/v1/posts/all?access_token=b1456a4abc645fd8b5ecd88f98695ab3df7678695ae9b82a39b58cd667ea1518&search[tech]=1
+	https://api.producthunt.com/v1/posts/all?access_token=b1456a4abc645fd8b5ecd88f98695ab3df7678695ae9b82a39b58cd667ea1518&search[topic]=productivity
 
 	code:
 	var token = 'b1456a4abc645fd8b5ecd88f98695ab3df7678695ae9b82a39b58cd667ea1518';
 	var topic = 'tech';
-	var url = 'https://api.producthunt.com/v1/posts/'+post_id+'/comments?access_token='+token+'&search['+topic+']=1';
+	var url = 'https://api.producthunt.com/v1/posts/all?access_token='+token+'&search[topic]='+topic;
 	*/
+
+	var token = 'b1456a4abc645fd8b5ecd88f98695ab3df7678695ae9b82a39b58cd667ea1518';
+	var url = 'https://api.producthunt.com/v1/posts/all?access_token='+token+'&search[topic]='+topic;
+
+	getJSON(url, showData, topic);
 }
 
 
+
+
+document.querySelectorAll('.topic_link').forEach(function(v){
+	v.onclick = function(){
+		showPostsByTopic(this.getAttribute('data-topic'));
+		return false;
+	}
+});
 
 
 
