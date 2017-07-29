@@ -39,12 +39,32 @@ body{
 	tab-size: 4;
 }
 
+.product_link{
+	color: #eee;
+	text-decoration: none;
+}
+.product_link:hover{
+	color: #8de;
+}
+.product_link > img{
+	display: none;
+	max-width: 300px;
+	position: fixed;
+	right: 5px;
+	top: 5px;
+	border: 3px solid #666;
+	border-radius: 2px;
+}
+
 @media(min-width: 750px){
 	.folders{
 		display: block;
 	}
 	.code_container{
 		margin-left: 200px;
+	}
+	.product_link:hover > img{
+		display: block;
 	}
 }
 
@@ -59,7 +79,6 @@ p{
 	margin: 0px;
 }
 .tagline{
-	color: #eee;
 }
 
 
@@ -87,22 +106,52 @@ p{
 
 <pre class="code_container">
 &lt;!DOCTYPE html&gt;
-&lt;<span class="tagname">html</span>&gt;
-&lt;<span class="tagname">head</span>&gt;
-	&lt;<span class="tagname">title</span>&gt;Code Product Hunt&lt;/<span class="tagname">title</span>&gt;
-&lt;/<span class="tagname">head</span>&gt;
-&lt;<span class="tagname">body</span>&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;HTML Product Hunt&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
 
-	<div id="output">Loading...</div>
+<div id="output">Loading...</div>
 
-&lt;/<span class="tagname">body</span>&gt;
-&lt;/<span class="tagname">html</span>&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </pre>
 
 
 
 
 <script>
+function highlightSyntax(html){
+	html = html.replace(/(&lt;\/*)(\w+)((.(?!gt;))*)/gi, replacer);
+	function replacer(value, p1, p2, p3){
+
+		// within each tag, highlight the attributes		
+		p3 = p3 ? p3.replace(/\s([\w-]+)=("[^"]*")/gi,
+			' <span class="attribute_name">$1</span>='
+			+'<span class="attribute_value">$2</span>')
+			: '';
+
+		// put attributes into main tag and return the result
+		var result = p1+'<span class="tagname">'+p2+'</span>'+p3;
+		return result;
+	}
+	return html;
+}
+
+// highlight initial syntax
+(function(){
+	var initial_html = document.querySelector('.code_container').innerHTML;
+	document.querySelector('.code_container').innerHTML = highlightSyntax(initial_html);
+})();
+
+
+
+
+
+
+
+// start app
 
 var token = 'b1456a4abc645fd8b5ecd88f98695ab3df7678695ae9b82a39b58cd667ea1518';
 var url = 'https://api.producthunt.com/v1/posts?access_token='+token;
@@ -151,8 +200,12 @@ function showData(data){
 				+ '&lt;div&gt;\n'
 					
 					// product
+					// + '<img src="'+v.screenshot_url['300px']+'" style="max-width:400px;" alt="">\n'
 					+ '\t&lt;h2 class="product" data-votes="'+v.votes_count+'" data-comments="'+v.comments_count+'"&gt;\n'
-						+ '\t\t'+v.name+' <span class="tagline">- '+v.tagline+'</span>\n'
+						+ '\t\t<a class="product_link" href="'+v.discussion_url+'" target="_blank">'
+							+v.name+' <span class="tagline">- '+v.tagline+'</span>'
+							+'<img src="'+v.screenshot_url['300px']+'" alt="">'
+						+'</a>\n'
 					+ '\t&lt;/h2&gt;\n'
 
 				+ '&lt;/div&gt;\n';
@@ -193,22 +246,6 @@ function showPostsByTopic(topic){
 
 
 
-function highlightSyntax(html){
-	html = html.replace(/(&lt;\/*)(\w+)((.(?!gt;))*)/gi, replacer);
-	function replacer(value, p1, p2, p3){
-
-		// within each tag, highlight the attributes		
-		p3 = p3 ? p3.replace(/\s([\w-]+)=("[^"]*")/gi,
-			' <span class="attribute_name">$1</span>='
-			+'<span class="attribute_value">$2</span>')
-			: '';
-
-		// put attributes into main tag and return the result
-		var result = p1+'<span class="tagname">'+p2+'</span>'+p3;
-		return result;
-	}
-	return html;
-}
 
 
 
