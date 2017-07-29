@@ -33,10 +33,6 @@ body{
 	max-width: 100%;
 	white-space: pre-wrap;
 	font-size: 1em;
-
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
-	tab-size: 4;
 }
 
 @media(min-width: 750px){
@@ -62,42 +58,45 @@ p{
 	color: #eee;
 }
 
-
-
+.html_tag{
+	color: #eee;
+}
 
 .tagname{
 	color: #f29;
 }
-.attribute_name{
-	color: #ae7;
-}
-.attribute_value{
-	color: #ed8;
-}
 
 </style>
 
+<link rel="stylesheet" type="text/css" href="./prism.css">
 </head>
 <body>
-
 
 
 <div class="folders">
 </div>
 
-<pre class="code_container">
+<div class="code_container">
+
+<pre><code class="language-markup">
 &lt;!DOCTYPE html&gt;
-&lt;<span class="tagname">html</span>&gt;
-&lt;<span class="tagname">head</span>&gt;
-	&lt;<span class="tagname">title</span>&gt;Code Product Hunt&lt;/<span class="tagname">title</span>&gt;
-&lt;/<span class="tagname">head</span>&gt;
-&lt;<span class="tagname">body</span>&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Code Product Hunt&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+</code></pre>
 
-	<div id="output">Loading...</div>
+<pre><code class="language-markup" id="output">
+Loading...
+</code></pre>
 
-&lt;/<span class="tagname">body</span>&gt;
-&lt;/<span class="tagname">html</span>&gt;
-</pre>
+<pre><code class="language-markup">
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+</div>
 
 
 
@@ -150,14 +149,17 @@ function showData(data){
 		var entry = ''
 				+ '&lt;div&gt;\n'
 					
-					// product
-					+ '\t&lt;h2 class="product" data-votes="'+v.votes_count+'" data-comments="'+v.comments_count+'"&gt;\n'
-						+ '\t\t'+v.name+' <span class="tagline">- '+v.tagline+'</span>\n'
-					+ '\t&lt;/h2&gt;\n'
+					// title
+					+ '  &lt;h2 class="product" data-votes="'+v.votes_count+'"&gt;\n'
+						+ '<h2>    '+v.name+' <span class="tagline">- '+v.tagline+'</span></h2>\n'
+					+ '  &lt;/h2&gt;\n'
+					
+					// subtitle
+					// + '  &lt;p class="subtitle"&gt;</div>'
+					// 	+ '<p>    '+v.tagline+'</p>'
+					// + '  &lt;/p&gt;</div>'
 
 				+ '&lt;/div&gt;\n';
-
-		entry = highlightSyntax(entry);
 		html.push(entry);
 	});
 
@@ -193,25 +195,10 @@ function showPostsByTopic(topic){
 
 
 
-function highlightSyntax(html){
-	html = html.replace(/(&lt;\/*)(\w+)((.(?!gt;))*)/gi, replacer);
-	function replacer(value, p1, p2, p3){
-
-		// within each tag, highlight the attributes		
-		p3 = p3 ? p3.replace(/\s([\w-]+)=("[^"]*")/gi,
-			' <span class="attribute_name">$1</span>='
-			+'<span class="attribute_value">$2</span>')
-			: '';
-
-		// put attributes into main tag and return the result
-		var result = p1+'<span class="tagname">'+p2+'</span>'+p3;
-		return result;
-	}
-	return html;
-}
-
 
 
 </script>
+
+<script src="prism.js"></script>
 </body>
 </html>
