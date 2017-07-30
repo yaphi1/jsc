@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
+<title>HTML Product Hunt</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -35,8 +35,8 @@ body{
 .folders a{
 	color: #eee;
 	display: block;
-	border-bottom: 1px solid #999;
-	padding: 10px 20px;
+	/*border-bottom: 1px solid #999;*/
+	padding: 10px;
 	text-decoration: none;
 	font-size: 14px;
 }
@@ -132,8 +132,9 @@ body{
 
 <div class="folders">
 	<div class="folders_title">Folders</div>
-	<a href="#" class="topic_link" data-topic="">Front Page</a>
-	<a href="#" class="topic_link" data-topic="games">Games</a>
+	<a href="#" class="topic_link" data-topic="">&gt; Front Page</a>
+	
+	<div id="topic_container">Loading...</div>
 </div>
 
 <pre class="code_container">
@@ -143,6 +144,10 @@ body{
 	&lt;title&gt;HTML Product Hunt&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
+
+&lt;h1&gt;
+	<span id="topic_title">Front Page</span>
+&lt;/h1&gt;
 
 <div id="output">Loading...</div>
 
@@ -187,8 +192,6 @@ function highlightSyntax(html){
 // start app
 
 var token = 'b1456a4abc645fd8b5ecd88f98695ab3df7678695ae9b82a39b58cd667ea1518';
-var url = 'https://api.producthunt.com/v1/posts?access_token='+token;
-
 
 var outputdiv = document.getElementById('output');
 
@@ -196,9 +199,6 @@ var outputdiv = document.getElementById('output');
 
 
 function getJSON(url, callback, topic){
-
-	outputdiv.innerHTML = 'Loading...';
-
 
 	var data_title = topic ? 'producthunt_data_'+topic : 'producthunt_data';
 
@@ -223,15 +223,22 @@ function getJSON(url, callback, topic){
 	}
 }
 
-getJSON(url, showData);
+
+(function initTopics(){
+	var url = 'https://api.producthunt.com/v1/posts?access_token='+token;
+	outputdiv.innerHTML = 'Loading...';
+	getJSON(url, showPosts);
+})();
 
 
 
-function showData(data){
+
+function showPosts(data){
 
 	var html = [];
 
 	var posts = data.posts;
+
 	posts.forEach(function(v){
 		var entry = ''
 				+ '&lt;div&gt;\n'
@@ -272,34 +279,78 @@ function showComments(){
 }
 
 
-function showPostsByTopic(topic){
+function showPostsByTopic(topic, topic_name){
 	/*
 	sample url for tech topic:
 	https://api.producthunt.com/v1/posts/all?access_token=b1456a4abc645fd8b5ecd88f98695ab3df7678695ae9b82a39b58cd667ea1518&search[topic]=productivity
-
-	code:
-	var token = 'b1456a4abc645fd8b5ecd88f98695ab3df7678695ae9b82a39b58cd667ea1518';
-	var topic = 'tech';
-	var url = 'https://api.producthunt.com/v1/posts/all?access_token='+token+'&search[topic]='+topic;
 	*/
 
 	var token = 'b1456a4abc645fd8b5ecd88f98695ab3df7678695ae9b82a39b58cd667ea1518';
 	var url = 'https://api.producthunt.com/v1/posts/all?access_token='+token+'&search[topic]='+topic;
 
-	getJSON(url, showData, topic);
+	document.getElementById('topic_title').innerHTML = topic_name;
+	outputdiv.innerHTML = 'Loading...';
+	getJSON(url, showPosts, topic);
 }
 
 
 
 
-document.querySelectorAll('.topic_link').forEach(function(v){
-	v.onclick = function(){
-		showPostsByTopic(this.getAttribute('data-topic'));
+
+
+
+
+document.querySelector('.folders').onclick = function(e){
+	var elem = e.target;
+
+	if(/topic_link/.test(elem.className)){
+		showPostsByTopic(elem.getAttribute('data-topic'), elem.innerHTML.slice(5));
 		return false;
 	}
-});
+};
 
 
+
+
+
+
+
+
+
+
+function showTopics(data){
+
+	var topic_container = document.getElementById('topic_container');
+
+	var html = [];
+
+	var topics = data.topics;
+	topics.forEach(function(v){
+		var entry = '<a href="#" class="topic_link" data-topic="'+v.slug+'">&gt; '+v.name+'</a>';
+
+		html.push(entry);
+	});
+
+	topic_container.innerHTML = html.join('');
+}
+
+(function initTopics(){
+	var url = 'https://api.producthunt.com/v1/topics?access_token=b1456a4abc645fd8b5ecd88f98695ab3df7678695ae9b82a39b58cd667ea1518&search[trending]=true&sort_by=updated_at&order=desc';
+	getJSON(url, showTopics, 'topics');
+})();
+
+
+/*
+
+TODO:
+
+	add simple steps info
+
+	add view comments functionality
+
+	comment everything
+
+*/
 
 
 </script>
