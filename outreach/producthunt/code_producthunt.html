@@ -14,6 +14,29 @@ body{
 	color: #eee;
 }
 
+a{
+	color: #eee;
+	text-decoration: none;
+}
+a:hover{
+	color: #8de;
+}
+
+.simple_steps_link{
+	color: #8de;
+}
+.simple_steps_link:hover{
+	color: #ed8;
+	text-decoration: underline;
+}
+
+.top_link{
+	color: #eee;
+}
+.top_link:hover{
+	color: #eee;
+	text-decoration: underline;
+}
 
 .folders{
 	display: none;
@@ -41,6 +64,7 @@ body{
 	font-size: 14px;
 }
 .folders a:hover{
+	color: #eee;
 	background-color: #333;
 }
 
@@ -123,6 +147,11 @@ body{
 	color: #ed8;
 }
 
+.indent_2{
+	margin-left: 5em;
+	display: inline-block;
+}
+
 </style>
 
 </head>
@@ -132,7 +161,7 @@ body{
 
 <div class="folders">
 	<div class="folders_title">Folders</div>
-	<a href="#" class="topic_link" data-topic="">&gt; Front Page</a>
+	<a href="#" class="topic_link" data-topic="" data-topic-name="Front Page">&gt; Front Page</a>
 	
 	<div id="topic_container">Loading...</div>
 </div>
@@ -142,6 +171,12 @@ body{
 &lt;html&gt;
 &lt;head&gt;
 	&lt;title&gt;HTML Product Hunt&lt;/title&gt;
+	&lt;!--
+		Made by: <a class="simple_steps_link" href="https://simplestepscode.com/learn-javascript/" target="_blank">Simple Steps Code - Learn JavaScript Fast</a>
+
+		Inspired by: <a class="top_link" href="http://www.codereddit.com/" target="_blank">Code Reddit</a>, <a class="top_link" href="https://www.producthunt.com/posts/product-hunt-shell" target="_blank">Product Hunt Shell</a>
+		Data from: <a class="top_link" href="https://www.producthunt.com/" target="_blank">Product Hunt</a>
+	--&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
@@ -224,7 +259,20 @@ function getJSON(url, callback, topic){
 }
 
 
-(function initTopics(){
+
+
+
+
+
+
+
+
+// **************************************************
+// POSTS
+// **************************************************
+
+
+(function initPosts(){
 	var url = 'https://api.producthunt.com/v1/posts?access_token='+token;
 	outputdiv.innerHTML = 'Loading...';
 	getJSON(url, showPosts);
@@ -244,9 +292,8 @@ function showPosts(data){
 				+ '&lt;div&gt;\n'
 					
 					// product
-					// + '<img src="'+v.screenshot_url['300px']+'" style="max-width:400px;" alt="">\n'
 					+ '\t&lt;h2 class="product" data-votes="'+v.votes_count+'" data-comments="'+v.comments_count+'"&gt;\n'
-						+ '\t\t<a class="product_link" href="'+v.discussion_url+'" target="_blank">'
+						+ '\t\t<a class="product_link" href="'+v.discussion_url+'" target="_blank" title="Reminder: this link will take you to Product Hunt">'
 							+v.name+' <span class="tagline">- '+v.tagline+'</span>'
 							+'<span class="preview">'
 								+'<span class="preview_title">Quick Preview:</span>'
@@ -254,6 +301,13 @@ function showPosts(data){
 							+'</span>'
 						+'</a>\n'
 					+ '\t&lt;/h2&gt;\n'
+
+					// comments link
+					+ '\t&lt;p&gt;\n'
+						+ '\t\t&lt;a href="#" class="comments_link"&gt;'
+						+ '<a href="#" class="comments_link" data-post-id="'+v.id+'" data-post-title="'+v.name+' - '+v.tagline+'" data-post-url="'+v.discussion_url+'">View comments</a>'
+						+ '&lt;/a&gt;\n'
+					+ '\t&lt;/p&gt;\n'
 
 				+ '&lt;/div&gt;\n';
 
@@ -266,17 +320,6 @@ function showPosts(data){
 
 
 
-function showComments(){
-	/*
-	sample url:
-	https://api.producthunt.com/v1/posts/104582/comments?access_token=b1456a4abc645fd8b5ecd88f98695ab3df7678695ae9b82a39b58cd667ea1518
-
-	code:
-	var token = 'b1456a4abc645fd8b5ecd88f98695ab3df7678695ae9b82a39b58cd667ea1518';
-	var post_id = '104582';
-	var url = 'https://api.producthunt.com/v1/posts/'+post_id+'/comments?access_token='+token;
-	*/
-}
 
 
 function showPostsByTopic(topic, topic_name){
@@ -288,7 +331,11 @@ function showPostsByTopic(topic, topic_name){
 	var token = 'b1456a4abc645fd8b5ecd88f98695ab3df7678695ae9b82a39b58cd667ea1518';
 	var url = 'https://api.producthunt.com/v1/posts/all?access_token='+token+'&search[topic]='+topic;
 
-	document.getElementById('topic_title').innerHTML = topic_name;
+	var topic_title = document.getElementById('topic_title');
+	topic_title.setAttribute('data-topic', topic);
+	topic_title.setAttribute('data-topic-name', topic_name);
+	topic_title.innerHTML = topic_name;
+
 	outputdiv.innerHTML = 'Loading...';
 	getJSON(url, showPosts, topic);
 }
@@ -300,22 +347,25 @@ function showPostsByTopic(topic, topic_name){
 
 
 
-document.querySelector('.folders').onclick = function(e){
+
+
+
+
+// **************************************************
+// TOPICS
+// **************************************************
+
+
+
+// topics links
+document.querySelector('body').addEventListener('click', function(e){
 	var elem = e.target;
 
 	if(/topic_link/.test(elem.className)){
-		showPostsByTopic(elem.getAttribute('data-topic'), elem.innerHTML.slice(5));
-		return false;
+		e.preventDefault();
+		showPostsByTopic(elem.getAttribute('data-topic'), elem.getAttribute('data-topic-name'));
 	}
-};
-
-
-
-
-
-
-
-
+});
 
 
 function showTopics(data){
@@ -326,7 +376,7 @@ function showTopics(data){
 
 	var topics = data.topics;
 	topics.forEach(function(v){
-		var entry = '<a href="#" class="topic_link" data-topic="'+v.slug+'">&gt; '+v.name+'</a>';
+		var entry = '<a href="#" class="topic_link" data-topic="'+v.slug+'" data-topic-name="'+v.name+'">&gt; '+v.name+'</a>';
 
 		html.push(entry);
 	});
@@ -340,15 +390,123 @@ function showTopics(data){
 })();
 
 
+
+
+
+
+
+
+
+
+
+
+// **************************************************
+// COMMENTS
+// **************************************************
+
+
+function viewComments(post_id, post_title, post_url, topic, topic_name){
+	/*
+	sample url:
+	https://api.producthunt.com/v1/posts/104582/comments?access_token=b1456a4abc645fd8b5ecd88f98695ab3df7678695ae9b82a39b58cd667ea1518
+	*/
+
+	outputdiv.innerHTML = 'Loading...';
+
+	var token = 'b1456a4abc645fd8b5ecd88f98695ab3df7678695ae9b82a39b58cd667ea1518';
+	var url = 'https://api.producthunt.com/v1/posts/'+post_id+'/comments?access_token='+token;
+
+	getJSON(url, showComments, 'comments_'+post_id);
+
+
+	// give default values for topic parameters
+	topic = topic || '';
+	console.log(topic);
+	topic_name = topic_name || 'Front Page';
+
+	// show post title and "back to topic" link
+	var topic_title = document.getElementById('topic_title');
+	var topic_html = ''
+
+					// post title
+					+ '&lt;span class="view_product"&gt;\n'
+						+ '\t\t<a href="'+post_url+'" target="_blank" title="Reminder: this link will take you to Product Hunt">'
+							+ post_title
+						+ '</a>\n'
+					+ '\t&lt;/span&gt;\n'
+
+					// back to topic
+					+ '\t&lt;span class="back_to_topic"&gt;\n'
+						+ '\t\t<a href="#" class="topic_link" data-topic="'+topic+'" data-topic-name="'+topic_name+'">'
+							+ 'Go back to topic: '+topic_name
+						+ '</a>\n'
+					+ '\t&lt;/span&gt;';
+
+	topic_title.innerHTML = highlightSyntax(topic_html);
+	topic_title.setAttribute('data-topic-name', topic_name);
+}
+
+
+
+
+function showComments(data){
+
+	var html = [];
+
+	var posts = data.comments;
+
+	posts.forEach(function(v){
+		var entry = ''
+				+ '&lt;div class="comment"&gt;\n'
+
+					// commenter
+					+ '\t&lt;p class="user"&gt;\n'
+						+'\t\t'+v.user.name+' - '+(v.user.headline||'Product Hunt User')+'\n'
+					+ '\t&lt;/p&gt;\n'
+
+					// comment text
+					+ '\t&lt;blockquote class="comment_text"&gt;\n'
+						+'<span class="indent_2">'+v.body+'</span>\n'
+					+ '\t&lt;/blockquote&gt;\n'
+
+				+ '&lt;/div&gt;\n\n';
+
+		entry = highlightSyntax(entry);
+		html.push(entry);
+	});
+
+	outputdiv.innerHTML = html.join('');
+}
+
+
+
+// comments links
+outputdiv.addEventListener('click', function(e){
+	var elem = e.target;
+	var topic = document.getElementById('topic_title').getAttribute('data-topic');
+	var topic_name = document.getElementById('topic_title').getAttribute('data-topic-name');
+
+	if(/comments_link/.test(elem.className)){
+		e.preventDefault();
+		viewComments(elem.getAttribute('data-post-id'), elem.getAttribute('data-post-title'), elem.getAttribute('data-post-url'), topic, topic_name);
+	}
+});
+
+
+
+
+
 /*
 
 TODO:
 
 	add simple steps info
 
-	add view comments functionality
-
 	comment everything
+
+	later:
+	- add comment threading (recursively)
+	- update url state to let back button and url sharing work
 
 */
 
