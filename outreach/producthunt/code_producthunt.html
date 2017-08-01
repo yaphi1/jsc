@@ -149,7 +149,7 @@ a:hover{
 
 .indent_2{
 	margin-left: 5em;
-	display: inline-block;
+	display: block;
 }
 
 </style>
@@ -242,6 +242,8 @@ function getJSON(url, callback, topic){
 		xhr.onreadystatechange = function(){
 			if(this.readyState==4 && this.status==200){
 				var response = this.responseText;
+
+				// keep the data temporarily stored to avoid repeatedly drilling the api
 				sessionStorage.setItem(data_title, response);
 
 				var json_data = JSON.parse(response);
@@ -297,7 +299,7 @@ function showPosts(data){
 							+v.name+' <span class="tagline">- '+v.tagline+'</span>'
 							+'<span class="preview">'
 								+'<span class="preview_title">Quick Preview:</span>'
-								+'<span class="preview_image" style="background-image:url('+v.screenshot_url['300px']+')"></span>'
+								+'<span class="preview_image" style="background-image:url('+v.screenshot_url['300px'].replace(/http:/gi,'https:')+')"></span>'
 							+'</span>'
 						+'</a>\n'
 					+ '\t&lt;/h2&gt;\n'
@@ -416,6 +418,7 @@ function viewComments(post_id, post_title, post_url, topic, topic_name){
 	var token = 'b1456a4abc645fd8b5ecd88f98695ab3df7678695ae9b82a39b58cd667ea1518';
 	var url = 'https://api.producthunt.com/v1/posts/'+post_id+'/comments?access_token='+token;
 
+	// get data and pass it to our showComments function to get shown
 	getJSON(url, showComments, 'comments_'+post_id);
 
 
@@ -427,7 +430,6 @@ function viewComments(post_id, post_title, post_url, topic, topic_name){
 	// show post title and "back to topic" link
 	var topic_title = document.getElementById('topic_title');
 	var topic_html = ''
-
 					// post title
 					+ '&lt;span class="view_product"&gt;\n'
 						+ '\t\t<a href="'+post_url+'" target="_blank" title="Reminder: this link will take you to Product Hunt">'
@@ -452,10 +454,13 @@ function viewComments(post_id, post_title, post_url, topic, topic_name){
 function showComments(data){
 
 	var html = [];
+	var child_html = [];
 
-	var posts = data.comments;
+	var comments = data.comments;
 
-	posts.forEach(function(v){
+	comments.forEach(function(v){
+
+		// start with top-level comments
 		var entry = ''
 				+ '&lt;div class="comment"&gt;\n'
 
@@ -466,13 +471,38 @@ function showComments(data){
 
 					// comment text
 					+ '\t&lt;blockquote class="comment_text"&gt;\n'
-						+'<span class="indent_2">'+v.body+'</span>\n'
+						+'<span class="indent_2">'+v.body+'</span>'
 					+ '\t&lt;/blockquote&gt;\n'
 
 				+ '&lt;/div&gt;\n\n';
 
 		entry = highlightSyntax(entry);
 		html.push(entry);
+
+
+		// add sub comments if any
+		if(v.child_comments_count){
+			v.child_comments.forEach(function(child_comment){
+				var sub_entry = ''
+					+ '<div class="indent_2">&lt;div class="sub_comment"&gt;\n'
+
+						// commenter
+						+ '\t&lt;p class="user"&gt;\n'
+							+'\t\t'+child_comment.user.name+' - '+(child_comment.user.headline||'Product Hunt User')+'\n'
+						+ '\t&lt;/p&gt;\n'
+
+						// comment text
+						+ '\t&lt;blockquote class="comment_text"&gt;\n'
+							+'<span class="indent_2">'+child_comment.body+'</span>'
+						+ '\t&lt;/blockquote&gt;\n'
+
+					+ '&lt;/div&gt;\n\n</div>';
+
+				sub_entry = highlightSyntax(sub_entry);
+				child_html.push(sub_entry);
+			});
+			html.push(child_html.join(''));
+		}
 	});
 
 	outputdiv.innerHTML = html.join('');
@@ -497,17 +527,8 @@ outputdiv.addEventListener('click', function(e){
 
 
 /*
-
 TODO:
-
-	add simple steps info
-
-	comment everything
-
-	later:
-	- add comment threading (recursively)
 	- update url state to let back button and url sharing work
-
 */
 
 
