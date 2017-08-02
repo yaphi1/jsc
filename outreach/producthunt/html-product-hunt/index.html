@@ -455,7 +455,6 @@ function viewComments(post_id, post_title, post_url, topic, topic_name){
 function showComments(data){
 
 	var html = [];
-	var child_html = [];
 
 	var comments = data.comments;
 
@@ -483,6 +482,7 @@ function showComments(data){
 
 		// add sub comments if any
 		if(v.child_comments_count){
+			var child_html = [];
 			v.child_comments.forEach(function(child_comment){
 				var sub_entry = ''
 					+ '<div class="indent_2">&lt;div class="sub_comment"&gt;\n'
