@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Array Methods</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+body {
+	margin: 0px;
+	font-size: 20px;
+	font-family: courier, monospace;
+	color: #333;
+	text-align: center;
+}
+.container{
+	margin: 30px;
+	padding: 30px 10px;
+	background-color: #fafafa;
+	text-align: center;
+	/*color: #fff;*/
+	animation: container_color 2s infinite alternate;
+}
+@keyframes container_color{
+	0% {background-color: #ddfec3;}
+	40% {background-color: #ddfec3;}
+	60% {background-color: #fed3c3;}
+	100% {background-color: #fed3c3;}
+}
+
+.container span{
+	display: inline-block;
+}
+
+
+.title_words{
+	position: relative;
+	padding-bottom: 30px;
+	font-size: 40px;
+	overflow: hidden;
+}
+.word_1{
+	animation: move_word 2s infinite alternate;
+}
+.word_2{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	animation: move_word 2s infinite alternate-reverse;
+}
+
+@keyframes move_word{
+	0% {transform: translateX(0em); opacity: 1;}
+	40% {transform: translateX(0em); opacity: 1;}
+	60% {transform: translateX(3em); opacity: 0;}
+	100% {transform: translateX(3em); opacity: 0;}
+}
+
+
+
+.move_down{
+	animation: go_down 2s infinite alternate;
+	/*color: #0ad;*/
+	position: relative;
+}
+.move_down:before{
+	content: '';
+	position: absolute;
+	top: -0.3em;
+	left: -0.1em;
+	width: 2em;
+	height: 2em;
+	background-color: gold;
+	z-index: -1;
+	border-radius: 50%;
+	animation: flare 2s infinite alternate;
+}
+
+@keyframes go_down{
+	0% {transform: translateY(0em); opacity: 1;}
+	40% {transform: translateY(0em); opacity: 1;}
+	60% {transform: translateY(3em); opacity: 0;}
+	100% {transform: translateY(3em); opacity: 0;}
+}
+
+@keyframes flare{
+	0% {transform: scale(5); opacity: 0;}
+	35% {transform: scale(5); opacity: 0;}
+	60% {transform: scale(0); opacity: 1;}
+	100% {transform: scale(0); opacity: 1;}
+}
+
+.move_left{
+	animation: go_left 2s infinite alternate;
+}
+
+@keyframes go_left{
+	0% {transform: translateX(0em);}
+	40% {transform: translateX(0em);}
+	60% {transform: translateX(-3em);}
+	100% {transform: translateX(-3em);}
+}
+
+
+.vanishing_comma{
+	animation: vanish 2s infinite alternate;
+}
+
+@keyframes vanish{
+	0% {opacity: 1;}
+	30% {opacity: 1;}
+	45% {opacity: 0;}
+	100% {opacity: 0;}
+}
+
+</style>
+
+</head>
+<body>
+
+Unshift and shift make the whole array shift sideways.
+<div class="container">
+	<div class="title_words">
+		<div class="word_1">Unshift</div>
+		<div class="word_2">Shift</div>
+	</div>
+	var arr = [<span class="move_down">'a'</span><span class="vanishing_comma">,</span>
+	<span class="move_left">'b', 'c', 'd', 'e'];</span>
+</div>
+
+Push and pop do not make the array shift sideways.
+<div class="container">
+	<div class="title_words">
+		<div class="word_1">Push</div>
+		<div class="word_2">Pop</div>
+	</div>
+	var arr = ['a', 'b', 'c', 'd'<span class="vanishing_comma">,</span> 
+	<span class="move_down">'e'</span><span class="move_left">];</span>
+</div>
+
+In each of those pairs (push/pop and unshift/shift), the longer word makes the array longer.
+
+</body>
+</html>
