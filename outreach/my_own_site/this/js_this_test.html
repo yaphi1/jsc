@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+body{
+	margin: 0px;
+	font-size:20px;
+	font-family:sans-serif;
+	color:#333;
+}
+</style>
+
+</head>
+<body>
+
+
+
+
+<script>
+
+var car = {
+	currentSpeed: 0,
+
+	goFaster: function(){
+		this.currentSpeed += 10;
+	}
+}
+
+console.log('speed before: ' + car.currentSpeed);
+car.goFaster();
+console.log('speed after: ' + car.currentSpeed);
+
+</script>
+</body>
+</html>
