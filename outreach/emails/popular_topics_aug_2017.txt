@@ -1,0 +1,30 @@
+
+Last week, I asked what you wanted to hear more about.
+
+The replies were very helpful! The most popular topics had to do with coding tips, career stuff, and frameworks.
+
+Here are the topics I'm planning to cover based on what everyone said they wanted. If there's anything you really wanted to see that's not on here, feel free to let me know. Keep in mind I'm best at answering questions about raw HTML, CSS, and JavaScript rather than any one framework.
+
+Upcoming Topics
+
+HTML, CSS, and JavaScript tips:
+- How to learn JavaScript
+- Advanced HTML and CSS
+- Cross-browser CSS tips
+- How to use APIs
+- Info about ES6
+- Take common page components or plugins and explain how to make your own (menus, slideshows, twitter feeds, animations, navigation, responsive layouts, templates, etc)
+
+Career tips:
+- What makes a good portfolio
+- JavaScript interview tips
+- How to prepare for a front-end dev job besides your portfolio
+- What channels to use to get hired as dev
+- What separates a pro vs a novice and how do you know where you stand?
+
+Tools and frameworks:
+- Is it better to learn JavaScript from scratch or start with frameworks?
+- Is it possible to build a website without frameworks?
+- What tools do devs use on a daily basis?
+
+Hopefully you'll find the upcoming material helpful!
