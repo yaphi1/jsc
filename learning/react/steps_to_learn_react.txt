@@ -5,6 +5,9 @@ get npm and node prepared
 
 update node to latest version
 
+also had to type "npm update" when things didn't work
+
+
 
 follow installation here:
 https://facebook.github.io/react/docs/installation.html
@@ -65,10 +68,37 @@ tried to jump ahead and use styles
 - actually: babel compiles jsx down to React.createElement() calls
 
 
+- found the main page file in my_app/public/index.html
+
+skipped from "components and props" to "lists and keys" just to test something about looping through components (to show a list of profiles for example)
+
+- note: need keys to loop through stuff for performance and rendering [only use for lists though! not regular components]
 
 
 
+getting lost in part on state and lifecycle:
+https://facebook.github.io/react/docs/state-and-lifecycle.html
 
+questions:
+- why classes?
+- what is going on with super?
+- is there an alternative here?
+- I see people saying not to use classes in React, but I haven't seen one code sample of what to do instead
+
+summary of why not classes:
+https://github.com/joshburgess/not-awesome-es6-classes/
+
+I'll have to take a break and come back to this
+
+
+
+events are straightforward: just put the function in the component and add it to the onClick attribute (notice onClick capitalization)
+
+
+
+notes on what's used in create-react-app:
+- url: https://github.com/facebookincubator/create-react-app
+- tech used: babel, webpack, react, reactDOM?, eslint?
 
 
 
