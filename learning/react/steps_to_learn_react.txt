@@ -1,0 +1,74 @@
+
+get comfortable with command line (specifically: ls, cd)
+
+get npm and node prepared
+
+update node to latest version
+
+
+follow installation here:
+https://facebook.github.io/react/docs/installation.html
+
+- note that commands given didn't work until I started typing sudo right before them
+
+- after it's all installed and ready, navigate into your app folder and type:
+npm start
+
+
+not clear where to put code from hello world example from here:
+https://facebook.github.io/react/docs/hello-world.html
+
+first tried App.js
+then tried index.js
+
+index.js worked, but it overwrote the app component because it was writing hello world to the same div (id="root")
+
+so where is that html file with that "root" div?
+I have no idea.
+
+Let's keep going and see if the tutorial gives any help.
+
+Also it might be weird for people to see html in js but I had seen jsx before, so I wasn't lost in that part.
+
+On a whim, tried putting together App and hello world like this:
+
+ReactDOM.render(
+	<App /><h1>Hello world!</h1>,
+	document.getElementById('root')
+);
+
+... but it caused an error because apparently if you put two tags next to each other in React, you need to put them inside a containing element, so I did this and it worked:
+
+ReactDOM.render(
+	<div>
+		<App />
+		<h1>Hello world!</h1>
+	</div>,
+	document.getElementById('root')
+);
+
+Tested <App> without trailing slash and it caused an error. In JSX, unlike html, there needs to be a slash in the tag if it's a self-closing tag.
+
+Interesting note: JSX tags use className instead of class (understandably since class is already used in js)
+
+
+looked at this page:
+https://facebook.github.io/react/docs/introducing-jsx.html
+
+pretty cool that you can put JS expressions in curly braces in the JSX
+
+tried to jump ahead and use styles
+- found a good error message, but need to go back and learn properly how JSX wants the styles to be
+
+
+- jsx turns these weird-looking HTMLish expressions into objects
+- actually: babel compiles jsx down to React.createElement() calls
+
+
+
+
+
+
+
+
+
