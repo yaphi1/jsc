@@ -109,4 +109,13 @@ went to mdn to learn es6 class, extends, and super
 
 
 
+component properties are immutable, but state is mutable
+
+change it through something like:
+this.setState({date: new Date()})
+
+
+
+
+
 
