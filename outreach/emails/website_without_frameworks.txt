@@ -1,0 +1,53 @@
+
+
+
+[reader question] Is it possible to build a website without frameworks?
+
+
+Yes.
+
+
+To build a basic website, you need a few HTML tags and CSS styles. That's it.
+
+If you want some interactive components, then you'll need some JavaScript.
+
+
+So when would you use frameworks?
+
+Frameworks, tools, etc. are there to help you when you need them. For example, if you're making a site that a non-developer will need to edit, I tend to like WordPress. It's also good for developers with blogs.
+
+As an example, Simple Steps Code's main website doesn't use any frameworks, but the blog uses WordPress.
+
+
+If you're making something with a lot of moving parts and reusable page elements (like a social media app or a video sharing site), something like React might be a good choice because it lets you replace something like this:
+
+<div class="profile-card">
+  <h2>Name: Waluigi</h2>
+  <img src="waluigi.jpg">
+  <div class="profile-info">
+    <p>City: somewhere</p>
+    <p>Hat color: purple</p>
+  </div>
+</div>
+
+...with your own custom-made tags like this:
+
+<Profile user="Waluigi" />
+
+...which I think is pretty useful.
+
+In terms of learning, before you use a framework you'll want to get comfortable with HTML, CSS, and JavaScript.
+
+Trust me. It'll make everything much easier for you.
+
+
+Key takeaways:
+
+- Yes, you can build a website without a framework, and it happens all the time. In many cases it's easier that way!
+
+- Only use a framework when it makes a site easier to build or maintain.
+
+
+
+
+
