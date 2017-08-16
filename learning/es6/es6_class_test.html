@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+body{
+	margin: 0px;
+	font-size:20px;
+	font-family:sans-serif;
+	color:#333;
+}
+
+@media (min-width:800px) {
+}
+
+</style>
+
+</head>
+<body>
+
+
+
+
+<script>
+
+class Rectangle{
+	constructor(height,width){
+		this.height = height;
+		this.width = width;
+	}
+
+	get area(){
+		return this.calcArea();
+	}
+
+	calcArea(){
+		return this.height * this.width;
+	}
+}
+
+class coolRectangle extends Rectangle{
+	constructor(height,width,color){
+		super(height,width);
+		this.color = color;
+	}
+
+	showArea(){
+		console.log(this.height * this.width);
+	}
+}
+
+const rect = new Rectangle(10,20);
+
+console.log(rect.area);
+
+const coolRect = new coolRectangle(23,30,'red');
+
+</script>
+</body>
+</html>

@@ -31,9 +31,27 @@ const allProfiles = profileData.map((v,i)=>{
 
 
 class Clock extends React.Component {
+	constructor(props){
+		super(props);
+		this.state = {date: new Date()};
+	}
+
+	componentDidMount(){
+		this.timerID = setInterval(()=>{
+			this.tick();
+		},1000);
+	}
+	componentWillUnmount(){
+		clearInterval(this.timerID);
+	}
+
+	tick(){
+		this.setState({date: new Date()});
+	}
+
 	render(){
 		return (
-			<div>{new Date().toLocaleTimeString()}</div>
+			<div>{this.state.date.toLocaleTimeString()}</div>
 		);
 	}
 }
@@ -57,7 +75,10 @@ const payload = (
 		<h1>Profile list</h1>
 		{allProfiles}
 		Clock: <Clock />
+		<br />
 		<ActionLink />
+		<br /><br />
+		Another clock: <Clock />
 	</div>
 );
 

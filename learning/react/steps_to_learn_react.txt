@@ -88,7 +88,7 @@ questions:
 summary of why not classes:
 https://github.com/joshburgess/not-awesome-es6-classes/
 
-I'll have to take a break and come back to this
+I'll have to take a break and come back to this (going to check on es6 class and super)
 
 
 
@@ -99,6 +99,14 @@ events are straightforward: just put the function in the component and add it to
 notes on what's used in create-react-app:
 - url: https://github.com/facebookincubator/create-react-app
 - tech used: babel, webpack, react, reactDOM?, eslint?
+
+
+went to mdn to learn es6 class, extends, and super
+- class makes a type of object like a Car or an Animal
+- extends makes a subclass (another type of object that inherits properties from the parent), so like Dog extends Animal
+- super calls a function from the parent object (example: super.makeNoise()) but if you call super by itself, then it calls the parent constructor function (example: super(props))
+
+
 
 
 
