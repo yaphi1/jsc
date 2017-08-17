@@ -1875,7 +1875,7 @@ https://courses.simplestepscode.com/get-ss-javascript-course/?n=51489xy701q2307/
 
 */
 
-/*
+
 var param = (window.location.search.match(/9xy701q23([\d\/]+s\d+)(?=193z748)/i) || [])[1];
 console.log(param);
 
@@ -1906,8 +1906,9 @@ if(param){
 	// 	add that number to days_till_deadline
 	
 
-	// take care of missed days for paused emails
-	var date_emails_restarted = Date.parse(new Date(2017,6,2));
+	// take care of missed days for paused emails (january would be month 0 but days start from 1)
+	// var date_emails_restarted = Date.parse(new Date(2017,6,2));
+	var date_emails_restarted = Date.parse(new Date(2017,7,17));
 	if(date_subscribed < date_emails_restarted){
 		var missed_days = (date_emails_restarted - date_subscribed)/(1000*60*60*24);
 		days_till_deadline += missed_days;
@@ -1933,9 +1934,10 @@ function goToCourseClosedPage(){
 	// console.log('go to course closed page');
 	window.location.href = 'https://simplestepscode.com/js_course_closed/';
 }
-*/
 
-startClock(Date.parse(new Date())+(1000*60*60*3)+(1000*60*60*24*2));
+
+// uncomment for debugging
+// startClock(Date.parse(new Date())+(1000*60*60*3)+(1000*60*60*24*2));
 
 
 </script>
