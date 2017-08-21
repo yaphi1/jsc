@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>giphy test</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+body {
+	margin: 0px;
+	font-size: 20px;
+	font-family: sans-serif;
+	color: #333;
+}
+</style>
+
+</head>
+<body>
+
+<div id="output">Loading...</div>
+
+<script>
+
+var q = 'mario';
+var api_key = 'd07a69a5949a46ba9b69a62cc23d7df3';
+var host = 'https://api.giphy.com';
+var path = '/v1/gifs/search';
+var url = host+path+'?api_key='+api_key+'&q='+q+'&limit=25&lang=en';
+
+
+var outputdiv = document.getElementById('output');
+
+function getJSON(url, callback){
+	var xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = function(){
+		if(this.readyState==4 && this.status==200){
+			var data = JSON.parse(this.responseText);
+			callback(data);
+		}
+	};
+	xhr.open('GET', url, true);
+	xhr.send();
+}
+
+getJSON(url, showData);
+
+
+
+/*
+images can be found in:
+.data[x].images.______
+
+api docs:
+https://developers.giphy.com/docs/#search-endpoint
+
+api explorer:
+https://developers.giphy.com/explorer/
+
+user: technistrike
+*/
+
+function showData(data){
+
+	function generateImg(url){
+		return '<img src="'+url+'" alt="">';
+	}
+
+	var gifs = data.data;
+	var html = gifs.map(gif => generateImg(gif.images.fixed_height_small.url)).join('');
+
+	outputdiv.innerHTML = html;
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>giphy search</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,600" rel="stylesheet">
+<style type="text/css">
+body {
+	margin: 0px;
+	font-size: 20px;
+	font-family: sans-serif;
+	color: #333;
+	background-color: #fff;
+	text-align: center;
+	font-family: 'Work Sans', sans-serif;
+}
+input,
+button{
+	font-family: 'Work Sans', sans-serif;
+}
+h1{
+	font-size: 40px;
+	margin: 40px 0px 0px;
+	padding: 0px;
+	font-weight: normal;
+}
+
+#searchform{
+	/*border: 1px dashed blue;*/
+	box-shadow: 0px 2px 7px -4px rgba(33,33,33,0.5);
+	margin: 30px 5px;
+}
+#searchbar{
+	box-sizing: border-box;
+	font-size: 32px;
+	padding: 1em;
+	width: calc(100% - 4.5em);
+	border: none;
+}
+
+.search_button{
+	cursor: pointer;
+	box-sizing: border-box;
+	font-size: 32px;
+	padding: 1em;
+	/*width: 20%;*/
+	width: 4.5em;
+	border: none;
+	background-color: #f8f6f0;
+}
+.search_button:hover{
+	background-color: #fafafa;
+}
+.content_width{
+	margin: auto;
+	max-width: 1050px;
+	padding: 0px 20px;
+	font-size: 0px;
+}
+
+.gif{
+	margin: 5px;
+	vertical-align: top;
+}
+</style>
+
+</head>
+<body>
+
+<div class="content_width">
+	<h1 class="search_title">Search for gifs:</h1>
+	<form id="searchform">
+		<input id="searchbar" placeholder="" autocomplete="off">
+		<button class="search_button" type="submit">Go</button>
+	</form>
+	<div id="output"></div>
+</div>
+
+
+<script>
+
+(function(){
+
+	// grab gifs from api and show them
+
+	var getGifs = (function(){
+
+		var outputdiv = document.getElementById('output');
+
+		var api_key = 'd07a69a5949a46ba9b69a62cc23d7df3';
+		var host = 'https://api.giphy.com';
+		var path = '/v1/gifs/search';
+
+		function getJSON(url, callback){
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function(){
+				if(this.readyState==4 && this.status==200){
+					var data = JSON.parse(this.responseText);
+					callback(data);
+				}
+			};
+			xhr.open('GET', url, true);
+			xhr.send();
+		}
+
+		function showData(data){
+
+			function generateImg(url){
+				return '<img class="gif" src="'+url+'" alt="">';
+			}
+
+			var gifs = data.data;
+			var html = gifs.map(gif => generateImg(gif.images.fixed_width.url)).join('');
+
+			outputdiv.innerHTML = html;
+		}
+
+		return function(query){
+			var url = host+path+'?api_key='+api_key+'&q='+query+'&limit=25&lang=en&rating=G';
+			getJSON(url, showData);
+		};
+	})();
+
+
+
+	// let people search for gifs
+
+	var searchform = document.getElementById('searchform');
+
+	searchform.onsubmit = function(e){
+		e.preventDefault();
+		var query = document.getElementById('searchbar').value;
+		var queryCleaned = encodeURIComponent(query);
+
+		getGifs(queryCleaned);
+	};
+
+
+})();
+
+</script>
+</body>
+</html>
