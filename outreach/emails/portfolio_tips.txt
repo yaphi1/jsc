@@ -1,0 +1,78 @@
+
+
+A lot of people have asked me what makes a good portfolio.
+
+I can't speak for everyone, but I'll tell you what I've looked for when evaluating candidates.
+
+The main thing I look for is: can you do the work?
+
+Let's talk about your portfolio's content and design.
+
+
+
+Your portfolio's content
+
+
+The basics
+
+The content is the most important part, so start with this.
+
+You can start with your name, what you do (e.g.: front-end web developer), a reliable way to contact you, and some projects that show key skills. I personally like to include CodePen demos because they're a great way to showcase your code as well as the results.
+
+The convenient thing about web development is that you don't need to wait for someone to give you permission to do a project; you can just create whatever showcases your skills. Just in case, here are some project ideas:
+https://simplestepscode.com/web-development-project-ideas-from-experts/
+
+Next, you can have a quick bio and some relevant experience. If you don't have professional experience, then just show your personal projects, and as long as those show the necessary skills, you should be fine.
+
+
+Should you link to your GitHub account?
+
+GitHub is a good way to show some code samples, but not a great way to show projects. If you're depending on employers to download and set up your stuff from GitHub, there's a good chance it'll get skipped. Make the reader's life easy by linking to a usable or viewable version of the project.
+
+Short answer: Link to your GitHub account if it's interesting, but don't make it the only view of your work.
+
+
+What are some common mistakes?
+
+The most common problems I see are:
+1. Listing skills that they don't have
+2. Layout mistakes on their portfolio (like content going way off the side of the browser window)
+
+How to avoid these mistakes:
+
+1. If you've been following along up to now, you should have projects covering all or most of the skills you've listed. That's a good way to show you can do what you say you can do.
+
+2. Test your portfolio at different browser widths to make sure the layout doesn't break. Lots of layout mistakes come down to misusing or misunderstanding the CSS box-model:
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model
+
+Also, here's a primer on responsiveness:
+https://simplestepscode.com/responsive-web-development-basics/
+
+
+
+Your portfolio's design
+
+
+If your content is strong (and it should be if you've followed the previous steps here), then the design doesn't need to be overly difficult.
+
+In terms of design, it's better to do something simple and get it right than do something complicated and have it turn out terrible.
+
+Priority number 1: your design should make your content as simple as possible to see, understand, and navigate.
+
+After that, here are some tips to make it look nice:
+
+1) Read this article about design for developers: https://medium.com/@erikdkennedy/7-rules-for-creating-gorgeous-ui-part-1-559d4e805cda
+
+2) If you're stuck figuring out layout, just use a big masthead with some text overlayed on a photo (from https://www.pexels.com/ or some other free photo site), and then put a content section after that. (See the article in the previous point for how to do this.)
+
+3) If you're stuck picking a font, just use Work Sans, which you can find on Google Fonts. I like it because it's versatile (the thin versions look sleek while the thicker versions can look more friendly depending on how they're used).
+
+
+Final note:
+As much as people don't want to admit it, portfolios can sometimes partially be judged based on appearance. Simple is fine, but ugly can subconsciously hurt (unless the intent is to be funny in which case it can be great). Either way, you have control over this, so you might as well give yourself the best chance.
+
+
+
+Anyways, I hope these portfolio tips have been helpful!
+
+
