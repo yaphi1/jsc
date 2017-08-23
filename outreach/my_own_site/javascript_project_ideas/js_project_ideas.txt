@@ -1,0 +1,52 @@
+
+projects and practical uses
+(could be two separate topics because one might not be the other)
+
+
+
+
+tools and utilities
+	page that grabs data from somewhere on the web and puts it in a useful format
+	random name picker
+	scraping a page through your console (get all urls from list without copying and pasting each line)
+	secret message encoder/decoder
+
+ui
+	autocorrecting text box
+	form validator
+	collapsible navigation menu
+	countdown clock
+	modal dialog box
+	a site that lets people design ui elements (buttons, mastheads, etc.)
+
+e-commerce
+	Price estimator
+	Front end of interactive online store
+	Shopping cart front end
+
+finance
+	tip calculator
+	cost splitter
+	investment calculator
+	house or car payment calculator
+	savings calculator
+
+games and activities
+	basic quiz
+	rock-paper-scissors game
+	social network front end
+	a mario-style game
+	a zelda-style game (more likely a 2d one until 3d performance improves on the web)
+
+api stuff
+	gif search, video search, etc
+	stuff with maps
+	stuff with geolocation
+	combinations of any of the above
+
+
+
+
+
+
+
