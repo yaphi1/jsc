@@ -1,48 +1,68 @@
 
-projects and practical uses
-(could be two separate topics because one might not be the other)
 
 
+JavaScript project ideas and practical uses
 
 
-tools and utilities
-	page that grabs data from somewhere on the web and puts it in a useful format
-	random name picker
-	scraping a page through your console (get all urls from list without copying and pasting each line)
-	secret message encoder/decoder
+I'm going to keep an ongoing list of practical JavaScript project ideas since this was a highly requested topic.
 
-ui
-	autocorrecting text box
-	form validator
-	collapsible navigation menu
-	countdown clock
-	modal dialog box
-	a site that lets people design ui elements (buttons, mastheads, etc.)
+If there's anything you want to see added to this list, feel free to reply directly to this email. (All responses go directly to my personal inbox, so I will read your message.)
 
-e-commerce
+Here's the list so far:
+
+UI stuff
+	Autocorrecting text box
+	Form validator
+	Collapsible navigation menu
+	Countdown clock
+	Modal dialog box
+	A site that lets people design their own UI elements (buttons, mastheads, etc.)
+	Customize greeting if people came from a certain site
+
+E-commerce
 	Price estimator
-	Front end of interactive online store
+	Front end of an interactive online store
 	Shopping cart front end
 
-finance
-	tip calculator
-	cost splitter
-	investment calculator
-	house or car payment calculator
-	savings calculator
+Finance
+	Tip calculator
+	Cost splitter
+	Investment calculator
+	House or car payment calculator
+	Savings calculator
 
-games and activities
-	basic quiz
-	rock-paper-scissors game
-	social network front end
-	a mario-style game
-	a zelda-style game (more likely a 2d one until 3d performance improves on the web)
+Tools and utilities
+	Page that grabs data from somewhere on the web and puts it in a useful format
+	Random name picker
+	Unit conversion calculator
+	Secret message encoder/decoder
 
-api stuff
-	gif search, video search, etc
-	stuff with maps
-	stuff with geolocation
-	combinations of any of the above
+Fun and games
+	Basic quiz
+	Rock-paper-scissors game
+	Pong game
+	Madlibs
+	A mario-style game
+	A zelda-style game (more likely a 2d one until 3d performance improves on the web)
+
+Social applications
+	Social network front end
+	Real time chat app (using socket io)
+
+API stuff
+	Gif search, video search, etc
+	Something with maps (like a store locator)
+	Something with geolocation (e.g.: find XYZ near you)
+	Real-time feed of tweets about a subject of your choice
+	Text-to-speech
+	Combinations of any of the above
+
+Console tricks
+	Scrape a page through your console and get info easily without having to copy, paste, and format each thing by hand (great for research)
+	Change colors of your favorite sites to see what they'd look like
+
+
+I hope you've enjoyed this, and feel free to let me know if you have other suggestions.
 
 
 
