@@ -417,12 +417,58 @@ TESTIMONIALS
 	border-left: 3px solid #6ED19C;
 	font-style: italic;
 }
+.testimonial p{
+	margin: 0.7em 0;
+}
 
 .testimonial_name{
 	color: #6ED19C;
 }
 
-
+.review_bubble{
+	position: relative;
+	border: 1px solid #eee;
+	margin: 50px 0px 5em;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0px 1px 4px -3px rgba(33,33,33,0.5);
+	border-radius: 4px;
+	font-size: 0.9em;
+}
+.review_bubble:before{
+	content: '';
+	position: absolute;
+	bottom: -22px;
+	left: 19px;
+	width: 0px;
+	height: 0px;
+	border: 11px solid rgba(33,33,33,0.05);
+	border-bottom: 11px solid transparent;
+	border-right: 11px solid transparent;
+}
+.review_bubble:after{
+	content: '';
+	position: absolute;
+	bottom: -19px;
+	left: 20px;
+	width: 0px;
+	height: 0px;
+	border: 10px solid #fff;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid transparent;
+}
+.review_bubble p{
+	margin: 0px 0px 1em;
+}
+.review_bubble p:last-of-type{
+	margin-bottom: 0px;
+}
+.review_bubble_name{
+	position: absolute;
+	bottom: -2.5em;
+	left: 0px;
+	color: 
+}
 
 
 
@@ -826,8 +872,25 @@ div.regform .regform-form .btn-fld .regform-button{
 
 		<p>I put together a JavaScript course, so that no one would have to waste years of their life the way I did.</p>
 
+		<p>In fact, here are some customers saying how much simpler and quicker this course is:</p>
 
-		<h3>But first, why would you care about learning JavaScript?</h3>
+		<blockquote class="review_bubble">
+			<p>I often get frustrated with online programming courses because they often go along the lines of:</p>
+			<p>Lesson 1: var x = 1</p>
+			<p>Lesson 2: build me a quiz</p>
+			<p>I'm loving your Simple Steps Javascript course. It's very practical and I often find myself going back to older lessons and trying to improve my code. <strong>I struggled with Javascript for the past 2 years but now I'm finally starting to get it.</strong></p>
+			<p>Thank you so much.</p>
+			<div class="review_bubble_name">Karam F.</div>
+		</blockquote>
+
+		<blockquote class="review_bubble">
+			<p>I like your teaching style and the way you structured the course. I was used to video tutorials like in lynda, tutsplus, udemy but I still couldn't write JS maybe because I do not know how the code really worked and forcing me to write code with your explanation helped rather than copying code from project files and reading them.</p>
+			<div class="review_bubble_name">Christian Y.</div>
+		</blockquote>
+
+
+
+		<h3>But hold on. Why would you care about learning JavaScript?</h3>
 
 		<ol>
 			<li>You'll have more freedom to <b>create what you want</b>.</li>
@@ -1379,10 +1442,10 @@ div.regform .regform-form .btn-fld .regform-button{
 		</blockquote>
 
 
-		<blockquote class="testimonial">
+		<!-- <blockquote class="testimonial">
 			&ldquo;I like your teaching style and the way you structured the course. I was used to video tutorials like in lynda, tutsplus, udemy but I still couldn't write JS maybe because I do not know how the code really worked and forcing me to write code with your explanation helped rather than copying code from project files and reading them.&rdquo;
 			<br><span class="testimonial_name">- Christian Y.</span>
-		</blockquote>
+		</blockquote> -->
 
 
 		<blockquote class="testimonial">
@@ -1398,8 +1461,19 @@ div.regform .regform-form .btn-fld .regform-button{
 
 
 		<blockquote class="testimonial">
-			&ldquo;...I did a little research on JS and decided to study Javascript.  I looked around for information, and <strong>came a cross Free Code Camp, Team Treehouse and various Udemy courses out there.  I even attended several Free Code Camp meetings.  But, sadly, I just was not catching on to JS.</strong><br><br> ...Previously, I was confused (mind you, I'd been studying sense November) as to how to use innerHTML, document.getElementById() Method, definitely did not understand what "this" meant! and so much more. Well, I faithfully followed your guide and just kept at it.<br><br> <strong>So, this morning, I'm sitting here in Starbucks working on the material and I said to myself, " I actually am starting to understand this stuff!"</strong>   And I had to write you!  <strong>This course has been an eye opener!</strong>   If I were you, I'd market yourself so much more.  In fact, I am going to do a YouTube video on Javascript at some point and I will most definitely mention your course as a major source of any success I have to this point.  <br><br>I know that this email has been long, but <strong>I just had to tell you my whole story and let you know what you have done for me in the way of learning Javascript.</strong>  I actually feel like someone that is on the verge of accomplishing great things.   Once again thank you.&rdquo;
-			<br><span class="testimonial_name">- Dominic H.</span>
+			<p>
+				&ldquo;...I did a little research on JS and decided to study Javascript.  I looked around for information, and <strong>came a cross Free Code Camp, Team Treehouse and various Udemy courses out there.  I even attended several Free Code Camp meetings.  But, sadly, I just was not catching on to JS.</strong>
+			</p>
+			<p>
+				...Previously, I was confused (mind you, I'd been studying sense November) as to how to use innerHTML, document.getElementById() Method, definitely did not understand what "this" meant! and so much more. Well, I faithfully followed your guide and just kept at it.
+			</p>
+			<p>
+				<strong>So, this morning, I'm sitting here in Starbucks working on the material and I said to myself, " I actually am starting to understand this stuff!"</strong>   And I had to write you!  <strong>This course has been an eye opener!</strong>   If I were you, I'd market yourself so much more.  In fact, I am going to do a YouTube video on Javascript at some point and I will most definitely mention your course as a major source of any success I have to this point.
+			</p>
+			<p>
+				I know that this email has been long, but <strong>I just had to tell you my whole story and let you know what you have done for me in the way of learning Javascript.</strong>  I actually feel like someone that is on the verge of accomplishing great things.   Once again thank you.&rdquo;
+			</p>
+			<span class="testimonial_name">- Dominic H.</span>
 		</blockquote>
 
 
