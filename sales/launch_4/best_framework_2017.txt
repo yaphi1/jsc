@@ -1,0 +1,39 @@
+
+What's the best JavaScript framework to learn in 2017?
+
+
+
+Web development can sound crazy these days.
+
+It seems like there's so much to know before you can do anything.
+
+So out of all the frameworks, what's the best one to learn in 2017?
+
+Trick question.
+
+Get better at JavaScript.
+
+Since the JavaScript tools and frameworks are based around JavaScript, this one language will make you better at all of them by default.
+
+If you improve your JavaScript, you'll automatically be better at React, Angular, jQuery, Node, Express, Socket io, Gulp, API usage, AJAX, JSON, Vue, and a whole host of other things, all at once.
+
+That's a really good use of your time!
+
+It's kind of like if you know a human language, you can read a whole bunch of books in that language, but if you don't know the language and you try to read a book, you'll waste tons of time trying to understand the symbols in front of you.
+
+So if you try to learn a JavaScript framework before getting comfortable with JavaScript, you'll end up putting in more time AND getting worse results!
+
+Now that it's clear why JavaScript is a good thing to learn, here are two things I'd recommend:
+
+1) If you'd like to get comfortable doing practical things with JavaScript, I've created a course for you. This course is based on years of listening to why people struggle with other courses and addressing those problems.
+https://courses.simplestepscode.com/get-ss-javascript-course/?n=51489xy701q2309/02/2017s0193z748
+
+2) If you look through the course details and it's all stuff you know already, then I recommend going on codewars and doing their practice problems (really fun and a great way to improve).
+
+Once you're comfortable with JavaScript, you can pick up a framework or tool in a couple of afternoons.
+
+I hope this has been helpful, and in the upcoming emails, we're going to cover animations, APIs, and learning tips.
+
+
+
+
