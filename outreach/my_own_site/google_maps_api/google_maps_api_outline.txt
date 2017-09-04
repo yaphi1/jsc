@@ -1,0 +1,35 @@
+
+
+
+
+explain api in intro
+
+show demo of what they'll be making
+
+step 1: get key
+
+https://developers.google.com/maps/documentation/javascript/
+scroll to section called "Quick start steps"
+click "Get a Key" and follow instructions
+
+
+step 2: make html page and show map
+
+
+step 3: learn to show a marker
+
+
+step 4: learn to respond to marker click
+
+
+step 5: show stores
+- create list of stores
+
+for each store in list
+	- mark store on map
+	- show store info on click
+
+- full code
+
+
+

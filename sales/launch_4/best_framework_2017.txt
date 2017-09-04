@@ -28,7 +28,7 @@ Now that it's clear why JavaScript is a good thing to learn, here are two things
 1) If you'd like to get comfortable doing practical things with JavaScript, I've created a course for you. This course is based on years of listening to why people struggle with other courses and addressing those problems.
 https://courses.simplestepscode.com/get-ss-javascript-course/?n=51489xy701q2309/02/2017s0193z748
 
-2) If you look through the course details and it's all stuff you know already, then I recommend going on codewars and doing their practice problems (really fun and a great way to improve).
+2) If you look through the course details and it's all stuff you know already, then I recommend going on Codewars and doing their practice problems (really fun and a great way to improve).
 
 Once you're comfortable with JavaScript, you can pick up a framework or tool in a couple of afternoons.
 

@@ -1,0 +1,229 @@
+
+
+
+We're going to make a basic store locator using the Google Maps API.
+
+Here are the steps:
+
+Understand what an API is
+Get your API key
+Show a basic map
+Show a map marker
+Respond to a click on a map marker
+Show store locations
+Secure your app
+
+This tutorial assumes some knowledge of JavaScript so feel free to check out this JavaScript roadmap if you need it and don't already have it.
+
+
+
+Step 1: Understand what an API is
+
+An API is a set of commands that let two applications talk to each other. Those applications can be websites, programs, computers, or other systems.
+
+So what does the name mean?
+
+API stands for Application Programming Interface. One way to think about it is: if a user interface (UI) lets a user interact with a program, an API lets programs interact with each other.
+
+In this tutorial, we're using the Google Maps API, which is a set of commands that let your website interact with Google Maps.
+
+
+Step 2: Get your API key
+
+A lot of APIs require you to use a key code to identify your application. This helps prevent people from abusing the API.
+
+To get your Google Maps API key, click this link, click "Get a Key," and follow the instructions.
+
+https://developers.google.com/maps/documentation/javascript/
+
+Copy and paste your key somewhere where you can see it, since we'll use it in the next step.
+
+
+Step 3: Show a basic map
+
+Now we're going to create a map.
+
+Use the following code, and note that each piece is explained in the comments:
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;map test&lt;/title&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+&lt;style type="text/css"&gt;
+
+/* map needs width and height to appear */
+#map{
+	width: 900px;
+	max-width: 100%;
+	height: 500px;
+}
+
+&lt;/style&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;!-- this div will hold your map --&gt;
+&lt;div id="map"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+function initMap() {
+
+	// pick center coordinates for your map
+	var myMapCenter = {lat: 40.785091, lng: -73.968285};
+
+	// create map and say which HTML element it should appear in
+	var map = new google.maps.Map(document.getElementById('map'), {
+		center: myMapCenter,
+		zoom: 14
+	});
+}
+&lt;/script&gt;
+&lt;script src="https://maps.googleapis.com/maps/api/js?key=PASTE_YOUR_KEY_HERE&callback=initMap" async defer&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+Two things to notice:
+
+1) Remember to paste your API key in the part that says PASTE_YOUR_KEY_HERE.
+
+2) If you look at the URL of the googleapis.com script, you'll see callback=initMap, and that just tells your browser which function to run when the script loads. When the script loads, your initMap function will run, which will start the map and let you access certain commands to do things with your map.
+
+
+Step 4: Show a map marker
+
+Inside your initMap function, use this code to add a marker to your map:
+
+// create marker and set its position
+var marker = new google.maps.Marker({
+	map: map,
+	position: myMapCenter,
+	title: 'Hello World!'
+});
+
+There are ways to customize your marker, but we're going to stick with a basic one for now.
+
+
+
+Step 5: Respond to a click on a map marker
+
+The Google Maps API uses a method called addListener to respond to events such as clicks. (It works a lot like addEventListener from plain JavaScript.)
+
+Put the following code inside your initMap function to respond to a click on your map marker:
+
+marker.addListener('click', function(){
+	alert('Marker was clicked!');
+});
+
+
+
+Step 6: Show store locations
+
+Now that we know how to create a map, add markers, and respond to clicks, we can build our store locator.
+
+You can comment out the code from steps 4 and 5 because those were just experiments to understand how to add markers and respond to clicks through the Google Maps API.
+
+To build our store locator, we need to:
+
+1) Create a list of stores.
+
+2) For each store in our list:
+	a) Mark the store on the map.
+	b) Show store info when the marker is clicked.
+
+Create a list of stores
+
+Inside our initMap function, we can add this code to create a list of stores.
+
+var stores = [
+	{
+		name: 'Store 1',
+		location: {lat: 40.785091, lng: -73.968285},
+		hours: '8AM to 10PM'
+	},
+	{
+		name: 'Store 2',
+		location: {lat: 40.790091, lng: -73.968285},
+		hours: '9AM to 9PM'
+	}
+];
+
+Feel free to play around with the values here.
+
+For each store in our list...
+
+For each store in the list, we want to place a marker and make it show the store's info when clicked.
+
+First, we'll need to create a markStore function to mark a store on the map. Then we'll need to make a showStoreInfo function to show the store's info when the marker is clicked.
+
+Here's the code for that, which we'll put inside our initMap function (comments explain what the code is doing):
+
+function markStore(storeInfo){
+
+	// Create a marker and set its position.
+	var marker = new google.maps.Marker({
+		map: map,
+		position: storeInfo.location,
+		title: storeInfo.name
+	});
+
+	// show store info when marker is clicked
+	marker.addListener('click', function(){
+		showStoreInfo(storeInfo);
+	});
+}
+
+// show store info in text box
+function showStoreInfo(storeInfo){
+	var info_div = document.getElementById('info_div');
+	info_div.innerHTML = 'Store name: '
+		+ storeInfo.name
+		+ '<br>Hours: ' + storeInfo.hours;
+}
+
+Now we need an div to show the store info, so add this to the HTML in your page:
+
+&lt;div id="info_div"&gt;&lt;/div&gt;
+
+Now that we have our functions to show the map markers and display the store info, we'll need to use those functions for each of the stores in our list. Here's the code for that:
+
+stores.forEach(function(store){
+	markStore(store);
+});
+
+Now you should have a working store locator!
+
+The last step is to secure your app.
+
+
+
+Step 7: Secure your app
+
+Before you put your app in production, you'll want to secure your API key so that only your site can use it.
+
+To do this, go to the Google Maps API website and search around for how to secure your API key. (I'm not pasting a link here in case they change the URL.)
+
+Then find the option that says Key Restriction, select "HTTP referrers (web sites)," and type in the domain name(s) where you want to use your API key.
+
+tl;dr:
+Just search around the Google Maps API website until you find where to type in what website(s) you want to use the API on.
+
+
+
+
+Key takeaways
+
+An API is a set of commands that let applications talk to each other (could be websites, systems, programs, etc).
+
+With the Google Maps API, you can use the power of Google Maps on your own website.
+
+If you want more custom functionality, feel free to explore their site to see how to do more.
+
+Remember to secure your API key before going live.
+
+This is the general process for using an API: Go to their documentation website, look up the available commands, and play around with them until you get the hang of things.
+
+

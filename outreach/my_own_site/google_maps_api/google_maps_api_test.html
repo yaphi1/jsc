@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+
+#map{
+	width: 900px;
+	max-width: 100%;
+	height: 500px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="map"></div>
+<div id="info_div"></div>
+<script>
+function initMap() {
+	var myMapCenter = {lat: 40.785091, lng: -73.968285};
+
+	// Create a map object and specify the DOM element for display.
+	var map = new google.maps.Map(document.getElementById('map'), {
+		center: myMapCenter,
+		zoom: 14
+	});
+
+	// Create a marker and set its position.
+	var marker = new google.maps.Marker({
+		map: map,
+		position: myMapCenter,
+		title: 'Hello World!'
+	});
+
+	// marker.addListener('click', function(){});
+	// var info_div = document.getElementById('info_div');
+
+
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-f1W9EwKbymF7P1xSVkIeDKo6iUjgFy0&callback=initMap" async defer></script>
+</body>
+</html>
