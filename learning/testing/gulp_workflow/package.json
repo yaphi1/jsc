@@ -1,0 +1,18 @@
+{
+  "name": "gulp_workflow",
+  "version": "1.0.0",
+  "description": "gulp experiments",
+  "main": "index.html",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "yaphi",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-babel": "^7.0.0",
+    "gulp-mocha": "^4.3.1"
+  }
+}
