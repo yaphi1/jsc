@@ -1,8 +1,10 @@
 const gulp = require('gulp');
 const mocha = require('gulp-mocha');
-const babel = require('gulp-babel');
 
-gulp.task('default', function(){
-	gulp.src('./test/mocha_test.js', {read: false})
+gulp.task('default', ['test']);
+
+
+gulp.task('test', function(){
+	gulp.src('./test/gulp_mocha_test.js', {read: false})
 		.pipe( mocha() )
 });

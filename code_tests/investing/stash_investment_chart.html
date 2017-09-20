@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stash Calculator</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+<link rel="stylesheet" type="text/css" href="./chartist/chartist.css">
+<style type="text/css">
+
+body{
+	font-family: Lato, sans-serif;
+	background-color: #4a238a;
+	background-image: linear-gradient(140deg, rgba(99, 54, 169, 0.5), rgba(59, 231, 228, 0.5)), linear-gradient(137deg, #4a238a, #6175b1);
+	color: #fff;
+	/*background-color: #eee;*/
+}
+input,
+button{
+	font-family: Lato, sans-serif;
+}
+h1{
+	text-align: center;
+	font-weight: normal;
+	font-size: 50px;
+	margin: 80px 0px 100px;
+	letter-spacing: 0.05em;
+}
+.logo{
+	width: 120px;
+	position: relative;
+	left: -3px;
+}
+.container{
+	max-width: 1000px;
+	margin: auto;
+	padding: 20px;
+}
+
+.zerofont{
+	font-size: 0px;
+}
+
+.btn{
+	box-sizing: border-box;
+	cursor: pointer;
+	border-radius: 5px;
+	border: 1px solid #eee;
+	font-size: 20px;
+	padding: 10px;
+	width: 100%;
+	background-color: #eee;
+	color: #404;
+}
+.btn:hover{
+	background-color: #fff;
+}
+
+
+.inputs_container{
+	/*padding-top: 40px;*/
+}
+
+.input_block{
+	margin-bottom: 12px;
+}
+.input_block label{
+	font-size: 16px;
+	display: block;
+}
+.input_main{
+	/*box-sizing: border-box;
+	border: 1px solid #eee;
+	font-size: 20px;
+	padding: 10px;
+	width: 100%;*/
+
+	box-sizing: border-box;
+	border: 0px solid #eee;
+	font-size: 20px;
+	padding: 12px;
+	width: 100%;
+	background-color: rgba(255,255,255,0.2);
+	color: #fff;
+}
+
+@media(min-width: 680px){
+	.btn{
+		width: 25%;
+	}
+	.input_block{
+		display: inline-block;
+		width: 23%;
+		margin-right: 2%;
+		margin-bottom: 0px;
+	}
+}
+
+
+.returns_container{
+	margin: 40px 0px;
+}
+.return_block{
+	font-size: 10px;
+	text-align: center;
+	box-sizing: border-box;
+	border: 1px dashed #eee;
+	padding: 10px;
+}
+.return_block:first-of-type{
+	margin-bottom: 20px;
+}
+@media(min-width: 680px){
+	.return_block{
+		display: inline-block;
+		width: 50%;
+	}
+	.return_block:first-of-type{
+		width: 48%;
+		margin-right: 2%;
+		margin-bottom: 0px;
+	}
+
+}
+.return_title{
+	font-size: 1.8em;
+}
+.return_amt{
+	font-size: 4.2em;
+}
+.return_amt:before{
+	content: '$';
+}
+
+.chart_container{
+	box-sizing: border-box;
+	padding: 20px;
+	/*border: 1px dashed #eee;*/
+	background-color: rgba(255,255,255,0.8);
+	/*background-color: #fff;*/
+	color: #404;
+	/*box-shadow: 0px 2px 5px -3px rgba(33,33,33,0.5);*/
+}
+.chart_title{
+	text-align: center;
+	font-size: 20px;
+}
+
+.ct-series-a .ct-line,
+.ct-series-a .ct-point{
+	stroke: indigo;
+}
+.ct-series-b .ct-line,
+.ct-series-b .ct-point{
+	stroke: purple;
+}
+.ct-series .ct-point{
+	display: none;
+}
+
+.ct-horizontal,
+.ct-label.ct-horizontal.ct-end{
+	display: none;
+}
+@media(min-width: 680px){
+	.ct-series .ct-point{
+		display: flex;
+	}
+
+	.ct-label.ct-horizontal.ct-end{
+		display: flex;
+	}
+}
+</style>
+
+</head>
+<body>
+
+
+<div class="container">
+
+	<img class="logo" src="https://cdn.stashinvest.com/assets/images/globals/logo.svg" alt="stash_logo">
+
+	<h1>How Much Can You&nbsp;Earn?</h1>
+
+	<div class="inputs_container zerofont">
+		<div class="input_block">
+			<label>Starting Amount:</label>
+			<input class="input_main" value="10" type="text" id="amt">
+		</div>
+
+		<div class="input_block">
+			<label>Weekly investment:</label>
+			<input class="input_main" value="25" type="text" id="amt_per_wk">
+		</div>
+
+		<div class="input_block">
+			<label>Years Invested:</label>
+			<input class="input_main" value="30" type="text" id="yrs">
+		</div>
+
+
+		<!-- Annual Percent Return: -->
+		<input value="5" type="hidden" id="pct">
+
+
+		<button class="btn" id="returns_btn">See Returns</button>
+
+	</div>
+
+
+	<div class="returns_container zerofont">
+		<div class="return_block">
+			<div class="return_title">Return without investing:</div>
+			<div class="return_amt" id="no_invest"></div>
+		</div>
+		<div class="return_block">
+			<div class="return_title">Return with investing:</div>
+			<div class="return_amt" id="output"></div>
+		</div>
+	</div>
+
+
+	<div class="chart_container">
+		<div class="chart_title">Annual Returns</div>
+		<div class="ct-chart ct-perfect-fourth"></div>
+	</div>
+
+
+</div>
+
+
+
+<script src="./chartist/chartist.js"></script>
+<script>
+
+/*var data = {
+
+	// A labels array that can contain any sort of values
+	labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+
+	// Our series array that contains series objects or in this case series data arrays
+	series: [
+		[5, 2, 4, 2, 0],
+		[1, 2, 3, 5, 7]
+	]
+};*/
+
+
+
+
+
+var returns_btn = document.getElementById('returns_btn');
+var output = document.getElementById('output');
+var no_invest = document.getElementById('no_invest');
+
+
+
+function getData(id){
+	return document.getElementById(id).value;
+}
+
+function submitNumbers(){
+	var amt = getData('amt');
+	var pct = getData('pct');
+	var amt_per_wk = getData('amt_per_wk');
+	var yrs = getData('yrs');
+	output.innerHTML = getReturnsInvesting(amt, pct, amt_per_wk, yrs);
+	no_invest.innerHTML = getReturnsNotInvesting(amt, amt_per_wk, yrs);
+
+	showChart([
+		getReturnsInvesting.data,
+		getReturnsNotInvesting.data
+	]);
+}
+submitNumbers();
+
+returns_btn.onclick = submitNumbers;
+
+
+function getReturnsInvesting(amt,pct,amt_per_wk,yrs){
+	getReturnsInvesting.data = [+amt];
+	var amt_per_yr = amt_per_wk*52;
+
+	for(var i=0; i<yrs; i++){
+		amt *= 1+(pct/100);
+		amt += amt_per_yr;
+		getReturnsInvesting.data.push(amt);
+	}
+	return amt.toFixed(2);
+}
+
+function getReturnsNotInvesting(amt,amt_per_wk,yrs){
+	getReturnsNotInvesting.data = [+amt];
+	var amt_per_yr = amt_per_wk*52;
+
+	for(var i=0; i<yrs; i++){
+		amt = +amt + amt_per_yr;
+		getReturnsNotInvesting.data.push(amt);
+	}
+	console.log(amt);
+	return amt.toFixed(2);
+}
+
+
+
+
+
+
+function showChart(dataArrays){
+	var data = {
+
+		// A labels array that can contain any sort of values
+		labels: dataArrays[0].map((v,i)=>i),
+
+		// Our series array that contains series objects or in this case series data arrays
+		series: dataArrays
+	};
+	new Chartist.Line('.ct-chart', data);
+}
+
+
+
+
+
+</script>
+</body>
+</html>
