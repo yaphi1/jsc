@@ -296,6 +296,7 @@ ol > li {
 	font-weight: normal;
 	text-transform: none;
 	margin: auto;
+	text-decoration: none;
 }
 
 @media (min-width: 500px){
@@ -308,6 +309,8 @@ ol > li {
 .sales_cta_button:hover,
 #content button.go-regform:hover {
 	background: #6ED19C;
+	color: #fff;
+	text-decoration: none;
 }
 
 
@@ -1531,7 +1534,10 @@ div.regform .regform-form .btn-fld .regform-button{
 			<!-- <button class="sales_cta_button">
 				Get the Course
 			</button> -->
-			[wlm_stripe_btn sku=1495032787]
+			<a href="#section_buy_bottom" class="sales_cta_button js_scroll_to_buy">
+				Get the Course
+			</a>
+
 
 			<p>
 				<img class="" src="../../img/creditcards.png">
@@ -1763,9 +1769,10 @@ div.regform .regform-form .btn-fld .regform-button{
 			<!-- <button class="sales_cta_button">
 				Get the Course
 			</button> -->
-			<button class="regform-button go-regform" href="#regform-1495032787">
+			<!-- <button class="regform-button go-regform" href="#regform-1495032787">
 				Get the Course
-			</button>
+			</button> -->
+			[wlm_stripe_btn sku=1495032787]
 
 			<p>
 				<img class="" src="../../img/creditcards.png">
@@ -1934,6 +1941,26 @@ div.regform .regform-form .btn-fld .regform-button{
 		logo.removeAttribute('href');
 	}
 })();
+</script>
+
+
+<script>
+if(window.jQuery){
+	/***********************************************************************
+	SMOOTH SCROLL
+	************************************************************************/
+	function smoothScrollTo(scrolltargetid){
+		var target = document.getElementById(scrolltargetid);
+		if(target){
+			jQuery('html,body').animate({scrollTop : target.getBoundingClientRect().top + window.scrollY}, 'fast');
+		}
+	}
+
+	jQuery('.js_scroll_to_buy').on('click',function(e){
+		e.preventDefault();
+		smoothScrollTo('section_buy_bottom');
+	});
+}
 </script>
 
 
