@@ -1,0 +1,33 @@
+
+
+import
+
+	if import sees a plain string, it automatically looks in node_modules
+
+	if you want something different, you need to specify the path
+		if you don't use an extension, it will assume the file is .js
+
+
+
+
+export
+
+	"export default" defines what gets exported when you write:
+		import Whatever from 'whatever';
+
+	you can also have named exports that get called like this:
+		import {render} from 'react-dom';
+
+
+
+
+jsx
+
+	remember to use className for html classes in jsx
+
+	single tags need closing slashes in jsx
+
+	comments need to look like this inside jsx
+		{/* text here */}
+		Also, they can't go outside the containing element
+

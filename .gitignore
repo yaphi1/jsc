@@ -1,4 +1,4 @@
 .DS_Store
 *.zip
-/membership
-/node-modules
+membership/
+node-modules/
