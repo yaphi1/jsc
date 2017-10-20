@@ -1,5 +1,13 @@
 
 
+
+topics to review more:
+- react router (maybe don't use context though: https://reactjs.org/docs/context.html)
+- refs
+- state and props
+
+
+
 import
 
 	if import sees a plain string, it automatically looks in node_modules
@@ -30,4 +38,27 @@ jsx
 	comments need to look like this inside jsx
 		{/* text here */}
 		Also, they can't go outside the containing element
+
+
+router
+
+	import BrowserRouter, Match, and Miss from 'react-router'
+	wrap top level of app in a <BrowserRouter></BrowserRouter>
+
+	then use context to make router available to component
+		StorePicker.contextTypes = {
+			router: React.PropTypes.object
+		};
+		- note: I'm not super comfortable with this since it seems like a dangerous dependency
+
+
+
+state and props
+	
+	pass state-changing functions down the component tree through props
+
+
+
+
+
 

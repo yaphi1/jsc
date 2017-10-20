@@ -12,7 +12,7 @@
 	"buffers":
 	[
 		{
-			"file": "src/index.js",
+			"file": "/Users/yaphi1/Documents/Web/ztlcode/js_course/learning/wes_bos/react/wes_bos_react_starter_files/catch-of-the-day/src/index.js",
 			"settings":
 			{
 				"buffer_size": 577,
@@ -20,7 +20,7 @@
 			}
 		},
 		{
-			"file": "src/components/App.js",
+			"file": "App.js",
 			"settings":
 			{
 				"buffer_size": 379,
@@ -28,7 +28,7 @@
 			}
 		},
 		{
-			"file": "src/components/Header.js",
+			"file": "Header.js",
 			"settings":
 			{
 				"buffer_size": 368,
@@ -36,7 +36,7 @@
 			}
 		},
 		{
-			"file": "src/components/Inventory.js",
+			"file": "Inventory.js",
 			"settings":
 			{
 				"buffer_size": 151,
@@ -44,7 +44,7 @@
 			}
 		},
 		{
-			"file": "src/components/NotFound.js",
+			"file": "NotFound.js",
 			"settings":
 			{
 				"buffer_size": 160,
@@ -52,7 +52,7 @@
 			}
 		},
 		{
-			"file": "src/components/StorePicker.js",
+			"file": "StorePicker.js",
 			"settings":
 			{
 				"buffer_size": 759,
@@ -172,7 +172,7 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/index.js",
+					"file": "/Users/yaphi1/Documents/Web/ztlcode/js_course/learning/wes_bos/react/wes_bos_react_starter_files/catch-of-the-day/src/index.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -200,7 +200,7 @@
 				},
 				{
 					"buffer": 1,
-					"file": "src/components/App.js",
+					"file": "App.js",
 					"semi_transient": true,
 					"settings":
 					{
@@ -229,7 +229,7 @@
 				},
 				{
 					"buffer": 2,
-					"file": "src/components/Header.js",
+					"file": "Header.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -258,7 +258,7 @@
 				},
 				{
 					"buffer": 3,
-					"file": "src/components/Inventory.js",
+					"file": "Inventory.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -286,7 +286,7 @@
 				},
 				{
 					"buffer": 4,
-					"file": "src/components/NotFound.js",
+					"file": "NotFound.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -314,7 +314,7 @@
 				},
 				{
 					"buffer": 5,
-					"file": "src/components/StorePicker.js",
+					"file": "StorePicker.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -380,7 +380,7 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "",
-	"project": "catch-of-the-day.sublime-project",
+	"project": "/Users/yaphi1/Documents/Web/ztlcode/js_course/learning/wes_bos/react/wes_bos_react_starter_files/catch-of-the-day/catch-of-the-day.sublime-project",
 	"replace":
 	{
 		"height": 50.0
