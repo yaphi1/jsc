@@ -2,15 +2,15 @@ import React from 'react';
 
 
 class AddFishForm extends React.Component{
+	
 	constructor(){
 		super();
+
 		this.createFish = this.createFish.bind(this);
 	}
 
 	createFish(e){
 		e.preventDefault();
-		console.log('fish created');
-		console.log(e);
 
 		const fish = {
 			name: this.name.value,
@@ -19,7 +19,6 @@ class AddFishForm extends React.Component{
 			desc: this.desc.value,
 			image: this.image.value,
 		};
-		console.log(fish);
 
 		this.props.addFish(fish);
 
@@ -28,15 +27,15 @@ class AddFishForm extends React.Component{
 
 	render(){
 		return(
-			<form ref={(input) => this.fishForm = input} className="fish-edit" onSubmit={this.createFish}>
-				<input ref={(input) => this.name = input} type="text" placeholder="Fish Name"/>
-				<input ref={(input) => this.price = input} type="text" placeholder="Fish Price"/>
-				<select ref={(input) => this.status = input}>
+			<form ref={(elem) => this.fishForm = elem} className="fish-edit" onSubmit={this.createFish}>
+				<input ref={(elem) => this.name = elem} type="text" placeholder="Fish Name"/>
+				<input ref={(elem) => this.price = elem} type="text" placeholder="Fish Price"/>
+				<select ref={(elem) => this.status = elem}>
 					<option value="available">Fresh!</option>
 					<option value="unavailable">Sold Out!</option>
 				</select>
-				<textarea ref={(input) => this.desc = input} type="text" placeholder="Fish Desc"></textarea>
-				<input ref={(input) => this.image = input} type="text" placeholder="Fish Image"/>
+				<textarea ref={(elem) => this.desc = elem} type="text" placeholder="Fish Desc"></textarea>
+				<input ref={(elem) => this.image = elem} type="text" placeholder="Fish Image"/>
 				<button type="submit">+ Add Item</button>
 			</form>
 		);
