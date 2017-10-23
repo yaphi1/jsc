@@ -45,11 +45,11 @@ class App extends React.Component{
 	addToOrder(key){
 		const order = {...this.state.order};
 
-		// const timestamp = Date.now();
 		order[key] = order[key] + 1 || 1;
 
 		this.setState({order});
 	}
+
 
 	render(){
 		return(
