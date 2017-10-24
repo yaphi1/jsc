@@ -27,11 +27,25 @@ class Order extends React.Component{
 
 		const pizzaIds = Object.keys(this.props.order);
 
+		const total = pizzaIds.reduce((total,current)=>{
+			const {price} = this.props.pizzaData[current];
+			const qty = this.props.order[current];
+			return total + (price*qty);
+		},0);
+
 		return (
 			<div className="order-container">
 				<h2>order</h2>
 				<ul className="order-items">
+
 					{ pizzaIds.map(this.renderOrderItem) }
+
+					<li className="order-total">
+						Total
+						<span className="right">
+							${(total).toFixed(2)}
+						</span>
+					</li>
 				</ul>
 			</div>
 		);

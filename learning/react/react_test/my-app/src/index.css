@@ -46,4 +46,8 @@ body{
 .order-items .right{
 	float: right;
 }
+.order-items .order-total{
+	border-top: 3px solid #eee;
+	font-weight: bold;
+}
 
