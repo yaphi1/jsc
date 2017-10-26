@@ -1,27 +1,7 @@
 import React from 'react';
-
+import OrderItem from '../OrderItem/OrderItem';
 
 class Order extends React.Component{
-
-	constructor(){
-		super();
-
-		this.renderOrderItem = this.renderOrderItem.bind(this);
-	}
-
-	renderOrderItem(key){
-		const {name,price} = this.props.pizzaData[key];
-		const qty = this.props.order[key];
-
-		return(
-			<li key={key}>
-				{qty} {name}
-				<span className="right">
-					${(price * qty).toFixed(2)}
-				</span>
-			</li>
-		);
-	}
 
 	render(){
 
@@ -38,7 +18,21 @@ class Order extends React.Component{
 				<h2>order</h2>
 				<ul className="order-items">
 
-					{ pizzaIds.map(this.renderOrderItem) }
+					{
+						pizzaIds.map(key => {
+							const qty = this.props.order[key];
+
+							return qty>0 && (
+								<OrderItem
+									key={key}
+									pizzaId={key}
+									pizzaData={this.props.pizzaData[key]}
+									qty={qty}
+									updateQty = {this.props.updateQty}
+								/>
+							);
+						})
+					}
 
 					<li className="order-total">
 						Total

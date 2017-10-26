@@ -10,23 +10,39 @@ body{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	max-width: 900px;
+	max-width: 1200px;
 	border: 2px dashed red;
 	margin: auto;
 }
 
 .pizza-container{
-	flex: 2;
+	flex: 1.8;
 }
 
 .pizza{
 	border: 1px solid #eee;
 	padding: 20px;
 	margin: 20px;
+	display: flex;
+	text-align: left;
+}
+.pizza_img_col{
+	/*border: 2px dashed red;*/
+	flex: 1;
+	background-size: cover;
+	background-position: center;
+}
+.pizza_info_col{
+	/*border: 2px dashed red;*/
+	flex: 2;
+	padding: 20px;
+}
+.pizza_name{
+	margin: 0px;
 }
 
 .order-container{
-	flex: 1;
+	flex: 1.2;
 	border: 1px solid #eee;
 	padding: 20px;
 	margin: 20px;

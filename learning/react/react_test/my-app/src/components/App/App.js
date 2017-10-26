@@ -17,6 +17,7 @@ class App extends React.Component {
 		};
 
 		this.addToOrder = this.addToOrder.bind(this);
+		this.updateQty = this.updateQty.bind(this);
 	}
 
 	addToOrder(pizzaId){
@@ -27,24 +28,29 @@ class App extends React.Component {
 		this.setState({order});
 	}
 
+	updateQty(pizzaId, newQty){
+		const order = {...this.state.order};
+		if(newQty<0){ newQty=0; }
+		order[pizzaId] = newQty;
+		this.setState({order});
+	}
+
 	render() {
 		return (
 			<div className="App">
 				<img src={logo} className="App-logo" alt="logo" />
-				<h1>Start</h1>
+				<h1>React Pizza</h1>
 
 				<section className="interactive-section">
 
 					<div className="pizza-container">
 						{
 							Object.keys(pizzaData).map((key)=>{
-								const {name,price} = pizzaData[key];
 								return (
 									<Pizza
 										key={key}
 										id={key}
-										name={name}
-										price={price}
+										pizzaData={pizzaData[key]}
 										addToOrder={this.addToOrder}
 									/>
 								);
@@ -52,7 +58,11 @@ class App extends React.Component {
 						}
 					</div>
 
-					<Order order={this.state.order} pizzaData={pizzaData} />
+					<Order
+						order={this.state.order}
+						pizzaData={pizzaData}
+						updateQty={this.updateQty}
+					/>
 				</section>
 			</div>
 		);
