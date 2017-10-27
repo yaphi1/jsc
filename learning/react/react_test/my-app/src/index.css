@@ -131,3 +131,13 @@ input{
 	box-shadow: none;
 }
 
+
+
+
+
+footer{
+	padding: 20px;
+	font-size: 14px;
+	border-top: 1px solid #ddd;
+	text-align: center;
+}

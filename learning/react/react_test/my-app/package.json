@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "yaphi-react-pizza",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +10,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "react-scripts build && cd build && now --public",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
