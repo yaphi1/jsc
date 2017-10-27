@@ -1,22 +1,33 @@
 body{
 	margin: 0;
 	padding: 0;
-	font-family: sans-serif;
+	font-family: 'Raleway', sans-serif;
+}
+
+button,
+input{
+	font-family: 'Raleway', sans-serif;
 }
 
 
 
 .interactive-section{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
 	max-width: 1200px;
-	border: 2px dashed red;
-	margin: auto;
+	/*border: 2px dashed red;*/
+	/*border: 1px solid #eee;*/
+	margin: 0px auto 60px;
+}
+
+@media (min-width: 1000px) {
+	.interactive-section{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 
 .pizza-container{
-	flex: 1.8;
+	flex: 2;
 }
 
 .pizza{
@@ -25,28 +36,57 @@ body{
 	margin: 20px;
 	display: flex;
 	text-align: left;
+	font-size: 16px;
+	box-shadow: 0px 2px 6px -3px rgba(33,33,33,0.5);
 }
 .pizza_img_col{
 	/*border: 2px dashed red;*/
 	flex: 1;
+	/*flex-basis: 100px;*/
 	background-size: cover;
 	background-position: center;
+	box-shadow: 0px 3px 6px 0px rgba(33,33,33,0.9) inset;
 }
 .pizza_info_col{
 	/*border: 2px dashed red;*/
 	flex: 2;
-	padding: 20px;
+	padding: 0px 20px;
 }
 .pizza_name{
 	margin: 0px;
+	font-size: 20px;
+}
+.pizza_price{
+	float: right;
+}
+.pizza_order_btn{
+	cursor: pointer;
+	padding: 10px 20px;
+	font-size: 20px;
+	background-color: #ffea76;
+	border: 0px;
+	border-radius: 3px;
+	box-shadow: 0px 2px 6px -3px rgba(33,33,33,0.5);
+	transition: all 0.2s;
+}
+.pizza_order_btn:hover{
+	background-color: #fffa96;
+}
+.pizza_order_btn:active{
+	box-shadow: none;
 }
 
 .order-container{
-	flex: 1.2;
+	flex: 1;
 	border: 1px solid #eee;
 	padding: 20px;
 	margin: 20px;
-	margin-left: 0px;
+	box-shadow: 0px 2px 6px -3px rgba(33,33,33,0.5);
+}
+@media (min-width: 1000px) {
+	.order-container{
+		margin-left: 0px;
+	}
 }
 .order-items{
 	text-align: left;
@@ -65,5 +105,29 @@ body{
 .order-items .order-total{
 	border-top: 3px solid #eee;
 	font-weight: bold;
+}
+
+.order-item-qty{
+	margin: 0px 12px;
+	font-size: 20px;
+}
+.order-item-name{
+	margin-left: 20px;
+}
+.change_qty{
+	cursor: pointer;
+	padding: 0px 8px;
+	font-size: 20px;
+	background-color: #ffea76;
+	border: 0px;
+	border-radius: 3px;
+	box-shadow: 0px 2px 6px -3px rgba(33,33,33,0.5);
+	transition: all 0.2s;
+}
+.change_qty:hover{
+	background-color: #fffa96;
+}
+.change_qty:active{
+	box-shadow: none;
 }
 

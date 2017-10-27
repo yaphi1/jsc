@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "deploy": "now --public"
   },
   "author": "yaphi",
   "license": "ISC",

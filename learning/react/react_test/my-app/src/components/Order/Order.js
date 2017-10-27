@@ -15,7 +15,7 @@ class Order extends React.Component{
 
 		return (
 			<div className="order-container">
-				<h2>order</h2>
+				<h2>Your Order</h2>
 				<ul className="order-items">
 
 					{

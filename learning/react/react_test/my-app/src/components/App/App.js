@@ -39,7 +39,7 @@ class App extends React.Component {
 		return (
 			<div className="App">
 				<img src={logo} className="App-logo" alt="logo" />
-				<h1>React Pizza</h1>
+				<h1 className="App-title">React Pizza</h1>
 
 				<section className="interactive-section">
 

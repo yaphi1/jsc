@@ -1,10 +1,12 @@
 .App {
   text-align: center;
+  padding: 60px 0px 0px;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
+  display: none;
 }
 
 .App-header {
@@ -15,7 +17,20 @@
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-weight: 300;
+  font-size: 60px;
+  max-width: 1200px;
+  position: relative;
+  left: -0.09em;
+  margin: auto;
+  text-align: left;
+  padding: 0px 20px;
+  box-sizing: border-box;
+}
+@media (min-width: 500px) {
+  .App-title {
+    font-size: 80px;
+  }
 }
 
 .App-intro {

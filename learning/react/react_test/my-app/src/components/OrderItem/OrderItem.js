@@ -27,9 +27,10 @@ class OrderItem extends React.Component{
 		return(
 			<li>
 				<button className="change_qty" onClick={this.decreaseQty}>-</button>
-				{qty}
+				<span className="order-item-qty">{qty}</span>
 				<button className="change_qty" onClick={this.increaseQty}>+</button>
-				{name}
+				
+				<span className="order-item-name">{name}</span>
 				<span className="right">
 					${(price * qty).toFixed(2)}
 				</span>

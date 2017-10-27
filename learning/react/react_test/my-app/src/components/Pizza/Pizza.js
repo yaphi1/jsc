@@ -15,7 +15,7 @@ class Pizza extends React.Component{
 	}
 
 	render(){
-		const {name, price, img} = this.props.pizzaData;
+		const {name, price, desc, img} = this.props.pizzaData;
 		return (
 			<div className="pizza">
 				<div className="pizza_img_col" style={{backgroundImage:`url('${img}')`}}>
@@ -24,9 +24,10 @@ class Pizza extends React.Component{
 				<div className="pizza_info_col">
 					<h3 className="pizza_name">
 						{name}
+						<span className="pizza_price">${price}</span>
 					</h3>
-					<p>${price}</p>
-					<button onClick={this.addToOrder}>Add to Order</button>
+					<p>{desc}</p>
+					<button className="pizza_order_btn" onClick={this.addToOrder}>Add to Order</button>
 				</div>
 			</div>
 		);
