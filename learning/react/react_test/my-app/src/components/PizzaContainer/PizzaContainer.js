@@ -1,6 +1,7 @@
 import React from 'react';
 import Pizza from '../Pizza/Pizza';
 
+import { sanitizeInput } from '../../utils/helpers';
 
 class PizzaContainer extends React.Component{
 	constructor(){
@@ -12,9 +13,10 @@ class PizzaContainer extends React.Component{
 
 	getResults(query){
 		const pizzaData = this.props.pizzaData;
+		const cleanQuery = sanitizeInput(query);
 
 		return Object.keys(pizzaData).filter((pizza) => {
-			const regex = RegExp(query,'i');
+			const regex = RegExp(cleanQuery,'i');
 			const queryMatchesPizza = regex.test(pizzaData[pizza].name);
 
 			return queryMatchesPizza;
@@ -26,10 +28,7 @@ class PizzaContainer extends React.Component{
 
 		if(results.length){
 			return results.map((key) => {
-				const regex = RegExp(this.props.query,'i');
-				const queryMatchesPizza = regex.test(pizzaData[key].name);
-
-				return queryMatchesPizza && (
+				return (
 					<Pizza
 						key={key}
 						id={key}

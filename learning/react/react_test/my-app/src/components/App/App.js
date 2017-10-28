@@ -3,11 +3,11 @@ import logo from '../../assets/logo.svg';
 import './App.css';
 
 import PizzaContainer from '../PizzaContainer/PizzaContainer';
-// import Pizza from '../Pizza/Pizza';
 import Order from '../Order/Order';
 import SearchBar from '../SearchBar/SearchBar';
 
 import pizzaData from '../../utils/data/pizzaData';
+import { sanitizeInput } from '../../utils/helpers';
 
 class App extends React.Component {
 
@@ -21,7 +21,7 @@ class App extends React.Component {
 
 		this.addToOrder = this.addToOrder.bind(this);
 		this.updateQty = this.updateQty.bind(this);
-		this.filterPizzas = this.filterPizzas.bind(this);
+		this.updateSearchQuery = this.updateSearchQuery.bind(this);
 	}
 
 	addToOrder(pizzaId){
@@ -39,8 +39,8 @@ class App extends React.Component {
 		this.setState({order});
 	}
 
-	filterPizzas(query){
-		this.setState({query});
+	updateSearchQuery(query){
+		this.setState({query: sanitizeInput(query)});
 	}
 
 	render() {
@@ -51,7 +51,7 @@ class App extends React.Component {
 
 				<section className="interactive-section">
 
-					<SearchBar filterPizzas={this.filterPizzas} />
+					<SearchBar updateSearchQuery={this.updateSearchQuery} />
 
 					<PizzaContainer
 						pizzaData={pizzaData}
