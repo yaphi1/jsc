@@ -2,8 +2,10 @@ import React from 'react';
 import logo from '../../assets/logo.svg';
 import './App.css';
 
-import Pizza from '../Pizza/Pizza';
+import PizzaContainer from '../PizzaContainer/PizzaContainer';
+// import Pizza from '../Pizza/Pizza';
 import Order from '../Order/Order';
+import SearchBar from '../SearchBar/SearchBar';
 
 import pizzaData from '../../utils/data/pizzaData';
 
@@ -13,11 +15,13 @@ class App extends React.Component {
 		super();
 
 		this.state = {
-			order:{}
+			order: {},
+			query: ''
 		};
 
 		this.addToOrder = this.addToOrder.bind(this);
 		this.updateQty = this.updateQty.bind(this);
+		this.filterPizzas = this.filterPizzas.bind(this);
 	}
 
 	addToOrder(pizzaId){
@@ -35,6 +39,10 @@ class App extends React.Component {
 		this.setState({order});
 	}
 
+	filterPizzas(query){
+		this.setState({query});
+	}
+
 	render() {
 		return (
 			<div className="App">
@@ -43,20 +51,13 @@ class App extends React.Component {
 
 				<section className="interactive-section">
 
-					<div className="pizza-container">
-						{
-							Object.keys(pizzaData).map((key)=>{
-								return (
-									<Pizza
-										key={key}
-										id={key}
-										pizzaData={pizzaData[key]}
-										addToOrder={this.addToOrder}
-									/>
-								);
-							})
-						}
-					</div>
+					<SearchBar filterPizzas={this.filterPizzas} />
+
+					<PizzaContainer
+						pizzaData={pizzaData}
+						addToOrder={this.addToOrder}
+						query={this.state.query}
+					/>
 
 					<Order
 						order={this.state.order}
