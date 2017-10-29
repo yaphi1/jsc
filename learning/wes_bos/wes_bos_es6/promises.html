@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+body {
+	margin: 0px;
+	font-size: 20px;
+	font-family: sans-serif;
+	color: #333;
+}
+</style>
+
+</head>
+<body>
+
+
+<script>
+/*
+// lesson 1 - promise call from api
+const postsPromise = fetch('https://api.github.com/repos/yaphi1/guide');
+
+postsPromise
+	.then(data=>data.json())
+	.then(data=>console.log(data))
+	.catch(err=>console.log(`our error is: ${err}`));
+*/
+
+/*
+// lessons 2,3 - custom promises and chaining promises
+window.err_flag = false;
+
+const firstPromise = new Promise((resolve, reject)=>{
+	setTimeout(_=>{
+		if(window.err_flag){
+			reject('welp. promise error happened lol');
+		}
+		resolve('first promise');
+	},500);
+});
+
+function secondPromise(data){
+	return new Promise((resolve, reject)=>{
+		setTimeout(_=>{
+			resolve(`second promise happened with data: ${data}`);
+		},500);
+	});
+}
+
+firstPromise
+	.then(data=>{
+		console.log(data);
+		return secondPromise(data);
+	})
+	.then(data=>{
+		console.log(data);
+	})
+	.catch(err => console.log(err));
+*/
+
+
+/*
+// lesson 1 repeated - fetch api promise
+const gitdataPromise = fetch('https://api.github.com/repos/yaphi1/guide');
+
+gitdataPromise
+	.then(data=>data.json())
+	.then(data=>{
+		window.data = data;
+		console.log(data);
+	})
+	.catch(err=>console.log(`lol this went wrong: ${err}`));
+*/
+
+
+
+const weather = new Promise((resolve, reject)=>{
+	setTimeout(_=>{
+		resolve('weather info');
+	},2000);
+});
+
+const locations = new Promise((resolve, reject)=>{
+	setTimeout(_=>{
+		resolve('location info');
+	},500);
+});
+
+
+Promise.all([weather, locations])
+	.then(responses=>{
+		console.log(responses);
+		const [weatherInfo, locationInfo] = responses;
+		console.log(weatherInfo);
+		console.log(locationInfo);
+	})
+	.catch(err=>console.log(err));
+
+
+</script>
+</body>
+</html>

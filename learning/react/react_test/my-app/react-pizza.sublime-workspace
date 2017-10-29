@@ -64,7 +64,7 @@
 	"buffers":
 	[
 		{
-			"file": "react/react_test/my-app/public/index.html",
+			"file": "public/index.html",
 			"settings":
 			{
 				"buffer_size": 1355,
@@ -73,7 +73,7 @@
 			}
 		},
 		{
-			"file": "react/react_test/my-app/src/index.js",
+			"file": "src/index.js",
 			"settings":
 			{
 				"buffer_size": 266,
@@ -82,7 +82,7 @@
 			}
 		},
 		{
-			"file": "react/react_test/my-app/src/index.css",
+			"file": "src/index.css",
 			"settings":
 			{
 				"buffer_size": 2718,
@@ -91,7 +91,7 @@
 			}
 		},
 		{
-			"file": "react/react_test/my-app/package.json",
+			"file": "package.json",
 			"settings":
 			{
 				"buffer_size": 450,
@@ -100,7 +100,7 @@
 			}
 		},
 		{
-			"file": "react/react_test/my-app/src/components/Pizza/Pizza.js",
+			"file": "src/components/Pizza/Pizza.js",
 			"settings":
 			{
 				"buffer_size": 766,
@@ -109,7 +109,7 @@
 			}
 		},
 		{
-			"file": "react/react_test/my-app/src/components/App/App.js",
+			"file": "src/components/App/App.js",
 			"settings":
 			{
 				"buffer_size": 1539,
@@ -118,7 +118,7 @@
 			}
 		},
 		{
-			"file": "react/react_test/my-app/src/components/PizzaContainer/PizzaContainer.js",
+			"file": "src/components/PizzaContainer/PizzaContainer.js",
 			"settings":
 			{
 				"buffer_size": 1236,
@@ -127,7 +127,7 @@
 			}
 		},
 		{
-			"file": "react/react_test/my-app/src/components/SearchBar/SearchBar.js",
+			"file": "src/components/SearchBar/SearchBar.js",
 			"settings":
 			{
 				"buffer_size": 421,
@@ -136,7 +136,7 @@
 			}
 		},
 		{
-			"file": "react/react_test/my-app/src/utils/data/pizzaData.js",
+			"file": "src/utils/data/pizzaData.js",
 			"settings":
 			{
 				"buffer_size": 1468,
@@ -145,7 +145,7 @@
 			}
 		},
 		{
-			"file": "react/react_test/my-app/src/utils/helpers.js",
+			"file": "src/utils/helpers.js",
 			"settings":
 			{
 				"buffer_size": 85,
@@ -155,7 +155,7 @@
 			}
 		},
 		{
-			"file": "react/react_test/my-app/src/components/Order/Order.js",
+			"file": "src/components/Order/Order.js",
 			"settings":
 			{
 				"buffer_size": 962,
@@ -164,7 +164,7 @@
 			}
 		},
 		{
-			"file": "react/react_test/my-app/src/components/OrderItem/OrderItem.js",
+			"file": "src/components/OrderItem/OrderItem.js",
 			"settings":
 			{
 				"buffer_size": 937,
@@ -173,7 +173,7 @@
 			}
 		},
 		{
-			"file": "react/react_test/my-app/src/components/App/App.test.js",
+			"file": "src/components/App/App.test.js",
 			"settings":
 			{
 				"buffer_size": 343,
@@ -182,7 +182,7 @@
 			}
 		},
 		{
-			"file": "react/react_test/my-app/src/components/App/App.css",
+			"file": "src/components/App/App.css",
 			"settings":
 			{
 				"buffer_size": 651,
@@ -390,7 +390,7 @@
 			[
 				{
 					"buffer": 0,
-					"file": "react/react_test/my-app/public/index.html",
+					"file": "public/index.html",
 					"semi_transient": false,
 					"settings":
 					{
@@ -420,7 +420,7 @@
 				},
 				{
 					"buffer": 1,
-					"file": "react/react_test/my-app/src/index.js",
+					"file": "src/index.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -448,7 +448,7 @@
 				},
 				{
 					"buffer": 2,
-					"file": "react/react_test/my-app/src/index.css",
+					"file": "src/index.css",
 					"semi_transient": false,
 					"settings":
 					{
@@ -476,7 +476,7 @@
 				},
 				{
 					"buffer": 3,
-					"file": "react/react_test/my-app/package.json",
+					"file": "package.json",
 					"semi_transient": false,
 					"settings":
 					{
@@ -506,7 +506,7 @@
 				},
 				{
 					"buffer": 4,
-					"file": "react/react_test/my-app/src/components/Pizza/Pizza.js",
+					"file": "src/components/Pizza/Pizza.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -534,7 +534,7 @@
 				},
 				{
 					"buffer": 5,
-					"file": "react/react_test/my-app/src/components/App/App.js",
+					"file": "src/components/App/App.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -564,7 +564,7 @@
 				},
 				{
 					"buffer": 6,
-					"file": "react/react_test/my-app/src/components/PizzaContainer/PizzaContainer.js",
+					"file": "src/components/PizzaContainer/PizzaContainer.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -592,7 +592,7 @@
 				},
 				{
 					"buffer": 7,
-					"file": "react/react_test/my-app/src/components/SearchBar/SearchBar.js",
+					"file": "src/components/SearchBar/SearchBar.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -620,7 +620,7 @@
 				},
 				{
 					"buffer": 8,
-					"file": "react/react_test/my-app/src/utils/data/pizzaData.js",
+					"file": "src/utils/data/pizzaData.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -648,7 +648,7 @@
 				},
 				{
 					"buffer": 9,
-					"file": "react/react_test/my-app/src/utils/helpers.js",
+					"file": "src/utils/helpers.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -677,7 +677,7 @@
 				},
 				{
 					"buffer": 10,
-					"file": "react/react_test/my-app/src/components/Order/Order.js",
+					"file": "src/components/Order/Order.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -705,7 +705,7 @@
 				},
 				{
 					"buffer": 11,
-					"file": "react/react_test/my-app/src/components/OrderItem/OrderItem.js",
+					"file": "src/components/OrderItem/OrderItem.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -733,7 +733,7 @@
 				},
 				{
 					"buffer": 12,
-					"file": "react/react_test/my-app/src/components/App/App.test.js",
+					"file": "src/components/App/App.test.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -761,7 +761,7 @@
 				},
 				{
 					"buffer": 13,
-					"file": "react/react_test/my-app/src/components/App/App.css",
+					"file": "src/components/App/App.css",
 					"semi_transient": false,
 					"settings":
 					{
@@ -828,7 +828,7 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "",
-	"project": "learning.sublime-project",
+	"project": "react-pizza.sublime-project",
 	"replace":
 	{
 		"height": 50.0

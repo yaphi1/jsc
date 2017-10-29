@@ -1,0 +1,38 @@
+promise_notes.txt
+
+
+a js promise is an object that returns either a successful resolve or a reject
+
+for example:
+
+<script>
+const examplePromise = new Promise((resolve, reject)=>{
+	if(things_go_well){
+		resolve('data gets passed into then here');
+	}
+	else{
+		reject('error message goes here');
+	}
+
+});
+
+
+examplePromise
+	.then(data=>console.log(data))
+	.catch(err=>console.log(err));
+
+</script>
+
+
+
+Promise.all(arr)
+	- takes an array of promises and spits out an array of resolutions in the same array order (inside the "then" part)
+
+	- array comes back after all of the promises resolve (so basically after the slowest one). this is useful if you need all the data together at the same time but not one after another
+
+	- if you need to run .json() on a promise returned from fetch, then just return Promise.all with a new array from mapping over the first response array
+
+
+
+
+
