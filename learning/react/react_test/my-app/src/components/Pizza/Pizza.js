@@ -1,5 +1,7 @@
 import React from 'react';
 
+import PropTypes from 'prop-types';
+
 // import './Pizza.css';
 
 class Pizza extends React.Component{
@@ -33,5 +35,11 @@ class Pizza extends React.Component{
 		);
 	}
 }
+
+Pizza.propTypes = {
+	id: PropTypes.string.isRequired,
+	addToOrder: PropTypes.func.isRequired,
+	pizzaData: PropTypes.object.isRequired,
+};
 
 export default Pizza;

@@ -1,6 +1,8 @@
 import React from 'react';
 import OrderItem from '../OrderItem/OrderItem';
 
+import PropTypes from 'prop-types';
+
 class Order extends React.Component{
 
 	render(){
@@ -46,5 +48,10 @@ class Order extends React.Component{
 	}
 }
 
+Order.propTypes = {
+	order: PropTypes.object.isRequired,
+	pizzaData: PropTypes.object.isRequired,
+	updateQty: PropTypes.func.isRequired,
+};
 
 export default Order;

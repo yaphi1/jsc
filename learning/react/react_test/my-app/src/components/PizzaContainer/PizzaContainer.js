@@ -3,6 +3,8 @@ import Pizza from '../Pizza/Pizza';
 
 import { sanitizeInput } from '../../utils/helpers';
 
+import PropTypes from 'prop-types';
+
 class PizzaContainer extends React.Component{
 	constructor(){
 		super();
@@ -58,5 +60,14 @@ class PizzaContainer extends React.Component{
 		);
 	}
 }
+
+
+
+PizzaContainer.propTypes = {
+	pizzaData: PropTypes.object.isRequired,
+	addToOrder: PropTypes.func.isRequired,
+	query: PropTypes.string.isRequired,
+};
+
 
 export default PizzaContainer;
