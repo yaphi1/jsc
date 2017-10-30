@@ -40,12 +40,14 @@ input{
 
 .pizza-container{
 	flex: 2;
+	padding-top: 20px;
 }
 
 .pizza{
 	/*border: 1px solid #ddd;*/
 	padding: 20px;
 	margin: 20px;
+	margin-top: 0px;
 	display: flex;
 	flex-wrap: wrap;
 	text-align: left;

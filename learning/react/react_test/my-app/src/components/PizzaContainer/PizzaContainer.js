@@ -57,7 +57,8 @@ class PizzaContainer extends React.Component{
 			return (
 				<div className="pizza pizza_not_found">
 					<h2>Sorry!</h2>
-					<p>No pizzas found for: {this.props.query}</p>
+					<p>No pizzas found for: <b>{this.props.query}</b></p>
+					<p>What kind of search term is that? You must be one of those people who asks for stuff that's not on the menu. We have a vast catalog of {Object.keys(this.props.pizzaData).length} pizzas to choose from. That should be enough.</p>
 				</div>
 			);
 		}
