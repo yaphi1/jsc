@@ -171,3 +171,66 @@ footer{
 	border-top: 1px solid #ddd;
 	text-align: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************
+ANIMATIONS
+*****************************************/
+.fade_anim_container{
+	transition: all 0.3s;
+
+	/*
+	Mini padding is necessary because otherwise this element
+	won't contain the child element's padding in its height.
+
+	Once this element contains the whole child element, then the height will
+	animate out all of it. Otherwise, there will be an awkward transition where
+	the height is zero, but the padding is still there.
+	*/
+	/*padding: 0.1px;*/
+}
+.fade_anim_container > *:first-of-type{
+	transition: all 0.3s;
+}
+.fade-enter{
+	opacity: 0;
+	max-height: 0px;
+	margin: 0px;
+	transform: translateX(-100%);
+}
+/*.fade-enter > *:first-of-type{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}*/
+.fade-enter-active{
+	opacity: 1;
+	max-height: 1000px;
+	transform: translateX(0%);
+}
+.fade-exit{
+	opacity: 1;
+	max-height: 400px;
+	transform: translateX(0%);
+}
+.fade-exit-active{
+	opacity: 0;
+	max-height: 0px;
+	margin: 0px;
+	transform: translateX(-100%);
+}
+.fade-exit-active > *:first-of-type{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+

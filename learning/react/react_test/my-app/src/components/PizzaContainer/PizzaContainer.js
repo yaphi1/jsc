@@ -5,6 +5,8 @@ import { sanitizeInput } from '../../utils/helpers';
 
 import PropTypes from 'prop-types';
 
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+
 class PizzaContainer extends React.Component{
 	constructor(){
 		super();
@@ -29,16 +31,27 @@ class PizzaContainer extends React.Component{
 		const pizzaData = this.props.pizzaData;
 
 		if(results.length){
-			return results.map((key) => {
-				return (
-					<Pizza
-						key={key}
-						id={key}
-						pizzaData={pizzaData[key]}
-						addToOrder={this.props.addToOrder}
-					/>
-				);
-			});
+			return (
+				<TransitionGroup>
+					{results.map((key) => {
+						return (
+							<CSSTransition
+								key={key}
+								timeout={300}
+								classNames="fade"
+							>
+								<div className="fade_anim_container">
+									<Pizza
+										id={key}
+										pizzaData={pizzaData[key]}
+										addToOrder={this.props.addToOrder}
+									/>
+								</div>
+							</CSSTransition>
+						);
+					})}
+				</TransitionGroup>
+			);
 		}
 		else{
 			return (

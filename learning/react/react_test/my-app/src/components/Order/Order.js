@@ -3,6 +3,8 @@ import OrderItem from '../OrderItem/OrderItem';
 
 import PropTypes from 'prop-types';
 
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+
 class Order extends React.Component{
 
 	render(){
@@ -19,22 +21,30 @@ class Order extends React.Component{
 			<div className="order-container">
 				<h2>Your Order</h2>
 				<ul className="order-items">
+					<TransitionGroup>
+						{
+							pizzaIds.map(key => {
+								const qty = this.props.order[key];
 
-					{
-						pizzaIds.map(key => {
-							const qty = this.props.order[key];
-
-							return qty>0 && (
-								<OrderItem
-									key={key}
-									pizzaId={key}
-									pizzaData={this.props.pizzaData[key]}
-									qty={qty}
-									updateQty = {this.props.updateQty}
-								/>
-							);
-						})
-					}
+								return qty>0 && (
+									<CSSTransition
+										key={key}
+										timeout={300}
+										classNames="fade"
+									>
+										<div className="fade_anim_container">
+											<OrderItem
+												pizzaId={key}
+												pizzaData={this.props.pizzaData[key]}
+												qty={qty}
+												updateQty = {this.props.updateQty}
+											/>
+										</div>
+									</CSSTransition>
+								);
+							})
+						}
+					</TransitionGroup>
 
 					<li className="order-total">
 						Total
