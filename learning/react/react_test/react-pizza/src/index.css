@@ -200,7 +200,7 @@ ANIMATIONS
 	animate out all of it. Otherwise, there will be an awkward transition where
 	the height is zero, but the padding is still there.
 	*/
-	/*padding: 0.1px;*/
+	padding: 0.1px;
 }
 .fade_anim_container > *:first-of-type{
 	transition: all 0.3s;
@@ -211,10 +211,6 @@ ANIMATIONS
 	margin: 0px;
 	transform: translateX(-100%);
 }
-/*.fade-enter > *:first-of-type{
-	margin-top: 0px;
-	margin-bottom: 0px;
-}*/
 .fade-enter-active{
 	opacity: 1;
 	max-height: 1000px;
@@ -231,8 +227,8 @@ ANIMATIONS
 	margin: 0px;
 	transform: translateX(-100%);
 }
-.fade-exit-active > *:first-of-type{
+/*.fade-exit-active > *:first-of-type{
 	margin-top: 0px;
 	margin-bottom: 0px;
-}
+}*/
 
