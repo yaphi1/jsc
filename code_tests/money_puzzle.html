@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+puzzle from:
+https://dev.to/jorinvo/code-challenge-follow-the-dirty-money-485
+-->
+<style type="text/css">
+body {
+	margin: 0px;
+	font-size: 20px;
+	font-family: sans-serif;
+	color: #333;
+}
+</style>
+
+</head>
+<body>
+
+<script>
+
+const transactions = {};
+function getPrice(content){
+	return Number(content.match(/\$[^\s"]+/)[0].replace(/(\$|\D$)/g,'').replace(/,/,'.'));
+}
+function getData(url){
+	return fetch(url)
+		.then(response => response.json())
+		.then(data => {
+			transactions[data.id] = getPrice(data.content);
+			return Promise.all(data.links.map(getData));
+		});
+}
+getData('https://gist.githubusercontent.com/jorinvo/6f68380dd07e5db3cf5fd48b2465bb04/raw/c02b1e0b45ecb2e54b36e4410d0631a66d474323/fd0d929f-966f-4d1a-89cd-feee5a1c5347.json')
+	.then(responses => {
+		const totalMoney = Object.values(transactions).reduce((tot, cur) => tot + cur, 0).toFixed(2);
+		console.log(`total money: $${totalMoney}`);
+	});
+
+</script>
+</body>
+</html>
