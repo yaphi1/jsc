@@ -74,7 +74,6 @@
 			"settings":
 			{
 				"buffer_size": 1713,
-				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -196,6 +195,7 @@
 	],
 	"file_history":
 	[
+		"/Users/yaphi1/Documents/Web/ztlcode/js_course/learning/wes_bos/react/wes_bos_react_starter_files/catch-of-the-day/src/components/App.js",
 		"/Users/yaphi1/Documents/Web/ztlcode/js_course/learning/wes_bos/react/wes_bos_react_starter_files/catch-of-the-day/src/components/NotFound.js",
 		"/Users/yaphi1/Documents/Web/ztlcode/js_course/learning/wes_bos/react/wes_bos_react_starter_files/catch-of-the-day/src/helpers.js",
 		"/Users/yaphi1/Documents/Web/ztlcode/js_course/learning/wes_bos/react/React-For-Beginners-Starter-Files/catch-of-the-day/catch-of-the-day-notes.txt",
@@ -258,7 +258,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -345,7 +345,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -361,8 +361,8 @@
 						"selection":
 						[
 							[
-								994,
-								994
+								0,
+								0
 							]
 						],
 						"settings":
@@ -374,7 +374,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -396,13 +396,14 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 126.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -424,7 +425,8 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -480,7 +482,8 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 212.0,
