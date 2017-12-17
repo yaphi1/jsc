@@ -1,0 +1,38 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+
+
+.Board{
+	display: flex;
+	padding-right: 25px;
+}
+
+.Column{
+	/*border: 1px dashed red;*/
+	margin-left: 25px;
+	flex-basis: 25%;
+}
+
+.Column-title{
+	background-color: #333;
+	color: #fff;
+	padding: 25px;
+}
+.Column:nth-of-type(1) .Column-title{
+	background-color: #8e6e95;
+}
+.Column:nth-of-type(2) .Column-title{
+	background-color: #39a59c;
+}
+.Column:nth-of-type(3) .Column-title{
+	background-color: #344759;
+}
+.Column:nth-of-type(4) .Column-title{
+	background-color: #e8741e;
+}
+
+

@@ -85,7 +85,7 @@
 			"file": "src/index.css",
 			"settings":
 			{
-				"buffer_size": 2718,
+				"buffer_size": 3754,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -94,7 +94,7 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 450,
+				"buffer_size": 491,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -103,7 +103,7 @@
 			"file": "src/components/Pizza/Pizza.js",
 			"settings":
 			{
-				"buffer_size": 766,
+				"buffer_size": 942,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -121,7 +121,7 @@
 			"file": "src/components/PizzaContainer/PizzaContainer.js",
 			"settings":
 			{
-				"buffer_size": 1236,
+				"buffer_size": 1995,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -130,7 +130,7 @@
 			"file": "src/components/SearchBar/SearchBar.js",
 			"settings":
 			{
-				"buffer_size": 421,
+				"buffer_size": 532,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -145,20 +145,10 @@
 			}
 		},
 		{
-			"file": "src/utils/helpers.js",
-			"settings":
-			{
-				"buffer_size": 85,
-				"encoding": "UTF-8",
-				"line_ending": "Unix",
-				"name": "export const"
-			}
-		},
-		{
 			"file": "src/components/Order/Order.js",
 			"settings":
 			{
-				"buffer_size": 962,
+				"buffer_size": 1463,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -167,7 +157,7 @@
 			"file": "src/components/OrderItem/OrderItem.js",
 			"settings":
 			{
-				"buffer_size": 937,
+				"buffer_size": 1157,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -255,15 +245,12 @@
 		"/Users/yaphi1/Documents/Web/ztlcode/js_course/learning",
 		"/Users/yaphi1/Documents/Web/ztlcode/js_course/learning/react",
 		"/Users/yaphi1/Documents/Web/ztlcode/js_course/learning/react/react_test",
-		"/Users/yaphi1/Documents/Web/ztlcode/js_course/learning/react/react_test/my-app",
-		"/Users/yaphi1/Documents/Web/ztlcode/js_course/learning/react/react_test/my-app/build",
-		"/Users/yaphi1/Documents/Web/ztlcode/js_course/learning/react/react_test/my-app/src",
-		"/Users/yaphi1/Documents/Web/ztlcode/js_course/learning/react/react_test/my-app/src/components",
-		"/Users/yaphi1/Documents/Web/ztlcode/js_course/learning/react/react_test/my-app/src/components/App",
-		"/Users/yaphi1/Documents/Web/ztlcode/js_course/learning/react/react_test/my-app/src/utils"
+		"/Users/yaphi1/Documents/Web/ztlcode/js_course/learning/react/react_test/react-pizza",
+		"/Users/yaphi1/Documents/Web/ztlcode/js_course/learning/react/react_test/react-pizza/src"
 	],
 	"file_history":
 	[
+		"/Users/yaphi1/Documents/Web/ztlcode/js_course/learning/react/react_test/react-pizza/src/utils/helpers.js",
 		"/Users/yaphi1/Documents/Web/ztlcode/js_course/learning/testing/gulp_workflow/package.json",
 		"/Users/yaphi1/Documents/Web/ztlcode/js_course/learning/react/react_test/my-app/src/components/Topping/Topping.js",
 		"/Users/yaphi1/Documents/Web/ztlcode/js_course/learning/react/react_test/my-app/src/components/Pizza/Pizza.css",
@@ -385,7 +372,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -415,7 +402,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -443,7 +430,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -452,26 +439,27 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2718,
+						"buffer_size": 3754,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								266,
-								266
+								3235,
+								3235
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 95.0,
+						"translation.y": 3800.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -480,15 +468,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 450,
+						"buffer_size": 491,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								450,
-								450
+								0,
+								0
 							]
 						],
 						"settings":
@@ -501,7 +489,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -510,26 +498,27 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 766,
+						"buffer_size": 942,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								593,
-								593
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -556,7 +545,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 246.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -568,26 +557,27 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1236,
+						"buffer_size": 1995,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								598,
-								598
+								290,
+								290
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 414.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -596,26 +586,27 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 421,
+						"buffer_size": 532,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								132,
-								132
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -637,7 +628,8 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -648,91 +640,64 @@
 				},
 				{
 					"buffer": 9,
-					"file": "src/utils/helpers.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 85,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								27,
-								14
-							]
-						],
-						"settings":
-						{
-							"auto_name": "export const",
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
 					"file": "src/components/Order/Order.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 962,
+						"buffer_size": 1463,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								112,
-								112
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 10,
 					"file": "src/components/OrderItem/OrderItem.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 937,
+						"buffer_size": 1157,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								764,
-								764
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 11,
 					"file": "src/components/App/App.test.js",
 					"semi_transient": false,
 					"settings":
@@ -756,11 +721,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 12,
 					"file": "src/components/App/App.css",
 					"semi_transient": false,
 					"settings":
@@ -786,7 +751,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
@@ -840,6 +805,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"helpers",
+				"react/react_test/react-pizza/src/utils/helpers.js"
+			],
 			[
 				"my-app/pack",
 				"react/react_test/my-app/package.json"

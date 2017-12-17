@@ -12,13 +12,13 @@ body {
 .CardContainer{
 	flex: 0 1 320px;
 	background: #ddd;
-	padding: 0px;
+	padding: 20px;
 	margin: 20px;
 }
 
 .Card{
 	background: #eee;
 	padding: 20px;
-	margin: 20px;
+	margin: 20px 0px;
 	display: inline-block;
 }
